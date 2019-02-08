@@ -174,6 +174,7 @@
             End While
             lector2018.Close()
             FrmFoliosDelAnioAnterior.lbServicios.Text = "Total de Servicios: " + Convert.ToString(FrmFoliosDelAnioAnterior.DGConsulta.Rows.Count - 1)
+            Me.Dispose()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         End Try
