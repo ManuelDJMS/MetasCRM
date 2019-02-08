@@ -7,8 +7,8 @@ Public Class FrmFoliosDelAnioAnterior
             Dim maximo As Integer
             Dim R As String
 
-            If txtFolio.Text.Trim.Equals("") Then
-                Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
+            'If txtFolio.Text.Trim.Equals("") Then
+            Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
                 Dim lector As SqlDataReader
                 lector = comando.ExecuteReader
                 lector.Read()
@@ -135,9 +135,9 @@ Public Class FrmFoliosDelAnioAnterior
                     comando.ExecuteNonQuery()
                 Next i
                 MsgBox("Guardado en 2019 correctamentee.", MsgBoxStyle.Information)
-            Else
-                MsgBox("Ingresa el numero de foliio")
-            End If
+            'Else
+            '    MsgBox("Ingresa el numero de foliio")
+            'End If
             'Me.Dispose()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
