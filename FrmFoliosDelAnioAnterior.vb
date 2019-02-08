@@ -4,9 +4,7 @@ Public Class FrmFoliosDelAnioAnterior
 
     End Sub
     Private Sub txtFolio_KeyDown(sender As Object, e As KeyEventArgs) Handles txtFolio.KeyDown
-        Dim manuel As String
         Try
-            Dim pau As String
             Select Case e.KeyData
                 Case Keys.Enter
                     MetodoMetasInf2018()
