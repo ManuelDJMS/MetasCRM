@@ -167,6 +167,12 @@
     <Compile Include="frmEdicionCot2018-2019.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmFiltrar.Designer.vb">
+      <DependentUpon>FrmFiltrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFiltrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmFolio.Designer.vb">
       <DependentUpon>FrmFolio.vb</DependentUpon>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEdicionCot2018-2019.resx">
       <DependentUpon>frmEdicionCot2018-2019.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFiltrar.resx">
+      <DependentUpon>FrmFiltrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFolio.resx">
       <DependentUpon>FrmFolio.vb</DependentUpon>
