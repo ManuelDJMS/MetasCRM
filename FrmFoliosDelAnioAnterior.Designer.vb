@@ -22,7 +22,7 @@ Partial Class FrmFoliosDelAnioAnterior
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
@@ -207,14 +207,14 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Folio, Me.Magnitud, Me.Informe, Me.Facturadp, Me.ClaveContacto, Me.Empresa, Me.ClaveContactoUsuario, Me.Usuario, Me.ClavecontactoUsuarioa, Me.FechaRecepcion, Me.FechaCalib, Me.FechaEmision, Me.ServCatalogo1, Me.ServCatalogo2, Me.ServiciosAdicionales, Me.PUCalib, Me.PULab, Me.PUFacturado, Me.Tipo, Me.Alcance, Me.Marca, Me.Modelo, Me.Serie, Me.ID, Me.Accesorios, Me.Puntos, Me.Patron1, Me.Patron2, Me.Patron3, Me.Funciones, Me.Etiquetas, Me.HacerEtiquetas, Me.DatosInforme, Me.Observaciones, Me.Calibro, Me.NumEmisiones, Me.NumCot, Me.Status, Me.CveOperador, Me.RealizoMedicion, Me.EmpresaEmision, Me.DirCalle, Me.DirCol, Me.DirEdo, Me.DiEdoEm, Me.DirPais, Me.DirCp, Me.Sv1, Me.Sv3, Me.Sv5, Me.Sv6, Me.Sv7, Me.Sv8Idioma, Me.Sv9, Me.Sv10, Me.FechaRegistro})
         Me.DGConsulta.Location = New System.Drawing.Point(20, 365)

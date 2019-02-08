@@ -221,5 +221,20 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
         Me.Dispose()
     End Sub
+
+    Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
+        Try
+            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "-", "-",
+            DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(), DGConsulta.Item(8, 0).Value.ToString(),
+            DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(), DGConsulta.Item(11, 0).Value.ToString(),
+            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",
+            DGConsulta.Item(40, 0).Value.ToString(), "-", DGConsulta.Item(42, 0).Value.ToString(), DGConsulta.Item(43, 0).Value.ToString(),
+            DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(), DGConsulta.Item(46, 0).Value.ToString(),
+            DGConsulta.Item(47, 0).Value.ToString(), DGConsulta.Item(48, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
+        Catch ex As Exception
+            MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
+        End Try
+
+    End Sub
 End Class
 
