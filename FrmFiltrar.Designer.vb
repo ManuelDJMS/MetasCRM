@@ -26,12 +26,12 @@ Partial Class FrmFiltrar
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btSalir = New System.Windows.Forms.PictureBox()
         Me.dgEmpresas = New System.Windows.Forms.DataGridView()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextID = New System.Windows.Forms.TextBox()
+        Me.TextEmpresa = New System.Windows.Forms.TextBox()
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.lblMarca = New System.Windows.Forms.Label()
@@ -45,7 +45,7 @@ Partial Class FrmFiltrar
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgEmpresas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class FrmFiltrar
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.btSalir)
         Me.Panel1.Controls.Add(Me.dgEmpresas)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Location = New System.Drawing.Point(6, 7)
@@ -72,17 +72,17 @@ Partial Class FrmFiltrar
         Me.Label1.TabIndex = 158
         Me.Label1.Text = "Cerrar formulario"
         '
-        'PictureBox1
+        'btSalir
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(850, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 157
-        Me.PictureBox1.TabStop = False
+        Me.btSalir.BackColor = System.Drawing.Color.Transparent
+        Me.btSalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btSalir.Image = CType(resources.GetObject("btSalir.Image"), System.Drawing.Image)
+        Me.btSalir.Location = New System.Drawing.Point(850, 6)
+        Me.btSalir.Name = "btSalir"
+        Me.btSalir.Size = New System.Drawing.Size(24, 24)
+        Me.btSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btSalir.TabIndex = 157
+        Me.btSalir.TabStop = False
         '
         'dgEmpresas
         '
@@ -109,7 +109,7 @@ Partial Class FrmFiltrar
         '
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label19)
-        Me.Panel3.Controls.Add(Me.TextID)
+        Me.Panel3.Controls.Add(Me.TextEmpresa)
         Me.Panel3.Controls.Add(Me.txtMarca)
         Me.Panel3.Controls.Add(Me.lblModelo)
         Me.Panel3.Controls.Add(Me.lblMarca)
@@ -139,13 +139,13 @@ Partial Class FrmFiltrar
         Me.Label19.TabIndex = 171
         Me.Label19.Text = "Nombre Empresa:"
         '
-        'TextID
+        'TextEmpresa
         '
-        Me.TextID.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextID.Location = New System.Drawing.Point(107, 29)
-        Me.TextID.Name = "TextID"
-        Me.TextID.Size = New System.Drawing.Size(147, 21)
-        Me.TextID.TabIndex = 170
+        Me.TextEmpresa.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextEmpresa.Location = New System.Drawing.Point(107, 29)
+        Me.TextEmpresa.Name = "TextEmpresa"
+        Me.TextEmpresa.Size = New System.Drawing.Size(147, 21)
+        Me.TextEmpresa.TabIndex = 170
         '
         'txtMarca
         '
@@ -242,7 +242,7 @@ Partial Class FrmFiltrar
         Me.Text = "Búsqueda de Artículos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btSalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgEmpresas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -252,12 +252,12 @@ Partial Class FrmFiltrar
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btSalir As PictureBox
     Friend WithEvents dgEmpresas As DataGridView
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label19 As Label
-    Friend WithEvents TextID As TextBox
+    Friend WithEvents TextEmpresa As TextBox
     Friend WithEvents txtMarca As TextBox
     Friend WithEvents lblModelo As Label
     Friend WithEvents lblMarca As Label
