@@ -214,7 +214,7 @@ Public Class FrmFoliosDelAnioAnterior
                 Next i
                 MsgBox("Guardado en 2019 correctamentee.", MsgBoxStyle.Information)
             Else
-                MsgBox("Ingresa el numero de folio")
+                MsgBox("Ingresa el numero de foliio")
             End If
             'Me.Dispose()
         Catch ex As Exception
