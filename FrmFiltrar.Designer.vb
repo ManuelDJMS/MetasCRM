@@ -37,6 +37,7 @@ Partial Class FrmFiltrar
         Me.lblMarca = New System.Windows.Forms.Label()
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.Folio123 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -98,7 +99,7 @@ Partial Class FrmFiltrar
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgEmpresas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgEmpresas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Folio123, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.Column1})
+        Me.dgEmpresas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Folio123, Me.Column2, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.Column1})
         Me.dgEmpresas.Location = New System.Drawing.Point(14, 109)
         Me.dgEmpresas.Name = "dgEmpresas"
         Me.dgEmpresas.Size = New System.Drawing.Size(848, 240)
@@ -187,6 +188,11 @@ Partial Class FrmFiltrar
         Me.Folio123.HeaderText = "Folio"
         Me.Folio123.Name = "Folio123"
         '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Clave Consig"
+        Me.Column2.Name = "Column2"
+        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.HeaderText = "Compañia"
@@ -257,6 +263,7 @@ Partial Class FrmFiltrar
     Friend WithEvents lblMarca As Label
     Friend WithEvents txtModelo As TextBox
     Friend WithEvents Folio123 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn

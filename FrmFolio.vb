@@ -1,11 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmFolio
-    'Dim manuel As String
-    Dim paulina As String
-
     Private Sub TextFolio_KeyDown(sender As Object, e As KeyEventArgs) Handles TextFolio.KeyDown
         '-------------------------Bloque Manuel--------------------------------------------------
-        Dim Pau As String
         Try
             Select Case e.KeyData
                 Case Keys.Enter
@@ -76,7 +72,6 @@ Public Class FrmFolio
     End Sub
 
     Private Sub txtAgregarCom_Click(sender As Object, e As EventArgs) Handles txtAgregarCom.Click
-        Dim p As String
         MetodoCotizador2019()
         Dim max As Integer
         Dim R As String

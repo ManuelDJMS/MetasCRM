@@ -175,5 +175,91 @@ Public Class FrmFoliosDelAnioAnterior
         Next
         lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
     End Sub
+
+    Private Sub TextFolio_KeyDown(sender As Object, e As KeyEventArgs) Handles TextFolio.KeyDown
+        Try
+            Select Case e.KeyData
+                Case Keys.Enter
+                    MetodoMetasInf2018()
+                    comando2018 = conexion2018.CreateCommand
+                    Dim R As String
+                    R = "select distinct Folio, ClavecontactoConsign, RazonSocial, Compania, RFC, DomicilioConsig, PaisConsig, CiudadConsig, EdoConsig, CPConsig
+                        from [INFORMES-SERVICIOS] INNER JOIN MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa
+                        where Folio ='" & TextFolio.Text & "'"
+                    comando2018.CommandText = R
+                    lector2018 = comando2018.ExecuteReader
+                    lector2018.Read()
+                    If ((lector2018(0) Is DBNull.Value) OrElse (lector2018(0) Is Nothing)) Then
+                        TextFolio.Text = "-"
+                    Else
+                        TextFolio.Text = lector2018(0)
+                    End If
+                    If ((lector2018(1) Is DBNull.Value) OrElse (lector2018(1) Is Nothing)) Then
+                        lbClave.Text = "-"
+                    Else
+                        lbClave.Text = lector2018(1)
+                    End If
+                    If ((lector2018(2) Is DBNull.Value) OrElse (lector2018(2) Is Nothing)) Then
+                        lbRazonSocial.Text = "-"
+                    Else
+                        lbRazonSocial.Text = lector2018(2)
+                    End If
+                    If ((lector2018(3) Is DBNull.Value) OrElse (lector2018(3) Is Nothing)) Then
+                        lbEmpresa.Text = "-"
+                    Else
+                        lbEmpresa.Text = lector2018(3)
+                    End If
+                    If ((lector2018(4) Is DBNull.Value) OrElse (lector2018(4) Is Nothing)) Then
+                        lbRFC.Text = "-"
+                    Else
+                        lbRFC.Text = lector2018(4)
+                    End If
+                    If ((lector2018(5) Is DBNull.Value) OrElse (lector2018(5) Is Nothing)) Then
+                        lbDomicilio.Text = "-"
+                    Else
+                        lbDomicilio.Text = lector2018(5)
+                    End If
+                    If ((lector2018(6) Is DBNull.Value) OrElse (lector2018(6) Is Nothing)) Then
+                        lbPais.Text = "-"
+                    Else
+                        lbPais.Text = lector2018(6)
+                    End If
+                    If ((lector2018(7) Is DBNull.Value) OrElse (lector2018(7) Is Nothing)) Then
+                        lbCiudad.Text = "-"
+                    Else
+                        lbCiudad.Text = lector2018(7)
+                    End If
+                    If ((lector2018(8) Is DBNull.Value) OrElse (lector2018(8) Is Nothing)) Then
+                        lbEstado.Text = "-"
+                    Else
+                        lbEstado.Text = lector2018(8)
+                    End If
+                    If ((lector2018(9) Is DBNull.Value) OrElse (lector2018(9) Is Nothing)) Then
+                        lbCP.Text = "-"
+                    Else
+                        lbCP.Text = lector2018(9)
+                    End If
+                    lector2018.Close()
+                    R = "   SELECT [NFila],[Folio],[ClavecontactoConsign],[Empresa],[Clavecontacto],[Usuario],[ClavecontactoUsuario],[FECHARECEP],
+                        [CveOperador],[EmpresaEmision],[DirCalleEmision],[DirColEmision],[DirCiudadEmision],[DirEdoProvEmision],
+                        [DirPaisEmision],[DirCPEmision] FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where Folio ='" & TextFolio.Text & "'"
+                    comando2018.CommandText = R
+                    lector2018 = comando2018.ExecuteReader
+                    While lector2018.Read()
+                        DGConsulta.Rows.Add(False, lector2018(0), lector2018(1), "-", "-", "-", lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7),
+                        "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(8), "-", lector2018(9), lector2018(10),
+                        lector2018(11), lector2018(12), lector2018(13), lector2018(14), lector2018(15), "-", "-", "-", "-", "-", "-", "-", "-", "-")
+                    End While
+                    lector2018.Close()
+                    lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
+            End Select
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+        End Try
+    End Sub
+
+    Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
+        FrmFiltrar.Show()
+    End Sub
 End Class
 
