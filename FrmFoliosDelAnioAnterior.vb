@@ -81,20 +81,20 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
         MetodoMetasInf2019()
-        'Try
-        Dim maximo As Integer
-        Dim R As String
+        Try
+            Dim maximo As Integer
+            Dim R As String
 
-        If txtFolio.Text.Trim.Equals("") Then
-            Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            lector.Read()
-            maximo = lector(0)
-            lector.Close()
-            'Codigo para guardar en InformesServicios----------------------------------------------------56
-            For i = 0 To DGConsulta.Rows.Count - 2
-                R = "insert into [INFORMES-SERVICIOS] (
+            If txtFolio.Text.Trim.Equals("") Then
+                Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
+                Dim lector As SqlDataReader
+                lector = comando.ExecuteReader
+                lector.Read()
+                maximo = lector(0)
+                lector.Close()
+                'Codigo para guardar en InformesServicios----------------------------------------------------56
+                For i = 0 To DGConsulta.Rows.Count - 2
+                    R = "insert into [INFORMES-SERVICIOS] (
                    [Folio]
                   ,[MAGNITUD]
                   ,[INFORME]
@@ -151,8 +151,8 @@ Public Class FrmFoliosDelAnioAnterior
                   ,[Sv9Calendar]
                   ,[SVAD10]
                   ,[Fecha_Reg]) 
-        values (" & Val(DGConsulta.Item(0, i).Value) & ",
-                        '" & (DGConsulta.Item(1, i).Value) & "'
+                values ( " & Val(DGConsulta.Item(0, i).Value) & ",
+                         '" & (DGConsulta.Item(1, i).Value) & "'
                         ,'" & (DGConsulta.Item(2, i).Value) & "'
                         ," & Val(DGConsulta.Item(3, i).Value) & "
                         ," & Val(DGConsulta.Item(4, i).Value) & "
@@ -204,18 +204,22 @@ Public Class FrmFoliosDelAnioAnterior
                         ," & Val(DGConsulta.Item(50, i).Value) & "
                         ," & Val(DGConsulta.Item(51, i).Value) & "
                         ," & Val(DGConsulta.Item(52, i).Value) & "
-                        ," & Val(DGConsulta.Item(53, i).Value) & ",'" & (DGConsulta.Item(54, i).Value) & "','(CONVERT(varchar(15), getdate(), 103))')"
-                comando.CommandText = R
-                comando.ExecuteNonQuery()
-            Next i
-            MsgBox("Guardado en 2019 correctamentee.", MsgBoxStyle.Information)
-        Else
-            MsgBox("Ingresa el numero de folio")
-        End If
-        'Me.Dispose()
-        'Catch ex As Exception
-        'sgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
-        'End Try
+                        ," & Val(DGConsulta.Item(53, i).Value) & "
+                        ,'" & (DGConsulta.Item(54, i).Value) & "'
+                        ,' CONVERT(varchar(15), getdate(), 103)')"
+                    ''MsgBox(R)
+                    ''DGConsulta.Rows.Add(R)
+                    comando.CommandText = R
+                    comando.ExecuteNonQuery()
+                Next i
+                MsgBox("Guardado en 2019 correctamentee.", MsgBoxStyle.Information)
+            Else
+                MsgBox("Ingresa el numero de folio")
+            End If
+            'Me.Dispose()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+        End Try
         ''------------------------------------------------
     End Sub
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
