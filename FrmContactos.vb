@@ -529,7 +529,7 @@ Public Class FrmContactos
         CBOOTNoticeRequiered.Checked = False
         CBRequiresCalHistory.Checked = False
         CBOnlyDigitalCer.Checked = False
-
+'dim a as String
 
     End Sub
 End Class
