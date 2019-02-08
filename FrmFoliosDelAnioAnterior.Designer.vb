@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmFoliosDelAnioAnterior
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,48 +20,15 @@ Partial Class FrmFoliosDelAnioAnterior
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
         Me.btAgregarFila = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGConsulta = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.lbPais = New System.Windows.Forms.Label()
-        Me.lbDomicilio = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.lbCiudad = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.lbEstado = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.lbCP = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.lbClave = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.lbRFC = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.lbEmpresa = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.lbfechaRecp = New System.Windows.Forms.Label()
-        Me.lbRazonSocial = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btGuardarInf = New System.Windows.Forms.Button()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.btBuscar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.LabelNombre = New System.Windows.Forms.Label()
-        Me.txtFolio = New System.Windows.Forms.TextBox()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.btCerrar = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Folio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Magnitud = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Informe = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -118,6 +85,39 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Sv9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sv10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.lbPais = New System.Windows.Forms.Label()
+        Me.lbDomicilio = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.lbCiudad = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.lbEstado = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.lbCP = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbClave = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.lbRFC = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.lbEmpresa = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lbfechaRecp = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbRazonSocial = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btGuardarInf = New System.Windows.Forms.Button()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.btBuscar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.LabelNombre = New System.Windows.Forms.Label()
+        Me.txtFolio = New System.Windows.Forms.TextBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.btCerrar = New System.Windows.Forms.PictureBox()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,366 +207,20 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Folio, Me.Magnitud, Me.Informe, Me.Facturadp, Me.ClaveContacto, Me.Empresa, Me.ClaveContactoUsuario, Me.Usuario, Me.ClavecontactoUsuarioa, Me.FechaRecepcion, Me.FechaCalib, Me.FechaEmision, Me.ServCatalogo1, Me.ServCatalogo2, Me.ServiciosAdicionales, Me.PUCalib, Me.PULab, Me.PUFacturado, Me.Tipo, Me.Alcance, Me.Marca, Me.Modelo, Me.Serie, Me.ID, Me.Accesorios, Me.Puntos, Me.Patron1, Me.Patron2, Me.Patron3, Me.Funciones, Me.Etiquetas, Me.HacerEtiquetas, Me.DatosInforme, Me.Observaciones, Me.Calibro, Me.NumEmisiones, Me.NumCot, Me.Status, Me.CveOperador, Me.RealizoMedicion, Me.EmpresaEmision, Me.DirCalle, Me.DirCol, Me.DirEdo, Me.DiEdoEm, Me.DirPais, Me.DirCp, Me.Sv1, Me.Sv3, Me.Sv5, Me.Sv6, Me.Sv7, Me.Sv8Idioma, Me.Sv9, Me.Sv10, Me.FechaRegistro})
         Me.DGConsulta.Location = New System.Drawing.Point(20, 365)
         Me.DGConsulta.Name = "DGConsulta"
         Me.DGConsulta.Size = New System.Drawing.Size(1098, 226)
         Me.DGConsulta.TabIndex = 171
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightGray
-        Me.Panel1.Controls.Add(Me.Label42)
-        Me.Panel1.Location = New System.Drawing.Point(14, 125)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(428, 27)
-        Me.Panel1.TabIndex = 170
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label42.Location = New System.Drawing.Point(6, 6)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(132, 15)
-        Me.Label42.TabIndex = 152
-        Me.Label42.Text = "Información del cliente"
-        '
-        'lbPais
-        '
-        Me.lbPais.AutoSize = True
-        Me.lbPais.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPais.Location = New System.Drawing.Point(327, 267)
-        Me.lbPais.Name = "lbPais"
-        Me.lbPais.Size = New System.Drawing.Size(27, 14)
-        Me.lbPais.TabIndex = 169
-        Me.lbPais.Text = "Pais"
-        '
-        'lbDomicilio
-        '
-        Me.lbDomicilio.AutoSize = True
-        Me.lbDomicilio.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDomicilio.Location = New System.Drawing.Point(93, 214)
-        Me.lbDomicilio.Name = "lbDomicilio"
-        Me.lbDomicilio.Size = New System.Drawing.Size(27, 14)
-        Me.lbDomicilio.TabIndex = 169
-        Me.lbDomicilio.Text = "Pais"
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label50.Location = New System.Drawing.Point(248, 265)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(32, 15)
-        Me.Label50.TabIndex = 168
-        Me.Label50.Text = "Pais:"
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label48.Location = New System.Drawing.Point(21, 212)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(61, 15)
-        Me.Label48.TabIndex = 168
-        Me.Label48.Text = "Domicilio:"
-        '
-        'lbCiudad
-        '
-        Me.lbCiudad.AutoSize = True
-        Me.lbCiudad.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCiudad.Location = New System.Drawing.Point(93, 240)
-        Me.lbCiudad.Name = "lbCiudad"
-        Me.lbCiudad.Size = New System.Drawing.Size(40, 14)
-        Me.lbCiudad.TabIndex = 167
-        Me.lbCiudad.Text = "Estado"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label44.Location = New System.Drawing.Point(21, 238)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(48, 15)
-        Me.Label44.TabIndex = 166
-        Me.Label44.Text = "Ciudad:"
-        '
-        'lbEstado
-        '
-        Me.lbEstado.AutoSize = True
-        Me.lbEstado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEstado.Location = New System.Drawing.Point(93, 267)
-        Me.lbEstado.Name = "lbEstado"
-        Me.lbEstado.Size = New System.Drawing.Size(40, 14)
-        Me.lbEstado.TabIndex = 165
-        Me.lbEstado.Text = "Ciudad"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label39.Location = New System.Drawing.Point(21, 265)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(47, 15)
-        Me.Label39.TabIndex = 164
-        Me.Label39.Text = "Estado:"
-        '
-        'lbCP
-        '
-        Me.lbCP.AutoSize = True
-        Me.lbCP.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCP.Location = New System.Drawing.Point(93, 292)
-        Me.lbCP.Name = "lbCP"
-        Me.lbCP.Size = New System.Drawing.Size(73, 14)
-        Me.lbCP.TabIndex = 163
-        Me.lbCP.Text = "Código postal"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label35.Location = New System.Drawing.Point(21, 291)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(25, 15)
-        Me.Label35.TabIndex = 162
-        Me.Label35.Text = "CP:"
-        '
-        'lbClave
-        '
-        Me.lbClave.AutoSize = True
-        Me.lbClave.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbClave.Location = New System.Drawing.Point(93, 166)
-        Me.lbClave.Name = "lbClave"
-        Me.lbClave.Size = New System.Drawing.Size(121, 14)
-        Me.lbClave.TabIndex = 155
-        Me.lbClave.Text = "Dirección del prospecto"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label29.Location = New System.Drawing.Point(21, 164)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(40, 15)
-        Me.Label29.TabIndex = 154
-        Me.Label29.Text = "Clave:"
-        '
-        'lbRFC
-        '
-        Me.lbRFC.AutoSize = True
-        Me.lbRFC.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRFC.Location = New System.Drawing.Point(327, 242)
-        Me.lbRFC.Name = "lbRFC"
-        Me.lbRFC.Size = New System.Drawing.Size(43, 14)
-        Me.lbRFC.TabIndex = 159
-        Me.lbRFC.Text = "Colonia"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label25.Location = New System.Drawing.Point(248, 240)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(31, 15)
-        Me.Label25.TabIndex = 158
-        Me.Label25.Text = "RFC:"
-        '
-        'lbEmpresa
-        '
-        Me.lbEmpresa.AutoSize = True
-        Me.lbEmpresa.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEmpresa.Location = New System.Drawing.Point(93, 189)
-        Me.lbEmpresa.Name = "lbEmpresa"
-        Me.lbEmpresa.Size = New System.Drawing.Size(43, 14)
-        Me.lbEmpresa.TabIndex = 159
-        Me.lbEmpresa.Text = "Colonia"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label20.Location = New System.Drawing.Point(21, 187)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(58, 15)
-        Me.Label20.TabIndex = 158
-        Me.Label20.Text = "Empresa:"
-        '
-        'lbfechaRecp
-        '
-        Me.lbfechaRecp.AutoSize = True
-        Me.lbfechaRecp.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbfechaRecp.Location = New System.Drawing.Point(298, 84)
-        Me.lbfechaRecp.Name = "lbfechaRecp"
-        Me.lbfechaRecp.Size = New System.Drawing.Size(43, 14)
-        Me.lbfechaRecp.TabIndex = 159
-        Me.lbfechaRecp.Text = "Colonia"
-        '
-        'lbRazonSocial
-        '
-        Me.lbRazonSocial.AutoSize = True
-        Me.lbRazonSocial.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRazonSocial.Location = New System.Drawing.Point(327, 167)
-        Me.lbRazonSocial.Name = "lbRazonSocial"
-        Me.lbRazonSocial.Size = New System.Drawing.Size(88, 14)
-        Me.lbRazonSocial.TabIndex = 157
-        Me.lbRazonSocial.Text = "Numero exterior"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(192, 83)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(100, 15)
-        Me.Label11.TabIndex = 158
-        Me.Label11.Text = "Fecha Recepción:"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label17.Location = New System.Drawing.Point(248, 165)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(76, 15)
-        Me.Label17.TabIndex = 156
-        Me.Label17.Text = "Razón Social:"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.LightGray
-        Me.Panel2.Controls.Add(Me.btGuardarInf)
-        Me.Panel2.Controls.Add(Me.Label26)
-        Me.Panel2.Controls.Add(Me.btBuscar)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.Label27)
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1140, 66)
-        Me.Panel2.TabIndex = 151
-        '
-        'btGuardarInf
-        '
-        Me.btGuardarInf.BackColor = System.Drawing.Color.SteelBlue
-        Me.btGuardarInf.FlatAppearance.BorderSize = 0
-        Me.btGuardarInf.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btGuardarInf.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btGuardarInf.ForeColor = System.Drawing.Color.White
-        Me.btGuardarInf.Location = New System.Drawing.Point(979, 15)
-        Me.btGuardarInf.Name = "btGuardarInf"
-        Me.btGuardarInf.Size = New System.Drawing.Size(151, 33)
-        Me.btGuardarInf.TabIndex = 166
-        Me.btGuardarInf.Text = "Guardar Informes"
-        Me.btGuardarInf.UseVisualStyleBackColor = False
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Enabled = False
-        Me.Label26.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(55, 32)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(147, 18)
-        Me.Label26.TabIndex = 165
-        Me.Label26.Text = "Folios del año anterior"
-        '
-        'btBuscar
-        '
-        Me.btBuscar.BackColor = System.Drawing.Color.White
-        Me.btBuscar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btBuscar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btBuscar.Location = New System.Drawing.Point(860, 15)
-        Me.btBuscar.Name = "btBuscar"
-        Me.btBuscar.Size = New System.Drawing.Size(119, 33)
-        Me.btBuscar.TabIndex = 164
-        Me.btBuscar.Text = "Buscar Folio"
-        Me.btBuscar.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Label27.Location = New System.Drawing.Point(55, 15)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(38, 15)
-        Me.Label27.TabIndex = 152
-        Me.Label27.Text = "Folios"
-        '
-        'LabelNombre
-        '
-        Me.LabelNombre.AutoSize = True
-        Me.LabelNombre.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelNombre.Location = New System.Drawing.Point(15, 84)
-        Me.LabelNombre.Name = "LabelNombre"
-        Me.LabelNombre.Size = New System.Drawing.Size(34, 14)
-        Me.LabelNombre.TabIndex = 125
-        Me.LabelNombre.Text = "Folio:"
-        '
-        'txtFolio
-        '
-        Me.txtFolio.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFolio.Location = New System.Drawing.Point(58, 82)
-        Me.txtFolio.Name = "txtFolio"
-        Me.txtFolio.Size = New System.Drawing.Size(76, 21)
-        Me.txtFolio.TabIndex = 126
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(1020, 12)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(92, 14)
-        Me.Label49.TabIndex = 142
-        Me.Label49.Text = "Cerrar formulario"
-        '
-        'btCerrar
-        '
-        Me.btCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.btCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btCerrar.Image = CType(resources.GetObject("btCerrar.Image"), System.Drawing.Image)
-        Me.btCerrar.Location = New System.Drawing.Point(1116, 7)
-        Me.btCerrar.Name = "btCerrar"
-        Me.btCerrar.Size = New System.Drawing.Size(24, 24)
-        Me.btCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btCerrar.TabIndex = 141
-        Me.btCerrar.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(104, 336)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 14)
-        Me.Label2.TabIndex = 157
-        Me.Label2.Text = "Numero exterior"
         '
         'Folio
         '
@@ -847,6 +501,352 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.FechaRegistro.HeaderText = "FechaRegistro"
         Me.FechaRegistro.Name = "FechaRegistro"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.Label42)
+        Me.Panel1.Location = New System.Drawing.Point(14, 125)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(428, 27)
+        Me.Panel1.TabIndex = 170
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label42.Location = New System.Drawing.Point(6, 6)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(132, 15)
+        Me.Label42.TabIndex = 152
+        Me.Label42.Text = "Información del cliente"
+        '
+        'lbPais
+        '
+        Me.lbPais.AutoSize = True
+        Me.lbPais.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPais.Location = New System.Drawing.Point(327, 267)
+        Me.lbPais.Name = "lbPais"
+        Me.lbPais.Size = New System.Drawing.Size(27, 14)
+        Me.lbPais.TabIndex = 169
+        Me.lbPais.Text = "Pais"
+        '
+        'lbDomicilio
+        '
+        Me.lbDomicilio.AutoSize = True
+        Me.lbDomicilio.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDomicilio.Location = New System.Drawing.Point(93, 214)
+        Me.lbDomicilio.Name = "lbDomicilio"
+        Me.lbDomicilio.Size = New System.Drawing.Size(27, 14)
+        Me.lbDomicilio.TabIndex = 169
+        Me.lbDomicilio.Text = "Pais"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label50.Location = New System.Drawing.Point(248, 265)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(32, 15)
+        Me.Label50.TabIndex = 168
+        Me.Label50.Text = "Pais:"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label48.Location = New System.Drawing.Point(21, 212)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(61, 15)
+        Me.Label48.TabIndex = 168
+        Me.Label48.Text = "Domicilio:"
+        '
+        'lbCiudad
+        '
+        Me.lbCiudad.AutoSize = True
+        Me.lbCiudad.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCiudad.Location = New System.Drawing.Point(93, 240)
+        Me.lbCiudad.Name = "lbCiudad"
+        Me.lbCiudad.Size = New System.Drawing.Size(40, 14)
+        Me.lbCiudad.TabIndex = 167
+        Me.lbCiudad.Text = "Estado"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label44.Location = New System.Drawing.Point(21, 238)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(48, 15)
+        Me.Label44.TabIndex = 166
+        Me.Label44.Text = "Ciudad:"
+        '
+        'lbEstado
+        '
+        Me.lbEstado.AutoSize = True
+        Me.lbEstado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEstado.Location = New System.Drawing.Point(93, 267)
+        Me.lbEstado.Name = "lbEstado"
+        Me.lbEstado.Size = New System.Drawing.Size(40, 14)
+        Me.lbEstado.TabIndex = 165
+        Me.lbEstado.Text = "Ciudad"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label39.Location = New System.Drawing.Point(21, 265)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(47, 15)
+        Me.Label39.TabIndex = 164
+        Me.Label39.Text = "Estado:"
+        '
+        'lbCP
+        '
+        Me.lbCP.AutoSize = True
+        Me.lbCP.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCP.Location = New System.Drawing.Point(93, 292)
+        Me.lbCP.Name = "lbCP"
+        Me.lbCP.Size = New System.Drawing.Size(73, 14)
+        Me.lbCP.TabIndex = 163
+        Me.lbCP.Text = "Código postal"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label35.Location = New System.Drawing.Point(21, 291)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(25, 15)
+        Me.Label35.TabIndex = 162
+        Me.Label35.Text = "CP:"
+        '
+        'lbClave
+        '
+        Me.lbClave.AutoSize = True
+        Me.lbClave.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbClave.Location = New System.Drawing.Point(93, 166)
+        Me.lbClave.Name = "lbClave"
+        Me.lbClave.Size = New System.Drawing.Size(121, 14)
+        Me.lbClave.TabIndex = 155
+        Me.lbClave.Text = "Dirección del prospecto"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label29.Location = New System.Drawing.Point(21, 164)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(40, 15)
+        Me.Label29.TabIndex = 154
+        Me.Label29.Text = "Clave:"
+        '
+        'lbRFC
+        '
+        Me.lbRFC.AutoSize = True
+        Me.lbRFC.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRFC.Location = New System.Drawing.Point(327, 242)
+        Me.lbRFC.Name = "lbRFC"
+        Me.lbRFC.Size = New System.Drawing.Size(43, 14)
+        Me.lbRFC.TabIndex = 159
+        Me.lbRFC.Text = "Colonia"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label25.Location = New System.Drawing.Point(248, 240)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(31, 15)
+        Me.Label25.TabIndex = 158
+        Me.Label25.Text = "RFC:"
+        '
+        'lbEmpresa
+        '
+        Me.lbEmpresa.AutoSize = True
+        Me.lbEmpresa.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEmpresa.Location = New System.Drawing.Point(93, 189)
+        Me.lbEmpresa.Name = "lbEmpresa"
+        Me.lbEmpresa.Size = New System.Drawing.Size(43, 14)
+        Me.lbEmpresa.TabIndex = 159
+        Me.lbEmpresa.Text = "Colonia"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label20.Location = New System.Drawing.Point(21, 187)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(58, 15)
+        Me.Label20.TabIndex = 158
+        Me.Label20.Text = "Empresa:"
+        '
+        'lbfechaRecp
+        '
+        Me.lbfechaRecp.AutoSize = True
+        Me.lbfechaRecp.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbfechaRecp.Location = New System.Drawing.Point(298, 84)
+        Me.lbfechaRecp.Name = "lbfechaRecp"
+        Me.lbfechaRecp.Size = New System.Drawing.Size(43, 14)
+        Me.lbfechaRecp.TabIndex = 159
+        Me.lbfechaRecp.Text = "Colonia"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(104, 336)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(88, 14)
+        Me.Label2.TabIndex = 157
+        Me.Label2.Text = "Numero exterior"
+        '
+        'lbRazonSocial
+        '
+        Me.lbRazonSocial.AutoSize = True
+        Me.lbRazonSocial.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRazonSocial.Location = New System.Drawing.Point(327, 167)
+        Me.lbRazonSocial.Name = "lbRazonSocial"
+        Me.lbRazonSocial.Size = New System.Drawing.Size(88, 14)
+        Me.lbRazonSocial.TabIndex = 157
+        Me.lbRazonSocial.Text = "Numero exterior"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(192, 83)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(100, 15)
+        Me.Label11.TabIndex = 158
+        Me.Label11.Text = "Fecha Recepción:"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label17.Location = New System.Drawing.Point(248, 165)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(76, 15)
+        Me.Label17.TabIndex = 156
+        Me.Label17.Text = "Razón Social:"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.Controls.Add(Me.btGuardarInf)
+        Me.Panel2.Controls.Add(Me.Label26)
+        Me.Panel2.Controls.Add(Me.btBuscar)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.Label27)
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1140, 66)
+        Me.Panel2.TabIndex = 151
+        '
+        'btGuardarInf
+        '
+        Me.btGuardarInf.BackColor = System.Drawing.Color.SteelBlue
+        Me.btGuardarInf.FlatAppearance.BorderSize = 0
+        Me.btGuardarInf.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btGuardarInf.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btGuardarInf.ForeColor = System.Drawing.Color.White
+        Me.btGuardarInf.Location = New System.Drawing.Point(979, 15)
+        Me.btGuardarInf.Name = "btGuardarInf"
+        Me.btGuardarInf.Size = New System.Drawing.Size(151, 33)
+        Me.btGuardarInf.TabIndex = 166
+        Me.btGuardarInf.Text = "Guardar Informes"
+        Me.btGuardarInf.UseVisualStyleBackColor = False
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Enabled = False
+        Me.Label26.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(55, 32)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(147, 18)
+        Me.Label26.TabIndex = 165
+        Me.Label26.Text = "Folios del año anterior"
+        '
+        'btBuscar
+        '
+        Me.btBuscar.BackColor = System.Drawing.Color.White
+        Me.btBuscar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btBuscar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btBuscar.ForeColor = System.Drawing.Color.Black
+        Me.btBuscar.Location = New System.Drawing.Point(860, 15)
+        Me.btBuscar.Name = "btBuscar"
+        Me.btBuscar.Size = New System.Drawing.Size(119, 33)
+        Me.btBuscar.TabIndex = 164
+        Me.btBuscar.Text = "Buscar Folio"
+        Me.btBuscar.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.ForestGreen
+        Me.Label27.Location = New System.Drawing.Point(55, 15)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(38, 15)
+        Me.Label27.TabIndex = 152
+        Me.Label27.Text = "Folios"
+        '
+        'LabelNombre
+        '
+        Me.LabelNombre.AutoSize = True
+        Me.LabelNombre.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNombre.Location = New System.Drawing.Point(15, 84)
+        Me.LabelNombre.Name = "LabelNombre"
+        Me.LabelNombre.Size = New System.Drawing.Size(34, 14)
+        Me.LabelNombre.TabIndex = 125
+        Me.LabelNombre.Text = "Folio:"
+        '
+        'txtFolio
+        '
+        Me.txtFolio.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFolio.Location = New System.Drawing.Point(58, 82)
+        Me.txtFolio.Name = "txtFolio"
+        Me.txtFolio.Size = New System.Drawing.Size(76, 21)
+        Me.txtFolio.TabIndex = 126
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(1020, 12)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(92, 14)
+        Me.Label49.TabIndex = 142
+        Me.Label49.Text = "Cerrar formulario"
+        '
+        'btCerrar
+        '
+        Me.btCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.btCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btCerrar.Image = CType(resources.GetObject("btCerrar.Image"), System.Drawing.Image)
+        Me.btCerrar.Location = New System.Drawing.Point(1116, 7)
+        Me.btCerrar.Name = "btCerrar"
+        Me.btCerrar.Size = New System.Drawing.Size(24, 24)
+        Me.btCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btCerrar.TabIndex = 141
+        Me.btCerrar.TabStop = False
         '
         'FrmFoliosDelAnioAnterior
         '
