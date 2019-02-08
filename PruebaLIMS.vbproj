@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A610B65B-9B94-4B1C-BA40-51A71A354FFB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PruebaLIMS.My.MyApplication</StartupObject>
+    <RootNamespace>PruebaLIMS</RootNamespace>
+    <AssemblyName>PruebaLIMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PruebaLIMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PruebaLIMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cotizaciones.Designer.vb">
+      <DependentUpon>Cotizaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutorizarSolicitudes.Designer.vb">
+      <DependentUpon>FrmAutorizarSolicitudes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAutorizarSolicitudes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarEmpresaCom.Designer.vb">
+      <DependentUpon>FrmBuscarEmpresaCom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarEmpresaCom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBusquedaCuentas.Designer.vb">
+      <DependentUpon>FrmBusquedaCuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedaCuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBusquedadFolio.Designer.vb">
+      <DependentUpon>FrmBusquedadFolio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedadFolio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaTodos.Designer.vb">
+      <DependentUpon>frmConsultaTodos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaTodos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCotizacion2018.Designer.vb">
+      <DependentUpon>FrmCotizacion2018.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCotizacion2018.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCotizacionInformal.Designer.vb">
+      <DependentUpon>FrmCotizacionInformal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCotizacionInformal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContactos.Designer.vb">
+      <DependentUpon>FrmContactos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContactos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContactosAdicionales.Designer.vb">
+      <DependentUpon>FrmContactosAdicionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContactosAdicionales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCotizacionPorArticulo.Designer.vb">
+      <DependentUpon>frmCotizacionPorArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCotizacionPorArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCotizadorLIMS.Designer.vb">
+      <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCotizadorLIMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdicionCot2018-2019.Designer.vb">
+      <DependentUpon>frmEdicionCot2018-2019.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEdicionCot2018-2019.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFolio.Designer.vb">
+      <DependentUpon>FrmFolio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFolio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFoliosDelAnioAnterior.Designer.vb">
+      <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFoliosDelAnioAnterior.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHOME.Designer.vb">
+      <DependentUpon>FrmHOME.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHOME.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCuandoCondicion.Designer.vb">
+      <DependentUpon>FrmCuandoCondicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCuandoCondicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpresas.Designer.vb">
+      <DependentUpon>FrmEmpresas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpresas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginAdminGeneral.Designer.vb">
+      <DependentUpon>FrmLoginAdminGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginAdminGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginAdminVentas.Designer.vb">
+      <DependentUpon>FrmLoginAdminVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginAdminVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLugaresCondicion.Designer.vb">
+      <DependentUpon>FrmLugaresCondicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLugaresCondicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalidades.Designer.vb">
+      <DependentUpon>FrmModalidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModalidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoContacto.Designer.vb">
+      <DependentUpon>FrmNuevoContacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoContacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoProspecto.Designer.vb">
+      <DependentUpon>FrmNuevoProspecto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoProspecto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProspectos.Designer.vb">
+      <DependentUpon>FrmProspectos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProspectos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelacionesContactoEmpresas.Designer.vb">
+      <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelacionesContactoEmpresas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesGenerales.Designer.vb">
+      <DependentUpon>FrmReportesGenerales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesGenerales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiemposCondicion.Designer.vb">
+      <DependentUpon>FrmTiemposCondicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiemposCondicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuariosCotizadores.Designer.vb">
+      <DependentUpon>FrmUsuariosCotizadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuariosCotizadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformacionGeneral.vb" />
+    <Compile Include="MetasCotizador.vb" />
+    <Compile Include="MetAsInf2018.vb" />
+    <Compile Include="MetAsInf2019.vb" />
+    <Compile Include="PantallaPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal.Designer.vb">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LIMS.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cotizaciones.resx">
+      <DependentUpon>Cotizaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAutorizarSolicitudes.resx">
+      <DependentUpon>FrmAutorizarSolicitudes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarEmpresaCom.resx">
+      <DependentUpon>FrmBuscarEmpresaCom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBusquedaCuentas.resx">
+      <DependentUpon>FrmBusquedaCuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBusquedadFolio.resx">
+      <DependentUpon>FrmBusquedadFolio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaTodos.resx">
+      <DependentUpon>frmConsultaTodos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCotizacion2018.resx">
+      <DependentUpon>FrmCotizacion2018.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCotizacionInformal.resx">
+      <DependentUpon>FrmCotizacionInformal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContactos.resx">
+      <DependentUpon>FrmContactos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContactosAdicionales.resx">
+      <DependentUpon>FrmContactosAdicionales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCotizacionPorArticulo.resx">
+      <DependentUpon>frmCotizacionPorArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCotizadorLIMS.resx">
+      <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEdicionCot2018-2019.resx">
+      <DependentUpon>frmEdicionCot2018-2019.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFolio.resx">
+      <DependentUpon>FrmFolio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFoliosDelAnioAnterior.resx">
+      <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHOME.resx">
+      <DependentUpon>FrmHOME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCuandoCondicion.resx">
+      <DependentUpon>FrmCuandoCondicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpresas.resx">
+      <DependentUpon>FrmEmpresas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginAdminGeneral.resx">
+      <DependentUpon>FrmLoginAdminGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginAdminVentas.resx">
+      <DependentUpon>FrmLoginAdminVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLugaresCondicion.resx">
+      <DependentUpon>FrmLugaresCondicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalidades.resx">
+      <DependentUpon>FrmModalidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoContacto.resx">
+      <DependentUpon>FrmNuevoContacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoProspecto.resx">
+      <DependentUpon>FrmNuevoProspecto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProspectos.resx">
+      <DependentUpon>FrmProspectos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelacionesContactoEmpresas.resx">
+      <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportesGenerales.resx">
+      <DependentUpon>FrmReportesGenerales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiemposCondicion.resx">
+      <DependentUpon>FrmTiemposCondicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuariosCotizadores.resx">
+      <DependentUpon>FrmUsuariosCotizadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cotizador.ico" />
+    <None Include="Resources\green.png" />
+    <None Include="Resources\gray.png" />
+    <None Include="Resources\Reset_hover.png" />
+    <None Include="Resources\Reset_button.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
