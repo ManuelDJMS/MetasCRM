@@ -65,6 +65,7 @@
                  where Compania like '" & TextEmpresa.Text & "%' and Marca like '" & txtMarca.Text & "%' and Modelo like '" & txtModelo.Text & "%'"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
+
             While lector2018.Read()
                 dgEmpresas.Rows.Add(lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7))
             End While
@@ -162,15 +163,15 @@
                 FrmFoliosDelAnioAnterior.lbCP.Text = lector2018(9)
             End If
             lector2018.Close()
-            R = "   SELECT [NFila],[Folio],[ClavecontactoConsign],[Empresa],[Clavecontacto],[Usuario],[ClavecontactoUsuario],[FECHARECEP],
+            R = "   SELECT [Folio],[ClavecontactoConsign],[Empresa],[Clavecontacto],[Usuario],[ClavecontactoUsuario],[FECHARECEP],
                         [CveOperador],[EmpresaEmision],[DirCalleEmision],[DirColEmision],[DirCiudadEmision],[DirEdoProvEmision],
                         [DirPaisEmision],[DirCPEmision] FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where Folio ='" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & "'"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
-                FrmFoliosDelAnioAnterior.DGConsulta.Rows.Add(False, lector2018(0), lector2018(1), "-", "-", "-", lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7),
-                "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(8), "-", lector2018(9), lector2018(10),
-                lector2018(11), lector2018(12), lector2018(13), lector2018(14), lector2018(15), "-", "-", "-", "-", "-", "-", "-", "-", "-")
+                FrmFoliosDelAnioAnterior.DGConsulta.Rows.Add(False, lector2018(0), "-", "-", "-", lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6),
+                        "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(7), "-", lector2018(8), lector2018(9), lector2018(10),
+                        lector2018(11), lector2018(12), lector2018(13), lector2018(14), "-", "-", "-", "-", "-", "-", "-", "-", "-")
             End While
             lector2018.Close()
             FrmFoliosDelAnioAnterior.lbServicios.Text = "Total de Servicios: " + Convert.ToString(FrmFoliosDelAnioAnterior.DGConsulta.Rows.Count - 1)
