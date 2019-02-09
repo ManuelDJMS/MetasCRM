@@ -110,6 +110,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.lbRazonSocial = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DTP = New System.Windows.Forms.DateTimePicker()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.btBuscar = New System.Windows.Forms.Button()
@@ -117,7 +118,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.btCerrar = New System.Windows.Forms.PictureBox()
-        Me.DTP = New System.Windows.Forms.DateTimePicker()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -751,6 +751,13 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.Size = New System.Drawing.Size(1140, 66)
         Me.Panel2.TabIndex = 151
         '
+        'DTP
+        '
+        Me.DTP.Location = New System.Drawing.Point(582, 18)
+        Me.DTP.Name = "DTP"
+        Me.DTP.Size = New System.Drawing.Size(243, 23)
+        Me.DTP.TabIndex = 167
+        '
         'btGuardarInf
         '
         Me.btGuardarInf.BackColor = System.Drawing.Color.SteelBlue
@@ -835,13 +842,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.btCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btCerrar.TabIndex = 141
         Me.btCerrar.TabStop = False
-        '
-        'DTP
-        '
-        Me.DTP.Location = New System.Drawing.Point(582, 18)
-        Me.DTP.Name = "DTP"
-        Me.DTP.Size = New System.Drawing.Size(243, 23)
-        Me.DTP.TabIndex = 167
         '
         'FrmFoliosDelAnioAnterior
         '

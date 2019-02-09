@@ -1,5 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmFoliosDelAnioAnterior
+    Private Sub FrmFoliosDelAnioAnterior_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
         MetodoMetasInf2019()
@@ -20,7 +23,7 @@ Public Class FrmFoliosDelAnioAnterior
             'Codigo para guardar en InformesServicios----------------------------------------------------56
             For i = 0 To DGConsulta.Rows.Count - 2
                 R = "insert into [INFORMES-SERVICIOS] ([Folio],[MAGNITUD],[INFORME],[Facturado],[ClavecontactoConsign],[Empresa],[Clavecontacto]
-                  ,[Usuario],[ClavecontactoUsuario],[FECHARECEP],[FECHACALIB],[FECHA-EMISION],[ServCatalogo1],[ServCatalogo2],[ServiciosAdicionales]
+                  ,[Usuario],[ClavecontactoUsuario],[FECHARECEP],[ServCatalogo1],[ServCatalogo2],[ServiciosAdicionales]
                   ,[PUCalib],[PULab],[Pu-Facturado],[TIPO],[ALCANCE],[MARCA],[MODELO],[Serie],[ID],[Accesorios],[PUNTOS],[Patron1]
                   ,[Patron2],[Patron3],[NumFuncionesCalibradas],[Etiquetas],[Hacer-etiq],[DatosdelInforme],[Observaciones],[CALIBRO]
                   ,[NumEmisiones],[NumCot],[Status],[CveOperador],[REALIZO-MEDICION],[EmpresaEmision],[DirCalleEmision],[DirColEmision]
@@ -28,8 +31,8 @@ Public Class FrmFoliosDelAnioAnterior
                   ,[Sv7Curva],[Sv8Idioma],[Sv9Calendar],[SVAD10],[Fecha_Reg]) values(" & Val(DGConsulta.Item(0, i).Value) & ",'" & (DGConsulta.Item(1, i).Value) & "'
                         ,'" & (DGConsulta.Item(2, i).Value) & "'," & Val(DGConsulta.Item(3, i).Value) & "," & Val(DGConsulta.Item(4, i).Value) & "
                         ,'" & (DGConsulta.Item(5, i).Value) & "'," & Val(DGConsulta.Item(6, i).Value) & ",'" & (DGConsulta.Item(7, i).Value) & "'
-                        ," & Val(DGConsulta.Item(8, i).Value) & ",'" & (DGConsulta.Item(9, i).Value) & "','" & (DGConsulta.Item(10, i).Value) & "'
-                        ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "','" & (DGConsulta.Item(13, i).Value) & "'
+                        ," & Val(DGConsulta.Item(8, i).Value) & ",'" & (DGConsulta.Item(9, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
+                        ,'" & (DGConsulta.Item(13, i).Value) & "'
                         ,'" & (DGConsulta.Item(14, i).Value) & "'," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
                         ," & Val(DGConsulta.Item(17, i).Value) & ",'" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "'
                         ,'" & (DGConsulta.Item(20, i).Value) & "','" & (DGConsulta.Item(21, i).Value) & "','" & (DGConsulta.Item(22, i).Value) & "'
