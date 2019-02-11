@@ -66,13 +66,14 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
         Try
-            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "-", "-",
-            DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(), DGConsulta.Item(8, 0).Value.ToString(),
-            DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(), DGConsulta.Item(11, 0).Value.ToString(),
+            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "-",
+            DGConsulta.Item(5, 0).Value.ToString(), DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(),
+            DGConsulta.Item(8, 0).Value.ToString(), DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(),
             "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",
-            DGConsulta.Item(40, 0).Value.ToString(), "-", DGConsulta.Item(42, 0).Value.ToString(), DGConsulta.Item(43, 0).Value.ToString(),
-            DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(), DGConsulta.Item(46, 0).Value.ToString(),
-            DGConsulta.Item(47, 0).Value.ToString(), DGConsulta.Item(48, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
+            DGConsulta.Item(39, 0).Value.ToString(), "-", DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
+            DGConsulta.Item(43, 0).Value.ToString(), DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(),
+            DGConsulta.Item(46, 0).Value.ToString(), DGConsulta.Item(47, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
+            lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
         Catch ex As Exception
             MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
         End Try
@@ -99,6 +100,11 @@ Public Class FrmFoliosDelAnioAnterior
                     MetodoMetasInf2018()
                     comando2018 = conexion2018.CreateCommand
                     Dim R As String
+                    DGConsulta.Rows.Clear()
+                    If DGConsulta.Rows.Count < 2 Then
+                    Else
+                        DGConsulta.Rows.RemoveAt(DGConsulta.CurrentRow.Index)
+                    End If
                     R = "select distinct Folio, ClavecontactoConsign, RazonSocial, Compania, RFC, DomicilioConsig, PaisConsig, CiudadConsig, EdoConsig, CPConsig
                         from [INFORMES-SERVICIOS] INNER JOIN MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa
                         where Folio ='" & TextFolio.Text & "'"
