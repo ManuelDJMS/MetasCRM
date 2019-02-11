@@ -23,7 +23,7 @@ Public Class FrmFoliosDelAnioAnterior
             'Codigo para guardar en InformesServicios----------------------------------------------------56
             For i = 0 To DGConsulta.Rows.Count - 2
                 R = "insert into [INFORMES-SERVICIOS] ([Folio],[MAGNITUD],[INFORME],[Facturado],[ClavecontactoConsign],[Empresa],[Clavecontacto]
-                  ,[Usuario],[ClavecontactoUsuario],[FECHARECEP],[ServCatalogo1],[ServCatalogo2],[ServiciosAdicionales]
+                  ',[Usuario],[ClavecontactoUsuario],[FECHARECEP],[ServCatalogo1],[ServCatalogo2],[ServiciosAdicionales]
                   ,[PUCalib],[PULab],[Pu-Facturado],[TIPO],[ALCANCE],[MARCA],[MODELO],[Serie],[ID],[Accesorios],[PUNTOS],[Patron1]
                   ,[Patron2],[Patron3],[NumFuncionesCalibradas],[Etiquetas],[Hacer-etiq],[DatosdelInforme],[Observaciones],[CALIBRO]
                   ,[NumEmisiones],[NumCot],[Status],[CveOperador],[REALIZO-MEDICION],[EmpresaEmision],[DirCalleEmision],[DirColEmision]
