@@ -8,9 +8,11 @@ Public Class FrmFoliosDelAnioAnterior
         MetodoMetasInf2019()
         Try
             Dim fechaActual As Date
+            Dim fechaRec As Date
             Dim maximo As Integer
             Dim R As String
 
+            fechaRec = DTPRecepcion.Value
             fechaActual = DTP.Value
 
             'If txtFolio.Text.Trim.Equals("") Then
@@ -22,18 +24,18 @@ Public Class FrmFoliosDelAnioAnterior
             lector.Close()
             'Codigo para guardar en InformesServicios----------------------------------------------------56
             For i = 0 To DGConsulta.Rows.Count - 2
-                R = "insert into [INFORMES-SERVICIOS] ([Folio],[MAGNITUD],[INFORME],[Facturado],[ClavecontactoConsign],[Empresa],[Clavecontacto]
-                  ',[Usuario],[ClavecontactoUsuario],[FECHARECEP],[ServCatalogo1],[ServCatalogo2],[ServiciosAdicionales]
-                  ,[PUCalib],[PULab],[Pu-Facturado],[TIPO],[ALCANCE],[MARCA],[MODELO],[Serie],[ID],[Accesorios],[PUNTOS],[Patron1]
-                  ,[Patron2],[Patron3],[NumFuncionesCalibradas],[Etiquetas],[Hacer-etiq],[DatosdelInforme],[Observaciones],[CALIBRO]
-                  ,[NumEmisiones],[NumCot],[Status],[CveOperador],[REALIZO-MEDICION],[EmpresaEmision],[DirCalleEmision],[DirColEmision]
-                  ,[DirCiudadEmision],[DirEdoProvEmision],[DirPaisEmision],[DirCPEmision],[Sv1Ajuste],[Sv3Matto],[Sv5COM02],[Sv6IntervaloRe]
-                  ,[Sv7Curva],[Sv8Idioma],[Sv9Calendar],[SVAD10],[Fecha_Reg]) values(" & Val(DGConsulta.Item(0, i).Value) & ",'" & (DGConsulta.Item(1, i).Value) & "'
+                R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
+                  , [Usuario], [ClavecontactoUsuario], [FECHARECEP], [ServCatalogo1], [ServCatalogo2], [ServiciosAdicionales]
+                  , [PUCalib], [PULab], [Pu-Facturado], [TIPO], [ALCANCE], [MARCA], [MODELO], [Serie], [ID], [Accesorios], [PUNTOS], [Patron1]
+                  , [Patron2], [Patron3], [NumFuncionesCalibradas], [Etiquetas], [Hacer-etiq], [DatosdelInforme], [Observaciones], [CALIBRO]
+                  , [NumEmisiones], [NumCot], [Status], [CveOperador], [REALIZO-MEDICION], [EmpresaEmision], [DirCalleEmision], [DirColEmision]
+                  , [DirCiudadEmision], [DirEdoProvEmision], [DirPaisEmision], [DirCPEmision], [Sv1Ajuste], [Sv3Matto], [Sv5COM02], [Sv6IntervaloRe]
+                  , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10], [Fecha_Reg]) values(" & (DGConsulta.Item(1, i).Value) & "
                         ,'" & (DGConsulta.Item(2, i).Value) & "'," & Val(DGConsulta.Item(3, i).Value) & "," & Val(DGConsulta.Item(4, i).Value) & "
                         ,'" & (DGConsulta.Item(5, i).Value) & "'," & Val(DGConsulta.Item(6, i).Value) & ",'" & (DGConsulta.Item(7, i).Value) & "'
-                        ," & Val(DGConsulta.Item(8, i).Value) & ",'" & (DGConsulta.Item(9, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
-                        ,'" & (DGConsulta.Item(13, i).Value) & "'
-                        ,'" & (DGConsulta.Item(14, i).Value) & "'," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
+                        ," & Val(DGConsulta.Item(8, i).Value) & "," & fechaRec & ",'" & (DGConsulta.Item(12, i).Value) & "'
+                        ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
+                        ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
                         ," & Val(DGConsulta.Item(17, i).Value) & ",'" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "'
                         ,'" & (DGConsulta.Item(20, i).Value) & "','" & (DGConsulta.Item(21, i).Value) & "','" & (DGConsulta.Item(22, i).Value) & "'
                         ,'" & (DGConsulta.Item(23, i).Value) & "','" & (DGConsulta.Item(24, i).Value) & "','" & (DGConsulta.Item(25, i).Value) & "'
