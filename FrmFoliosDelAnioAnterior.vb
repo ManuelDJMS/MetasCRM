@@ -6,15 +6,13 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
         MetodoMetasInf2019()
-        Try
-            Dim fechaActual As Date
+        ' Try
+        Dim fechaActual As Date
             Dim fechaRec As Date
             Dim maximo As Integer
             Dim R As String
-
             fechaRec = DTPRecepcion.Value
             fechaActual = DTP.Value
-
             'If txtFolio.Text.Trim.Equals("") Then
             Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
             Dim lector As SqlDataReader
@@ -55,13 +53,13 @@ Public Class FrmFoliosDelAnioAnterior
                 comando.ExecuteNonQuery()
             Next i
             MsgBox("Guardado en 2019 correctamentee.", MsgBoxStyle.Information)
-            'Else
-            '    MsgBox("Ingresa el numero de foliio")
-            'End If
-            'Me.Dispose()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
-        End Try
+        'Else
+        '    MsgBox("Ingresa el numero de foliio")
+        'End If
+        'Me.Dispose()
+        'Catch ex As Exception
+        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+        'End Try
         ''------------------------------------------------
     End Sub
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
