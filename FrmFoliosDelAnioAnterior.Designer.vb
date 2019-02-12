@@ -22,16 +22,47 @@ Partial Class FrmFoliosDelAnioAnterior
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DTPRecepcion = New System.Windows.Forms.DateTimePicker()
         Me.TextFolio = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btEliminar = New System.Windows.Forms.Button()
         Me.btAgregarFila = New System.Windows.Forms.Button()
         Me.lbServicios = New System.Windows.Forms.Label()
         Me.DGConsulta = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.lbPais = New System.Windows.Forms.Label()
+        Me.lbDomicilio = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.lbCiudad = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.lbEstado = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.lbCP = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbClave = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.lbRFC = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.lbEmpresa = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lbRazonSocial = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DTP = New System.Windows.Forms.DateTimePicker()
+        Me.btGuardarInf = New System.Windows.Forms.Button()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.btBuscar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.btCerrar = New System.Windows.Forms.PictureBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Folio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Magnitud = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,8 +74,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClavecontactoUsuarioa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaRecepcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaCalib = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaEmision = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ServCatalogo1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ServCatalogo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ServiciosAdicionales = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -89,37 +118,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Sv9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sv10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.lbPais = New System.Windows.Forms.Label()
-        Me.lbDomicilio = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.lbCiudad = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.lbEstado = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.lbCP = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.lbClave = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.lbRFC = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.lbEmpresa = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.lbRazonSocial = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.DTP = New System.Windows.Forms.DateTimePicker()
-        Me.btGuardarInf = New System.Windows.Forms.Button()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.btBuscar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.btCerrar = New System.Windows.Forms.PictureBox()
-        Me.DTPRecepcion = New System.Windows.Forms.DateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,6 +176,24 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabFolios.Size = New System.Drawing.Size(1140, 611)
         Me.TabFolios.TabIndex = 5
         Me.TabFolios.Text = "Folios del año anterior"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(253, 321)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(120, 15)
+        Me.Label2.TabIndex = 178
+        Me.Label2.Text = "Fecha de Recepción: "
+        '
+        'DTPRecepcion
+        '
+        Me.DTPRecepcion.CalendarFont = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTPRecepcion.Location = New System.Drawing.Point(380, 315)
+        Me.DTPRecepcion.Name = "DTPRecepcion"
+        Me.DTPRecepcion.Size = New System.Drawing.Size(243, 23)
+        Me.DTPRecepcion.TabIndex = 177
         '
         'TextFolio
         '
@@ -241,305 +257,20 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Folio, Me.Magnitud, Me.Informe, Me.Facturadp, Me.ClaveContacto, Me.Empresa, Me.ClaveContactoUsuario, Me.Usuario, Me.ClavecontactoUsuarioa, Me.FechaRecepcion, Me.FechaCalib, Me.FechaEmision, Me.ServCatalogo1, Me.ServCatalogo2, Me.ServiciosAdicionales, Me.PUCalib, Me.PULab, Me.PUFacturado, Me.Tipo, Me.Alcance, Me.Marca, Me.Modelo, Me.Serie, Me.ID, Me.Accesorios, Me.Puntos, Me.Patron1, Me.Patron2, Me.Patron3, Me.Funciones, Me.Etiquetas, Me.HacerEtiquetas, Me.DatosInforme, Me.Observaciones, Me.Calibro, Me.NumEmisiones, Me.NumCot, Me.Status, Me.CveOperador, Me.RealizoMedicion, Me.EmpresaEmision, Me.DirCalle, Me.DirCol, Me.DirEdo, Me.DiEdoEm, Me.DirPais, Me.DirCp, Me.Sv1, Me.Sv3, Me.Sv5, Me.Sv6, Me.Sv7, Me.Sv8Idioma, Me.Sv9, Me.Sv10, Me.FechaRegistro})
+        Me.DGConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Folio, Me.Magnitud, Me.Informe, Me.Facturadp, Me.ClaveContacto, Me.Empresa, Me.ClaveContactoUsuario, Me.Usuario, Me.ClavecontactoUsuarioa, Me.FechaRecepcion, Me.ServCatalogo1, Me.ServCatalogo2, Me.ServiciosAdicionales, Me.PUCalib, Me.PULab, Me.PUFacturado, Me.Tipo, Me.Alcance, Me.Marca, Me.Modelo, Me.Serie, Me.ID, Me.Accesorios, Me.Puntos, Me.Patron1, Me.Patron2, Me.Patron3, Me.Funciones, Me.Etiquetas, Me.HacerEtiquetas, Me.DatosInforme, Me.Observaciones, Me.Calibro, Me.NumEmisiones, Me.NumCot, Me.Status, Me.CveOperador, Me.RealizoMedicion, Me.EmpresaEmision, Me.DirCalle, Me.DirCol, Me.DirEdo, Me.DiEdoEm, Me.DirPais, Me.DirCp, Me.Sv1, Me.Sv3, Me.Sv5, Me.Sv6, Me.Sv7, Me.Sv8Idioma, Me.Sv9, Me.Sv10, Me.FechaRegistro})
         Me.DGConsulta.Location = New System.Drawing.Point(23, 365)
         Me.DGConsulta.Name = "DGConsulta"
         Me.DGConsulta.Size = New System.Drawing.Size(1098, 226)
         Me.DGConsulta.TabIndex = 171
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Eliminar"
-        Me.Column1.Name = "Column1"
-        '
-        'Folio
-        '
-        Me.Folio.HeaderText = "Folio"
-        Me.Folio.Name = "Folio"
-        '
-        'Magnitud
-        '
-        Me.Magnitud.HeaderText = "Magnitud"
-        Me.Magnitud.Name = "Magnitud"
-        '
-        'Informe
-        '
-        Me.Informe.HeaderText = "Informe"
-        Me.Informe.Name = "Informe"
-        '
-        'Facturadp
-        '
-        Me.Facturadp.HeaderText = "Facturado"
-        Me.Facturadp.Name = "Facturadp"
-        '
-        'ClaveContacto
-        '
-        Me.ClaveContacto.HeaderText = "ClaveContactoConsig"
-        Me.ClaveContacto.Name = "ClaveContacto"
-        '
-        'Empresa
-        '
-        Me.Empresa.HeaderText = "Empresa"
-        Me.Empresa.Name = "Empresa"
-        '
-        'ClaveContactoUsuario
-        '
-        Me.ClaveContactoUsuario.HeaderText = "ClaveContacto"
-        Me.ClaveContactoUsuario.Name = "ClaveContactoUsuario"
-        '
-        'Usuario
-        '
-        Me.Usuario.HeaderText = "Usuario"
-        Me.Usuario.Name = "Usuario"
-        '
-        'ClavecontactoUsuarioa
-        '
-        Me.ClavecontactoUsuarioa.HeaderText = "ClaveContactoUsuario"
-        Me.ClavecontactoUsuarioa.Name = "ClavecontactoUsuarioa"
-        '
-        'FechaRecepcion
-        '
-        Me.FechaRecepcion.HeaderText = "Fecha de Recepcion"
-        Me.FechaRecepcion.Name = "FechaRecepcion"
-        '
-        'FechaCalib
-        '
-        Me.FechaCalib.HeaderText = "Fecha de Calibración"
-        Me.FechaCalib.Name = "FechaCalib"
-        '
-        'FechaEmision
-        '
-        Me.FechaEmision.HeaderText = "Fecha de Emisión"
-        Me.FechaEmision.Name = "FechaEmision"
-        '
-        'ServCatalogo1
-        '
-        Me.ServCatalogo1.HeaderText = "ServCatalogo1"
-        Me.ServCatalogo1.Name = "ServCatalogo1"
-        '
-        'ServCatalogo2
-        '
-        Me.ServCatalogo2.HeaderText = "ServCatalogo2"
-        Me.ServCatalogo2.Name = "ServCatalogo2"
-        '
-        'ServiciosAdicionales
-        '
-        Me.ServiciosAdicionales.HeaderText = "ServiciosAdicionales"
-        Me.ServiciosAdicionales.Name = "ServiciosAdicionales"
-        '
-        'PUCalib
-        '
-        Me.PUCalib.HeaderText = "PUCalib"
-        Me.PUCalib.Name = "PUCalib"
-        '
-        'PULab
-        '
-        Me.PULab.HeaderText = "PULab"
-        Me.PULab.Name = "PULab"
-        '
-        'PUFacturado
-        '
-        Me.PUFacturado.HeaderText = "PUFacturado"
-        Me.PUFacturado.Name = "PUFacturado"
-        '
-        'Tipo
-        '
-        Me.Tipo.HeaderText = "Tipo"
-        Me.Tipo.Name = "Tipo"
-        '
-        'Alcance
-        '
-        Me.Alcance.HeaderText = "Alcance"
-        Me.Alcance.Name = "Alcance"
-        '
-        'Marca
-        '
-        Me.Marca.HeaderText = "Marca"
-        Me.Marca.Name = "Marca"
-        '
-        'Modelo
-        '
-        Me.Modelo.HeaderText = "Modelo"
-        Me.Modelo.Name = "Modelo"
-        '
-        'Serie
-        '
-        Me.Serie.HeaderText = "Serie"
-        Me.Serie.Name = "Serie"
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        '
-        'Accesorios
-        '
-        Me.Accesorios.HeaderText = "Accesorios"
-        Me.Accesorios.Name = "Accesorios"
-        '
-        'Puntos
-        '
-        Me.Puntos.HeaderText = "Puntos"
-        Me.Puntos.Name = "Puntos"
-        '
-        'Patron1
-        '
-        Me.Patron1.HeaderText = "Patron1"
-        Me.Patron1.Name = "Patron1"
-        '
-        'Patron2
-        '
-        Me.Patron2.HeaderText = "Patron2"
-        Me.Patron2.Name = "Patron2"
-        '
-        'Patron3
-        '
-        Me.Patron3.HeaderText = "Patron3"
-        Me.Patron3.Name = "Patron3"
-        '
-        'Funciones
-        '
-        Me.Funciones.HeaderText = "Funciones Calib"
-        Me.Funciones.Name = "Funciones"
-        '
-        'Etiquetas
-        '
-        Me.Etiquetas.HeaderText = "Etiquetas"
-        Me.Etiquetas.Name = "Etiquetas"
-        '
-        'HacerEtiquetas
-        '
-        Me.HacerEtiquetas.HeaderText = "Hacer Etiquetas"
-        Me.HacerEtiquetas.Name = "HacerEtiquetas"
-        '
-        'DatosInforme
-        '
-        Me.DatosInforme.HeaderText = "Datos Informe"
-        Me.DatosInforme.Name = "DatosInforme"
-        '
-        'Observaciones
-        '
-        Me.Observaciones.HeaderText = "Observaciones"
-        Me.Observaciones.Name = "Observaciones"
-        '
-        'Calibro
-        '
-        Me.Calibro.HeaderText = "Calibro"
-        Me.Calibro.Name = "Calibro"
-        '
-        'NumEmisiones
-        '
-        Me.NumEmisiones.HeaderText = "Num. Emisiones"
-        Me.NumEmisiones.Name = "NumEmisiones"
-        '
-        'NumCot
-        '
-        Me.NumCot.HeaderText = "NumCot"
-        Me.NumCot.Name = "NumCot"
-        '
-        'Status
-        '
-        Me.Status.HeaderText = "Status"
-        Me.Status.Name = "Status"
-        '
-        'CveOperador
-        '
-        Me.CveOperador.HeaderText = "Operador"
-        Me.CveOperador.Name = "CveOperador"
-        '
-        'RealizoMedicion
-        '
-        Me.RealizoMedicion.HeaderText = "Realizo-Medicion"
-        Me.RealizoMedicion.Name = "RealizoMedicion"
-        '
-        'EmpresaEmision
-        '
-        Me.EmpresaEmision.HeaderText = "Empresa Emision"
-        Me.EmpresaEmision.Name = "EmpresaEmision"
-        '
-        'DirCalle
-        '
-        Me.DirCalle.HeaderText = "Dir Calle Emision"
-        Me.DirCalle.Name = "DirCalle"
-        '
-        'DirCol
-        '
-        Me.DirCol.HeaderText = "Dir Col Emision"
-        Me.DirCol.Name = "DirCol"
-        '
-        'DirEdo
-        '
-        Me.DirEdo.HeaderText = "Dir Ciudad Emision"
-        Me.DirEdo.Name = "DirEdo"
-        '
-        'DiEdoEm
-        '
-        Me.DiEdoEm.HeaderText = "Dir Edo Emision"
-        Me.DiEdoEm.Name = "DiEdoEm"
-        '
-        'DirPais
-        '
-        Me.DirPais.HeaderText = "Dir Pais Emision"
-        Me.DirPais.Name = "DirPais"
-        '
-        'DirCp
-        '
-        Me.DirCp.HeaderText = "Dir CP Emision"
-        Me.DirCp.Name = "DirCp"
-        '
-        'Sv1
-        '
-        Me.Sv1.HeaderText = "Sv1Ajuste"
-        Me.Sv1.Name = "Sv1"
-        '
-        'Sv3
-        '
-        Me.Sv3.HeaderText = "Sv3Matto"
-        Me.Sv3.Name = "Sv3"
-        '
-        'Sv5
-        '
-        Me.Sv5.HeaderText = "Sv5COM2"
-        Me.Sv5.Name = "Sv5"
-        '
-        'Sv6
-        '
-        Me.Sv6.HeaderText = "Sv6IntervaloRe"
-        Me.Sv6.Name = "Sv6"
-        '
-        'Sv7
-        '
-        Me.Sv7.HeaderText = "Sv7Curva"
-        Me.Sv7.Name = "Sv7"
-        '
-        'Sv8Idioma
-        '
-        Me.Sv8Idioma.HeaderText = "Sv8Idioma"
-        Me.Sv8Idioma.Name = "Sv8Idioma"
-        '
-        'Sv9
-        '
-        Me.Sv9.HeaderText = "Sv9Calendar"
-        Me.Sv9.Name = "Sv9"
-        '
-        'Sv10
-        '
-        Me.Sv10.HeaderText = "SVAD10"
-        Me.Sv10.Name = "Sv10"
-        '
-        'FechaRegistro
-        '
-        Me.FechaRegistro.HeaderText = "FechaRegistro"
-        Me.FechaRegistro.Name = "FechaRegistro"
         '
         'Panel1
         '
@@ -847,23 +578,280 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.btCerrar.TabIndex = 141
         Me.btCerrar.TabStop = False
         '
-        'DTPRecepcion
+        'Column1
         '
-        Me.DTPRecepcion.CalendarFont = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPRecepcion.Location = New System.Drawing.Point(380, 315)
-        Me.DTPRecepcion.Name = "DTPRecepcion"
-        Me.DTPRecepcion.Size = New System.Drawing.Size(243, 23)
-        Me.DTPRecepcion.TabIndex = 177
+        Me.Column1.HeaderText = "Eliminar"
+        Me.Column1.Name = "Column1"
         '
-        'Label2
+        'Folio
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(253, 321)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 15)
-        Me.Label2.TabIndex = 178
-        Me.Label2.Text = "Fecha de Recepción: "
+        Me.Folio.HeaderText = "Folio"
+        Me.Folio.Name = "Folio"
+        '
+        'Magnitud
+        '
+        Me.Magnitud.HeaderText = "Magnitud"
+        Me.Magnitud.Name = "Magnitud"
+        '
+        'Informe
+        '
+        Me.Informe.HeaderText = "Informe"
+        Me.Informe.Name = "Informe"
+        '
+        'Facturadp
+        '
+        Me.Facturadp.HeaderText = "Facturado"
+        Me.Facturadp.Name = "Facturadp"
+        '
+        'ClaveContacto
+        '
+        Me.ClaveContacto.HeaderText = "ClaveContactoConsig"
+        Me.ClaveContacto.Name = "ClaveContacto"
+        '
+        'Empresa
+        '
+        Me.Empresa.HeaderText = "Empresa"
+        Me.Empresa.Name = "Empresa"
+        '
+        'ClaveContactoUsuario
+        '
+        Me.ClaveContactoUsuario.HeaderText = "ClaveContacto"
+        Me.ClaveContactoUsuario.Name = "ClaveContactoUsuario"
+        '
+        'Usuario
+        '
+        Me.Usuario.HeaderText = "Usuario"
+        Me.Usuario.Name = "Usuario"
+        '
+        'ClavecontactoUsuarioa
+        '
+        Me.ClavecontactoUsuarioa.HeaderText = "ClaveContactoUsuario"
+        Me.ClavecontactoUsuarioa.Name = "ClavecontactoUsuarioa"
+        '
+        'FechaRecepcion
+        '
+        Me.FechaRecepcion.HeaderText = "Fecha de Recepcion"
+        Me.FechaRecepcion.Name = "FechaRecepcion"
+        '
+        'ServCatalogo1
+        '
+        Me.ServCatalogo1.HeaderText = "ServCatalogo1"
+        Me.ServCatalogo1.Name = "ServCatalogo1"
+        '
+        'ServCatalogo2
+        '
+        Me.ServCatalogo2.HeaderText = "ServCatalogo2"
+        Me.ServCatalogo2.Name = "ServCatalogo2"
+        '
+        'ServiciosAdicionales
+        '
+        Me.ServiciosAdicionales.HeaderText = "ServiciosAdicionales"
+        Me.ServiciosAdicionales.Name = "ServiciosAdicionales"
+        '
+        'PUCalib
+        '
+        Me.PUCalib.HeaderText = "PUCalib"
+        Me.PUCalib.Name = "PUCalib"
+        '
+        'PULab
+        '
+        Me.PULab.HeaderText = "PULab"
+        Me.PULab.Name = "PULab"
+        '
+        'PUFacturado
+        '
+        Me.PUFacturado.HeaderText = "PUFacturado"
+        Me.PUFacturado.Name = "PUFacturado"
+        '
+        'Tipo
+        '
+        Me.Tipo.HeaderText = "Tipo"
+        Me.Tipo.Name = "Tipo"
+        '
+        'Alcance
+        '
+        Me.Alcance.HeaderText = "Alcance"
+        Me.Alcance.Name = "Alcance"
+        '
+        'Marca
+        '
+        Me.Marca.HeaderText = "Marca"
+        Me.Marca.Name = "Marca"
+        '
+        'Modelo
+        '
+        Me.Modelo.HeaderText = "Modelo"
+        Me.Modelo.Name = "Modelo"
+        '
+        'Serie
+        '
+        Me.Serie.HeaderText = "Serie"
+        Me.Serie.Name = "Serie"
+        '
+        'ID
+        '
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        '
+        'Accesorios
+        '
+        Me.Accesorios.HeaderText = "Accesorios"
+        Me.Accesorios.Name = "Accesorios"
+        '
+        'Puntos
+        '
+        Me.Puntos.HeaderText = "Puntos"
+        Me.Puntos.Name = "Puntos"
+        '
+        'Patron1
+        '
+        Me.Patron1.HeaderText = "Patron1"
+        Me.Patron1.Name = "Patron1"
+        '
+        'Patron2
+        '
+        Me.Patron2.HeaderText = "Patron2"
+        Me.Patron2.Name = "Patron2"
+        '
+        'Patron3
+        '
+        Me.Patron3.HeaderText = "Patron3"
+        Me.Patron3.Name = "Patron3"
+        '
+        'Funciones
+        '
+        Me.Funciones.HeaderText = "Funciones Calib"
+        Me.Funciones.Name = "Funciones"
+        '
+        'Etiquetas
+        '
+        Me.Etiquetas.HeaderText = "Etiquetas"
+        Me.Etiquetas.Name = "Etiquetas"
+        '
+        'HacerEtiquetas
+        '
+        Me.HacerEtiquetas.HeaderText = "Hacer Etiquetas"
+        Me.HacerEtiquetas.Name = "HacerEtiquetas"
+        '
+        'DatosInforme
+        '
+        Me.DatosInforme.HeaderText = "Datos Informe"
+        Me.DatosInforme.Name = "DatosInforme"
+        '
+        'Observaciones
+        '
+        Me.Observaciones.HeaderText = "Observaciones"
+        Me.Observaciones.Name = "Observaciones"
+        '
+        'Calibro
+        '
+        Me.Calibro.HeaderText = "Calibro"
+        Me.Calibro.Name = "Calibro"
+        '
+        'NumEmisiones
+        '
+        Me.NumEmisiones.HeaderText = "Num. Emisiones"
+        Me.NumEmisiones.Name = "NumEmisiones"
+        '
+        'NumCot
+        '
+        Me.NumCot.HeaderText = "NumCot"
+        Me.NumCot.Name = "NumCot"
+        '
+        'Status
+        '
+        Me.Status.HeaderText = "Status"
+        Me.Status.Name = "Status"
+        '
+        'CveOperador
+        '
+        Me.CveOperador.HeaderText = "Operador"
+        Me.CveOperador.Name = "CveOperador"
+        '
+        'RealizoMedicion
+        '
+        Me.RealizoMedicion.HeaderText = "Realizo-Medicion"
+        Me.RealizoMedicion.Name = "RealizoMedicion"
+        '
+        'EmpresaEmision
+        '
+        Me.EmpresaEmision.HeaderText = "Empresa Emision"
+        Me.EmpresaEmision.Name = "EmpresaEmision"
+        '
+        'DirCalle
+        '
+        Me.DirCalle.HeaderText = "Dir Calle Emision"
+        Me.DirCalle.Name = "DirCalle"
+        '
+        'DirCol
+        '
+        Me.DirCol.HeaderText = "Dir Col Emision"
+        Me.DirCol.Name = "DirCol"
+        '
+        'DirEdo
+        '
+        Me.DirEdo.HeaderText = "Dir Ciudad Emision"
+        Me.DirEdo.Name = "DirEdo"
+        '
+        'DiEdoEm
+        '
+        Me.DiEdoEm.HeaderText = "Dir Edo Emision"
+        Me.DiEdoEm.Name = "DiEdoEm"
+        '
+        'DirPais
+        '
+        Me.DirPais.HeaderText = "Dir Pais Emision"
+        Me.DirPais.Name = "DirPais"
+        '
+        'DirCp
+        '
+        Me.DirCp.HeaderText = "Dir CP Emision"
+        Me.DirCp.Name = "DirCp"
+        '
+        'Sv1
+        '
+        Me.Sv1.HeaderText = "Sv1Ajuste"
+        Me.Sv1.Name = "Sv1"
+        '
+        'Sv3
+        '
+        Me.Sv3.HeaderText = "Sv3Matto"
+        Me.Sv3.Name = "Sv3"
+        '
+        'Sv5
+        '
+        Me.Sv5.HeaderText = "Sv5COM2"
+        Me.Sv5.Name = "Sv5"
+        '
+        'Sv6
+        '
+        Me.Sv6.HeaderText = "Sv6IntervaloRe"
+        Me.Sv6.Name = "Sv6"
+        '
+        'Sv7
+        '
+        Me.Sv7.HeaderText = "Sv7Curva"
+        Me.Sv7.Name = "Sv7"
+        '
+        'Sv8Idioma
+        '
+        Me.Sv8Idioma.HeaderText = "Sv8Idioma"
+        Me.Sv8Idioma.Name = "Sv8Idioma"
+        '
+        'Sv9
+        '
+        Me.Sv9.HeaderText = "Sv9Calendar"
+        Me.Sv9.Name = "Sv9"
+        '
+        'Sv10
+        '
+        Me.Sv10.HeaderText = "SVAD10"
+        Me.Sv10.Name = "Sv10"
+        '
+        'FechaRegistro
+        '
+        Me.FechaRegistro.HeaderText = "FechaRegistro"
+        Me.FechaRegistro.Name = "FechaRegistro"
         '
         'FrmFoliosDelAnioAnterior
         '
@@ -927,6 +915,11 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents lbServicios As Label
     Friend WithEvents btAgregarFila As Button
     Friend WithEvents btEliminar As Button
+    Friend WithEvents TextFolio As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DTP As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents DTPRecepcion As DateTimePicker
     Friend WithEvents Column1 As DataGridViewCheckBoxColumn
     Friend WithEvents Folio As DataGridViewTextBoxColumn
     Friend WithEvents Magnitud As DataGridViewTextBoxColumn
@@ -938,8 +931,6 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Usuario As DataGridViewTextBoxColumn
     Friend WithEvents ClavecontactoUsuarioa As DataGridViewTextBoxColumn
     Friend WithEvents FechaRecepcion As DataGridViewTextBoxColumn
-    Friend WithEvents FechaCalib As DataGridViewTextBoxColumn
-    Friend WithEvents FechaEmision As DataGridViewTextBoxColumn
     Friend WithEvents ServCatalogo1 As DataGridViewTextBoxColumn
     Friend WithEvents ServCatalogo2 As DataGridViewTextBoxColumn
     Friend WithEvents ServiciosAdicionales As DataGridViewTextBoxColumn
@@ -984,9 +975,4 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Sv9 As DataGridViewTextBoxColumn
     Friend WithEvents Sv10 As DataGridViewTextBoxColumn
     Friend WithEvents FechaRegistro As DataGridViewTextBoxColumn
-    Friend WithEvents TextFolio As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents DTP As DateTimePicker
-    Friend WithEvents Label2 As Label
-    Friend WithEvents DTPRecepcion As DateTimePicker
 End Class

@@ -8,11 +8,11 @@ Public Class FrmFoliosDelAnioAnterior
         MetodoMetasInf2019()
         Try
             Dim fechaActual As Date
-            Dim fechaRec As Date
+            Dim fechaRec As String
             Dim maximo As Integer
             Dim R As String
 
-            fechaRec = DTPRecepcion.Value
+            fechaRec = DTPRecepcion.Value.Date
             fechaActual = DTP.Value
 
             'If txtFolio.Text.Trim.Equals("") Then
@@ -33,8 +33,9 @@ Public Class FrmFoliosDelAnioAnterior
                   , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10], [Fecha_Reg]) values(" & (DGConsulta.Item(1, i).Value) & "
                         ,'" & (DGConsulta.Item(2, i).Value) & "'," & Val(DGConsulta.Item(3, i).Value) & "," & Val(DGConsulta.Item(4, i).Value) & "
                         ,'" & (DGConsulta.Item(5, i).Value) & "'," & Val(DGConsulta.Item(6, i).Value) & ",'" & (DGConsulta.Item(7, i).Value) & "'
-                        ," & Val(DGConsulta.Item(8, i).Value) & "," & Val(DGConsulta.Item(9, i).Value) & "," & fechaRec & ",
-                        '" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
+                        ," & Val(DGConsulta.Item(8, i).Value) & "," & Val(DGConsulta.Item(9, i).Value) & "," & fechaRec & "
+                        ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
+                        ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
                         ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
                         ," & Val(DGConsulta.Item(17, i).Value) & ",'" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "'
                         ,'" & (DGConsulta.Item(20, i).Value) & "','" & (DGConsulta.Item(21, i).Value) & "','" & (DGConsulta.Item(22, i).Value) & "'
@@ -48,7 +49,8 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & (DGConsulta.Item(44, i).Value) & "','" & (DGConsulta.Item(45, i).Value) & "','" & (DGConsulta.Item(46, i).Value) & "'
                         ," & Val(DGConsulta.Item(47, i).Value) & "," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
-                        ," & Val(DGConsulta.Item(53, i).Value) & ",'" & (DGConsulta.Item(54, i).Value) & "','" & fechaActual & "')"
+                        ," & Val(DGConsulta.Item(53, i).Value) & ",'" & fechaActual & "')"
+                MessageBox.Show(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
