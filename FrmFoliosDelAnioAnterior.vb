@@ -22,7 +22,7 @@ Public Class FrmFoliosDelAnioAnterior
             lector.Close()
             'Codigo para guardar en InformesServicios----------------------------------------------------56
             For i = 0 To DGConsulta.Rows.Count - 2
-                R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
+            R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
                   , [Usuario], [ClavecontactoUsuario], [FECHARECEP], [ServCatalogo1], [ServCatalogo2], [ServiciosAdicionales]
                   , [PUCalib], [PULab], [Pu-Facturado], [TIPO], [ALCANCE], [MARCA], [MODELO], [Serie], [ID], [Accesorios], [PUNTOS], [Patron1]
                   , [Patron2], [Patron3], [NumFuncionesCalibradas], [Etiquetas], [Hacer-etiq], [DatosdelInforme], [Observaciones], [CALIBRO]
@@ -48,7 +48,7 @@ Public Class FrmFoliosDelAnioAnterior
                         ," & Val(DGConsulta.Item(47, i).Value) & "," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ," & Val(DGConsulta.Item(53, i).Value) & ",'" & fechaActual & "')"
-                MessageBox.Show(R)
+            MessageBox.Show(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
