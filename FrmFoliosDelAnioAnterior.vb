@@ -183,11 +183,12 @@ Public Class FrmFoliosDelAnioAnterior
         'hahaahah
     End Sub
     Private Sub lbClave_TextChanged(sender As Object, e As EventArgs) Handles lbClave.TextChanged
+        MsgBox("Cambio la clave")
         MetodoMetasInf2018()
         Dim R As String
         R = "SELECT distinct isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
               isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,
-              isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].Clavecontacto =" & lbClave.Text & ""
+              isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].Clavecontacto =" & lbClave.Text
         Dim comando As New SqlCommand(R, conexion2018)
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
@@ -195,7 +196,7 @@ Public Class FrmFoliosDelAnioAnterior
             DGServicios.Rows.Add(False, lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7))
         End While
         lector.Close()
-        lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGServicios.Rows.Count - 1)
+
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
