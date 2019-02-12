@@ -128,6 +128,8 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.btBuscar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,6 +137,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -142,7 +145,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta.AllowDrop = True
         Me.TabConsulta.Controls.Add(Me.TabFolios)
         Me.TabConsulta.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabConsulta.Location = New System.Drawing.Point(6, 9)
+        Me.TabConsulta.Location = New System.Drawing.Point(6, 32)
         Me.TabConsulta.Multiline = True
         Me.TabConsulta.Name = "TabConsulta"
         Me.TabConsulta.SelectedIndex = 0
@@ -913,14 +916,40 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label27.TabIndex = 152
         Me.Label27.Text = "Folios"
         '
-        'Form2
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(1030, 11)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(92, 14)
+        Me.Label49.TabIndex = 160
+        Me.Label49.Text = "Cerrar formulario"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(1126, 6)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 159
+        Me.PictureBox5.TabStop = False
+        '
+        'FrmFoliosDelAnioAnterior
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1170, 664)
+        Me.ClientSize = New System.Drawing.Size(1158, 678)
+        Me.Controls.Add(Me.Label49)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.TabConsulta)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "FrmFoliosDelAnioAnterior"
+        Me.Text = "Folios anteriores"
         Me.TabConsulta.ResumeLayout(False)
         Me.TabFolios.ResumeLayout(False)
         Me.TabFolios.PerformLayout()
@@ -931,7 +960,9 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -1038,4 +1069,6 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents btBuscar As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label27 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents PictureBox5 As PictureBox
 End Class
