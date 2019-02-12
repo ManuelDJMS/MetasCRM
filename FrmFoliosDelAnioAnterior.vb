@@ -8,11 +8,11 @@ Public Class FrmFoliosDelAnioAnterior
         MetodoMetasInf2019()
         Try
             Dim fechaActual As Date
-            Dim fechaRec As String
+            Dim fechaRec As Date
             Dim maximo As Integer
             Dim R As String
 
-            fechaRec = DTPRecepcion.Value.Date
+            fechaRec = DTPRecepcion.Value
             fechaActual = DTP.Value
 
             'If txtFolio.Text.Trim.Equals("") Then
@@ -186,6 +186,7 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
         FrmFiltrar.Show()
+        'hahaahah
     End Sub
 End Class
 
