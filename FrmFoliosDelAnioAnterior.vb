@@ -31,7 +31,7 @@ Public Class FrmFoliosDelAnioAnterior
                   , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10], [Fecha_Reg]) values(" & (DGConsulta.Item(1, i).Value) & "
                         ,'" & (DGConsulta.Item(2, i).Value) & "'," & Val(DGConsulta.Item(3, i).Value) & "," & Val(DGConsulta.Item(4, i).Value) & "
                         ,'" & (DGConsulta.Item(5, i).Value) & "'," & Val(DGConsulta.Item(6, i).Value) & ",'" & (DGConsulta.Item(7, i).Value) & "'
-                        ," & Val(DGConsulta.Item(8, i).Value) & "," & Val(DGConsulta.Item(9, i).Value) & "," & fechaRec & "
+                        ," & Val(DGConsulta.Item(8, i).Value) & "," & Val(DGConsulta.Item(9, i).Value) & ",'" & fechaRec & "'
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
                         ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
                         ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
