@@ -22,15 +22,24 @@ Partial Class FrmFoliosDelAnioAnterior
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DTPRecepcion = New System.Windows.Forms.DateTimePicker()
-        Me.TextFolio = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btEliminar = New System.Windows.Forms.Button()
         Me.btAgregarFila = New System.Windows.Forms.Button()
         Me.lbServicios = New System.Windows.Forms.Label()
@@ -59,6 +68,8 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DTP = New System.Windows.Forms.DateTimePicker()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextFolio = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btBuscar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -119,25 +130,14 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Sv9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sv10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -189,6 +189,77 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabFolios.TabIndex = 5
         Me.TabFolios.Text = "Folios del año anterior"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15})
+        Me.DataGridView1.Location = New System.Drawing.Point(560, 85)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(570, 265)
+        Me.DataGridView1.TabIndex = 179
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Eliminar"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Tipo"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Serie"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "ServCatalogo1"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.HeaderText = "ServCatalogo2"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "PUCalib"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "PULab"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -206,23 +277,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DTPRecepcion.Name = "DTPRecepcion"
         Me.DTPRecepcion.Size = New System.Drawing.Size(234, 23)
         Me.DTPRecepcion.TabIndex = 177
-        '
-        'TextFolio
-        '
-        Me.TextFolio.Location = New System.Drawing.Point(291, 21)
-        Me.TextFolio.Name = "TextFolio"
-        Me.TextFolio.Size = New System.Drawing.Size(100, 23)
-        Me.TextFolio.TabIndex = 176
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(248, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 15)
-        Me.Label1.TabIndex = 175
-        Me.Label1.Text = "Folio:"
         '
         'btEliminar
         '
@@ -502,9 +556,9 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         'DTP
         '
-        Me.DTP.Location = New System.Drawing.Point(806, 15)
+        Me.DTP.Location = New System.Drawing.Point(623, 15)
         Me.DTP.Name = "DTP"
-        Me.DTP.Size = New System.Drawing.Size(48, 23)
+        Me.DTP.Size = New System.Drawing.Size(231, 23)
         Me.DTP.TabIndex = 167
         Me.DTP.Visible = False
         '
@@ -532,6 +586,23 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label26.Size = New System.Drawing.Size(147, 18)
         Me.Label26.TabIndex = 165
         Me.Label26.Text = "Folios del año anterior"
+        '
+        'TextFolio
+        '
+        Me.TextFolio.Location = New System.Drawing.Point(291, 21)
+        Me.TextFolio.Name = "TextFolio"
+        Me.TextFolio.Size = New System.Drawing.Size(100, 23)
+        Me.TextFolio.TabIndex = 176
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(248, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 15)
+        Me.Label1.TabIndex = 175
+        Me.Label1.Text = "Folio:"
         '
         'btBuscar
         '
@@ -647,6 +718,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.FechaRecepcion.HeaderText = "Fecha de Recepcion"
         Me.FechaRecepcion.Name = "FechaRecepcion"
+        Me.FechaRecepcion.Visible = False
         '
         'ServCatalogo1
         '
@@ -867,77 +939,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.FechaRegistro.HeaderText = "FechaRegistro"
         Me.FechaRegistro.Name = "FechaRegistro"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15})
-        Me.DataGridView1.Location = New System.Drawing.Point(560, 85)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(570, 265)
-        Me.DataGridView1.TabIndex = 179
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Eliminar"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.HeaderText = "Tipo"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.HeaderText = "Marca"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        Me.DataGridViewTextBoxColumn20.HeaderText = "Modelo"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        '
-        'DataGridViewTextBoxColumn21
-        '
-        Me.DataGridViewTextBoxColumn21.HeaderText = "Serie"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.HeaderText = "ServCatalogo1"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.HeaderText = "ServCatalogo2"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.HeaderText = "PUCalib"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.HeaderText = "PULab"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.FechaRegistro.Visible = False
         '
         'FrmFoliosDelAnioAnterior
         '
@@ -955,6 +957,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta.ResumeLayout(False)
         Me.TabFolios.ResumeLayout(False)
         Me.TabFolios.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -962,7 +965,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btCerrar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1007,6 +1009,17 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents DTP As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents DTPRecepcion As DateTimePicker
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewCheckBoxColumn
     Friend WithEvents Folio As DataGridViewTextBoxColumn
     Friend WithEvents Magnitud As DataGridViewTextBoxColumn
@@ -1062,15 +1075,4 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Sv9 As DataGridViewTextBoxColumn
     Friend WithEvents Sv10 As DataGridViewTextBoxColumn
     Friend WithEvents FechaRegistro As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
 End Class

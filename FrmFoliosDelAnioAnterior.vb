@@ -68,11 +68,11 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
         Try
-            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "-",
+            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "0",
             DGConsulta.Item(5, 0).Value.ToString(), DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(),
             DGConsulta.Item(8, 0).Value.ToString(), DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(),
-            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",
-            DGConsulta.Item(39, 0).Value.ToString(), "-", DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
+            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "0", "-", "-", "-", "-", "-", "-", "-", "-", "-",
+            DGConsulta.Item(39, 0).Value.ToString(), DGConsulta.Item(40, 0).Value.ToString(), DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
             DGConsulta.Item(43, 0).Value.ToString(), DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(),
             DGConsulta.Item(46, 0).Value.ToString(), DGConsulta.Item(47, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
             lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
