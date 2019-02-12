@@ -52,7 +52,7 @@ Public Class FrmFoliosDelAnioAnterior
             comando.CommandText = R
             comando.ExecuteNonQuery()
         Next i
-        MsgBox("Guardado en 2019 correctamentee.", MsgBoxStyle.Information)
+        MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
         'Else
         '    MsgBox("Ingresa el numero de foliio")
         'End If
