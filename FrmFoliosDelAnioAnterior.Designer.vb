@@ -22,23 +22,19 @@ Partial Class FrmFoliosDelAnioAnterior
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-<<<<<<< HEAD
-<<<<<<< HEAD
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
         Me.DGServicios = New System.Windows.Forms.DataGridView()
-=======
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
-=======
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
+
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -52,18 +48,12 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-<<<<<<< HEAD
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
-=======
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DTPRecepcion = New System.Windows.Forms.DateTimePicker()
         Me.btEliminar = New System.Windows.Forms.Button()
         Me.btAgregarFila = New System.Windows.Forms.Button()
         Me.lbServicios = New System.Windows.Forms.Label()
         Me.DGConsulta = New System.Windows.Forms.DataGridView()
-<<<<<<< HEAD
-=======
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.lbPais = New System.Windows.Forms.Label()
@@ -95,7 +85,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.btCerrar = New System.Windows.Forms.PictureBox()
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Folio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Magnitud = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -151,8 +140,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Sv9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sv10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-<<<<<<< HEAD
-<<<<<<< HEAD
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.lbPais = New System.Windows.Forms.Label()
@@ -197,16 +184,12 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).BeginInit()
-=======
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
-=======
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -263,8 +246,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabFolios.TabIndex = 5
         Me.TabFolios.Text = "Folios del año anterior"
         '
-<<<<<<< HEAD
-<<<<<<< HEAD
         'DGServicios
         '
         Me.DGServicios.BackgroundColor = System.Drawing.Color.Gainsboro
@@ -285,9 +266,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGServicios.Name = "DGServicios"
         Me.DGServicios.Size = New System.Drawing.Size(570, 265)
         Me.DGServicios.TabIndex = 179
-=======
-=======
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
@@ -358,10 +336,6 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.DataGridViewTextBoxColumn15.HeaderText = "PULab"
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-<<<<<<< HEAD
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
-=======
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         '
         'Label2
         '
@@ -518,8 +492,6 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         'PULab
         '
-<<<<<<< HEAD
-=======
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label25.Location = New System.Drawing.Point(271, 204)
@@ -772,7 +744,6 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         'PULab
         '
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         Me.PULab.HeaderText = "PULab"
         Me.PULab.Name = "PULab"
         '
@@ -970,8 +941,6 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.FechaRegistro.HeaderText = "FechaRegistro"
         Me.FechaRegistro.Name = "FechaRegistro"
-<<<<<<< HEAD
-<<<<<<< HEAD
         '
         'Panel1
         '
@@ -1348,12 +1317,8 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.DataGridViewTextBoxColumn15.HeaderText = "PULab"
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-=======
         Me.FechaRegistro.Visible = False
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
-=======
         Me.FechaRegistro.Visible = False
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         '
         'FrmFoliosDelAnioAnterior
         '
@@ -1371,15 +1336,9 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta.ResumeLayout(False)
         Me.TabFolios.ResumeLayout(False)
         Me.TabFolios.PerformLayout()
-<<<<<<< HEAD
-<<<<<<< HEAD
         CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).EndInit()
-=======
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
-=======
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -1497,8 +1456,6 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Sv9 As DataGridViewTextBoxColumn
     Friend WithEvents Sv10 As DataGridViewTextBoxColumn
     Friend WithEvents FechaRegistro As DataGridViewTextBoxColumn
-<<<<<<< HEAD
-<<<<<<< HEAD
     Friend WithEvents DGServicios As DataGridView
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
@@ -1510,8 +1467,4 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
-=======
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
-=======
->>>>>>> 298fe6a724f98c0bda5d20a912f83c3d0b2a6b97
 End Class
