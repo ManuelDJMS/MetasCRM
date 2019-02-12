@@ -95,10 +95,10 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="FrmFoliosDelAnioAnterior.Designer.vb">
+      <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="FrmFoliosDelAnioAnterior.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAutorizarSolicitudes.Designer.vb">
@@ -183,12 +183,6 @@
       <DependentUpon>FrmFolio.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmFolio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFoliosDelAnioAnterior.Designer.vb">
-      <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmFoliosDelAnioAnterior.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmHOME.Designer.vb">
@@ -310,8 +304,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="FrmFoliosDelAnioAnterior.resx">
+      <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAutorizarSolicitudes.resx">
       <DependentUpon>FrmAutorizarSolicitudes.vb</DependentUpon>
@@ -354,9 +348,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFolio.resx">
       <DependentUpon>FrmFolio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFoliosDelAnioAnterior.resx">
-      <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHOME.resx">
       <DependentUpon>FrmHOME.vb</DependentUpon>

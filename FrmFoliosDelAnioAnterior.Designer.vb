@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FrmFoliosDelAnioAnterior
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,14 @@ Partial Class FrmFoliosDelAnioAnterior
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
         Me.DGServicios = New System.Windows.Forms.DataGridView()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
-
-        Me.TabConsulta = New System.Windows.Forms.TabControl()
-        Me.TabFolios = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,37 +44,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.btAgregarFila = New System.Windows.Forms.Button()
         Me.lbServicios = New System.Windows.Forms.Label()
         Me.DGConsulta = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.lbPais = New System.Windows.Forms.Label()
-        Me.lbDomicilio = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.lbCiudad = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.lbEstado = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.lbCP = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.lbClave = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.lbRFC = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.lbEmpresa = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.lbRazonSocial = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.DTP = New System.Windows.Forms.DateTimePicker()
-        Me.btGuardarInf = New System.Windows.Forms.Button()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextFolio = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btBuscar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.btCerrar = New System.Windows.Forms.PictureBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Folio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Magnitud = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -169,32 +128,13 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.btBuscar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.btCerrar = New System.Windows.Forms.PictureBox()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabConsulta.SuspendLayout()
-        Me.TabFolios.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabConsulta.SuspendLayout()
-        Me.TabFolios.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -202,12 +142,12 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta.AllowDrop = True
         Me.TabConsulta.Controls.Add(Me.TabFolios)
         Me.TabConsulta.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabConsulta.Location = New System.Drawing.Point(5, 29)
+        Me.TabConsulta.Location = New System.Drawing.Point(6, 9)
         Me.TabConsulta.Multiline = True
         Me.TabConsulta.Name = "TabConsulta"
         Me.TabConsulta.SelectedIndex = 0
         Me.TabConsulta.Size = New System.Drawing.Size(1148, 639)
-        Me.TabConsulta.TabIndex = 43
+        Me.TabConsulta.TabIndex = 44
         '
         'TabFolios
         '
@@ -252,26 +192,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGServicios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGServicios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DGServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15})
-        Me.DGServicios.Location = New System.Drawing.Point(560, 85)
-        Me.DGServicios.Name = "DGServicios"
-        Me.DGServicios.Size = New System.Drawing.Size(570, 265)
-        Me.DGServicios.TabIndex = 179
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -279,17 +199,17 @@ Partial Class FrmFoliosDelAnioAnterior
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15})
-        Me.DataGridView1.Location = New System.Drawing.Point(560, 85)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(570, 265)
-        Me.DataGridView1.TabIndex = 179
+        Me.DGServicios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15})
+        Me.DGServicios.Location = New System.Drawing.Point(560, 85)
+        Me.DGServicios.Name = "DGServicios"
+        Me.DGServicios.Size = New System.Drawing.Size(570, 265)
+        Me.DGServicios.TabIndex = 179
         '
         'DataGridViewCheckBoxColumn1
         '
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Eliminar"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Seleccionar"
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         '
         'DataGridViewTextBoxColumn17
@@ -400,14 +320,14 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Folio, Me.Magnitud, Me.Informe, Me.Facturadp, Me.ClaveContacto, Me.Empresa, Me.ClaveContactoUsuario, Me.Usuario, Me.ClavecontactoUsuarioa, Me.FechaRecepcion, Me.ServCatalogo1, Me.ServCatalogo2, Me.ServiciosAdicionales, Me.PUCalib, Me.PULab, Me.PUFacturado, Me.Tipo, Me.Alcance, Me.Marca, Me.Modelo, Me.Serie, Me.ID, Me.Accesorios, Me.Puntos, Me.Patron1, Me.Patron2, Me.Patron3, Me.Funciones, Me.Etiquetas, Me.HacerEtiquetas, Me.DatosInforme, Me.Observaciones, Me.Calibro, Me.NumEmisiones, Me.NumCot, Me.Status, Me.CveOperador, Me.RealizoMedicion, Me.EmpresaEmision, Me.DirCalle, Me.DirCol, Me.DirEdo, Me.DiEdoEm, Me.DirPais, Me.DirCp, Me.Sv1, Me.Sv3, Me.Sv5, Me.Sv6, Me.Sv7, Me.Sv8Idioma, Me.Sv9, Me.Sv10, Me.FechaRegistro})
         Me.DGConsulta.Location = New System.Drawing.Point(23, 365)
@@ -469,258 +389,6 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.FechaRecepcion.HeaderText = "Fecha de Recepcion"
         Me.FechaRecepcion.Name = "FechaRecepcion"
-        '
-        'ServCatalogo1
-        '
-        Me.ServCatalogo1.HeaderText = "ServCatalogo1"
-        Me.ServCatalogo1.Name = "ServCatalogo1"
-        '
-        'ServCatalogo2
-        '
-        Me.ServCatalogo2.HeaderText = "ServCatalogo2"
-        Me.ServCatalogo2.Name = "ServCatalogo2"
-        '
-        'ServiciosAdicionales
-        '
-        Me.ServiciosAdicionales.HeaderText = "ServiciosAdicionales"
-        Me.ServiciosAdicionales.Name = "ServiciosAdicionales"
-        '
-        'PUCalib
-        '
-        Me.PUCalib.HeaderText = "PUCalib"
-        Me.PUCalib.Name = "PUCalib"
-        '
-        'PULab
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label25.Location = New System.Drawing.Point(271, 204)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(31, 15)
-        Me.Label25.TabIndex = 158
-        Me.Label25.Text = "RFC:"
-        '
-        'lbEmpresa
-        '
-        Me.lbEmpresa.AutoSize = True
-        Me.lbEmpresa.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEmpresa.Location = New System.Drawing.Point(98, 153)
-        Me.lbEmpresa.Name = "lbEmpresa"
-        Me.lbEmpresa.Size = New System.Drawing.Size(43, 14)
-        Me.lbEmpresa.TabIndex = 159
-        Me.lbEmpresa.Text = "Colonia"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label20.Location = New System.Drawing.Point(26, 151)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(58, 15)
-        Me.Label20.TabIndex = 158
-        Me.Label20.Text = "Empresa:"
-        '
-        'lbRazonSocial
-        '
-        Me.lbRazonSocial.AutoSize = True
-        Me.lbRazonSocial.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRazonSocial.Location = New System.Drawing.Point(350, 130)
-        Me.lbRazonSocial.Name = "lbRazonSocial"
-        Me.lbRazonSocial.Size = New System.Drawing.Size(88, 14)
-        Me.lbRazonSocial.TabIndex = 157
-        Me.lbRazonSocial.Text = "Numero exterior"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label17.Location = New System.Drawing.Point(271, 128)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(76, 15)
-        Me.Label17.TabIndex = 156
-        Me.Label17.Text = "Razón Social:"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.LightGray
-        Me.Panel2.Controls.Add(Me.DTP)
-        Me.Panel2.Controls.Add(Me.btGuardarInf)
-        Me.Panel2.Controls.Add(Me.Label26)
-        Me.Panel2.Controls.Add(Me.TextFolio)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.btBuscar)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.Label27)
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1140, 66)
-        Me.Panel2.TabIndex = 151
-        '
-        'DTP
-        '
-        Me.DTP.Location = New System.Drawing.Point(623, 15)
-        Me.DTP.Name = "DTP"
-        Me.DTP.Size = New System.Drawing.Size(231, 23)
-        Me.DTP.TabIndex = 167
-        Me.DTP.Visible = False
-        '
-        'btGuardarInf
-        '
-        Me.btGuardarInf.BackColor = System.Drawing.Color.SteelBlue
-        Me.btGuardarInf.FlatAppearance.BorderSize = 0
-        Me.btGuardarInf.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btGuardarInf.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btGuardarInf.ForeColor = System.Drawing.Color.White
-        Me.btGuardarInf.Location = New System.Drawing.Point(979, 15)
-        Me.btGuardarInf.Name = "btGuardarInf"
-        Me.btGuardarInf.Size = New System.Drawing.Size(151, 33)
-        Me.btGuardarInf.TabIndex = 166
-        Me.btGuardarInf.Text = "Guardar Informes"
-        Me.btGuardarInf.UseVisualStyleBackColor = False
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Enabled = False
-        Me.Label26.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(55, 32)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(147, 18)
-        Me.Label26.TabIndex = 165
-        Me.Label26.Text = "Folios del año anterior"
-        '
-        'TextFolio
-        '
-        Me.TextFolio.Location = New System.Drawing.Point(291, 21)
-        Me.TextFolio.Name = "TextFolio"
-        Me.TextFolio.Size = New System.Drawing.Size(100, 23)
-        Me.TextFolio.TabIndex = 176
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(248, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 15)
-        Me.Label1.TabIndex = 175
-        Me.Label1.Text = "Folio:"
-        '
-        'btBuscar
-        '
-        Me.btBuscar.BackColor = System.Drawing.Color.White
-        Me.btBuscar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btBuscar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btBuscar.Location = New System.Drawing.Point(860, 15)
-        Me.btBuscar.Name = "btBuscar"
-        Me.btBuscar.Size = New System.Drawing.Size(119, 33)
-        Me.btBuscar.TabIndex = 164
-        Me.btBuscar.Text = "Buscar Folio"
-        Me.btBuscar.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Label27.Location = New System.Drawing.Point(55, 15)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(38, 15)
-        Me.Label27.TabIndex = 152
-        Me.Label27.Text = "Folios"
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(1020, 12)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(92, 14)
-        Me.Label49.TabIndex = 142
-        Me.Label49.Text = "Cerrar formulario"
-        '
-        'btCerrar
-        '
-        Me.btCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.btCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btCerrar.Image = CType(resources.GetObject("btCerrar.Image"), System.Drawing.Image)
-        Me.btCerrar.Location = New System.Drawing.Point(1116, 7)
-        Me.btCerrar.Name = "btCerrar"
-        Me.btCerrar.Size = New System.Drawing.Size(24, 24)
-        Me.btCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btCerrar.TabIndex = 141
-        Me.btCerrar.TabStop = False
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Eliminar"
-        Me.Column1.Name = "Column1"
-        '
-        'Folio
-        '
-        Me.Folio.HeaderText = "Folio"
-        Me.Folio.Name = "Folio"
-        '
-        'Magnitud
-        '
-        Me.Magnitud.HeaderText = "Magnitud"
-        Me.Magnitud.Name = "Magnitud"
-        '
-        'Informe
-        '
-        Me.Informe.HeaderText = "Informe"
-        Me.Informe.Name = "Informe"
-        '
-        'Facturadp
-        '
-        Me.Facturadp.HeaderText = "Facturado"
-        Me.Facturadp.Name = "Facturadp"
-        '
-        'ClaveContacto
-        '
-        Me.ClaveContacto.HeaderText = "ClaveContactoConsig"
-        Me.ClaveContacto.Name = "ClaveContacto"
-        '
-        'Empresa
-        '
-        Me.Empresa.HeaderText = "Empresa"
-        Me.Empresa.Name = "Empresa"
-        '
-        'ClaveContactoUsuario
-        '
-        Me.ClaveContactoUsuario.HeaderText = "ClaveContacto"
-        Me.ClaveContactoUsuario.Name = "ClaveContactoUsuario"
-        '
-        'Usuario
-        '
-        Me.Usuario.HeaderText = "Usuario"
-        Me.Usuario.Name = "Usuario"
-        '
-        'ClavecontactoUsuarioa
-        '
-        Me.ClavecontactoUsuarioa.HeaderText = "ClaveContactoUsuario"
-        Me.ClavecontactoUsuarioa.Name = "ClavecontactoUsuarioa"
-        '
-        'FechaRecepcion
-        '
-        Me.FechaRecepcion.HeaderText = "Fecha de Recepcion"
-        Me.FechaRecepcion.Name = "FechaRecepcion"
-        Me.FechaRecepcion.Visible = False
         '
         'ServCatalogo1
         '
@@ -1245,152 +913,31 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label27.TabIndex = 152
         Me.Label27.Text = "Folios"
         '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(1020, 12)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(92, 14)
-        Me.Label49.TabIndex = 142
-        Me.Label49.Text = "Cerrar formulario"
-        '
-        'btCerrar
-        '
-        Me.btCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.btCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btCerrar.Image = CType(resources.GetObject("btCerrar.Image"), System.Drawing.Image)
-        Me.btCerrar.Location = New System.Drawing.Point(1116, 7)
-        Me.btCerrar.Name = "btCerrar"
-        Me.btCerrar.Size = New System.Drawing.Size(24, 24)
-        Me.btCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btCerrar.TabIndex = 141
-        Me.btCerrar.TabStop = False
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Seleccionar"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.HeaderText = "Tipo"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.HeaderText = "Marca"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        Me.DataGridViewTextBoxColumn20.HeaderText = "Modelo"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        '
-        'DataGridViewTextBoxColumn21
-        '
-        Me.DataGridViewTextBoxColumn21.HeaderText = "Serie"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.HeaderText = "ServCatalogo1"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.HeaderText = "ServCatalogo2"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.HeaderText = "PUCalib"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.HeaderText = "PULab"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.FechaRegistro.Visible = False
-        Me.FechaRegistro.Visible = False
-        '
-        'FrmFoliosDelAnioAnterior
+        'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(1157, 673)
-        Me.Controls.Add(Me.Label49)
-        Me.Controls.Add(Me.btCerrar)
+        Me.ClientSize = New System.Drawing.Size(1170, 664)
         Me.Controls.Add(Me.TabConsulta)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmFoliosDelAnioAnterior"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "FrmFoliosDelAnioAnterior"
+        Me.Name = "Form2"
+        Me.Text = "Form2"
         Me.TabConsulta.ResumeLayout(False)
         Me.TabFolios.ResumeLayout(False)
         Me.TabFolios.PerformLayout()
         CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents TabConsulta As TabControl
     Friend WithEvents TabFolios As TabPage
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents btGuardarInf As Button
-    Friend WithEvents Label26 As Label
-    Friend WithEvents btBuscar As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label49 As Label
-    Friend WithEvents btCerrar As PictureBox
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents lbPais As Label
-    Friend WithEvents lbDomicilio As Label
-    Friend WithEvents Label50 As Label
-    Friend WithEvents Label48 As Label
-    Friend WithEvents lbCiudad As Label
-    Friend WithEvents Label44 As Label
-    Friend WithEvents lbEstado As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents lbCP As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents lbClave As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents lbRFC As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents lbEmpresa As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents lbRazonSocial As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents DGConsulta As DataGridView
-    Friend WithEvents lbServicios As Label
-    Friend WithEvents btAgregarFila As Button
-    Friend WithEvents btEliminar As Button
-    Friend WithEvents TextFolio As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents DTP As DateTimePicker
-    Friend WithEvents Label2 As Label
-    Friend WithEvents DTPRecepcion As DateTimePicker
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGServicios As DataGridView
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
@@ -1401,6 +948,12 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents DTPRecepcion As DateTimePicker
+    Friend WithEvents btEliminar As Button
+    Friend WithEvents btAgregarFila As Button
+    Friend WithEvents lbServicios As Label
+    Friend WithEvents DGConsulta As DataGridView
     Friend WithEvents Column1 As DataGridViewCheckBoxColumn
     Friend WithEvents Folio As DataGridViewTextBoxColumn
     Friend WithEvents Magnitud As DataGridViewTextBoxColumn
@@ -1456,15 +1009,33 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Sv9 As DataGridViewTextBoxColumn
     Friend WithEvents Sv10 As DataGridViewTextBoxColumn
     Friend WithEvents FechaRegistro As DataGridViewTextBoxColumn
-    Friend WithEvents DGServicios As DataGridView
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label42 As Label
+    Friend WithEvents lbPais As Label
+    Friend WithEvents lbDomicilio As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label48 As Label
+    Friend WithEvents lbCiudad As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents lbEstado As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents lbCP As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents lbClave As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents lbRFC As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents lbEmpresa As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents lbRazonSocial As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents DTP As DateTimePicker
+    Friend WithEvents btGuardarInf As Button
+    Friend WithEvents Label26 As Label
+    Friend WithEvents TextFolio As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btBuscar As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label27 As Label
 End Class
