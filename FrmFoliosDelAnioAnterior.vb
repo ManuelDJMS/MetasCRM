@@ -68,11 +68,11 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
         Try
-            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "-",
+            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "0",
             DGConsulta.Item(5, 0).Value.ToString(), DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(),
             DGConsulta.Item(8, 0).Value.ToString(), DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(),
-            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",
-            DGConsulta.Item(39, 0).Value.ToString(), "-", DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
+            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "0", "-", "-", "-", "-", "-", "-", "-", "-", "-",
+            DGConsulta.Item(39, 0).Value.ToString(), DGConsulta.Item(40, 0).Value.ToString(), DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
             DGConsulta.Item(43, 0).Value.ToString(), DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(),
             DGConsulta.Item(46, 0).Value.ToString(), DGConsulta.Item(47, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
             lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
@@ -185,6 +185,30 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
         FrmFiltrar.Show()
         'hahaahah
+    End Sub
+    Private Sub lbClave_TextChanged(sender As Object, e As EventArgs) Handles lbClave.TextChanged
+        MsgBox("Cambio la clave")
+        ''Select para los servicios realizados en metas
+        MetodoMetasInf2018()
+        comando2018 = conexion2018.CreateCommand
+        Dim R As String
+        DGServicios.Rows.Clear()
+        R = "SELECT isnull(Folio,'-'),isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),FECHARECEP,
+                        isnull(CveOperador,'-'),isnull(EmpresaEmision,'-'),isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
+                        isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where Folio ='" & TextFolio.Text & "'"
+
+        R = "SELECT isnull(Folio,'-'),isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),FECHARECEP,
+                        isnull(CveOperador,'-'),isnull(EmpresaEmision,'-'),isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
+                        isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where Folio ='" & TextFolio.Text & "'"
+        comando2018.CommandText = R
+        lector2018 = comando2018.ExecuteReader
+        While lector2018.Read()
+            DGConsulta.Rows.Add(False, lector2018(0), "-", "-", "-", lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6),
+            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(7), "-", lector2018(8), lector2018(9), lector2018(10),
+            lector2018(11), lector2018(12), lector2018(13), lector2018(14), "-", "-", "-", "-", "-", "-", "-", "-", "-")
+        End While
+        lector2018.Close()
+        lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
     End Sub
 End Class
 
