@@ -6,23 +6,23 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
         MetodoMetasInf2019()
-        ' Try
-        Dim fechaActual As Date
-        Dim fechaRec As Date
-        Dim maximo As Integer
-        Dim R As String
-        fechaRec = DTPRecepcion.Value.Date
-        fechaActual = DTP.Value.Date
-        'If txtFolio.Text.Trim.Equals("") Then
-        Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Read()
-        maximo = lector(0)
-        lector.Close()
-        'Codigo para guardar en InformesServicios----------------------------------------------------56
-        For i = 0 To DGConsulta.Rows.Count - 2
-            R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
+        Try
+            Dim fechaActual As Date
+            Dim fechaRec As Date
+            Dim maximo As Integer
+            Dim R As String
+            fechaRec = DTPRecepcion.Value.Date
+            fechaActual = DTP.Value.Date
+            'If txtFolio.Text.Trim.Equals("") Then
+            Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            lector.Read()
+            maximo = lector(0)
+            lector.Close()
+            'Codigo para guardar en InformesServicios----------------------------------------------------56
+            For i = 0 To DGConsulta.Rows.Count - 2
+                R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
                   , [Usuario], [ClavecontactoUsuario], [FECHARECEP], [ServCatalogo1], [ServCatalogo2], [ServiciosAdicionales]
                   , [PUCalib], [PULab], [Pu-Facturado], [TIPO], [ALCANCE], [MARCA], [MODELO], [Serie], [ID], [Accesorios], [PUNTOS], [Patron1]
                   , [Patron2], [Patron3], [NumFuncionesCalibradas], [Etiquetas], [Hacer-etiq], [DatosdelInforme], [Observaciones], [CALIBRO]
@@ -48,18 +48,18 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ," & Val(DGConsulta.Item(53, i).Value) & ",'" & fechaActual & "')"
-            MessageBox.Show(R)
-            comando.CommandText = R
-            comando.ExecuteNonQuery()
-        Next i
-        MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
-        'Else
-        '    MsgBox("Ingresa el numero de foliio")
-        'End If
-        'Me.Dispose()
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
-        'End Try
+                MessageBox.Show(R)
+                comando.CommandText = R
+                comando.ExecuteNonQuery()
+            Next i
+            MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
+            'Else
+            'MsgBox("Ingresa el numero de foliio")
+            'End If
+            Me.Dispose()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+        End Try
         ''------------------------------------------------
     End Sub
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
