@@ -4,9 +4,6 @@
             MetodoMetasInf2018()
             comando2018 = conexion2018.CreateCommand
             Dim R As String
-            '---------------CONSULTA PARA SACAR LOS COMENTARIOS DE LA PREFACTURA----------------------------
-            'R = "select Folio, ClavecontactoConsign, Compania, RFC, Tipo, Marca, Modelo, PUNTOS
-            '     FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa"
             R = "select distinct ClavecontactoConsign, Compania, RFC
                  FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa"
             comando2018.CommandText = R
@@ -110,17 +107,15 @@
                 FrmFoliosDelAnioAnterior.lbCP.Text = lector2018(9)
             End If
             lector2018.Close()
-            'R = "SELECT [Folio],[ClavecontactoConsign],[Empresa],[Clavecontacto],[Usuario],[ClavecontactoUsuario],[FECHARECEP],
-            '     [CveOperador],[EmpresaEmision],[DirCalleEmision],[DirColEmision],[DirCiudadEmision],[DirEdoProvEmision],
-            '     [DirPaisEmision],[DirCPEmision] FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where Folio ='" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & "'"
-            'comando2018.CommandText = R
-            'lector2018 = comando2018.ExecuteReader
-            'While lector2018.Read()
-            '    FrmFoliosDelAnioAnterior.DGConsulta.Rows.Add(False, lector2018(0), "-", "-", "-", lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6),
-            '            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(7), "-", lector2018(8), lector2018(9), lector2018(10),
-            '            lector2018(11), lector2018(12), lector2018(13), lector2018(14), "-", "-", "-", "-", "-", "-", "-", "-", "-")
-            'End While
-            'lector2018.Close() espera de modificacion
+            R = "SELECT distinct isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+              isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,
+              isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read()
+                FrmFoliosDelAnioAnterior.DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7))
+            End While
+            lector2018.Close()
             FrmFoliosDelAnioAnterior.lbServicios.Text = "Total de Servicios: " + Convert.ToString(FrmFoliosDelAnioAnterior.DGConsulta.Rows.Count - 1)
             Me.Dispose()
         Catch ex As Exception
