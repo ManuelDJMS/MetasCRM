@@ -60,7 +60,7 @@ Public Class FrmLoginAdminGeneral
         End Try
     End Sub
 
-    '''-----------
+    '
     'Sub logearUsuariosAdministradoresSistemas(ByVal Username As String, ByRef Contrasena As String)
     '    Try
     '        MetodoLIMS()
@@ -98,7 +98,7 @@ Public Class FrmLoginAdminGeneral
     '        conexionLIMS.Close()
     '    End Try
     'End Sub
-    '''------------
+    '
 
 
     'Sub logearAdmin(ByVal Username As String, ByRef Contrasena As String)

@@ -181,23 +181,36 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
         FrmFiltrar.Show()
     End Sub
-    Private Sub lbClave_TextChanged(sender As Object, e As EventArgs) Handles lbClave.TextChanged
-        'MetodoMetasInf2018()
-        'Dim R As String
-        'R = "SELECT distinct isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
-        '      isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,
-        '      isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].Clavecontacto =" & lbClave.Text
-        'Dim comando As New SqlCommand(R, conexion2018)
-        'Dim lector As SqlDataReader
-        'lector = comando.ExecuteReader
-        'While lector.Read()
-        '    DGServicios.Rows.Add(False, lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7))
-        'End While
-        'lector.Close()
-
-    End Sub
-
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub DGServicios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGServicios.CellContentClick
+        Dim row As DataGridViewRow = DGServicios.Rows(e.RowIndex)
+        Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
+        If Convert.ToBoolean(cellSelecion.Value) = False Then
+            'Try
+            Dim R As String
+                Dim fecharecep As Date
+                fecharecep = DTPRecepcion.Value.Date
+            R = "SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
+                isnull(CveOperador,'-'),isnull(EmpresaEmision,'-'),isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-') as colonia,isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
+                isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & DGServicios.SelectedCells.Item(1).Value & " order by colonia desc"
+
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+                While lector2018.Read()
+                DGConsulta.Rows.Add(False, lector2018(0), "-", "-", "-", lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6),
+                    "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(7), "-", lector2018(8), lector2018(9), lector2018(10),
+                     "-", "-", "-", "-")
+            End While
+                lector2018.Close()
+                lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
+            'Catch ex As Exception
+            '    MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
+            'End Try
+        Else
+            row.DefaultCellStyle.BackColor = Color.White
+        End If
     End Sub
 End Class
