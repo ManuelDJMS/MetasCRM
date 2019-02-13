@@ -64,11 +64,11 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
         Try
-            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", "-",
+            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", 0,
             DGConsulta.Item(5, 0).Value.ToString(), DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(),
             DGConsulta.Item(8, 0).Value.ToString(), DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(),
-            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",
-            DGConsulta.Item(39, 0).Value.ToString(), "-", DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
+            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", 0, "-", "-", "-", "-", "-", "-", DGConsulta.Item(37, 0).Value.ToString(), "-",
+            DGConsulta.Item(39, 0).Value.ToString(), DGConsulta.Item(40, 0).Value.ToString(), DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
             DGConsulta.Item(43, 0).Value.ToString(), DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(),
             DGConsulta.Item(46, 0).Value.ToString(), DGConsulta.Item(47, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
             lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
@@ -215,5 +215,105 @@ Public Class FrmFoliosDelAnioAnterior
         Else
             row.DefaultCellStyle.BackColor = Color.White
         End If
+    End Sub
+
+    Private Sub TextMarca_TextChanged(sender As Object, e As EventArgs) Handles TextMarca.TextChanged
+        Try
+            MetodoMetasInf2018()
+            comando2018 = conexion2018.CreateCommand
+            DGServicios.Rows.Clear()
+            If DGServicios.Rows.Count < 2 Then
+            Else
+                DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
+            End If
+            Dim R As String
+            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
+                "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read
+                DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(9))
+            End While
+            lector2018.Close()
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+    End Sub
+
+    Private Sub TextModelo_TextChanged(sender As Object, e As EventArgs) Handles TextModelo.TextChanged
+        Try
+            MetodoMetasInf2018()
+            comando2018 = conexion2018.CreateCommand
+            DGServicios.Rows.Clear()
+            If DGServicios.Rows.Count < 2 Then
+            Else
+                DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
+            End If
+            Dim R As String
+            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
+                "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read()
+                DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(9))
+            End While
+            lector2018.Close()
+        Catch ex As Exception
+            MsgBox(e)
+        End Try
+    End Sub
+
+    Private Sub TextID_TextChanged(sender As Object, e As EventArgs) Handles TextID.TextChanged
+        Try
+            MetodoMetasInf2018()
+            comando2018 = conexion2018.CreateCommand
+            DGServicios.Rows.Clear()
+            If DGServicios.Rows.Count < 2 Then
+            Else
+                DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
+            End If
+            Dim R As String
+            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
+                "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read
+                DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(9))
+            End While
+            lector2018.Close()
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+    End Sub
+
+    Private Sub TextSerie_TextChanged(sender As Object, e As EventArgs) Handles TextSerie.TextChanged
+        Try
+            MetodoMetasInf2018()
+            comando2018 = conexion2018.CreateCommand
+            DGServicios.Rows.Clear()
+            If DGServicios.Rows.Count < 2 Then
+            Else
+                DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
+            End If
+            Dim R As String
+            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
+               "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read
+                DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(9))
+            End While
+            lector2018.Close()
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
     End Sub
 End Class
