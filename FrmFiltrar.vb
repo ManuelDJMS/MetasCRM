@@ -108,12 +108,12 @@
             End If
             lector2018.Close()
             R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
-              isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,
+              isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
               isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
-                FrmFoliosDelAnioAnterior.DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8))
+                FrmFoliosDelAnioAnterior.DGServicios.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(9))
             End While
             lector2018.Close()
             FrmFoliosDelAnioAnterior.lbServicios.Text = "Total de Servicios: " + Convert.ToString(FrmFoliosDelAnioAnterior.DGConsulta.Rows.Count - 1)

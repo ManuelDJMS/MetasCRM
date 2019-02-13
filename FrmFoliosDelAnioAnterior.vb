@@ -200,9 +200,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
                 While lector2018.Read()
-                DGConsulta.Rows.Add(False, lector2018(0), "-", "-", "-", lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6),
-                    "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", lector2018(7), "-", lector2018(8), lector2018(9), lector2018(10),
-                     "-", "-", "-", "-")
+                DGConsulta.Rows.Add(False, 0, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
+                        DGServicios.SelectedCells.Item(7).Value, DGServicios.SelectedCells.Item(8).Value, "-", DGServicios.SelectedCells.Item(9).Value,
+                        DGServicios.SelectedCells.Item(10).Value, "-", DGServicios.SelectedCells.Item(2).Value, "-", DGServicios.SelectedCells.Item(3).Value,
+                        DGServicios.SelectedCells.Item(4).Value, DGServicios.SelectedCells.Item(5).Value, DGServicios.SelectedCells.Item(6).Value,
+                        "-", "-", "-", "-", "-", "-", "-", 0, "-", "-", "-", "-", "-", "-", lector2018(5), "-", lector2018(6),
+                        lector2018(7), lector2018(8), lector2018(9), lector2018(10), lector2018(11), lector2018(12), "-", "-", "-", "-", "-", "-", "-", "-", "-")
             End While
                 lector2018.Close()
                 lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
