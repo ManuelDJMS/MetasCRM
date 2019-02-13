@@ -56,7 +56,6 @@ Public Class FrmFoliosDelAnioAnterior
             'Else
             'MsgBox("Ingresa el numero de foliio")
             'End If
-            Me.Dispose()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         End Try
