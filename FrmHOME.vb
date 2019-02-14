@@ -233,4 +233,5 @@
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
     End Sub
+
 End Class
