@@ -76,6 +76,7 @@
         Panel7.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
+        Panel15.BackColor = Color.DimGray
         Label19.ForeColor = Color.Black
         MsgBox("Modulo en mantenimiento")
     End Sub
@@ -189,6 +190,7 @@
         Panel9.BackColor = Color.SteelBlue
         Panel5.BackColor = Color.DimGray
         Panel7.BackColor = Color.DimGray
+        Panel15.BackColor = Color.DimGray
         Panel14.BackColor = Color.DimGray
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
@@ -210,7 +212,29 @@
         Panel5.BackColor = Color.DimGray
         Panel7.BackColor = Color.DimGray
         Panel14.BackColor = Color.SteelBlue
+        Panel15.BackColor = Color.DimGray
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
+    End Sub
+
+    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
+        Dim Admin As New FrmFoliosDelAnioAnterior
+        Admin.MdiParent = Me
+        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text ''------------
+        Admin.Show()
+
+        Panel1.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Panel5.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel14.BackColor = Color.DimGray
+        Panel15.BackColor = Color.SteelBlue
+        Panel6.BackColor = Color.DimGray
+        Panel8.BackColor = Color.DimGray
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

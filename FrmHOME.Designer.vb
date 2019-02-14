@@ -40,6 +40,8 @@ Partial Class FrmHOME
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.Label31 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -93,6 +95,7 @@ Partial Class FrmHOME
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.Panel15.SuspendLayout()
         Me.Panel14.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -281,6 +284,7 @@ Partial Class FrmHOME
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.Panel15)
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Label23)
         Me.GroupBox3.Controls.Add(Me.txtRol)
@@ -294,6 +298,27 @@ Partial Class FrmHOME
         Me.GroupBox3.Size = New System.Drawing.Size(212, 742)
         Me.GroupBox3.TabIndex = 31
         Me.GroupBox3.TabStop = False
+        '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.DimGray
+        Me.Panel15.Controls.Add(Me.Label31)
+        Me.Panel15.Location = New System.Drawing.Point(0, 481)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(212, 45)
+        Me.Panel15.TabIndex = 43
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label31.Font = New System.Drawing.Font("Calibri Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.Color.White
+        Me.Label31.Location = New System.Drawing.Point(10, 13)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(43, 18)
+        Me.Label31.TabIndex = 0
+        Me.Label31.Text = "Folios"
         '
         'Panel14
         '
@@ -470,7 +495,7 @@ Partial Class FrmHOME
         '
         Me.Panel6.BackColor = System.Drawing.Color.DimGray
         Me.Panel6.Controls.Add(Me.Label19)
-        Me.Panel6.Location = New System.Drawing.Point(-3, 471)
+        Me.Panel6.Location = New System.Drawing.Point(-3, 517)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(212, 45)
         Me.Panel6.TabIndex = 42
@@ -488,7 +513,7 @@ Partial Class FrmHOME
         '
         Me.Panel8.BackColor = System.Drawing.Color.DimGray
         Me.Panel8.Controls.Add(Me.Label21)
-        Me.Panel8.Location = New System.Drawing.Point(-3, 517)
+        Me.Panel8.Location = New System.Drawing.Point(-3, 563)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(212, 45)
         Me.Panel8.TabIndex = 43
@@ -824,6 +849,8 @@ Partial Class FrmHOME
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.Panel15.ResumeLayout(False)
+        Me.Panel15.PerformLayout()
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -923,4 +950,6 @@ Partial Class FrmHOME
     Friend WithEvents Label29 As Label
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Label30 As Label
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents Label31 As Label
 End Class
