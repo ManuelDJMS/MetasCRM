@@ -46,6 +46,8 @@
         End Try
     End Sub
     Private Sub dgEmpresas_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgEmpresas.RowHeaderMouseClick
+        MsgBox(dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString())
+        FrmFoliosDelAnioAnterior.lbClave.Text = "ksakjdjhsakjdhkjahjkdhaskdhaskjasjkdhjkashd"
         Try
             MetodoMetasInf2018()
             comando2018 = conexion2018.CreateCommand
