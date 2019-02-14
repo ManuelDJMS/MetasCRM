@@ -218,10 +218,9 @@
     End Sub
 
     Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
-        Dim Admin As New FrmFoliosDelAnioAnterior
-        Admin.MdiParent = Me
-        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text ''------------
-        Admin.Show()
+        FrmFoliosDelAnioAnterior.MdiParent = Me
+        FrmFoliosDelAnioAnterior.Show()
+        ' Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text ''------------
 
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray

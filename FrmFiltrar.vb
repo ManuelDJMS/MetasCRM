@@ -47,6 +47,7 @@
         End Try
     End Sub
     Private Sub dgEmpresas_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgEmpresas.RowHeaderMouseClick
+
         Try
             MetodoMetasInf2018()
             comando2018 = conexion2018.CreateCommand
@@ -54,7 +55,6 @@
             R = "select distinct Folio, ClavecontactoConsign, RazonSocial, Compania, RFC, DomicilioConsig, PaisConsig, CiudadConsig, EdoConsig, CPConsig
                         from [INFORMES-SERVICIOS] INNER JOIN MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa
                         where ClavecontactoConsign ='" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & "'"
-            MsgBox(R)
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             lector2018.Read()
