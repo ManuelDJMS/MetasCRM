@@ -179,7 +179,6 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
         DGServicios.Rows.Clear()
-
         FrmFiltrar.Show()
     End Sub
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
