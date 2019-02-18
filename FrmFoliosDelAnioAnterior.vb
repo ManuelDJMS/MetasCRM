@@ -48,11 +48,12 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ," & Val(DGConsulta.Item(53, i).Value) & ",'" & fechaActual & "')"
-                MessageBox.Show(R)
+                ' MessageBox.Show(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
             MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
+            Me.Dispose()
             'Else
             'MsgBox("Ingresa el numero de foliio")
             'End If
