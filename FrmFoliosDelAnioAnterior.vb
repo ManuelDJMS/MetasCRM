@@ -35,7 +35,7 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
                         ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
                         ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
-                        ," & Val(DGConsulta.Item(17, i).Value) & ",'" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "'
+                        ,'" & DGConsulta.Item(17, i).Value & "','" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "'
                         ,'" & (DGConsulta.Item(20, i).Value) & "','" & (DGConsulta.Item(21, i).Value) & "','" & (DGConsulta.Item(22, i).Value) & "'
                         ,'" & (DGConsulta.Item(23, i).Value) & "','" & (DGConsulta.Item(24, i).Value) & "','" & (DGConsulta.Item(25, i).Value) & "'
                         ,'" & (DGConsulta.Item(26, i).Value) & "','" & (DGConsulta.Item(27, i).Value) & "','" & (DGConsulta.Item(28, i).Value) & "'
