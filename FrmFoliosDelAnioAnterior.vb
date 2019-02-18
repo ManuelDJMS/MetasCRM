@@ -29,7 +29,7 @@ Public Class FrmFoliosDelAnioAnterior
                   , [NumEmisiones], [NumCot], [Status], [CveOperador], [REALIZO-MEDICION], [EmpresaEmision], [DirCalleEmision], [DirColEmision]
                   , [DirCiudadEmision], [DirEdoProvEmision], [DirPaisEmision], [DirCPEmision], [Sv1Ajuste], [Sv3Matto], [Sv5COM02], [Sv6IntervaloRe]
                   , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10], [Fecha_Reg]) values(" & (DGConsulta.Item(1, i).Value) & "
-                        ,'" & (DGConsulta.Item(2, i).Value) & "'," & Val(DGConsulta.Item(3, i).Value) & "," & Val(DGConsulta.Item(4, i).Value) & "
+                        ,'" & (DGConsulta.Item(2, i).Value) & "','" & DGConsulta.Item(3, i).Value & "'," & Val(DGConsulta.Item(4, i).Value) & "
                         ,'" & (DGConsulta.Item(5, i).Value) & "','" & DGConsulta.Item(6, i).Value & "','" & (DGConsulta.Item(7, i).Value) & "'
                         ,'" & DGConsulta.Item(8, i).Value & "'," & Val(DGConsulta.Item(9, i).Value) & ",'" & fechaRec & "'
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
