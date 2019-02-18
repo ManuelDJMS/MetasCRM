@@ -33,7 +33,7 @@
         'Admin.MdiParent = Me
         'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
         'Admin.Show()
-        MsgBox("Modulo en mantenimiento")
+        ''MsgBox("Modulo en mantenimiento")
 
         'Panel1.BackColor = Color.SteelBlue
         'Panel2.BackColor = Color.DimGray
@@ -67,17 +67,17 @@
         'Admin.MdiParent = Me
         'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
         'Admin.Show()
-        Panel1.BackColor = Color.DimGray
-        Panel2.BackColor = Color.SteelBlue
-        Panel3.BackColor = Color.DimGray
-        Panel4.BackColor = Color.DimGray
-        Panel5.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel7.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
-        Panel9.BackColor = Color.DimGray
-        Panel15.BackColor = Color.DimGray
-        Label19.ForeColor = Color.Black
+        'Panel1.BackColor = Color.DimGray
+        'Panel2.BackColor = Color.SteelBlue
+        'Panel3.BackColor = Color.DimGray
+        'Panel4.BackColor = Color.DimGray
+        'Panel5.BackColor = Color.DimGray
+        'Panel6.BackColor = Color.DimGray
+        'Panel7.BackColor = Color.DimGray
+        'Panel8.BackColor = Color.DimGray
+        'Panel9.BackColor = Color.DimGray
+        'Panel15.BackColor = Color.DimGray
+        'Label19.ForeColor = Color.Black
         MsgBox("Modulo en mantenimiento")
     End Sub
 
@@ -98,20 +98,20 @@
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        Dim Admin As New FrmProspectos
-        Admin.MdiParent = Me
-        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
-        Admin.Show()
-        Panel1.BackColor = Color.DimGray
-        Panel2.BackColor = Color.DimGray
-        Panel3.BackColor = Color.DimGray
-        Panel4.BackColor = Color.Gainsboro
-        Panel5.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel7.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
-        Panel9.BackColor = Color.DimGray
-        Label13.ForeColor = Color.Black
+        'Dim Admin As New FrmProspectos
+        'Admin.MdiParent = Me
+        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        'Admin.Show()
+        'Panel1.BackColor = Color.DimGray
+        'Panel2.BackColor = Color.DimGray
+        'Panel3.BackColor = Color.DimGray
+        'Panel4.BackColor = Color.Gainsboro
+        'Panel5.BackColor = Color.DimGray
+        'Panel6.BackColor = Color.DimGray
+        'Panel7.BackColor = Color.DimGray
+        'Panel8.BackColor = Color.DimGray
+        'Panel9.BackColor = Color.DimGray
+        'Label13.ForeColor = Color.Black
 
         'PanelBuenosDias.Visible = False
         'PanelRecordatorioSemana.Visible = False
