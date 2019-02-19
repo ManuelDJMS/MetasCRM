@@ -9,7 +9,6 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         tiempo = tiempo + 1
-
         txtUltimoRegistro.Text = actualizarUltimoRegistro()
     End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
@@ -340,7 +339,7 @@ Public Class FrmFoliosDelAnioAnterior
     Function actualizarUltimoRegistro()
         MetodoMetasInf2019()
         Dim valor As String
-        Dim r As String = "select max(Folio) from  [INFORMES-SERVICIOS] "
+        Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS]"
         Dim comando As New SqlCommand(r, conexion2019)
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
