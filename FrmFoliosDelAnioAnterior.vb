@@ -64,20 +64,30 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
         Try
-            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), "-", 0,
-            DGConsulta.Item(5, 0).Value.ToString(), DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(),
+            DGConsulta.Rows.Add(False, DGConsulta.Item(1, 0).Value.ToString(), DGConsulta.Item(2, 0).Value.ToString(), DGConsulta.Item(3, 0).Value.ToString(),
+            DGConsulta.Item(4, 0).Value.ToString(), DGConsulta.Item(5, 0).Value.ToString(), DGConsulta.Item(6, 0).Value.ToString(), DGConsulta.Item(7, 0).Value.ToString(),
             DGConsulta.Item(8, 0).Value.ToString(), DGConsulta.Item(9, 0).Value.ToString(), DGConsulta.Item(10, 0).Value.ToString(),
-            "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", 0, "-", "-", "-", "-", "-", "-", DGConsulta.Item(37, 0).Value.ToString(), "-",
-            DGConsulta.Item(39, 0).Value.ToString(), DGConsulta.Item(40, 0).Value.ToString(), DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(),
-            DGConsulta.Item(43, 0).Value.ToString(), DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(),
-            DGConsulta.Item(46, 0).Value.ToString(), DGConsulta.Item(47, 0).Value.ToString(), "-", "-", "-", "-", "-", "-", "-", "-", "-", "-")
+            DGConsulta.Item(11, 0).Value.ToString(), DGConsulta.Item(12, 0).Value.ToString(), DGConsulta.Item(13, 0).Value.ToString(),
+            DGConsulta.Item(14, 0).Value.ToString(), DGConsulta.Item(15, 0).Value.ToString(), DGConsulta.Item(16, 0).Value.ToString(),
+            DGConsulta.Item(17, 0).Value.ToString(), DGConsulta.Item(18, 0).Value.ToString(), DGConsulta.Item(19, 0).Value.ToString(),
+            DGConsulta.Item(20, 0).Value.ToString(), DGConsulta.Item(21, 0).Value.ToString(), DGConsulta.Item(22, 0).Value.ToString(),
+            DGConsulta.Item(23, 0).Value.ToString(), DGConsulta.Item(24, 0).Value.ToString(), DGConsulta.Item(25, 0).Value.ToString(),
+            DGConsulta.Item(26, 0).Value.ToString(), DGConsulta.Item(27, 0).Value.ToString(), DGConsulta.Item(28, 0).Value.ToString(),
+            DGConsulta.Item(29, 0).Value.ToString(), DGConsulta.Item(30, 0).Value.ToString(), DGConsulta.Item(31, 0).Value.ToString(),
+            DGConsulta.Item(32, 0).Value.ToString(), DGConsulta.Item(33, 0).Value.ToString(), DGConsulta.Item(34, 0).Value.ToString(),
+            DGConsulta.Item(35, 0).Value.ToString(), DGConsulta.Item(36, 0).Value.ToString(), DGConsulta.Item(37, 0).Value.ToString(),
+            DGConsulta.Item(38, 0).Value.ToString(), DGConsulta.Item(39, 0).Value.ToString(), DGConsulta.Item(40, 0).Value.ToString(),
+            DGConsulta.Item(41, 0).Value.ToString(), DGConsulta.Item(42, 0).Value.ToString(), DGConsulta.Item(43, 0).Value.ToString(),
+            DGConsulta.Item(44, 0).Value.ToString(), DGConsulta.Item(45, 0).Value.ToString(), DGConsulta.Item(46, 0).Value.ToString(),
+            DGConsulta.Item(47, 0).Value.ToString(), DGConsulta.Item(48, 0).Value.ToString(), DGConsulta.Item(49, 0).Value.ToString(),
+            DGConsulta.Item(50, 0).Value.ToString(), DGConsulta.Item(51, 0).Value.ToString(), DGConsulta.Item(52, 0).Value.ToString(),
+            DGConsulta.Item(53, 0).Value.ToString())
             lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
         Catch ex As Exception
             MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
         End Try
 
     End Sub
-
     Private Sub btEliminar_Click(sender As Object, e As EventArgs) Handles btEliminar.Click
         For i As Integer = DGConsulta.Rows.Count() - 1 To 0 Step -1
             Dim delete As Boolean
