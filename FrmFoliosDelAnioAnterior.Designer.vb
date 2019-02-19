@@ -22,6 +22,7 @@ Partial Class FrmFoliosDelAnioAnterior
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
@@ -131,6 +132,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.lbRazonSocial = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.DTP = New System.Windows.Forms.DateTimePicker()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -139,11 +141,11 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.btBuscar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtUltimoRegistro = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtUltimoRegistro = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -951,6 +953,17 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.Size = New System.Drawing.Size(1140, 66)
         Me.Panel2.TabIndex = 151
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.ForestGreen
+        Me.Label8.Location = New System.Drawing.Point(560, 21)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(96, 15)
+        Me.Label8.TabIndex = 179
+        Me.Label8.Text = "Último Registro:"
+        '
         'DTP
         '
         Me.DTP.Location = New System.Drawing.Point(787, 15)
@@ -1040,6 +1053,16 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label27.TabIndex = 152
         Me.Label27.Text = "Folios"
         '
+        'txtUltimoRegistro
+        '
+        Me.txtUltimoRegistro.AutoSize = True
+        Me.txtUltimoRegistro.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUltimoRegistro.Location = New System.Drawing.Point(662, 22)
+        Me.txtUltimoRegistro.Name = "txtUltimoRegistro"
+        Me.txtUltimoRegistro.Size = New System.Drawing.Size(39, 14)
+        Me.txtUltimoRegistro.TabIndex = 163
+        Me.txtUltimoRegistro.Text = "ultimo"
+        '
         'Label49
         '
         Me.Label49.AutoSize = True
@@ -1074,26 +1097,8 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.txtNombreEmpleado.Text = "Pais"
         Me.txtNombreEmpleado.Visible = False
         '
-        'Label8
+        'Timer1
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label8.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Label8.Location = New System.Drawing.Point(560, 21)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(96, 15)
-        Me.Label8.TabIndex = 179
-        Me.Label8.Text = "Último Registro:"
-        '
-        'txtUltimoRegistro
-        '
-        Me.txtUltimoRegistro.AutoSize = True
-        Me.txtUltimoRegistro.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUltimoRegistro.Location = New System.Drawing.Point(662, 22)
-        Me.txtUltimoRegistro.Name = "txtUltimoRegistro"
-        Me.txtUltimoRegistro.Size = New System.Drawing.Size(39, 14)
-        Me.txtUltimoRegistro.TabIndex = 163
-        Me.txtUltimoRegistro.Text = "ultimo"
         '
         'FrmFoliosDelAnioAnterior
         '
@@ -1248,4 +1253,5 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents txtNombreEmpleado As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents txtUltimoRegistro As Label
+    Friend WithEvents Timer1 As Timer
 End Class

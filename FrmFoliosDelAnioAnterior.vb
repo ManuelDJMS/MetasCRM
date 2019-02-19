@@ -1,7 +1,14 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmFoliosDelAnioAnterior
+    Dim tiempo As Integer
     Private Sub FrmFoliosDelAnioAnterior_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Timer1.Start()
+        Timer1.Interval = 800
+        tiempo = 0
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        tiempo = tiempo + 1
+        txtUltimoRegistro.Text = tiempo
     End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
@@ -317,4 +324,14 @@ Public Class FrmFoliosDelAnioAnterior
             MsgBox(ex)
         End Try
     End Sub
+
+    Function actualizarUltimoRegistro(ByVal valorRetornado As String)
+        MetodoMetasInf2019()
+        Dim r As String = "Select "
+        Dim comando As New SqlCommand(r, conexion2019)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        lector.Read()
+        Return r
+    End Function
 End Class
