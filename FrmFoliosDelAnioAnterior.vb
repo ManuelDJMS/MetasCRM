@@ -338,14 +338,16 @@ Public Class FrmFoliosDelAnioAnterior
 
     Function actualizarUltimoRegistro()
         MetodoMetasInf2019()
-        Dim valor As String
+        Dim valor, valor1 As String
         Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS]"
         Dim comando As New SqlCommand(r, conexion2019)
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
         lector.Read()
         valor = lector(0)
+        ''valor1 = lector(1)
         Return valor
+        'Return valor1
         lector.Close()
     End Function
 End Class
