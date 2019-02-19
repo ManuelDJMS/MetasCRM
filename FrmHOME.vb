@@ -98,20 +98,20 @@
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        'Dim Admin As New FrmProspectos
-        'Admin.MdiParent = Me
-        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
-        'Admin.Show()
-        'Panel1.BackColor = Color.DimGray
-        'Panel2.BackColor = Color.DimGray
-        'Panel3.BackColor = Color.DimGray
-        'Panel4.BackColor = Color.Gainsboro
-        'Panel5.BackColor = Color.DimGray
-        'Panel6.BackColor = Color.DimGray
-        'Panel7.BackColor = Color.DimGray
-        'Panel8.BackColor = Color.DimGray
-        'Panel9.BackColor = Color.DimGray
-        'Label13.ForeColor = Color.Black
+        Dim Admin As New FrmProspectos
+        Admin.MdiParent = Me
+        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        Admin.Show()
+        Panel1.BackColor = Color.DimGray
+        Panel2.BackColor = Color.DimGray
+        Panel3.BackColor = Color.DimGray
+        Panel4.BackColor = Color.Gainsboro
+        Panel5.BackColor = Color.DimGray
+        Panel6.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel8.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Label13.ForeColor = Color.Black
 
         'PanelBuenosDias.Visible = False
         'PanelRecordatorioSemana.Visible = False
@@ -120,21 +120,21 @@
     End Sub
 
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
-        'Dim Admin As New FrmCotizadorLIMS
-        'Admin.MdiParent = Me
-        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
-        'Admin.Show()
-        'Panel1.BackColor = Color.DimGray
-        'Panel2.BackColor = Color.DimGray
-        'Panel3.BackColor = Color.DimGray
-        'Panel4.BackColor = Color.DimGray
-        'Panel5.BackColor = Color.SteelBlue
-        'Panel6.BackColor = Color.DimGray
-        'Panel7.BackColor = Color.DimGray
-        'Panel8.BackColor = Color.DimGray
-        'Panel9.BackColor = Color.DimGray
-        'Label15.ForeColor = Color.Black
-        MsgBox("Modulo en mantenimiento")
+        Dim Admin As New FrmCotizadorLIMS
+        Admin.MdiParent = Me
+        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        Admin.Show()
+        Panel1.BackColor = Color.DimGray
+        Panel2.BackColor = Color.DimGray
+        Panel3.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel5.BackColor = Color.SteelBlue
+        Panel6.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel8.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Label15.ForeColor = Color.Black
+        ' MsgBox("Modulo en mantenimiento")
     End Sub
 
     Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
