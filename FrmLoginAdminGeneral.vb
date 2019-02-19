@@ -60,6 +60,18 @@ Public Class FrmLoginAdminGeneral
         End Try
     End Sub
 
+    Private Sub txtContrasena_KeyDown(sender As Object, e As KeyEventArgs) Handles txtContrasena.KeyDown
+        Try
+            Select Case e.KeyData
+                Case Keys.Enter
+                    logearUsuariosAdministradoresSistemas(txtUsuario.Text, txtContrasena.Text)
+            End Select
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+        End Try
+
+    End Sub
+
     '
     'Sub logearUsuariosAdministradoresSistemas(ByVal Username As String, ByRef Contrasena As String)
     '    Try
