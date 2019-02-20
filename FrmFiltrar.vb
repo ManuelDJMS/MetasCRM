@@ -1,11 +1,11 @@
 ﻿Public Class FrmFiltrar
     Private Sub FrmFiltrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            MetodoMetasInf2018()
-            comando2018 = conexion2018.CreateCommand
+            MetodoInformacionGeneral()
+            comando2018 = conexionInformacionGeneral.CreateCommand
             Dim R As String
-            R = "select distinct ClavecontactoConsign, Compania, RFC
-                 FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa"
+            R = "select distinct Clavempresa, Compania, RFC
+                 FROM MetasInf"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
@@ -23,18 +23,17 @@
 
     Private Sub TextEmpresa_TextChanged(sender As Object, e As EventArgs) Handles TextEmpresa.TextChanged
         Try
-            MetodoMetasInf2018()
-            comando2018 = conexion2018.CreateCommand
+            MetodoInformacionGeneral()
+            comando2018 = conexionInformacionGeneral.CreateCommand
             Dim R As String
             dgEmpresas.Rows.Clear()
             If dgEmpresas.Rows.Count < 2 Then
             Else
                 dgEmpresas.Rows.RemoveAt(dgEmpresas.CurrentRow.Index)
             End If
-            comando2018 = conexion2018.CreateCommand
             '---------------CONSULTA PARA SACAR LOS COMENTARIOS DE LA PREFACTURA----------------------------
-            R = "select distinct ClavecontactoConsign, Compania, RFC
-                 FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa where Compania like '" & TextEmpresa.Text & "%'"
+            R = "select distinct Clavempresa, Compania, RFC
+                 FROM MetAsInf where Compania like '" & TextEmpresa.Text & "%'"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
@@ -126,18 +125,17 @@
 
     Private Sub txtClave_TextChanged(sender As Object, e As EventArgs) Handles txtClave.TextChanged
         Try
-            MetodoMetasInf2018()
-            comando2018 = conexion2018.CreateCommand
+            MetodoInformacionGeneral()
+            comando2018 = conexionInformacionGeneral.CreateCommand
             Dim R As String
             dgEmpresas.Rows.Clear()
             If dgEmpresas.Rows.Count < 2 Then
             Else
                 dgEmpresas.Rows.RemoveAt(dgEmpresas.CurrentRow.Index)
             End If
-            comando2018 = conexion2018.CreateCommand
             '---------------CONSULTA PARA SACAR LOS COMENTARIOS DE LA PREFACTURA----------------------------
-            R = "select distinct ClavecontactoConsign, Compania, RFC
-                 FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa where ClavecontactoConsign like '" & txtClave.Text & "%'"
+            R = "select distinct Clavempresa, Compania, RFC
+                 FROM MetAsInf where Clavempresa like '" & txtClave.Text & "%'"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
