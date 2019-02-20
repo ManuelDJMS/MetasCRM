@@ -16,12 +16,12 @@ Public Class FrmFoliosDelAnioAnterior
         MetodoMetasInf2019()
         'Try
         Dim fechaActual As Date
-        Dim fechaRec As DateTime
+        Dim fechaRec As Date
         Dim maximo As Integer
             Dim R As String
         ''fechaRec = DTPRecepcion.Value.Date
         'fechaRec = Convert.ToDateTime(DTPRecepcion.Value.Year.ToString + "-" + DTPRecepcion.Value.Month.ToString + "-" + DTPRecepcion.Value.Day.ToString)
-        fechaRec = Format(DTPRecepcion.Value, "yyyy/MM/dd")
+        fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
         fechaActual = DTP.Value.Date
             'If txtFolio.Text.Trim.Equals("") Then
             Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
@@ -41,7 +41,7 @@ Public Class FrmFoliosDelAnioAnterior
                   , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10]) values(" & (DGConsulta.Item(1, i).Value) & "
                         ,'" & (DGConsulta.Item(2, i).Value) & "','" & DGConsulta.Item(3, i).Value & "'," & Val(DGConsulta.Item(4, i).Value) & "
                         ,'" & (DGConsulta.Item(5, i).Value) & "','" & DGConsulta.Item(6, i).Value & "','" & (DGConsulta.Item(7, i).Value) & "'
-                        ,'" & DGConsulta.Item(8, i).Value & "'," & Val(DGConsulta.Item(9, i).Value) & "," & fechaRec & "
+                        ,'" & DGConsulta.Item(8, i).Value & "'," & Val(DGConsulta.Item(9, i).Value) & ",CONVERT (date,'" & fechaRec & "')
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
                         ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
                         ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "

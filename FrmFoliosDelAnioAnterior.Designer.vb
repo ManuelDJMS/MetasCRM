@@ -398,6 +398,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DTPRecepcion.Name = "DTPRecepcion"
         Me.DTPRecepcion.Size = New System.Drawing.Size(234, 23)
         Me.DTPRecepcion.TabIndex = 177
+        Me.DTPRecepcion.Value = New Date(2019, 2, 19, 17, 52, 53, 0)
         '
         'btEliminar
         '
