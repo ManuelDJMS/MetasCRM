@@ -132,6 +132,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.lbRazonSocial = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DTP = New System.Windows.Forms.DateTimePicker()
         Me.btGuardarInf = New System.Windows.Forms.Button()
@@ -146,6 +147,63 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -155,6 +213,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -172,6 +231,7 @@ Partial Class FrmFoliosDelAnioAnterior
         'TabFolios
         '
         Me.TabFolios.BackColor = System.Drawing.Color.Gainsboro
+        Me.TabFolios.Controls.Add(Me.Panel4)
         Me.TabFolios.Controls.Add(Me.Panel3)
         Me.TabFolios.Controls.Add(Me.DGServicios)
         Me.TabFolios.Controls.Add(Me.Label2)
@@ -322,7 +382,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGServicios.Location = New System.Drawing.Point(446, 128)
         Me.DGServicios.Name = "DGServicios"
         Me.DGServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGServicios.Size = New System.Drawing.Size(684, 242)
+        Me.DGServicios.Size = New System.Drawing.Size(684, 193)
         Me.DGServicios.TabIndex = 179
         '
         'Seleccionar
@@ -385,7 +445,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(21, 306)
+        Me.Label2.Location = New System.Drawing.Point(21, 258)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(120, 15)
         Me.Label2.TabIndex = 178
@@ -394,7 +454,7 @@ Partial Class FrmFoliosDelAnioAnterior
         'DTPRecepcion
         '
         Me.DTPRecepcion.CalendarFont = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPRecepcion.Location = New System.Drawing.Point(149, 300)
+        Me.DTPRecepcion.Location = New System.Drawing.Point(149, 252)
         Me.DTPRecepcion.Name = "DTPRecepcion"
         Me.DTPRecepcion.Size = New System.Drawing.Size(234, 23)
         Me.DTPRecepcion.TabIndex = 177
@@ -433,7 +493,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbServicios.AutoSize = True
         Me.lbServicios.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lbServicios.Location = New System.Drawing.Point(26, 358)
+        Me.lbServicios.Location = New System.Drawing.Point(23, 316)
         Me.lbServicios.Name = "lbServicios"
         Me.lbServicios.Size = New System.Drawing.Size(58, 15)
         Me.lbServicios.TabIndex = 172
@@ -455,9 +515,9 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Folio, Me.Magnitud, Me.Informe, Me.Facturadp, Me.ClaveContacto, Me.Empresa, Me.ClaveContactoUsuario, Me.Usuario, Me.ClavecontactoUsuarioa, Me.FechaRecepcion, Me.ServCatalogo1, Me.ServCatalogo2, Me.ServiciosAdicionales, Me.PUCalib, Me.PULab, Me.PUFacturado, Me.Tipo, Me.Alcance, Me.Marca, Me.Modelo, Me.Serie, Me.ID, Me.Accesorios, Me.Puntos, Me.Patron1, Me.Patron2, Me.Patron3, Me.Funciones, Me.Etiquetas, Me.HacerEtiquetas, Me.DatosInforme, Me.Observaciones, Me.Calibro, Me.NumEmisiones, Me.NumCot, Me.Status, Me.CveOperador, Me.RealizoMedicion, Me.EmpresaEmision, Me.DirCalle, Me.DirCol, Me.DirEdo, Me.DiEdoEm, Me.DirPais, Me.DirCp, Me.Sv1, Me.Sv3, Me.Sv5, Me.Sv6, Me.Sv7, Me.Sv8Idioma, Me.Sv9, Me.Sv10, Me.FechaRegistro})
-        Me.DGConsulta.Location = New System.Drawing.Point(23, 376)
+        Me.DGConsulta.Location = New System.Drawing.Point(20, 334)
         Me.DGConsulta.Name = "DGConsulta"
-        Me.DGConsulta.Size = New System.Drawing.Size(951, 226)
+        Me.DGConsulta.Size = New System.Drawing.Size(951, 204)
         Me.DGConsulta.TabIndex = 171
         '
         'Column1
@@ -760,7 +820,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbPais.AutoSize = True
         Me.lbPais.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPais.Location = New System.Drawing.Point(327, 248)
+        Me.lbPais.Location = New System.Drawing.Point(288, 137)
         Me.lbPais.Name = "lbPais"
         Me.lbPais.Size = New System.Drawing.Size(27, 14)
         Me.lbPais.TabIndex = 169
@@ -770,7 +830,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbDomicilio.AutoSize = True
         Me.lbDomicilio.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDomicilio.Location = New System.Drawing.Point(98, 195)
+        Me.lbDomicilio.Location = New System.Drawing.Point(105, 173)
         Me.lbDomicilio.Name = "lbDomicilio"
         Me.lbDomicilio.Size = New System.Drawing.Size(27, 14)
         Me.lbDomicilio.TabIndex = 169
@@ -780,7 +840,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label50.AutoSize = True
         Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label50.Location = New System.Drawing.Point(248, 246)
+        Me.Label50.Location = New System.Drawing.Point(254, 135)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(32, 15)
         Me.Label50.TabIndex = 168
@@ -790,7 +850,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label48.AutoSize = True
         Me.Label48.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label48.Location = New System.Drawing.Point(20, 194)
+        Me.Label48.Location = New System.Drawing.Point(20, 172)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(61, 15)
         Me.Label48.TabIndex = 168
@@ -800,7 +860,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbCiudad.AutoSize = True
         Me.lbCiudad.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCiudad.Location = New System.Drawing.Point(98, 221)
+        Me.lbCiudad.Location = New System.Drawing.Point(105, 192)
         Me.lbCiudad.Name = "lbCiudad"
         Me.lbCiudad.Size = New System.Drawing.Size(40, 14)
         Me.lbCiudad.TabIndex = 167
@@ -810,7 +870,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label44.AutoSize = True
         Me.Label44.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label44.Location = New System.Drawing.Point(20, 220)
+        Me.Label44.Location = New System.Drawing.Point(20, 191)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(48, 15)
         Me.Label44.TabIndex = 166
@@ -820,7 +880,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbEstado.AutoSize = True
         Me.lbEstado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEstado.Location = New System.Drawing.Point(98, 248)
+        Me.lbEstado.Location = New System.Drawing.Point(105, 210)
         Me.lbEstado.Name = "lbEstado"
         Me.lbEstado.Size = New System.Drawing.Size(40, 14)
         Me.lbEstado.TabIndex = 165
@@ -830,7 +890,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label39.AutoSize = True
         Me.Label39.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label39.Location = New System.Drawing.Point(20, 246)
+        Me.Label39.Location = New System.Drawing.Point(20, 209)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(47, 15)
         Me.Label39.TabIndex = 164
@@ -840,7 +900,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbCP.AutoSize = True
         Me.lbCP.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCP.Location = New System.Drawing.Point(98, 273)
+        Me.lbCP.Location = New System.Drawing.Point(105, 229)
         Me.lbCP.Name = "lbCP"
         Me.lbCP.Size = New System.Drawing.Size(73, 14)
         Me.lbCP.TabIndex = 163
@@ -850,7 +910,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label35.Location = New System.Drawing.Point(20, 273)
+        Me.Label35.Location = New System.Drawing.Point(20, 228)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(25, 15)
         Me.Label35.TabIndex = 162
@@ -860,7 +920,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbClave.AutoSize = True
         Me.lbClave.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbClave.Location = New System.Drawing.Point(98, 128)
+        Me.lbClave.Location = New System.Drawing.Point(105, 119)
         Me.lbClave.Name = "lbClave"
         Me.lbClave.Size = New System.Drawing.Size(33, 14)
         Me.lbClave.TabIndex = 155
@@ -870,7 +930,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label29.Location = New System.Drawing.Point(20, 127)
+        Me.Label29.Location = New System.Drawing.Point(20, 118)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(40, 15)
         Me.Label29.TabIndex = 154
@@ -880,7 +940,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbRFC.AutoSize = True
         Me.lbRFC.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRFC.Location = New System.Drawing.Point(327, 223)
+        Me.lbRFC.Location = New System.Drawing.Point(288, 120)
         Me.lbRFC.Name = "lbRFC"
         Me.lbRFC.Size = New System.Drawing.Size(43, 14)
         Me.lbRFC.TabIndex = 159
@@ -890,7 +950,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label25.Location = New System.Drawing.Point(248, 221)
+        Me.Label25.Location = New System.Drawing.Point(254, 118)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(31, 15)
         Me.Label25.TabIndex = 158
@@ -900,7 +960,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbEmpresa.AutoSize = True
         Me.lbEmpresa.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEmpresa.Location = New System.Drawing.Point(98, 170)
+        Me.lbEmpresa.Location = New System.Drawing.Point(105, 154)
         Me.lbEmpresa.Name = "lbEmpresa"
         Me.lbEmpresa.Size = New System.Drawing.Size(43, 14)
         Me.lbEmpresa.TabIndex = 159
@@ -910,7 +970,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label20.Location = New System.Drawing.Point(20, 170)
+        Me.Label20.Location = New System.Drawing.Point(20, 153)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(58, 15)
         Me.Label20.TabIndex = 158
@@ -920,7 +980,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.lbRazonSocial.AutoSize = True
         Me.lbRazonSocial.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRazonSocial.Location = New System.Drawing.Point(98, 148)
+        Me.lbRazonSocial.Location = New System.Drawing.Point(105, 136)
         Me.lbRazonSocial.Name = "lbRazonSocial"
         Me.lbRazonSocial.Size = New System.Drawing.Size(88, 14)
         Me.lbRazonSocial.TabIndex = 157
@@ -930,7 +990,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label17.Location = New System.Drawing.Point(20, 147)
+        Me.Label17.Location = New System.Drawing.Point(20, 135)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(76, 15)
         Me.Label17.TabIndex = 156
@@ -939,6 +999,7 @@ Partial Class FrmFoliosDelAnioAnterior
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.DTP)
         Me.Panel2.Controls.Add(Me.btGuardarInf)
@@ -954,6 +1015,21 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.Size = New System.Drawing.Size(1140, 66)
         Me.Panel2.TabIndex = 151
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Green
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(759, 15)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(83, 33)
+        Me.Button1.TabIndex = 180
+        Me.Button1.Text = "Campo"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -967,7 +1043,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         'DTP
         '
-        Me.DTP.Location = New System.Drawing.Point(787, 15)
+        Me.DTP.Location = New System.Drawing.Point(446, 13)
         Me.DTP.Name = "DTP"
         Me.DTP.Size = New System.Drawing.Size(48, 23)
         Me.DTP.TabIndex = 167
@@ -1101,6 +1177,630 @@ Partial Class FrmFoliosDelAnioAnterior
         'Timer1
         '
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel4.Controls.Add(Me.Label76)
+        Me.Panel4.Controls.Add(Me.Label77)
+        Me.Panel4.Controls.Add(Me.Label74)
+        Me.Panel4.Controls.Add(Me.Label75)
+        Me.Panel4.Controls.Add(Me.Label72)
+        Me.Panel4.Controls.Add(Me.Label73)
+        Me.Panel4.Controls.Add(Me.Label70)
+        Me.Panel4.Controls.Add(Me.Label71)
+        Me.Panel4.Controls.Add(Me.Label68)
+        Me.Panel4.Controls.Add(Me.Label69)
+        Me.Panel4.Controls.Add(Me.Label66)
+        Me.Panel4.Controls.Add(Me.Label67)
+        Me.Panel4.Controls.Add(Me.Label64)
+        Me.Panel4.Controls.Add(Me.Label65)
+        Me.Panel4.Controls.Add(Me.Label62)
+        Me.Panel4.Controls.Add(Me.Label63)
+        Me.Panel4.Controls.Add(Me.Label60)
+        Me.Panel4.Controls.Add(Me.Label61)
+        Me.Panel4.Controls.Add(Me.Label58)
+        Me.Panel4.Controls.Add(Me.Label59)
+        Me.Panel4.Controls.Add(Me.Label56)
+        Me.Panel4.Controls.Add(Me.Label57)
+        Me.Panel4.Controls.Add(Me.Label54)
+        Me.Panel4.Controls.Add(Me.Label55)
+        Me.Panel4.Controls.Add(Me.Label52)
+        Me.Panel4.Controls.Add(Me.Label53)
+        Me.Panel4.Controls.Add(Me.Label47)
+        Me.Panel4.Controls.Add(Me.Label51)
+        Me.Panel4.Controls.Add(Me.Label45)
+        Me.Panel4.Controls.Add(Me.Label46)
+        Me.Panel4.Controls.Add(Me.Label41)
+        Me.Panel4.Controls.Add(Me.Label43)
+        Me.Panel4.Controls.Add(Me.Label38)
+        Me.Panel4.Controls.Add(Me.Label40)
+        Me.Panel4.Controls.Add(Me.Label36)
+        Me.Panel4.Controls.Add(Me.Label37)
+        Me.Panel4.Controls.Add(Me.Label33)
+        Me.Panel4.Controls.Add(Me.Label34)
+        Me.Panel4.Controls.Add(Me.Label31)
+        Me.Panel4.Controls.Add(Me.Label32)
+        Me.Panel4.Controls.Add(Me.Label28)
+        Me.Panel4.Controls.Add(Me.Label30)
+        Me.Panel4.Controls.Add(Me.Label24)
+        Me.Panel4.Controls.Add(Me.Label21)
+        Me.Panel4.Controls.Add(Me.Label22)
+        Me.Panel4.Controls.Add(Me.Label18)
+        Me.Panel4.Controls.Add(Me.Label19)
+        Me.Panel4.Controls.Add(Me.Label15)
+        Me.Panel4.Controls.Add(Me.Label16)
+        Me.Panel4.Controls.Add(Me.Label14)
+        Me.Panel4.Controls.Add(Me.Label13)
+        Me.Panel4.Controls.Add(Me.Label12)
+        Me.Panel4.Controls.Add(Me.Label11)
+        Me.Panel4.Controls.Add(Me.Label9)
+        Me.Panel4.Controls.Add(Me.Label10)
+        Me.Panel4.Controls.Add(Me.Label23)
+        Me.Panel4.Location = New System.Drawing.Point(-4, 544)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1148, 75)
+        Me.Panel4.TabIndex = 181
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(62, 9)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(43, 14)
+        Me.Label9.TabIndex = 161
+        Me.Label9.Text = "Colonia"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label10.Location = New System.Drawing.Point(111, 8)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(56, 15)
+        Me.Label10.TabIndex = 160
+        Me.Label10.Text = "MABF-TC"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(5, 9)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(59, 15)
+        Me.Label11.TabIndex = 160
+        Me.Label11.Text = "MAAF-PV"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(167, 10)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(43, 14)
+        Me.Label12.TabIndex = 161
+        Me.Label12.Text = "Colonia"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Location = New System.Drawing.Point(214, 8)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(59, 15)
+        Me.Label13.TabIndex = 160
+        Me.Label13.Text = "MACF-HU"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(270, 9)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(43, 14)
+        Me.Label14.TabIndex = 161
+        Me.Label14.Text = "Colonia"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(377, 10)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(43, 14)
+        Me.Label15.TabIndex = 163
+        Me.Label15.Text = "Colonia"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label16.Location = New System.Drawing.Point(319, 9)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(56, 15)
+        Me.Label16.TabIndex = 162
+        Me.Label16.Text = "MACF-TC"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(478, 10)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(43, 14)
+        Me.Label18.TabIndex = 165
+        Me.Label18.Text = "Colonia"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label19.Location = New System.Drawing.Point(421, 9)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(57, 15)
+        Me.Label19.TabIndex = 164
+        Me.Label19.Text = "MADC-EL"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(573, 10)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(43, 14)
+        Me.Label21.TabIndex = 167
+        Me.Label21.Text = "Colonia"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label22.Location = New System.Drawing.Point(519, 9)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(57, 15)
+        Me.Label22.TabIndex = 166
+        Me.Label22.Text = "MADC-TF"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(679, 10)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(43, 14)
+        Me.Label23.TabIndex = 169
+        Me.Label23.Text = "Colonia"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label24.Location = New System.Drawing.Point(620, 9)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(62, 15)
+        Me.Label24.TabIndex = 168
+        Me.Label24.Text = "MADEF-EL"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label28.Location = New System.Drawing.Point(725, 9)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(56, 15)
+        Me.Label28.TabIndex = 170
+        Me.Label28.Text = "MADF-TF"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(784, 10)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(43, 14)
+        Me.Label30.TabIndex = 171
+        Me.Label30.Text = "Colonia"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label31.Location = New System.Drawing.Point(838, 9)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(60, 15)
+        Me.Label31.TabIndex = 172
+        Me.Label31.Text = "MATF-MA"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(895, 10)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(43, 14)
+        Me.Label32.TabIndex = 173
+        Me.Label32.Text = "Colonia"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label33.Location = New System.Drawing.Point(941, 9)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(59, 15)
+        Me.Label33.TabIndex = 174
+        Me.Label33.Text = "MAFF-VO"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(996, 10)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(43, 14)
+        Me.Label34.TabIndex = 175
+        Me.Label34.Text = "Colonia"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label36.Location = New System.Drawing.Point(1045, 9)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(60, 15)
+        Me.Label36.TabIndex = 176
+        Me.Label36.Text = "MAGC-AC"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(1102, 10)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(43, 14)
+        Me.Label37.TabIndex = 177
+        Me.Label37.Text = "Colonia"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label38.Location = New System.Drawing.Point(4, 24)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(57, 15)
+        Me.Label38.TabIndex = 178
+        Me.Label38.Text = "MAGC-TF"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(62, 24)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(43, 14)
+        Me.Label40.TabIndex = 179
+        Me.Label40.Text = "Colonia"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label41.Location = New System.Drawing.Point(111, 25)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(59, 15)
+        Me.Label41.TabIndex = 180
+        Me.Label41.Text = "MAGF-AC"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(167, 26)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(43, 14)
+        Me.Label43.TabIndex = 181
+        Me.Label43.Text = "Colonia"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label45.Location = New System.Drawing.Point(214, 24)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(56, 15)
+        Me.Label45.TabIndex = 182
+        Me.Label45.Text = "MAGF-TF"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Location = New System.Drawing.Point(270, 24)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(43, 14)
+        Me.Label46.TabIndex = 183
+        Me.Label46.Text = "Colonia"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label47.Location = New System.Drawing.Point(319, 25)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(61, 15)
+        Me.Label47.TabIndex = 184
+        Me.Label47.Text = "MAHC-OP"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(377, 25)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(43, 14)
+        Me.Label51.TabIndex = 185
+        Me.Label51.Text = "Colonia"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label52.Location = New System.Drawing.Point(421, 25)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(60, 15)
+        Me.Label52.TabIndex = 186
+        Me.Label52.Text = "MAHF-OP"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(478, 25)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(43, 14)
+        Me.Label53.TabIndex = 187
+        Me.Label53.Text = "Colonia"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label54.Location = New System.Drawing.Point(519, 25)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(53, 15)
+        Me.Label54.TabIndex = 188
+        Me.Label54.Text = "MAJF-TR"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(573, 25)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(43, 14)
+        Me.Label55.TabIndex = 189
+        Me.Label55.Text = "Colonia"
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label56.Location = New System.Drawing.Point(620, 25)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(55, 15)
+        Me.Label56.TabIndex = 190
+        Me.Label56.Text = "MAJC-DE"
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label57.Location = New System.Drawing.Point(679, 25)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(43, 14)
+        Me.Label57.TabIndex = 191
+        Me.Label57.Text = "Colonia"
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label58.Location = New System.Drawing.Point(725, 25)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(60, 15)
+        Me.Label58.TabIndex = 192
+        Me.Label58.Text = "MAJC-MA"
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.Location = New System.Drawing.Point(784, 25)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(43, 14)
+        Me.Label59.TabIndex = 193
+        Me.Label59.Text = "Colonia"
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label60.Location = New System.Drawing.Point(838, 25)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(54, 15)
+        Me.Label60.TabIndex = 194
+        Me.Label60.Text = "MAJF-DE"
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.Location = New System.Drawing.Point(895, 25)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(43, 14)
+        Me.Label61.TabIndex = 195
+        Me.Label61.Text = "Colonia"
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label62.Location = New System.Drawing.Point(941, 25)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(59, 15)
+        Me.Label62.TabIndex = 196
+        Me.Label62.Text = "MAJF-MA"
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label63.Location = New System.Drawing.Point(996, 25)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(43, 14)
+        Me.Label63.TabIndex = 197
+        Me.Label63.Text = "Colonia"
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.Location = New System.Drawing.Point(1102, 25)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(43, 14)
+        Me.Label65.TabIndex = 199
+        Me.Label65.Text = "Colonia"
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label64.Location = New System.Drawing.Point(1045, 25)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(60, 15)
+        Me.Label64.TabIndex = 198
+        Me.Label64.Text = "MAKC-HU"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label66.Location = New System.Drawing.Point(4, 40)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(61, 15)
+        Me.Label66.TabIndex = 200
+        Me.Label66.Text = "MAKC-ME"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.Location = New System.Drawing.Point(62, 40)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(43, 14)
+        Me.Label67.TabIndex = 201
+        Me.Label67.Text = "Colonia"
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label68.Location = New System.Drawing.Point(111, 40)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(59, 15)
+        Me.Label68.TabIndex = 202
+        Me.Label68.Text = "MAKC-PV"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.Location = New System.Drawing.Point(167, 41)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(43, 14)
+        Me.Label69.TabIndex = 203
+        Me.Label69.Text = "Colonia"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label70.Location = New System.Drawing.Point(214, 40)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(59, 15)
+        Me.Label70.TabIndex = 204
+        Me.Label70.Text = "MAKF-HU"
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(270, 40)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(43, 14)
+        Me.Label71.TabIndex = 205
+        Me.Label71.Text = "Colonia"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label72.Location = New System.Drawing.Point(319, 40)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(60, 15)
+        Me.Label72.TabIndex = 206
+        Me.Label72.Text = "MAKF-ME"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.Location = New System.Drawing.Point(377, 40)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(43, 14)
+        Me.Label73.TabIndex = 207
+        Me.Label73.Text = "Colonia"
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label74.Location = New System.Drawing.Point(421, 40)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(58, 15)
+        Me.Label74.TabIndex = 208
+        Me.Label74.Text = "MAKF-PV"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.Location = New System.Drawing.Point(478, 40)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(43, 14)
+        Me.Label75.TabIndex = 209
+        Me.Label75.Text = "Colonia"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label76.Location = New System.Drawing.Point(519, 40)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(56, 15)
+        Me.Label76.TabIndex = 210
+        Me.Label76.Text = "MAKF-TC"
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label77.Location = New System.Drawing.Point(573, 40)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(43, 14)
+        Me.Label77.TabIndex = 211
+        Me.Label77.Text = "Colonia"
+        '
         'FrmFoliosDelAnioAnterior
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1130,6 +1830,8 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1255,4 +1957,62 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Label8 As Label
     Friend WithEvents txtUltimoRegistro As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label76 As Label
+    Friend WithEvents Label77 As Label
+    Friend WithEvents Label74 As Label
+    Friend WithEvents Label75 As Label
+    Friend WithEvents Label72 As Label
+    Friend WithEvents Label73 As Label
+    Friend WithEvents Label70 As Label
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Label68 As Label
+    Friend WithEvents Label69 As Label
+    Friend WithEvents Label66 As Label
+    Friend WithEvents Label67 As Label
+    Friend WithEvents Label64 As Label
+    Friend WithEvents Label65 As Label
+    Friend WithEvents Label62 As Label
+    Friend WithEvents Label63 As Label
+    Friend WithEvents Label60 As Label
+    Friend WithEvents Label61 As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Label57 As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label23 As Label
 End Class
