@@ -95,6 +95,12 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmFiltarCampo.Designer.vb">
+      <DependentUpon>FrmFiltarCampo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFiltarCampo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmFoliosDelAnioAnterior.Designer.vb">
       <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFiltarCampo.resx">
+      <DependentUpon>FrmFiltarCampo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFoliosDelAnioAnterior.resx">
       <DependentUpon>FrmFoliosDelAnioAnterior.vb</DependentUpon>

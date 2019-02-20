@@ -368,7 +368,34 @@ Public Class FrmFoliosDelAnioAnterior
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        DGServicios.Visible = False
-        DGCotizaciones.Visible = True
+        FrmFiltarCampo.Show()
+    End Sub
+
+    Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
+        Dim row As DataGridViewRow = DGCotizaciones.Rows(e.RowIndex)
+        Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
+        If Convert.ToBoolean(cellSelecion.Value) = False Then
+            Try
+                Dim R As String
+                Dim fecharecep As Date
+                fecharecep = DTPRecepcion.Value.Date
+                R = "SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
+                isnull(CveOperador,'-'),isnull(EmpresaEmision,'-'),isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-') as colonia,isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
+                isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & DGCotizaciones.SelectedCells.Item(9).Value & " order by colonia desc"
+                comando2018.CommandText = R
+                lector2018 = comando2018.ExecuteReader
+                While lector2018.Read()
+                    DGConsulta.Rows.Add(False, 0, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
+                    "-", "-", "-", "-", "-", "-", "-", 0, "-", "-", "-", "-", "-", "-", lector2018(5), "-", lector2018(6),
+                    lector2018(7), lector2018(8), lector2018(9), lector2018(10), lector2018(11), lector2018(12), "-", "-", "-", "-", "-", "-", "-", "-", "-")
+                End While
+                lector2018.Close()
+                lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
+            Catch ex As Exception
+                MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
+            End Try
+        Else
+            row.DefaultCellStyle.BackColor = Color.White
+        End If
     End Sub
 End Class

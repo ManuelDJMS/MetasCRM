@@ -54,10 +54,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
@@ -206,6 +202,17 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
+        Me.ckSeleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.equipoDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnClaveContactoCampo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -298,10 +305,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel4.Controls.Add(Me.Label57)
         Me.Panel4.Controls.Add(Me.Label54)
         Me.Panel4.Controls.Add(Me.Label55)
-        Me.Panel4.Controls.Add(Me.Label52)
-        Me.Panel4.Controls.Add(Me.Label53)
-        Me.Panel4.Controls.Add(Me.Label47)
-        Me.Panel4.Controls.Add(Me.Label51)
         Me.Panel4.Controls.Add(Me.Label45)
         Me.Panel4.Controls.Add(Me.Label46)
         Me.Panel4.Controls.Add(Me.Label41)
@@ -574,46 +577,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label55.Size = New System.Drawing.Size(43, 14)
         Me.Label55.TabIndex = 189
         Me.Label55.Text = "Colonia"
-        '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label52.Location = New System.Drawing.Point(421, 25)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(60, 15)
-        Me.Label52.TabIndex = 186
-        Me.Label52.Text = "MAHF-OP"
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(478, 25)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(43, 14)
-        Me.Label53.TabIndex = 187
-        Me.Label53.Text = "Colonia"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label47.Location = New System.Drawing.Point(319, 25)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(61, 15)
-        Me.Label47.TabIndex = 184
-        Me.Label47.Text = "MAHC-OP"
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.Location = New System.Drawing.Point(377, 25)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(43, 14)
-        Me.Label51.TabIndex = 185
-        Me.Label51.Text = "Colonia"
         '
         'Label45
         '
@@ -1807,7 +1770,6 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         'DGCotizaciones
         '
-        Me.DGCotizaciones.AllowUserToDeleteRows = False
         Me.DGCotizaciones.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -1821,12 +1783,75 @@ Partial Class FrmFoliosDelAnioAnterior
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 122)
+        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.intervalo, Me.precioUnitario, Me.columnClaveContactoCampo})
+        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 173)
         Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.ReadOnly = True
-        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 206)
+        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 116)
         Me.DGCotizaciones.TabIndex = 182
         Me.DGCotizaciones.Visible = False
+        '
+        'ckSeleccionar
+        '
+        Me.ckSeleccionar.HeaderText = "Seleccionar"
+        Me.ckSeleccionar.Name = "ckSeleccionar"
+        '
+        'partida
+        '
+        Me.partida.HeaderText = "Partida"
+        Me.partida.Name = "partida"
+        Me.partida.Visible = False
+        Me.partida.Width = 50
+        '
+        'codigoServicio
+        '
+        Me.codigoServicio.HeaderText = "Código Servicio"
+        Me.codigoServicio.Name = "codigoServicio"
+        Me.codigoServicio.Width = 80
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.Width = 55
+        '
+        'equipoDescripcion
+        '
+        Me.equipoDescripcion.HeaderText = "Equipo/Descripción"
+        Me.equipoDescripcion.Name = "equipoDescripcion"
+        Me.equipoDescripcion.Width = 270
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 80
+        '
+        'intervalo
+        '
+        Me.intervalo.HeaderText = "Intervalo"
+        Me.intervalo.Name = "intervalo"
+        Me.intervalo.Width = 270
+        '
+        'precioUnitario
+        '
+        Me.precioUnitario.HeaderText = "Precio 2018"
+        Me.precioUnitario.Name = "precioUnitario"
+        Me.precioUnitario.Width = 70
+        '
+        'columnClaveContactoCampo
+        '
+        Me.columnClaveContactoCampo.HeaderText = "Clave Contacto"
+        Me.columnClaveContactoCampo.Name = "columnClaveContactoCampo"
         '
         'FrmFoliosDelAnioAnterior
         '
@@ -2011,10 +2036,6 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Label57 As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
-    Friend WithEvents Label52 As Label
-    Friend WithEvents Label53 As Label
-    Friend WithEvents Label47 As Label
-    Friend WithEvents Label51 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents Label41 As Label
@@ -2044,4 +2065,15 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents Label10 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents DGCotizaciones As DataGridView
+    Friend WithEvents ckSeleccionar As DataGridViewCheckBoxColumn
+    Friend WithEvents partida As DataGridViewTextBoxColumn
+    Friend WithEvents codigoServicio As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents equipoDescripcion As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents intervalo As DataGridViewTextBoxColumn
+    Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
+    Friend WithEvents columnClaveContactoCampo As DataGridViewTextBoxColumn
 End Class
