@@ -10,7 +10,7 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         tiempo = tiempo + 1
         txtUltimoRegistro.Text = actualizarUltimoRegistro()
-        Label9.Text = actualizarMagnitud()
+        'Label9.Text = actualizarMagnitud()
     End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
@@ -340,7 +340,7 @@ Public Class FrmFoliosDelAnioAnterior
 
     Function actualizarUltimoRegistro()
         MetodoMetasInf2019()
-        Dim valor, valor1 As String
+        Dim valor As String
         Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS]"
         Dim comando As New SqlCommand(r, conexion2019)
         Dim lector As SqlDataReader
@@ -352,7 +352,7 @@ Public Class FrmFoliosDelAnioAnterior
         'Return valor1
         lector.Close()
     End Function
-    Function actualizarMagnitud()
+    Function actualizarMagnitud1()
         MetodoMetasInf2019()
         Dim mag As String
         Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAAF-PV'"

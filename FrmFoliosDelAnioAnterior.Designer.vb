@@ -202,7 +202,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-<<<<<<< HEAD
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
         Me.ckSeleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -215,8 +214,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnClaveContactoCampo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-=======
->>>>>>> 5be22b1c4f1da775b84b7dd90b86e9ebc2f54871
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1795,7 +1792,6 @@ Partial Class FrmFoliosDelAnioAnterior
         'Timer1
         '
         '
-<<<<<<< HEAD
         'DGCotizaciones
         '
         Me.DGCotizaciones.BackgroundColor = System.Drawing.Color.Gainsboro
@@ -1881,8 +1877,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.columnClaveContactoCampo.HeaderText = "Clave Contacto"
         Me.columnClaveContactoCampo.Name = "columnClaveContactoCampo"
         '
-=======
->>>>>>> 5be22b1c4f1da775b84b7dd90b86e9ebc2f54871
         'FrmFoliosDelAnioAnterior
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
