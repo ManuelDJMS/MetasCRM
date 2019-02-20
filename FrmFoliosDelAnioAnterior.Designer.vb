@@ -23,12 +23,13 @@ Partial Class FrmFoliosDelAnioAnterior
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFoliosDelAnioAnterior))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
+        Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label76 = New System.Windows.Forms.Label()
         Me.Label77 = New System.Windows.Forms.Label()
@@ -205,9 +206,9 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
+        CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,7 +217,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -270,6 +270,29 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabFolios.Size = New System.Drawing.Size(1140, 611)
         Me.TabFolios.TabIndex = 5
         Me.TabFolios.Text = "Folios del año anterior"
+        '
+        'DGCotizaciones
+        '
+        Me.DGCotizaciones.AllowUserToDeleteRows = False
+        Me.DGCotizaciones.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 122)
+        Me.DGCotizaciones.Name = "DGCotizaciones"
+        Me.DGCotizaciones.ReadOnly = True
+        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 206)
+        Me.DGCotizaciones.TabIndex = 182
+        Me.DGCotizaciones.Visible = False
         '
         'Panel4
         '
@@ -1805,29 +1828,6 @@ Partial Class FrmFoliosDelAnioAnterior
         'Timer1
         '
         '
-        'DGCotizaciones
-        '
-        Me.DGCotizaciones.AllowUserToDeleteRows = False
-        Me.DGCotizaciones.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 122)
-        Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.ReadOnly = True
-        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 206)
-        Me.DGCotizaciones.TabIndex = 182
-        Me.DGCotizaciones.Visible = False
-        '
         'FrmFoliosDelAnioAnterior
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1847,6 +1847,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta.ResumeLayout(False)
         Me.TabFolios.ResumeLayout(False)
         Me.TabFolios.PerformLayout()
+        CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -1859,7 +1860,6 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
