@@ -587,6 +587,7 @@ Public Class FrmFoliosDelAnioAnterior
         lector2019.Read()
         Label9.Text = lector2019(0)
         lector2019.Close()
+        MsgBox("G")
 
 
 
