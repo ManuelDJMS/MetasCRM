@@ -232,11 +232,11 @@ Public Class FrmFoliosDelAnioAnterior
                 'Dim fecharecep As Date
                 'fecharecep = DTPRecepcion.Value.Date
                 R = "(
-                    (SELECT distinct isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
+                    (SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
                     isnull(CveOperador,'-'),isnull(EmpresaEmision,'-') as empresa,isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
                     isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & lbClave.Text & ")
                     union 
-                    (SELECT distinct isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
+                    (SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
                                     isnull(CveOperador,'-'),isnull(EmpresaEmision,'-') as empresa,isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
                                     isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & lbClave.Text & ")
                     union
