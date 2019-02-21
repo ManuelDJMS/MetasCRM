@@ -830,7 +830,7 @@ Public Class FrmFoliosDelAnioAnterior
                 comando2018.CommandText = R
                 lector2018 = comando2018.ExecuteReader
                 While lector2018.Read()
-                    DGConsulta.Rows.Add(False, 0, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
+                    DGConsulta.Rows.Add(False, folio, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
                     DGCotizaciones.SelectedCells.Item(2).Value, "-", "-", DGCotizaciones.SelectedCells.Item(9).Value,
                     "-", "-", DGCotizaciones.SelectedCells.Item(4).Value, "-", DGCotizaciones.SelectedCells.Item(5).Value,
                     DGCotizaciones.SelectedCells.Item(6).Value, "-", DGCotizaciones.SelectedCells.Item(7).Value,
