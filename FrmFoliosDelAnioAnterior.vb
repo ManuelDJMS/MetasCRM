@@ -208,13 +208,26 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Private Sub DGServicios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGServicios.CellContentClick
-        'InputBox("Ingrese el Folio", [Title], [Default], {xpos],[ypos],[help file,context])
+        '------------------Sacar la fecha de recepcion-----------
+        Dim folio As Integer
+        Dim fecharecep As String
+        Dim R2 As String
+        folio = InputBox("Ingrese el Folio", "Folios")
+        MetodoMetasInf2019()
+        comando2019 = conexion2019.CreateCommand
+        R2 = "select Folio, Fecharecep from [Recepcion-Equipos-Logistica] where folio=" & folio
+        comando2019.CommandText = R2
+        lector2019 = comando2019.ExecuteReader
+        lector2019.Read()
+        fecharecep = lector2019(1)
+        lector2019.Close()
+        '----------------------------------------------------------
         Dim row As DataGridViewRow = DGServicios.Rows(e.RowIndex)
         Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
         If Convert.ToBoolean(cellSelecion.Value) = False Then
             Try
                 Dim R As String
-                Dim fecharecep As Date
+                'Dim fecharecep As Date
                 fecharecep = DTPRecepcion.Value.Date
                 R = "SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
                 isnull(CveOperador,'-'),isnull(EmpresaEmision,'-') as empresa,isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
@@ -222,7 +235,7 @@ Public Class FrmFoliosDelAnioAnterior
                 comando2018.CommandText = R
                 lector2018 = comando2018.ExecuteReader
                 While lector2018.Read()
-                    DGConsulta.Rows.Add(False, 0, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
+                    DGConsulta.Rows.Add(False, folio, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
                     DGServicios.SelectedCells.Item(7).Value, DGServicios.SelectedCells.Item(8).Value, "-", DGServicios.SelectedCells.Item(9).Value,
                     DGServicios.SelectedCells.Item(10).Value, "-", DGServicios.SelectedCells.Item(2).Value, "-", DGServicios.SelectedCells.Item(3).Value,
                     DGServicios.SelectedCells.Item(4).Value, DGServicios.SelectedCells.Item(5).Value, DGServicios.SelectedCells.Item(6).Value,
