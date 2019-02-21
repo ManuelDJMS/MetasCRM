@@ -374,7 +374,11 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label9.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label9.Text = "-"
+            Else
+                Label9.Text = lector2019(0)
+            End If
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -382,7 +386,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label12.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label12.Text = "-"
+            Else
+                Label12.Text = lector2019(0)
+
+            End If
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -390,7 +399,11 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label14.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label14.Text = "-"
+            Else
+                Label14.Text = lector2019(0)
+            End If
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -398,7 +411,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label15.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label15.Text = "-"
+            Else
+                Label15.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -406,7 +424,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label18.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label18.Text = "-"
+            Else
+                Label18.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -414,7 +437,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label21.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label21.Text = "-"
+            Else
+                Label21.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -422,7 +450,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label23.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label23.Text = "-"
+            Else
+                Label23.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -430,15 +463,25 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label30.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label30.Text = "-"
+            Else
+                Label30.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
-            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MATF-MA'"
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAEF-MA'"
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label32.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label32.Text = "-"
+            Else
+                Label32.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -446,7 +489,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label34.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label34.Text = "-"
+            Else
+                Label34.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -454,7 +502,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label37.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label37.Text = "-"
+            Else
+                Label37.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -462,7 +515,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label40.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label40.Text = "-"
+            Else
+                Label40.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -470,7 +528,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label43.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label43.Text = "-"
+            Else
+                Label43.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -478,15 +541,25 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label46.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label46.Text = "-"
+            Else
+                Label46.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
-            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-TR'"
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAIF-TR'"
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label55.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label55.Text = "-"
+            Else
+                Label55.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -494,7 +567,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label57.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label57.Text = "-"
+            Else
+                Label57.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -502,7 +580,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label59.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label59.Text = "-"
+            Else
+                Label59.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -510,7 +593,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label61.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label61.Text = "-"
+            Else
+                Label61.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -518,7 +606,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label63.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label63.Text = "-"
+            Else
+                Label63.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -526,7 +619,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label65.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label65.Text = "-"
+            Else
+                Label65.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -534,7 +632,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label67.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label67.Text = "-"
+            Else
+                Label67.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -542,7 +645,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label69.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label69.Text = "-"
+            Else
+                Label69.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -550,7 +658,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label47.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label47.Text = "-"
+            Else
+                Label47.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -558,7 +671,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label71.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label71.Text = "-"
+            Else
+                Label71.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -566,7 +684,12 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label73.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label73.Text = "-"
+            Else
+                Label73.Text = lector2019(0)
+            End If
+
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -574,7 +697,11 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label75.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label75.Text = "-"
+            Else
+                Label75.Text = lector2019(0)
+            End If
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
@@ -582,11 +709,16 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            Label77.Text = lector2019(0)
+            If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
+                Label77.Text = "-"
+            Else
+                Label77.Text = lector2019(0)
+            End If
             lector2019.Close()
+
             conexion2019.Close()
         Catch ex As Exception
-            conexion2019.Close()
+            MsgBox("Cambio")
         End Try
     End Sub
 
