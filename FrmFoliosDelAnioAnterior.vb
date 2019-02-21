@@ -11,6 +11,7 @@ Public Class FrmFoliosDelAnioAnterior
         tiempo = tiempo + 1
         txtUltimoRegistro.Text = actualizarUltimoRegistro()
         actualizarMagnitud()
+        Timer1.Stop()
     End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
@@ -259,7 +260,7 @@ Public Class FrmFoliosDelAnioAnterior
             End If
         Catch ex As Exception
             MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
-            End Try
+        End Try
 
     End Sub
 
@@ -833,5 +834,9 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         actualizarMagnitud()
+        Timer1.Start()
+        Timer1.Interval = 200
+        Timer1.Stop()
+        MsgBox("Informes actualizados.", MsgBoxStyle.Information)
     End Sub
 End Class
