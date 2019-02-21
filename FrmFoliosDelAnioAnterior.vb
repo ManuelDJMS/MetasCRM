@@ -339,6 +339,8 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Function actualizarUltimoRegistro()
+        Dim s As String
+        s = "sad"
         MetodoMetasInf2019()
         Dim valor As String
         Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS]"
