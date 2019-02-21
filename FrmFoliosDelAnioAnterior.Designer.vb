@@ -1168,6 +1168,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label2.Size = New System.Drawing.Size(120, 15)
         Me.Label2.TabIndex = 178
         Me.Label2.Text = "Fecha de Recepción: "
+        Me.Label2.Visible = False
         '
         'DTPRecepcion
         '
@@ -1177,6 +1178,7 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.DTPRecepcion.Size = New System.Drawing.Size(234, 23)
         Me.DTPRecepcion.TabIndex = 177
         Me.DTPRecepcion.Value = New Date(2019, 2, 19, 17, 52, 53, 0)
+        Me.DTPRecepcion.Visible = False
         '
         'btEliminar
         '
