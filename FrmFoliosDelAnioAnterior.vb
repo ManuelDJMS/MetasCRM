@@ -802,13 +802,28 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
-        Dim row As DataGridViewRow = DGCotizaciones.Rows(e.RowIndex)
-        Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("ckSeleccionar"), DataGridViewCheckBoxCell)
-        If Convert.ToBoolean(cellSelecion.Value) = False Then
-            Try
+        Try
+            '------------------Sacar la fecha de recepcion-----------
+            Dim folio As Integer
+            Dim fecharecep As String
+            Dim R2 As String
+            folio = InputBox("Ingrese el Folio", "Folios")
+            MetodoMetasInf2019()
+            comando2019 = conexion2019.CreateCommand
+            R2 = "select Folio, [Fecha-recep] from [Recepcion-Equipos-Logistica] where folio=" & folio
+            comando2019.CommandText = R2
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            fecharecep = lector2019(1)
+            lector2019.Close()
+            '----------------------------------------------------------
+            Dim row As DataGridViewRow = DGServicios.Rows(e.RowIndex)
+            Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
+            If Convert.ToBoolean(cellSelecion.Value) = False Then
                 Dim R As String
-                Dim fecharecep As Date
-                fecharecep = DTPRecepcion.Value.Date
+                'Dim fecharecep As Date
+                'fecharecep = DTPRecepcion.Value.Date
+
                 R = "SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
                 isnull(CveOperador,'-'),isnull(EmpresaEmision,'-'),isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-') as colonia,isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
                 isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & lbClave.Text & " order by colonia desc"
@@ -824,12 +839,12 @@ Public Class FrmFoliosDelAnioAnterior
                 End While
                 lector2018.Close()
                 lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
-            Catch ex As Exception
-                MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
-            End Try
-        Else
-            row.DefaultCellStyle.BackColor = Color.White
-        End If
+            Else
+                row.DefaultCellStyle.BackColor = Color.White
+            End If
+        Catch ex As Exception
+            MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
+        End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
