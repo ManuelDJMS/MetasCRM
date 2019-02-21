@@ -5,7 +5,7 @@
             comando2018 = conexion2018.CreateCommand
             Dim R As String
             R = "select distinct ClavecontactoConsign, Compania, RFC
-                 FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa"
+                 FROM [INFORMES-SERVICIOS] inner join MetAsInf on [INFORMES-SERVICIOS].ClavecontactoConsign=MetAsInf.Clavempresa where [INFORMES-SERVICIOS].ServiciosAdicionales = 'MA-LAB02'"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
@@ -108,7 +108,9 @@
                 FrmFoliosDelAnioAnterior.lbCP.Text = lector2018(9)
             End If
             lector2018.Close()
-            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot, CveEmpresa from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where CveEmpresa =" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
+            'R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot, CveEmpresa from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where CveEmpresa =" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
+            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot, CveEmpresa, ServicioEn from [1Cotizar] inner join EntradaRegistroCot On [1Cotizar].Numcot=EntradaRegistroCot.Numcot where CveEmpresa = " & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & " And ServicioEn = 'Campo'"
+
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
