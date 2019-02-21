@@ -3,29 +3,33 @@ Public Class FrmFoliosDelAnioAnterior
     Dim tiempo As Integer
     Dim ultimo As String
     Private Sub FrmFoliosDelAnioAnterior_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Start()
-        Timer1.Interval = 1200
-        tiempo = 0
+        Try
+            Timer1.Start()
+            Timer1.Interval = 1200
+            tiempo = 0
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        tiempo = tiempo + 1
-        txtUltimoRegistro.Text = actualizarUltimoRegistro()
-        actualizarMagnitud()
-        Timer1.Stop()
+        Try
+            tiempo = tiempo + 1
+            txtUltimoRegistro.Text = actualizarUltimoRegistro()
+            actualizarMagnitud()
+            Timer1.Stop()
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
     End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
-        ''Modulo para insertar en Folios 2019-------------
         MetodoMetasInf2019()
         Try
             Dim fechaActual As Date
             Dim fechaRec As Date
             Dim maximo As Integer
             Dim R As String
-            ''fechaRec = DTPRecepcion.Value.Date
-            'fechaRec = Convert.ToDateTime(DTPRecepcion.Value.Year.ToString + "-" + DTPRecepcion.Value.Month.ToString + "-" + DTPRecepcion.Value.Day.ToString)
             fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
             fechaActual = DTP.Value.Date
-            'If txtFolio.Text.Trim.Equals("") Then
             Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
@@ -60,19 +64,14 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ," & Val(DGConsulta.Item(53, i).Value) & ")"
-                MessageBox.Show(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
             MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
             Me.Dispose()
-            'Else
-            'MsgBox("Ingresa el numero de foliio")
-            'End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         End Try
-        ''------------------------------------------------
     End Sub
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
         Try
