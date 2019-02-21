@@ -50,9 +50,9 @@
             comandoInformacionGeneral = conexionInformacionGeneral.CreateCommand
             Dim R As String
             R = "select distinct Clavempresa, RazonSocial, Compania, RFC, DomicilioConsig, PaisConsig, CiudadConsig, EdoConsig, CPConsig
-                        from MetAsInf where ClavecontactoConsign =" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
+                        from MetAsInf where Clavempresa =" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
             comandoInformacionGeneral.CommandText = R
-            lector2019 = comando2019.ExecuteReader
+            lector2019 = comandoInformacionGeneral.ExecuteReader
             lector2019.Read()
             If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
                 FrmFoliosDelAnioAnterior.lbClave.Text = "-"
@@ -100,18 +100,20 @@
                 FrmFoliosDelAnioAnterior.lbCP.Text = lector2019(8)
             End If
             lector2019.Close()
+            MetodoMetasInf2018()
+            comando2019 = conexion2018.CreateCommand
             R = "(
                     (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
                     isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                    isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign=)
+                    isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign=" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & ")
                     UNION 
                     (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
                     isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                    isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign=5356)
+                    isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign=" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & ")
                     union
                     (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
                     isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                    isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2017].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign=5356)
+                    isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2017].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign=" & dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString() & ")
                  )"
             comando2019.CommandText = R
             lector2019 = comando2019.ExecuteReader
