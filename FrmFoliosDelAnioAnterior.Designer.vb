@@ -30,6 +30,17 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
+        Me.ckSeleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.equipoDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnClaveContactoCampo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label76 = New System.Windows.Forms.Label()
         Me.Label77 = New System.Windows.Forms.Label()
@@ -202,18 +213,8 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
-        Me.ckSeleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.equipoDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.columnClaveContactoCampo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -295,12 +296,87 @@ Partial Class FrmFoliosDelAnioAnterior
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 122)
+        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.intervalo, Me.precioUnitario, Me.columnClaveContactoCampo})
+        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 173)
         Me.DGCotizaciones.Name = "DGCotizaciones"
         Me.DGCotizaciones.ReadOnly = True
-        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 206)
+        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 116)
         Me.DGCotizaciones.TabIndex = 182
         Me.DGCotizaciones.Visible = False
+        '
+        'ckSeleccionar
+        '
+        Me.ckSeleccionar.HeaderText = "Seleccionar"
+        Me.ckSeleccionar.Name = "ckSeleccionar"
+        Me.ckSeleccionar.ReadOnly = True
+        '
+        'partida
+        '
+        Me.partida.HeaderText = "Partida"
+        Me.partida.Name = "partida"
+        Me.partida.ReadOnly = True
+        Me.partida.Visible = False
+        Me.partida.Width = 50
+        '
+        'codigoServicio
+        '
+        Me.codigoServicio.HeaderText = "Código Servicio"
+        Me.codigoServicio.Name = "codigoServicio"
+        Me.codigoServicio.ReadOnly = True
+        Me.codigoServicio.Width = 80
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 55
+        '
+        'equipoDescripcion
+        '
+        Me.equipoDescripcion.HeaderText = "Equipo/Descripción"
+        Me.equipoDescripcion.Name = "equipoDescripcion"
+        Me.equipoDescripcion.ReadOnly = True
+        Me.equipoDescripcion.Width = 270
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 80
+        '
+        'intervalo
+        '
+        Me.intervalo.HeaderText = "Intervalo"
+        Me.intervalo.Name = "intervalo"
+        Me.intervalo.ReadOnly = True
+        Me.intervalo.Width = 270
+        '
+        'precioUnitario
+        '
+        Me.precioUnitario.HeaderText = "Precio 2018"
+        Me.precioUnitario.Name = "precioUnitario"
+        Me.precioUnitario.ReadOnly = True
+        Me.precioUnitario.Width = 70
+        '
+        'columnClaveContactoCampo
+        '
+        Me.columnClaveContactoCampo.HeaderText = "Clave Contacto"
+        Me.columnClaveContactoCampo.Name = "columnClaveContactoCampo"
+        Me.columnClaveContactoCampo.ReadOnly = True
         '
         'Panel4
         '
@@ -311,7 +387,9 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Panel4.Controls.Add(Me.Label75)
         Me.Panel4.Controls.Add(Me.Label72)
         Me.Panel4.Controls.Add(Me.Label73)
+        Me.Panel4.Controls.Add(Me.Label51)
         Me.Panel4.Controls.Add(Me.Label70)
+        Me.Panel4.Controls.Add(Me.Label47)
         Me.Panel4.Controls.Add(Me.Label71)
         Me.Panel4.Controls.Add(Me.Label68)
         Me.Panel4.Controls.Add(Me.Label69)
@@ -366,7 +444,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label76.AutoSize = True
         Me.Label76.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label76.Location = New System.Drawing.Point(519, 40)
+        Me.Label76.Location = New System.Drawing.Point(624, 42)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(56, 15)
         Me.Label76.TabIndex = 210
@@ -376,7 +454,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label77.AutoSize = True
         Me.Label77.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.Location = New System.Drawing.Point(573, 40)
+        Me.Label77.Location = New System.Drawing.Point(678, 42)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(43, 14)
         Me.Label77.TabIndex = 211
@@ -386,7 +464,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label74.AutoSize = True
         Me.Label74.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label74.Location = New System.Drawing.Point(421, 40)
+        Me.Label74.Location = New System.Drawing.Point(526, 42)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(58, 15)
         Me.Label74.TabIndex = 208
@@ -396,7 +474,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label75.AutoSize = True
         Me.Label75.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(478, 40)
+        Me.Label75.Location = New System.Drawing.Point(583, 42)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(43, 14)
         Me.Label75.TabIndex = 209
@@ -406,7 +484,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label72.AutoSize = True
         Me.Label72.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label72.Location = New System.Drawing.Point(319, 40)
+        Me.Label72.Location = New System.Drawing.Point(424, 42)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(60, 15)
         Me.Label72.TabIndex = 206
@@ -416,7 +494,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label73.AutoSize = True
         Me.Label73.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.Location = New System.Drawing.Point(377, 40)
+        Me.Label73.Location = New System.Drawing.Point(482, 42)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(43, 14)
         Me.Label73.TabIndex = 207
@@ -426,7 +504,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label70.AutoSize = True
         Me.Label70.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label70.Location = New System.Drawing.Point(214, 40)
+        Me.Label70.Location = New System.Drawing.Point(319, 42)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(59, 15)
         Me.Label70.TabIndex = 204
@@ -436,7 +514,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label71.AutoSize = True
         Me.Label71.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(270, 40)
+        Me.Label71.Location = New System.Drawing.Point(375, 42)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(43, 14)
         Me.Label71.TabIndex = 205
@@ -446,7 +524,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label68.AutoSize = True
         Me.Label68.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label68.Location = New System.Drawing.Point(111, 40)
+        Me.Label68.Location = New System.Drawing.Point(111, 42)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(59, 15)
         Me.Label68.TabIndex = 202
@@ -456,7 +534,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label69.AutoSize = True
         Me.Label69.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.Location = New System.Drawing.Point(167, 41)
+        Me.Label69.Location = New System.Drawing.Point(167, 43)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(43, 14)
         Me.Label69.TabIndex = 203
@@ -466,7 +544,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label66.AutoSize = True
         Me.Label66.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label66.Location = New System.Drawing.Point(4, 40)
+        Me.Label66.Location = New System.Drawing.Point(4, 42)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(61, 15)
         Me.Label66.TabIndex = 200
@@ -476,7 +554,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label67.AutoSize = True
         Me.Label67.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.Location = New System.Drawing.Point(62, 40)
+        Me.Label67.Location = New System.Drawing.Point(62, 42)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(43, 14)
         Me.Label67.TabIndex = 201
@@ -1792,90 +1870,25 @@ Partial Class FrmFoliosDelAnioAnterior
         'Timer1
         '
         '
-        'DGCotizaciones
+        'Label47
         '
-        Me.DGCotizaciones.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.intervalo, Me.precioUnitario, Me.columnClaveContactoCampo})
-        Me.DGCotizaciones.Location = New System.Drawing.Point(446, 173)
-        Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.Size = New System.Drawing.Size(684, 116)
-        Me.DGCotizaciones.TabIndex = 182
-        Me.DGCotizaciones.Visible = False
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Location = New System.Drawing.Point(270, 42)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(43, 14)
+        Me.Label47.TabIndex = 205
+        Me.Label47.Text = "Colonia"
         '
-        'ckSeleccionar
+        'Label51
         '
-        Me.ckSeleccionar.HeaderText = "Seleccionar"
-        Me.ckSeleccionar.Name = "ckSeleccionar"
-        '
-        'partida
-        '
-        Me.partida.HeaderText = "Partida"
-        Me.partida.Name = "partida"
-        Me.partida.Visible = False
-        Me.partida.Width = 50
-        '
-        'codigoServicio
-        '
-        Me.codigoServicio.HeaderText = "Código Servicio"
-        Me.codigoServicio.Name = "codigoServicio"
-        Me.codigoServicio.Width = 80
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.Width = 55
-        '
-        'equipoDescripcion
-        '
-        Me.equipoDescripcion.HeaderText = "Equipo/Descripción"
-        Me.equipoDescripcion.Name = "equipoDescripcion"
-        Me.equipoDescripcion.Width = 270
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Marca"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Modelo"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 80
-        '
-        'intervalo
-        '
-        Me.intervalo.HeaderText = "Intervalo"
-        Me.intervalo.Name = "intervalo"
-        Me.intervalo.Width = 270
-        '
-        'precioUnitario
-        '
-        Me.precioUnitario.HeaderText = "Precio 2018"
-        Me.precioUnitario.Name = "precioUnitario"
-        Me.precioUnitario.Width = 70
-        '
-        'columnClaveContactoCampo
-        '
-        Me.columnClaveContactoCampo.HeaderText = "Clave Contacto"
-        Me.columnClaveContactoCampo.Name = "columnClaveContactoCampo"
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label51.Location = New System.Drawing.Point(214, 42)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(57, 15)
+        Me.Label51.TabIndex = 204
+        Me.Label51.Text = "MAKC-TC"
         '
         'FrmFoliosDelAnioAnterior
         '
@@ -2100,4 +2113,6 @@ Partial Class FrmFoliosDelAnioAnterior
     Friend WithEvents intervalo As DataGridViewTextBoxColumn
     Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
     Friend WithEvents columnClaveContactoCampo As DataGridViewTextBoxColumn
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label47 As Label
 End Class

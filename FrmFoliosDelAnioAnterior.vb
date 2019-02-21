@@ -553,7 +553,7 @@ Public Class FrmFoliosDelAnioAnterior
         comando2019.CommandText = r
         lector2019 = comando2019.ExecuteReader
         lector2019.Read()
-        Label9.Text = lector2019(0)
+        Label47.Text = lector2019(0)
         lector2019.Close()
         ''------------------------------------------------------------------------
         comando2019 = conexion2019.CreateCommand
@@ -561,7 +561,7 @@ Public Class FrmFoliosDelAnioAnterior
         comando2019.CommandText = r
         lector2019 = comando2019.ExecuteReader
         lector2019.Read()
-        Label9.Text = lector2019(0)
+        Label71.Text = lector2019(0)
         lector2019.Close()
         ''------------------------------------------------------------------------
         comando2019 = conexion2019.CreateCommand
@@ -569,7 +569,7 @@ Public Class FrmFoliosDelAnioAnterior
         comando2019.CommandText = r
         lector2019 = comando2019.ExecuteReader
         lector2019.Read()
-        Label9.Text = lector2019(0)
+        Label73.Text = lector2019(0)
         lector2019.Close()
         ''------------------------------------------------------------------------
         comando2019 = conexion2019.CreateCommand
@@ -577,7 +577,7 @@ Public Class FrmFoliosDelAnioAnterior
         comando2019.CommandText = r
         lector2019 = comando2019.ExecuteReader
         lector2019.Read()
-        Label9.Text = lector2019(0)
+        Label75.Text = lector2019(0)
         lector2019.Close()
         ''------------------------------------------------------------------------
         comando2019 = conexion2019.CreateCommand
@@ -585,11 +585,9 @@ Public Class FrmFoliosDelAnioAnterior
         comando2019.CommandText = r
         lector2019 = comando2019.ExecuteReader
         lector2019.Read()
-        Label9.Text = lector2019(0)
+        Label77.Text = lector2019(0)
         lector2019.Close()
         MsgBox("G")
-
-
 
     End Sub
 
