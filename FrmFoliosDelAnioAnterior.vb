@@ -201,6 +201,8 @@ Public Class FrmFoliosDelAnioAnterior
 
     Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
         DGServicios.Rows.Clear()
+        DGServicios.Visible = True
+        DGCotizaciones.Visible = False
         Panel3.Visible = True
         FrmFiltrar.Show()
     End Sub
@@ -794,6 +796,9 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DGCotizaciones.Rows.Clear()
+        DGServicios.Visible = False
+        DGCotizaciones.Visible = True
         FrmFiltarCampo.Show()
         Panel3.Visible = False
     End Sub

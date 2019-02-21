@@ -114,8 +114,8 @@
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
-                FrmFoliosDelAnioAnterior.DGServicios.Visible = False
-                FrmFoliosDelAnioAnterior.DGCotizaciones.Visible = True
+                'FrmFoliosDelAnioAnterior.DGServicios.Visible = False
+                'FrmFoliosDelAnioAnterior.DGCotizaciones.Visible = True
                 FrmFoliosDelAnioAnterior.DGCotizaciones.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(9))
 
             End While
