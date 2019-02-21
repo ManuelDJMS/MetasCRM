@@ -248,10 +248,22 @@ Public Class FrmFoliosDelAnioAnterior
                 DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
             End If
             Dim R As String
-            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
-                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
-                "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            R = "(
+                 (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                  isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                  isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                  and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2017].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                )"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read
@@ -273,10 +285,22 @@ Public Class FrmFoliosDelAnioAnterior
                 DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
             End If
             Dim R As String
-            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
-                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
-                "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            R = "(
+                 (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                  isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                  isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                  and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2017].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                )"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
@@ -298,10 +322,22 @@ Public Class FrmFoliosDelAnioAnterior
                 DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
             End If
             Dim R As String
-            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
-                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
-                "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            R = "(
+                 (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                  isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                  isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                  and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2017].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                )"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read
@@ -323,10 +359,22 @@ Public Class FrmFoliosDelAnioAnterior
                 DGServicios.Rows.RemoveAt(DGServicios.CurrentRow.Index)
             End If
             Dim R As String
-            R = "SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
-                isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
-                isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text &
-               "and Marca like '" & TextMarca.Text & "%' and Modelo like'" & TextModelo.Text & "%' and Serie like'" & TextSerie.Text & "%' and ID like'" & TextID.Text & "%'"
+            R = "(
+                 (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                  isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                  isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                  and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2018].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                union
+                (SELECT distinct isnull([INFORMES-SERVICIOS].ClavecontactoConsign, '-'),isnull([INFORMES-SERVICIOS].TIPO,'-') as Tipo, isnull([INFORMES-SERVICIOS].MARCA,'-')as Marca, isnull([INFORMES-SERVICIOS].MODELO,'-') as Modelo,
+                                 isnull([INFORMES-SERVICIOS].Serie,'-')as Serie,isnull([INFORMES-SERVICIOS].ID,'-')as ID,isnull([INFORMES-SERVICIOS].ServCatalogo1,'-')as ServCatalogo1,isnull([INFORMES-SERVICIOS].ServCatalogo2,'-')as ServCatalogo2,
+                                 isnull([INFORMES-SERVICIOS].PUCalib,0)as PUCalib, isnull([INFORMES-SERVICIOS].PULab,0) as PULab from [METASINF-2017].[dbo].[INFORMES-SERVICIOS] where [INFORMES-SERVICIOS].ClavecontactoConsign =" & lbClave.Text & "
+                                 and Marca like '" & TextMarca.Text & "%' and Modelo like '" & TextModelo.Text & "%' and Serie like '" & TextSerie.Text & "%' and ID like '" & TextID.Text & "%')
+                )"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read
