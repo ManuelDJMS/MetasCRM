@@ -449,7 +449,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label76.AutoSize = True
         Me.Label76.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label76.Location = New System.Drawing.Point(624, 42)
+        Me.Label76.Location = New System.Drawing.Point(644, 42)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(56, 15)
         Me.Label76.TabIndex = 210
@@ -459,7 +459,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label77.AutoSize = True
         Me.Label77.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.Location = New System.Drawing.Point(678, 42)
+        Me.Label77.Location = New System.Drawing.Point(706, 42)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(43, 14)
         Me.Label77.TabIndex = 211
@@ -469,7 +469,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label74.AutoSize = True
         Me.Label74.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label74.Location = New System.Drawing.Point(526, 42)
+        Me.Label74.Location = New System.Drawing.Point(536, 42)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(58, 15)
         Me.Label74.TabIndex = 208
@@ -479,7 +479,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label75.AutoSize = True
         Me.Label75.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(583, 42)
+        Me.Label75.Location = New System.Drawing.Point(593, 42)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(43, 14)
         Me.Label75.TabIndex = 209
@@ -489,7 +489,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label72.AutoSize = True
         Me.Label72.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label72.Location = New System.Drawing.Point(424, 42)
+        Me.Label72.Location = New System.Drawing.Point(427, 42)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(60, 15)
         Me.Label72.TabIndex = 206
@@ -499,7 +499,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label73.AutoSize = True
         Me.Label73.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.Location = New System.Drawing.Point(482, 42)
+        Me.Label73.Location = New System.Drawing.Point(485, 42)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(43, 14)
         Me.Label73.TabIndex = 207
@@ -509,7 +509,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label51.AutoSize = True
         Me.Label51.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label51.Location = New System.Drawing.Point(214, 42)
+        Me.Label51.Location = New System.Drawing.Point(216, 42)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(57, 15)
         Me.Label51.TabIndex = 204
@@ -519,7 +519,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label70.AutoSize = True
         Me.Label70.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label70.Location = New System.Drawing.Point(319, 42)
+        Me.Label70.Location = New System.Drawing.Point(321, 42)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(59, 15)
         Me.Label70.TabIndex = 204
@@ -529,7 +529,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label47.AutoSize = True
         Me.Label47.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.Location = New System.Drawing.Point(270, 42)
+        Me.Label47.Location = New System.Drawing.Point(272, 42)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(43, 14)
         Me.Label47.TabIndex = 205
@@ -539,7 +539,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label71.AutoSize = True
         Me.Label71.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(375, 42)
+        Me.Label71.Location = New System.Drawing.Point(377, 42)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(43, 14)
         Me.Label71.TabIndex = 205
@@ -589,7 +589,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label64.AutoSize = True
         Me.Label64.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label64.Location = New System.Drawing.Point(845, 25)
+        Me.Label64.Location = New System.Drawing.Point(869, 25)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(60, 15)
         Me.Label64.TabIndex = 198
@@ -599,7 +599,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label65.AutoSize = True
         Me.Label65.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.Location = New System.Drawing.Point(908, 26)
+        Me.Label65.Location = New System.Drawing.Point(932, 26)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(43, 14)
         Me.Label65.TabIndex = 199
@@ -609,7 +609,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label62.AutoSize = True
         Me.Label62.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label62.Location = New System.Drawing.Point(741, 25)
+        Me.Label62.Location = New System.Drawing.Point(757, 25)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(59, 15)
         Me.Label62.TabIndex = 196
@@ -619,7 +619,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label63.AutoSize = True
         Me.Label63.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label63.Location = New System.Drawing.Point(796, 25)
+        Me.Label63.Location = New System.Drawing.Point(819, 26)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(43, 14)
         Me.Label63.TabIndex = 197
@@ -629,7 +629,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label60.AutoSize = True
         Me.Label60.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label60.Location = New System.Drawing.Point(638, 25)
+        Me.Label60.Location = New System.Drawing.Point(644, 25)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(54, 15)
         Me.Label60.TabIndex = 194
@@ -639,7 +639,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label61.AutoSize = True
         Me.Label61.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(695, 25)
+        Me.Label61.Location = New System.Drawing.Point(706, 25)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(43, 14)
         Me.Label61.TabIndex = 195
@@ -649,7 +649,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label58.Location = New System.Drawing.Point(525, 25)
+        Me.Label58.Location = New System.Drawing.Point(536, 23)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(60, 15)
         Me.Label58.TabIndex = 192
@@ -659,7 +659,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label59.AutoSize = True
         Me.Label59.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label59.Location = New System.Drawing.Point(584, 25)
+        Me.Label59.Location = New System.Drawing.Point(593, 25)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(43, 14)
         Me.Label59.TabIndex = 193
@@ -669,7 +669,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label56.AutoSize = True
         Me.Label56.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label56.Location = New System.Drawing.Point(420, 25)
+        Me.Label56.Location = New System.Drawing.Point(427, 25)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(55, 15)
         Me.Label56.TabIndex = 190
@@ -679,7 +679,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label57.AutoSize = True
         Me.Label57.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label57.Location = New System.Drawing.Point(479, 25)
+        Me.Label57.Location = New System.Drawing.Point(486, 25)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(43, 14)
         Me.Label57.TabIndex = 191
@@ -689,7 +689,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label54.AutoSize = True
         Me.Label54.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label54.Location = New System.Drawing.Point(319, 25)
+        Me.Label54.Location = New System.Drawing.Point(321, 25)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(53, 15)
         Me.Label54.TabIndex = 188
@@ -699,7 +699,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label55.AutoSize = True
         Me.Label55.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(373, 25)
+        Me.Label55.Location = New System.Drawing.Point(375, 25)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(43, 14)
         Me.Label55.TabIndex = 189
@@ -709,7 +709,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label45.AutoSize = True
         Me.Label45.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label45.Location = New System.Drawing.Point(214, 24)
+        Me.Label45.Location = New System.Drawing.Point(216, 24)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(56, 15)
         Me.Label45.TabIndex = 182
@@ -719,7 +719,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label46.AutoSize = True
         Me.Label46.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.Location = New System.Drawing.Point(270, 24)
+        Me.Label46.Location = New System.Drawing.Point(272, 24)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(43, 14)
         Me.Label46.TabIndex = 183
@@ -769,7 +769,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label36.Location = New System.Drawing.Point(831, 41)
+        Me.Label36.Location = New System.Drawing.Point(869, 45)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(60, 15)
         Me.Label36.TabIndex = 176
@@ -779,7 +779,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label37.AutoSize = True
         Me.Label37.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(888, 42)
+        Me.Label37.Location = New System.Drawing.Point(932, 46)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(43, 14)
         Me.Label37.TabIndex = 177
@@ -789,7 +789,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label33.Location = New System.Drawing.Point(727, 41)
+        Me.Label33.Location = New System.Drawing.Point(757, 42)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(59, 15)
         Me.Label33.TabIndex = 174
@@ -799,7 +799,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(782, 42)
+        Me.Label34.Location = New System.Drawing.Point(819, 43)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(43, 14)
         Me.Label34.TabIndex = 175
@@ -809,7 +809,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label31.Location = New System.Drawing.Point(838, 9)
+        Me.Label31.Location = New System.Drawing.Point(869, 7)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(60, 15)
         Me.Label31.TabIndex = 172
@@ -819,7 +819,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(895, 10)
+        Me.Label32.Location = New System.Drawing.Point(932, 8)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(43, 14)
         Me.Label32.TabIndex = 173
@@ -829,7 +829,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label28.Location = New System.Drawing.Point(725, 9)
+        Me.Label28.Location = New System.Drawing.Point(757, 8)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(56, 15)
         Me.Label28.TabIndex = 170
@@ -839,7 +839,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(784, 10)
+        Me.Label30.Location = New System.Drawing.Point(818, 8)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(43, 14)
         Me.Label30.TabIndex = 171
@@ -849,7 +849,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label24.Location = New System.Drawing.Point(620, 9)
+        Me.Label24.Location = New System.Drawing.Point(644, 8)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(62, 15)
         Me.Label24.TabIndex = 168
@@ -859,7 +859,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(573, 10)
+        Me.Label21.Location = New System.Drawing.Point(593, 9)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(43, 14)
         Me.Label21.TabIndex = 167
@@ -869,7 +869,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label22.Location = New System.Drawing.Point(519, 9)
+        Me.Label22.Location = New System.Drawing.Point(536, 9)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(57, 15)
         Me.Label22.TabIndex = 166
@@ -879,7 +879,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(478, 10)
+        Me.Label18.Location = New System.Drawing.Point(485, 10)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(43, 14)
         Me.Label18.TabIndex = 165
@@ -889,7 +889,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label19.Location = New System.Drawing.Point(421, 9)
+        Me.Label19.Location = New System.Drawing.Point(428, 9)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(57, 15)
         Me.Label19.TabIndex = 164
@@ -899,7 +899,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(377, 10)
+        Me.Label15.Location = New System.Drawing.Point(379, 10)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(43, 14)
         Me.Label15.TabIndex = 163
@@ -909,7 +909,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label16.Location = New System.Drawing.Point(319, 9)
+        Me.Label16.Location = New System.Drawing.Point(321, 9)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(56, 15)
         Me.Label16.TabIndex = 162
@@ -919,7 +919,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(270, 9)
+        Me.Label14.Location = New System.Drawing.Point(272, 9)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(43, 14)
         Me.Label14.TabIndex = 161
@@ -929,7 +929,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label13.Location = New System.Drawing.Point(214, 8)
+        Me.Label13.Location = New System.Drawing.Point(216, 8)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(59, 15)
         Me.Label13.TabIndex = 160
@@ -979,7 +979,7 @@ Partial Class FrmFoliosDelAnioAnterior
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(679, 10)
+        Me.Label23.Location = New System.Drawing.Point(706, 10)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(43, 14)
         Me.Label23.TabIndex = 169
