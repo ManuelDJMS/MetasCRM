@@ -434,7 +434,7 @@ Public Class FrmFoliosDelAnioAnterior
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
-            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MATF-MA'"
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAEF-MA'"
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
@@ -482,7 +482,7 @@ Public Class FrmFoliosDelAnioAnterior
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
-            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-TR'"
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAIF-TR'"
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
@@ -586,7 +586,7 @@ Public Class FrmFoliosDelAnioAnterior
             lector2019.Close()
             conexion2019.Close()
         Catch ex As Exception
-            conexion2019.Close()
+            MsgBox("Cambio")
         End Try
     End Sub
 
