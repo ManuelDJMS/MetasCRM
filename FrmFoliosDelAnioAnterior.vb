@@ -228,8 +228,6 @@ Public Class FrmFoliosDelAnioAnterior
             Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
             If Convert.ToBoolean(cellSelecion.Value) = False Then
                 Dim R As String
-                'Dim fecharecep As Date
-                'fecharecep = DTPRecepcion.Value.Date
                 R = "(
                     (SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
                     isnull(CveOperador,'-'),isnull(EmpresaEmision,'-') as empresa,isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
@@ -847,10 +845,14 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        actualizarMagnitud()
-        Timer1.Start()
-        Timer1.Interval = 200
-        Timer1.Stop()
-        MsgBox("Informes actualizados.", MsgBoxStyle.Information)
+        Try
+            actualizarMagnitud()
+            Timer1.Start()
+            Timer1.Interval = 200
+            Timer1.Stop()
+            MsgBox("Informes actualizados.", MsgBoxStyle.Information)
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
     End Sub
 End Class
