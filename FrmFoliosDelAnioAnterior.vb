@@ -216,8 +216,8 @@ Public Class FrmFoliosDelAnioAnterior
                 Dim fecharecep As Date
                 fecharecep = DTPRecepcion.Value.Date
                 R = "SELECT distinct top 1 isnull(ClavecontactoConsign,'-'),isnull(Empresa,'-'),isnull(Clavecontacto,'-'),isnull(Usuario,'-'),isnull(ClavecontactoUsuario,'-'),
-                isnull(CveOperador,'-'),isnull(EmpresaEmision,'-'),isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-') as colonia,isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
-                isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & DGServicios.SelectedCells.Item(1).Value & " order by colonia desc"
+                isnull(CveOperador,'-'),isnull(EmpresaEmision,'-') as empresa,isnull(DirCalleEmision,'-'),isnull(DirColEmision,'-'),isnull(DirCiudadEmision,'-'),isnull(DirEdoProvEmision,'-'),
+                isnull(DirPaisEmision,'-'),isnull(DirCPEmision,'-') FROM [METASINF-2019].[dbo].[INFORMES-SERVICIOS] where ClavecontactoConsign =" & DGServicios.SelectedCells.Item(1).Value & " order by empresa desc"
                 comando2018.CommandText = R
                 lector2018 = comando2018.ExecuteReader
                 While lector2018.Read()
