@@ -10,7 +10,7 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         tiempo = tiempo + 1
         txtUltimoRegistro.Text = actualizarUltimoRegistro()
-        'Label9.Text = actualizarMagnitud()
+        actualizarMagnitud()
     End Sub
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
@@ -339,8 +339,6 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Function actualizarUltimoRegistro()
-        Dim s As String
-        s = "sad"
         MetodoMetasInf2019()
         Dim valor As String
         Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS]"
@@ -349,246 +347,248 @@ Public Class FrmFoliosDelAnioAnterior
         lector = comando.ExecuteReader
         lector.Read()
         valor = lector(0)
-        ''valor1 = lector(1)
         Return valor
-        'Return valor1
         lector.Close()
+        conexion2019.Close()
     End Function
-    Function actualizarMagnitud1()
-        MetodoMetasInf2019()
-        Dim mag As String
-        Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAAF-PV'"
-        Dim comando As New SqlCommand(r, conexion2019)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Read()
-        mag = lector(0)
-        ''valor1 = lector(1)
-        Return mag
-        'Return valor1
-        lector.Close()
-    End Function
+
+    'Function actualizarMagnitud1()
+    '    MetodoMetasInf2019()
+    '    Dim mag As String
+    '    Dim r As String = "select max(Folio) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAAF-PV'"
+    '    Dim comando As New SqlCommand(r, conexion2019)
+    '    Dim lector As SqlDataReader
+    '    lector = comando.ExecuteReader
+    '    lector.Read()
+    '    mag = lector(0)
+    '    lector.Close()
+    'End Function
 
     Sub actualizarMagnitud()
-        MetodoMetasInf2019()
-        Dim r As String
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAAF-PV'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label9.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MABF-TC'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label12.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MACF-HU'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label14.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MACF-TC'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label15.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADC-EL'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label18.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADC-TF'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label21.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADEF-EL'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label23.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADF-TF'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label30.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MATF-MA'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label32.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAFF-VO'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label34.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGC-AC'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label37.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGC-TF'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label40.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGF-AC'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label43.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGF-TF'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label46.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-TR'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label55.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJC-DE'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label57.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJC-MA'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label59.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-DE'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label61.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-MA'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label63.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-HU'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label65.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-ME'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label67.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-PV'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label69.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-TC'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label47.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-HU'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label71.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-ME'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label73.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-PV'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label75.Text = lector2019(0)
-        lector2019.Close()
-        ''------------------------------------------------------------------------
-        comando2019 = conexion2019.CreateCommand
-        r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-TC'"
-        comando2019.CommandText = r
-        lector2019 = comando2019.ExecuteReader
-        lector2019.Read()
-        Label77.Text = lector2019(0)
-        lector2019.Close()
-        '' MsgBox("G")
 
+        Try
+            MetodoMetasInf2019()
+            Dim r As String
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAAF-PV'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label9.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MABF-TC'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label12.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MACF-HU'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label14.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MACF-TC'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label15.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADC-EL'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label18.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADC-TF'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label21.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADEF-EL'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label23.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADF-TF'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label30.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MATF-MA'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label32.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAFF-VO'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label34.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGC-AC'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label37.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGC-TF'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label40.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGF-AC'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label43.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAGF-TF'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label46.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-TR'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label55.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJC-DE'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label57.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJC-MA'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label59.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-DE'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label61.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAJF-MA'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label63.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-HU'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label65.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-ME'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label67.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-PV'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label69.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKC-TC'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label47.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-HU'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label71.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-ME'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label73.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-PV'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label75.Text = lector2019(0)
+            lector2019.Close()
+            ''------------------------------------------------------------------------
+            comando2019 = conexion2019.CreateCommand
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MAKF-TC'"
+            comando2019.CommandText = r
+            lector2019 = comando2019.ExecuteReader
+            lector2019.Read()
+            Label77.Text = lector2019(0)
+            lector2019.Close()
+
+            conexion2019.Close()
+        Catch ex As Exception
+            MsgBox("Tiempo de espera agotado.", MsgBoxStyle.Information)
+        End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
