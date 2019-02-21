@@ -208,6 +208,7 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Private Sub DGServicios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGServicios.CellContentClick
+        'InputBox("Ingrese el Folio", [Title], [Default], {xpos],[ypos],[help file,context])
         Dim row As DataGridViewRow = DGServicios.Rows(e.RowIndex)
         Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
         If Convert.ToBoolean(cellSelecion.Value) = False Then
