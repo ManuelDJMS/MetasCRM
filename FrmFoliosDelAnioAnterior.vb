@@ -4,7 +4,7 @@ Public Class FrmFoliosDelAnioAnterior
     Dim ultimo As String
     Private Sub FrmFoliosDelAnioAnterior_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
-        Timer1.Interval = 800
+        Timer1.Interval = 1200
         tiempo = 0
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -584,10 +584,9 @@ Public Class FrmFoliosDelAnioAnterior
             lector2019.Read()
             Label77.Text = lector2019(0)
             lector2019.Close()
-
             conexion2019.Close()
         Catch ex As Exception
-            MsgBox("Tiempo de espera agotado.", MsgBoxStyle.Information)
+            conexion2019.Close()
         End Try
     End Sub
 
@@ -621,5 +620,9 @@ Public Class FrmFoliosDelAnioAnterior
         Else
             row.DefaultCellStyle.BackColor = Color.White
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        actualizarMagnitud()
     End Sub
 End Class
