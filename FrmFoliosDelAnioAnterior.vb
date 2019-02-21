@@ -16,25 +16,25 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         ''Modulo para insertar en Folios 2019-------------
         MetodoMetasInf2019()
-        'Try
-        Dim fechaActual As Date
-        Dim fechaRec As Date
-        Dim maximo As Integer
-        Dim R As String
-        ''fechaRec = DTPRecepcion.Value.Date
-        'fechaRec = Convert.ToDateTime(DTPRecepcion.Value.Year.ToString + "-" + DTPRecepcion.Value.Month.ToString + "-" + DTPRecepcion.Value.Day.ToString)
-        fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
-        fechaActual = DTP.Value.Date
-        'If txtFolio.Text.Trim.Equals("") Then
-        Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Read()
-        maximo = lector(0)
-        lector.Close()
-        'Codigo para guardar en InformesServicios----------------------------------------------------56
-        For i = 0 To DGConsulta.Rows.Count - 2
-            R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
+        Try
+            Dim fechaActual As Date
+            Dim fechaRec As Date
+            Dim maximo As Integer
+            Dim R As String
+            ''fechaRec = DTPRecepcion.Value.Date
+            'fechaRec = Convert.ToDateTime(DTPRecepcion.Value.Year.ToString + "-" + DTPRecepcion.Value.Month.ToString + "-" + DTPRecepcion.Value.Day.ToString)
+            fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
+            fechaActual = DTP.Value.Date
+            'If txtFolio.Text.Trim.Equals("") Then
+            Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            lector.Read()
+            maximo = lector(0)
+            lector.Close()
+            'Codigo para guardar en InformesServicios----------------------------------------------------56
+            For i = 0 To DGConsulta.Rows.Count - 2
+                R = "insert into [INFORMES-SERVICIOS] ([Folio], [MAGNITUD], [INFORME], [Facturado], [ClavecontactoConsign], [Empresa], [Clavecontacto]
                   , [Usuario], [ClavecontactoUsuario], [FECHARECEP], [ServCatalogo1], [ServCatalogo2], [ServiciosAdicionales]
                   , [PUCalib], [PULab], [Pu-Facturado], [TIPO], [ALCANCE], [MARCA], [MODELO], [Serie], [ID], [Accesorios], [PUNTOS], [Patron1]
                   , [Patron2], [Patron3], [NumFuncionesCalibradas], [Etiquetas], [Hacer-etiq], [DatosdelInforme], [Observaciones], [CALIBRO]
@@ -42,7 +42,7 @@ Public Class FrmFoliosDelAnioAnterior
                   , [DirCiudadEmision], [DirEdoProvEmision], [DirPaisEmision], [DirCPEmision], [Sv1Ajuste], [Sv3Matto], [Sv5COM02], [Sv6IntervaloRe]
                   , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10]) values(" & (DGConsulta.Item(1, i).Value) & "
                         ,'" & (DGConsulta.Item(2, i).Value) & "','" & DGConsulta.Item(3, i).Value & "'," & Val(DGConsulta.Item(4, i).Value) & "
-                        ,'" & (DGConsulta.Item(5, i).Value) & "','" & DGConsulta.Item(6, i).Value & "','" & (DGConsulta.Item(7, i).Value) & "'
+                        ," & (DGConsulta.Item(5, i).Value) & ",'" & DGConsulta.Item(6, i).Value & "'," & (DGConsulta.Item(7, i).Value) & "
                         ,'" & DGConsulta.Item(8, i).Value & "'," & Val(DGConsulta.Item(9, i).Value) & ",CONVERT (date,'" & fechaRec & "')
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
                         ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
@@ -60,18 +60,18 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ," & Val(DGConsulta.Item(53, i).Value) & ")"
-            MessageBox.Show(R)
-            comando.CommandText = R
-            comando.ExecuteNonQuery()
-        Next i
-        MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
-        Me.Dispose()
-        'Else
-        'MsgBox("Ingresa el numero de foliio")
-        'End If
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
-        'End Try
+                MessageBox.Show(R)
+                comando.CommandText = R
+                comando.ExecuteNonQuery()
+            Next i
+            MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
+            Me.Dispose()
+            'Else
+            'MsgBox("Ingresa el numero de foliio")
+            'End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+        End Try
         ''------------------------------------------------
     End Sub
     Private Sub btAgregarFila_Click(sender As Object, e As EventArgs) Handles btAgregarFila.Click
