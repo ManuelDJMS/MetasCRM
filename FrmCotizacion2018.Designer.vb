@@ -23,8 +23,8 @@ Partial Class FrmCotizacion2018
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCotizacion2018))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabAuxiliar = New System.Windows.Forms.TabPage()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
         Me.cbDireccion = New System.Windows.Forms.CheckBox()
@@ -48,7 +48,10 @@ Partial Class FrmCotizacion2018
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtCreador = New System.Windows.Forms.Label()
         Me.Tab2018 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextID = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.rbTodosArt = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.rbArticulo = New System.Windows.Forms.RadioButton()
         Me.rbCotizacion = New System.Windows.Forms.RadioButton()
@@ -71,9 +74,7 @@ Partial Class FrmCotizacion2018
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.rbTodosArt = New System.Windows.Forms.RadioButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextID = New System.Windows.Forms.TextBox()
+        Me.rbFolios = New System.Windows.Forms.RadioButton()
         Me.TabAuxiliar.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -393,16 +394,45 @@ Partial Class FrmCotizacion2018
         Me.Tab2018.TabIndex = 5
         Me.Tab2018.Text = "Búsqueda Cotizaciones 2018"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(690, 351)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(20, 14)
+        Me.Label1.TabIndex = 166
+        Me.Label1.Text = "ID:"
+        '
+        'TextID
+        '
+        Me.TextID.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextID.Location = New System.Drawing.Point(712, 349)
+        Me.TextID.Name = "TextID"
+        Me.TextID.Size = New System.Drawing.Size(158, 21)
+        Me.TextID.TabIndex = 165
+        '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.rbFolios)
         Me.Panel3.Controls.Add(Me.rbTodosArt)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.rbArticulo)
         Me.Panel3.Controls.Add(Me.rbCotizacion)
         Me.Panel3.Location = New System.Drawing.Point(3, 299)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(577, 44)
+        Me.Panel3.Size = New System.Drawing.Size(624, 44)
         Me.Panel3.TabIndex = 162
+        '
+        'rbTodosArt
+        '
+        Me.rbTodosArt.AutoSize = True
+        Me.rbTodosArt.Location = New System.Drawing.Point(373, 11)
+        Me.rbTodosArt.Name = "rbTodosArt"
+        Me.rbTodosArt.Size = New System.Drawing.Size(123, 19)
+        Me.rbTodosArt.TabIndex = 165
+        Me.rbTodosArt.Text = "Todos los Artículos"
+        Me.rbTodosArt.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -471,14 +501,14 @@ Partial Class FrmCotizacion2018
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 390)
         Me.DGCotizaciones.Name = "DGCotizaciones"
@@ -493,14 +523,14 @@ Partial Class FrmCotizacion2018
         Me.DGEmpresas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGEmpresas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGEmpresas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGEmpresas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGEmpresas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGEmpresas.Location = New System.Drawing.Point(14, 124)
         Me.DGEmpresas.Name = "DGEmpresas"
@@ -654,33 +684,15 @@ Partial Class FrmCotizacion2018
         Me.PictureBox5.TabIndex = 141
         Me.PictureBox5.TabStop = False
         '
-        'rbTodosArt
+        'rbFolios
         '
-        Me.rbTodosArt.AutoSize = True
-        Me.rbTodosArt.Location = New System.Drawing.Point(373, 11)
-        Me.rbTodosArt.Name = "rbTodosArt"
-        Me.rbTodosArt.Size = New System.Drawing.Size(123, 19)
-        Me.rbTodosArt.TabIndex = 165
-        Me.rbTodosArt.Text = "Todos los Artículos"
-        Me.rbTodosArt.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(690, 351)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(20, 14)
-        Me.Label1.TabIndex = 166
-        Me.Label1.Text = "ID:"
-        '
-        'TextID
-        '
-        Me.TextID.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextID.Location = New System.Drawing.Point(712, 349)
-        Me.TextID.Name = "TextID"
-        Me.TextID.Size = New System.Drawing.Size(158, 21)
-        Me.TextID.TabIndex = 165
+        Me.rbFolios.AutoSize = True
+        Me.rbFolios.Location = New System.Drawing.Point(531, 11)
+        Me.rbFolios.Name = "rbFolios"
+        Me.rbFolios.Size = New System.Drawing.Size(54, 19)
+        Me.rbFolios.TabIndex = 166
+        Me.rbFolios.Text = "Folio:"
+        Me.rbFolios.UseVisualStyleBackColor = True
         '
         'FrmCotizacion2018
         '
@@ -767,4 +779,5 @@ Partial Class FrmCotizacion2018
     Friend WithEvents Label1 As Label
     Friend WithEvents TextID As TextBox
     Friend WithEvents rbTodosArt As RadioButton
+    Friend WithEvents rbFolios As RadioButton
 End Class
