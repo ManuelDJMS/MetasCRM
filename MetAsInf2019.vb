@@ -6,6 +6,7 @@ Module MetAsInf2019
     Public lector2019 As SqlDataReader
     Public conexioncot As SqlConnection
     Public fechaActual As DateTime
+    Public respuestafolio As Integer
     'Public conexionprueba As String = "Data Source=SERVER3\COMPAC2;Initial Catalog=METASINF-2019-2; User Id=sa; Password=Met99011578a;Integrated Security=False"
     Sub MetodoMetasInf2019()
         Try

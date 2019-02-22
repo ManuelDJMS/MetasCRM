@@ -301,4 +301,9 @@ Public Class FrmCotizacion2018
     Private Sub rbTodosArt_CheckedChanged(sender As Object, e As EventArgs) Handles rbTodosArt.CheckedChanged
         frmConsultaTodos.Show()
     End Sub
+
+    Private Sub rbFolios_CheckedChanged(sender As Object, e As EventArgs) Handles rbFolios.CheckedChanged
+        respuestafolio = InputBox("Folio", "Ingrese la confirmación metrológica:")
+
+    End Sub
 End Class
