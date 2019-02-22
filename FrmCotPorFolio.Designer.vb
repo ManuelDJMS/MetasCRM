@@ -76,9 +76,7 @@ Partial Class FrmCotPorFolio
         Me.cboServicio = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DTPDesde = New System.Windows.Forms.DateTimePicker()
-        Me.Label78 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
-        Me.txtCotizo = New System.Windows.Forms.TextBox()
         Me.txtReferencia = New System.Windows.Forms.TextBox()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
@@ -94,6 +92,8 @@ Partial Class FrmCotPorFolio
         Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precioTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btEliminar = New System.Windows.Forms.Button()
+        Me.TextCorreo = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -132,9 +132,7 @@ Partial Class FrmCotPorFolio
         Me.TabFolios.Controls.Add(Me.cboServicio)
         Me.TabFolios.Controls.Add(Me.Label7)
         Me.TabFolios.Controls.Add(Me.DTPDesde)
-        Me.TabFolios.Controls.Add(Me.Label78)
         Me.TabFolios.Controls.Add(Me.Label79)
-        Me.TabFolios.Controls.Add(Me.txtCotizo)
         Me.TabFolios.Controls.Add(Me.txtReferencia)
         Me.TabFolios.Controls.Add(Me.Label80)
         Me.TabFolios.Controls.Add(Me.lbExt)
@@ -227,7 +225,7 @@ Partial Class FrmCotPorFolio
         '
         Me.lbPais.AutoSize = True
         Me.lbPais.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPais.Location = New System.Drawing.Point(330, 137)
+        Me.lbPais.Location = New System.Drawing.Point(330, 192)
         Me.lbPais.Name = "lbPais"
         Me.lbPais.Size = New System.Drawing.Size(27, 14)
         Me.lbPais.TabIndex = 169
@@ -247,7 +245,7 @@ Partial Class FrmCotPorFolio
         '
         Me.Label50.AutoSize = True
         Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label50.Location = New System.Drawing.Point(296, 135)
+        Me.Label50.Location = New System.Drawing.Point(296, 191)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(32, 15)
         Me.Label50.TabIndex = 168
@@ -406,6 +404,8 @@ Partial Class FrmCotPorFolio
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.Controls.Add(Me.TextCorreo)
+        Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.btGuardarInf)
         Me.Panel2.Controls.Add(Me.Label26)
         Me.Panel2.Controls.Add(Me.TextFolio)
@@ -444,6 +444,7 @@ Partial Class FrmCotPorFolio
         '
         'TextFolio
         '
+        Me.TextFolio.Enabled = False
         Me.TextFolio.Location = New System.Drawing.Point(221, 32)
         Me.TextFolio.Name = "TextFolio"
         Me.TextFolio.Size = New System.Drawing.Size(100, 23)
@@ -634,17 +635,19 @@ Partial Class FrmCotPorFolio
         '
         Me.txtObservaciones.Enabled = False
         Me.txtObservaciones.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservaciones.Location = New System.Drawing.Point(747, 246)
+        Me.txtObservaciones.Location = New System.Drawing.Point(746, 222)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.Size = New System.Drawing.Size(200, 63)
         Me.txtObservaciones.TabIndex = 198
+        Me.txtObservaciones.Text = "*La cotización fué realizada en base a la información recibida. Cualquier diferen" &
+    "cia entre su solicitud y esta cotización contactar a Ventas*"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(663, 246)
+        Me.Label6.Location = New System.Drawing.Point(662, 222)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(81, 14)
         Me.Label6.TabIndex = 197
@@ -677,16 +680,6 @@ Partial Class FrmCotPorFolio
         Me.DTPDesde.Size = New System.Drawing.Size(200, 23)
         Me.DTPDesde.TabIndex = 194
         '
-        'Label78
-        '
-        Me.Label78.AutoSize = True
-        Me.Label78.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label78.Location = New System.Drawing.Point(663, 220)
-        Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(67, 14)
-        Me.Label78.TabIndex = 193
-        Me.Label78.Text = "Cotizo 2018:"
-        '
         'Label79
         '
         Me.Label79.AutoSize = True
@@ -696,15 +689,6 @@ Partial Class FrmCotPorFolio
         Me.Label79.Size = New System.Drawing.Size(62, 14)
         Me.Label79.TabIndex = 192
         Me.Label79.Text = "Referencia:"
-        '
-        'txtCotizo
-        '
-        Me.txtCotizo.Enabled = False
-        Me.txtCotizo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizo.Location = New System.Drawing.Point(747, 218)
-        Me.txtCotizo.Name = "txtCotizo"
-        Me.txtCotizo.Size = New System.Drawing.Size(200, 21)
-        Me.txtCotizo.TabIndex = 191
         '
         'txtReferencia
         '
@@ -822,6 +806,26 @@ Partial Class FrmCotPorFolio
         Me.btEliminar.Text = "Eliminar"
         Me.btEliminar.UseVisualStyleBackColor = False
         '
+        'TextCorreo
+        '
+        Me.TextCorreo.Enabled = False
+        Me.TextCorreo.Location = New System.Drawing.Point(442, 32)
+        Me.TextCorreo.Name = "TextCorreo"
+        Me.TextCorreo.Size = New System.Drawing.Size(126, 23)
+        Me.TextCorreo.TabIndex = 178
+        Me.TextCorreo.Visible = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(339, 35)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(97, 15)
+        Me.Label9.TabIndex = 177
+        Me.Label9.Text = "Cambiar Correo:"
+        Me.Label9.Visible = False
+        '
         'FrmCotPorFolio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -903,9 +907,7 @@ Partial Class FrmCotPorFolio
     Friend WithEvents cboServicio As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents DTPDesde As DateTimePicker
-    Friend WithEvents Label78 As Label
     Friend WithEvents Label79 As Label
-    Friend WithEvents txtCotizo As TextBox
     Friend WithEvents txtReferencia As TextBox
     Friend WithEvents Label80 As Label
     Friend WithEvents DGCotizaciones As DataGridView
@@ -921,4 +923,6 @@ Partial Class FrmCotPorFolio
     Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
     Friend WithEvents precioTotal As DataGridViewTextBoxColumn
     Friend WithEvents btEliminar As Button
+    Friend WithEvents TextCorreo As TextBox
+    Friend WithEvents Label9 As Label
 End Class

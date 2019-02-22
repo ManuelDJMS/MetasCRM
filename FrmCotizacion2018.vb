@@ -279,6 +279,6 @@ Public Class FrmCotizacion2018
 
     Private Sub rbFolios_CheckedChanged(sender As Object, e As EventArgs) Handles rbFolios.CheckedChanged
         respuestafolio = InputBox("Folio", "Ingrese la confirmación metrológica:")
-
+        FrmCotPorFolio.Show()
     End Sub
 End Class
