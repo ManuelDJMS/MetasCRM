@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmCotPorFolio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmCotPorFolio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCotPorFolio))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -80,6 +80,7 @@ Partial Class FrmCotPorFolio
         Me.txtReferencia = New System.Windows.Forms.TextBox()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
+        Me.btEliminar = New System.Windows.Forms.Button()
         Me.ckSeleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -91,9 +92,10 @@ Partial Class FrmCotPorFolio
         Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precioTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btEliminar = New System.Windows.Forms.Button()
-        Me.TextCorreo = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabFolios.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -404,8 +406,6 @@ Partial Class FrmCotPorFolio
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
-        Me.Panel2.Controls.Add(Me.TextCorreo)
-        Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.btGuardarInf)
         Me.Panel2.Controls.Add(Me.Label26)
         Me.Panel2.Controls.Add(Me.TextFolio)
@@ -723,16 +723,31 @@ Partial Class FrmCotPorFolio
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.id, Me.intervalo, Me.precioUnitario, Me.precioTotal})
+        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.id, Me.intervalo, Me.precioUnitario, Me.precioTotal, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 361)
         Me.DGCotizaciones.Name = "DGCotizaciones"
         Me.DGCotizaciones.Size = New System.Drawing.Size(1202, 266)
         Me.DGCotizaciones.TabIndex = 205
         '
+        'btEliminar
+        '
+        Me.btEliminar.BackColor = System.Drawing.Color.Honeydew
+        Me.btEliminar.FlatAppearance.BorderSize = 0
+        Me.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btEliminar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btEliminar.ForeColor = System.Drawing.Color.Black
+        Me.btEliminar.Location = New System.Drawing.Point(1106, 318)
+        Me.btEliminar.Name = "btEliminar"
+        Me.btEliminar.Size = New System.Drawing.Size(110, 34)
+        Me.btEliminar.TabIndex = 206
+        Me.btEliminar.Text = "Eliminar"
+        Me.btEliminar.UseVisualStyleBackColor = False
+        '
         'ckSeleccionar
         '
         Me.ckSeleccionar.HeaderText = "Seleccionar"
         Me.ckSeleccionar.Name = "ckSeleccionar"
+        Me.ckSeleccionar.Width = 80
         '
         'partida
         '
@@ -792,39 +807,25 @@ Partial Class FrmCotPorFolio
         Me.precioTotal.Name = "precioTotal"
         Me.precioTotal.Width = 70
         '
-        'btEliminar
+        'Column1
         '
-        Me.btEliminar.BackColor = System.Drawing.Color.Honeydew
-        Me.btEliminar.FlatAppearance.BorderSize = 0
-        Me.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btEliminar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btEliminar.ForeColor = System.Drawing.Color.Black
-        Me.btEliminar.Location = New System.Drawing.Point(1106, 318)
-        Me.btEliminar.Name = "btEliminar"
-        Me.btEliminar.Size = New System.Drawing.Size(110, 34)
-        Me.btEliminar.TabIndex = 206
-        Me.btEliminar.Text = "Eliminar"
-        Me.btEliminar.UseVisualStyleBackColor = False
+        Me.Column1.HeaderText = "Intervalo Nominal"
+        Me.Column1.Name = "Column1"
         '
-        'TextCorreo
+        'Column2
         '
-        Me.TextCorreo.Enabled = False
-        Me.TextCorreo.Location = New System.Drawing.Point(442, 32)
-        Me.TextCorreo.Name = "TextCorreo"
-        Me.TextCorreo.Size = New System.Drawing.Size(126, 23)
-        Me.TextCorreo.TabIndex = 178
-        Me.TextCorreo.Visible = False
+        Me.Column2.HeaderText = "Serie"
+        Me.Column2.Name = "Column2"
         '
-        'Label9
+        'Column3
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label9.Location = New System.Drawing.Point(339, 35)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(97, 15)
-        Me.Label9.TabIndex = 177
-        Me.Label9.Text = "Cambiar Correo:"
-        Me.Label9.Visible = False
+        Me.Column3.HeaderText = "Informe"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Fecha de Calibración Anterior"
+        Me.Column4.Name = "Column4"
         '
         'FrmCotPorFolio
         '
@@ -911,6 +912,7 @@ Partial Class FrmCotPorFolio
     Friend WithEvents txtReferencia As TextBox
     Friend WithEvents Label80 As Label
     Friend WithEvents DGCotizaciones As DataGridView
+    Friend WithEvents btEliminar As Button
     Friend WithEvents ckSeleccionar As DataGridViewCheckBoxColumn
     Friend WithEvents partida As DataGridViewTextBoxColumn
     Friend WithEvents codigoServicio As DataGridViewTextBoxColumn
@@ -922,7 +924,8 @@ Partial Class FrmCotPorFolio
     Friend WithEvents intervalo As DataGridViewTextBoxColumn
     Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
     Friend WithEvents precioTotal As DataGridViewTextBoxColumn
-    Friend WithEvents btEliminar As Button
-    Friend WithEvents TextCorreo As TextBox
-    Friend WithEvents Label9 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class
