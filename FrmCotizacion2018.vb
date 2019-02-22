@@ -50,31 +50,6 @@ Public Class FrmCotizacion2018
         End Try
     End Sub
     Private Sub DGInicial_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
-        'ConexionLocal()
-        ''Dim clave As String
-        'Try
-        '    DGCotizaciones.Rows.Clear()
-        '    clave1 = DGInicial.Rows(e.RowIndex).Cells(0).Value.ToString()
-        '    comando = conexionLocale.CreateCommand
-        '    Dim R As String
-        '    R = "select EntradaRegistroCot.Numcot, EntradaRegistroCot.Cliente, 
-        '        EntradaRegistroCot.Fecha, EntradaRegistroCot.Referencia, [Claves-Elaboro-Cot].Nombre as [Elaboró] from EntradaRegistroCot
-        '        inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot] = EntradaRegistroCot.[Elaboró Cot]
-        '        where EntradaRegistroCot.CveEmpresa=" & clave1
-        '    comando.CommandText = R
-        '    lector = comando.ExecuteReader
-        '    DGCotizaciones.Rows.Clear()
-
-        '    While lector.Read()
-        '        DGCotizaciones.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4))
-        '    End While
-        '    lector.Close()
-        '    conexionLocale.Close()
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Ocurrio un error en la lectura de datos, llama al administrador de sistemas.")
-        'End Try
-        'Dim clase As New SqlConnection(conexionprueba)
-        'clase.Open()
         MetodoMetasInf2018() ''MetasINF-2019
         Try
             clave1 = DGEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
