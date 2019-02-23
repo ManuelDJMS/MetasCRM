@@ -23,7 +23,7 @@ Partial Class FrmCotPorFolio
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCotPorFolio))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabFolios = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -98,8 +98,6 @@ Partial Class FrmCotPorFolio
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtCotizacion19 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtCotizacion = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextNumC = New System.Windows.Forms.TextBox()
         Me.TabConsulta.SuspendLayout()
@@ -131,8 +129,6 @@ Partial Class FrmCotPorFolio
         Me.TabFolios.Controls.Add(Me.TextNumC)
         Me.TabFolios.Controls.Add(Me.Label18)
         Me.TabFolios.Controls.Add(Me.txtCotizacion19)
-        Me.TabFolios.Controls.Add(Me.Label9)
-        Me.TabFolios.Controls.Add(Me.txtCotizacion)
         Me.TabFolios.Controls.Add(Me.btEliminar)
         Me.TabFolios.Controls.Add(Me.DGCotizaciones)
         Me.TabFolios.Controls.Add(Me.Label2)
@@ -726,14 +722,14 @@ Partial Class FrmCotPorFolio
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.id, Me.intervalo, Me.precioUnitario, Me.precioTotal, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 361)
@@ -843,38 +839,19 @@ Partial Class FrmCotPorFolio
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(922, 291)
+        Me.Label18.Location = New System.Drawing.Point(663, 302)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(84, 14)
+        Me.Label18.Size = New System.Drawing.Size(87, 14)
         Me.Label18.TabIndex = 209
-        Me.Label18.Text = "Cotización 2019"
+        Me.Label18.Text = "Cotización 2019:"
         '
         'txtCotizacion19
         '
         Me.txtCotizacion19.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizacion19.Location = New System.Drawing.Point(889, 315)
+        Me.txtCotizacion19.Location = New System.Drawing.Point(750, 298)
         Me.txtCotizacion19.Name = "txtCotizacion19"
         Me.txtCotizacion19.Size = New System.Drawing.Size(141, 21)
         Me.txtCotizacion19.TabIndex = 210
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(642, 318)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(84, 14)
-        Me.Label9.TabIndex = 207
-        Me.Label9.Text = "Cotización 2018"
-        '
-        'txtCotizacion
-        '
-        Me.txtCotizacion.Enabled = False
-        Me.txtCotizacion.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizacion.Location = New System.Drawing.Point(732, 315)
-        Me.txtCotizacion.Name = "txtCotizacion"
-        Me.txtCotizacion.Size = New System.Drawing.Size(141, 21)
-        Me.txtCotizacion.TabIndex = 208
         '
         'Label10
         '
@@ -998,8 +975,6 @@ Partial Class FrmCotPorFolio
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Label18 As Label
     Friend WithEvents txtCotizacion19 As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents txtCotizacion As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TextNumC As TextBox
 End Class
