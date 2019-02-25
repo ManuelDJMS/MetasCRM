@@ -804,9 +804,9 @@ Public Class FrmFoliosDelAnioAnterior
     End Sub
 
     Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
-        Try
-            '------------------Sacar la fecha de recepcion-----------
-            Dim folio As Integer
+        ' Try
+        '------------------Sacar la fecha de recepcion-----------
+        Dim folio As Integer
             Dim fecharecep As String
             Dim R2 As String
             folio = InputBox("Ingrese el Folio", "Folios")
@@ -818,10 +818,10 @@ Public Class FrmFoliosDelAnioAnterior
             lector2019.Read()
             fecharecep = lector2019(1)
             lector2019.Close()
-            '----------------------------------------------------------
-            Dim row As DataGridViewRow = DGServicios.Rows(e.RowIndex)
-            Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("Seleccionar"), DataGridViewCheckBoxCell)
-            If Convert.ToBoolean(cellSelecion.Value) = False Then
+        '----------------------------------------------------------
+        Dim row As DataGridViewRow = DGCotizaciones.Rows(e.RowIndex)
+        Dim cellSelecion As DataGridViewCheckBoxCell = TryCast(row.Cells("ckSeleccionar"), DataGridViewCheckBoxCell)
+        If Convert.ToBoolean(cellSelecion.Value) = False Then
                 Dim R As String
                 'Dim fecharecep As Date
                 'fecharecep = DTPRecepcion.Value.Date
@@ -844,9 +844,9 @@ Public Class FrmFoliosDelAnioAnterior
             Else
                 row.DefaultCellStyle.BackColor = Color.White
             End If
-        Catch ex As Exception
-            MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("No se pueden agregar filas si no hay datos cargados anteriormente")
+        'End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
