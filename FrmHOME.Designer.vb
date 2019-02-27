@@ -88,6 +88,7 @@ Partial Class FrmHOME
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -284,6 +285,7 @@ Partial Class FrmHOME
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.Label32)
         Me.GroupBox3.Controls.Add(Me.Panel15)
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Label23)
@@ -346,7 +348,7 @@ Partial Class FrmHOME
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(12, 716)
+        Me.Label23.Location = New System.Drawing.Point(15, 699)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(182, 15)
         Me.Label23.TabIndex = 40
@@ -811,6 +813,17 @@ Partial Class FrmHOME
         Me.Label29.TabIndex = 135
         Me.Label29.Text = "*"
         '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.White
+        Me.Label32.Location = New System.Drawing.Point(50, 716)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(112, 15)
+        Me.Label32.TabIndex = 152
+        Me.Label32.Text = "Versión. 1.0.0.0.144"
+        '
         'FrmHOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -952,4 +965,5 @@ Partial Class FrmHOME
     Friend WithEvents Label30 As Label
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Label31 As Label
+    Friend WithEvents Label32 As Label
 End Class
