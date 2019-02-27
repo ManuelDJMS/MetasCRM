@@ -34,13 +34,13 @@ Public Class FrmCotPorFolio
             '----------------------------Llenar el grid por folio---------------------------------------------
             R = "select isnull(ServCatalogo1,'-'),isnull(Tipo,'-'), isnull(Marca,'-'), isnull(Modelo,'-'), 
                  isnull(ID,'-'), isnull(Puntos,'-'),isnull(PUCalib,'-'),isnull(Alcance,'-'),isnull(Serie,'-'), 
-                 isnull(Informe,'-'), FECHACALIB from [INFORMES-SERVICIOS] where Folio=" & respuestafolio
+                 isnull(Informe,'-'), FECHACALIB, MAGNITUD, INFORME from [INFORMES-SERVICIOS] where Folio=" & respuestafolio
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             Dim partida As Integer = 1
             While lector2018.Read()
                 DGCotizaciones.Rows.Add(False, partida, lector2018(0), 1, lector2018(1), lector2018(2), lector2018(3),
-                 lector2018(4), lector2018(5), lector2018(6), "-", lector2018(7), lector2018(8), lector2018(9), lector2018(10))
+                 lector2018(4), (lector2018(5) + " Referencia Certificado " + lector2018(11) + lector2018(12)), lector2018(6), "-", lector2018(7), lector2018(8), lector2018(9), lector2018(10))
                 partida = partida + 1
             End While
             lector2018.Close()
@@ -87,11 +87,12 @@ Public Class FrmCotPorFolio
             comando.ExecuteNonQuery()
             'Codigo para guardar en 1Cotizar----------------------------------------------------
             For i = 0 To DGCotizaciones.Rows.Count - 2
+                MsgBox(DGCotizaciones.Item(7, i).Value)
                 R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
                      ID, Punitariocot, Realizado) values (" & maximo + 1 & "," & Val(i + 1) & ",'" & DGCotizaciones.Item(2, i).Value & "',
                     '" & "-" & "'," & Val(DGCotizaciones.Item(3, i).Value) & ",'" & DGCotizaciones.Item(4, i).Value & "',
-                    '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "','
-                    " & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
+                    '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "',
+                    '" & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
@@ -114,8 +115,8 @@ Public Class FrmCotPorFolio
                 R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
                      ID, Punitariocot, Realizado) values (" & Val(txtCotizacion19.Text) & "," & Val(i + 1) & ",'" & DGCotizaciones.Item(2, i).Value & "',
                     '" & "-" & "'," & Val(DGCotizaciones.Item(3, i).Value) & ",'" & DGCotizaciones.Item(4, i).Value & "',
-                    '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "','
-                    " & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
+                    '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "',
+                    '" & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
