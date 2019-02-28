@@ -247,7 +247,7 @@ Public Class FrmFoliosDelAnioAnterior
                     DGServicios.SelectedCells.Item(7).Value, DGServicios.SelectedCells.Item(8).Value, "-", DGServicios.SelectedCells.Item(9).Value,
                     DGServicios.SelectedCells.Item(10).Value, "-", DGServicios.SelectedCells.Item(2).Value, "-", DGServicios.SelectedCells.Item(3).Value,
                     DGServicios.SelectedCells.Item(4).Value, DGServicios.SelectedCells.Item(5).Value, DGServicios.SelectedCells.Item(6).Value,
-                    "-", "-", "-", "-", "-", "-", "-", 0, "-", "-", "-", "-", "-", "-", lector2018(5), "-", lector2018(6),
+                    "-", "-", "-", "-", "-", 0, "-", 0, "-", "-", "-", 0, "-", "-", lector2018(5), "-", lector2018(6),
                     lector2018(7), lector2018(8), lector2018(9), lector2018(10), lector2018(11), lector2018(12), "-", "-", "-", "-", "-", "-", "-", "-", "-")
                 lector2018.Close()
                 lbServicios.Text = "Total de Servicios: " + Convert.ToString(DGConsulta.Rows.Count - 1)
