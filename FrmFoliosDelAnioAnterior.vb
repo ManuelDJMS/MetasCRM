@@ -24,12 +24,12 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         MetodoMetasInf2019()
         Try
-            Dim fechaActual As Date
-            Dim fechaRec As Date
+            'Dim fechaActual As Date
+            'Dim fechaRec As Date
             Dim maximo As Integer
             Dim R As String
-            fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
-            fechaActual = DTP.Value.Date
+            'fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
+            'fechaActual = DTP.Value.Date
             Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
@@ -47,7 +47,7 @@ Public Class FrmFoliosDelAnioAnterior
                   , [Sv7Curva], [Sv8Idioma], [Sv9Calendar], [SVAD10]) values(" & (DGConsulta.Item(1, i).Value) & "
                         ,'" & (DGConsulta.Item(2, i).Value) & "','" & DGConsulta.Item(3, i).Value & "'," & Val(DGConsulta.Item(4, i).Value) & "
                         ," & (DGConsulta.Item(5, i).Value) & ",'" & DGConsulta.Item(6, i).Value & "'," & (DGConsulta.Item(7, i).Value) & "
-                        ,'" & DGConsulta.Item(8, i).Value & "'," & Val(DGConsulta.Item(9, i).Value) & ",CONVERT (date,'" & fechaRec & "')
+                        ,'" & DGConsulta.Item(8, i).Value & "'," & Val(DGConsulta.Item(9, i).Value) & ",CONVERT (date,'" & DGConsulta.Item(10, i).Value & "')
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
                         ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
                         ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
@@ -64,6 +64,7 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ," & Val(DGConsulta.Item(53, i).Value) & ")"
+                MsgBox(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
@@ -807,7 +808,6 @@ Public Class FrmFoliosDelAnioAnterior
         Try
             '------------------Sacar la fecha de recepcion-----------
             Dim folio As Integer
-            Dim fecharecep As String
             Dim R2 As String
             folio = InputBox("Ingrese el Folio", "Folios")
             MetodoMetasInf2019()
@@ -816,7 +816,7 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = R2
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            fecharecep = lector2019(1)
+            FechaRecepcion = lector2019(1)
             lector2019.Close()
             '----------------------------------------------------------
             Dim row As DataGridViewRow = DGCotizaciones.Rows(e.RowIndex)
@@ -832,7 +832,7 @@ Public Class FrmFoliosDelAnioAnterior
                 comando2018.CommandText = R
                 lector2018 = comando2018.ExecuteReader
                 While lector2018.Read()
-                    DGConsulta.Rows.Add(False, folio, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
+                    DGConsulta.Rows.Add(False, folio, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), FechaRecepcion,
                     DGCotizaciones.SelectedCells.Item(2).Value, "-", "-", DGCotizaciones.SelectedCells.Item(9).Value,
                     "-", "-", DGCotizaciones.SelectedCells.Item(4).Value, "-", DGCotizaciones.SelectedCells.Item(5).Value,
                     DGCotizaciones.SelectedCells.Item(6).Value, "-", DGCotizaciones.SelectedCells.Item(7).Value,
