@@ -13,7 +13,7 @@ Module MetAsInf2019
         Try
             'conexion = New SqlConnection("Data Source=107.180.70.168\METASSQLEXPRESS;Initial Catalog=MetAs_Live;Persist Security Info=False;User ID=sa;Password=Bws123bws")
             ' conexion2019 = New SqlConnection("Data Source=SERVER3\COMPAC2;Initial Catalog=METASINF-2019; User Id=sa; Password=Met99011578a;Integrated Security=False")
-            conexion2019 = New SqlConnection("Data Source=SERVER3\COMPAC2;Initial Catalog=METASINF-2019; User Id=sa; Password=Met99011578a;Integrated Security=False")
+            conexion2019 = New SqlConnection("Data Source=SERVER3\COMPAC2;Initial Catalog=METASINF-2019-3; User Id=sa; Password=Met99011578a;Integrated Security=False")
             conexion2019.Open()
             'MsgBox("Conectado correctamente")
         Catch ex As Exception

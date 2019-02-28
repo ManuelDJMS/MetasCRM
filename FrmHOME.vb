@@ -233,4 +233,7 @@
         Panel8.BackColor = Color.DimGray
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 End Class
