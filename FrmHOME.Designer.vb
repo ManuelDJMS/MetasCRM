@@ -339,7 +339,7 @@ Partial Class FrmHOME
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(112, 15)
         Me.Label32.TabIndex = 152
-        Me.Label32.Text = "Versión. 1.0.0.1.150"
+        Me.Label32.Text = "Versión. 1.0.0.1.153"
         '
         'Panel15
         '
