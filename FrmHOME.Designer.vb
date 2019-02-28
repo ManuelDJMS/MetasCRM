@@ -40,6 +40,7 @@ Partial Class FrmHOME
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
@@ -88,7 +89,6 @@ Partial Class FrmHOME
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -300,6 +300,17 @@ Partial Class FrmHOME
         Me.GroupBox3.Size = New System.Drawing.Size(212, 742)
         Me.GroupBox3.TabIndex = 31
         Me.GroupBox3.TabStop = False
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.White
+        Me.Label32.Location = New System.Drawing.Point(50, 716)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(112, 15)
+        Me.Label32.TabIndex = 152
+        Me.Label32.Text = "Versión. 1.0.0.0.147"
         '
         'Panel15
         '
@@ -812,17 +823,6 @@ Partial Class FrmHOME
         Me.Label29.Size = New System.Drawing.Size(17, 19)
         Me.Label29.TabIndex = 135
         Me.Label29.Text = "*"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(50, 716)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(112, 15)
-        Me.Label32.TabIndex = 152
-        Me.Label32.Text = "Versión. 1.0.0.0.144"
         '
         'FrmHOME
         '
