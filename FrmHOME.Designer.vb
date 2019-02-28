@@ -25,6 +25,10 @@ Partial Class FrmHOME
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHOME))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DTP = New System.Windows.Forms.DateTimePicker()
@@ -87,11 +91,9 @@ Partial Class FrmHOME
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -115,8 +117,6 @@ Partial Class FrmHOME
         Me.Panel12.SuspendLayout()
         Me.PanelTareasSemana.SuspendLayout()
         Me.Panel13.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -136,6 +136,54 @@ Partial Class FrmHOME
         Me.GroupBox1.Size = New System.Drawing.Size(1170, 57)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(1042, 19)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 140
+        Me.PictureBox2.TabStop = False
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label33.Font = New System.Drawing.Font("Calibri Light", 10.0!)
+        Me.Label33.ForeColor = System.Drawing.SystemColors.Menu
+        Me.Label33.Location = New System.Drawing.Point(971, 26)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(65, 17)
+        Me.Label33.TabIndex = 139
+        Me.Label33.Text = "Minimizar"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label46.Font = New System.Drawing.Font("Calibri Light", 10.0!)
+        Me.Label46.ForeColor = System.Drawing.SystemColors.Menu
+        Me.Label46.Location = New System.Drawing.Point(1072, 26)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(32, 17)
+        Me.Label46.TabIndex = 138
+        Me.Label46.Text = "Salir"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(1110, 19)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 32
+        Me.PictureBox4.TabStop = False
         '
         'PictureBox3
         '
@@ -291,7 +339,7 @@ Partial Class FrmHOME
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(112, 15)
         Me.Label32.TabIndex = 152
-        Me.Label32.Text = "Versión. 1.0.0.0.147"
+        Me.Label32.Text = "Versión. 1.0.0.1.150"
         '
         'Panel15
         '
@@ -805,54 +853,6 @@ Partial Class FrmHOME
         Me.Label29.TabIndex = 135
         Me.Label29.Text = "*"
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(1110, 19)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 32
-        Me.PictureBox4.TabStop = False
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label46.Font = New System.Drawing.Font("Calibri Light", 10.0!)
-        Me.Label46.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label46.Location = New System.Drawing.Point(1072, 26)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(32, 17)
-        Me.Label46.TabIndex = 138
-        Me.Label46.Text = "Salir"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label33.Font = New System.Drawing.Font("Calibri Light", 10.0!)
-        Me.Label33.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label33.Location = New System.Drawing.Point(971, 26)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(65, 17)
-        Me.Label33.TabIndex = 139
-        Me.Label33.Text = "Minimizar"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1042, 19)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 140
-        Me.PictureBox2.TabStop = False
-        '
         'FrmHOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -881,6 +881,8 @@ Partial Class FrmHOME
         Me.Text = "MetAs Metrólogos Asociados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -925,8 +927,6 @@ Partial Class FrmHOME
         Me.PanelTareasSemana.PerformLayout()
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

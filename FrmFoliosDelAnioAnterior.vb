@@ -24,12 +24,8 @@ Public Class FrmFoliosDelAnioAnterior
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         MetodoMetasInf2019()
         Try
-            'Dim fechaActual As Date
-            'Dim fechaRec As Date
             Dim maximo As Integer
             Dim R As String
-            'fechaRec = DTPRecepcion.Value.ToString("yyyy/MM/dd")
-            'fechaActual = DTP.Value.Date
             Dim comando As New SqlCommand("select MAX(Numcot) from [INFORMES-SERVICIOS]", conexion2019)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
@@ -51,19 +47,19 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & (DGConsulta.Item(11, i).Value) & "','" & (DGConsulta.Item(12, i).Value) & "'
                         ,'" & (DGConsulta.Item(13, i).Value) & "','" & (DGConsulta.Item(14, i).Value) & "'
                         ," & Val(DGConsulta.Item(15, i).Value) & "," & Val(DGConsulta.Item(16, i).Value) & "
-                        ,'" & DGConsulta.Item(17, i).Value & "','" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "'
-                        ,'" & (DGConsulta.Item(20, i).Value) & "','" & (DGConsulta.Item(21, i).Value) & "','" & (DGConsulta.Item(22, i).Value) & "'
-                        ,'" & (DGConsulta.Item(23, i).Value) & "','" & (DGConsulta.Item(24, i).Value) & "','" & (DGConsulta.Item(25, i).Value) & "'
-                        ,'" & (DGConsulta.Item(26, i).Value) & "','" & (DGConsulta.Item(27, i).Value) & "','" & (DGConsulta.Item(28, i).Value) & "'
-                        ," & Val(DGConsulta.Item(29, i).Value) & ",'" & (DGConsulta.Item(30, i).Value) & "'," & Val(DGConsulta.Item(31, i).Value) & "
-                        ,'" & (DGConsulta.Item(32, i).Value) & "','" & (DGConsulta.Item(33, i).Value) & "','" & (DGConsulta.Item(34, i).Value) & "'
-                        ," & Val(DGConsulta.Item(35, i).Value) & "," & Val(DGConsulta.Item(36, i).Value) & ",'" & (DGConsulta.Item(37, i).Value) & "'
-                        ," & Val(DGConsulta.Item(38, i).Value) & ",'" & (DGConsulta.Item(39, i).Value) & "','" & (DGConsulta.Item(40, i).Value) & "'
+                        ,'" & DGConsulta.Item(17, i).Value & "','" & (DGConsulta.Item(18, i).Value) & "','" & (DGConsulta.Item(19, i).Value) & "
+                        ','" & (DGConsulta.Item(20, i).Value) & "','" & (DGConsulta.Item(21, i).Value) & "','" & (DGConsulta.Item(22, i).Value) & "
+                        ','" & (DGConsulta.Item(23, i).Value) & "','" & (DGConsulta.Item(24, i).Value) & "','" & (DGConsulta.Item(25, i).Value) & "
+                        ','" & (DGConsulta.Item(26, i).Value) & "','" & (DGConsulta.Item(27, i).Value) & "'," & (DGConsulta.Item(28, i).Value) & "
+                        ,'" & DGConsulta.Item(29, i).Value & "','" & (DGConsulta.Item(30, i).Value) & "','" & DGConsulta.Item(31, i).Value & "'
+                        ,'" & (DGConsulta.Item(32, i).Value) & "','" & (DGConsulta.Item(33, i).Value) & "'," & DGConsulta.Item(34, i).Value & "
+                        ," & Val(DGConsulta.Item(35, i).Value) & ",'" & DGConsulta.Item(36, i).Value & "','" & (DGConsulta.Item(37, i).Value) & "'
+                        ,'" & DGConsulta.Item(38, i).Value & "','" & (DGConsulta.Item(39, i).Value) & "','" & (DGConsulta.Item(40, i).Value) & "'
                         ,'" & (DGConsulta.Item(41, i).Value) & "','" & (DGConsulta.Item(42, i).Value) & "','" & (DGConsulta.Item(43, i).Value) & "'
                         ,'" & (DGConsulta.Item(44, i).Value) & "','" & (DGConsulta.Item(45, i).Value) & "','" & (DGConsulta.Item(46, i).Value) & "'
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
-                        ," & Val(DGConsulta.Item(53, i).Value) & ")"
+                        ,'" & DGConsulta.Item(53, i).Value & "')"
                 MsgBox(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
