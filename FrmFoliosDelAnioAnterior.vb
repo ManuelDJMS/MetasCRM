@@ -808,6 +808,7 @@ Public Class FrmFoliosDelAnioAnterior
         Try
             '------------------Sacar la fecha de recepcion-----------
             Dim folio As Integer
+            Dim fecharecep As String
             Dim R2 As String
             folio = InputBox("Ingrese el Folio", "Folios")
             MetodoMetasInf2019()
@@ -816,7 +817,7 @@ Public Class FrmFoliosDelAnioAnterior
             comando2019.CommandText = R2
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
-            FechaRecepcion = lector2019(1)
+            fecharecep = lector2019(1)
             lector2019.Close()
             '----------------------------------------------------------
             Dim row As DataGridViewRow = DGCotizaciones.Rows(e.RowIndex)
@@ -832,7 +833,7 @@ Public Class FrmFoliosDelAnioAnterior
                 comando2018.CommandText = R
                 lector2018 = comando2018.ExecuteReader
                 While lector2018.Read()
-                    DGConsulta.Rows.Add(False, folio, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), FechaRecepcion,
+                    DGConsulta.Rows.Add(False, folio, "-", "-", 0, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), fecharecep,
                     DGCotizaciones.SelectedCells.Item(2).Value, "-", "-", DGCotizaciones.SelectedCells.Item(9).Value,
                     "-", "-", DGCotizaciones.SelectedCells.Item(4).Value, "-", DGCotizaciones.SelectedCells.Item(5).Value,
                     DGCotizaciones.SelectedCells.Item(6).Value, "-", DGCotizaciones.SelectedCells.Item(7).Value,
