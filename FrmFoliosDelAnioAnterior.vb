@@ -60,7 +60,7 @@ Public Class FrmFoliosDelAnioAnterior
                         ,'" & DGConsulta.Item(47, i).Value & "'," & Val(DGConsulta.Item(48, i).Value) & "," & Val(DGConsulta.Item(49, i).Value) & "
                         ," & Val(DGConsulta.Item(50, i).Value) & "," & Val(DGConsulta.Item(51, i).Value) & "," & Val(DGConsulta.Item(52, i).Value) & "
                         ,'" & DGConsulta.Item(53, i).Value & "')"
-                MsgBox(R)
+                'MsgBox(R)
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
             Next i
@@ -833,7 +833,7 @@ Public Class FrmFoliosDelAnioAnterior
                     DGCotizaciones.SelectedCells.Item(2).Value, "-", "-", DGCotizaciones.SelectedCells.Item(9).Value,
                     "-", "-", DGCotizaciones.SelectedCells.Item(4).Value, "-", DGCotizaciones.SelectedCells.Item(5).Value,
                     DGCotizaciones.SelectedCells.Item(6).Value, "-", DGCotizaciones.SelectedCells.Item(7).Value,
-                    "-", "-", "-", "-", "-", "-", "-", 0, "-", "-", "-", "-", "-", "-", lector2018(5), "-", lector2018(6),
+                    "-", "-", "-", "-", "-", 0, "-", 0, "-", "-", "-", 0, "-", "-", lector2018(5), "-", lector2018(6),
                     lector2018(7), lector2018(8), lector2018(9), lector2018(10), lector2018(11), lector2018(12), "-", "-", "-", "-", "-", "-", "-", "-", "-")
                 End While
                 lector2018.Close()
