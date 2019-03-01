@@ -201,10 +201,8 @@
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        Dim Admin As New FrmCotizacion2018
-        Admin.MdiParent = Me
-        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text ''------------
-        Admin.Show()
+        FrmCotizacion2018.MdiParent = Me
+        FrmCotizacion2018.Show()
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray

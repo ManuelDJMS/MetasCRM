@@ -2,6 +2,7 @@
 Public Class FrmCotPorFolio
     Private Sub FrmCotPorFolio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            respuestafolio = InputBox("Folio", "Ingrese la confirmación metrológica:")
             Dim R As String
             MetodoMetasInf2018()
             comando2018 = conexion2018.CreateCommand
@@ -49,12 +50,7 @@ Public Class FrmCotPorFolio
         End Try
     End Sub
 
-    Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
-        FrmCotizacion2018.PanelFiltrado.Enabled = False
-        FrmCotizacion2018.lblCot.Visible = False
-        FrmCotizacion2018.DGCotizaciones.Enabled = False
-        Me.Dispose()
-    End Sub
+
 
     Private Sub btEliminar_Click(sender As Object, e As EventArgs) Handles btEliminar.Click
         For i As Integer = DGCotizaciones.Rows.Count() - 1 To 0 Step -1
@@ -130,6 +126,13 @@ Public Class FrmCotPorFolio
         FrmCotizacion2018.txtNombreE.Text = ""
         FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
         FrmCotizacion2018.DGEmpresas.DataSource = Nothing
+        Me.Dispose()
+    End Sub
+
+    Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
+        FrmCotizacion2018.PanelFiltrado.Enabled = True
+        FrmCotizacion2018.lblCot.Visible = True
+        FrmCotizacion2018.DGCotizaciones.Enabled = True
         Me.Dispose()
     End Sub
 End Class

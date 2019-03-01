@@ -180,7 +180,7 @@ Public Class FrmCotizacion2018
             PanelFiltrado.Enabled = False
             lblCot.Visible = False
             DGCotizaciones.Enabled = False
-            frmCotizacionPorArticulo.ShowDialog()
+            frmCotizacionPorArticulo.Show()
             rbArticulo.Checked = False
         End If
     End Sub
@@ -221,7 +221,6 @@ Public Class FrmCotizacion2018
         lblCot.Visible = False
         DGCotizaciones.Enabled = False
         rbFolios.Checked = False
-        respuestafolio = InputBox("Folio", "Ingrese la confirmación metrológica:")
         FrmCotPorFolio.Show()
     End Sub
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
