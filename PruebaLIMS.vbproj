@@ -98,6 +98,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitcora.vb" />
     <Compile Include="Cotizaciones.Designer.vb">
       <DependentUpon>Cotizaciones.vb</DependentUpon>
     </Compile>
