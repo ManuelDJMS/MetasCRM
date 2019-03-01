@@ -17,7 +17,7 @@
         End Try
     End Sub
 
-    Private Sub btSalir_Click(sender As Object, e As EventArgs) Handles btSalir.Click
+    Private Sub btSalir_Click(sender As Object, e As EventArgs)
         Me.Dispose()
     End Sub
 
@@ -152,5 +152,9 @@
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         End Try
+    End Sub
+
+    Private Sub btSalir_Click_1(sender As Object, e As EventArgs) Handles btSalir.Click
+        Me.Dispose()
     End Sub
 End Class
