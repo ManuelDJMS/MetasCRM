@@ -124,8 +124,32 @@ Public Class frmConsultaTodos
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Dispose()
     End Sub
+    Private Sub TextID_TextChanged(sender As Object, e As EventArgs) Handles TextID.TextChanged
+        Try
+            DGCotizaciones.Rows.Clear()
+            MetodoMetasInf2018()
+            If DGCotizaciones.Rows.Count < 2 Then
+            Else
+                DGCotizaciones.Rows.RemoveAt(DGCotizaciones.CurrentRow.Index)
+            End If
+            comando2018 = conexion2018.CreateCommand
+            Dim R As String
+            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where ID like '" & TextID.Text & "%' order by [1Cotizar].Numcot desc"
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read()
+                DGCotizaciones.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8))
+            End While
+            lector2018.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("frmConsultaTodos", "Error al buscar ID", Err.Number, cadena)
+        End Try
+    End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
+    Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         Try
             If DGCarrito.RowCount > 1 Then
                 MetodoMetasInf2019()
@@ -141,7 +165,7 @@ Public Class frmConsultaTodos
                     lector.Close()
                     R = "insert into EntradaRegistroCot (NumCot, Cliente, ClaveContacto, Fecha, Referencia, Numcond, Observaciones, ServicioEn, TipodeCliente, 
                 CveEmpresa, [Elaboró Cot], ModoDeContabilizar) values (" & maximo + 1 & ",'" & txtNombreEmpresa.Text & "',
-                " & Val(lblClave.Text) & ", (CONVERT(varchar(10), getdate(), 103)),'" & txtReferencia.Text & "'," & Val(lblNumCond.Text) & ",
+                " & Val(lblClave.Text) & ", (CONVERT(varchar(10), getdate(), 103)),'" & txtReferencia.Text & "'," & Val(TextNumC.Text) & ",
                 '" & txtObservaciones.Text & "','" & cboServicio.Text & "'," & Val(txtTipoCliente.Text) & "," & Val(txtClaveE.Text) & ",
                 " & Val(txtCotizo2019.Text) & "," & txtConta.Text & ")"
                     comando.CommandText = R
@@ -166,7 +190,7 @@ Public Class frmConsultaTodos
                     ''Se hace update a una cot apartada, ya existente (UPDATE)
                     R = "update EntradaRegistroCot set NumCot='" & Val(txtCotizacion19.Text) & "', Cliente = '" & txtNombreEmpresa.Text & "', 
                 ClaveContacto='" & Val(lblClave.Text) & "', Fecha= (CONVERT(varchar(10), getdate(), 103)), Referencia='" & txtReferencia.Text & "', 
-                Numcond='" & Val(lblNumCond.Text) & "', Observaciones='" & txtObservaciones.Text & "', ServicioEn='" & cboServicio.Text & "', 
+                Numcond='" & Val(TextNumC.Text) & "', Observaciones='" & txtObservaciones.Text & "', ServicioEn='" & cboServicio.Text & "', 
                 TipodeCliente='1', CveEmpresa='" & Val(txtClaveE.Text) & "', [Elaboró Cot]=" & Val(txtCotizo2019.Text) & ", 
                 ModoDeContabilizar='" & Val(txtConta.Text) & "' WHERE NumCot='" & Val(txtCotizacion19.Text) & "'"
                     comando.CommandText = R
@@ -198,28 +222,8 @@ Public Class frmConsultaTodos
             Bitacora("frmConsultaTodos", "Error al momento de guardar", Err.Number, cadena)
         End Try
     End Sub
-    Private Sub TextID_TextChanged(sender As Object, e As EventArgs) Handles TextID.TextChanged
-        Try
-            DGCotizaciones.Rows.Clear()
-            MetodoMetasInf2018()
-            If DGCotizaciones.Rows.Count < 2 Then
-            Else
-                DGCotizaciones.Rows.RemoveAt(DGCotizaciones.CurrentRow.Index)
-            End If
-            comando2018 = conexion2018.CreateCommand
-            Dim R As String
-            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where ID like '" & TextID.Text & "%' order by [1Cotizar].Numcot desc"
-            comando2018.CommandText = R
-            lector2018 = comando2018.ExecuteReader
-            While lector2018.Read()
-                DGCotizaciones.Rows.Add(False, lector2018(0), lector2018(1), lector2018(2), lector2018(3), lector2018(4), lector2018(5), lector2018(6), lector2018(7), lector2018(8))
-            End While
-            lector2018.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
-            cadena = Err.Description
-            cadena = cadena.Replace("'", "")
-            Bitacora("frmConsultaTodos", "Error al buscar ID", Err.Number, cadena)
-        End Try
+
+    Private Sub btMinimizar_Click(sender As Object, e As EventArgs) Handles btMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 End Class
