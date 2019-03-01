@@ -50,6 +50,9 @@ Public Class FrmCotPorFolio
     End Sub
 
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
+        FrmCotizacion2018.PanelFiltrado.Enabled = False
+        FrmCotizacion2018.lblCot.Visible = False
+        FrmCotizacion2018.DGCotizaciones.Enabled = False
         Me.Dispose()
     End Sub
 
