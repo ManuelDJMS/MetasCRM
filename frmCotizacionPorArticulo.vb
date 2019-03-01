@@ -10,94 +10,33 @@ Public Class frmCotizacionPorArticulo
         Try
             comando2018 = conexion2018.CreateCommand
             Dim R As String
-            R = "select top 1 MetAsInf.Clavempresa, MetAsInf.Compania, MetAsInf.DomicilioConsig, MetAsInf.CiudadConsig, MetAsInf.EdoConsig,
-            [Contactos-Clientes-Usuarios].ClaveContacto, [Contactos-Clientes-Usuarios].Nombre, [Contactos-Clientes-Usuarios].Tel,
-            [Contactos-Clientes-Usuarios].Ext, [Contactos-Clientes-Usuarios].Email,EntradaRegistroCot.Numcond,
-            EntradaRegistroCot.Referencia, EntradaRegistroCot.ServicioEn ,[Claves-Elaboro-Cot].Nombre, EntradaRegistroCot.Observaciones 
-            From MetAsInf inner Join [Contactos-Clientes-Usuarios] On MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
-            inner Join EntradaRegistroCot on [Contactos-Clientes-Usuarios].ClaveContacto = EntradaRegistroCot.ClaveContacto 
-            inner join Condiciones_p_cotizar on EntradaRegistroCot.[Elaboró Cot] = Condiciones_p_cotizar.Numcond 
-            inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot]= EntradaRegistroCot.[Elaboró Cot]
-            where MetAsInf.Clavempresa =" & empresa & " order by EntradaRegistroCot.Numcot desc"
+            R = "select top 1 isnull(MetAsInf.Clavempresa,'-'), isnull(MetAsInf.Compania,'-'),  isnull(MetAsInf.DomicilioConsig,'-'), isnull(MetAsInf.CiudadConsig,'-'), isnull(MetAsInf.EdoConsig,'-'),
+                isnull([Contactos-Clientes-Usuarios].ClaveContacto,'-'), isnull([Contactos-Clientes-Usuarios].Nombre,'-'), isnull([Contactos-Clientes-Usuarios].Tel,'-'),
+                isnull([Contactos-Clientes-Usuarios].Ext,'-'), isnull([Contactos-Clientes-Usuarios].Email,'-'), isnull(EntradaRegistroCot.Numcond,'-'),
+                isnull(EntradaRegistroCot.Referencia,'-'), isnull(EntradaRegistroCot.ServicioEn,'-'), isnull([Claves-Elaboro-Cot].Nombre,'-'), isnull(EntradaRegistroCot.Observaciones) 
+                From MetAsInf inner Join [Contactos-Clientes-Usuarios] On MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
+                inner Join EntradaRegistroCot on [Contactos-Clientes-Usuarios].ClaveContacto = EntradaRegistroCot.ClaveContacto 
+                inner join Condiciones_p_cotizar on EntradaRegistroCot.[Elaboró Cot] = Condiciones_p_cotizar.Numcond 
+                inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot]= EntradaRegistroCot.[Elaboró Cot]
+                where MetAsInf.Clavempresa =" & empresa & " order by EntradaRegistroCot.Numcot desc"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             lector2018.Read()
-            If ((lector2018(0) Is DBNull.Value) OrElse (lector2018(0) Is Nothing)) Then
-                txtClaveE.Text = "-"
-            Else
-                txtClaveE.Text = lector2018(0)
-            End If
-            If ((lector2018(1) Is DBNull.Value) OrElse (lector2018(1) Is Nothing)) Then
-                txtNombreEmpresa.Text = "-"
-            Else
-                txtNombreEmpresa.Text = lector2018(1)
-            End If
-
-            If ((lector2018(2) Is DBNull.Value) OrElse (lector2018(2) Is Nothing)) Then
-                lblDomicilio.Text = "-"
-            Else
-                lblDomicilio.Text = lector2018(1)
-            End If
-            If ((lector2018(3) Is DBNull.Value) OrElse (lector2018(3) Is Nothing)) Then
-                lblCiudad.Text = "-"
-            Else
-                lblCiudad.Text = lector2018(3)
-            End If
-            If ((lector2018(4) Is DBNull.Value) OrElse (lector2018(4) Is Nothing)) Then
-                lblEstado.Text = "-"
-            Else
-                lblEstado.Text = lector2018(4)
-            End If
-            If ((lector2018(5) Is DBNull.Value) OrElse (lector2018(5) Is Nothing)) Then
-                lblClave.Text = "-"
-            Else
-                lblClave.Text = lector2018(5)
-            End If
-            If ((lector2018(6) Is DBNull.Value) OrElse (lector2018(6) Is Nothing)) Then
-                lblContacto.Text = "-"
-            Else
-                lblContacto.Text = lector2018(6)
-            End If
-            If ((lector2018(7) Is DBNull.Value) OrElse (lector2018(7) Is Nothing)) Then
-                lblTelefono.Text = "-"
-            Else
-                lblTelefono.Text = lector2018(7)
-            End If
-            If ((lector2018(8) Is DBNull.Value) OrElse (lector2018(8) Is Nothing)) Then
-                lblExt.Text = "-"
-            Else
-                lblExt.Text = lector2018(8)
-            End If
-            If ((lector2018(9) Is DBNull.Value) OrElse (lector2018(9) Is Nothing)) Then
-                lblCorreo.Text = "-"
-            Else
-                lblCorreo.Text = lector2018(9)
-            End If
-            If ((lector2018(10) Is DBNull.Value) OrElse (lector2018(10) Is Nothing)) Then
-                lblNumCond.Text = "-"
-            Else
-                lblNumCond.Text = lector2018(10)
-            End If
-            If ((lector2018(11) Is DBNull.Value) OrElse (lector2018(11) Is Nothing)) Then
-                txtReferencia.Text = "-"
-            Else
-                txtReferencia.Text = lector2018(11)
-            End If
-            If ((lector2018(12) Is DBNull.Value) OrElse (lector2018(12) Is Nothing)) Then
-                cboServicio.Text = "-"
-            Else
-                cboServicio.Text = lector2018(12)
-            End If
-            If ((lector2018(13) Is DBNull.Value) OrElse (lector2018(13) Is Nothing)) Then
-                txtCotizo.Text = "-"
-            Else
-                txtCotizo.Text = lector2018(13)
-            End If
-            If ((lector2018(14) Is DBNull.Value) OrElse (lector2018(14) Is Nothing)) Then
-                txtObservaciones.Text = "-"
-            Else
-                txtObservaciones.Text = lector2018(14)
-            End If
+            txtClaveE.Text = lector2018(0)
+            txtNombreEmpresa.Text = lector2018(1)
+            lblDomicilio.Text = lector2018(2)
+            lblCiudad.Text = lector2018(3)
+            lblEstado.Text = lector2018(4)
+            lblClave.Text = lector2018(5)
+            lblContacto.Text = lector2018(6)
+            lblTelefono.Text = lector2018(7)
+            lblExt.Text = lector2018(8)
+            lblCorreo.Text = lector2018(9)
+            lblNumCond.Text = lector2018(10)
+            txtReferencia.Text = lector2018(11)
+            cboServicio.Text = lector2018(12)
+            txtCotizo.Text = lector2018(13)
+            txtObservaciones.Text = lector2018(14)
             lector2018.Close()
             ''------------------------------------
             R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where CveEmpresa =" & empresa
@@ -133,8 +72,6 @@ Public Class frmCotizacionPorArticulo
         Try
             Select Case e.KeyData
                 Case Keys.Enter
-                    'Dim clase As New SqlConnection(conexionprueba)
-                    'clase.Open()
                     MetodoMetasInf2018()
                     comando2018 = conexion2018.CreateCommand
                     Dim R As String
