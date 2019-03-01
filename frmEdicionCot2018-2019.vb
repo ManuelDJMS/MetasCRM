@@ -6,121 +6,54 @@ Public Class frmEdicionCot2018_2019
     Dim da As New SqlDataAdapter
 
     Private Sub frmEdicionCot2018_2019_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MetodoMetasInf2018()
-        comando2018 = conexion2018.CreateCommand
-        Dim R As String
-        R = "select MetAsInf.Clavempresa, MetAsInf.Compania, MetAsInf.DomicilioConsig, MetAsInf.CiudadConsig, MetAsInf.EdoConsig,
-         [Contactos-Clientes-Usuarios].ClaveContacto, [Contactos-Clientes-Usuarios].Nombre, [Contactos-Clientes-Usuarios].Tel,
-         [Contactos-Clientes-Usuarios].Ext, [Contactos-Clientes-Usuarios].Email, EntradaRegistroCot.Numcot, EntradaRegistroCot.Fecha,
-         EntradaRegistroCot.Referencia, EntradaRegistroCot.Observaciones, EntradaRegistroCot.Numcond, Condiciones_p_cotizar.donde,
-         Condiciones_p_cotizar.Precios, Condiciones_p_cotizar.tentrega, Condiciones_p_cotizar.modalidad, [Claves-Elaboro-Cot].Nombre, 
-        EntradaRegistroCot.ServicioEn 
-         from MetAsInf inner join [Contactos-Clientes-Usuarios] on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
-         inner join EntradaRegistroCot on [Contactos-Clientes-Usuarios].ClaveContacto = EntradaRegistroCot.ClaveContacto
-         inner join Condiciones_p_cotizar on EntradaRegistroCot.[Elaboró Cot] = Condiciones_p_cotizar.Numcond 
-         inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot]= EntradaRegistroCot.[Elaboró Cot] where EntradaRegistroCot.Numcot =" & txtCotizacion.Text
-        comando2018.CommandText = R
-        lector2018 = comando2018.ExecuteReader
-        lector2018.Read()
-        If ((lector2018(0) Is DBNull.Value) OrElse (lector2018(0) Is Nothing)) Then
-            txtClaveE.Text = "-"
-        Else
-            txtClaveE.Text = lector2018(0)
-        End If
-        If ((lector2018(1) Is DBNull.Value) OrElse (lector2018(1) Is Nothing)) Then
-            txtNombreEmpresa.Text = "-"
-        Else
-            txtNombreEmpresa.Text = lector2018(1)
-        End If
-
-        If ((lector2018(2) Is DBNull.Value) OrElse (lector2018(2) Is Nothing)) Then
-            txtDomicilio.Text = "-"
-        Else
-            txtDomicilio.Text = lector2018(1)
-        End If
-        If ((lector2018(3) Is DBNull.Value) OrElse (lector2018(3) Is Nothing)) Then
-            txtCiudad.Text = "-"
-        Else
-            txtCiudad.Text = lector2018(3) = lector2018(3)
-        End If
-        If ((lector2018(4) Is DBNull.Value) OrElse (lector2018(4) Is Nothing)) Then
-            txtEstado.Text = "-"
-        Else
-            txtEstado.Text = lector2018(4)
-        End If
-        If ((lector2018(5) Is DBNull.Value) OrElse (lector2018(5) Is Nothing)) Then
-            txtCveContacto.Text = "-"
-        Else
-            txtCveContacto.Text = lector2018(5)
-        End If
-        If ((lector2018(6) Is DBNull.Value) OrElse (lector2018(6) Is Nothing)) Then
-            txtNombreC.Text = "-"
-        Else
-            txtNombreC.Text = lector2018(6)
-        End If
-        If ((lector2018(7) Is DBNull.Value) OrElse (lector2018(7) Is Nothing)) Then
-            txtTelefono.Text = "-"
-        Else
-            txtTelefono.Text = lector2018(7)
-        End If
-        If ((lector2018(8) Is DBNull.Value) OrElse (lector2018(8) Is Nothing)) Then
-            txtExt.Text = "-"
-        Else
-            txtExt.Text = lector2018(8)
-        End If
-        If ((lector2018(9) Is DBNull.Value) OrElse (lector2018(9) Is Nothing)) Then
-            TextCorreo.Text = "-"
-        Else
-            TextCorreo.Text = lector2018(9)
-        End If
-        If ((lector2018(12) Is DBNull.Value) OrElse (lector2018(12) Is Nothing)) Then
-            txtReferencia.Text = "-"
-        Else
-            txtReferencia.Text = lector2018(12)
-        End If
-        If ((lector2018(13) Is DBNull.Value) OrElse (lector2018(13) Is Nothing)) Then
-            txtObservaciones.Text = "-"
-        Else
-            txtObservaciones.Text = lector2018(13)
-        End If
-        If ((lector2018(14) Is DBNull.Value) OrElse (lector2018(14) Is Nothing)) Then
-            txtNumCond.Text = "-"
-        Else
-            txtNumCond.Text = lector2018(14)
-        End If
-        If ((lector2018(19) Is DBNull.Value) OrElse (lector2018(19) Is Nothing)) Then
-            txtCotizo.Text = "-"
-        Else
-            txtCotizo.Text = lector2018(19)
-        End If
-        If ((lector2018(20) Is DBNull.Value) OrElse (lector2018(20) Is Nothing)) Then
-            cboServicio.Text = "-"
-        Else
-            cboServicio.Text = lector2018(20)
-        End If
-        lector2018.Close()
-        R = "select *from [1Cotizar] where Numcot =" & Val(txtCotizacion.Text)
-
-        comando2018.CommandText = R
-        lector2018 = comando2018.ExecuteReader
-        While lector2018.Read()
-            DGCotizaciones.Rows.Add(False, lector2018(2), lector2018(3), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(10), lector2018(9), lector2018(11))
-        End While
-        lector2018.Close()
-
-        'clase.Open()
         Try
+            MetodoMetasInf2018()
+            comando2018 = conexion2018.CreateCommand
+            Dim R As String
+            R = "select isnull(MetAsInf.Clavempresa,'-'), isnull(MetAsInf.Compania,'-'), isnull(MetAsInf.DomicilioConsig,'-'), isnull(MetAsInf.CiudadConsig,'-'), isnull(MetAsInf.EdoConsig,'-'),
+            isnull([Contactos-Clientes-Usuarios].ClaveContacto,'-'), isnull([Contactos-Clientes-Usuarios].Nombre,'-'), isnull([Contactos-Clientes-Usuarios].Tel,'-')
+            isnull([Contactos-Clientes-Usuarios].Ext,'-') isnull([Contactos-Clientes-Usuarios].Email,'-') isnull(EntradaRegistroCot.Numcot,'-'), isnull(EntradaRegistroCot.Fecha,'-'),
+            isnull(EntradaRegistroCot.Referencia,'-'), isnull(EntradaRegistroCot.Observaciones,'-'), isnull(EntradaRegistroCot.Numcond,'-'), isnull(Condiciones_p_cotizar.donde,'-'),
+            isnull(Condiciones_p_cotizar.Precios,'-'), isnull(Condiciones_p_cotizar.tentrega,'-'), isnull(Condiciones_p_cotizar.modalidad,'-'), isnull([Claves-Elaboro-Cot].Nombre,'-'), 
+            isnull(EntradaRegistroCot.ServicioEn,'-') 
+            from MetAsInf inner join [Contactos-Clientes-Usuarios] on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
+            inner join EntradaRegistroCot on [Contactos-Clientes-Usuarios].ClaveContacto = EntradaRegistroCot.ClaveContacto
+            inner join Condiciones_p_cotizar on EntradaRegistroCot.[Elaboró Cot] = Condiciones_p_cotizar.Numcond 
+            inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot]= EntradaRegistroCot.[Elaboró Cot] where EntradaRegistroCot.Numcot =" & txtCotizacion.Text
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            lector2018.Read()
+            txtClaveE.Text = lector2018(0)
+            txtNombreEmpresa.Text = lector2018(1)
+            txtDomicilio.Text = lector2018(2)
+            txtCiudad.Text = lector2018(3)
+            txtEstado.Text = lector2018(4)
+            txtCveContacto.Text = lector2018(5)
+            txtNombreC.Text = lector2018(6)
+            txtTelefono.Text = lector2018(7)
+            txtExt.Text = lector2018(8)
+            TextCorreo.Text = lector2018(9)
+            txtReferencia.Text = lector2018(12)
+            txtObservaciones.Text = lector2018(13)
+            txtNumCond.Text = lector2018(14)
+            txtCotizo.Text = lector2018(19)
+            cboServicio.Text = lector2018(20)
+            lector2018.Close()
+            R = "select *from [1Cotizar] where Numcot =" & Val(txtCotizacion.Text)
+            comando2018.CommandText = R
+            lector2018 = comando2018.ExecuteReader
+            While lector2018.Read()
+                DGCotizaciones.Rows.Add(False, lector2018(2), lector2018(3), lector2018(5), lector2018(6), lector2018(7), lector2018(8), lector2018(10), lector2018(9), lector2018(11))
+            End While
+            lector2018.Close()
             dt2 = New DataTable
             With cmd
                 .Connection = conexion2018
                 .CommandText = "select Email from [Contactos-Clientes-Usuarios] where Email is not null"
-
             End With
             da.SelectCommand = cmd
             da.Fill(dt2)
-            'DataArticulos.DataSource = dt2
             dgInicioNombres.DataSource = dt2
-
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
             cadena = Err.Description
@@ -128,11 +61,8 @@ Public Class frmEdicionCot2018_2019
             Bitacora("frmEdicionCot2018-2019", "Error al cargar el formulario", Err.Number, cadena)
         End Try
         da.Dispose()
-        'clase.Close()
         conexion2018.Close()
     End Sub
-
-
     Private Sub txtCorreo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCorreo.KeyDown
         Try
             Select Case e.KeyData
@@ -140,65 +70,24 @@ Public Class frmEdicionCot2018_2019
                     MetodoMetasInf2018()
                     comando2018 = conexion2018.CreateCommand
                     Dim R As String
-                    R = " select distinct MetAsInf.Clavempresa, MetAsInf.Compania, MetAsInf.DomicilioConsig, MetAsInf.CiudadConsig, MetAsInf.EdoConsig,
-                     [Contactos-Clientes-Usuarios].ClaveContacto, [Contactos-Clientes-Usuarios].Nombre, [Contactos-Clientes-Usuarios].Tel,
-                     [Contactos-Clientes-Usuarios].Ext, [Contactos-Clientes-Usuarios].Email
-                     from [Contactos-Clientes-Usuarios] inner join MetAsInf on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
-                     where [Contactos-Clientes-Usuarios].Email ='" & txtCorreo.Text & "'"
+                    R = "select distinct isnull(MetAsInf.Clavempresa,'-'), isnull(MetAsInf.Compania,'-'), isnull(MetAsInf.DomicilioConsig,'-'), isnull(MetAsInf.CiudadConsig,'-'), isnull(MetAsInf.EdoConsig,'-'),
+                         isnull([Contactos-Clientes-Usuarios].ClaveContacto,'-'), isnull([Contactos-Clientes-Usuarios].Nombre,'-'), isnull([Contactos-Clientes-Usuarios].Tel,'-'),
+                         isnull([Contactos-Clientes-Usuarios].Ext,'-'), isnull([Contactos-Clientes-Usuarios].Email,'-')
+                         from [Contactos-Clientes-Usuarios] inner join MetAsInf on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
+                         where [Contactos-Clientes-Usuarios].Email ='" & txtCorreo.Text & "'"
                     comando2018.CommandText = R
                     lector2018 = comando2018.ExecuteReader
                     lector2018.Read()
-                    If ((lector2018(0) Is DBNull.Value) OrElse (lector2018(0) Is Nothing)) Then
-                        txtClaveE.Text = "-"
-                    Else
-                        txtClaveE.Text = lector2018(0)
-                    End If
-                    If ((lector2018(1) Is DBNull.Value) OrElse (lector2018(1) Is Nothing)) Then
-                        txtNombreEmpresa.Text = "-"
-                    Else
-                        txtNombreEmpresa.Text = lector2018(1)
-                    End If
-
-                    If ((lector2018(2) Is DBNull.Value) OrElse (lector2018(2) Is Nothing)) Then
-                        txtDomicilio.Text = "-"
-                    Else
-                        txtDomicilio.Text = lector2018(2)
-                    End If
-                    If ((lector2018(3) Is DBNull.Value) OrElse (lector2018(3) Is Nothing)) Then
-                        txtCiudad.Text = "-"
-                    Else
-                        txtCiudad.Text = lector2018(3)
-                    End If
-                    If ((lector2018(4) Is DBNull.Value) OrElse (lector2018(4) Is Nothing)) Then
-                        txtEstado.Text = "-"
-                    Else
-                        txtEstado.Text = lector2018(4)
-                    End If
-                    If ((lector2018(5) Is DBNull.Value) OrElse (lector2018(5) Is Nothing)) Then
-                        txtCveContacto.Text = "-"
-                    Else
-                        txtCveContacto.Text = lector2018(5)
-                    End If
-                    If ((lector2018(6) Is DBNull.Value) OrElse (lector2018(6) Is Nothing)) Then
-                        txtNombreC.Text = "-"
-                    Else
-                        txtNombreC.Text = lector2018(6)
-                    End If
-                    If ((lector2018(7) Is DBNull.Value) OrElse (lector2018(7) Is Nothing)) Then
-                        txtTelefono.Text = "-"
-                    Else
-                        txtTelefono.Text = lector2018(7)
-                    End If
-                    If ((lector2018(8) Is DBNull.Value) OrElse (lector2018(8) Is Nothing)) Then
-                        txtExt.Text = "-"
-                    Else
-                        txtExt.Text = lector2018(8)
-                    End If
-                    If ((lector2018(9) Is DBNull.Value) OrElse (lector2018(9) Is Nothing)) Then
-                        TextCorreo.Text = "-"
-                    Else
-                        TextCorreo.Text = lector2018(9)
-                    End If
+                    txtClaveE.Text = lector2018(0)
+                    txtNombreEmpresa.Text = lector2018(1)
+                    txtDomicilio.Text = lector2018(2)
+                    txtCiudad.Text = lector2018(3)
+                    txtEstado.Text = lector2018(4)
+                    txtCveContacto.Text = lector2018(5)
+                    txtNombreC.Text = lector2018(6)
+                    txtTelefono.Text = lector2018(7)
+                    txtExt.Text = lector2018(8)
+                    TextCorreo.Text = lector2018(9)
                     lector2018.Close()
                     conexion2018.Close()
             End Select
@@ -237,19 +126,9 @@ Public Class frmEdicionCot2018_2019
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         Try
             MetodoMetasInf2019()
-            ' fechaActual = DTPDesde.Value.Date.Day & "-" & DTPDesde.Value.Date.Month & "-" & DTPDesde.Value.Date.Year
-            '' fechaActual = DTPDesde.Value
             fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
-            'Dim fecha2, fecha3 As String
-            'fecha3 = DTPDesde.Value
-            'fecha2 = DTPDesde.Value.Date.ToString
-            'MsgBox(fechaActual)
-            ' MsgBox(fecha2)
-            'MsgBox(fecha3)
             Dim maximo As Integer
             Dim R As String
-
-            ''Aqui va el insert de entrada Registro cot
             If txtCotizacion19.Text.Trim.Equals("") Then
                 ''Es nueva cotizacion hasta el ultimo registro (select(MAX))
                 Dim comando As New SqlCommand("select MAX(Numcot) from EntradaRegistroCot", conexion2019)
@@ -266,9 +145,6 @@ Public Class frmEdicionCot2018_2019
                 " & Val(txtCotizo2019.Text) & "," & txtConta.Text & ")"
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
-                'MsgBox("")
-                ''Finalizo insert de EntradaRegistroCot
-
                 'Codigo para guardar en 1Cotizar----------------------------------------------------
                 For i = 0 To DGCotizaciones.Rows.Count - 2
                     R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
@@ -276,20 +152,16 @@ Public Class frmEdicionCot2018_2019
                     '" & "-" & "'," & Val(DGCotizaciones.Item(3, i).Value) & ",'" & DGCotizaciones.Item(4, i).Value & "',
                     '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "','
                     " & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
-                    ''MsgBox(R)
                     comando.CommandText = R
                     comando.ExecuteNonQuery()
                 Next i
                 MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
-                'lector2019.Close()
             Else
                 Dim comando As New SqlCommand("select MAX(Numcot) from EntradaRegistroCot", conexion2019)
                 Dim lector As SqlDataReader
                 lector = comando.ExecuteReader
                 lector.Read()
                 lector.Close()
-
-                ''Se hace update a una cot apartada, ya existente (UPDATE)
                 R = "update EntradaRegistroCot set NumCot='" & Val(txtCotizacion19.Text) & "', Cliente = '" & txtNombreEmpresa.Text & "', 
                 ClaveContacto='" & Val(txtCveContacto.Text) & "', Fecha= (CONVERT(varchar(10), getdate(), 103)), Referencia='" & txtReferencia.Text & "', 
                 Numcond='" & Val(txtNumCond.Text) & "', Observaciones='" & txtObservaciones.Text & "', ServicioEn='" & cboServicio.Text & "', 
@@ -297,8 +169,6 @@ Public Class frmEdicionCot2018_2019
                 ModoDeContabilizar='" & Val(txtConta.Text) & "' WHERE NumCot='" & Val(txtCotizacion19.Text) & "'"
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
-                ' MsgBox("Cotizacion Actualizada")
-
                 For i = 0 To DGCotizaciones.Rows.Count - 2
                     R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
                      ID, Punitariocot, Realizado) values (" & Val(txtCotizacion19.Text) & "," & Val(i + 1) & ",'" & DGCotizaciones.Item(2, i).Value & "',
@@ -307,7 +177,6 @@ Public Class frmEdicionCot2018_2019
                     " & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
                     comando.CommandText = R
                     comando.ExecuteNonQuery()
-                    'MsgBox("Partida " & i + 1 & "insertada")
                 Next i
                 MsgBox("Cotización actualizada y nuevas partidas agregadas, verifica registros en ACCESS", MsgBoxStyle.Information)
                 conexion2019.Close()
@@ -324,20 +193,4 @@ Public Class frmEdicionCot2018_2019
             Bitacora("frmEdicionCot2018-2019", "Error al momento de guardar", Err.Number, cadena)
         End Try
     End Sub
-
-    'Private Sub txtCorreo_TextChanged(sender As Object, e As EventArgs) Handles txtCorreo.TextChanged
-    '    MetodoMetasInf2018()
-    '    conexion2018.Open()
-    '    Dim R As String
-    '    R = "select Email from [Contactos-Clientes-Usuarios] where Email is not null and Email like '" & txtCorreo.Text & "%'"
-    '    Dim comando As New SqlCommand(R, conexion2018)
-    '    comando.CommandType = CommandType.Text
-    '    Dim da As New SqlDataAdapter(comando)
-    '    Dim dt As New DataTable
-    '    da.Fill(dt)
-    '    dgInicioNombres.DataSource = dt
-    '    da.Dispose()
-    '    conexion2018.Close()
-    '    txtCorreo.AutoCompleteCustomSource.Add(dgInicioNombres.SelectedCells.Item(0).Value)
-    'End Sub
 End Class
