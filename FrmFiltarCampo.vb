@@ -14,6 +14,9 @@
             lector2018.Close()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotPorFolio", "Error al cargar el formulario", Err.Number, cadena)
         End Try
     End Sub
 
@@ -43,6 +46,9 @@
             lector2018.Close()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotPorFolio", "Error al cargar el formulario", Err.Number, cadena)
         End Try
     End Sub
     Private Sub dgEmpresas_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgEmpresas.RowHeaderMouseClick
@@ -149,6 +155,9 @@
             lector2018.Close()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotPorFolio", "Error al cargar el formulario", Err.Number, cadena)
         End Try
     End Sub
 

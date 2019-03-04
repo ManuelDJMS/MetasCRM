@@ -46,12 +46,12 @@ Public Class FrmCotPorFolio
             End While
             lector2018.Close()
         Catch ex As Exception
-
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotPorFolio", "Error al cargar el formulario", Err.Number, cadena)
         End Try
     End Sub
-
-
-
     Private Sub btEliminar_Click(sender As Object, e As EventArgs) Handles btEliminar.Click
         For i As Integer = DGCotizaciones.Rows.Count() - 1 To 0 Step -1
             Dim delete As Boolean
@@ -65,7 +65,8 @@ Public Class FrmCotPorFolio
     End Sub
 
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
-        MetodoMetasInf2019()
+        Try
+            MetodoMetasInf2019()
         fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
         Dim maximo As Integer
         Dim R As String
@@ -126,7 +127,13 @@ Public Class FrmCotPorFolio
         FrmCotizacion2018.txtNombreE.Text = ""
         FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
         FrmCotizacion2018.DGEmpresas.DataSource = Nothing
-        Me.Dispose()
+            Me.Dispose()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotPorFolio", "Error al cargar el formulario", Err.Number, cadena)
+        End Try
     End Sub
 
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
