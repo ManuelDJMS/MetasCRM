@@ -337,9 +337,9 @@ Partial Class FrmHOME
         Me.Label32.ForeColor = System.Drawing.Color.White
         Me.Label32.Location = New System.Drawing.Point(50, 716)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(112, 15)
+        Me.Label32.Size = New System.Drawing.Size(98, 15)
         Me.Label32.TabIndex = 152
-        Me.Label32.Text = "Versión. 1.0.0.1.200"
+        Me.Label32.Text = "Versión. 1.0.0.2.0"
         '
         'Panel15
         '
