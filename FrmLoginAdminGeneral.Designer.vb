@@ -88,6 +88,7 @@ Partial Class FrmLoginAdminGeneral
         '
         'cmdIngresar
         '
+        Me.cmdIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdIngresar.Location = New System.Drawing.Point(260, 136)
         Me.cmdIngresar.Name = "cmdIngresar"
         Me.cmdIngresar.Size = New System.Drawing.Size(116, 29)
@@ -184,7 +185,7 @@ Partial Class FrmLoginAdminGeneral
         Me.lbVersion.Name = "lbVersion"
         Me.lbVersion.Size = New System.Drawing.Size(49, 13)
         Me.lbVersion.TabIndex = 48
-        Me.lbVersion.Text = "1.0.0.2.0"
+        Me.lbVersion.Text = "1.0.0.2.1"
         '
         'FrmLoginAdminGeneral
         '
