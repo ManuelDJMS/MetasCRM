@@ -42,7 +42,6 @@ Partial Class FrmHOME
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
@@ -314,7 +313,6 @@ Partial Class FrmHOME
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.GroupBox3.Controls.Add(Me.Label32)
         Me.GroupBox3.Controls.Add(Me.Panel15)
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Label23)
@@ -329,17 +327,6 @@ Partial Class FrmHOME
         Me.GroupBox3.Size = New System.Drawing.Size(212, 742)
         Me.GroupBox3.TabIndex = 31
         Me.GroupBox3.TabStop = False
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(50, 716)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(98, 15)
-        Me.Label32.TabIndex = 152
-        Me.Label32.Text = "Versión. 1.0.0.2.0"
         '
         'Panel15
         '
@@ -388,7 +375,7 @@ Partial Class FrmHOME
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(15, 699)
+        Me.Label23.Location = New System.Drawing.Point(15, 717)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(182, 15)
         Me.Label23.TabIndex = 40
@@ -993,7 +980,6 @@ Partial Class FrmHOME
     Friend WithEvents Label30 As Label
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Label31 As Label
-    Friend WithEvents Label32 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label33 As Label
     Friend WithEvents Label46 As Label

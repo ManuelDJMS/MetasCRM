@@ -1,14 +1,35 @@
-﻿Imports System.Data.Sql
+﻿Imports System.IO
 Imports System.Data.SqlClient
 Public Class FrmLoginAdminGeneral
     Public variable As String
+    Dim version As String
     Private Sub FrmLoginAdminGeneral_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ConexionGlobal2()
         ''Solamente Usuarios que tengan autorizacion de Administradores Generales de sistemas
-
+        LeerArchivo()
 
     End Sub
-
+    Sub LeerArchivo()
+        Dim leer As New StreamReader("\\10.10.10.7\Public-2\INSTALACIONES COTIZADOR\Metas Cotizador\version.txt")
+        Try
+            'Se abre el txt para ver la version
+            While leer.Peek <> -1
+                Dim linea As String = leer.ReadLine()
+                If String.IsNullOrEmpty(linea) Then
+                    Continue While
+                End If
+                variable = (linea)
+            End While
+            leer.Close()
+            If Not variable = lbVersion.Text Then 'Verifica si la version es igual a la del txt
+                MsgBox("Existe una nueva actualizacion", MsgBoxStyle.Exclamation, "METAS COTIZADOR")
+                Dim OpenFileDialog As New OpenFileDialog
+                Process.Start("\\10.10.10.7\Public-2\INSTALACIONES COTIZADOR\Metas Cotizador\MetasCotizador.msp")
+            End If
+        Catch ex As Exception
+            MsgBox("Se presento un problema al leer el archivo: " & ex.Message, MsgBoxStyle.Critical, ":::Aprendamos de Programación:::")
+        End Try
+    End Sub
     Private Sub cmdIngresar_Click(sender As Object, e As EventArgs) Handles cmdIngresar.Click
         logearUsuariosAdministradoresSistemas(txtUsuario.Text, txtContrasena.Text)
 

@@ -1,4 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports System
+Imports System.IO
+Imports System.Collections
 Module MetAsInf2019
 
     Public conexion2019 As SqlConnection              ''Base de datos METASINF-2019

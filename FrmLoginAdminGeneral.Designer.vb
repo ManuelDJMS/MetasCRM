@@ -36,6 +36,7 @@ Partial Class FrmLoginAdminGeneral
         Me.rbAdministradorSistemas = New System.Windows.Forms.RadioButton()
         Me.rbUsuariosCotizaciones = New System.Windows.Forms.RadioButton()
         Me.rbAdministrador = New System.Windows.Forms.RadioButton()
+        Me.lbVersion = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,12 +177,22 @@ Partial Class FrmLoginAdminGeneral
         Me.rbAdministrador.UseVisualStyleBackColor = True
         Me.rbAdministrador.Visible = False
         '
+        'lbVersion
+        '
+        Me.lbVersion.AutoSize = True
+        Me.lbVersion.Location = New System.Drawing.Point(353, 192)
+        Me.lbVersion.Name = "lbVersion"
+        Me.lbVersion.Size = New System.Drawing.Size(49, 13)
+        Me.lbVersion.TabIndex = 48
+        Me.lbVersion.Text = "1.0.0.2.0"
+        '
         'FrmLoginAdminGeneral
         '
         Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 214)
+        Me.Controls.Add(Me.lbVersion)
         Me.Controls.Add(Me.rbAdministradorSistemas)
         Me.Controls.Add(Me.rbUsuariosCotizaciones)
         Me.Controls.Add(Me.Label4)
@@ -219,4 +230,5 @@ Partial Class FrmLoginAdminGeneral
     Friend WithEvents rbAdministradorSistemas As RadioButton
     Friend WithEvents rbUsuariosCotizaciones As RadioButton
     Friend WithEvents rbAdministrador As RadioButton
+    Friend WithEvents lbVersion As Label
 End Class
