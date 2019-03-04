@@ -86,7 +86,7 @@ Public Class FrmCotPorFolio
             comando.ExecuteNonQuery()
             'Codigo para guardar en 1Cotizar----------------------------------------------------
             For i = 0 To DGCotizaciones.Rows.Count - 2
-                MsgBox(DGCotizaciones.Item(7, i).Value)
+                'MsgBox(DGCotizaciones.Item(7, i).Value)
                 R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
                      ID, Punitariocot, Realizado) values (" & maximo + 1 & "," & Val(i + 1) & ",'" & DGCotizaciones.Item(2, i).Value & "',
                     '" & "-" & "'," & Val(DGCotizaciones.Item(3, i).Value) & ",'" & DGCotizaciones.Item(4, i).Value & "',

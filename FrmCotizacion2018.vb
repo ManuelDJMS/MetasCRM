@@ -165,6 +165,7 @@ Public Class FrmCotizacion2018
 
     Private Sub rbCotizacion_CheckedChanged(sender As Object, e As EventArgs) Handles rbCotizacion.CheckedChanged
         If (rbCotizacion.Checked) Then
+            DGCotizaciones.Enabled = True
             'DGArticulos.Visible = False
             DGCotizaciones.Visible = True
             txtMarca.Visible = True
