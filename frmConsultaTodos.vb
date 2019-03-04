@@ -68,7 +68,9 @@ Public Class frmConsultaTodos
             End If
             comando2018 = conexion2018.CreateCommand
             Dim R As String
-            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where Marca like '" & txtMarca.Text & "%' order by [1Cotizar].Numcot desc"
+            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] 
+                inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where Marca like '" & txtMarca.Text & "%' 
+                and Modelo like '" & txtModelo.Text & "%' and ID like '" & TextID.Text & "%' order by [1Cotizar].Numcot desc"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
@@ -93,7 +95,9 @@ Public Class frmConsultaTodos
             End If
             comando2018 = conexion2018.CreateCommand
             Dim R As String
-            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where Modelo like '" & txtModelo.Text & "%' order by [1Cotizar].Numcot desc"
+            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] 
+                inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where Marca like '" & txtMarca.Text & "%' 
+                and Modelo like '" & txtModelo.Text & "%' and ID like '" & TextID.Text & "%' order by [1Cotizar].Numcot desc"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
@@ -137,7 +141,9 @@ Public Class frmConsultaTodos
             End If
             comando2018 = conexion2018.CreateCommand
             Dim R As String
-            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where ID like '" & TextID.Text & "%' order by [1Cotizar].Numcot desc"
+            R = "select PartidaNo, ServCatalogo, Cant, Tipo, Marca, Modelo, ID, Alcance, Punitariocot from [1Cotizar] 
+                inner join EntradaRegistroCot on [1Cotizar].Numcot=EntradaRegistroCot.Numcot where Marca like '" & txtMarca.Text & "%' 
+                and Modelo like '" & txtModelo.Text & "%' and ID like '" & TextID.Text & "%' order by [1Cotizar].Numcot desc"
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()

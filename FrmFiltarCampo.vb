@@ -160,6 +160,4 @@
             Bitacora("FrmCotPorFolio", "Error al cargar el formulario", Err.Number, cadena)
         End Try
     End Sub
-
-
 End Class
