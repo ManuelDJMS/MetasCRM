@@ -34,7 +34,7 @@ Public Class frmConsultaTodos
                          isnull([Contactos-Clientes-Usuarios].Nombre,'-'), isnull([Contactos-Clientes-Usuarios].Tel,'-'),
                          isnull([Contactos-Clientes-Usuarios].Ext,'-'), isnull([Contactos-Clientes-Usuarios].Email,'-')
                          from [Contactos-Clientes-Usuarios] inner join MetAsInf on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
-                         where [Contactos-Clientes-Usuarios].Email ='" & txtCorreo.Text & "'"
+                         where [Contactos-Clientes-Usuarios].Email like '%" & txtCorreo.Text & "' or [Contactos-Clientes-Usuarios].Email like '" & txtCorreo.Text & "%'"
                     comando2018.CommandText = R
                     lector2018 = comando2018.ExecuteReader
                     lector2018.Read()
