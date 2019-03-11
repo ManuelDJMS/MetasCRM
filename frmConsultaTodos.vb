@@ -26,8 +26,8 @@ Public Class frmConsultaTodos
         Try
             Select Case e.KeyData
                 Case Keys.Enter
-                    MetodoMetasInf2018()
-                    comando2018 = conexion2018.CreateCommand
+                    MetodoInformacionGeneral()
+                    comando2018 = conexionInformacionGeneral.CreateCommand
                     Dim R As String
                     R = "select distinct isnull(MetAsInf.Clavempresa,'-'), isnull(MetAsInf.Compania,'-'), isnull(MetAsInf.DomicilioConsig,'-'), 
                          isnull(MetAsInf.CiudadConsig,'-'), isnull(MetAsInf.EdoConsig,'-'),isnull([Contactos-Clientes-Usuarios].ClaveContacto,'-'),
