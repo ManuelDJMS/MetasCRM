@@ -7,7 +7,6 @@ Public Class FrmLoginAdminGeneral
         'ConexionGlobal2()
         ''Solamente Usuarios que tengan autorizacion de Administradores Generales de sistemas
         LeerArchivo()
-
     End Sub
     Sub LeerArchivo()
         Dim leer As New StreamReader("\\10.10.10.7\Public-2\INSTALACIONES COTIZADOR\Metas Cotizador\version.txt")

@@ -185,7 +185,7 @@ Partial Class FrmLoginAdminGeneral
         Me.lbVersion.Name = "lbVersion"
         Me.lbVersion.Size = New System.Drawing.Size(49, 13)
         Me.lbVersion.TabIndex = 48
-        Me.lbVersion.Text = "1.0.0.2.1"
+        Me.lbVersion.Text = "1.0.0.2.2"
         '
         'FrmLoginAdminGeneral
         '
