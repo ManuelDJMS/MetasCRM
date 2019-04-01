@@ -516,7 +516,7 @@ Public Class FrmFoliosDelAnioAnterior
             lector2019.Close()
             ''------------------------------------------------------------------------
             comando2019 = conexion2019.CreateCommand
-            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADEF-EL'"
+            r = "select max(INFORME) from [INFORMES-SERVICIOS] where MAGNITUD = 'MADF-EL'"
             comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             lector2019.Read()
