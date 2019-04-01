@@ -851,9 +851,9 @@ Partial Class FrmFoliosDelAnioAnterior
         Me.Label24.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label24.Location = New System.Drawing.Point(644, 8)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(62, 15)
+        Me.Label24.Size = New System.Drawing.Size(56, 15)
         Me.Label24.TabIndex = 168
-        Me.Label24.Text = "MADEF-EL"
+        Me.Label24.Text = "MADF-EL"
         '
         'Label21
         '
