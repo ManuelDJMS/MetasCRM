@@ -44,143 +44,226 @@ Public Class FrmContactos
             Dim vacio As String = "---"
             MetodoLIMS()
             Dim R As String
-            R = "select * from SetupCustomerDetails where CustomerId= " & clave & ""
+            R = "select SetupCustomerDetails.[CustomerId]
+      ,SetupCustomerDetails.[CustAccountNo]
+      ,SetupCustomerDetails.[FirstName]
+      ,SetupCustomerDetails.[MiddleName]
+      ,SetupCustomerDetails.[LastName]
+      ,SetupCustomerDetails.[Phone]
+      ,SetupCustomerDetails.[Mobile]
+      ,SetupCustomerDetails.[Email]
+      ,SetupCustomerDetails.[Fax]
+      ,SetupCustomerDetails.[CompanyName]
+      ,SetupCustomerDetails.[IsActive]
+      ,SetupCustomerDetails.[Source]
+      ,SetupCustomerDetails.[AdminType]
+      ,SetupCustomerDetails.[PaymentTerms]
+      ,SetupCustomerDetails.[IsCod]
+      ,SetupCustomerDetails.[IsTaxable]
+      ,SetupCustomerDetails.[IsCallDataReq]
+      ,SetupCustomerDetails.[IsOOTNoticeReq]
+      ,SetupCustomerDetails.[IsCallHistoryReq]
+      ,SetupCustomerDetails.[QualityReqment]
+      ,SetupCustomerDetails.[CallDueDateAdj]
+      ,SetupCustomerDetails.[LabNotes]
+      ,SetupCustomerDetails.[CreatedBy]
+      ,SetupCustomerDetails.[CreatedOn]
+      ,SetupCustomerDetails.[ModifiedBy]
+      ,SetupCustomerDetails.[ModifiedOn]
+      ,SetupCustomerDetails.[DefaultPO]
+      ,SetupCustomerDetails.[ShipMode]
+      ,SetupCustomerDetails.[CalDiscount]
+      ,SetupCustomerDetails.[TaxExemption]
+      ,SetupCustomerDetails.[Department]
+      ,SetupCustomerDetails.[Email2]
+      ,SetupCustomerDetails.[CategoryCustomer]
+      ,SetupCustomerDetails.[TaxIDNo]
+      ,SetupCustomerDetails.[Currency]
+      ,SetupCustomerDetails.[PaymentOption]
+      ,SetupCustomerDetails.[ShipmentAccount]
+      ,SetupCustomerDetails.[WorkingHours]
+      ,SetupCustomerDetails.[RecallNotice]
+      ,SetupCustomerDetails.[AttachmentName]
+      ,SetupCustomerDetails.[IsDigitalCertificate]
+      ,SetupCustomerDetails.[Attachment]
+      ,SetupCustomerDetails.[IsShipAccActive]
+      ,SetupCustomerDetails.[KeyFiscal]
+      ,SetupCustomerDetails.[Organization]
+
+	  ,SetupCustomerAddressDtls.[AddressId]
+      ,SetupCustomerAddressDtls.[CustomerId]
+      ,SetupCustomerAddressDtls.[ContAddress1]
+      ,SetupCustomerAddressDtls.[ContAddress2]
+      ,SetupCustomerAddressDtls.[ContAddress3]
+      ,SetupCustomerAddressDtls.[ContCity]
+      ,SetupCustomerAddressDtls.[ContState]
+      ,SetupCustomerAddressDtls.[ContZip]
+      ,SetupCustomerAddressDtls.[BillAddress1]
+      ,SetupCustomerAddressDtls.[BillAddress2]
+      ,SetupCustomerAddressDtls.[BillAddress3]
+      ,SetupCustomerAddressDtls.[BillCity]
+      ,SetupCustomerAddressDtls.[BillState]
+      ,SetupCustomerAddressDtls.[BillZip]
+      ,SetupCustomerAddressDtls.[ShipAddress1]
+      ,SetupCustomerAddressDtls.[ShipAddress2]
+      ,SetupCustomerAddressDtls.[ShipAddress3]
+      ,SetupCustomerAddressDtls.[ShipCity]
+      ,SetupCustomerAddressDtls.[ShipState]
+      ,SetupCustomerAddressDtls.[ShipZip]
+      ,SetupCustomerAddressDtls.[ContCountry]
+      ,SetupCustomerAddressDtls.[BillCountry]
+      ,SetupCustomerAddressDtls.[ShipCountry]
+
+	  ,SetupCustomerEmails.[CustomerEmailId]
+      ,SetupCustomerEmails.[CustomerId]
+      ,SetupCustomerEmails.[FName]
+      ,SetupCustomerEmails.[LName]
+      ,SetupCustomerEmails.[Department]
+      ,SetupCustomerEmails.[EmailId]
+      ,SetupCustomerEmails.[MailSend]
+
+	  ,SetupCustomerEquipmentMapping.[CustEquipMapId]
+      ,SetupCustomerEquipmentMapping.[CustomerId]
+      ,SetupCustomerEquipmentMapping.[EquipId]
+      ,SetupCustomerEquipmentMapping.[InstrumentId]
+      ,SetupCustomerEquipmentMapping.[SrlNo]
+      ,SetupCustomerEquipmentMapping.[Dept]
+      ,SetupCustomerEquipmentMapping.[Location]
+      ,SetupCustomerEquipmentMapping.[CALInterval]
+      ,SetupCustomerEquipmentMapping.[CALCycle]
+      ,SetupCustomerEquipmentMapping.[CALDue]
+      ,SetupCustomerEquipmentMapping.[IsActive]
+      ,SetupCustomerEquipmentMapping.[OnSite]
+      ,SetupCustomerEquipmentMapping.[ShortNotes]
+      ,SetupCustomerEquipmentMapping.[AssetNo]
+
+	  ,SetupCustomerSource.[id]
+      ,SetupCustomerSource.[CustomerSource]
+
+	  from SetupCustomerDetails
+	  inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId
+	  inner join SetupCustomerEmails on SetupCustomerDetails.CustomerId = SetupCustomerEmails.CustomerId
+	  inner join SetupCustomerEquipmentMapping on SetupCustomerDetails.CustomerId =  SetupCustomerEquipmentMapping.CustomerId
+	  inner join SetupCustomerSource on SetupCustomerDetails.CustomerId =  SetupCustomerSource.id where SetupCustomerDetails.[CustomerId]= " & clave & ""
+
             Dim comando As New SqlCommand(R, conexionLIMS)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader()
             If lector.Read() Then
+
                 txtClaveRecopilada.Text = lector(0)
-                '' MsgBox("Clave recopilada: " & txtClaveRecopilada.Text)
                 txtNumeroDeCuenta.Text = lector(1)
-                MsgBox(txtNumeroDeCuenta.Text)
-
                 txtNombreDeContacto.Text = lector(2) & " " & lector(3) & " " & lector(4)
-                MsgBox(txtNombreDeContacto.Text)
-
                 txtTelefono.Text = lector(5)
-                MsgBox(txtTelefono.Text)
-
                 txtCelular.Text = lector(6)
-                MsgBox(txtCelular.Text)
-
                 txtCorreo1.Text = lector(7)
-                MsgBox(txtCorreo1.Text)
-
                 txtFax.Text = lector(8)
-                MsgBox(txtFax.Text)
-
                 txtNombreCompania.Text = lector(9)
-                MsgBox(txtNombreCompania.Text)
+                txtDepartamento.Text = lector(30)
+
+                txtDireccion.Text = lector(47)
+                txtEdo.Text = lector(51)
+                txtCiudad.Text = lector(50)
+                txtDireccion2.Text = lector(48)
+                txtDireccion3.Text = lector(49)
+                txtCodigoPostal.Text = lector(52)
+                txtPais.Text = lector(65)
+
+                txtDireccion1DeFacturacion.Text = lector(53)
+                txtEstadoDeFacturacion.Text = lector(57)
+                txtCiudadDeFacturacion.Text = lector(56)
+                txtDireccion2DeFacturacion.Text = lector(54)
+                txtDireccion3DeFacturacion.Text = lector(55)
+                txtCPDeFacturacion.Text = lector(58)
+                txtPaisDeFacturacion.Text = lector(66)
+
+
+                txtDireccion1DeEntrega.Text = lector(59)
+                txtEstadoDeEntrega.Text = lector(63)
+                txtCiudadDeEntrega.Text = lector(62)
+                txtDireccion2DeEntrega.Text = lector(60)
+                txtDireccion3DeEntrega.Text = lector(61)
+                txtCPDeEntrega.Text = lector(64)
+                txtPaisDeEntrega.Text = lector(67)
+
+
 
                 If lector(10).ToString.Trim.Equals("Y") Then
                     isActive = True
                     CBActivo.Checked = True
-                    MsgBox(lector(10).ToString)
                 Else
                     isActive = False
                     CBActivo.Checked = False
                 End If
 
-                'Dim aux As SqlDataReader
-                'comando.CommandText = "select [CustomerSource] from [SetupCustomerSource] where id= " & Val(lector(11)) & ""
-                'aux = comando.ExecuteReader
-                'aux.Read()
-                'txtOrigenContacto.Text = aux(0)
-                'MsgBox(txtOrigenContacto.Text)
-                'aux.Close()
-
-                'Dim lector2 As SqlDataReader
-                'comando.CommandText = "select [[CustomerType]] from [MasterCustomerType] where Id= " & Val(lector(12)) & ""
-                'lector2 = comando.ExecuteReader
-                'lector2.Read()
-                'txtTipoDeCliente.Text = lector2(0)
-                'MsgBox(txtTipoDeCliente.Text)
-                'lector2.Close()
-
                 txtTerminosDePago.Text = lector(13)
-                MsgBox(txtTerminosDePago.Text)
 
                 If lector(14).ToString.Trim.Equals("Y") Then
                     cbCOD.Checked = True
-                    MsgBox(lector(14))
                 Else
                     cbCOD.Checked = False
                 End If
                 If lector(15).ToString.Trim.Equals("Y") Then
                     cbTaxable.Checked = True
-                    MsgBox(lector(15))
                 Else
                     cbTaxable.Checked = False
                 End If
                 If lector(16).ToString.Trim.Equals("Y") Then
                     CBCalibrationDataRequiered.Checked = True
-                    MsgBox(lector(16))
                 Else
                     CBCalibrationDataRequiered.Checked = False
                 End If
                 If lector(17).ToString.Trim.Equals("Y") Then
                     CBOOTNoticeRequiered.Checked = True
-                    MsgBox(lector(17))
                 Else
                     CBOOTNoticeRequiered.Checked = False
                 End If
                 If lector(18).ToString.Trim.Equals("Y") Then
                     CBRequiresCalHistory.Checked = True
-                    MsgBox(lector(18))
                 Else
                     CBRequiresCalHistory.Checked = False
                 End If
 
+
+
                 txtCalidad.Text = lector(19)
-                MsgBox(txtCalidad.Text)
                 txtCalDueDate.Text = lector(20)
-                MsgBox(txtCalDueDate.Text)
                 txtNotasLab.Text = lector(21)
-                MsgBox(txtNotasLab.Text)
-                txtDefaultPO.Text = lector(26)
-                MsgBox(txtDefaultPO.Text)
-                txtModoDeEnvio.Text = lector(27)
-                MsgBox(txtModoDeEnvio.Text)
-                txtDescuentoDeCal.Text = lector(28)
-                MsgBox(txtDescuentoDeCal.Text)
-                txtTaxEx.Text = lector(29)
-                MsgBox(txtTaxEx.Text)
-                txtDepartamento.Text = lector(30)
-                MsgBox(txtDepartamento.Text)
-                txtCorreo2.Text = lector(31)
-                MsgBox(txtCorreo2.Text)
+
+                txtOrigenContacto.Text = lector(11)
+                txtTipoDeCliente.Text = lector(12)
+                txtTerminosDePago.Text = lector(13)
                 txtCategoria.Text = lector(32)
-                MsgBox(txtCategoria.Text)
                 txtIDFiscal.Text = lector(33)
-                MsgBox(txtIDFiscal.Text)
                 txtMoneda.Text = lector(34)
-                MsgBox(txtMoneda.Text)
                 txtOpcionesDePago.Text = lector(35)
-                MsgBox(txtOpcionesDePago.Text)
+
+                txtDefaultPO.Text = lector(26)
+                txtModoDeEnvio.Text = lector(27)
+                txtDescuentoDeCal.Text = lector(28)
+                txtTaxEx.Text = lector(29)
                 txtCuentaDeEnvio.Text = lector(36)
-                MsgBox(txtCuentaDeEnvio.Text)
                 txtHorarioDeTrabajo.Text = lector(37)
-                MsgBox(txtHorarioDeTrabajo.Text)
                 txtAvisoDeRecupeacion.Text = lector(38)
-                MsgBox(txtAvisoDeRecupeacion.Text)
+
 
                 If lector(40).ToString.Trim.Equals("Y") Then
                     CBOnlyDigitalCer.Checked = True
-                    MsgBox(lector(40))
+
                 Else
                     CBOnlyDigitalCer.Checked = False
                 End If
                 If lector(42).ToString.Trim.Equals("Y") Then
                     cbActivo1.Checked = True
-                    MsgBox(lector(42))
+
                 Else
                     cbActivo1.Checked = False
                 End If
 
                 txtKeyFiscal.Text = lector(43)
-                MsgBox(txtKeyFiscal.Text)
+
                 txtOrganizacion.Text = lector(44)
-                MsgBox(txtOrganizacion.Text)
+
 
                 MsgBox("Fin de la lectura")
             Else
@@ -203,13 +286,12 @@ Public Class FrmContactos
         MetodoLIMS()
         DGConsulta.Refresh()
         Dim R As String
-        R = "select [CustomerId], [FirstName], [CompanyName], [CustAccountNo], [Email], [POPickList], 
-            [PaymentTerms], [CustomerSource], [CustomerType], [ShipVia], [IsTaxable], [IsCallDataReq] 
-            from [MetAs_Live].[dbo].[SetupCustomerDetails] inner join [MetAs_Live].[dbo].[MasterPoPickList] 
-            on [MetAs_Live].[dbo].[MasterPoPickList].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[DefaultPO] 
-            left join [MetAs_Live].[dbo].[SetupCustomerSource] on [MetAs_Live].[dbo].[SetupCustomerSource].[id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[Source] 
-            left join [MetAs_Live].[dbo].[MasterCustomerType] on [MetAs_Live].[dbo].[MasterCustomerType].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[AdminType] 
-            left join [MetAs_Live].[dbo].[SetupShippingMode] on [MetAs_Live].[dbo].[SetupShippingMode].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[ShipMode] order by [FirstName]"
+        R = "  select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+                inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
+                left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
+                order by [FirstName]"
         Dim comando As New SqlCommand(R, conexionLIMS)
         comando.CommandType = CommandType.Text
         Dim da As New SqlDataAdapter(comando)
@@ -243,14 +325,11 @@ Public Class FrmContactos
 
     Private Sub txtNombreB_TextChanged(sender As Object, e As EventArgs) Handles txtNombreB.TextChanged
         Dim R As String
-        R = "select [CustomerId], [FirstName], [CompanyName], [CustAccountNo], [Email], [POPickList], 
-            [PaymentTerms], [CustomerSource], [CustomerType], [ShipVia], [isTaxable], [isCallDataReq] 
-            From [MetAs_Live].[dbo].[SetupCustomerDetails] inner Join [MetAs_Live].[dbo].[MasterPoPickList] 
-            On [MetAs_Live].[dbo].[MasterPoPickList].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[DefaultPO] 
-            Left Join [MetAs_Live].[dbo].[SetupCustomerSource] on [MetAs_Live].[dbo].[SetupCustomerSource].[id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[Source] 
-            Left Join [MetAs_Live].[dbo].[MasterCustomerType] on [MetAs_Live].[dbo].[MasterCustomerType].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[AdminType] 
-            Left Join [MetAs_Live].[dbo].[SetupShippingMode] on [MetAs_Live].[dbo].[SetupShippingMode].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[ShipMode] 
-            where SetupCustomerDetails.FirstName Like '%' + @clave + '%'"
+        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+                inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
+                left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] where SetupCustomerDetails.FirstName Like '%' + @clave + '%'"
         Dim comando As New SqlCommand(R, conexionLIMS)
         comando.CommandType = CommandType.Text
         comando.Parameters.AddWithValue("@clave", txtNombreB.Text)
@@ -264,19 +343,17 @@ Public Class FrmContactos
             'txtClaveEmpresa.Enabled = True
         End If
         For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("FirstName").Style.BackColor = Color.LightCyan
+            fila.Cells("Nombre").Style.BackColor = Color.LightCyan
         Next
     End Sub
 
     Private Sub txtCompaniaB_TextChanged(sender As Object, e As EventArgs) Handles txtCompaniaB.TextChanged
         Dim R As String
-        R = "select [CustomerId], [FirstName], [CompanyName], [CustAccountNo], [Email], [POPickList], 
-            [PaymentTerms], [CustomerSource], [CustomerType], [ShipVia], [isTaxable], [isCallDataReq] 
-            From [MetAs_Live].[dbo].[SetupCustomerDetails] inner Join [MetAs_Live].[dbo].[MasterPoPickList] 
-            On [MetAs_Live].[dbo].[MasterPoPickList].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[DefaultPO] 
-            Left Join [MetAs_Live].[dbo].[SetupCustomerSource] on [MetAs_Live].[dbo].[SetupCustomerSource].[id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[Source] 
-            Left Join [MetAs_Live].[dbo].[MasterCustomerType] on [MetAs_Live].[dbo].[MasterCustomerType].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[AdminType] 
-            Left Join [MetAs_Live].[dbo].[SetupShippingMode] on [MetAs_Live].[dbo].[SetupShippingMode].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[ShipMode] 
+        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+                inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
+                left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
             where SetupCustomerDetails.CompanyName Like '%' + @clave + '%'"
         Dim comando As New SqlCommand(R, conexionLIMS)
         comando.CommandType = CommandType.Text
@@ -291,20 +368,18 @@ Public Class FrmContactos
             'txtClaveEmpresa.Enabled = True
         End If
         For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("CompanyName").Style.BackColor = Color.LightCyan
+            fila.Cells("Empresa").Style.BackColor = Color.LightCyan
         Next
     End Sub
 
     Private Sub txtNumeroDeCuentaB_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroDeCuentaB.TextChanged
         ''código de consulta
         Dim R As String
-        R = "select [CustomerId], [FirstName], [CompanyName], [CustAccountNo], [Email], [POPickList], 
-            [PaymentTerms], [CustomerSource], [CustomerType], [ShipVia], [isTaxable], [isCallDataReq] 
-            From [MetAs_Live].[dbo].[SetupCustomerDetails] inner Join [MetAs_Live].[dbo].[MasterPoPickList] 
-            On [MetAs_Live].[dbo].[MasterPoPickList].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[DefaultPO] 
-            Left Join [MetAs_Live].[dbo].[SetupCustomerSource] on [MetAs_Live].[dbo].[SetupCustomerSource].[id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[Source] 
-            Left Join [MetAs_Live].[dbo].[MasterCustomerType] on [MetAs_Live].[dbo].[MasterCustomerType].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[AdminType] 
-            Left Join [MetAs_Live].[dbo].[SetupShippingMode] on [MetAs_Live].[dbo].[SetupShippingMode].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[ShipMode] 
+        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+                inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
+                left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
             where SetupCustomerDetails.CustAccountNo Like '%' + @clave + '%'"
         Dim comando As New SqlCommand(R, conexionLIMS)
         comando.CommandType = CommandType.Text
@@ -319,20 +394,18 @@ Public Class FrmContactos
             'txtClaveEmpresa.Enabled = True
         End If
         For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("CustAccountNo").Style.BackColor = Color.LightCyan
+            fila.Cells("No. Cuenta").Style.BackColor = Color.LightCyan
         Next
     End Sub
 
     Private Sub txtCorreoB_TextChanged(sender As Object, e As EventArgs) Handles txtCorreoB.TextChanged
         ''código de consulta
         Dim R As String
-        R = "select [CustomerId], [FirstName], [CompanyName], [CustAccountNo], [Email], [POPickList], 
-            [PaymentTerms], [CustomerSource], [CustomerType], [ShipVia], [isTaxable], [isCallDataReq] 
-            From [MetAs_Live].[dbo].[SetupCustomerDetails] inner Join [MetAs_Live].[dbo].[MasterPoPickList] 
-            On [MetAs_Live].[dbo].[MasterPoPickList].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[DefaultPO] 
-            Left Join [MetAs_Live].[dbo].[SetupCustomerSource] on [MetAs_Live].[dbo].[SetupCustomerSource].[id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[Source] 
-            Left Join [MetAs_Live].[dbo].[MasterCustomerType] on [MetAs_Live].[dbo].[MasterCustomerType].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[AdminType] 
-            Left Join [MetAs_Live].[dbo].[SetupShippingMode] on [MetAs_Live].[dbo].[SetupShippingMode].[Id] = [MetAs_Live].[dbo].[SetupCustomerDetails].[ShipMode] 
+        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+                inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
+                left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
+                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode]
             where SetupCustomerDetails.[Email] LIKE '%' + @clave + '%'"
         Dim comando As New SqlCommand(R, conexionLIMS)
         comando.CommandType = CommandType.Text
@@ -347,7 +420,7 @@ Public Class FrmContactos
             'txtClaveEmpresa.Enabled = True
         End If
         For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("Email").Style.BackColor = Color.LightCyan
+            fila.Cells("Correo").Style.BackColor = Color.LightCyan
         Next
     End Sub
 
