@@ -23,13 +23,16 @@ Public Class FrmProspectos
         cboRelacionadoConTareas.Items.Add("Cotizaciones")
         cboRelacionadoConTareas.Items.Add("Calibración")
 
+        cboStatusFiltrado.Items.Add("Nuevo")
+        cboStatusFiltrado.Items.Add("Working")
+        cboStatusFiltrado.Items.Add("No habilitado")
+        cboStatusFiltrado.Items.Add("Convertido")
+
         alternarColorColumnas(DGConsulta)
     End Sub
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         Me.Dispose()
         Dim Admin As New FrmHOME
-        Admin.PanelRecordatorioSemana.Visible = True
-
         Admin.Show()
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
@@ -438,6 +441,27 @@ Public Class FrmProspectos
             EtiquetaNombreDeProspecto2.Text = txtNombre.Text
             TabConsulta.SelectTab(1)
             ''Evento click para la regilla---------------------------
+            If txtEstado.Text <> "Convertido" Then
+                btCancelar.Enabled = True
+                btGuardar.Enabled = True
+                Button3.Enabled = True
+            Else
+                btCancelar.Enabled = False
+                btGuardar.Enabled = False
+                Button3.Enabled = True
+            End If
+            If EtiquetaNombreDeProspecto.Text <> "" Then
+                btAgregarLlamada.Enabled = True
+                txtAsuntoLlamada.Enabled = True
+                txtComentariosLlamada.Enabled = True
+                DTPFechaEstimadaDeLlamada.Enabled = True
+                cboRelacionadoConLlamada.Enabled = True
+                btAgregarTarea.Enabled = True
+                txtAsuntoTarea.Enabled = True
+                txtAsignadoTarea.Enabled = True
+                DTPFechaDeVencimiento.Enabled = True
+                cboRelacionadoConTareas.Enabled = True
+            End If
         Catch ex As Exception
             MsgBox("Selecciona un registro válido de la regilla.", MsgBoxStyle.Information)
         End Try
@@ -485,7 +509,8 @@ Public Class FrmProspectos
                 Admin.cboTipoIndustria.Text = txtTipoIndustri.Text ''
                 Admin.txtCreado.Text = txtCreado.Text
                 Admin.txtModificado.Text = txtModificado.Text
-                Admin.btGuardar.Text = "guardar"
+                Admin.btGuardar.Text = "Actualizar datos"
+                Admin.Label42.Text = "Modificar datos de prospecto"
                 Admin.btCancelar.Visible = False
                 Admin.btGuardarYnuevo.Visible = False
                 Admin.txtUsuarioActual.Text = txtNombreEmpleado.Text
@@ -893,6 +918,36 @@ Public Class FrmProspectos
         txtComentariosLlamada.Text = ""
         cboRelacionadoConLlamada.Text = ""
         EtiquetaNombreDeProspecto.Text = ""
+    End Sub
+
+    Private Sub cboStatusFiltrado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboStatusFiltrado.SelectedIndexChanged
+        Try
+            'DGConsulta.Rows.Clear()
+            MetodoMetasCotizador()
+            Dim R As String
+            R = "select idProspecto as [Clave de prospecto], Nombre, Compania, Direccion as Dirección, Estado as [Estado o Provincia], Ciudad,  Telefono, Correo, Status, FechaCreacion, Notas from Prospectos where Prospectos.Status LIKE '%' + @Parametro + '%'"
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            comando.CommandType = CommandType.Text
+            comando.Parameters.AddWithValue("@Parametro", cboStatusFiltrado.Text)
+            Dim da As New SqlDataAdapter(comando)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                DGConsulta.DataSource = Nothing
+            Else
+                DGConsulta.DataSource = dt
+                txtNombreP.Text = ""
+                txtTelefonoP.Text = ""
+                txtCorreoP.Text = ""
+                txtCP.Text = ""
+            End If
+            For Each fila As DataGridViewRow In DGConsulta.Rows
+                fila.Cells("Clave de prospecto").Style.BackColor = Color.LightSteelBlue
+            Next
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 
     Public Sub limpiarRegistroTareas()

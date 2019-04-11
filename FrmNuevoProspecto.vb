@@ -7,12 +7,12 @@ Public Class FrmNuevoProspecto
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
         '  Try
-        If btGuardar.Text.Trim.Equals("guardar") Then
+        If btGuardar.Text.Trim.Equals("Actualizar datos") Then
             'Try
             If cbGeneral.Checked() = True And cbAdicional.Checked = True And cbinfoAdd.Checked = True Then
                 MetodoMetasCotizador()
                 Dim R As String
-                        R = "update Prospectos set Nombre='" & txtNombreProspecto.Text.Trim & "',
+                R = "update Prospectos set Nombre='" & txtNombreProspecto.Text.Trim & "',
                         TratoSaludo='" & cboSaludo.Text.Trim & "', 
                         Apellidos='" & txtApellidosProspecto.Text.Trim & "', 
                         Telefono='" & txtTelefonoProspecto.Text.Trim & "',
@@ -37,26 +37,29 @@ Public Class FrmNuevoProspecto
                         TipoIndustria='" & cboTipoIndustria.Text.Trim & "' where idProspecto=" & Val(txtClaveRecopilada.Text) & ""
                 Dim comando As New SqlCommand(R, conexionMetasCotizador)
                 comando.ExecuteNonQuery()
-                        MsgBox("Modificado correctamente", MsgBoxStyle.Information)
-                        LimpiarTextos()
-                        DeshabilitarTextos()
+                MsgBox("Modificado correctamente", MsgBoxStyle.Information)
+                LimpiarTextos()
+                DeshabilitarTextos()
                 Me.Dispose()
                 conexionMetasCotizador.Close()
             Else
-                        MsgBox("Finaliza la inserción de datos, marca las casillas de verificación", MsgBoxStyle.Exclamation)
-                    End If
+                MsgBox("Finaliza la inserción de datos, marca las casillas de verificación", MsgBoxStyle.Exclamation)
+            End If
             ' Catch ex As Exception
             'Box("Ocurrio un error en la modificación del prospecto, verifica los datos e intenta nuevamente", MsgBoxStyle.Exclamation)
             'End Try
         Else
-                If cbGeneral.Checked() = True And cbAdicional.Checked = True And cbinfoAdd.Checked = True Then
+            If cbGeneral.Checked() = True And cbAdicional.Checked = True And cbinfoAdd.Checked = True Then
                     Dim quienModifico, FechaModificacion As String
                     quienModifico = "-"
                     FechaModificacion = "-"
                     'Insert en Prospectos
                     If txtNombreProspecto.Text.Trim.Equals("") Or txtApellidosProspecto.Text.Trim.Equals("") Or txtTelefonoProspecto.Text.Trim.Equals("") Or txtCorreoProspecto.Text.Trim.Equals("") Or txtCompaniaProspecto.Text.Trim.Equals("") Or txtDireccionProspecto.Text.Trim.Equals("") Or cboStatus.Text.Trim.Equals("") Then
-                        MsgBox("Por favor completa los campos obligatorios.", MsgBoxStyle.Exclamation)
-                    Else
+                    MsgBox("Por favor completa los campos obligatorios.", MsgBoxStyle.Exclamation)
+                    cbGeneral.Checked = False
+                    cbAdicional.Checked = False
+                    cbinfoAdd.Checked = False
+                Else
                     MetodoMetasCotizador()
                     Dim R As String
                     R = "insert into Prospectos (Nombre, Apellidos, Telefono, Ext, Celular,
@@ -114,28 +117,28 @@ Public Class FrmNuevoProspecto
                         Correo, Puesto, HorarioTrabajo, Compania, Direccion, NumExt, CP, 
                         Colonia, Pais, Estado, Ciudad, Notas, QuienCreo, FechaCreacion, QuienModifico,
                         FechaModificacion, Status, OrigenProspecto, TipoIndustria) 
-                values ('" & txtNombreProspecto.Text.Trim & "'," & txtApellidosProspecto.Text.Trim & "'," & txtTelefonoProspecto.Text.Trim & "'," & txtExtProspecto.Text.Trim & "',
-                " & txtCelularProspecto.Text.Trim & "',
-                 " & txtCorreoProspecto.Text.Trim & "',
-                " & txtPuestoProspecto.Text.Trim & "',
-                 " & txtHorarioProspecto.Text.Trim & "',
-                " & txtCompaniaProspecto.Text.Trim & "',
-                 " & txtDireccionProspecto.Text.Trim & "',
-                " & txtNumExtProspecto.Text.Trim & "',
-                 " & txtCPProspecto.Text.Trim & "',
-                " & txtColoniaProspecto.Text.Trim & "',
-                 " & cbPaisProspecto.Text.Trim & "',
-                " & txtEstadoProspecto.Text.Trim & "',
-                " & txtCiudadProspecto.Text.Trim & "',
-                " & txtNotasProspecto.Text.Trim & "',
-                " & txtNombreEmplado.Text.Trim & "',
-                " & DTPFechaActual.Value & "',
-                " & quienModifico & "',
-                " & FechaModificacion & "',
-                " & cboStatus.Text.Trim & "',
-                " & cboOrigen.Text.Trim & "',
-                " & cboTipoIndustria.Text.Trim & "')"
-
+                values ('" & txtNombreProspecto.Text.Trim & "','" & txtApellidosProspecto.Text.Trim & "','" & txtTelefonoProspecto.Text.Trim & "','" & txtExtProspecto.Text.Trim & "',
+                '" & txtCelularProspecto.Text.Trim & "',
+                 '" & txtCorreoProspecto.Text.Trim & "',
+                '" & txtPuestoProspecto.Text.Trim & "',
+                ' " & txtHorarioProspecto.Text.Trim & "',
+                '" & txtCompaniaProspecto.Text.Trim & "',
+                 '" & txtDireccionProspecto.Text.Trim & "',
+                '" & txtNumExtProspecto.Text.Trim & "',
+                '" & txtCPProspecto.Text.Trim & "',
+                '" & txtColoniaProspecto.Text.Trim & "',
+                 '" & cbPaisProspecto.Text.Trim & "',
+                '" & txtEstadoProspecto.Text.Trim & "',
+                '" & txtCiudadProspecto.Text.Trim & "',
+                '" & txtNotasProspecto.Text.Trim & "',
+                '" & txtNombreEmplado.Text.Trim & "',
+                '" & DTPFechaActual.Value & "',
+                '" & quienModifico & "',
+                '" & FechaModificacion & "',
+                '" & cboStatus.Text.Trim & "',
+                '" & cboOrigen.Text.Trim & "',
+                '" & cboTipoIndustria.Text.Trim & "')"
+                    'MsgBox(R)
                     Dim comando As New SqlCommand(R, conexionMetasCotizador)
                     comando.ExecuteNonQuery()
                     conexionMetasCotizador.Close()
@@ -163,8 +166,6 @@ Public Class FrmNuevoProspecto
         cboStatus.Items.Add("Nuevo")
         cboStatus.Items.Add("Working")
         cboStatus.Items.Add("No habilitado")
-        cboStatus.Items.Add("Convertido")
-
 
         cboSaludo.Items.Add("Sr.")
         cboSaludo.Items.Add("Sra.")
@@ -172,6 +173,8 @@ Public Class FrmNuevoProspecto
         cboSaludo.Items.Add("Ing.")
         cboSaludo.Items.Add("Dr.")
         cboSaludo.Items.Add("Prof.")
+        cboSaludo.Items.Add("Lic.")
+        cboSaludo.Items.Add("C.")
 
         '' cargar datos de las tablas SetupCustomerSource
         '' cargar datos de las tablas SetupQualityRequierement
@@ -284,6 +287,13 @@ Public Class FrmNuevoProspecto
         cbinfoAdd.Checked = False
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Me.Close()
+    End Sub
 
     Public Sub habilitarTextos()
         cboSaludo.Enabled = True
