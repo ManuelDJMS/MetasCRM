@@ -86,18 +86,18 @@ Public Class FrmNuevoContacto
         cboMoneda.Items.Add("U.S. Dollar")
         cboMoneda.Items.Add("Pound Sterling")
 
-        cboOpcionesDePago.Items.Add("Daily")
-        cboOpcionesDePago.Items.Add("Weekly")
-        cboOpcionesDePago.Items.Add("Monthly")
-        cboOpcionesDePago.Items.Add("Annually")
+        cboOpcionesDePago.Items.Add("Diario")
+        cboOpcionesDePago.Items.Add("Semanal")
+        cboOpcionesDePago.Items.Add("Mensual")
+        cboOpcionesDePago.Items.Add("Anual")
 
-        cboAvisoDeRecuperacion.Items.Add("Call")
-        cboAvisoDeRecuperacion.Items.Add("Text")
-        cboAvisoDeRecuperacion.Items.Add("Both")
+        cboAvisoDeRecuperacion.Items.Add("Llamada")
+        cboAvisoDeRecuperacion.Items.Add("Texto")
+        cboAvisoDeRecuperacion.Items.Add("Ambos")
 
-        cboVencimientoDeCalibracion.Items.Add("None")
-        cboVencimientoDeCalibracion.Items.Add("End of Week (Sunday)")
-        cboVencimientoDeCalibracion.Items.Add("End of Month")
+        cboVencimientoDeCalibracion.Items.Add("Ninguna")
+        cboVencimientoDeCalibracion.Items.Add("Fin de semana (Domingo)")
+        cboVencimientoDeCalibracion.Items.Add("Fin de mes")
 
         cboCategoria.Items.Add("Categoria 1")
         cboCategoria.Items.Add("Categoria 2")
