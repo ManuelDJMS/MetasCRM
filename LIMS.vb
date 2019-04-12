@@ -7,7 +7,7 @@ Module LIMS              ''--------------------------BASE DE DATOS LIMS---------
     Sub MetodoLIMS()
         Try
             '' conexionLIMS = New SqlConnection("Data Source=107.180.70.168\METASSQLEXPRESS;Initial Catalog=MetAs_Live;Persist Security Info=False;User ID=sa;Password=Bws123bws")
-            conexionLIMS = New SqlConnection("Data Source=10.10.10.9\COMPAC;Initial Catalog=MetAs_Live-pruebas; User Id=sa; Password=Contpaq1;Integrated Security=False")
+            conexionLIMS = New SqlConnection("Data Source=DATABASESERVER\COMPAC;Initial Catalog=MetAs_Live-pruebas; User Id=sa; Password=Contpaq1;Integrated Security=False")
 
             conexionLIMS.Open()
             'MsgBox("Conectado correctamente")

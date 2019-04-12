@@ -9,7 +9,7 @@ Module MetasCotizador
     Public lectorMetrologos As SqlDataReader
     Sub MetodoMetasCotizador()
         Try
-            conexionMetasCotizador = New SqlConnection("Data Source=SERVER3\COMPAC2;Initial Catalog=MetasCotizador; User Id=sa; Password=Met99011578a;Integrated Security=False")
+            conexionMetasCotizador = New SqlConnection("Data Source=SERVER3\COMPAC2;Initial Catalog=MetasCotizador-3; User Id=sa; Password=Met99011578a;Integrated Security=False")
             conexionMetasCotizador.Open()
         Catch ex As Exception
         End Try

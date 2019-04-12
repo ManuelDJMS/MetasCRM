@@ -595,7 +595,7 @@ Public Class FrmProspectos
                 control.txtCodigoPostalEntrega.Text = ""
                 control.txtNumExteriorEntrega.Text = ""
                 control.Show()
-                Me.Dispose()
+
             Else
                 MsgBox("No continua")
             End If
