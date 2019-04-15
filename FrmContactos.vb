@@ -9,6 +9,11 @@ Public Class FrmContactos
         consultaGeneralContactos()
         alternarColorColumnas(DGConsulta)
         alternarColorColumnas(DGAdicionales)
+
+
+
+
+
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
@@ -42,6 +47,7 @@ Public Class FrmContactos
     Public Sub consultaDatosContactos(ByVal clave As String)
         Try
             Dim vacio As String = "---"
+            Dim cadenaCorreos As String
             MetodoLIMS()
             Dim R As String
             R = "select SetupCustomerDetails.[CustomerId]
@@ -89,7 +95,6 @@ Public Class FrmContactos
       ,SetupCustomerDetails.[IsShipAccActive]
       ,SetupCustomerDetails.[KeyFiscal]
       ,SetupCustomerDetails.[Organization]
-
 	  ,SetupCustomerAddressDtls.[AddressId]
       ,SetupCustomerAddressDtls.[CustomerId]
       ,SetupCustomerAddressDtls.[ContAddress1]
@@ -113,38 +118,8 @@ Public Class FrmContactos
       ,SetupCustomerAddressDtls.[ContCountry]
       ,SetupCustomerAddressDtls.[BillCountry]
       ,SetupCustomerAddressDtls.[ShipCountry]
-
-	  ,SetupCustomerEmails.[CustomerEmailId]
-      ,SetupCustomerEmails.[CustomerId]
-      ,SetupCustomerEmails.[FName]
-      ,SetupCustomerEmails.[LName]
-      ,SetupCustomerEmails.[Department]
-      ,SetupCustomerEmails.[EmailId]
-      ,SetupCustomerEmails.[MailSend]
-
-	  ,SetupCustomerEquipmentMapping.[CustEquipMapId]
-      ,SetupCustomerEquipmentMapping.[CustomerId]
-      ,SetupCustomerEquipmentMapping.[EquipId]
-      ,SetupCustomerEquipmentMapping.[InstrumentId]
-      ,SetupCustomerEquipmentMapping.[SrlNo]
-      ,SetupCustomerEquipmentMapping.[Dept]
-      ,SetupCustomerEquipmentMapping.[Location]
-      ,SetupCustomerEquipmentMapping.[CALInterval]
-      ,SetupCustomerEquipmentMapping.[CALCycle]
-      ,SetupCustomerEquipmentMapping.[CALDue]
-      ,SetupCustomerEquipmentMapping.[IsActive]
-      ,SetupCustomerEquipmentMapping.[OnSite]
-      ,SetupCustomerEquipmentMapping.[ShortNotes]
-      ,SetupCustomerEquipmentMapping.[AssetNo]
-
-	  ,SetupCustomerSource.[id]
-      ,SetupCustomerSource.[CustomerSource]
-
 	  from SetupCustomerDetails
-	  inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId
-	  inner join SetupCustomerEmails on SetupCustomerDetails.CustomerId = SetupCustomerEmails.CustomerId
-	  inner join SetupCustomerEquipmentMapping on SetupCustomerDetails.CustomerId =  SetupCustomerEquipmentMapping.CustomerId
-	  inner join SetupCustomerSource on SetupCustomerDetails.CustomerId =  SetupCustomerSource.id where SetupCustomerDetails.[CustomerId]= " & clave & ""
+	  inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId  where SetupCustomerDetails.[CustomerId]= " & clave & ""
 
             Dim comando As New SqlCommand(R, conexionLIMS)
             Dim lector As SqlDataReader
@@ -261,11 +236,7 @@ Public Class FrmContactos
                 End If
 
                 txtKeyFiscal.Text = lector(43)
-
                 txtOrganizacion.Text = lector(44)
-
-
-                MsgBox("Fin de la lectura")
             Else
                 MsgBox("No existen datos de registro.", MsgBoxStyle.Information)
             End If
@@ -493,21 +464,24 @@ Public Class FrmContactos
     '    txtClave.Visible = False
     '    txtTel.Visible = False
     'End Sub
-    Public Sub consultaAdicionales(ByVal claveContacto)
+
+    Public Sub consultaAdicionales()
         DGAdicionales.Rows.Clear()
         'Try
-        Dim R As String
-            R = "select [CustomerEmailId], [FName], [LName], [Department], [EmailId] from [SetupCustomerEmails] where [CustomerId] =" & claveContacto & ""
-        Dim comando As New SqlCommand(R, conexionLIMS)
+        conexionLIMS.Open()
+        Dim x As String
+        x = "select [CustomerEmailId], [FName], [LName], [Department], [EmailId] from [SetupCustomerEmails] where CustomerId= " & txtClaveRecopilada.Text & ""
+        Dim comando As New SqlCommand(x, conexionLIMS)
         Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            While lector.Read()
-                DGAdicionales.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4))
-            End While
-            lector.Close()
-        ' Catch ex As Exception
+        lector = comando.ExecuteReader
+        While lector.Read()
+            DGAdicionales.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4))
+        End While
+        lector.Close()
+        conexionLIMS.Close()
+        'Catch ex As Exception
         'MsgBox("El parametro que seleccionaste no corresponde a la consulta", MsgBoxStyle.Information)
-        '  End Try
+        'End Try
     End Sub
 
     Public Sub limpiarTextos()
