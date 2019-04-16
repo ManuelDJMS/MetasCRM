@@ -587,7 +587,7 @@ Partial Class FrmHOME
         '
         Me.Panel10.BackColor = System.Drawing.Color.Silver
         Me.Panel10.Controls.Add(Me.Label42)
-        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Location = New System.Drawing.Point(-1, 0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(742, 28)
         Me.Panel10.TabIndex = 151

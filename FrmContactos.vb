@@ -9,16 +9,12 @@ Public Class FrmContactos
         consultaGeneralContactos()
         alternarColorColumnas(DGConsulta)
         alternarColorColumnas(DGAdicionales)
-
-
-
-
-
+        alternarColorColumnas(DGInstrumentos)
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
             With DGV
-                .RowsDefaultCellStyle.BackColor = Color.WhiteSmoke
+                .RowsDefaultCellStyle.BackColor = Color.Silver
                 .AlternatingRowsDefaultCellStyle.BackColor = Color.White
             End With
         Catch ex As Exception
@@ -42,6 +38,35 @@ Public Class FrmContactos
         Catch ex As Exception
             MsgBox("Selecciona un registro válido de la regilla.", MsgBoxStyle.Information)
         End Try
+    End Sub
+
+
+    Private Sub DGInstrumentos_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGInstrumentos.RowHeaderMouseClick
+        Try
+            Dim clave As String
+            clave = DGInstrumentos.Rows(e.RowIndex).Cells(0).Value.ToString()
+            MsgBox("Seleccionaste: " & clave)
+
+
+        Catch ex As Exception
+            MsgBox("Selecciona un registro válido de la regilla.", MsgBoxStyle.Information)
+        End Try
+    End Sub
+
+    Public Sub ConsultaDatosEquipos(ByVal claveInstrumento As Integer)
+        conexionLIMS.Open()
+        Dim R As String
+        R = " select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
+	    ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] ,SetupCustomerEquipmentMapping.[Location]
+	    ,SetupCustomerEquipmentMapping.[CALDue] ,SetupCustomerEquipmentMapping.[IsActive],SetUpEquipment.[ItemNumber]
+        ,SetUpEquipment.[AdditionalSepcification] from SetUpEquipment inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
+	    SetUpEquipment.EquipId where SetupCustomerEquipmentMapping.CustomerId = " & claveInstrumento & ""
+        Dim comando As New SqlCommand(R, conexionLIMS)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        lector.Read()
+
+        conexionLIMS.Close()
     End Sub
 
     Public Sub consultaDatosContactos(ByVal clave As String)
@@ -237,6 +262,40 @@ Public Class FrmContactos
 
                 txtKeyFiscal.Text = lector(43)
                 txtOrganizacion.Text = lector(44)
+                lector.Close()
+                conexionLIMS.Close()
+
+                conexionLIMS.Open()
+                Dim x As String
+                MsgBox(clave)
+                x = "select [CustomerEmailId], [FName], [LName], [Department], [EmailId] from [SetupCustomerEmails] where CustomerId= " & clave & ""
+                Dim comandox As New SqlCommand(x, conexionLIMS)
+                Dim lectorx As SqlDataReader
+                lectorx = comandox.ExecuteReader
+                While lectorx.Read()
+                    DGAdicionales.Rows.Add(lectorx(0), lectorx(1), lectorx(2), lectorx(3), lectorx(4))
+                End While
+                lectorx.Close()
+                conexionLIMS.Close()
+
+
+                conexionLIMS.Open()
+                Dim y As String
+                y = "select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], 
+                    SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
+	                ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] 
+                    ,SetupCustomerEquipmentMapping.[Location]
+	                ,SetupCustomerEquipmentMapping.[CALDue]  ,SetupCustomerEquipmentMapping.[IsActive] from SetUpEquipment 
+                    inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
+	                SetUpEquipment.EquipId  where SetupCustomerEquipmentMapping.CustomerId = " & clave & ""
+                Dim comandoy As New SqlCommand(y, conexionLIMS)
+                Dim lectory As SqlDataReader
+                lectory = comandoy.ExecuteReader
+                While lectory.Read()
+                    DGInstrumentos.Rows.Add(lectory(3), lectory(4), lectory(5), lectory(6), lectory(7), lectory(8), lectory(9), lectory(10), lectory(11))
+                End While
+                lectory.Close()
+                conexionLIMS.Close()
             Else
                 MsgBox("No existen datos de registro.", MsgBoxStyle.Information)
             End If
@@ -276,23 +335,6 @@ Public Class FrmContactos
         ''End Try
 
     End Sub
-
-
-    'Public Sub consultaGeneralContactos2()
-    '    DGConsulta2.Rows.Clear()
-    '    Dim R As String
-    '    R = "select [CustAccountNo], [CustomerId], [FirstName], [MiddleName], [LastName], [CompanyName], [Phone], [Mobile], [Email], [Fax],  [IsActive], [CategoryCustomer] from SetupCustomerDetails"
-    '    Dim comando As New SqlCommand(R, conexion)
-    '    comando.CommandType = CommandType.Text
-    '    Dim da As New SqlDataAdapter(comando)
-    '    Dim dt As New DataTable
-    '    da.Fill(dt)
-    '    DGConsulta2.DataSource = dt
-
-    '    For Each fila As DataGridViewRow In DGConsulta2.Rows
-    '        fila.Cells("CustAccountNo").Style.BackColor = Color.Azure
-    '    Next
-    'End Sub
 
     Private Sub txtNombreB_TextChanged(sender As Object, e As EventArgs) Handles txtNombreB.TextChanged
         Dim R As String
@@ -393,95 +435,6 @@ Public Class FrmContactos
         For Each fila As DataGridViewRow In DGConsulta.Rows
             fila.Cells("Correo").Style.BackColor = Color.LightCyan
         Next
-    End Sub
-
-
-
-    'Private Sub cbNombre1_Click(sender As Object, e As EventArgs)
-    '    cbNombre1.Checked = True
-    '    cbTelefono1.Checked = False
-    '    cbCorreo1.Checked = False
-    '    cbClave1.Checked = False
-
-    '    LabelNombr.Visible = True
-    '    LabelCorre.Visible = False
-    '    LabelClav.Visible = False
-    '    LabelTele.Visible = False
-
-    '    txtNombre.Visible = True
-    '    txtCorreo.Visible = False
-    '    txtClave.Visible = False
-    '    txtTel.Visible = False
-    'End Sub
-
-    'Private Sub cbTelefono1_Click(sender As Object, e As EventArgs)
-    '    cbNombre1.Checked = False
-    '    cbTelefono1.Checked = True
-    '    cbCorreo1.Checked = False
-    '    cbClave1.Checked = False
-
-    '    LabelNombr.Visible = False
-    '    LabelCorre.Visible = False
-    '    LabelClav.Visible = False
-    '    LabelTele.Visible = True
-
-    '    txtNombre.Visible = False
-    '    txtCorreo.Visible = False
-    '    txtClave.Visible = False
-    '    txtTel.Visible = True
-    'End Sub
-
-    'Private Sub cbClave1_Click(sender As Object, e As EventArgs)
-    '    cbNombre1.Checked = False
-    '    cbTelefono1.Checked = False
-    '    cbCorreo1.Checked = False
-    '    cbClave1.Checked = True
-
-    '    LabelNombr.Visible = False
-    '    LabelCorre.Visible = False
-    '    LabelClav.Visible = True
-    '    LabelTele.Visible = False
-
-    '    txtNombre.Visible = False
-    '    txtCorreo.Visible = False
-    '    txtClave.Visible = True
-    '    txtTel.Visible = False
-    'End Sub
-
-    'Private Sub cbCorreo1_Click(sender As Object, e As EventArgs)
-    '    cbNombre1.Checked = False
-    '    cbTelefono1.Checked = False
-    '    cbCorreo1.Checked = True
-    '    cbClave1.Checked = False
-
-    '    LabelNombr.Visible = False
-    '    LabelCorre.Visible = True
-    '    LabelClav.Visible = False
-    '    LabelTele.Visible = False
-
-    '    txtNombre.Visible = False
-    '    txtCorreo.Visible = True
-    '    txtClave.Visible = False
-    '    txtTel.Visible = False
-    'End Sub
-
-    Public Sub consultaAdicionales()
-        DGAdicionales.Rows.Clear()
-        'Try
-        conexionLIMS.Open()
-        Dim x As String
-        x = "select [CustomerEmailId], [FName], [LName], [Department], [EmailId] from [SetupCustomerEmails] where CustomerId= " & txtClaveRecopilada.Text & ""
-        Dim comando As New SqlCommand(x, conexionLIMS)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        While lector.Read()
-            DGAdicionales.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4))
-        End While
-        lector.Close()
-        conexionLIMS.Close()
-        'Catch ex As Exception
-        'MsgBox("El parametro que seleccionaste no corresponde a la consulta", MsgBoxStyle.Information)
-        'End Try
     End Sub
 
     Public Sub limpiarTextos()

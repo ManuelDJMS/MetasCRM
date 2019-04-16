@@ -29,31 +29,31 @@
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-        'Dim Admin As New FrmContactos
-        'Admin.MdiParent = Me
-        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
-        'Admin.Show()
-        ''MsgBox("Modulo en mantenimiento")
+        Dim Admin As New FrmContactos
+        Admin.MdiParent = Me
+        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        Admin.Show()
+        'MsgBox("Modulo en mantenimiento")
 
-        'Panel1.BackColor = Color.SteelBlue
-        'Panel2.BackColor = Color.DimGray
-        'Panel3.BackColor = Color.DimGray
-        'Panel4.BackColor = Color.DimGray
-        'Panel5.BackColor = Color.DimGray
-        'Panel6.BackColor = Color.DimGray
-        'Panel7.BackColor = Color.DimGray
-        'Panel8.BackColor = Color.DimGray
-        'Panel9.BackColor = Color.DimGray
-        'Label17.ForeColor = Color.Black
+        Panel1.BackColor = Color.SteelBlue
+        Panel2.BackColor = Color.DimGray
+        Panel3.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel5.BackColor = Color.DimGray
+        Panel6.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel8.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Label17.ForeColor = Color.Black
 
-        'Panel1.BackColor = Color.DimGray
-        'Panel4.BackColor = Color.DimGray
-        'Panel9.BackColor = Color.DimGray
-        'Panel5.BackColor = Color.DimGray
-        'Panel7.BackColor = Color.DimGray
-        'Panel14.BackColor = Color.DimGray
-        'Panel6.BackColor = Color.DimGray
-        'Panel8.BackColor = Color.DimGray
+        Panel1.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Panel5.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel14.BackColor = Color.DimGray
+        Panel6.BackColor = Color.DimGray
+        Panel8.BackColor = Color.DimGray
 
     End Sub
 
