@@ -78,18 +78,8 @@ Partial Class FrmHOME
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.PanelBuenosDias = New System.Windows.Forms.GroupBox()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.PanelTareasSemana = New System.Windows.Forms.GroupBox()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,10 +102,8 @@ Partial Class FrmHOME
         Me.Panel10.SuspendLayout()
         Me.PanelRecordatorioSemana.SuspendLayout()
         Me.Panel11.SuspendLayout()
-        Me.PanelBuenosDias.SuspendLayout()
-        Me.Panel12.SuspendLayout()
-        Me.PanelTareasSemana.SuspendLayout()
-        Me.Panel13.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -141,7 +129,7 @@ Partial Class FrmHOME
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1042, 19)
+        Me.PictureBox2.Location = New System.Drawing.Point(1052, 19)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -154,7 +142,7 @@ Partial Class FrmHOME
         Me.Label33.Cursor = System.Windows.Forms.Cursors.No
         Me.Label33.Font = New System.Drawing.Font("Calibri Light", 10.0!)
         Me.Label33.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label33.Location = New System.Drawing.Point(971, 26)
+        Me.Label33.Location = New System.Drawing.Point(981, 26)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(65, 17)
         Me.Label33.TabIndex = 139
@@ -166,7 +154,7 @@ Partial Class FrmHOME
         Me.Label46.Cursor = System.Windows.Forms.Cursors.No
         Me.Label46.Font = New System.Drawing.Font("Calibri Light", 10.0!)
         Me.Label46.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label46.Location = New System.Drawing.Point(1072, 26)
+        Me.Label46.Location = New System.Drawing.Point(1082, 26)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(32, 17)
         Me.Label46.TabIndex = 138
@@ -177,7 +165,7 @@ Partial Class FrmHOME
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(1110, 19)
+        Me.PictureBox4.Location = New System.Drawing.Point(1120, 19)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -576,9 +564,9 @@ Partial Class FrmHOME
         Me.PanelRecordatoriosHoy.Controls.Add(Me.Label27)
         Me.PanelRecordatoriosHoy.Controls.Add(Me.Label26)
         Me.PanelRecordatoriosHoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PanelRecordatoriosHoy.Location = New System.Drawing.Point(243, 78)
+        Me.PanelRecordatoriosHoy.Location = New System.Drawing.Point(861, 72)
         Me.PanelRecordatoriosHoy.Name = "PanelRecordatoriosHoy"
-        Me.PanelRecordatoriosHoy.Size = New System.Drawing.Size(742, 332)
+        Me.PanelRecordatoriosHoy.Size = New System.Drawing.Size(482, 302)
         Me.PanelRecordatoriosHoy.TabIndex = 61
         Me.PanelRecordatoriosHoy.TabStop = False
         Me.PanelRecordatoriosHoy.Visible = False
@@ -587,9 +575,9 @@ Partial Class FrmHOME
         '
         Me.Panel10.BackColor = System.Drawing.Color.Silver
         Me.Panel10.Controls.Add(Me.Label42)
-        Me.Panel10.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel10.Location = New System.Drawing.Point(1, 0)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(742, 28)
+        Me.Panel10.Size = New System.Drawing.Size(486, 28)
         Me.Panel10.TabIndex = 151
         '
         'Label42
@@ -644,9 +632,9 @@ Partial Class FrmHOME
         Me.PanelRecordatorioSemana.Controls.Add(Me.Label10)
         Me.PanelRecordatorioSemana.Controls.Add(Me.Label12)
         Me.PanelRecordatorioSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PanelRecordatorioSemana.Location = New System.Drawing.Point(243, 439)
+        Me.PanelRecordatorioSemana.Location = New System.Drawing.Point(861, 392)
         Me.PanelRecordatorioSemana.Name = "PanelRecordatorioSemana"
-        Me.PanelRecordatorioSemana.Size = New System.Drawing.Size(742, 265)
+        Me.PanelRecordatorioSemana.Size = New System.Drawing.Size(482, 320)
         Me.PanelRecordatorioSemana.TabIndex = 62
         Me.PanelRecordatorioSemana.TabStop = False
         Me.PanelRecordatorioSemana.Visible = False
@@ -657,7 +645,7 @@ Partial Class FrmHOME
         Me.Panel11.Controls.Add(Me.Label1)
         Me.Panel11.Location = New System.Drawing.Point(0, 0)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(742, 28)
+        Me.Panel11.Size = New System.Drawing.Size(486, 28)
         Me.Panel11.TabIndex = 151
         '
         'Label1
@@ -704,141 +692,27 @@ Partial Class FrmHOME
         Me.Label12.TabIndex = 135
         Me.Label12.Text = "*"
         '
-        'PanelBuenosDias
+        'PictureBox5
         '
-        Me.PanelBuenosDias.BackColor = System.Drawing.Color.Gainsboro
-        Me.PanelBuenosDias.Controls.Add(Me.Panel12)
-        Me.PanelBuenosDias.Controls.Add(Me.Label16)
-        Me.PanelBuenosDias.Controls.Add(Me.Label18)
-        Me.PanelBuenosDias.Controls.Add(Me.Label20)
-        Me.PanelBuenosDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PanelBuenosDias.Location = New System.Drawing.Point(1010, 78)
-        Me.PanelBuenosDias.Name = "PanelBuenosDias"
-        Me.PanelBuenosDias.Size = New System.Drawing.Size(334, 262)
-        Me.PanelBuenosDias.TabIndex = 63
-        Me.PanelBuenosDias.TabStop = False
-        Me.PanelBuenosDias.Visible = False
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(351, 103)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(266, 260)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 33
+        Me.PictureBox5.TabStop = False
         '
-        'Panel12
+        'PictureBox6
         '
-        Me.Panel12.BackColor = System.Drawing.Color.Silver
-        Me.Panel12.Controls.Add(Me.Label14)
-        Me.Panel12.Location = New System.Drawing.Point(0, 0)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(334, 28)
-        Me.Panel12.TabIndex = 151
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label14.Location = New System.Drawing.Point(3, 5)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(71, 15)
-        Me.Label14.TabIndex = 152
-        Me.Label14.Text = "Buenos días"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(412, -15)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(17, 19)
-        Me.Label16.TabIndex = 149
-        Me.Label16.Text = "*"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(438, -27)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(17, 19)
-        Me.Label18.TabIndex = 135
-        Me.Label18.Text = "*"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(444, -55)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(17, 19)
-        Me.Label20.TabIndex = 135
-        Me.Label20.Text = "*"
-        '
-        'PanelTareasSemana
-        '
-        Me.PanelTareasSemana.BackColor = System.Drawing.Color.Gainsboro
-        Me.PanelTareasSemana.Controls.Add(Me.Panel13)
-        Me.PanelTareasSemana.Controls.Add(Me.Label24)
-        Me.PanelTareasSemana.Controls.Add(Me.Label25)
-        Me.PanelTareasSemana.Controls.Add(Me.Label29)
-        Me.PanelTareasSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PanelTareasSemana.Location = New System.Drawing.Point(1010, 365)
-        Me.PanelTareasSemana.Name = "PanelTareasSemana"
-        Me.PanelTareasSemana.Size = New System.Drawing.Size(334, 339)
-        Me.PanelTareasSemana.TabIndex = 64
-        Me.PanelTareasSemana.TabStop = False
-        Me.PanelTareasSemana.Visible = False
-        '
-        'Panel13
-        '
-        Me.Panel13.BackColor = System.Drawing.Color.Silver
-        Me.Panel13.Controls.Add(Me.Label22)
-        Me.Panel13.Location = New System.Drawing.Point(0, 0)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(334, 28)
-        Me.Panel13.TabIndex = 151
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label22.Location = New System.Drawing.Point(3, 5)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(125, 15)
-        Me.Label22.TabIndex = 152
-        Me.Label22.Text = "Tareas para la semana"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.Red
-        Me.Label24.Location = New System.Drawing.Point(412, -15)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(17, 19)
-        Me.Label24.TabIndex = 149
-        Me.Label24.Text = "*"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.Red
-        Me.Label25.Location = New System.Drawing.Point(438, -27)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(17, 19)
-        Me.Label25.TabIndex = 135
-        Me.Label25.Text = "*"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.Red
-        Me.Label29.Location = New System.Drawing.Point(444, -55)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(17, 19)
-        Me.Label29.TabIndex = 135
-        Me.Label29.Text = "*"
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(351, 425)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(266, 260)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 33
+        Me.PictureBox6.TabStop = False
         '
         'FrmHOME
         '
@@ -846,12 +720,12 @@ Partial Class FrmHOME
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(1366, 730)
-        Me.Controls.Add(Me.PanelTareasSemana)
-        Me.Controls.Add(Me.PanelBuenosDias)
         Me.Controls.Add(Me.PanelRecordatorioSemana)
         Me.Controls.Add(Me.PanelRecordatoriosHoy)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
@@ -906,14 +780,8 @@ Partial Class FrmHOME
         Me.PanelRecordatorioSemana.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
-        Me.PanelBuenosDias.ResumeLayout(False)
-        Me.PanelBuenosDias.PerformLayout()
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
-        Me.PanelTareasSemana.ResumeLayout(False)
-        Me.PanelTareasSemana.PerformLayout()
-        Me.Panel13.ResumeLayout(False)
-        Me.Panel13.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -964,18 +832,6 @@ Partial Class FrmHOME
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents PanelBuenosDias As GroupBox
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents PanelTareasSemana As GroupBox
-    Friend WithEvents Panel13 As Panel
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label29 As Label
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Label30 As Label
     Friend WithEvents Panel15 As Panel
@@ -984,4 +840,6 @@ Partial Class FrmHOME
     Friend WithEvents Label33 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class
