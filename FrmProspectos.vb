@@ -522,84 +522,84 @@ Public Class FrmProspectos
     End Sub
 
     Private Sub btCancelar_Click(sender As Object, e As EventArgs) Handles btCancelar.Click
-        If txtEstado.Text.Equals("Convertido") Or txtClaveRecopila.Text.Trim.Equals("") Then
-            MsgBox("No se puede modificar este prospecto, ya se encuentra convertido o no se ah asignado alguna clave", MsgBoxStyle.Critical)
-        Else
-            ''Mandar mensaje de que se convertira en contacto
-            resultado = MsgBox("Este prospecto será convertido a contacto, ¿Deseas continuar con el proceso?", vbYesNo, "Prospectos dice")
+        'If txtEstado.Text.Equals("Convertido") Or txtClaveRecopila.Text.Trim.Equals("") Then
+        '    MsgBox("No se puede modificar este prospecto, ya se encuentra convertido o no se ah asignado alguna clave", MsgBoxStyle.Critical)
+        'Else
+        '    ''Mandar mensaje de que se convertira en contacto
+        '    resultado = MsgBox("Este prospecto será convertido a contacto, ¿Deseas continuar con el proceso?", vbYesNo, "Prospectos dice")
 
-            If resultado = vbYes Then
-                'MsgBox("Continua")
-                Dim control As New FrmNuevoContacto
-                control.txtClaveRecopila.Text = txtClaveRecopila.Text
-                control.txtNombreEmplado.Text = txtNombreEmpleado.Text
-                control.txtUsuarioActual.Text = txtNombreEmpleado.Text
-                control.txtNombre.Text = txtNombreMod.Text
-                control.txtApellidoPaterno.Text = txtApellidos.Text
-                '  control.txtApellidoMaterno.Text = ""
-                control.txtCompania.Text = txtNombreCompania.Text
-                ' control.txtDepartamento.Text = ""
-                ' control.txtRFC.Text = ""
-                ' control.txtOrganizacion.Text = ""
-                control.cboStatus.Text = txtEstado.Text
-                'control.txtNumeroDeCuenta.Text = ""
-                control.txtCelular.Text = txtCelular.Text
-                control.txtTelefono.Text = txtTelefono.Text
-                control.txtExtension.Text = txtExt.Text
-                control.txtCorreo1.Text = txtCorreo.Text
-                ' control.txtCorreo2.Text = ""
-                ' control.txtFax.Text = ""
-                control.txtDireccion1.Text = txtDireccion.Text
-                'control.txtDireccion2.Text = ""
-                ' control.txtDireccion3.Text = ""
-                control.txtEstado.Text = txtEdo.Text
-                control.cboPais.Text = txtPais.Text
-                control.txtColonia.Text = txtColonia.Text
-                control.txtCiudad.Text = txtCiudad.Text
-                control.txtCodigoPostal.Text = txtCodigoPostal.Text
-                control.txtNumeroExterior.Text = txtNumExt.Text
-                control.cboOrigen.Text = txtOrigen.Text
-                control.cboTipoIndustria.Text = txtTipoIndustri.Text
-                ' control.txtTerminosDePago.Text = txtNumExt.Text
-                ' control.cboCategoria.Text = txtNumExt.Text
-                'control.txtIDFiscal.Text = txtNumExt.Text
-                'control.cboMoneda.Text = txtNumExt.Text
-                'control.cboOpcionesDePago.Text = txtNumExt.Text
-                'control.cboDefaultPO.Text = txtNumExt.Text
-                'control.cboModoDeEnvio.Text = txtNumExt.Text
-                'control.txtDescuentoDeCalibracion.Text = txtNumExt.Text
-                ' control.txtTaxException.Text = txtNumExt.Text
-                ' control.txtCuentaDeEnvio.Text = txtNumExt.Text
-                ' control.txtHorarioDeTrabajo.Text = txtNumExt.Text
-                'control.cboAvisoDeRecuperacion.Text = txtNumExt.Text
-                ''control.cboRequerimientosDeCalidad.Text = txtNumExt.Text
-                'control.cboVencimientoDeCalibracion.Text = txtNumExt.Text
-                control.txtNotas.Text = txtNotas.Text
-                'control.txtNombreDeArchivo.Text = txtNumExt.Text
-                control.txtDireccion1Facturacion.Text = ""
-                control.txtDireccion2Facturacion.Text = ""
-                control.txtDireccion3Facturacion.Text = ""
-                control.txtEstadoFacturacion.Text = ""
-                control.cboPaisFacturacion.Text = ""
-                control.txtColoniaFacturacion.Text = ""
-                control.txtCiudadFacturacion.Text = ""
-                control.txtCodigoPostalFacturacion.Text = ""
-                control.txtNumExteriorFacturacion.Text = ""
-                control.txtDireccion1Entrega.Text = ""
-                control.txtDireccion2Entrega.Text = ""
-                control.txtDireccion3Entrega.Text = ""
-                control.txtEstadoEntrega.Text = ""
-                control.cboPaisEntrega.Text = ""
-                control.txtColoniaEntrega.Text = ""
-                control.txtCiudadEntrega.Text = ""
-                control.txtCodigoPostalEntrega.Text = ""
-                control.txtNumExteriorEntrega.Text = ""
-                control.Show()
+        '    If resultado = vbYes Then
+        '        'MsgBox("Continua")
+        '        Dim control As New FrmNuevoContacto
+        '        control.txtClaveRecopila.Text = txtClaveRecopila.Text
+        '        control.txtNombreEmplado.Text = txtNombreEmpleado.Text
+        '        control.txtUsuarioActual.Text = txtNombreEmpleado.Text
+        '        control.txtNombre.Text = txtNombreMod.Text
+        '        control.txtApellidoPaterno.Text = txtApellidos.Text
+        '        '  control.txtApellidoMaterno.Text = ""
+        '        control.txtCompania.Text = txtNombreCompania.Text
+        '        ' control.txtDepartamento.Text = ""
+        '        ' control.txtRFC.Text = ""
+        '        ' control.txtOrganizacion.Text = ""
+        '        control.cboStatus.Text = txtEstado.Text
+        '        'control.txtNumeroDeCuenta.Text = ""
+        '        control.txtCelular.Text = txtCelular.Text
+        '        control.txtTelefono.Text = txtTelefono.Text
+        '        control.txtExtension.Text = txtExt.Text
+        '        control.txtCorreo1.Text = txtCorreo.Text
+        '        ' control.txtCorreo2.Text = ""
+        '        ' control.txtFax.Text = ""
+        '        control.txtDireccion1.Text = txtDireccion.Text
+        '        'control.txtDireccion2.Text = ""
+        '        ' control.txtDireccion3.Text = ""
+        '        control.txtEstado.Text = txtEdo.Text
+        '        control.cboPais.Text = txtPais.Text
+        '        control.txtColonia.Text = txtColonia.Text
+        '        control.txtCiudad.Text = txtCiudad.Text
+        '        control.txtCodigoPostal.Text = txtCodigoPostal.Text
+        '        control.txtNumeroExterior.Text = txtNumExt.Text
+        '        control.cboOrigen.Text = txtOrigen.Text
+        '        control.cboTipoIndustria.Text = txtTipoIndustri.Text
+        '        ' control.txtTerminosDePago.Text = txtNumExt.Text
+        '        ' control.cboCategoria.Text = txtNumExt.Text
+        '        'control.txtIDFiscal.Text = txtNumExt.Text
+        '        'control.cboMoneda.Text = txtNumExt.Text
+        '        'control.cboOpcionesDePago.Text = txtNumExt.Text
+        '        'control.cboDefaultPO.Text = txtNumExt.Text
+        '        'control.cboModoDeEnvio.Text = txtNumExt.Text
+        '        'control.txtDescuentoDeCalibracion.Text = txtNumExt.Text
+        '        ' control.txtTaxException.Text = txtNumExt.Text
+        '        ' control.txtCuentaDeEnvio.Text = txtNumExt.Text
+        '        ' control.txtHorarioDeTrabajo.Text = txtNumExt.Text
+        '        'control.cboAvisoDeRecuperacion.Text = txtNumExt.Text
+        '        ''control.cboRequerimientosDeCalidad.Text = txtNumExt.Text
+        '        'control.cboVencimientoDeCalibracion.Text = txtNumExt.Text
+        '        control.txtNotas.Text = txtNotas.Text
+        '        'control.txtNombreDeArchivo.Text = txtNumExt.Text
+        '        control.txtDireccion1Facturacion.Text = ""
+        '        control.txtDireccion2Facturacion.Text = ""
+        '        control.txtDireccion3Facturacion.Text = ""
+        '        control.txtEstadoFacturacion.Text = ""
+        '        control.cboPaisFacturacion.Text = ""
+        '        control.txtColoniaFacturacion.Text = ""
+        '        control.txtCiudadFacturacion.Text = ""
+        '        control.txtCodigoPostalFacturacion.Text = ""
+        '        control.txtNumExteriorFacturacion.Text = ""
+        '        control.txtDireccion1Entrega.Text = ""
+        '        control.txtDireccion2Entrega.Text = ""
+        '        control.txtDireccion3Entrega.Text = ""
+        '        control.txtEstadoEntrega.Text = ""
+        '        control.cboPaisEntrega.Text = ""
+        '        control.txtColoniaEntrega.Text = ""
+        '        control.txtCiudadEntrega.Text = ""
+        '        control.txtCodigoPostalEntrega.Text = ""
+        '        control.txtNumExteriorEntrega.Text = ""
+        '        control.Show()
 
-            Else
-                MsgBox("No continua")
-            End If
-        End If
+        '    Else
+        '        MsgBox("No continua")
+        '    End If
+        'End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -948,6 +948,10 @@ Public Class FrmProspectos
         Catch ex As Exception
             MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
         End Try
+    End Sub
+
+    Private Sub TabDetallesProspecto_Click(sender As Object, e As EventArgs) Handles TabDetallesProspecto.Click
+
     End Sub
 
     Public Sub limpiarRegistroTareas()
