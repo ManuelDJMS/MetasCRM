@@ -112,6 +112,12 @@
     <Compile Include="FrmCotPorFolio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmEmergenteConvertir.Designer.vb">
+      <DependentUpon>FrmEmergenteConvertir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmergenteConvertir.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmFiltarCampo.Designer.vb">
       <DependentUpon>FrmFiltarCampo.vb</DependentUpon>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCotPorFolio.resx">
       <DependentUpon>FrmCotPorFolio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmergenteConvertir.resx">
+      <DependentUpon>FrmEmergenteConvertir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFiltarCampo.resx">
       <DependentUpon>FrmFiltarCampo.vb</DependentUpon>

@@ -326,6 +326,7 @@ Partial Class FrmHOME
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(212, 45)
         Me.Panel15.TabIndex = 43
+        Me.Panel15.Visible = False
         '
         'Label31
         '
@@ -347,6 +348,7 @@ Partial Class FrmHOME
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(212, 45)
         Me.Panel14.TabIndex = 41
+        Me.Panel14.Visible = False
         '
         'Label30
         '
@@ -591,9 +593,9 @@ Partial Class FrmHOME
         Me.Label42.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label42.Location = New System.Drawing.Point(3, 5)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(133, 15)
+        Me.Label42.Size = New System.Drawing.Size(180, 15)
         Me.Label42.TabIndex = 152
-        Me.Label42.Text = "Recordatorios para hoy"
+        Me.Label42.Text = "Recordatorios de prospecciones"
         '
         'Label28
         '
@@ -658,9 +660,9 @@ Partial Class FrmHOME
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label1.Location = New System.Drawing.Point(3, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(167, 15)
+        Me.Label1.Size = New System.Drawing.Size(145, 15)
         Me.Label1.TabIndex = 152
-        Me.Label1.Text = "Recordatorios para la semana"
+        Me.Label1.Text = "Recordatorios de clientes"
         '
         'Label8
         '
