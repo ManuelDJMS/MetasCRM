@@ -448,6 +448,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cotizador.ico" />
+    <Content Include="prospecciones.png" />
+    <Content Include="prospecciones_select.png" />
     <Content Include="Resources\prospecciones.png" />
     <Content Include="Resources\prospecciones_select.png" />
     <None Include="Resources\green.png" />

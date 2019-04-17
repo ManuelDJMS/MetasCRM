@@ -23,6 +23,8 @@
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.SetToolTip(Panel4, "Busca cotizaciones 2018 y exportalas a 2019 como nueva cotización")
 
+        Label3.Text = "Fecha:    " & DTP.Value.ToShortDateString
+
     End Sub
     Private Sub GroupBox4_Enter(sender As Object, e As EventArgs)
 
@@ -54,6 +56,13 @@
         Panel14.BackColor = Color.DimGray
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
+
+        ''-----------Poner invisibles----------
+        PictureBox5.Visible = False
+        PictureBox6.Visible = False
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        ''--------------------------------------
 
     End Sub
 
@@ -117,6 +126,13 @@
         'PanelRecordatorioSemana.Visible = False
         'PanelRecordatoriosHoy.Visible = False
         'PanelTareasSemana.Visible = False
+
+        ''-----------Poner invisibles----------
+        PictureBox5.Visible = False
+        PictureBox6.Visible = False
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        ''--------------------------------------
     End Sub
 
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
@@ -135,6 +151,14 @@
         Panel9.BackColor = Color.DimGray
         Label15.ForeColor = Color.Black
         ' MsgBox("Modulo en mantenimiento")
+
+
+        ''-----------Poner invisibles----------
+        PictureBox5.Visible = False
+        PictureBox6.Visible = False
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        ''--------------------------------------
     End Sub
 
     Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
@@ -194,6 +218,13 @@
         Panel14.BackColor = Color.DimGray
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
+
+        ''-----------Poner invisibles----------
+        PictureBox5.Visible = False
+        PictureBox6.Visible = False
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        ''--------------------------------------
     End Sub
 
     Private Sub txtRol_Click(sender As Object, e As EventArgs) Handles txtRol.Click
@@ -212,6 +243,13 @@
         Panel15.BackColor = Color.DimGray
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
+
+        ''-----------Poner invisibles----------
+        PictureBox5.Visible = False
+        PictureBox6.Visible = False
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        ''--------------------------------------
     End Sub
 
     Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
@@ -228,19 +266,34 @@
         Panel15.BackColor = Color.SteelBlue
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
+
+        ''-----------Poner invisibles----------
+        PictureBox5.Visible = False
+        PictureBox6.Visible = False
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        ''--------------------------------------
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub Button1_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox5.MouseEnter
-        PictureBox5.Image = My.Resources.prospecciones
+    Private Sub PictureBox5_MouseHover(sender As Object, e As EventArgs) Handles PictureBox5.MouseHover
+        PictureBox5.Size = New Size(300, 300)
     End Sub
 
-
-    Private Sub Button1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox5.MouseLeave
-        PictureBox5.Image = My.Resources.Reset_hover
+    Private Sub PictureBox6_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox5.MouseLeave
+        PictureBox5.Size = New Size(293, 293)
     End Sub
+
+    Private Sub PictureBox7_MouseHover(sender As Object, e As EventArgs) Handles PictureBox6.MouseHover
+        PictureBox6.Size = New Size(300, 300)
+    End Sub
+
+    Private Sub PictureBox7_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox6.MouseLeave
+        PictureBox6.Size = New Size(293, 293)
+    End Sub
+
 
 End Class
