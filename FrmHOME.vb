@@ -233,4 +233,14 @@
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub Button1_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox5.MouseEnter
+        PictureBox5.Image = My.Resources.prospecciones
+    End Sub
+
+
+    Private Sub Button1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox5.MouseLeave
+        PictureBox5.Image = My.Resources.Reset_hover
+    End Sub
+
 End Class
