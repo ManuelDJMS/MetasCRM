@@ -600,6 +600,7 @@ Public Class FrmProspectos
         '        MsgBox("No continua")
         '    End If
         'End If
+        FrmEmergenteConvertir.ShowDialog()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -953,6 +954,7 @@ Public Class FrmProspectos
     Private Sub TabDetallesProspecto_Click(sender As Object, e As EventArgs) Handles TabDetallesProspecto.Click
 
     End Sub
+
 
     Public Sub limpiarRegistroTareas()
         txtAsuntoTarea.Text = ""
