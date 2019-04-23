@@ -22,8 +22,8 @@ Partial Class FrmProspectos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProspectos))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabProspectos = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -46,7 +46,6 @@ Partial Class FrmProspectos
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.DGConsulta = New System.Windows.Forms.DataGridView()
         Me.TabDetallesProspecto = New System.Windows.Forms.TabPage()
@@ -63,11 +62,6 @@ Partial Class FrmProspectos
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.IndicadorNuevo = New System.Windows.Forms.PictureBox()
-        Me.IndicadorContactado = New System.Windows.Forms.PictureBox()
-        Me.IndicadorWorking = New System.Windows.Forms.PictureBox()
-        Me.IndicadorNo = New System.Windows.Forms.PictureBox()
-        Me.IndicadorConvertido = New System.Windows.Forms.PictureBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -87,7 +81,6 @@ Partial Class FrmProspectos
         Me.Button3 = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.Label()
         Me.btCancelar = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.txtSaludo = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
@@ -145,14 +138,8 @@ Partial Class FrmProspectos
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.IndicadorNuevo2 = New System.Windows.Forms.PictureBox()
-        Me.IndicadorContactado2 = New System.Windows.Forms.PictureBox()
-        Me.IndicadorWorking2 = New System.Windows.Forms.PictureBox()
-        Me.IndicadorNo2 = New System.Windows.Forms.PictureBox()
-        Me.IndicadorConvertido2 = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabControlTareas = New System.Windows.Forms.TabControl()
         Me.TabLlamada = New System.Windows.Forms.TabPage()
@@ -181,35 +168,48 @@ Partial Class FrmProspectos
         Me.txtAsuntoTarea = New System.Windows.Forms.TextBox()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.IndicadorNuevo = New System.Windows.Forms.PictureBox()
+        Me.IndicadorContactado = New System.Windows.Forms.PictureBox()
+        Me.IndicadorWorking = New System.Windows.Forms.PictureBox()
+        Me.IndicadorNo = New System.Windows.Forms.PictureBox()
+        Me.IndicadorConvertido = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.IndicadorNuevo2 = New System.Windows.Forms.PictureBox()
+        Me.IndicadorContactado2 = New System.Windows.Forms.PictureBox()
+        Me.IndicadorWorking2 = New System.Windows.Forms.PictureBox()
+        Me.IndicadorNo2 = New System.Windows.Forms.PictureBox()
+        Me.IndicadorConvertido2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TabConsulta.SuspendLayout()
         Me.TabProspectos.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabDetallesProspecto.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.TabActividad.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.TabControlTareas.SuspendLayout()
+        Me.TabLlamada.SuspendLayout()
+        Me.TabTarea.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorContactado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorWorking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorConvertido, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabActividad.SuspendLayout()
         CType(Me.IndicadorNuevo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorContactado2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorWorking2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorNo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorConvertido2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControlTareas.SuspendLayout()
-        Me.TabLlamada.SuspendLayout()
-        Me.TabTarea.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -454,17 +454,6 @@ Partial Class FrmProspectos
         Me.Button1.Text = "Nuevo"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Label27
         '
         Me.Label27.AutoSize = True
@@ -482,14 +471,14 @@ Partial Class FrmProspectos
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Location = New System.Drawing.Point(3, 147)
         Me.DGConsulta.Name = "DGConsulta"
@@ -512,11 +501,6 @@ Partial Class FrmProspectos
         Me.TabDetallesProspecto.Controls.Add(Me.Label30)
         Me.TabDetallesProspecto.Controls.Add(Me.Label29)
         Me.TabDetallesProspecto.Controls.Add(Me.Label28)
-        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorNuevo)
-        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorContactado)
-        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorWorking)
-        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorNo)
-        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorConvertido)
         Me.TabDetallesProspecto.Controls.Add(Me.Panel5)
         Me.TabDetallesProspecto.Controls.Add(Me.Panel3)
         Me.TabDetallesProspecto.Controls.Add(Me.txtNombreEmpleado)
@@ -575,6 +559,11 @@ Partial Class FrmProspectos
         Me.TabDetallesProspecto.Controls.Add(Me.Label11)
         Me.TabDetallesProspecto.Controls.Add(Me.txtNumExt)
         Me.TabDetallesProspecto.Controls.Add(Me.Label10)
+        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorNuevo)
+        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorContactado)
+        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorWorking)
+        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorNo)
+        Me.TabDetallesProspecto.Controls.Add(Me.IndicadorConvertido)
         Me.TabDetallesProspecto.Location = New System.Drawing.Point(4, 24)
         Me.TabDetallesProspecto.Margin = New System.Windows.Forms.Padding(0)
         Me.TabDetallesProspecto.Name = "TabDetallesProspecto"
@@ -703,61 +692,6 @@ Partial Class FrmProspectos
         Me.Label28.Size = New System.Drawing.Size(91, 15)
         Me.Label28.TabIndex = 157
         Me.Label28.Text = "______________"
-        '
-        'IndicadorNuevo
-        '
-        Me.IndicadorNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorNuevo.Image = CType(resources.GetObject("IndicadorNuevo.Image"), System.Drawing.Image)
-        Me.IndicadorNuevo.Location = New System.Drawing.Point(62, 85)
-        Me.IndicadorNuevo.Name = "IndicadorNuevo"
-        Me.IndicadorNuevo.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorNuevo.TabIndex = 156
-        Me.IndicadorNuevo.TabStop = False
-        '
-        'IndicadorContactado
-        '
-        Me.IndicadorContactado.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorContactado.Image = CType(resources.GetObject("IndicadorContactado.Image"), System.Drawing.Image)
-        Me.IndicadorContactado.Location = New System.Drawing.Point(183, 86)
-        Me.IndicadorContactado.Name = "IndicadorContactado"
-        Me.IndicadorContactado.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorContactado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorContactado.TabIndex = 156
-        Me.IndicadorContactado.TabStop = False
-        '
-        'IndicadorWorking
-        '
-        Me.IndicadorWorking.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorWorking.Image = CType(resources.GetObject("IndicadorWorking.Image"), System.Drawing.Image)
-        Me.IndicadorWorking.Location = New System.Drawing.Point(308, 86)
-        Me.IndicadorWorking.Name = "IndicadorWorking"
-        Me.IndicadorWorking.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorWorking.TabIndex = 156
-        Me.IndicadorWorking.TabStop = False
-        '
-        'IndicadorNo
-        '
-        Me.IndicadorNo.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorNo.Image = CType(resources.GetObject("IndicadorNo.Image"), System.Drawing.Image)
-        Me.IndicadorNo.Location = New System.Drawing.Point(431, 85)
-        Me.IndicadorNo.Name = "IndicadorNo"
-        Me.IndicadorNo.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorNo.TabIndex = 156
-        Me.IndicadorNo.TabStop = False
-        '
-        'IndicadorConvertido
-        '
-        Me.IndicadorConvertido.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorConvertido.Image = CType(resources.GetObject("IndicadorConvertido.Image"), System.Drawing.Image)
-        Me.IndicadorConvertido.Location = New System.Drawing.Point(550, 85)
-        Me.IndicadorConvertido.Name = "IndicadorConvertido"
-        Me.IndicadorConvertido.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorConvertido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorConvertido.TabIndex = 156
-        Me.IndicadorConvertido.TabStop = False
         '
         'Panel5
         '
@@ -995,17 +929,6 @@ Partial Class FrmProspectos
         Me.btCancelar.Text = "Convertir"
         Me.btCancelar.UseVisualStyleBackColor = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 1
-        Me.PictureBox3.TabStop = False
-        '
         'Label47
         '
         Me.Label47.AutoSize = True
@@ -1176,7 +1099,7 @@ Partial Class FrmProspectos
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label22.Location = New System.Drawing.Point(591, 257)
+        Me.Label22.Location = New System.Drawing.Point(601, 257)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(48, 15)
         Me.Label22.TabIndex = 143
@@ -1383,7 +1306,7 @@ Partial Class FrmProspectos
         '
         Me.txtNotas.AutoSize = True
         Me.txtNotas.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNotas.Location = New System.Drawing.Point(1003, 261)
+        Me.txtNotas.Location = New System.Drawing.Point(658, 289)
         Me.txtNotas.Name = "txtNotas"
         Me.txtNotas.Size = New System.Drawing.Size(36, 14)
         Me.txtNotas.TabIndex = 135
@@ -1393,7 +1316,7 @@ Partial Class FrmProspectos
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label19.Location = New System.Drawing.Point(960, 261)
+        Me.Label19.Location = New System.Drawing.Point(601, 289)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(43, 15)
         Me.Label19.TabIndex = 135
@@ -1454,7 +1377,7 @@ Partial Class FrmProspectos
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label15.Location = New System.Drawing.Point(591, 199)
+        Me.Label15.Location = New System.Drawing.Point(601, 199)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(61, 15)
         Me.Label15.TabIndex = 48
@@ -1474,7 +1397,7 @@ Partial Class FrmProspectos
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(591, 228)
+        Me.Label11.Location = New System.Drawing.Point(601, 228)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(51, 15)
         Me.Label11.TabIndex = 56
@@ -1512,13 +1435,13 @@ Partial Class FrmProspectos
         Me.TabActividad.Controls.Add(Me.Label55)
         Me.TabActividad.Controls.Add(Me.Label56)
         Me.TabActividad.Controls.Add(Me.Label57)
+        Me.TabActividad.Controls.Add(Me.Panel6)
+        Me.TabActividad.Controls.Add(Me.TabControlTareas)
         Me.TabActividad.Controls.Add(Me.IndicadorNuevo2)
         Me.TabActividad.Controls.Add(Me.IndicadorContactado2)
         Me.TabActividad.Controls.Add(Me.IndicadorWorking2)
         Me.TabActividad.Controls.Add(Me.IndicadorNo2)
         Me.TabActividad.Controls.Add(Me.IndicadorConvertido2)
-        Me.TabActividad.Controls.Add(Me.Panel6)
-        Me.TabActividad.Controls.Add(Me.TabControlTareas)
         Me.TabActividad.Location = New System.Drawing.Point(4, 24)
         Me.TabActividad.Name = "TabActividad"
         Me.TabActividad.Size = New System.Drawing.Size(1140, 611)
@@ -1606,61 +1529,6 @@ Partial Class FrmProspectos
         Me.Label57.TabIndex = 165
         Me.Label57.Text = "______________"
         '
-        'IndicadorNuevo2
-        '
-        Me.IndicadorNuevo2.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorNuevo2.Image = CType(resources.GetObject("IndicadorNuevo2.Image"), System.Drawing.Image)
-        Me.IndicadorNuevo2.Location = New System.Drawing.Point(62, 85)
-        Me.IndicadorNuevo2.Name = "IndicadorNuevo2"
-        Me.IndicadorNuevo2.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorNuevo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorNuevo2.TabIndex = 160
-        Me.IndicadorNuevo2.TabStop = False
-        '
-        'IndicadorContactado2
-        '
-        Me.IndicadorContactado2.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorContactado2.Image = CType(resources.GetObject("IndicadorContactado2.Image"), System.Drawing.Image)
-        Me.IndicadorContactado2.Location = New System.Drawing.Point(183, 86)
-        Me.IndicadorContactado2.Name = "IndicadorContactado2"
-        Me.IndicadorContactado2.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorContactado2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorContactado2.TabIndex = 161
-        Me.IndicadorContactado2.TabStop = False
-        '
-        'IndicadorWorking2
-        '
-        Me.IndicadorWorking2.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorWorking2.Image = CType(resources.GetObject("IndicadorWorking2.Image"), System.Drawing.Image)
-        Me.IndicadorWorking2.Location = New System.Drawing.Point(308, 86)
-        Me.IndicadorWorking2.Name = "IndicadorWorking2"
-        Me.IndicadorWorking2.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorWorking2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorWorking2.TabIndex = 162
-        Me.IndicadorWorking2.TabStop = False
-        '
-        'IndicadorNo2
-        '
-        Me.IndicadorNo2.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorNo2.Image = CType(resources.GetObject("IndicadorNo2.Image"), System.Drawing.Image)
-        Me.IndicadorNo2.Location = New System.Drawing.Point(431, 85)
-        Me.IndicadorNo2.Name = "IndicadorNo2"
-        Me.IndicadorNo2.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorNo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorNo2.TabIndex = 163
-        Me.IndicadorNo2.TabStop = False
-        '
-        'IndicadorConvertido2
-        '
-        Me.IndicadorConvertido2.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorConvertido2.Image = CType(resources.GetObject("IndicadorConvertido2.Image"), System.Drawing.Image)
-        Me.IndicadorConvertido2.Location = New System.Drawing.Point(550, 85)
-        Me.IndicadorConvertido2.Name = "IndicadorConvertido2"
-        Me.IndicadorConvertido2.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorConvertido2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorConvertido2.TabIndex = 164
-        Me.IndicadorConvertido2.TabStop = False
-        '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.LightGray
@@ -1682,17 +1550,6 @@ Partial Class FrmProspectos
         Me.Label13.Size = New System.Drawing.Size(138, 18)
         Me.Label13.TabIndex = 135
         Me.Label13.Text = "Registrar Actividades"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
         '
         'Label16
         '
@@ -2003,6 +1860,149 @@ Partial Class FrmProspectos
         Me.PictureBox5.TabIndex = 139
         Me.PictureBox5.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'IndicadorNuevo
+        '
+        Me.IndicadorNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorNuevo.Image = CType(resources.GetObject("IndicadorNuevo.Image"), System.Drawing.Image)
+        Me.IndicadorNuevo.Location = New System.Drawing.Point(62, 85)
+        Me.IndicadorNuevo.Name = "IndicadorNuevo"
+        Me.IndicadorNuevo.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorNuevo.TabIndex = 156
+        Me.IndicadorNuevo.TabStop = False
+        '
+        'IndicadorContactado
+        '
+        Me.IndicadorContactado.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorContactado.Image = CType(resources.GetObject("IndicadorContactado.Image"), System.Drawing.Image)
+        Me.IndicadorContactado.Location = New System.Drawing.Point(183, 86)
+        Me.IndicadorContactado.Name = "IndicadorContactado"
+        Me.IndicadorContactado.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorContactado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorContactado.TabIndex = 156
+        Me.IndicadorContactado.TabStop = False
+        '
+        'IndicadorWorking
+        '
+        Me.IndicadorWorking.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorWorking.Image = CType(resources.GetObject("IndicadorWorking.Image"), System.Drawing.Image)
+        Me.IndicadorWorking.Location = New System.Drawing.Point(308, 86)
+        Me.IndicadorWorking.Name = "IndicadorWorking"
+        Me.IndicadorWorking.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorWorking.TabIndex = 156
+        Me.IndicadorWorking.TabStop = False
+        '
+        'IndicadorNo
+        '
+        Me.IndicadorNo.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorNo.Image = CType(resources.GetObject("IndicadorNo.Image"), System.Drawing.Image)
+        Me.IndicadorNo.Location = New System.Drawing.Point(431, 85)
+        Me.IndicadorNo.Name = "IndicadorNo"
+        Me.IndicadorNo.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorNo.TabIndex = 156
+        Me.IndicadorNo.TabStop = False
+        '
+        'IndicadorConvertido
+        '
+        Me.IndicadorConvertido.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorConvertido.Image = CType(resources.GetObject("IndicadorConvertido.Image"), System.Drawing.Image)
+        Me.IndicadorConvertido.Location = New System.Drawing.Point(550, 85)
+        Me.IndicadorConvertido.Name = "IndicadorConvertido"
+        Me.IndicadorConvertido.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorConvertido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorConvertido.TabIndex = 156
+        Me.IndicadorConvertido.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 1
+        Me.PictureBox3.TabStop = False
+        '
+        'IndicadorNuevo2
+        '
+        Me.IndicadorNuevo2.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorNuevo2.Image = CType(resources.GetObject("IndicadorNuevo2.Image"), System.Drawing.Image)
+        Me.IndicadorNuevo2.Location = New System.Drawing.Point(62, 85)
+        Me.IndicadorNuevo2.Name = "IndicadorNuevo2"
+        Me.IndicadorNuevo2.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorNuevo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorNuevo2.TabIndex = 160
+        Me.IndicadorNuevo2.TabStop = False
+        '
+        'IndicadorContactado2
+        '
+        Me.IndicadorContactado2.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorContactado2.Image = CType(resources.GetObject("IndicadorContactado2.Image"), System.Drawing.Image)
+        Me.IndicadorContactado2.Location = New System.Drawing.Point(183, 86)
+        Me.IndicadorContactado2.Name = "IndicadorContactado2"
+        Me.IndicadorContactado2.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorContactado2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorContactado2.TabIndex = 161
+        Me.IndicadorContactado2.TabStop = False
+        '
+        'IndicadorWorking2
+        '
+        Me.IndicadorWorking2.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorWorking2.Image = CType(resources.GetObject("IndicadorWorking2.Image"), System.Drawing.Image)
+        Me.IndicadorWorking2.Location = New System.Drawing.Point(308, 86)
+        Me.IndicadorWorking2.Name = "IndicadorWorking2"
+        Me.IndicadorWorking2.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorWorking2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorWorking2.TabIndex = 162
+        Me.IndicadorWorking2.TabStop = False
+        '
+        'IndicadorNo2
+        '
+        Me.IndicadorNo2.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorNo2.Image = CType(resources.GetObject("IndicadorNo2.Image"), System.Drawing.Image)
+        Me.IndicadorNo2.Location = New System.Drawing.Point(431, 85)
+        Me.IndicadorNo2.Name = "IndicadorNo2"
+        Me.IndicadorNo2.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorNo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorNo2.TabIndex = 163
+        Me.IndicadorNo2.TabStop = False
+        '
+        'IndicadorConvertido2
+        '
+        Me.IndicadorConvertido2.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorConvertido2.Image = CType(resources.GetObject("IndicadorConvertido2.Image"), System.Drawing.Image)
+        Me.IndicadorConvertido2.Location = New System.Drawing.Point(550, 85)
+        Me.IndicadorConvertido2.Name = "IndicadorConvertido2"
+        Me.IndicadorConvertido2.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorConvertido2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorConvertido2.TabIndex = 164
+        Me.IndicadorConvertido2.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
         'FrmProspectos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2024,40 +2024,40 @@ Partial Class FrmProspectos
         Me.Panel7.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabDetallesProspecto.ResumeLayout(False)
         Me.TabDetallesProspecto.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.IndicadorNuevo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorContactado, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorWorking, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorNo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorConvertido, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabActividad.ResumeLayout(False)
         Me.TabActividad.PerformLayout()
-        CType(Me.IndicadorNuevo2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorContactado2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorWorking2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorNo2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndicadorConvertido2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlTareas.ResumeLayout(False)
         Me.TabLlamada.ResumeLayout(False)
         Me.TabLlamada.PerformLayout()
         Me.TabTarea.ResumeLayout(False)
         Me.TabTarea.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorNuevo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorContactado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorWorking, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorNo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorConvertido, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorNuevo2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorContactado2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorWorking2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorNo2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndicadorConvertido2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

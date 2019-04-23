@@ -23,17 +23,18 @@ Public Class FrmProspectos
         cboRelacionadoConTareas.Items.Add("Cotizaciones")
         cboRelacionadoConTareas.Items.Add("Calibración")
 
+        cboStatusFiltrado.Items.Add("No calificado")
         cboStatusFiltrado.Items.Add("Nuevo")
         cboStatusFiltrado.Items.Add("Working")
-        cboStatusFiltrado.Items.Add("No habilitado")
+        cboStatusFiltrado.Items.Add("Promoviendo")
         cboStatusFiltrado.Items.Add("Convertido")
 
         alternarColorColumnas(DGConsulta)
     End Sub
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         Me.Dispose()
-        Dim Admin As New FrmHOME
-        Admin.Show()
+        'Dim Admin As New FrmHOME
+        'Admin.Show()
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
@@ -821,7 +822,7 @@ Public Class FrmProspectos
                 Else
                     ''Hacer la verficacion de los indicadores verdes o grises  
                     txtEstado.Text = lector(22)
-                    If txtEstado.Text.Trim.Equals("Nuevo") Then
+                    If txtEstado.Text.Trim.Equals("No calificado") Then
                         ''---------------------------------------
                         IndicadorNuevo.Image = My.Resources.green
                         IndicadorContactado.Image = My.Resources.gray
@@ -835,7 +836,7 @@ Public Class FrmProspectos
                         IndicadorNo2.Image = My.Resources.gray
                         IndicadorConvertido2.Image = My.Resources.gray
                         ''---------------------------------------------
-                    ElseIf txtEstado.Text.Trim.Equals("Contactado") Then
+                    ElseIf txtEstado.Text.Trim.Equals("Nuevo") Then
                         IndicadorNuevo.Image = My.Resources.green
                         IndicadorContactado.Image = My.Resources.green
                         IndicadorWorking.Image = My.Resources.gray
@@ -861,7 +862,7 @@ Public Class FrmProspectos
                         IndicadorNo2.Image = My.Resources.gray
                         IndicadorConvertido2.Image = My.Resources.gray
 
-                    ElseIf txtEstado.Text.Trim.Equals("No habilitado") Then
+                    ElseIf txtEstado.Text.Trim.Equals("Promoviendo") Then
                         IndicadorNuevo.Image = My.Resources.green
                         IndicadorContactado.Image = My.Resources.green
                         IndicadorWorking.Image = My.Resources.green

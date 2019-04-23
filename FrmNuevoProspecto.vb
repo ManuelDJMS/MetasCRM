@@ -163,9 +163,10 @@ Public Class FrmNuevoProspecto
 
         MetodoLIMS()
         cboStatus.Items.Add("--Ninguno--")
+        cboStatus.Items.Add("No calificado")
         cboStatus.Items.Add("Nuevo")
         cboStatus.Items.Add("Working")
-        cboStatus.Items.Add("No habilitado")
+        cboStatus.Items.Add("Promoviendo")
 
         cboSaludo.Items.Add("Sr.")
         cboSaludo.Items.Add("Sra.")
