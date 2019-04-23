@@ -279,21 +279,23 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PictureBox5_MouseHover(sender As Object, e As EventArgs) Handles PictureBox5.MouseHover
-        PictureBox5.Size = New Size(300, 300)
-    End Sub
+    ''Private Sub PictureBox5_MouseHover(sender As Object, e As EventArgs) Handles PictureBox5.MouseHover
+    ''    PictureBox5.Size = New Size(300, 300)
+    ''End Sub
 
-    Private Sub PictureBox6_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox5.MouseLeave
-        PictureBox5.Size = New Size(293, 293)
-    End Sub
+    ''Private Sub PictureBox6_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox5.MouseLeave
+    ''    PictureBox5.Size = New Size(293, 293)
+    ''End Sub
 
-    Private Sub PictureBox7_MouseHover(sender As Object, e As EventArgs) Handles PictureBox6.MouseHover
-        PictureBox6.Size = New Size(300, 300)
-    End Sub
+    ''Private Sub PictureBox7_MouseHover(sender As Object, e As EventArgs) Handles PictureBox6.MouseHover
+    ''    PictureBox6.Size = New Size(300, 300)
+    ''End Sub
 
-    Private Sub PictureBox7_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox6.MouseLeave
-        PictureBox6.Size = New Size(293, 293)
-    End Sub
+    ''Private Sub PictureBox7_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox6.MouseLeave
+    ''    PictureBox6.Size = New Size(293, 293)
+    ''End Sub
 
+    ''Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    ''End Sub
 End Class
