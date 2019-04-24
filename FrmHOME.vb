@@ -37,30 +37,21 @@
         Admin.Show()
         'MsgBox("Modulo en mantenimiento")
 
-        Panel1.BackColor = Color.SteelBlue
-        Panel2.BackColor = Color.DimGray
-        Panel3.BackColor = Color.DimGray
+        Panel1.BackColor = Color.Gainsboro
         Panel4.BackColor = Color.DimGray
-        Panel5.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel7.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
-        Label17.ForeColor = Color.Black
+        Panel7.BackColor = Color.DimGray
 
-        Panel1.BackColor = Color.DimGray
-        Panel4.BackColor = Color.DimGray
-        Panel9.BackColor = Color.DimGray
-        Panel5.BackColor = Color.DimGray
-        Panel7.BackColor = Color.DimGray
-        Panel14.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
+        Label7.ForeColor = Color.Black
+        Label13.ForeColor = Color.White
+        Label6.ForeColor = Color.White
+        Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
 
         PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
         ''--------------------------------------
 
     End Sub
@@ -110,26 +101,22 @@
         Admin.MdiParent = Me
         Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
         Admin.Show()
-        Panel1.BackColor = Color.DimGray
-        Panel2.BackColor = Color.DimGray
-        Panel3.BackColor = Color.DimGray
-        Panel4.BackColor = Color.Gainsboro
-        Panel5.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel7.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
-        Panel9.BackColor = Color.DimGray
-        Label13.ForeColor = Color.Black
 
-        'PanelBuenosDias.Visible = False
-        'PanelRecordatorioSemana.Visible = False
-        'PanelRecordatoriosHoy.Visible = False
-        'PanelTareasSemana.Visible = False
+        Panel1.BackColor = Color.DimGray
+        Panel4.BackColor = Color.Gainsboro
+        Panel9.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+
+        Label7.ForeColor = Color.White
+        Label13.ForeColor = Color.Black
+        Label6.ForeColor = Color.White
+        Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
 
         PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
 
@@ -142,9 +129,9 @@
         Panel2.BackColor = Color.DimGray
         Panel3.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
-        Panel5.BackColor = Color.SteelBlue
+        ' Panel5.BackColor = Color.SteelBlue
         Panel6.BackColor = Color.DimGray
-        Panel7.BackColor = Color.DimGray
+        Panel7.BackColor = Color.Gainsboro
         Panel8.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
         Label15.ForeColor = Color.Black
@@ -155,21 +142,30 @@
 
         PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
 
     Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
-        'Panel1.BackColor = Color.DimGray
-        'Panel2.BackColor = Color.DimGray
-        'Panel3.BackColor = Color.DimGray
-        'Panel4.BackColor = Color.DimGray
-        'Panel5.BackColor = Color.DimGray
-        'Panel6.BackColor = Color.DimGray
-        'Panel7.BackColor = Color.SteelBlue
-        'Panel8.BackColor = Color.DimGray
-        'Panel9.BackColor = Color.DimGray
-        'Label17.ForeColor = Color.Black
-        MsgBox("Modulo en mantenimiento")
+        Dim Admin As New FrmCotizadorLIMS
+        Admin.MdiParent = Me
+        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        Admin.Show()
+        Panel1.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Panel7.BackColor = Color.Gainsboro
+
+        Label7.ForeColor = Color.White
+        Label13.ForeColor = Color.White
+        Label6.ForeColor = Color.White
+        Label17.ForeColor = Color.Black
+        ''-----------Poner invisibles----------
+
+        PanelRecordatoriosHoy.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
+        ''--------------------------------------
     End Sub
 
     Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
@@ -208,18 +204,19 @@
 
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
-        Panel9.BackColor = Color.SteelBlue
-        Panel5.BackColor = Color.DimGray
+        Panel9.BackColor = Color.Gainsboro
         Panel7.BackColor = Color.DimGray
-        Panel15.BackColor = Color.DimGray
-        Panel14.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
+
+        Label7.ForeColor = Color.White
+        Label13.ForeColor = Color.White
+        Label6.ForeColor = Color.Black
+        Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
 
         PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
 

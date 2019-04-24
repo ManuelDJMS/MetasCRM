@@ -68,19 +68,22 @@ Public Class FrmContactos
     End Sub
 
     Public Sub ConsultaDatosEquipos(ByVal claveInstrumento As Integer)
-        conexionLIMS.Open()
-        Dim R As String
-        R = " select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
-	    ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] ,SetupCustomerEquipmentMapping.[Location]
-	    ,SetupCustomerEquipmentMapping.[CALDue] ,SetupCustomerEquipmentMapping.[IsActive],SetUpEquipment.[ItemNumber]
-        ,SetUpEquipment.[AdditionalSepcification] from SetUpEquipment inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
-	    SetUpEquipment.EquipId where SetupCustomerEquipmentMapping.CustomerId = " & claveInstrumento & ""
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Read()
-
-        conexionLIMS.Close()
+        Try
+            conexionLIMS.Open()
+            Dim R As String
+            R = " select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
+	            ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] ,SetupCustomerEquipmentMapping.[Location]
+	            ,SetupCustomerEquipmentMapping.[CALDue] ,SetupCustomerEquipmentMapping.[IsActive],SetUpEquipment.[ItemNumber]
+                ,SetUpEquipment.[AdditionalSepcification] from SetUpEquipment inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
+	            SetUpEquipment.EquipId where SetupCustomerEquipmentMapping.CustomerId = " & claveInstrumento & ""
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            lector.Read()
+            conexionLIMS.Close()
+        Catch ex As Exception
+            MsgBox("Error en la búsqueda.", MsgBoxStyle.Information)
+        End Try
     End Sub
 
     Public Sub consultaDatosContactos(ByVal clave As String)
@@ -90,75 +93,75 @@ Public Class FrmContactos
             MetodoLIMS()
             Dim R As String
             R = "select SetupCustomerDetails.[CustomerId]
-      ,SetupCustomerDetails.[CustAccountNo]
-      ,SetupCustomerDetails.[FirstName]
-      ,SetupCustomerDetails.[MiddleName]
-      ,SetupCustomerDetails.[LastName]
-      ,SetupCustomerDetails.[Phone]
-      ,SetupCustomerDetails.[Mobile]
-      ,SetupCustomerDetails.[Email]
-      ,SetupCustomerDetails.[Fax]
-      ,SetupCustomerDetails.[CompanyName]
-      ,SetupCustomerDetails.[IsActive]
-      ,SetupCustomerDetails.[Source]
-      ,SetupCustomerDetails.[AdminType]
-      ,SetupCustomerDetails.[PaymentTerms]
-      ,SetupCustomerDetails.[IsCod]
-      ,SetupCustomerDetails.[IsTaxable]
-      ,SetupCustomerDetails.[IsCallDataReq]
-      ,SetupCustomerDetails.[IsOOTNoticeReq]
-      ,SetupCustomerDetails.[IsCallHistoryReq]
-      ,SetupCustomerDetails.[QualityReqment]
-      ,SetupCustomerDetails.[CallDueDateAdj]
-      ,SetupCustomerDetails.[LabNotes]
-      ,SetupCustomerDetails.[CreatedBy]
-      ,SetupCustomerDetails.[CreatedOn]
-      ,SetupCustomerDetails.[ModifiedBy]
-      ,SetupCustomerDetails.[ModifiedOn]
-      ,SetupCustomerDetails.[DefaultPO]
-      ,SetupCustomerDetails.[ShipMode]
-      ,SetupCustomerDetails.[CalDiscount]
-      ,SetupCustomerDetails.[TaxExemption]
-      ,SetupCustomerDetails.[Department]
-      ,SetupCustomerDetails.[Email2]
-      ,SetupCustomerDetails.[CategoryCustomer]
-      ,SetupCustomerDetails.[TaxIDNo]
-      ,SetupCustomerDetails.[Currency]
-      ,SetupCustomerDetails.[PaymentOption]
-      ,SetupCustomerDetails.[ShipmentAccount]
-      ,SetupCustomerDetails.[WorkingHours]
-      ,SetupCustomerDetails.[RecallNotice]
-      ,SetupCustomerDetails.[AttachmentName]
-      ,SetupCustomerDetails.[IsDigitalCertificate]
-      ,SetupCustomerDetails.[Attachment]
-      ,SetupCustomerDetails.[IsShipAccActive]
-      ,SetupCustomerDetails.[KeyFiscal]
-      ,SetupCustomerDetails.[Organization]
-	  ,SetupCustomerAddressDtls.[AddressId]
-      ,SetupCustomerAddressDtls.[CustomerId]
-      ,SetupCustomerAddressDtls.[ContAddress1]
-      ,SetupCustomerAddressDtls.[ContAddress2]
-      ,SetupCustomerAddressDtls.[ContAddress3]
-      ,SetupCustomerAddressDtls.[ContCity]
-      ,SetupCustomerAddressDtls.[ContState]
-      ,SetupCustomerAddressDtls.[ContZip]
-      ,SetupCustomerAddressDtls.[BillAddress1]
-      ,SetupCustomerAddressDtls.[BillAddress2]
-      ,SetupCustomerAddressDtls.[BillAddress3]
-      ,SetupCustomerAddressDtls.[BillCity]
-      ,SetupCustomerAddressDtls.[BillState]
-      ,SetupCustomerAddressDtls.[BillZip]
-      ,SetupCustomerAddressDtls.[ShipAddress1]
-      ,SetupCustomerAddressDtls.[ShipAddress2]
-      ,SetupCustomerAddressDtls.[ShipAddress3]
-      ,SetupCustomerAddressDtls.[ShipCity]
-      ,SetupCustomerAddressDtls.[ShipState]
-      ,SetupCustomerAddressDtls.[ShipZip]
-      ,SetupCustomerAddressDtls.[ContCountry]
-      ,SetupCustomerAddressDtls.[BillCountry]
-      ,SetupCustomerAddressDtls.[ShipCountry]
-	  from SetupCustomerDetails
-	  inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId  where SetupCustomerDetails.[CustomerId]= " & clave & ""
+                  ,SetupCustomerDetails.[CustAccountNo]
+                  ,SetupCustomerDetails.[FirstName]
+                  ,SetupCustomerDetails.[MiddleName]
+                  ,SetupCustomerDetails.[LastName]
+                  ,SetupCustomerDetails.[Phone]
+                  ,SetupCustomerDetails.[Mobile]
+                  ,SetupCustomerDetails.[Email]
+                  ,SetupCustomerDetails.[Fax]
+                  ,SetupCustomerDetails.[CompanyName]
+                  ,SetupCustomerDetails.[IsActive]
+                  ,SetupCustomerDetails.[Source]
+                  ,SetupCustomerDetails.[AdminType]
+                  ,SetupCustomerDetails.[PaymentTerms]
+                  ,SetupCustomerDetails.[IsCod]
+                  ,SetupCustomerDetails.[IsTaxable]
+                  ,SetupCustomerDetails.[IsCallDataReq]
+                  ,SetupCustomerDetails.[IsOOTNoticeReq]
+                  ,SetupCustomerDetails.[IsCallHistoryReq]
+                  ,SetupCustomerDetails.[QualityReqment]
+                  ,SetupCustomerDetails.[CallDueDateAdj]
+                  ,SetupCustomerDetails.[LabNotes]
+                  ,SetupCustomerDetails.[CreatedBy]
+                  ,SetupCustomerDetails.[CreatedOn]
+                  ,SetupCustomerDetails.[ModifiedBy]
+                  ,SetupCustomerDetails.[ModifiedOn]
+                  ,SetupCustomerDetails.[DefaultPO]
+                  ,SetupCustomerDetails.[ShipMode]
+                  ,SetupCustomerDetails.[CalDiscount]
+                  ,SetupCustomerDetails.[TaxExemption]
+                  ,SetupCustomerDetails.[Department]
+                  ,SetupCustomerDetails.[Email2]
+                  ,SetupCustomerDetails.[CategoryCustomer]
+                  ,SetupCustomerDetails.[TaxIDNo]
+                  ,SetupCustomerDetails.[Currency]
+                  ,SetupCustomerDetails.[PaymentOption]
+                  ,SetupCustomerDetails.[ShipmentAccount]
+                  ,SetupCustomerDetails.[WorkingHours]
+                  ,SetupCustomerDetails.[RecallNotice]
+                  ,SetupCustomerDetails.[AttachmentName]
+                  ,SetupCustomerDetails.[IsDigitalCertificate]
+                  ,SetupCustomerDetails.[Attachment]
+                  ,SetupCustomerDetails.[IsShipAccActive]
+                  ,SetupCustomerDetails.[KeyFiscal]
+                  ,SetupCustomerDetails.[Organization]
+	              ,SetupCustomerAddressDtls.[AddressId]
+                  ,SetupCustomerAddressDtls.[CustomerId]
+                  ,SetupCustomerAddressDtls.[ContAddress1]
+                  ,SetupCustomerAddressDtls.[ContAddress2]
+                  ,SetupCustomerAddressDtls.[ContAddress3]
+                  ,SetupCustomerAddressDtls.[ContCity]
+                  ,SetupCustomerAddressDtls.[ContState]
+                  ,SetupCustomerAddressDtls.[ContZip]
+                  ,SetupCustomerAddressDtls.[BillAddress1]
+                  ,SetupCustomerAddressDtls.[BillAddress2]
+                  ,SetupCustomerAddressDtls.[BillAddress3]
+                  ,SetupCustomerAddressDtls.[BillCity]
+                  ,SetupCustomerAddressDtls.[BillState]
+                  ,SetupCustomerAddressDtls.[BillZip]
+                  ,SetupCustomerAddressDtls.[ShipAddress1]
+                  ,SetupCustomerAddressDtls.[ShipAddress2]
+                  ,SetupCustomerAddressDtls.[ShipAddress3]
+                  ,SetupCustomerAddressDtls.[ShipCity]
+                  ,SetupCustomerAddressDtls.[ShipState]
+                  ,SetupCustomerAddressDtls.[ShipZip]
+                  ,SetupCustomerAddressDtls.[ContCountry]
+                  ,SetupCustomerAddressDtls.[BillCountry]
+                  ,SetupCustomerAddressDtls.[ShipCountry]
+	              from SetupCustomerDetails
+	              inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId  where SetupCustomerDetails.[CustomerId]= " & clave & ""
 
             Dim comando As New SqlCommand(R, conexionLIMS)
             Dim lector As SqlDataReader
@@ -479,6 +482,7 @@ Public Class FrmContactos
                 MsgBox("No existen datos de registro.", MsgBoxStyle.Information)
             End If
         Catch ex As Exception
+            MsgBox("Ocurrio un error de lectura.", MsgBoxStyle.Information)
         End Try
     End Sub
 
@@ -498,6 +502,8 @@ Public Class FrmContactos
                 comando.ExecuteNonQuery()
                 MsgBox("Tarea registrada correctamente", MsgBoxStyle.Information)
                 conexionMetasCotizador.Close()
+                txtAsuntoTarea.Text = ""
+                txtAsignadoTarea.Text = ""
             Catch ex As Exception
                 MsgBox("Error al agregar llamada", MsgBoxStyle.Critical)
             End Try
@@ -516,6 +522,8 @@ Public Class FrmContactos
                 comando.ExecuteNonQuery()
                 MsgBox("Llamada registrada correctamente", MsgBoxStyle.Information)
                 conexionMetasCotizador.Close()
+                txtAsuntoLlamada.Text = ""
+                txtComentariosLlamada.Text = ""
             Catch ex As Exception
                 MsgBox("Error al agregar llamada", MsgBoxStyle.Critical)
             End Try
@@ -531,133 +539,150 @@ Public Class FrmContactos
     End Sub
 
     Public Sub consultaGeneralContactos()
-        ''Try
-        MetodoLIMS()
-        DGConsulta.Refresh()
-        Dim R As String
-        R = "  select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+        Try
+            MetodoLIMS()
+            DGConsulta.Refresh()
+            Dim R As String
+            R = "  select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
                 order by [FirstName]"
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        comando.CommandType = CommandType.Text
-        Dim da As New SqlDataAdapter(comando)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        DGConsulta.DataSource = dt
-        'lector.Close()
-        conexionLIMS.Close()
-        '' Catch ex As Exception
-        '' MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
-        ''End Try
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            comando.CommandType = CommandType.Text
+            Dim da As New SqlDataAdapter(comando)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            DGConsulta.DataSource = dt
+            conexionLIMS.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+        End Try
 
     End Sub
 
     Private Sub txtNombreB_TextChanged(sender As Object, e As EventArgs) Handles txtNombreB.TextChanged
-        Dim R As String
-        DGConsulta.Rows.Clear()
-        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+        Try
+            Dim R As String
+            DGConsulta.Rows.Clear()
+            R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] where SetupCustomerDetails.FirstName Like '%' + @clave + '%'"
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        comando.CommandType = CommandType.Text
-        comando.Parameters.AddWithValue("@clave", txtNombreB.Text)
-        Dim da As New SqlDataAdapter(comando)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        If dt.Rows.Count = 0 Then
-            DGConsulta.DataSource = Nothing
-        Else
-            DGConsulta.DataSource = dt
-            'txtClaveEmpresa.Enabled = True
-        End If
-        For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("Nombre").Style.BackColor = Color.LightCyan
-        Next
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            comando.CommandType = CommandType.Text
+            comando.Parameters.AddWithValue("@clave", txtNombreB.Text)
+            Dim da As New SqlDataAdapter(comando)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                DGConsulta.DataSource = Nothing
+            Else
+                DGConsulta.DataSource = dt
+                'txtClaveEmpresa.Enabled = True
+            End If
+            For Each fila As DataGridViewRow In DGConsulta.Rows
+                fila.Cells("Nombre").Style.BackColor = Color.LightCyan
+            Next
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 
     Private Sub txtCompaniaB_TextChanged(sender As Object, e As EventArgs) Handles txtCompaniaB.TextChanged
-        Dim R As String
-        DGConsulta.Rows.Clear()
-        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+        Try
+            Dim R As String
+            DGConsulta.Rows.Clear()
+            R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
             where SetupCustomerDetails.CompanyName Like '%' + @clave + '%'"
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        comando.CommandType = CommandType.Text
-        comando.Parameters.AddWithValue("@clave", txtCompaniaB.Text)
-        Dim da As New SqlDataAdapter(comando)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        If dt.Rows.Count = 0 Then
-            DGConsulta.DataSource = Nothing
-        Else
-            DGConsulta.DataSource = dt
-            'txtClaveEmpresa.Enabled = True
-        End If
-        For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("Empresa").Style.BackColor = Color.LightCyan
-        Next
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            comando.CommandType = CommandType.Text
+            comando.Parameters.AddWithValue("@clave", txtCompaniaB.Text)
+            Dim da As New SqlDataAdapter(comando)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                DGConsulta.DataSource = Nothing
+            Else
+                DGConsulta.DataSource = dt
+                'txtClaveEmpresa.Enabled = True
+            End If
+            For Each fila As DataGridViewRow In DGConsulta.Rows
+                fila.Cells("Empresa").Style.BackColor = Color.LightCyan
+            Next
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 
     Private Sub txtNumeroDeCuentaB_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroDeCuentaB.TextChanged
         ''código de consulta
-        Dim R As String
-        DGConsulta.Rows.Clear()
-        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+        Try
+            Dim R As String
+            DGConsulta.Rows.Clear()
+            R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
             where SetupCustomerDetails.CustAccountNo Like '%' + @clave + '%'"
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        comando.CommandType = CommandType.Text
-        comando.Parameters.AddWithValue("@clave", txtNumeroDeCuentaB.Text)
-        Dim da As New SqlDataAdapter(comando)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        If dt.Rows.Count = 0 Then
-            DGConsulta.DataSource = Nothing
-        Else
-            DGConsulta.DataSource = dt
-            'txtClaveEmpresa.Enabled = True
-        End If
-        For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("No. Cuenta").Style.BackColor = Color.LightCyan
-        Next
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            comando.CommandType = CommandType.Text
+            comando.Parameters.AddWithValue("@clave", txtNumeroDeCuentaB.Text)
+            Dim da As New SqlDataAdapter(comando)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                DGConsulta.DataSource = Nothing
+            Else
+                DGConsulta.DataSource = dt
+                'txtClaveEmpresa.Enabled = True
+            End If
+            For Each fila As DataGridViewRow In DGConsulta.Rows
+                fila.Cells("No. Cuenta").Style.BackColor = Color.LightCyan
+            Next
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+        End Try
+
     End Sub
 
     Private Sub txtCorreoB_TextChanged(sender As Object, e As EventArgs) Handles txtCorreoB.TextChanged
         ''código de consulta
-        Dim R As String
-        DGConsulta.Rows.Clear()
-        R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+        Try
+            Dim R As String
+            DGConsulta.Rows.Clear()
+            R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode]
             where SetupCustomerDetails.[Email] LIKE '%' + @clave + '%'"
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        comando.CommandType = CommandType.Text
-        comando.Parameters.AddWithValue("@clave", txtCorreoB.Text)
-        Dim da As New SqlDataAdapter(comando)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        If dt.Rows.Count = 0 Then
-            DGConsulta.DataSource = Nothing
-        Else
-            DGConsulta.DataSource = dt
-            'txtClaveEmpresa.Enabled = True
-        End If
-        For Each fila As DataGridViewRow In DGConsulta.Rows
-            fila.Cells("Correo").Style.BackColor = Color.LightCyan
-        Next
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            comando.CommandType = CommandType.Text
+            comando.Parameters.AddWithValue("@clave", txtCorreoB.Text)
+            Dim da As New SqlDataAdapter(comando)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                DGConsulta.DataSource = Nothing
+            Else
+                DGConsulta.DataSource = dt
+                'txtClaveEmpresa.Enabled = True
+            End If
+            For Each fila As DataGridViewRow In DGConsulta.Rows
+                fila.Cells("Correo").Style.BackColor = Color.LightCyan
+            Next
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+        End Try
+
     End Sub
 
     Public Sub limpiarTextos()
