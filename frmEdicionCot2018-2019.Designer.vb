@@ -470,7 +470,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtNumCond.AutoSize = True
         Me.txtNumCond.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumCond.Location = New System.Drawing.Point(421, 216)
+        Me.txtNumCond.Location = New System.Drawing.Point(372, 216)
         Me.txtNumCond.Name = "txtNumCond"
         Me.txtNumCond.Size = New System.Drawing.Size(81, 14)
         Me.txtNumCond.TabIndex = 159
@@ -592,9 +592,10 @@ Partial Class frmEdicionCot2018_2019
         Me.Label10.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(316, 216)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(94, 14)
+        Me.Label10.Size = New System.Drawing.Size(32, 14)
         Me.Label10.TabIndex = 144
-        Me.Label10.Text = "Núm Condicion"
+        Me.Label10.Text = "RFC:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'LabelEmpresa
         '
@@ -723,6 +724,7 @@ Partial Class frmEdicionCot2018_2019
         Me.Label18.Size = New System.Drawing.Size(102, 14)
         Me.Label18.TabIndex = 132
         Me.Label18.Text = "Cotización 2019:"
+        Me.Label18.Visible = False
         '
         'txtCotizacion19
         '
@@ -731,6 +733,7 @@ Partial Class frmEdicionCot2018_2019
         Me.txtCotizacion19.Name = "txtCotizacion19"
         Me.txtCotizacion19.Size = New System.Drawing.Size(98, 21)
         Me.txtCotizacion19.TabIndex = 133
+        Me.txtCotizacion19.Visible = False
         '
         'Label2
         '
@@ -741,6 +744,7 @@ Partial Class frmEdicionCot2018_2019
         Me.Label2.Size = New System.Drawing.Size(102, 14)
         Me.Label2.TabIndex = 130
         Me.Label2.Text = "Cotización 2018:"
+        Me.Label2.Visible = False
         '
         'Label13
         '
@@ -799,6 +803,7 @@ Partial Class frmEdicionCot2018_2019
         Me.txtCotizacion.Size = New System.Drawing.Size(84, 14)
         Me.txtCotizacion.TabIndex = 138
         Me.txtCotizacion.Text = "Cotización 2018"
+        Me.txtCotizacion.Visible = False
         '
         'Panel7
         '

@@ -13,7 +13,7 @@ Public Class frmEdicionCot2018_2019
             R = "select isnull(MetAsInf.Clavempresa,'-'), isnull(MetAsInf.Compania,'-'), isnull(MetAsInf.DomicilioConsig,'-'), isnull(MetAsInf.CiudadConsig,'-'), isnull(MetAsInf.EdoConsig,'-'),
             isnull([Contactos-Clientes-Usuarios].ClaveContacto,'-'), isnull([Contactos-Clientes-Usuarios].Nombre,'-'), isnull([Contactos-Clientes-Usuarios].Tel,'-'),
             isnull([Contactos-Clientes-Usuarios].Ext,'-'), isnull([Contactos-Clientes-Usuarios].Email,'-'), isnull(EntradaRegistroCot.Numcot,'-'), EntradaRegistroCot.Fecha,
-            isnull(EntradaRegistroCot.Referencia,'-'), isnull(EntradaRegistroCot.Observaciones,'-'), isnull(EntradaRegistroCot.Numcond,'-'), isnull(Condiciones_p_cotizar.donde,'-'),
+            isnull(EntradaRegistroCot.Referencia,'-'), isnull(EntradaRegistroCot.Observaciones,'-'), isnull(MetAsInf.RFC,'-'), isnull(Condiciones_p_cotizar.donde,'-'),
             isnull(Condiciones_p_cotizar.Precios,'-'), isnull(Condiciones_p_cotizar.tentrega,'-'), isnull(Condiciones_p_cotizar.modalidad,'-'), isnull([Claves-Elaboro-Cot].Nombre,'-'), 
             isnull(EntradaRegistroCot.ServicioEn,'-') from MetAsInf inner join [Contactos-Clientes-Usuarios] on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
             inner join EntradaRegistroCot on [Contactos-Clientes-Usuarios].ClaveContacto = EntradaRegistroCot.ClaveContacto
@@ -124,62 +124,49 @@ Public Class frmEdicionCot2018_2019
 
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
         Try
-            MetodoMetasInf2019()
-            fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
-            Dim maximo As Integer
+            '----------------------------A partir de aqui se busca en LIMS la empresa....si no se agrega-------------------------------------
             Dim R As String
-            If txtCotizacion19.Text.Trim.Equals("") Then
-                ''Es nueva cotizacion hasta el ultimo registro (select(MAX))
-                Dim comando As New SqlCommand("select MAX(Numcot) from EntradaRegistroCot", conexion2019)
-                Dim lector As SqlDataReader
-                lector = comando.ExecuteReader
-                lector.Read()
-                maximo = lector(0)
-                ' MsgBox("Ultimo registro: " & maximo + 1)
-                lector.Close()
+            Dim empresa As Integer
+            '//////////////////Aqui se busca la empresa en lims\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+            MetodoLIMS()
+            comandoLIMS = conexionLIMS.CreateCommand
+            R = "select isnull(CustomerId,'-') from SetupCustomerDetails where KeyFiscal='" & txtNumCond.Text & "' or Organization='" & txtNombreEmpresa.Text & "'"
+            lectorLIMS = comandoLIMS.ExecuteReader
+            lectorLIMS.Read()
+            empresa = lectorLIMS(0)
+            lectorLIMS.Close()
+            conexionLIMS.Close()
+            '/////////////////////////////////////////////////////////////////////////////////
+            If empresa = "-" Then '------------Decision para guardar o no la empresa------------------------
+                MetodoLIMS()
+                R = "select "
+
+
+
+
+                fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
                 R = "insert into EntradaRegistroCot (NumCot, Cliente, ClaveContacto, Fecha, Referencia, Numcond, Observaciones, ServicioEn, TipodeCliente, 
-                CveEmpresa, [Elaboró Cot], ModoDeContabilizar) values (" & maximo + 1 & ",'" & txtNombreEmpresa.Text & "',
-                " & Val(txtCveContacto.Text) & ", (CONVERT(varchar(10), getdate(), 103)),'" & txtReferencia.Text & "'," & Val(txtNumCond.Text) & ",
-                '" & txtObservaciones.Text & "','" & cboServicio.Text & "'," & Val(txtTipoCliente.Text) & "," & Val(txtClaveE.Text) & ",
-                " & Val(txtCotizo2019.Text) & "," & txtConta.Text & ")"
-                comando.CommandText = R
-                comando.ExecuteNonQuery()
+                    CveEmpresa, [Elaboró Cot], ModoDeContabilizar) values (" & txtNombreEmpresa.Text & "',
+                    " & Val(txtCveContacto.Text) & ", (CONVERT(varchar(10), getdate(), 103)),'" & txtReferencia.Text & "'," & Val(txtNumCond.Text) & ",
+                    '" & txtObservaciones.Text & "','" & cboServicio.Text & "'," & Val(txtTipoCliente.Text) & "," & Val(txtClaveE.Text) & ",
+                    " & Val(txtCotizo2019.Text) & "," & txtConta.Text & ")"
+                comandoMetasCotizador.CommandText = R
+                comandoMetasCotizador.ExecuteNonQuery()
                 'Codigo para guardar en 1Cotizar----------------------------------------------------
                 For i = 0 To DGCotizaciones.Rows.Count - 2
                     R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
-                     ID, Punitariocot, Realizado) values (" & maximo + 1 & "," & Val(i + 1) & ",'" & DGCotizaciones.Item(2, i).Value & "',
+                     ID, Punitariocot, Realizado) values (" & DGCotizaciones.Item(2, i).Value & "',
                     '" & "-" & "'," & Val(DGCotizaciones.Item(3, i).Value) & ",'" & DGCotizaciones.Item(4, i).Value & "',
                     '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "',
                     '" & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
-                    comando.CommandText = R
-                    comando.ExecuteNonQuery()
+                    comandoMetasCotizador.CommandText = R
+                    comandoMetasCotizador.ExecuteNonQuery()
                 Next i
-                MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
-            Else
-                Dim comando As New SqlCommand("select MAX(Numcot) from EntradaRegistroCot", conexion2019)
-                Dim lector As SqlDataReader
-                lector = comando.ExecuteReader
-                lector.Read()
-                lector.Close()
-                R = "update EntradaRegistroCot set NumCot='" & Val(txtCotizacion19.Text) & "', Cliente = '" & txtNombreEmpresa.Text & "', 
-                ClaveContacto='" & Val(txtCveContacto.Text) & "', Fecha= (CONVERT(varchar(10), getdate(), 103)), Referencia='" & txtReferencia.Text & "', 
-                Numcond='" & Val(txtNumCond.Text) & "', Observaciones='" & txtObservaciones.Text & "', ServicioEn='" & cboServicio.Text & "', 
-                TipodeCliente='1', CveEmpresa='" & Val(txtClaveE.Text) & "', [Elaboró Cot]=" & Val(txtCotizo2019.Text) & ", 
-                ModoDeContabilizar='" & Val(txtConta.Text) & "' WHERE NumCot='" & Val(txtCotizacion19.Text) & "'"
-                comando.CommandText = R
-                comando.ExecuteNonQuery()
-                For i = 0 To DGCotizaciones.Rows.Count - 2
-                    R = "insert into [1Cotizar] (Numcot, PartidaNo, ServCatalogo, Especial, Cant, Tipo, Marca, Modelo, Alcance, 
-                     ID, Punitariocot, Realizado) values (" & Val(txtCotizacion19.Text) & "," & Val(i + 1) & ",'" & DGCotizaciones.Item(2, i).Value & "',
-                    '" & "-" & "'," & Val(DGCotizaciones.Item(3, i).Value) & ",'" & DGCotizaciones.Item(4, i).Value & "',
-                    '" & DGCotizaciones.Item(5, i).Value & "','" & DGCotizaciones.Item(6, i).Value & "','" & DGCotizaciones.Item(8, i).Value & "',
-                    '" & DGCotizaciones.Item(7, i).Value & "'," & Val(DGCotizaciones.Item(10, i).Value) & "," & "0" & ")"
-                    comando.CommandText = R
-                    comando.ExecuteNonQuery()
-                Next i
-                MsgBox("Cotización actualizada y nuevas partidas agregadas, verifica registros en ACCESS", MsgBoxStyle.Information)
-                conexion2019.Close()
             End If
+            '--------------------------------------------------------------------------------------------------------------------------------
+
+            MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
+
             FrmCotizacion2018.txtClave.Text = ""
             FrmCotizacion2018.txtNombreE.Text = ""
             FrmCotizacion2018.DGCotizaciones.DataSource = Nothing

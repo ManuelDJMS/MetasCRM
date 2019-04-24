@@ -1,5 +1,4 @@
-﻿Imports System.Data.Sql
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Module LIMS              ''--------------------------BASE DE DATOS LIMS--------------
     Public conexionLIMS As SqlConnection
     Public comandoLIMS As SqlCommand
