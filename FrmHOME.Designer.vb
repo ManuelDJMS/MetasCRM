@@ -256,11 +256,11 @@ Partial Class FrmHOME
         Me.txtNombreAdmin.AutoSize = True
         Me.txtNombreAdmin.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreAdmin.ForeColor = System.Drawing.Color.White
-        Me.txtNombreAdmin.Location = New System.Drawing.Point(10, 186)
+        Me.txtNombreAdmin.Location = New System.Drawing.Point(51, 186)
         Me.txtNombreAdmin.Name = "txtNombreAdmin"
-        Me.txtNombreAdmin.Size = New System.Drawing.Size(196, 15)
+        Me.txtNombreAdmin.Size = New System.Drawing.Size(111, 15)
         Me.txtNombreAdmin.TabIndex = 28
-        Me.txtNombreAdmin.Text = "nnnnnnnnnnnnnnnnnnnnnnnnnnn"
+        Me.txtNombreAdmin.Text = "Cotizador para LIMS"
         Me.txtNombreAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GroupBox2
