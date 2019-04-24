@@ -10,6 +10,19 @@ Public Class FrmContactos
         alternarColorColumnas(DGConsulta)
         alternarColorColumnas(DGAdicionales)
         alternarColorColumnas(DGInstrumentos)
+
+        cboRelacionadoConLlamada.Items.Add("Cotización")
+        cboRelacionadoConLlamada.Items.Add("Información general")
+        cboRelacionadoConLlamada.Items.Add("Descuento especial")
+        cboRelacionadoConLlamada.Items.Add("Presupuesto")
+        cboRelacionadoConLlamada.Items.Add("Otro")
+
+        cboRelacionadoConTareas.Items.Add("Cotizaciones")
+        cboRelacionadoConTareas.Items.Add("Documentos")
+        cboRelacionadoConTareas.Items.Add("Permiso")
+        cboRelacionadoConTareas.Items.Add("Personales")
+        cboRelacionadoConTareas.Items.Add("Avisos")
+        cboRelacionadoConTareas.Items.Add("Otros")
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
@@ -32,6 +45,7 @@ Public Class FrmContactos
             Dim clave As String
             clave = DGConsulta.Rows(e.RowIndex).Cells(0).Value.ToString()
             txtClaveRecopilada.Text = clave
+            TextBox2.Text = clave
             consultaDatosContactos(clave)
             TabConsulta.SelectTab(1)
             'Evento click para la regilla---------------------------
@@ -154,6 +168,8 @@ Public Class FrmContactos
                 txtClaveRecopilada.Text = lector(0)
                 txtNumeroDeCuenta.Text = lector(1)
                 txtNombreDeContacto.Text = lector(2) & " " & lector(3) & " " & lector(4)
+                EtiquetaNombreDeProspecto.Text = lector(2) & " " & lector(3) & " " & lector(4)
+                EtiquetaNombreDeProspecto2.Text = lector(2) & " " & lector(3) & " " & lector(4)
                 txtTelefono.Text = lector(5)
                 txtCelular.Text = lector(6)
                 txtCorreo1.Text = lector(7)
@@ -190,11 +206,12 @@ Public Class FrmContactos
 
                 If lector(10).ToString.Trim.Equals("Y") Then
                     isActive = True
-                    CBActivo.Checked = True
+                    cbActivo1.Checked = True
                 Else
                     isActive = False
-                    CBActivo.Checked = False
+                    cbActivo1.Checked = False
                 End If
+
 
                 txtTerminosDePago.Text = lector(13)
 
@@ -225,27 +242,172 @@ Public Class FrmContactos
                 End If
 
 
+                If lector(19).ToString.Trim.Equals("0") Then
+                    txtCalidad.Text = "Nuclear - 10CFR"
+                ElseIf lector(19).ToString.Trim.Equals("1") Then
+                    txtCalidad.Text = "ISO/IEC 17025, ANSI Z540"
+                ElseIf lector(19).ToString.Trim.Equals("2") Then
+                    txtCalidad.Text = "Ninguno"
+                ElseIf lector(19).ToString.Trim.Equals("3") Then
+                    txtCalidad.Text = "Aplicar requerimiento especial"
+                ElseIf lector(19).ToString.Trim.Equals("4") Then
+                    txtCalidad.Text = "MIL-STD-45662A"
+                ElseIf lector(19).ToString.Trim.Equals("5") Then
+                    txtCalidad.Text = "ISO 10012-1"
+                Else
+                    txtCalidad.Text = "Otro"
+                End If
 
-                txtCalidad.Text = lector(19)
-                txtCalDueDate.Text = lector(20)
-                txtNotasLab.Text = lector(21)
 
-                txtOrigenContacto.Text = lector(11)
-                txtTipoDeCliente.Text = lector(12)
+                If lector(20).ToString.Trim.Equals("0") Then
+                    txtCalDueDate.Text = "Nuclear"
+                ElseIf lector(20).ToString.Trim.Equals("1") Then
+                    txtCalDueDate.Text = "ISO"
+                ElseIf lector(20).toString.Trim.Equals("2") Then
+                    txtCalDueDate.Text = "Ninguno"
+                ElseIf lector(20).ToString.Trim.Equals("3") Then
+                    txtCalDueDate.Text = "Aplica"
+                ElseIf lector(20).ToString.Trim.Equals("4") Then
+                    txtCalDueDate.Text = "MIL"
+                ElseIf lector(20).ToString.Trim.Equals("5") Then
+                    txtCalDueDate.Text = "ISO"
+                Else
+                    txtCalDueDate.Text = "Otro"
+                End If
+
+
+                If lector(11).ToString.Trim.Equals("1") Then
+                    txtOrigenContacto.Text = "Llamada de venta"
+                ElseIf lector(11).ToString.Trim.Equals("2") Then
+                    txtOrigenContacto.Text = "Recomendación del cliente"
+                ElseIf lector(11).ToString.Trim.Equals("3") Then
+                    txtOrigenContacto.Text = "Internet"
+                ElseIf lector(11).ToString.Trim.Equals("4") Then
+                    txtOrigenContacto.Text = "Revista de comercio"
+                ElseIf lector(11).ToString.Trim.Equals("5") Then
+                    txtOrigenContacto.Text = "Contacto del empleado"
+                ElseIf lector(11).ToString.Trim.Equals("6") Then
+                    txtOrigenContacto.Text = "Otro"
+                ElseIf lector(11).ToString.Trim.Equals("7") Then
+                    txtOrigenContacto.Text = "Expo/Conferencias"
+                Else
+                    txtOrigenContacto.Text = "Publicidad"
+                End If
+
+
+                If lector(12).ToString.Trim.Equals("1") Then
+                    txtTipoDeCliente.Text = "Comercial"
+                ElseIf lector(12).ToString.Trim.Equals("2") Then
+                    txtTipoDeCliente.Text = "Gobierno"
+                Else
+                    txtTipoDeCliente.Text = "Publica"
+                End If
+
+
+
+
+
+
+
+
                 txtTerminosDePago.Text = lector(13)
                 txtCategoria.Text = lector(32)
                 txtIDFiscal.Text = lector(33)
-                txtMoneda.Text = lector(34)
-                txtOpcionesDePago.Text = lector(35)
 
-                txtDefaultPO.Text = lector(26)
-                txtModoDeEnvio.Text = lector(27)
+                txtOpcionesDePago.Text = lector(35)
+                Label2.Text = lector(35)
+
+
+
+                txtNotasLab.Text = lector(21)
+
+                If lector(34).ToString.Trim.Equals("1") Then
+                    txtMoneda.Text = "US Dolar"
+                ElseIf lector(34).ToString.Trim.Equals("2") Then
+                    txtMoneda.Text = "Libra"
+                ElseIf lector(34).ToString.Trim.Equals("0") Then
+                    txtMoneda.Text = "Peso Mexicano"
+                Else
+                    txtMoneda.Text = "Euro"
+                End If
+
+
+                If lector(26).ToString.Trim.Equals("1") Then
+                    txtDefaultPO.Text = "Llamar antes de facturar"
+                ElseIf lector(26).ToString.Trim.Equals("2") Then
+                    txtDefaultPO.Text = "Llamar antes de enviar"
+                ElseIf lector(26).ToString.Trim.Equals("3") Then
+                    txtDefaultPO.Text = "No requerido"
+                ElseIf lector(26).ToString.Trim.Equals("4") Then
+                    txtDefaultPO.Text = "Gastos generales"
+                ElseIf lector(26).ToString.Trim.Equals("5") Then
+                    txtDefaultPO.Text = "Verbal"
+                ElseIf lector(26).ToString.Trim.Equals("6") Then
+                    txtDefaultPO.Text = "Otro"
+                Else
+                    txtDefaultPO.Text = "No definido"
+                End If
+
+
+
+
+
+
+                If lector(27).ToString.Trim.Equals("7") Then
+                    txtModoDeEnvio.Text = "DHL Worldwide Express"
+                ElseIf lector(27).ToString.Trim.Equals("11") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("12") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("13") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("14") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("15") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("16") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("17") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("18") Then
+                    txtModoDeEnvio.Text = "FedEx"
+                ElseIf lector(27).ToString.Trim.Equals("21") Then
+                    txtModoDeEnvio.Text = "Local"
+                ElseIf lector(27).ToString.Trim.Equals("22") Then
+                    txtModoDeEnvio.Text = "En sitio"
+                ElseIf lector(27).ToString.Trim.Equals("23") Then
+                    txtModoDeEnvio.Text = "Recolección"
+                ElseIf lector(27).ToString.Trim.Equals("27") Then
+                    txtModoDeEnvio.Text = "UPS"
+                ElseIf lector(27).ToString.Trim.Equals("28") Then
+                    txtModoDeEnvio.Text = "UPS"
+                ElseIf lector(27).ToString.Trim.Equals("29") Then
+                    txtModoDeEnvio.Text = "UPS"
+                ElseIf lector(27).ToString.Trim.Equals("30") Then
+                    txtModoDeEnvio.Text = "UPS"
+                ElseIf lector(27).ToString.Trim.Equals("31") Then
+                    txtModoDeEnvio.Text = "UPS"
+                ElseIf lector(27).ToString.Trim.Equals("32") Then
+                    txtModoDeEnvio.Text = "UPS"
+                Else
+                    txtModoDeEnvio.Text = "No definido"
+                End If
+
+
+
                 txtDescuentoDeCal.Text = lector(28)
                 txtTaxEx.Text = lector(29)
                 txtCuentaDeEnvio.Text = lector(36)
                 txtHorarioDeTrabajo.Text = lector(37)
-                txtAvisoDeRecupeacion.Text = lector(38)
 
+
+                If lector(38).ToString.Trim.Equals("0") Then
+                    txtAvisoDeRecupeacion.Text = "Llamada"
+                ElseIf lector(38).ToString.Trim.Equals("1") Then
+                    txtAvisoDeRecupeacion.Text = "Texto"
+                Else
+                    txtAvisoDeRecupeacion.Text = "Ambos"
+                End If
 
                 If lector(40).ToString.Trim.Equals("Y") Then
                     CBOnlyDigitalCer.Checked = True
@@ -253,11 +415,11 @@ Public Class FrmContactos
                 Else
                     CBOnlyDigitalCer.Checked = False
                 End If
-                If lector(42).ToString.Trim.Equals("Y") Then
-                    cbActivo1.Checked = True
 
+                If lector(42).ToString.Trim.Equals("Y") Then
+                    cbActivo2.Checked = True
                 Else
-                    cbActivo1.Checked = False
+                    cbActivo2.Checked = False
                 End If
 
                 txtKeyFiscal.Text = lector(43)
@@ -266,6 +428,7 @@ Public Class FrmContactos
                 conexionLIMS.Close()
 
                 conexionLIMS.Open()
+                DGAdicionales.Rows.Clear()
                 Dim x As String
                 MsgBox(clave)
                 x = "select [CustomerEmailId], [FName], [LName], [Department], [EmailId] from [SetupCustomerEmails] where CustomerId= " & clave & ""
@@ -280,6 +443,7 @@ Public Class FrmContactos
 
 
                 conexionLIMS.Open()
+                DGInstrumentos.Rows.Clear()
                 Dim y As String
                 y = "select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], 
                     SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
@@ -296,11 +460,66 @@ Public Class FrmContactos
                 End While
                 lectory.Close()
                 conexionLIMS.Close()
+
+                conexionLIMS.Open()
+                Dim a As String
+                a = "select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], 
+                    SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
+	                ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] 
+                    ,SetupCustomerEquipmentMapping.[Location]
+	                ,SetupCustomerEquipmentMapping.[CALDue]  ,SetupCustomerEquipmentMapping.[IsActive] from SetUpEquipment 
+                    inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
+	                SetUpEquipment.EquipId  where SetupCustomerEquipmentMapping.CustomerId = " & clave & ""
+                Dim comandoa As New SqlCommand(a, conexionLIMS)
+                Dim lectora As SqlDataReader
+                lectora = comandoy.ExecuteReader
+                lectora.Close()
+                conexionLIMS.Close()
             Else
                 MsgBox("No existen datos de registro.", MsgBoxStyle.Information)
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        TabConsulta.SelectTab(2)
+    End Sub
+
+    Private Sub btAgregarTarea_Click(sender As Object, e As EventArgs) Handles btAgregarTarea.Click
+        If txtAsuntoTarea.Text.Equals("") Or txtAsignadoTarea.Text.Equals("") Or cboRelacionadoConTareas.Text.Equals("") Then
+            MsgBox("No se pueden dejar campos vacios.", MsgBoxStyle.Exclamation)
+        Else
+            Try
+                MetodoMetasCotizador()
+                Dim R As String
+                R = "insert into [ActividadTareaContactos] (CustomerId, Asunto, Comentarios, FechaDeVencimiento, RelacionadoCon) values (" & txtClaveRecopilada.Text & ",'" & txtAsuntoTarea.Text & "','" & txtAsignadoTarea.Text & "','" & DTPFechaDeVencimiento.Value.ToShortDateString.ToString & "','" & cboRelacionadoConTareas.Text & "')"
+                Dim comando As New SqlCommand(R, conexionMetasCotizador)
+                comando.ExecuteNonQuery()
+                MsgBox("Tarea registrada correctamente", MsgBoxStyle.Information)
+                conexionMetasCotizador.Close()
+            Catch ex As Exception
+                MsgBox("Error al agregar llamada", MsgBoxStyle.Critical)
+            End Try
+        End If
+    End Sub
+
+    Private Sub btAgregarLlamada_Click(sender As Object, e As EventArgs) Handles btAgregarLlamada.Click
+        If txtAsuntoLlamada.Text.Equals("") Or txtComentariosLlamada.Text.Equals("") Or cboRelacionadoConLlamada.Text.Equals("") Then
+            MsgBox("No se pueden dejar campos vacios.", MsgBoxStyle.Exclamation)
+        Else
+            Try
+                MetodoMetasCotizador()
+                Dim R As String
+                R = "insert into [ActividadLlamadaContactos] (CustomerId, Asunto, Comentarios, FechaEstimadaDeLlamada, RelacionadoCon) values (" & txtClaveRecopilada.Text & ",'" & txtAsuntoLlamada.Text & "','" & txtComentariosLlamada.Text & "','" & DTPFechaEstimadaDeLlamada.Value.ToShortDateString.ToString & "','" & cboRelacionadoConLlamada.Text & "')"
+                Dim comando As New SqlCommand(R, conexionMetasCotizador)
+                comando.ExecuteNonQuery()
+                MsgBox("Llamada registrada correctamente", MsgBoxStyle.Information)
+                conexionMetasCotizador.Close()
+            Catch ex As Exception
+                MsgBox("Error al agregar llamada", MsgBoxStyle.Critical)
+            End Try
+        End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -338,6 +557,7 @@ Public Class FrmContactos
 
     Private Sub txtNombreB_TextChanged(sender As Object, e As EventArgs) Handles txtNombreB.TextChanged
         Dim R As String
+        DGConsulta.Rows.Clear()
         R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
@@ -362,6 +582,7 @@ Public Class FrmContactos
 
     Private Sub txtCompaniaB_TextChanged(sender As Object, e As EventArgs) Handles txtCompaniaB.TextChanged
         Dim R As String
+        DGConsulta.Rows.Clear()
         R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
@@ -388,6 +609,7 @@ Public Class FrmContactos
     Private Sub txtNumeroDeCuentaB_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroDeCuentaB.TextChanged
         ''código de consulta
         Dim R As String
+        DGConsulta.Rows.Clear()
         R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
@@ -414,6 +636,7 @@ Public Class FrmContactos
     Private Sub txtCorreoB_TextChanged(sender As Object, e As EventArgs) Handles txtCorreoB.TextChanged
         ''código de consulta
         Dim R As String
+        DGConsulta.Rows.Clear()
         R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
