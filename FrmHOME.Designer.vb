@@ -256,7 +256,7 @@ Partial Class FrmHOME
         Me.txtNombreAdmin.AutoSize = True
         Me.txtNombreAdmin.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreAdmin.ForeColor = System.Drawing.Color.White
-        Me.txtNombreAdmin.Location = New System.Drawing.Point(10, 128)
+        Me.txtNombreAdmin.Location = New System.Drawing.Point(10, 186)
         Me.txtNombreAdmin.Name = "txtNombreAdmin"
         Me.txtNombreAdmin.Size = New System.Drawing.Size(196, 15)
         Me.txtNombreAdmin.TabIndex = 28
@@ -326,7 +326,7 @@ Partial Class FrmHOME
         '
         Me.Panel15.BackColor = System.Drawing.Color.DimGray
         Me.Panel15.Controls.Add(Me.Label31)
-        Me.Panel15.Location = New System.Drawing.Point(0, 435)
+        Me.Panel15.Location = New System.Drawing.Point(0, 487)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(212, 45)
         Me.Panel15.TabIndex = 43
@@ -348,7 +348,7 @@ Partial Class FrmHOME
         '
         Me.Panel14.BackColor = System.Drawing.Color.DimGray
         Me.Panel14.Controls.Add(Me.Label30)
-        Me.Panel14.Location = New System.Drawing.Point(0, 389)
+        Me.Panel14.Location = New System.Drawing.Point(0, 441)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(212, 45)
         Me.Panel14.TabIndex = 41
@@ -382,7 +382,7 @@ Partial Class FrmHOME
         Me.txtRol.AutoSize = True
         Me.txtRol.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRol.ForeColor = System.Drawing.Color.White
-        Me.txtRol.Location = New System.Drawing.Point(12, 157)
+        Me.txtRol.Location = New System.Drawing.Point(12, 212)
         Me.txtRol.Name = "txtRol"
         Me.txtRol.Size = New System.Drawing.Size(188, 15)
         Me.txtRol.TabIndex = 33
@@ -393,9 +393,9 @@ Partial Class FrmHOME
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(75, 63)
+        Me.PictureBox1.Location = New System.Drawing.Point(38, 67)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(64, 62)
+        Me.PictureBox1.Size = New System.Drawing.Size(140, 113)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 33
         Me.PictureBox1.TabStop = False
@@ -414,7 +414,7 @@ Partial Class FrmHOME
         '
         Me.Panel5.BackColor = System.Drawing.Color.DimGray
         Me.Panel5.Controls.Add(Me.Label15)
-        Me.Panel5.Location = New System.Drawing.Point(0, 619)
+        Me.Panel5.Location = New System.Drawing.Point(0, 656)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(212, 45)
         Me.Panel5.TabIndex = 41
@@ -503,7 +503,7 @@ Partial Class FrmHOME
         '
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Location = New System.Drawing.Point(-3, 195)
+        Me.Panel1.Location = New System.Drawing.Point(-3, 247)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(212, 45)
         Me.Panel1.TabIndex = 33
@@ -512,7 +512,7 @@ Partial Class FrmHOME
         '
         Me.Panel4.BackColor = System.Drawing.Color.DimGray
         Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Location = New System.Drawing.Point(-3, 241)
+        Me.Panel4.Location = New System.Drawing.Point(-3, 293)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(212, 45)
         Me.Panel4.TabIndex = 40
@@ -521,7 +521,7 @@ Partial Class FrmHOME
         '
         Me.Panel6.BackColor = System.Drawing.Color.DimGray
         Me.Panel6.Controls.Add(Me.Label19)
-        Me.Panel6.Location = New System.Drawing.Point(-3, 517)
+        Me.Panel6.Location = New System.Drawing.Point(-3, 554)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(212, 45)
         Me.Panel6.TabIndex = 42
@@ -531,7 +531,7 @@ Partial Class FrmHOME
         '
         Me.Panel7.BackColor = System.Drawing.Color.DimGray
         Me.Panel7.Controls.Add(Me.Label17)
-        Me.Panel7.Location = New System.Drawing.Point(-3, 333)
+        Me.Panel7.Location = New System.Drawing.Point(-3, 385)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(212, 45)
         Me.Panel7.TabIndex = 34
@@ -540,7 +540,7 @@ Partial Class FrmHOME
         '
         Me.Panel8.BackColor = System.Drawing.Color.DimGray
         Me.Panel8.Controls.Add(Me.Label21)
-        Me.Panel8.Location = New System.Drawing.Point(-3, 563)
+        Me.Panel8.Location = New System.Drawing.Point(-3, 600)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(212, 45)
         Me.Panel8.TabIndex = 43
@@ -550,7 +550,7 @@ Partial Class FrmHOME
         '
         Me.Panel9.BackColor = System.Drawing.Color.DimGray
         Me.Panel9.Controls.Add(Me.Label6)
-        Me.Panel9.Location = New System.Drawing.Point(-3, 287)
+        Me.Panel9.Location = New System.Drawing.Point(-3, 339)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(212, 45)
         Me.Panel9.TabIndex = 45
