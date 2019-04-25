@@ -22,8 +22,8 @@ Partial Class FrmProspectos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProspectos))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabProspectos = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -46,13 +46,13 @@ Partial Class FrmProspectos
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.DGConsulta = New System.Windows.Forms.DataGridView()
         Me.TabDetallesProspecto = New System.Windows.Forms.TabPage()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
@@ -78,10 +78,11 @@ Partial Class FrmProspectos
         Me.txtApellidos = New System.Windows.Forms.Label()
         Me.cbCP = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label65 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.Label()
         Me.btCancelar = New System.Windows.Forms.Button()
-        Me.Label47 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtSaludo = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -128,6 +129,11 @@ Partial Class FrmProspectos
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtNumExt = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.IndicadorNuevo = New System.Windows.Forms.PictureBox()
+        Me.IndicadorContactado = New System.Windows.Forms.PictureBox()
+        Me.IndicadorWorking = New System.Windows.Forms.PictureBox()
+        Me.IndicadorNo = New System.Windows.Forms.PictureBox()
+        Me.IndicadorConvertido = New System.Windows.Forms.PictureBox()
         Me.TabActividad = New System.Windows.Forms.TabPage()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
@@ -140,6 +146,7 @@ Partial Class FrmProspectos
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabControlTareas = New System.Windows.Forms.TabControl()
         Me.TabLlamada = New System.Windows.Forms.TabPage()
@@ -166,50 +173,47 @@ Partial Class FrmProspectos
         Me.Label62 = New System.Windows.Forms.Label()
         Me.txtAsignadoTarea = New System.Windows.Forms.TextBox()
         Me.txtAsuntoTarea = New System.Windows.Forms.TextBox()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.IndicadorNuevo = New System.Windows.Forms.PictureBox()
-        Me.IndicadorContactado = New System.Windows.Forms.PictureBox()
-        Me.IndicadorWorking = New System.Windows.Forms.PictureBox()
-        Me.IndicadorNo = New System.Windows.Forms.PictureBox()
-        Me.IndicadorConvertido = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.IndicadorNuevo2 = New System.Windows.Forms.PictureBox()
         Me.IndicadorContactado2 = New System.Windows.Forms.PictureBox()
         Me.IndicadorWorking2 = New System.Windows.Forms.PictureBox()
         Me.IndicadorNo2 = New System.Windows.Forms.PictureBox()
         Me.IndicadorConvertido2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label47 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabProspectos.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabDetallesProspecto.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.TabActividad.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.TabControlTareas.SuspendLayout()
-        Me.TabLlamada.SuspendLayout()
-        Me.TabTarea.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorContactado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorWorking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorConvertido, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabActividad.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlTareas.SuspendLayout()
+        Me.TabLlamada.SuspendLayout()
+        Me.TabTarea.SuspendLayout()
         CType(Me.IndicadorNuevo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorContactado2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorWorking2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorNo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndicadorConvertido2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -421,9 +425,9 @@ Partial Class FrmProspectos
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(979, 15)
+        Me.Button2.Location = New System.Drawing.Point(958, 15)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(151, 33)
+        Me.Button2.Size = New System.Drawing.Size(172, 33)
         Me.Button2.TabIndex = 166
         Me.Button2.Text = "Actualizar registros"
         Me.Button2.UseVisualStyleBackColor = False
@@ -435,9 +439,9 @@ Partial Class FrmProspectos
         Me.Label26.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(55, 32)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(136, 18)
+        Me.Label26.Size = New System.Drawing.Size(159, 18)
         Me.Label26.TabIndex = 165
-        Me.Label26.Text = "Todos los prospectos"
+        Me.Label26.Text = "Titular de la prospección"
         '
         'Button1
         '
@@ -447,12 +451,23 @@ Partial Class FrmProspectos
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(869, 15)
+        Me.Button1.Location = New System.Drawing.Point(821, 15)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(110, 33)
+        Me.Button1.Size = New System.Drawing.Size(137, 33)
         Me.Button1.TabIndex = 164
-        Me.Button1.Text = "Nuevo"
+        Me.Button1.Text = "Nuevo Titular"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'Label27
         '
@@ -461,9 +476,9 @@ Partial Class FrmProspectos
         Me.Label27.ForeColor = System.Drawing.Color.ForestGreen
         Me.Label27.Location = New System.Drawing.Point(55, 15)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(67, 15)
+        Me.Label27.Size = New System.Drawing.Size(79, 15)
         Me.Label27.TabIndex = 152
-        Me.Label27.Text = "Prospectos"
+        Me.Label27.Text = "Prospeciones"
         '
         'DGConsulta
         '
@@ -471,14 +486,14 @@ Partial Class FrmProspectos
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Location = New System.Drawing.Point(3, 147)
         Me.DGConsulta.Name = "DGConsulta"
@@ -489,6 +504,7 @@ Partial Class FrmProspectos
         'TabDetallesProspecto
         '
         Me.TabDetallesProspecto.BackColor = System.Drawing.Color.Gainsboro
+        Me.TabDetallesProspecto.Controls.Add(Me.Panel8)
         Me.TabDetallesProspecto.Controls.Add(Me.lblDescripcion)
         Me.TabDetallesProspecto.Controls.Add(Me.Label66)
         Me.TabDetallesProspecto.Controls.Add(Me.Panel4)
@@ -598,62 +614,56 @@ Partial Class FrmProspectos
         Me.Panel4.Controls.Add(Me.Label20)
         Me.Panel4.Location = New System.Drawing.Point(48, 335)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(527, 27)
+        Me.Panel4.Size = New System.Drawing.Size(501, 27)
         Me.Panel4.TabIndex = 156
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Navy
-        Me.Label20.Location = New System.Drawing.Point(4, 4)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(106, 19)
-        Me.Label20.TabIndex = 152
-        Me.Label20.Text = "Prospecciones"
         '
         'Label41
         '
         Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label41.Location = New System.Drawing.Point(532, 114)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(65, 15)
+        Me.Label41.Size = New System.Drawing.Size(68, 15)
         Me.Label41.TabIndex = 159
         Me.Label41.Text = "Convertido"
         '
         'Label40
         '
         Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label40.Location = New System.Drawing.Point(407, 114)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(78, 15)
+        Me.Label40.Size = New System.Drawing.Size(81, 15)
         Me.Label40.TabIndex = 159
         Me.Label40.Text = "Promoviendo"
         '
         'Label39
         '
         Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.Location = New System.Drawing.Point(295, 114)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(50, 15)
+        Me.Label39.Size = New System.Drawing.Size(52, 15)
         Me.Label39.TabIndex = 159
         Me.Label39.Text = "Working"
         '
         'Label38
         '
         Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.Location = New System.Drawing.Point(175, 114)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(41, 15)
+        Me.Label38.Size = New System.Drawing.Size(43, 15)
         Me.Label38.TabIndex = 159
         Me.Label38.Text = "Nuevo"
         '
         'Label36
         '
         Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.Location = New System.Drawing.Point(36, 114)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(76, 15)
+        Me.Label36.Size = New System.Drawing.Size(75, 15)
         Me.Label36.TabIndex = 159
         Me.Label36.Text = "No calificado"
         '
@@ -699,7 +709,7 @@ Partial Class FrmProspectos
         Me.Panel5.Controls.Add(Me.Label6)
         Me.Panel5.Location = New System.Drawing.Point(48, 162)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(527, 27)
+        Me.Panel5.Size = New System.Drawing.Size(501, 27)
         Me.Panel5.TabIndex = 155
         '
         'Label6
@@ -719,7 +729,7 @@ Partial Class FrmProspectos
         Me.Panel3.Controls.Add(Me.Label42)
         Me.Panel3.Location = New System.Drawing.Point(584, 162)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(553, 27)
+        Me.Panel3.Size = New System.Drawing.Size(521, 27)
         Me.Panel3.TabIndex = 153
         '
         'Label42
@@ -738,7 +748,7 @@ Partial Class FrmProspectos
         Me.txtNombreEmpleado.AutoSize = True
         Me.txtNombreEmpleado.Enabled = False
         Me.txtNombreEmpleado.Font = New System.Drawing.Font("Calibri Light", 10.0!)
-        Me.txtNombreEmpleado.Location = New System.Drawing.Point(991, 575)
+        Me.txtNombreEmpleado.Location = New System.Drawing.Point(999, 575)
         Me.txtNombreEmpleado.Name = "txtNombreEmpleado"
         Me.txtNombreEmpleado.Size = New System.Drawing.Size(113, 17)
         Me.txtNombreEmpleado.TabIndex = 142
@@ -751,7 +761,7 @@ Partial Class FrmProspectos
         Me.cbDireccion.Enabled = False
         Me.cbDireccion.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cbDireccion.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbDireccion.Location = New System.Drawing.Point(1027, 564)
+        Me.cbDireccion.Location = New System.Drawing.Point(1013, 560)
         Me.cbDireccion.Name = "cbDireccion"
         Me.cbDireccion.Size = New System.Drawing.Size(85, 22)
         Me.cbDireccion.TabIndex = 135
@@ -765,7 +775,7 @@ Partial Class FrmProspectos
         Me.cbTelefono.Enabled = False
         Me.cbTelefono.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cbTelefono.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbTelefono.Location = New System.Drawing.Point(997, 562)
+        Me.cbTelefono.Location = New System.Drawing.Point(1016, 570)
         Me.cbTelefono.Name = "cbTelefono"
         Me.cbTelefono.Size = New System.Drawing.Size(82, 22)
         Me.cbTelefono.TabIndex = 134
@@ -779,7 +789,7 @@ Partial Class FrmProspectos
         Me.cbCorreo.Enabled = False
         Me.cbCorreo.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cbCorreo.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbCorreo.Location = New System.Drawing.Point(1023, 561)
+        Me.cbCorreo.Location = New System.Drawing.Point(1050, 579)
         Me.cbCorreo.Name = "cbCorreo"
         Me.cbCorreo.Size = New System.Drawing.Size(69, 22)
         Me.cbCorreo.TabIndex = 60
@@ -791,7 +801,7 @@ Partial Class FrmProspectos
         '
         Me.txtClaveProspecto.Enabled = False
         Me.txtClaveProspecto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClaveProspecto.Location = New System.Drawing.Point(987, 554)
+        Me.txtClaveProspecto.Location = New System.Drawing.Point(1009, 573)
         Me.txtClaveProspecto.Name = "txtClaveProspecto"
         Me.txtClaveProspecto.Size = New System.Drawing.Size(118, 20)
         Me.txtClaveProspecto.TabIndex = 134
@@ -803,7 +813,7 @@ Partial Class FrmProspectos
         Me.cbNombre.Enabled = False
         Me.cbNombre.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cbNombre.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbNombre.Location = New System.Drawing.Point(1027, 547)
+        Me.cbNombre.Location = New System.Drawing.Point(1023, 572)
         Me.cbNombre.Name = "cbNombre"
         Me.cbNombre.Size = New System.Drawing.Size(78, 22)
         Me.cbNombre.TabIndex = 61
@@ -815,7 +825,7 @@ Partial Class FrmProspectos
         '
         Me.txtClaveRecopila.Enabled = False
         Me.txtClaveRecopila.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClaveRecopila.Location = New System.Drawing.Point(994, 541)
+        Me.txtClaveRecopila.Location = New System.Drawing.Point(1003, 568)
         Me.txtClaveRecopila.Name = "txtClaveRecopila"
         Me.txtClaveRecopila.Size = New System.Drawing.Size(118, 20)
         Me.txtClaveRecopila.TabIndex = 134
@@ -826,7 +836,7 @@ Partial Class FrmProspectos
         Me.txtNombreMod.AutoSize = True
         Me.txtNombreMod.Enabled = False
         Me.txtNombreMod.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.txtNombreMod.Location = New System.Drawing.Point(998, 575)
+        Me.txtNombreMod.Location = New System.Drawing.Point(1047, 576)
         Me.txtNombreMod.Name = "txtNombreMod"
         Me.txtNombreMod.Size = New System.Drawing.Size(57, 18)
         Me.txtNombreMod.TabIndex = 141
@@ -839,7 +849,7 @@ Partial Class FrmProspectos
         Me.Label5.Enabled = False
         Me.Label5.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label5.Location = New System.Drawing.Point(992, 544)
+        Me.Label5.Location = New System.Drawing.Point(1000, 581)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(130, 18)
         Me.Label5.TabIndex = 133
@@ -851,7 +861,7 @@ Partial Class FrmProspectos
         Me.txtApellidos.AutoSize = True
         Me.txtApellidos.Enabled = False
         Me.txtApellidos.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.txtApellidos.Location = New System.Drawing.Point(998, 543)
+        Me.txtApellidos.Location = New System.Drawing.Point(1047, 565)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(65, 18)
         Me.txtApellidos.TabIndex = 141
@@ -864,7 +874,7 @@ Partial Class FrmProspectos
         Me.cbCP.Enabled = False
         Me.cbCP.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cbCP.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbCP.Location = New System.Drawing.Point(1015, 553)
+        Me.cbCP.Location = New System.Drawing.Point(1023, 567)
         Me.cbCP.Name = "cbCP"
         Me.cbCP.Size = New System.Drawing.Size(111, 22)
         Me.cbCP.TabIndex = 136
@@ -875,11 +885,12 @@ Partial Class FrmProspectos
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.Label65)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.btCancelar)
         Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.Label47)
         Me.Panel1.Controls.Add(Me.txtSaludo)
         Me.Panel1.Controls.Add(Me.btGuardar)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -887,16 +898,27 @@ Partial Class FrmProspectos
         Me.Panel1.Size = New System.Drawing.Size(1140, 66)
         Me.Panel1.TabIndex = 150
         '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.ForeColor = System.Drawing.Color.ForestGreen
+        Me.Label65.Location = New System.Drawing.Point(56, 15)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(79, 15)
+        Me.Label65.TabIndex = 165
+        Me.Label65.Text = "Prospeciones"
+        '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button3.BackColor = System.Drawing.Color.White
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button3.Enabled = False
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(820, 15)
+        Me.Button3.Location = New System.Drawing.Point(510, 15)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(143, 33)
         Me.Button3.TabIndex = 164
@@ -915,30 +937,30 @@ Partial Class FrmProspectos
         '
         'btCancelar
         '
-        Me.btCancelar.BackColor = System.Drawing.Color.White
+        Me.btCancelar.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.btCancelar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btCancelar.Enabled = False
         Me.btCancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
         Me.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCancelar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCancelar.ForeColor = System.Drawing.Color.Black
-        Me.btCancelar.Location = New System.Drawing.Point(711, 15)
+        Me.btCancelar.Location = New System.Drawing.Point(650, 15)
         Me.btCancelar.Name = "btCancelar"
-        Me.btCancelar.Size = New System.Drawing.Size(110, 33)
+        Me.btCancelar.Size = New System.Drawing.Size(160, 33)
         Me.btCancelar.TabIndex = 163
-        Me.btCancelar.Text = "Convertir"
+        Me.btCancelar.Text = "Agregar a LIMS"
         Me.btCancelar.UseVisualStyleBackColor = False
         '
-        'Label47
+        'PictureBox3
         '
-        Me.Label47.AutoSize = True
-        Me.Label47.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Label47.Location = New System.Drawing.Point(55, 15)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(62, 15)
-        Me.Label47.TabIndex = 152
-        Me.Label47.Text = "Prospecto"
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 1
+        Me.PictureBox3.TabStop = False
         '
         'txtSaludo
         '
@@ -962,14 +984,14 @@ Partial Class FrmProspectos
         Me.btGuardar.Name = "btGuardar"
         Me.btGuardar.Size = New System.Drawing.Size(167, 33)
         Me.btGuardar.TabIndex = 162
-        Me.btGuardar.Text = "Modificar este prospecto"
+        Me.btGuardar.Text = "Modificar este titular"
         Me.btGuardar.UseVisualStyleBackColor = False
         '
         'TextBox6
         '
         Me.TextBox6.Enabled = False
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(1001, 548)
+        Me.TextBox6.Location = New System.Drawing.Point(1003, 573)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(116, 20)
         Me.TextBox6.TabIndex = 51
@@ -983,7 +1005,7 @@ Partial Class FrmProspectos
         Me.btabi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btabi.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btabi.ForeColor = System.Drawing.Color.White
-        Me.btabi.Location = New System.Drawing.Point(1036, 550)
+        Me.btabi.Location = New System.Drawing.Point(1033, 560)
         Me.btabi.Name = "btabi"
         Me.btabi.Size = New System.Drawing.Size(79, 39)
         Me.btabi.TabIndex = 65
@@ -996,7 +1018,7 @@ Partial Class FrmProspectos
         Me.Label18.AutoSize = True
         Me.Label18.Enabled = False
         Me.Label18.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(1012, 533)
+        Me.Label18.Location = New System.Drawing.Point(1030, 579)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(56, 18)
         Me.Label18.TabIndex = 50
@@ -1007,7 +1029,7 @@ Partial Class FrmProspectos
         '
         Me.txtPais.AutoSize = True
         Me.txtPais.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPais.Location = New System.Drawing.Point(830, 233)
+        Me.txtPais.Location = New System.Drawing.Point(928, 261)
         Me.txtPais.Name = "txtPais"
         Me.txtPais.Size = New System.Drawing.Size(27, 14)
         Me.txtPais.TabIndex = 147
@@ -1017,7 +1039,7 @@ Partial Class FrmProspectos
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label24.Location = New System.Drawing.Point(802, 232)
+        Me.Label24.Location = New System.Drawing.Point(847, 259)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(32, 15)
         Me.Label24.TabIndex = 147
@@ -1027,7 +1049,7 @@ Partial Class FrmProspectos
         '
         Me.txtEdo.AutoSize = True
         Me.txtEdo.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEdo.Location = New System.Drawing.Point(1003, 233)
+        Me.txtEdo.Location = New System.Drawing.Point(928, 231)
         Me.txtEdo.Name = "txtEdo"
         Me.txtEdo.Size = New System.Drawing.Size(40, 14)
         Me.txtEdo.TabIndex = 145
@@ -1037,7 +1059,7 @@ Partial Class FrmProspectos
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label23.Location = New System.Drawing.Point(960, 231)
+        Me.Label23.Location = New System.Drawing.Point(847, 229)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(47, 15)
         Me.Label23.TabIndex = 145
@@ -1047,7 +1069,7 @@ Partial Class FrmProspectos
         '
         Me.txtPuesto.AutoSize = True
         Me.txtPuesto.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPuesto.Location = New System.Drawing.Point(110, 261)
+        Me.txtPuesto.Location = New System.Drawing.Point(122, 260)
         Me.txtPuesto.Name = "txtPuesto"
         Me.txtPuesto.Size = New System.Drawing.Size(40, 14)
         Me.txtPuesto.TabIndex = 143
@@ -1067,7 +1089,7 @@ Partial Class FrmProspectos
         '
         Me.txtTipoIndustri.AutoSize = True
         Me.txtTipoIndustri.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoIndustri.Location = New System.Drawing.Point(1012, 533)
+        Me.txtTipoIndustri.Location = New System.Drawing.Point(1030, 576)
         Me.txtTipoIndustri.Name = "txtTipoIndustri"
         Me.txtTipoIndustri.Size = New System.Drawing.Size(89, 14)
         Me.txtTipoIndustri.TabIndex = 145
@@ -1078,7 +1100,7 @@ Partial Class FrmProspectos
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label35.Location = New System.Drawing.Point(1008, 534)
+        Me.Label35.Location = New System.Drawing.Point(1010, 573)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(102, 15)
         Me.Label35.TabIndex = 145
@@ -1089,7 +1111,7 @@ Partial Class FrmProspectos
         '
         Me.txtCiudad.AutoSize = True
         Me.txtCiudad.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCiudad.Location = New System.Drawing.Point(658, 258)
+        Me.txtCiudad.Location = New System.Drawing.Point(662, 260)
         Me.txtCiudad.Name = "txtCiudad"
         Me.txtCiudad.Size = New System.Drawing.Size(40, 14)
         Me.txtCiudad.TabIndex = 143
@@ -1099,7 +1121,7 @@ Partial Class FrmProspectos
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label22.Location = New System.Drawing.Point(601, 257)
+        Me.Label22.Location = New System.Drawing.Point(591, 259)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(48, 15)
         Me.Label22.TabIndex = 143
@@ -1109,7 +1131,7 @@ Partial Class FrmProspectos
         '
         Me.txtCelular.AutoSize = True
         Me.txtCelular.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCelular.Location = New System.Drawing.Point(390, 232)
+        Me.txtCelular.Location = New System.Drawing.Point(400, 232)
         Me.txtCelular.Name = "txtCelular"
         Me.txtCelular.Size = New System.Drawing.Size(98, 14)
         Me.txtCelular.TabIndex = 147
@@ -1129,7 +1151,7 @@ Partial Class FrmProspectos
         '
         Me.txtCorreo.AutoSize = True
         Me.txtCorreo.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.Location = New System.Drawing.Point(110, 231)
+        Me.txtCorreo.Location = New System.Drawing.Point(122, 230)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(96, 14)
         Me.txtCorreo.TabIndex = 139
@@ -1149,40 +1171,37 @@ Partial Class FrmProspectos
         '
         Me.txtModificado.AutoSize = True
         Me.txtModificado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModificado.Location = New System.Drawing.Point(1034, 533)
+        Me.txtModificado.Location = New System.Drawing.Point(663, 413)
         Me.txtModificado.Name = "txtModificado"
         Me.txtModificado.Size = New System.Drawing.Size(96, 14)
         Me.txtModificado.TabIndex = 145
         Me.txtModificado.Text = "Horario de trabajo"
-        Me.txtModificado.Visible = False
         '
         'txtCreador
         '
         Me.txtCreador.AutoSize = True
         Me.txtCreador.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreador.Location = New System.Drawing.Point(1069, 581)
+        Me.txtCreador.Location = New System.Drawing.Point(1047, 569)
         Me.txtCreador.Name = "txtCreador"
         Me.txtCreador.Size = New System.Drawing.Size(45, 14)
         Me.txtCreador.TabIndex = 145
         Me.txtCreador.Text = "Creador"
-        Me.txtCreador.Visible = False
         '
         'txtCreado
         '
         Me.txtCreado.AutoSize = True
         Me.txtCreado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreado.Location = New System.Drawing.Point(1008, 544)
+        Me.txtCreado.Location = New System.Drawing.Point(663, 385)
         Me.txtCreado.Name = "txtCreado"
         Me.txtCreado.Size = New System.Drawing.Size(96, 14)
         Me.txtCreado.TabIndex = 145
         Me.txtCreado.Text = "Horario de trabajo"
-        Me.txtCreado.Visible = False
         '
         'txtHorarioTrabajo
         '
         Me.txtHorarioTrabajo.AutoSize = True
         Me.txtHorarioTrabajo.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHorarioTrabajo.Location = New System.Drawing.Point(1018, 535)
+        Me.txtHorarioTrabajo.Location = New System.Drawing.Point(1016, 562)
         Me.txtHorarioTrabajo.Name = "txtHorarioTrabajo"
         Me.txtHorarioTrabajo.Size = New System.Drawing.Size(96, 14)
         Me.txtHorarioTrabajo.TabIndex = 145
@@ -1193,29 +1212,27 @@ Partial Class FrmProspectos
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label17.Location = New System.Drawing.Point(1008, 523)
+        Me.Label17.Location = New System.Drawing.Point(591, 411)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(71, 15)
         Me.Label17.TabIndex = 145
         Me.Label17.Text = "Modificado:"
-        Me.Label17.Visible = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(1033, 577)
+        Me.Label1.Location = New System.Drawing.Point(591, 384)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 15)
+        Me.Label1.Size = New System.Drawing.Size(58, 15)
         Me.Label1.TabIndex = 145
-        Me.Label1.Text = "Creado:"
-        Me.Label1.Visible = False
+        Me.Label1.Text = "Creación:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(1003, 529)
+        Me.Label4.Location = New System.Drawing.Point(1016, 579)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 15)
         Me.Label4.TabIndex = 145
@@ -1226,7 +1243,7 @@ Partial Class FrmProspectos
         '
         Me.txtExt.AutoSize = True
         Me.txtExt.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtExt.Location = New System.Drawing.Point(390, 264)
+        Me.txtExt.Location = New System.Drawing.Point(400, 264)
         Me.txtExt.Name = "txtExt"
         Me.txtExt.Size = New System.Drawing.Size(112, 14)
         Me.txtExt.TabIndex = 138
@@ -1246,7 +1263,7 @@ Partial Class FrmProspectos
         '
         Me.txtCodigoPostal.AutoSize = True
         Me.txtCodigoPostal.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigoPostal.Location = New System.Drawing.Point(830, 260)
+        Me.txtCodigoPostal.Location = New System.Drawing.Point(929, 289)
         Me.txtCodigoPostal.Name = "txtCodigoPostal"
         Me.txtCodigoPostal.Size = New System.Drawing.Size(73, 14)
         Me.txtCodigoPostal.TabIndex = 141
@@ -1256,7 +1273,7 @@ Partial Class FrmProspectos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(802, 260)
+        Me.Label2.Location = New System.Drawing.Point(848, 288)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(25, 15)
         Me.Label2.TabIndex = 141
@@ -1286,7 +1303,7 @@ Partial Class FrmProspectos
         '
         Me.txtTelefono.AutoSize = True
         Me.txtTelefono.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(390, 200)
+        Me.txtTelefono.Location = New System.Drawing.Point(400, 200)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(106, 14)
         Me.txtTelefono.TabIndex = 137
@@ -1306,7 +1323,7 @@ Partial Class FrmProspectos
         '
         Me.txtNotas.AutoSize = True
         Me.txtNotas.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNotas.Location = New System.Drawing.Point(658, 289)
+        Me.txtNotas.Location = New System.Drawing.Point(663, 289)
         Me.txtNotas.Name = "txtNotas"
         Me.txtNotas.Size = New System.Drawing.Size(36, 14)
         Me.txtNotas.TabIndex = 135
@@ -1316,7 +1333,7 @@ Partial Class FrmProspectos
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label19.Location = New System.Drawing.Point(601, 289)
+        Me.Label19.Location = New System.Drawing.Point(592, 289)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(43, 15)
         Me.Label19.TabIndex = 135
@@ -1326,7 +1343,7 @@ Partial Class FrmProspectos
         '
         Me.txtNombreCompania.AutoSize = True
         Me.txtNombreCompania.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreCompania.Location = New System.Drawing.Point(110, 201)
+        Me.txtNombreCompania.Location = New System.Drawing.Point(122, 200)
         Me.txtNombreCompania.Name = "txtNombreCompania"
         Me.txtNombreCompania.Size = New System.Drawing.Size(125, 14)
         Me.txtNombreCompania.TabIndex = 58
@@ -1347,7 +1364,7 @@ Partial Class FrmProspectos
         Me.txtEstado.AutoSize = True
         Me.txtEstado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEstado.ForeColor = System.Drawing.Color.Black
-        Me.txtEstado.Location = New System.Drawing.Point(171, 290)
+        Me.txtEstado.Location = New System.Drawing.Point(122, 290)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(109, 14)
         Me.txtEstado.TabIndex = 145
@@ -1359,15 +1376,15 @@ Partial Class FrmProspectos
         Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.Location = New System.Drawing.Point(47, 289)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(125, 15)
+        Me.Label33.Size = New System.Drawing.Size(47, 15)
         Me.Label33.TabIndex = 145
-        Me.Label33.Text = "Estado del prospecto:"
+        Me.Label33.Text = "Estado:"
         '
         'txtDireccion
         '
         Me.txtDireccion.AutoSize = True
         Me.txtDireccion.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.Location = New System.Drawing.Point(658, 200)
+        Me.txtDireccion.Location = New System.Drawing.Point(662, 201)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(121, 14)
         Me.txtDireccion.TabIndex = 48
@@ -1377,7 +1394,7 @@ Partial Class FrmProspectos
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label15.Location = New System.Drawing.Point(601, 199)
+        Me.Label15.Location = New System.Drawing.Point(591, 200)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(61, 15)
         Me.Label15.TabIndex = 48
@@ -1387,7 +1404,7 @@ Partial Class FrmProspectos
         '
         Me.txtColonia.AutoSize = True
         Me.txtColonia.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtColonia.Location = New System.Drawing.Point(658, 229)
+        Me.txtColonia.Location = New System.Drawing.Point(662, 230)
         Me.txtColonia.Name = "txtColonia"
         Me.txtColonia.Size = New System.Drawing.Size(43, 14)
         Me.txtColonia.TabIndex = 56
@@ -1397,7 +1414,7 @@ Partial Class FrmProspectos
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(601, 228)
+        Me.Label11.Location = New System.Drawing.Point(591, 229)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(51, 15)
         Me.Label11.TabIndex = 56
@@ -1407,7 +1424,7 @@ Partial Class FrmProspectos
         '
         Me.txtNumExt.AutoSize = True
         Me.txtNumExt.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumExt.Location = New System.Drawing.Point(1034, 203)
+        Me.txtNumExt.Location = New System.Drawing.Point(928, 200)
         Me.txtNumExt.Name = "txtNumExt"
         Me.txtNumExt.Size = New System.Drawing.Size(88, 14)
         Me.txtNumExt.TabIndex = 54
@@ -1417,11 +1434,66 @@ Partial Class FrmProspectos
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label10.Location = New System.Drawing.Point(960, 201)
+        Me.Label10.Location = New System.Drawing.Point(847, 199)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(71, 15)
         Me.Label10.TabIndex = 54
         Me.Label10.Text = "N° Exterior:"
+        '
+        'IndicadorNuevo
+        '
+        Me.IndicadorNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorNuevo.Image = CType(resources.GetObject("IndicadorNuevo.Image"), System.Drawing.Image)
+        Me.IndicadorNuevo.Location = New System.Drawing.Point(62, 85)
+        Me.IndicadorNuevo.Name = "IndicadorNuevo"
+        Me.IndicadorNuevo.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorNuevo.TabIndex = 156
+        Me.IndicadorNuevo.TabStop = False
+        '
+        'IndicadorContactado
+        '
+        Me.IndicadorContactado.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorContactado.Image = CType(resources.GetObject("IndicadorContactado.Image"), System.Drawing.Image)
+        Me.IndicadorContactado.Location = New System.Drawing.Point(183, 86)
+        Me.IndicadorContactado.Name = "IndicadorContactado"
+        Me.IndicadorContactado.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorContactado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorContactado.TabIndex = 156
+        Me.IndicadorContactado.TabStop = False
+        '
+        'IndicadorWorking
+        '
+        Me.IndicadorWorking.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorWorking.Image = CType(resources.GetObject("IndicadorWorking.Image"), System.Drawing.Image)
+        Me.IndicadorWorking.Location = New System.Drawing.Point(308, 86)
+        Me.IndicadorWorking.Name = "IndicadorWorking"
+        Me.IndicadorWorking.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorWorking.TabIndex = 156
+        Me.IndicadorWorking.TabStop = False
+        '
+        'IndicadorNo
+        '
+        Me.IndicadorNo.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorNo.Image = CType(resources.GetObject("IndicadorNo.Image"), System.Drawing.Image)
+        Me.IndicadorNo.Location = New System.Drawing.Point(431, 85)
+        Me.IndicadorNo.Name = "IndicadorNo"
+        Me.IndicadorNo.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorNo.TabIndex = 156
+        Me.IndicadorNo.TabStop = False
+        '
+        'IndicadorConvertido
+        '
+        Me.IndicadorConvertido.BackColor = System.Drawing.Color.Transparent
+        Me.IndicadorConvertido.Image = CType(resources.GetObject("IndicadorConvertido.Image"), System.Drawing.Image)
+        Me.IndicadorConvertido.Location = New System.Drawing.Point(550, 85)
+        Me.IndicadorConvertido.Name = "IndicadorConvertido"
+        Me.IndicadorConvertido.Size = New System.Drawing.Size(25, 25)
+        Me.IndicadorConvertido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.IndicadorConvertido.TabIndex = 156
+        Me.IndicadorConvertido.TabStop = False
         '
         'TabActividad
         '
@@ -1451,45 +1523,50 @@ Partial Class FrmProspectos
         'Label48
         '
         Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.Location = New System.Drawing.Point(532, 114)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(65, 15)
+        Me.Label48.Size = New System.Drawing.Size(68, 15)
         Me.Label48.TabIndex = 169
         Me.Label48.Text = "Convertido"
         '
         'Label50
         '
         Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label50.Location = New System.Drawing.Point(407, 114)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(78, 15)
+        Me.Label50.Size = New System.Drawing.Size(81, 15)
         Me.Label50.TabIndex = 170
         Me.Label50.Text = "Promoviendo"
         '
         'Label51
         '
         Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label51.Location = New System.Drawing.Point(295, 114)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(50, 15)
+        Me.Label51.Size = New System.Drawing.Size(52, 15)
         Me.Label51.TabIndex = 171
         Me.Label51.Text = "Working"
         '
         'Label52
         '
         Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.Location = New System.Drawing.Point(175, 114)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(41, 15)
+        Me.Label52.Size = New System.Drawing.Size(43, 15)
         Me.Label52.TabIndex = 172
         Me.Label52.Text = "Nuevo"
         '
         'Label53
         '
         Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.Location = New System.Drawing.Point(35, 114)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(76, 15)
+        Me.Label53.Size = New System.Drawing.Size(75, 15)
         Me.Label53.TabIndex = 173
         Me.Label53.Text = "No calificado"
         '
@@ -1550,6 +1627,17 @@ Partial Class FrmProspectos
         Me.Label13.Size = New System.Drawing.Size(138, 18)
         Me.Label13.TabIndex = 135
         Me.Label13.Text = "Registrar Actividades"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(14, 15)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
         '
         'Label16
         '
@@ -1632,8 +1720,9 @@ Partial Class FrmProspectos
         Me.EtiquetaNombreDeProspecto.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EtiquetaNombreDeProspecto.Location = New System.Drawing.Point(176, 19)
         Me.EtiquetaNombreDeProspecto.Name = "EtiquetaNombreDeProspecto"
-        Me.EtiquetaNombreDeProspecto.Size = New System.Drawing.Size(0, 14)
+        Me.EtiquetaNombreDeProspecto.Size = New System.Drawing.Size(98, 14)
         Me.EtiquetaNombreDeProspecto.TabIndex = 130
+        Me.EtiquetaNombreDeProspecto.Text = "Nombre prospecto"
         '
         'cboRelacionadoConLlamada
         '
@@ -1755,8 +1844,9 @@ Partial Class FrmProspectos
         Me.EtiquetaNombreDeProspecto2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EtiquetaNombreDeProspecto2.Location = New System.Drawing.Point(176, 19)
         Me.EtiquetaNombreDeProspecto2.Name = "EtiquetaNombreDeProspecto2"
-        Me.EtiquetaNombreDeProspecto2.Size = New System.Drawing.Size(0, 14)
+        Me.EtiquetaNombreDeProspecto2.Size = New System.Drawing.Size(98, 14)
         Me.EtiquetaNombreDeProspecto2.TabIndex = 171
+        Me.EtiquetaNombreDeProspecto2.Text = "Nombre prospecto"
         '
         'cboRelacionadoConTareas
         '
@@ -1837,106 +1927,6 @@ Partial Class FrmProspectos
         Me.txtAsuntoTarea.Size = New System.Drawing.Size(554, 21)
         Me.txtAsuntoTarea.TabIndex = 169
         '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(1028, 12)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(92, 14)
-        Me.Label49.TabIndex = 140
-        Me.Label49.Text = "Cerrar formulario"
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(1124, 7)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 139
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'IndicadorNuevo
-        '
-        Me.IndicadorNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorNuevo.Image = CType(resources.GetObject("IndicadorNuevo.Image"), System.Drawing.Image)
-        Me.IndicadorNuevo.Location = New System.Drawing.Point(62, 85)
-        Me.IndicadorNuevo.Name = "IndicadorNuevo"
-        Me.IndicadorNuevo.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorNuevo.TabIndex = 156
-        Me.IndicadorNuevo.TabStop = False
-        '
-        'IndicadorContactado
-        '
-        Me.IndicadorContactado.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorContactado.Image = CType(resources.GetObject("IndicadorContactado.Image"), System.Drawing.Image)
-        Me.IndicadorContactado.Location = New System.Drawing.Point(183, 86)
-        Me.IndicadorContactado.Name = "IndicadorContactado"
-        Me.IndicadorContactado.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorContactado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorContactado.TabIndex = 156
-        Me.IndicadorContactado.TabStop = False
-        '
-        'IndicadorWorking
-        '
-        Me.IndicadorWorking.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorWorking.Image = CType(resources.GetObject("IndicadorWorking.Image"), System.Drawing.Image)
-        Me.IndicadorWorking.Location = New System.Drawing.Point(308, 86)
-        Me.IndicadorWorking.Name = "IndicadorWorking"
-        Me.IndicadorWorking.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorWorking.TabIndex = 156
-        Me.IndicadorWorking.TabStop = False
-        '
-        'IndicadorNo
-        '
-        Me.IndicadorNo.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorNo.Image = CType(resources.GetObject("IndicadorNo.Image"), System.Drawing.Image)
-        Me.IndicadorNo.Location = New System.Drawing.Point(431, 85)
-        Me.IndicadorNo.Name = "IndicadorNo"
-        Me.IndicadorNo.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorNo.TabIndex = 156
-        Me.IndicadorNo.TabStop = False
-        '
-        'IndicadorConvertido
-        '
-        Me.IndicadorConvertido.BackColor = System.Drawing.Color.Transparent
-        Me.IndicadorConvertido.Image = CType(resources.GetObject("IndicadorConvertido.Image"), System.Drawing.Image)
-        Me.IndicadorConvertido.Location = New System.Drawing.Point(550, 85)
-        Me.IndicadorConvertido.Name = "IndicadorConvertido"
-        Me.IndicadorConvertido.Size = New System.Drawing.Size(25, 25)
-        Me.IndicadorConvertido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.IndicadorConvertido.TabIndex = 156
-        Me.IndicadorConvertido.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 1
-        Me.PictureBox3.TabStop = False
-        '
         'IndicadorNuevo2
         '
         Me.IndicadorNuevo2.BackColor = System.Drawing.Color.Transparent
@@ -1992,16 +1982,74 @@ Partial Class FrmProspectos
         Me.IndicadorConvertido2.TabIndex = 164
         Me.IndicadorConvertido2.TabStop = False
         '
-        'PictureBox2
+        'Label49
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(14, 15)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.Label49.AutoSize = True
+        Me.Label49.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label49.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(1028, 12)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(92, 14)
+        Me.Label49.TabIndex = 140
+        Me.Label49.Text = "Cerrar formulario"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(1124, 7)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 139
+        Me.PictureBox5.TabStop = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.Black
+        Me.Button4.Location = New System.Drawing.Point(808, 15)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(160, 33)
+        Me.Button4.TabIndex = 166
+        Me.Button4.Text = "Crear oportunidad"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label20.Location = New System.Drawing.Point(8, 6)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(84, 15)
+        Me.Label20.TabIndex = 152
+        Me.Label20.Text = "Prospecciones"
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.LightGray
+        Me.Panel8.Controls.Add(Me.Label47)
+        Me.Panel8.Location = New System.Drawing.Point(584, 335)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(521, 27)
+        Me.Panel8.TabIndex = 162
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label47.Location = New System.Drawing.Point(8, 6)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(134, 15)
+        Me.Label47.TabIndex = 152
+        Me.Label47.Text = "Creación y modificación"
         '
         'FrmProspectos
         '
@@ -2024,6 +2072,7 @@ Partial Class FrmProspectos
         Me.Panel7.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabDetallesProspecto.ResumeLayout(False)
         Me.TabDetallesProspecto.PerformLayout()
@@ -2035,29 +2084,30 @@ Partial Class FrmProspectos
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.TabActividad.ResumeLayout(False)
-        Me.TabActividad.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.TabControlTareas.ResumeLayout(False)
-        Me.TabLlamada.ResumeLayout(False)
-        Me.TabLlamada.PerformLayout()
-        Me.TabTarea.ResumeLayout(False)
-        Me.TabTarea.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorNuevo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorContactado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorWorking, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorNo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorConvertido, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabActividad.ResumeLayout(False)
+        Me.TabActividad.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlTareas.ResumeLayout(False)
+        Me.TabLlamada.ResumeLayout(False)
+        Me.TabLlamada.PerformLayout()
+        Me.TabTarea.ResumeLayout(False)
+        Me.TabTarea.PerformLayout()
         CType(Me.IndicadorNuevo2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorContactado2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorWorking2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorNo2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndicadorConvertido2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2117,7 +2167,6 @@ Partial Class FrmProspectos
     Friend WithEvents txtNombre As Label
     Friend WithEvents btCancelar As Button
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Label47 As Label
     Friend WithEvents txtSaludo As Label
     Friend WithEvents btGuardar As Button
     Friend WithEvents TextBox6 As TextBox
@@ -2217,7 +2266,11 @@ Partial Class FrmProspectos
     Friend WithEvents Label64 As Label
     Friend WithEvents cboStatusFiltrado As ComboBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label20 As Label
     Friend WithEvents lblDescripcion As Label
     Friend WithEvents Label66 As Label
+    Friend WithEvents Label65 As Label
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label47 As Label
 End Class
