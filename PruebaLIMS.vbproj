@@ -275,6 +275,12 @@
     <Compile Include="FrmModalidades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmNuevaProspeccion.Designer.vb">
+      <DependentUpon>FrmNuevaProspeccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevaProspeccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmNuevoContacto.Designer.vb">
       <DependentUpon>FrmNuevoContacto.vb</DependentUpon>
     </Compile>
@@ -435,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModalidades.resx">
       <DependentUpon>FrmModalidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaProspeccion.resx">
+      <DependentUpon>FrmNuevaProspeccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoContacto.resx">
       <DependentUpon>FrmNuevoContacto.vb</DependentUpon>

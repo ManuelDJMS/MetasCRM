@@ -219,7 +219,7 @@ Public Class FrmProspectos
         txtNotas.Text = ""
         txtOrigen.Text = ""
         txtTipoIndustri.Text = ""
-        txtHorarioTrabajo.Text = ""
+        ' txtHorarioTrabajo.Text = ""
 
     End Sub
 
@@ -495,7 +495,7 @@ Public Class FrmProspectos
                 Admin.txtCelularProspecto.Text = txtCelular.Text ''
                 Admin.txtCorreoProspecto.Text = txtCorreo.Text ''
                 Admin.txtPuestoProspecto.Text = txtPuesto.Text
-                Admin.txtHorarioProspecto.Text = txtHorarioTrabajo.Text
+                'Admin.txtHorarioProspecto.Text = txtHorarioTrabajo.Text
                 Admin.txtCompaniaProspecto.Text = txtNombreCompania.Text ''
                 Admin.txtDireccionProspecto.Text = txtDireccion.Text ''
                 Admin.txtNumExtProspecto.Text = txtNumExt.Text ''
@@ -715,49 +715,58 @@ Public Class FrmProspectos
                 Else
                     txtClaveProspecto.Text = lector(0)
                 End If
-                If ((lector(1) Is DBNull.Value) OrElse (lector(1) Is Nothing) Or (lector(2) Is DBNull.Value) OrElse (lector(2) Is Nothing)) Then
+                If ((lector(2) Is DBNull.Value) OrElse (lector(2) Is Nothing) Or (lector(3) Is DBNull.Value) OrElse (lector(3) Is Nothing)) Then
                     txtNombre.Text = vacio
                 Else
-                    txtNombre.Text = lector(1) & " " & lector(2)
-                    txtNombreMod.Text = lector(1)
-                    txtApellidos.Text = lector(2)
+                    txtNombre.Text = lector(2) & " " & lector(3)
+                    txtNombreMod.Text = lector(2)
+                    txtApellidos.Text = lector(3)
                 End If
                 'If ((lector(2) Is DBNull.Value) OrElse (lector(2) Is Nothing)) Then
                 '    txtApellidos.Text = vacio
                 'Else
                 '    txtApellidos.Text = lector(2)
                 'End If
-                If ((lector(3) Is DBNull.Value) OrElse (lector(3) Is Nothing)) Then
+                If ((lector(4) Is DBNull.Value) OrElse (lector(4) Is Nothing)) Then
                     txtTelefono.Text = vacio
                 Else
-                    txtTelefono.Text = lector(3)
+                    txtTelefono.Text = lector(4)
                 End If
                 ''''''
-                If ((lector(4) Is DBNull.Value) OrElse (lector(4) Is Nothing)) Then
+                If ((lector(5) Is DBNull.Value) OrElse (lector(5) Is Nothing)) Then
                     txtExt.Text = vacio
                 Else
-                    txtExt.Text = lector(4)
-                End If
-                If ((lector(5) Is DBNull.Value) OrElse (lector(5) Is Nothing)) Then
-                    txtCelular.Text = vacio
-                Else
-                    txtCelular.Text = lector(5)
+                    txtExt.Text = lector(5)
                 End If
                 If ((lector(6) Is DBNull.Value) OrElse (lector(6) Is Nothing)) Then
-                    txtCorreo.Text = vacio
+                    txtCelular.Text = vacio
                 Else
-                    txtCorreo.Text = lector(6)
+                    txtCelular.Text = lector(6)
                 End If
                 If ((lector(7) Is DBNull.Value) OrElse (lector(7) Is Nothing)) Then
-                    txtPuesto.Text = vacio
+                    txtCorreo.Text = vacio
                 Else
-                    txtPuesto.Text = lector(7)
+                    txtCorreo.Text = lector(7)
                 End If
                 If ((lector(8) Is DBNull.Value) OrElse (lector(8) Is Nothing)) Then
-                    txtHorarioTrabajo.Text = vacio
+                    txtPuesto.Text = vacio
                 Else
-                    txtHorarioTrabajo.Text = lector(8)
+                    txtPuesto.Text = lector(8)
                 End If
+
+                'If ((lector(8) Is DBNull.Value) OrElse (lector(8) Is Nothing)) Then
+                '    txtHorarioTrabajo.Text = vacio
+                'Else
+                '    txtHorarioTrabajo.Text = lector(8)
+                'End If
+
+
+
+
+
+
+
+
                 If ((lector(9) Is DBNull.Value) OrElse (lector(9) Is Nothing)) Then
                     txtNombreCompania.Text = vacio
                 Else
@@ -783,7 +792,7 @@ Public Class FrmProspectos
                 Else
                     txtColonia.Text = lector(13)
                 End If
-                If ((lector(13) Is DBNull.Value) OrElse (lector(14) Is Nothing)) Then
+                If ((lector(14) Is DBNull.Value) OrElse (lector(14) Is Nothing)) Then
                     txtPais.Text = vacio
                 Else
                     txtPais.Text = lector(14)
@@ -950,6 +959,17 @@ Public Class FrmProspectos
         End Try
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim control As New FrmEmergenteConvertir
+        control.txtidprospecto.Text = txtClaveRecopila.Text
+        control.ShowDialog()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim control As New FrmNuevaProspeccion
+        control.txtidprospecto.Text = txtClaveRecopila.Text
+        control.ShowDialog()
+    End Sub
 
     Public Sub limpiarRegistroTareas()
         txtAsuntoTarea.Text = ""
