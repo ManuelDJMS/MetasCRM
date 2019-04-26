@@ -89,7 +89,7 @@ Public Class FrmContactos
     Public Sub consultaDatosContactos(ByVal clave As String)
         Try
             Dim vacio As String = "---"
-            Dim cadenaCorreos As String
+            'Dim cadenaCorreos As String
             MetodoLIMS()
             Dim R As String
             R = "select SetupCustomerDetails.[CustomerId]

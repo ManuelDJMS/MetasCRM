@@ -5,14 +5,11 @@ Module LIMS              ''--------------------------BASE DE DATOS LIMS---------
     Public lectorLIMS As SqlDataReader
     Sub MetodoLIMS()
         Try
-            '' conexionLIMS = New SqlConnection("Data Source=107.180.70.168\METASSQLEXPRESS;Initial Catalog=MetAs_Live;Persist Security Info=False;User ID=sa;Password=Bws123bws")
+            'conexionLIMS = New SqlConnection("Data Source=107.180.70.168\METASSQLEXPRESS;Initial Catalog=MetAs_Live;Persist Security Info=False;User ID=sa;Password=Bws123bws")
             conexionLIMS = New SqlConnection("Data Source=DATABASESERVER\COMPAC;Initial Catalog=MetAs_Live-pruebas; User Id=sa; Password=Contpaq1;Integrated Security=False")
-
             conexionLIMS.Open()
-            'MsgBox("Conectado correctamente")
-            'MsgBox("Cambios en GitHub")
         Catch ex As Exception
-            'MsgBox("No se pudo conectar a la base de datos" + ex.ToString)
+            MsgBox("No se pudo conectar a la base de datos" + ex.ToString)
         End Try
     End Sub
 

@@ -472,9 +472,9 @@ Partial Class frmEdicionCot2018_2019
         Me.txtNumCond.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumCond.Location = New System.Drawing.Point(372, 216)
         Me.txtNumCond.Name = "txtNumCond"
-        Me.txtNumCond.Size = New System.Drawing.Size(81, 14)
+        Me.txtNumCond.Size = New System.Drawing.Size(25, 14)
         Me.txtNumCond.TabIndex = 159
-        Me.txtNumCond.Text = "Núm Condicion"
+        Me.txtNumCond.Text = "RFC"
         '
         'txtExt
         '
