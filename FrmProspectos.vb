@@ -618,7 +618,7 @@ Public Class FrmProspectos
                 Dim FechaEstimada As String
                 FechaEstimada = DTPFechaEstimadaDeLlamada.Value.Date.Year & "-" & DTPFechaEstimadaDeLlamada.Value.Date.Month & "-" & DTPFechaEstimadaDeLlamada.Value.Date.Day
                 MsgBox(FechaEstimada)
-                MetodoMetasCotizador()
+                conexionMetasCotizador.Open()
                 Dim R As String
                 R = "insert into ActividadLlamadaProspectos (Asunto, Comentarios, FechaEstimadaDeLlamada, RelacionadoCon, idProspecto) 
                      values ('" & txtAsuntoLlamada.Text & "','" & txtComentariosLlamada.Text & "',
@@ -626,6 +626,11 @@ Public Class FrmProspectos
                 Dim comando As New SqlCommand(R, conexionMetasCotizador)
                 comando.ExecuteNonQuery()
                 MsgBox("Llamada guardada correctamente", MsgBoxStyle.OkOnly)
+
+
+
+
+                ''''''''''
                 limpiarRegistroLlamada()
                 TabConsulta.SelectTab(1)
             Catch ex As Exception

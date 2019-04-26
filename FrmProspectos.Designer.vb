@@ -23,7 +23,7 @@ Partial Class FrmProspectos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProspectos))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabProspectos = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -52,6 +52,7 @@ Partial Class FrmProspectos
         Me.TabDetallesProspecto = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label47 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -82,7 +83,6 @@ Partial Class FrmProspectos
         Me.cbCP = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.Label()
@@ -487,14 +487,14 @@ Partial Class FrmProspectos
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Location = New System.Drawing.Point(3, 147)
         Me.DGConsulta.Name = "DGConsulta"
@@ -506,6 +506,7 @@ Partial Class FrmProspectos
         '
         Me.TabDetallesProspecto.BackColor = System.Drawing.Color.Gainsboro
         Me.TabDetallesProspecto.Controls.Add(Me.Panel8)
+        Me.TabDetallesProspecto.Controls.Add(Me.Button4)
         Me.TabDetallesProspecto.Controls.Add(Me.lblDescripcion)
         Me.TabDetallesProspecto.Controls.Add(Me.Label66)
         Me.TabDetallesProspecto.Controls.Add(Me.Panel4)
@@ -608,6 +609,21 @@ Partial Class FrmProspectos
         Me.Label47.Size = New System.Drawing.Size(134, 15)
         Me.Label47.TabIndex = 152
         Me.Label47.Text = "Creación y modificación"
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.Black
+        Me.Button4.Location = New System.Drawing.Point(970, 85)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(160, 33)
+        Me.Button4.TabIndex = 166
+        Me.Button4.Text = "Crear oportunidad"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'lblDescripcion
         '
@@ -857,11 +873,10 @@ Partial Class FrmProspectos
         '
         Me.txtClaveRecopila.Enabled = False
         Me.txtClaveRecopila.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClaveRecopila.Location = New System.Drawing.Point(1003, 568)
+        Me.txtClaveRecopila.Location = New System.Drawing.Point(521, 495)
         Me.txtClaveRecopila.Name = "txtClaveRecopila"
         Me.txtClaveRecopila.Size = New System.Drawing.Size(118, 20)
         Me.txtClaveRecopila.TabIndex = 134
-        Me.txtClaveRecopila.Visible = False
         '
         'txtNombreMod
         '
@@ -906,7 +921,7 @@ Partial Class FrmProspectos
         Me.cbCP.Enabled = False
         Me.cbCP.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cbCP.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbCP.Location = New System.Drawing.Point(1023, 567)
+        Me.cbCP.Location = New System.Drawing.Point(1009, 576)
         Me.cbCP.Name = "cbCP"
         Me.cbCP.Size = New System.Drawing.Size(111, 22)
         Me.cbCP.TabIndex = 136
@@ -918,7 +933,6 @@ Partial Class FrmProspectos
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
         Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Label65)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.txtNombre)
@@ -939,27 +953,12 @@ Partial Class FrmProspectos
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(649, 15)
+        Me.Button5.Location = New System.Drawing.Point(805, 15)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(160, 33)
         Me.Button5.TabIndex = 167
         Me.Button5.Text = "Crear prospección"
         Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(808, 15)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(160, 33)
-        Me.Button4.TabIndex = 166
-        Me.Button4.Text = "Crear oportunidad"
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'Label65
         '
@@ -981,7 +980,7 @@ Partial Class FrmProspectos
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(350, 15)
+        Me.Button3.Location = New System.Drawing.Point(506, 15)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(143, 33)
         Me.Button3.TabIndex = 164
@@ -1007,7 +1006,7 @@ Partial Class FrmProspectos
         Me.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCancelar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCancelar.ForeColor = System.Drawing.Color.Black
-        Me.btCancelar.Location = New System.Drawing.Point(490, 15)
+        Me.btCancelar.Location = New System.Drawing.Point(646, 15)
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(160, 33)
         Me.btCancelar.TabIndex = 163

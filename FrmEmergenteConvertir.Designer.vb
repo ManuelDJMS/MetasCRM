@@ -105,9 +105,9 @@ Partial Class FrmEmergenteConvertir
         Me.Label26.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(56, 29)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(139, 18)
+        Me.Label26.Size = New System.Drawing.Size(162, 18)
         Me.Label26.TabIndex = 165
-        Me.Label26.Text = "Completa los campos"
+        Me.Label26.Text = "Crear nueva oportunidad"
         '
         'btVerListado
         '
@@ -142,9 +142,9 @@ Partial Class FrmEmergenteConvertir
         Me.Label27.ForeColor = System.Drawing.Color.ForestGreen
         Me.Label27.Location = New System.Drawing.Point(56, 12)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(72, 15)
+        Me.Label27.Size = New System.Drawing.Size(77, 15)
         Me.Label27.TabIndex = 152
-        Me.Label27.Text = "Prospección"
+        Me.Label27.Text = "Oportunidad"
         '
         'txtDescripcion
         '
@@ -180,11 +180,10 @@ Partial Class FrmEmergenteConvertir
         '
         'txtidprospecto
         '
-        Me.txtidprospecto.Location = New System.Drawing.Point(443, 151)
+        Me.txtidprospecto.Location = New System.Drawing.Point(474, 151)
         Me.txtidprospecto.Name = "txtidprospecto"
-        Me.txtidprospecto.Size = New System.Drawing.Size(116, 20)
+        Me.txtidprospecto.Size = New System.Drawing.Size(85, 20)
         Me.txtidprospecto.TabIndex = 171
-        Me.txtidprospecto.Visible = False
         '
         'FrmEmergenteConvertir
         '
