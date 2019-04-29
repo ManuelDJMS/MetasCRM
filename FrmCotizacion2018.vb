@@ -58,7 +58,7 @@ Public Class FrmCotizacion2018
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
-                DGCotizaciones.Rows.Add(lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
+                DGCotizaciones.Rows.Add(False, lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
             End While
             lectorLIMS.Close()
             conexionLIMS.Close()
@@ -72,22 +72,20 @@ Public Class FrmCotizacion2018
     Private Sub txtMarca_TextChanged(sender As Object, e As EventArgs) Handles txtMarca.TextChanged
         Try
             MetodoLIMS()
-            If DGEmpresas.Rows.Count < 2 Then
-                MsgBox(MsgBoxStyle.Critical, "Por favor, seleccione una Empresa")
-            Else
-                DGCotizaciones.Rows.Clear()
-                comandoLIMS = conexionLIMS.CreateCommand
-                R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
+
+            DGCotizaciones.Rows.Clear()
+            comandoLIMS = conexionLIMS.CreateCommand
+            R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
                  Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%'"
-                comandoLIMS.CommandText = R
-                lectorLIMS = comandoLIMS.ExecuteReader
-                While lectorLIMS.Read()
-                    DGCotizaciones.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
-                End While
-                lectorLIMS.Close()
-                conexionLIMS.Close()
-            End If
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGCotizaciones.Rows.Add(False, lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
+            End While
+            lectorLIMS.Close()
+            conexionLIMS.Close()
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
             cadena = Err.Description
@@ -99,27 +97,25 @@ Public Class FrmCotizacion2018
     Private Sub txtModelo_TextChanged(sender As Object, e As EventArgs) Handles txtModelo.TextChanged
         Try
             MetodoLIMS()
-            If DGEmpresas.Rows.Count < 2 Then
-                MsgBox(MsgBoxStyle.Critical, "Por favor, seleccione una Empresa")
-            Else
-                DGCotizaciones.Rows.Clear()
-                comandoLIMS = conexionLIMS.CreateCommand
-                R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
+
+            DGCotizaciones.Rows.Clear()
+            comandoLIMS = conexionLIMS.CreateCommand
+            R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
                  Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%'"
-                comandoLIMS.CommandText = R
-                lectorLIMS = comandoLIMS.ExecuteReader
-                While lectorLIMS.Read()
-                    DGCotizaciones.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
-                End While
-                lectorLIMS.Close()
-                conexionLIMS.Close()
-            End If
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGCotizaciones.Rows.Add(False, lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
+            End While
+            lectorLIMS.Close()
+            conexionLIMS.Close()
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
             cadena = Err.Description
             cadena = cadena.Replace("'", "")
-            Bitacora("FrmCotizacion2018", "Error al filtrar por modelo", Err.Number, cadena)
+            Bitacora("FrmCotizacion2018", "Error al filtrar por empresa", Err.Number, cadena)
         End Try
     End Sub
     Private Sub txtClave_TextChanged(sender As Object, e As EventArgs) Handles txtClave.TextChanged
@@ -161,30 +157,26 @@ Public Class FrmCotizacion2018
     Private Sub TextID_TextChanged(sender As Object, e As EventArgs) Handles TextID.TextChanged
         Try
             MetodoLIMS()
-            If DGEmpresas.Rows.Count < 2 Then
-                MsgBox(MsgBoxStyle.Critical, "Por favor, seleccione una Empresa")
-            Else
-                DGCotizaciones.Rows.Clear()
-                comandoLIMS = conexionLIMS.CreateCommand
-                Dim R As String
-                R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
+            DGCotizaciones.Rows.Clear()
+            comandoLIMS = conexionLIMS.CreateCommand
+            R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
                  Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%'"
-                comandoLIMS.CommandText = R
-                lectorLIMS = comandoLIMS.ExecuteReader
-                While lectorLIMS.Read()
-                    DGCotizaciones.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
-                End While
-                lectorLIMS.Close()
-                conexionLIMS.Close()
-            End If
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGCotizaciones.Rows.Add(False, lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
+            End While
+            lectorLIMS.Close()
+            conexionLIMS.Close()
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
             cadena = Err.Description
             cadena = cadena.Replace("'", "")
-            Bitacora("FrmCotizacion2018", "Error al filtrar por ID", Err.Number, cadena)
+            Bitacora("FrmCotizacion2018", "Error al filtrar por empresa", Err.Number, cadena)
         End Try
+
     End Sub
     Private Sub btCerrar_Click(sender As Object, e As EventArgs) Handles btCerrar.Click
         Me.Dispose()
@@ -213,5 +205,27 @@ Public Class FrmCotizacion2018
             cadena = cadena.Replace("'", "")
             Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
         End Try
+    End Sub
+
+    Private Sub BtCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
+        Dim seleccionado As Boolean
+        If DGCotizaciones.Rows.Count < 2 Then
+            MsgBox("No hay articulos para Cotizar", MsgBoxStyle.Critical, "Error del sistema.")
+        Else
+            For i As Integer = DGCotizaciones.Rows.Count() - 1 To 0 Step -1
+                seleccionado = DGCotizaciones.Rows(i).Cells(0).Value
+                If seleccionado = True Then
+
+                    frmEdicionCot2018_2019.Show()
+                    Exit For
+                Else
+
+                    MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
+                    Exit For
+                End If
+            Next
+
+        End If
+
     End Sub
 End Class

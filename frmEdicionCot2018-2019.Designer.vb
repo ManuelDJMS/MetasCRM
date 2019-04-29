@@ -85,14 +85,10 @@ Partial Class frmEdicionCot2018_2019
         Me.dgInicioNombres = New System.Windows.Forms.DataGridView()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.txtCotizacion19 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btMinimizar = New System.Windows.Forms.PictureBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.txtCotizacion = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label36 = New System.Windows.Forms.Label()
@@ -715,37 +711,6 @@ Partial Class frmEdicionCot2018_2019
         Me.txtCorreo.Size = New System.Drawing.Size(199, 21)
         Me.txtCorreo.TabIndex = 134
         '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(777, 23)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(102, 14)
-        Me.Label18.TabIndex = 132
-        Me.Label18.Text = "Cotización 2019:"
-        Me.Label18.Visible = False
-        '
-        'txtCotizacion19
-        '
-        Me.txtCotizacion19.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizacion19.Location = New System.Drawing.Point(881, 19)
-        Me.txtCotizacion19.Name = "txtCotizacion19"
-        Me.txtCotizacion19.Size = New System.Drawing.Size(98, 21)
-        Me.txtCotizacion19.TabIndex = 133
-        Me.txtCotizacion19.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(562, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 14)
-        Me.Label2.TabIndex = 130
-        Me.Label2.Text = "Cotización 2018:"
-        Me.Label2.Visible = False
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -794,29 +759,14 @@ Partial Class frmEdicionCot2018_2019
         Me.PictureBox5.TabIndex = 162
         Me.PictureBox5.TabStop = False
         '
-        'txtCotizacion
-        '
-        Me.txtCotizacion.AutoSize = True
-        Me.txtCotizacion.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizacion.Location = New System.Drawing.Point(665, 24)
-        Me.txtCotizacion.Name = "txtCotizacion"
-        Me.txtCotizacion.Size = New System.Drawing.Size(84, 14)
-        Me.txtCotizacion.TabIndex = 138
-        Me.txtCotizacion.Text = "Cotización 2018"
-        Me.txtCotizacion.Visible = False
-        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.LightGray
-        Me.Panel7.Controls.Add(Me.txtCotizacion)
         Me.Panel7.Controls.Add(Me.btGuardarInf)
-        Me.Panel7.Controls.Add(Me.txtCotizacion19)
-        Me.Panel7.Controls.Add(Me.Label18)
         Me.Panel7.Controls.Add(Me.Label36)
         Me.Panel7.Controls.Add(Me.PictureBox1)
         Me.Panel7.Controls.Add(Me.txtCorreo)
         Me.Panel7.Controls.Add(Me.Label19)
-        Me.Panel7.Controls.Add(Me.Label2)
         Me.Panel7.Controls.Add(Me.Label38)
         Me.Panel7.Location = New System.Drawing.Point(8, 36)
         Me.Panel7.Name = "Panel7"
@@ -912,7 +862,6 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -933,8 +882,6 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents txtCotizacion19 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents txtCorreo As TextBox
     Friend WithEvents ckSeleccionar As DataGridViewCheckBoxColumn
@@ -960,7 +907,6 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents btMinimizar As PictureBox
     Friend WithEvents Label33 As Label
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents txtCotizacion As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents btGuardarInf As Button
     Friend WithEvents Label36 As Label

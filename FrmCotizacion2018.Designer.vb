@@ -29,6 +29,7 @@ Partial Class FrmCotizacion2018
         Me.btCerrar = New System.Windows.Forms.PictureBox()
         Me.Tab2018 = New System.Windows.Forms.TabPage()
         Me.PanelFiltrado = New System.Windows.Forms.Panel()
+        Me.btCotizacion = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,6 +38,8 @@ Partial Class FrmCotizacion2018
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextCorreo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LabelNombre = New System.Windows.Forms.Label()
@@ -45,24 +48,22 @@ Partial Class FrmCotizacion2018
         Me.lblCot = New System.Windows.Forms.Label()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
         Me.DGEmpresas = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextCorreo = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.TabConsulta = New System.Windows.Forms.TabControl()
+        Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btCotizacion = New System.Windows.Forms.Button()
         CType(Me.btCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tab2018.SuspendLayout()
         Me.PanelFiltrado.SuspendLayout()
@@ -128,6 +129,20 @@ Partial Class FrmCotizacion2018
         Me.PanelFiltrado.Name = "PanelFiltrado"
         Me.PanelFiltrado.Size = New System.Drawing.Size(1090, 44)
         Me.PanelFiltrado.TabIndex = 172
+        '
+        'btCotizacion
+        '
+        Me.btCotizacion.BackColor = System.Drawing.Color.SteelBlue
+        Me.btCotizacion.FlatAppearance.BorderSize = 0
+        Me.btCotizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btCotizacion.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btCotizacion.ForeColor = System.Drawing.Color.White
+        Me.btCotizacion.Location = New System.Drawing.Point(823, 6)
+        Me.btCotizacion.Name = "btCotizacion"
+        Me.btCotizacion.Size = New System.Drawing.Size(151, 33)
+        Me.btCotizacion.TabIndex = 173
+        Me.btCotizacion.Text = "Realizar Cotización"
+        Me.btCotizacion.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -209,6 +224,24 @@ Partial Class FrmCotizacion2018
         Me.Panel1.Size = New System.Drawing.Size(779, 35)
         Me.Panel1.TabIndex = 171
         '
+        'TextCorreo
+        '
+        Me.TextCorreo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextCorreo.Location = New System.Drawing.Point(570, 5)
+        Me.TextCorreo.Name = "TextCorreo"
+        Me.TextCorreo.Size = New System.Drawing.Size(203, 21)
+        Me.TextCorreo.TabIndex = 163
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(516, 7)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(54, 18)
+        Me.Label5.TabIndex = 162
+        Me.Label5.Text = "Correo:"
+        '
         'Label42
         '
         Me.Label42.AutoSize = True
@@ -282,10 +315,9 @@ Partial Class FrmCotizacion2018
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 390)
         Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.ReadOnly = True
         Me.DGCotizaciones.Size = New System.Drawing.Size(1099, 229)
         Me.DGCotizaciones.TabIndex = 155
         '
@@ -312,6 +344,46 @@ Partial Class FrmCotizacion2018
         Me.DGEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGEmpresas.Size = New System.Drawing.Size(1099, 217)
         Me.DGEmpresas.TabIndex = 154
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "CustomerID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre Contacto"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 150
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Apellidos"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Nombre Empresa"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 250
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "RFC"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Width = 150
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Correo"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.Width = 300
         '
         'Panel2
         '
@@ -369,105 +441,34 @@ Partial Class FrmCotizacion2018
         Me.TabConsulta.Size = New System.Drawing.Size(1148, 653)
         Me.TabConsulta.TabIndex = 43
         '
-        'Column1
+        'Column9
         '
-        Me.Column1.HeaderText = "CustomerID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre Contacto"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 150
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Apellidos"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Nombre Empresa"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 250
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "RFC"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Width = 150
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Correo"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Width = 300
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(516, 7)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 18)
-        Me.Label5.TabIndex = 162
-        Me.Label5.Text = "Correo:"
-        '
-        'TextCorreo
-        '
-        Me.TextCorreo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextCorreo.Location = New System.Drawing.Point(570, 5)
-        Me.TextCorreo.Name = "TextCorreo"
-        Me.TextCorreo.Size = New System.Drawing.Size(203, 21)
-        Me.TextCorreo.TabIndex = 163
+        Me.Column9.HeaderText = "Seleccionar"
+        Me.Column9.Name = "Column9"
         '
         'Column5
         '
         Me.Column5.HeaderText = "Número de Equipo"
         Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
         Me.Column5.Width = 150
         '
         'Column6
         '
         Me.Column6.HeaderText = "Nombre de Equipo"
         Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 500
+        Me.Column6.Width = 400
         '
         'Column7
         '
         Me.Column7.HeaderText = "Marca"
         Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
         Me.Column7.Width = 200
         '
         'Column8
         '
         Me.Column8.HeaderText = "Modelo"
         Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
         Me.Column8.Width = 200
-        '
-        'btCotizacion
-        '
-        Me.btCotizacion.BackColor = System.Drawing.Color.SteelBlue
-        Me.btCotizacion.FlatAppearance.BorderSize = 0
-        Me.btCotizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btCotizacion.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btCotizacion.ForeColor = System.Drawing.Color.White
-        Me.btCotizacion.Location = New System.Drawing.Point(823, 6)
-        Me.btCotizacion.Name = "btCotizacion"
-        Me.btCotizacion.Size = New System.Drawing.Size(151, 33)
-        Me.btCotizacion.TabIndex = 173
-        Me.btCotizacion.Text = "Realizar Cotización"
-        Me.btCotizacion.UseVisualStyleBackColor = False
         '
         'FrmCotizacion2018
         '
@@ -534,9 +535,10 @@ Partial Class FrmCotizacion2018
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents TextCorreo As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents btCotizacion As Button
+    Friend WithEvents Column9 As DataGridViewCheckBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents btCotizacion As Button
 End Class

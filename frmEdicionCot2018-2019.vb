@@ -18,7 +18,7 @@ Public Class frmEdicionCot2018_2019
             isnull(EntradaRegistroCot.ServicioEn,'-') from MetAsInf inner join [Contactos-Clientes-Usuarios] on MetAsInf.Clavempresa = [Contactos-Clientes-Usuarios].Clavempresa
             inner join EntradaRegistroCot on [Contactos-Clientes-Usuarios].ClaveContacto = EntradaRegistroCot.ClaveContacto
             inner join Condiciones_p_cotizar on EntradaRegistroCot.[Elaboró Cot] = Condiciones_p_cotizar.Numcond 
-            inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot]= EntradaRegistroCot.[Elaboró Cot] where EntradaRegistroCot.Numcot =" & txtCotizacion.Text
+            inner join [Claves-Elaboro-Cot] on [Claves-Elaboro-Cot].[Clave-elaboro-cot]= EntradaRegistroCot.[Elaboró Cot] where EntradaRegistroCot.Numcot ="
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             lector2018.Read()
@@ -38,7 +38,7 @@ Public Class frmEdicionCot2018_2019
             txtCotizo.Text = lector2018(19)
             cboServicio.Text = lector2018(20)
             lector2018.Close()
-            R = "select *from [1Cotizar] where Numcot =" & Val(txtCotizacion.Text)
+            R = "select *from [1Cotizar] where Numcot ="
             comando2018.CommandText = R
             lector2018 = comando2018.ExecuteReader
             While lector2018.Read()
