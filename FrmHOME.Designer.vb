@@ -352,7 +352,6 @@ Partial Class FrmHOME
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(212, 45)
         Me.Panel14.TabIndex = 41
-        Me.Panel14.Visible = False
         '
         'Label30
         '

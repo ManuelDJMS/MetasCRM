@@ -22,46 +22,39 @@ Partial Class frmEdicionCot2018_2019
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEdicionCot2018_2019))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.txtEliminar = New System.Windows.Forms.Button()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
-        Me.ckSeleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.equipoDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.txtCotizo2019 = New System.Windows.Forms.TextBox()
         Me.txtConta = New System.Windows.Forms.TextBox()
-        Me.txtTipoCliente = New System.Windows.Forms.TextBox()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.cboServicio = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.DTPDesde = New System.Windows.Forms.DateTimePicker()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtCotizo = New System.Windows.Forms.TextBox()
         Me.txtReferencia = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.txtNumCond = New System.Windows.Forms.Label()
-        Me.txtExt = New System.Windows.Forms.Label()
         Me.txtEstado = New System.Windows.Forms.Label()
         Me.txtCveContacto = New System.Windows.Forms.Label()
         Me.TextCorreo = New System.Windows.Forms.Label()
@@ -70,10 +63,7 @@ Partial Class frmEdicionCot2018_2019
         Me.txtDomicilio = New System.Windows.Forms.Label()
         Me.txtNombreC = New System.Windows.Forms.Label()
         Me.txtNombreEmpresa = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtClaveE = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.LabelEmpresa = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -83,21 +73,34 @@ Partial Class frmEdicionCot2018_2019
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgInicioNombres = New System.Windows.Forms.DataGridView()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.txtCotizacion19 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btMinimizar = New System.Windows.Forms.PictureBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.txtCotizacion = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label38 = New System.Windows.Forms.Label()
+        Me.CbModalidad = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Cbcuando = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.DTPHasta = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -116,7 +119,6 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Panel6)
-        Me.Panel1.Controls.Add(Me.txtEliminar)
         Me.Panel1.Controls.Add(Me.DGCotizaciones)
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Panel4)
@@ -130,9 +132,9 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
         Me.Panel2.Controls.Add(Me.Label30)
-        Me.Panel2.Location = New System.Drawing.Point(625, 66)
+        Me.Panel2.Location = New System.Drawing.Point(444, 66)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(585, 27)
+        Me.Panel2.Size = New System.Drawing.Size(766, 27)
         Me.Panel2.TabIndex = 181
         '
         'Label30
@@ -152,7 +154,7 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel6.Controls.Add(Me.Label42)
         Me.Panel6.Location = New System.Drawing.Point(8, 66)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(611, 27)
+        Me.Panel6.Size = New System.Drawing.Size(430, 27)
         Me.Panel6.TabIndex = 171
         '
         'Label42
@@ -166,51 +168,37 @@ Partial Class frmEdicionCot2018_2019
         Me.Label42.TabIndex = 152
         Me.Label42.Text = "Información del cliente"
         '
-        'txtEliminar
-        '
-        Me.txtEliminar.BackColor = System.Drawing.Color.SteelBlue
-        Me.txtEliminar.FlatAppearance.BorderSize = 0
-        Me.txtEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.txtEliminar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEliminar.ForeColor = System.Drawing.Color.White
-        Me.txtEliminar.Location = New System.Drawing.Point(1085, 606)
-        Me.txtEliminar.Name = "txtEliminar"
-        Me.txtEliminar.Size = New System.Drawing.Size(110, 34)
-        Me.txtEliminar.TabIndex = 159
-        Me.txtEliminar.Text = "Eliminar"
-        Me.txtEliminar.UseVisualStyleBackColor = False
-        '
         'DGCotizaciones
         '
         Me.DGCotizaciones.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.id, Me.intervalo, Me.precioUnitario, Me.precioTotal})
-        Me.DGCotizaciones.Location = New System.Drawing.Point(8, 356)
+        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partida, Me.Column1, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.intervalo, Me.precioUnitario, Me.Column2})
+        Me.DGCotizaciones.Location = New System.Drawing.Point(3, 405)
         Me.DGCotizaciones.Name = "DGCotizaciones"
         Me.DGCotizaciones.Size = New System.Drawing.Size(1202, 235)
         Me.DGCotizaciones.TabIndex = 156
-        '
-        'ckSeleccionar
-        '
-        Me.ckSeleccionar.HeaderText = "Seleccionar"
-        Me.ckSeleccionar.Name = "ckSeleccionar"
         '
         'partida
         '
         Me.partida.HeaderText = "Partida"
         Me.partida.Name = "partida"
         Me.partida.Width = 50
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Número de Equipo"
+        Me.Column1.Name = "Column1"
         '
         'codigoServicio
         '
@@ -228,7 +216,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.equipoDescripcion.HeaderText = "Equipo/Descripción"
         Me.equipoDescripcion.Name = "equipoDescripcion"
-        Me.equipoDescripcion.Width = 270
+        Me.equipoDescripcion.Width = 250
         '
         'marca
         '
@@ -240,59 +228,67 @@ Partial Class frmEdicionCot2018_2019
         Me.modelo.HeaderText = "Modelo"
         Me.modelo.Name = "modelo"
         '
-        'id
-        '
-        Me.id.HeaderText = "ID"
-        Me.id.Name = "id"
-        Me.id.Width = 80
-        '
         'intervalo
         '
         Me.intervalo.HeaderText = "Intervalo"
         Me.intervalo.Name = "intervalo"
-        Me.intervalo.Width = 270
+        Me.intervalo.Width = 250
         '
         'precioUnitario
         '
-        Me.precioUnitario.HeaderText = "Precio 2018"
+        Me.precioUnitario.HeaderText = "Precio"
         Me.precioUnitario.Name = "precioUnitario"
         Me.precioUnitario.Width = 70
         '
-        'precioTotal
+        'Column2
         '
-        Me.precioTotal.HeaderText = "Precio 2019"
-        Me.precioTotal.Name = "precioTotal"
-        Me.precioTotal.Width = 70
+        Me.Column2.HeaderText = "Cantidad Real"
+        Me.Column2.Name = "Column2"
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel5.Controls.Add(Me.ComboBox6)
+        Me.Panel5.Controls.Add(Me.Label27)
+        Me.Panel5.Controls.Add(Me.ComboBox5)
+        Me.Panel5.Controls.Add(Me.Label26)
+        Me.Panel5.Controls.Add(Me.ComboBox4)
+        Me.Panel5.Controls.Add(Me.Label25)
+        Me.Panel5.Controls.Add(Me.ComboBox3)
+        Me.Panel5.Controls.Add(Me.Label24)
+        Me.Panel5.Controls.Add(Me.ComboBox2)
         Me.Panel5.Controls.Add(Me.Label21)
+        Me.Panel5.Controls.Add(Me.Label23)
+        Me.Panel5.Controls.Add(Me.DTPHasta)
         Me.Panel5.Controls.Add(Me.Label20)
-        Me.Panel5.Controls.Add(Me.Label22)
-        Me.Panel5.Controls.Add(Me.txtCotizo2019)
-        Me.Panel5.Controls.Add(Me.txtConta)
-        Me.Panel5.Controls.Add(Me.txtTipoCliente)
-        Me.Panel5.Controls.Add(Me.txtObservaciones)
-        Me.Panel5.Controls.Add(Me.Label16)
-        Me.Panel5.Controls.Add(Me.cboServicio)
-        Me.Panel5.Controls.Add(Me.Label15)
-        Me.Panel5.Controls.Add(Me.DTPDesde)
+        Me.Panel5.Controls.Add(Me.Label19)
         Me.Panel5.Controls.Add(Me.Label11)
-        Me.Panel5.Controls.Add(Me.Label12)
-        Me.Panel5.Controls.Add(Me.txtCotizo)
-        Me.Panel5.Controls.Add(Me.txtReferencia)
+        Me.Panel5.Controls.Add(Me.ComboBox1)
+        Me.Panel5.Controls.Add(Me.txtCotizo2019)
+        Me.Panel5.Controls.Add(Me.Label18)
+        Me.Panel5.Controls.Add(Me.Cbcuando)
+        Me.Panel5.Controls.Add(Me.txtConta)
+        Me.Panel5.Controls.Add(Me.Label17)
+        Me.Panel5.Controls.Add(Me.CbModalidad)
+        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.DTPDesde)
         Me.Panel5.Controls.Add(Me.Label14)
-        Me.Panel5.Location = New System.Drawing.Point(625, 94)
+        Me.Panel5.Controls.Add(Me.txtObservaciones)
+        Me.Panel5.Controls.Add(Me.Label12)
+        Me.Panel5.Controls.Add(Me.cboServicio)
+        Me.Panel5.Controls.Add(Me.Label16)
+        Me.Panel5.Controls.Add(Me.txtReferencia)
+        Me.Panel5.Controls.Add(Me.Label15)
+        Me.Panel5.Location = New System.Drawing.Point(444, 95)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(585, 251)
+        Me.Panel5.Size = New System.Drawing.Size(766, 305)
         Me.Panel5.TabIndex = 141
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(414, 117)
+        Me.Label21.Location = New System.Drawing.Point(523, 210)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(46, 14)
         Me.Label21.TabIndex = 150
@@ -302,26 +298,16 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(379, 87)
+        Me.Label20.Location = New System.Drawing.Point(328, 208)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(81, 14)
         Me.Label20.TabIndex = 151
         Me.Label20.Text = "Contabilizar:"
         '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(361, 59)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(99, 14)
-        Me.Label22.TabIndex = 152
-        Me.Label22.Text = "Tipo de Cliente:"
-        '
         'txtCotizo2019
         '
         Me.txtCotizo2019.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizo2019.Location = New System.Drawing.Point(466, 115)
+        Me.txtCotizo2019.Location = New System.Drawing.Point(576, 206)
         Me.txtCotizo2019.Name = "txtCotizo2019"
         Me.txtCotizo2019.Size = New System.Drawing.Size(102, 21)
         Me.txtCotizo2019.TabIndex = 147
@@ -329,24 +315,16 @@ Partial Class frmEdicionCot2018_2019
         'txtConta
         '
         Me.txtConta.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConta.Location = New System.Drawing.Point(466, 81)
+        Me.txtConta.Location = New System.Drawing.Point(415, 206)
         Me.txtConta.Name = "txtConta"
         Me.txtConta.Size = New System.Drawing.Size(102, 21)
         Me.txtConta.TabIndex = 148
-        '
-        'txtTipoCliente
-        '
-        Me.txtTipoCliente.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoCliente.Location = New System.Drawing.Point(466, 57)
-        Me.txtTipoCliente.Name = "txtTipoCliente"
-        Me.txtTipoCliente.Size = New System.Drawing.Size(102, 21)
-        Me.txtTipoCliente.TabIndex = 149
         '
         'txtObservaciones
         '
         Me.txtObservaciones.Enabled = False
         Me.txtObservaciones.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservaciones.Location = New System.Drawing.Point(110, 142)
+        Me.txtObservaciones.Location = New System.Drawing.Point(110, 208)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.Size = New System.Drawing.Size(200, 63)
@@ -356,7 +334,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(6, 142)
+        Me.Label16.Location = New System.Drawing.Point(9, 208)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(95, 14)
         Me.Label16.TabIndex = 145
@@ -366,16 +344,17 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.cboServicio.FormattingEnabled = True
         Me.cboServicio.Items.AddRange(New Object() {"MetAs", "MetAs Campo", "MetAs Óptica"})
-        Me.cboServicio.Location = New System.Drawing.Point(110, 87)
+        Me.cboServicio.Location = New System.Drawing.Point(87, 136)
         Me.cboServicio.Name = "cboServicio"
-        Me.cboServicio.Size = New System.Drawing.Size(121, 21)
+        Me.cboServicio.Size = New System.Drawing.Size(81, 21)
         Me.cboServicio.TabIndex = 144
+        Me.cboServicio.Text = "MetAs"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(9, 90)
+        Me.Label15.Location = New System.Drawing.Point(10, 139)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(74, 14)
         Me.Label15.TabIndex = 143
@@ -384,63 +363,43 @@ Partial Class frmEdicionCot2018_2019
         'DTPDesde
         '
         Me.DTPDesde.Enabled = False
-        Me.DTPDesde.Location = New System.Drawing.Point(110, 28)
+        Me.DTPDesde.Location = New System.Drawing.Point(149, 18)
         Me.DTPDesde.Name = "DTPDesde"
         Me.DTPDesde.Size = New System.Drawing.Size(200, 20)
         Me.DTPDesde.TabIndex = 141
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(8, 116)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 14)
-        Me.Label11.TabIndex = 138
-        Me.Label11.Text = "Cotizo 2018:"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(9, 66)
+        Me.Label12.Location = New System.Drawing.Point(422, 174)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(73, 14)
         Me.Label12.TabIndex = 137
         Me.Label12.Text = "Referencia:"
         '
-        'txtCotizo
-        '
-        Me.txtCotizo.Enabled = False
-        Me.txtCotizo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizo.Location = New System.Drawing.Point(110, 115)
-        Me.txtCotizo.Name = "txtCotizo"
-        Me.txtCotizo.Size = New System.Drawing.Size(200, 21)
-        Me.txtCotizo.TabIndex = 135
-        '
         'txtReferencia
         '
         Me.txtReferencia.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReferencia.Location = New System.Drawing.Point(110, 57)
+        Me.txtReferencia.Location = New System.Drawing.Point(501, 172)
         Me.txtReferencia.Name = "txtReferencia"
-        Me.txtReferencia.Size = New System.Drawing.Size(200, 21)
+        Me.txtReferencia.Size = New System.Drawing.Size(250, 21)
         Me.txtReferencia.TabIndex = 134
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(10, 34)
+        Me.Label14.Location = New System.Drawing.Point(10, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(94, 14)
+        Me.Label14.Size = New System.Drawing.Size(61, 14)
         Me.Label14.TabIndex = 132
-        Me.Label14.Text = "Vigente desde:"
+        Me.Label14.Text = "Vigencia:"
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel4.Controls.Add(Me.txtNumCond)
-        Me.Panel4.Controls.Add(Me.txtExt)
         Me.Panel4.Controls.Add(Me.txtEstado)
         Me.Panel4.Controls.Add(Me.txtCveContacto)
         Me.Panel4.Controls.Add(Me.TextCorreo)
@@ -449,10 +408,7 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel4.Controls.Add(Me.txtDomicilio)
         Me.Panel4.Controls.Add(Me.txtNombreC)
         Me.Panel4.Controls.Add(Me.txtNombreEmpresa)
-        Me.Panel4.Controls.Add(Me.Label17)
-        Me.Panel4.Controls.Add(Me.txtClaveE)
         Me.Panel4.Controls.Add(Me.Label10)
-        Me.Panel4.Controls.Add(Me.LabelEmpresa)
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.Label8)
@@ -463,34 +419,24 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Location = New System.Drawing.Point(8, 94)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(611, 251)
+        Me.Panel4.Size = New System.Drawing.Size(430, 305)
         Me.Panel4.TabIndex = 133
         '
         'txtNumCond
         '
         Me.txtNumCond.AutoSize = True
         Me.txtNumCond.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumCond.Location = New System.Drawing.Point(372, 216)
+        Me.txtNumCond.Location = New System.Drawing.Point(75, 97)
         Me.txtNumCond.Name = "txtNumCond"
-        Me.txtNumCond.Size = New System.Drawing.Size(81, 14)
+        Me.txtNumCond.Size = New System.Drawing.Size(25, 14)
         Me.txtNumCond.TabIndex = 159
-        Me.txtNumCond.Text = "Núm Condicion"
-        '
-        'txtExt
-        '
-        Me.txtExt.AutoSize = True
-        Me.txtExt.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtExt.Location = New System.Drawing.Point(372, 184)
-        Me.txtExt.Name = "txtExt"
-        Me.txtExt.Size = New System.Drawing.Size(25, 14)
-        Me.txtExt.TabIndex = 158
-        Me.txtExt.Text = "Ext:"
+        Me.txtNumCond.Text = "RFC"
         '
         'txtEstado
         '
         Me.txtEstado.AutoSize = True
         Me.txtEstado.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEstado.Location = New System.Drawing.Point(372, 155)
+        Me.txtEstado.Location = New System.Drawing.Point(73, 189)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(43, 14)
         Me.txtEstado.TabIndex = 157
@@ -500,7 +446,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtCveContacto.AutoSize = True
         Me.txtCveContacto.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCveContacto.Location = New System.Drawing.Point(353, 16)
+        Me.txtCveContacto.Location = New System.Drawing.Point(73, 40)
         Me.txtCveContacto.Name = "txtCveContacto"
         Me.txtCveContacto.Size = New System.Drawing.Size(27, 14)
         Me.txtCveContacto.TabIndex = 156
@@ -510,7 +456,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.TextCorreo.AutoSize = True
         Me.TextCorreo.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextCorreo.Location = New System.Drawing.Point(73, 216)
+        Me.TextCorreo.Location = New System.Drawing.Point(73, 250)
         Me.TextCorreo.Name = "TextCorreo"
         Me.TextCorreo.Size = New System.Drawing.Size(42, 14)
         Me.TextCorreo.TabIndex = 155
@@ -520,7 +466,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtTelefono.AutoSize = True
         Me.txtTelefono.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(73, 184)
+        Me.txtTelefono.Location = New System.Drawing.Point(73, 218)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(52, 14)
         Me.txtTelefono.TabIndex = 154
@@ -530,7 +476,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtCiudad.AutoSize = True
         Me.txtCiudad.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCiudad.Location = New System.Drawing.Point(73, 155)
+        Me.txtCiudad.Location = New System.Drawing.Point(73, 153)
         Me.txtCiudad.Name = "txtCiudad"
         Me.txtCiudad.Size = New System.Drawing.Size(43, 14)
         Me.txtCiudad.TabIndex = 153
@@ -540,7 +486,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtDomicilio.AutoSize = True
         Me.txtDomicilio.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDomicilio.Location = New System.Drawing.Point(73, 122)
+        Me.txtDomicilio.Location = New System.Drawing.Point(73, 120)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(56, 14)
         Me.txtDomicilio.TabIndex = 152
@@ -550,7 +496,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtNombreC.AutoSize = True
         Me.txtNombreC.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreC.Location = New System.Drawing.Point(73, 88)
+        Me.txtNombreC.Location = New System.Drawing.Point(74, 18)
         Me.txtNombreC.Name = "txtNombreC"
         Me.txtNombreC.Size = New System.Drawing.Size(53, 14)
         Me.txtNombreC.TabIndex = 151
@@ -560,58 +506,28 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.txtNombreEmpresa.AutoSize = True
         Me.txtNombreEmpresa.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreEmpresa.Location = New System.Drawing.Point(73, 49)
+        Me.txtNombreEmpresa.Location = New System.Drawing.Point(73, 68)
         Me.txtNombreEmpresa.Name = "txtNombreEmpresa"
         Me.txtNombreEmpresa.Size = New System.Drawing.Size(53, 14)
         Me.txtNombreEmpresa.TabIndex = 150
         Me.txtNombreEmpresa.Text = "Empresa:"
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(316, 184)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(29, 14)
-        Me.Label17.TabIndex = 146
-        Me.Label17.Text = "Ext:"
-        '
-        'txtClaveE
-        '
-        Me.txtClaveE.AutoSize = True
-        Me.txtClaveE.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClaveE.Location = New System.Drawing.Point(73, 16)
-        Me.txtClaveE.Name = "txtClaveE"
-        Me.txtClaveE.Size = New System.Drawing.Size(44, 14)
-        Me.txtClaveE.TabIndex = 149
-        Me.txtClaveE.Text = "Cliente:"
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(316, 216)
+        Me.Label10.Location = New System.Drawing.Point(6, 97)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(32, 14)
         Me.Label10.TabIndex = 144
         Me.Label10.Text = "RFC:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'LabelEmpresa
-        '
-        Me.LabelEmpresa.AutoSize = True
-        Me.LabelEmpresa.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelEmpresa.Location = New System.Drawing.Point(6, 16)
-        Me.LabelEmpresa.Name = "LabelEmpresa"
-        Me.LabelEmpresa.Size = New System.Drawing.Size(52, 14)
-        Me.LabelEmpresa.TabIndex = 147
-        Me.LabelEmpresa.Text = "Cliente:"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(316, 155)
+        Me.Label9.Location = New System.Drawing.Point(6, 189)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 14)
         Me.Label9.TabIndex = 142
@@ -621,7 +537,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 49)
+        Me.Label1.Location = New System.Drawing.Point(6, 68)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 14)
         Me.Label1.TabIndex = 148
@@ -631,7 +547,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(316, 16)
+        Me.Label8.Location = New System.Drawing.Point(6, 40)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 14)
         Me.Label8.TabIndex = 132
@@ -641,7 +557,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(6, 216)
+        Me.Label7.Location = New System.Drawing.Point(6, 250)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 14)
         Me.Label7.TabIndex = 140
@@ -651,7 +567,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(6, 186)
+        Me.Label6.Location = New System.Drawing.Point(6, 220)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(61, 14)
         Me.Label6.TabIndex = 138
@@ -661,7 +577,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 155)
+        Me.Label5.Location = New System.Drawing.Point(6, 153)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(50, 14)
         Me.Label5.TabIndex = 137
@@ -671,7 +587,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 122)
+        Me.Label4.Location = New System.Drawing.Point(6, 120)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 14)
         Me.Label4.TabIndex = 136
@@ -681,7 +597,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(5, 86)
+        Me.Label3.Location = New System.Drawing.Point(6, 16)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 14)
         Me.Label3.TabIndex = 132
@@ -694,57 +610,6 @@ Partial Class frmEdicionCot2018_2019
         Me.dgInicioNombres.Name = "dgInicioNombres"
         Me.dgInicioNombres.Size = New System.Drawing.Size(142, 24)
         Me.dgInicioNombres.TabIndex = 137
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(176, 25)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(121, 14)
-        Me.Label19.TabIndex = 135
-        Me.Label19.Text = "Correo de contacto:"
-        '
-        'txtCorreo
-        '
-        Me.txtCorreo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCorreo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCorreo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.Location = New System.Drawing.Point(303, 22)
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(199, 21)
-        Me.txtCorreo.TabIndex = 134
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(777, 23)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(102, 14)
-        Me.Label18.TabIndex = 132
-        Me.Label18.Text = "Cotización 2019:"
-        Me.Label18.Visible = False
-        '
-        'txtCotizacion19
-        '
-        Me.txtCotizacion19.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizacion19.Location = New System.Drawing.Point(881, 19)
-        Me.txtCotizacion19.Name = "txtCotizacion19"
-        Me.txtCotizacion19.Size = New System.Drawing.Size(98, 21)
-        Me.txtCotizacion19.TabIndex = 133
-        Me.txtCotizacion19.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(562, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 14)
-        Me.Label2.TabIndex = 130
-        Me.Label2.Text = "Cotización 2018:"
-        Me.Label2.Visible = False
         '
         'Label13
         '
@@ -794,29 +659,12 @@ Partial Class frmEdicionCot2018_2019
         Me.PictureBox5.TabIndex = 162
         Me.PictureBox5.TabStop = False
         '
-        'txtCotizacion
-        '
-        Me.txtCotizacion.AutoSize = True
-        Me.txtCotizacion.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCotizacion.Location = New System.Drawing.Point(665, 24)
-        Me.txtCotizacion.Name = "txtCotizacion"
-        Me.txtCotizacion.Size = New System.Drawing.Size(84, 14)
-        Me.txtCotizacion.TabIndex = 138
-        Me.txtCotizacion.Text = "Cotización 2018"
-        Me.txtCotizacion.Visible = False
-        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.LightGray
-        Me.Panel7.Controls.Add(Me.txtCotizacion)
         Me.Panel7.Controls.Add(Me.btGuardarInf)
-        Me.Panel7.Controls.Add(Me.txtCotizacion19)
-        Me.Panel7.Controls.Add(Me.Label18)
         Me.Panel7.Controls.Add(Me.Label36)
         Me.Panel7.Controls.Add(Me.PictureBox1)
-        Me.Panel7.Controls.Add(Me.txtCorreo)
-        Me.Panel7.Controls.Add(Me.Label19)
-        Me.Panel7.Controls.Add(Me.Label2)
         Me.Panel7.Controls.Add(Me.Label38)
         Me.Panel7.Location = New System.Drawing.Point(8, 36)
         Me.Panel7.Name = "Panel7"
@@ -870,6 +718,222 @@ Partial Class frmEdicionCot2018_2019
         Me.Label38.TabIndex = 152
         Me.Label38.Text = "Cotización"
         '
+        'CbModalidad
+        '
+        Me.CbModalidad.FormattingEnabled = True
+        Me.CbModalidad.Items.AddRange(New Object() {"Ordinario", "Campo ", "Urgente"})
+        Me.CbModalidad.Location = New System.Drawing.Point(87, 56)
+        Me.CbModalidad.Name = "CbModalidad"
+        Me.CbModalidad.Size = New System.Drawing.Size(81, 21)
+        Me.CbModalidad.TabIndex = 154
+        Me.CbModalidad.Tag = "1"
+        Me.CbModalidad.Text = "Ordinario"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(9, 56)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 14)
+        Me.Label2.TabIndex = 153
+        Me.Label2.Text = "Modalidad:"
+        '
+        'Cbcuando
+        '
+        Me.Cbcuando.FormattingEnabled = True
+        Me.Cbcuando.Items.AddRange(New Object() {"Al recibir Equipos", "Fecha a concretar con el cliente"})
+        Me.Cbcuando.Location = New System.Drawing.Point(664, 58)
+        Me.Cbcuando.Name = "Cbcuando"
+        Me.Cbcuando.Size = New System.Drawing.Size(99, 21)
+        Me.Cbcuando.TabIndex = 156
+        Me.Cbcuando.Tag = "Ordinario"
+        Me.Cbcuando.Text = "Al recibir Equipos"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(605, 59)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(53, 14)
+        Me.Label17.TabIndex = 155
+        Me.Label17.Text = "Cuando:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"45 días hábiles aprox, a partir de la recepción de sus equipos. Previa disponibil" &
+                "idad de laboratorio", "10 días hábiles a partir de la recepción de sus equipos  o según cantidad de equi" &
+                "pos a recibir por remesa.", "Tiempo de entrega de acuerdo a lo indicado en cotización", "15 días hábiles a partir de la recepción de sus equipos.", "Para Pesas Clase E2, 1 y 2 (ASTM), el tiempo de entrega es de 15 días hábiles-10 " &
+                "días hábiles a partir de la recepción de sus equipos  o según cantidad de equipo" &
+                "s a recibir por remesa.", "15 días hábiles a partir de la recepción de sus equipos en instalaciones MetAs, S" &
+                ".A. de C.V", "10 días hábiles a partir de la recepción de sus equipos o según cantidad de equip" &
+                "os a recibir por remesa.; Para Termómetros ITS 90 y Callendar Van Dusen, el tiem" &
+                "po de entrega es de 15 días hábiles.", "10 días hábiles a partir de la recepción de sus equipos o según cantidad de equip" &
+                "os a recibir por remesa.; Para equipos de Temperatura de Radiancia, el tiempo de" &
+                " entrega es de 15 días hábiles.", "Tiempo de entrega minimo de 20 días hábiles, para confirmar tiempo de entrega el " &
+                "laboratorio se pondrá en contacto con usted una vez recibidos sus equipos", "10 días hábiles a partir de la recepción de sus equipos o según cantidad de equip" &
+                "os a recibir por remesa.; Para los Higrómetros de madera, papel o cartón, el tie" &
+                "mpo de entrega es de 15 días hábiles.", "25 días hábiles aprox para calibración de servicios."})
+        Me.ComboBox1.Location = New System.Drawing.Point(301, 56)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(298, 21)
+        Me.ComboBox1.TabIndex = 158
+        Me.ComboBox1.Tag = "1"
+        Me.ComboBox1.Text = "10 días hábiles a partir de la recepción de sus equipos  o según cantidad de equi" &
+    "pos a recibir por remesa."
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(174, 56)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(121, 14)
+        Me.Label18.TabIndex = 157
+        Me.Label18.Text = "Tiempo de Entrega:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(97, 18)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(46, 14)
+        Me.Label11.TabIndex = 159
+        Me.Label11.Text = "Desde:"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(355, 18)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(44, 14)
+        Me.Label19.TabIndex = 160
+        Me.Label19.Text = "Hasta:"
+        '
+        'DTPHasta
+        '
+        Me.DTPHasta.Enabled = False
+        Me.DTPHasta.Location = New System.Drawing.Point(399, 18)
+        Me.DTPHasta.Name = "DTPHasta"
+        Me.DTPHasta.Size = New System.Drawing.Size(200, 20)
+        Me.DTPHasta.TabIndex = 161
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {resources.GetString("ComboBox2.Items"), "Al recibir factura, 15 días calendario. Para solicitud, aclaración de crédito o e" &
+                "nvió de comprobante de pago, favor de contactar al departamento de cobranza en e" &
+                "l correo electrónico: cobranza@metas.mx", "Depósito a Cuenta 100 %  para envió de sus servicios.  EL ENVÍO (IMPORTACIÓN) Y R" &
+                "ETORNO (EXPORTACIÓN) DEL EQUIPO ES REPONSABILIDAD DEL CLIENTE.", "Depósito a Cuenta 100 %  para envió de sus servicios.  EL ENVÍO (IMPORTACIÓN) Y R" &
+                "ETORNO (EXPORTACIÓN) DEL EQUIPO ES REPONSABILIDAD DEL CLIENTE."})
+        Me.ComboBox2.Location = New System.Drawing.Point(301, 95)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(298, 21)
+        Me.ComboBox2.TabIndex = 163
+        Me.ComboBox2.Tag = "1"
+        Me.ComboBox2.Text = "Al recibir factura, 15 días calendario. Para solicitud, aclaración de crédito o e" &
+    "nvió de comprobante de pago, favor de contactar al departamento de cobranza en e" &
+    "l correo electrónico: cobranza@metas.mx"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(174, 99)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(117, 14)
+        Me.Label23.TabIndex = 162
+        Me.Label23.Text = "Condición de Pago:"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"30 días calendario", "Precios considerados para servicios en 2018", "Precios considerados para servicios en 2019", "Precios considerados para servicios en 2018 -No aplica para viáticos", "Precios considerados para servicios en 2019 -No aplica para viáticos"})
+        Me.ComboBox3.Location = New System.Drawing.Point(68, 97)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(99, 21)
+        Me.ComboBox3.TabIndex = 165
+        Me.ComboBox3.Tag = "Ordinario"
+        Me.ComboBox3.Text = "30 días calendario"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(9, 98)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(53, 14)
+        Me.Label24.TabIndex = 164
+        Me.Label24.Text = "Validez:"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {resources.GetString("ComboBox4.Items"), "El incremento en precios no podra ser mayor al 10% del costo de calibración"})
+        Me.ComboBox4.Location = New System.Drawing.Point(238, 136)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(361, 21)
+        Me.ComboBox4.TabIndex = 167
+        Me.ComboBox4.Tag = "1"
+        Me.ComboBox4.Text = resources.GetString("ComboBox4.Text")
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(174, 139)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(58, 14)
+        Me.Label25.TabIndex = 166
+        Me.Label25.Text = "Leyenda:"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"En pesos mexicanos", "Los precios cotizados son en Dólares Americanos pagaderos en M.N. al tipo de camb" &
+                "io del día de pago."})
+        Me.ComboBox5.Location = New System.Drawing.Point(664, 97)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(99, 21)
+        Me.ComboBox5.TabIndex = 169
+        Me.ComboBox5.Tag = "Ordinario"
+        Me.ComboBox5.Text = "En pesos mexicanos"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(601, 99)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(57, 14)
+        Me.Label26.TabIndex = 168
+        Me.Label26.Text = "Moneda:"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"Condiciones_prestacion_servicios_calibracion_081216.pdf", "Condiciones de servicio de calibración (se anexa a ésta cotización)"})
+        Me.ComboBox6.Location = New System.Drawing.Point(111, 171)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(298, 21)
+        Me.ComboBox6.TabIndex = 171
+        Me.ComboBox6.Tag = "1"
+        Me.ComboBox6.Text = "Condiciones_prestacion_servicios_calibracion_081216.pdf"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(10, 171)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(96, 14)
+        Me.Label27.TabIndex = 170
+        Me.Label27.Text = "Doc. Condición:"
+        '
         'frmEdicionCot2018_2019
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -912,7 +976,6 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -920,9 +983,7 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents DTPDesde As DateTimePicker
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents txtCotizo As TextBox
     Friend WithEvents txtReferencia As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents DGCotizaciones As DataGridView
@@ -932,49 +993,26 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Label15 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents txtCotizacion19 As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents txtCorreo As TextBox
-    Friend WithEvents ckSeleccionar As DataGridViewCheckBoxColumn
-    Friend WithEvents partida As DataGridViewTextBoxColumn
-    Friend WithEvents codigoServicio As DataGridViewTextBoxColumn
-    Friend WithEvents cantidad As DataGridViewTextBoxColumn
-    Friend WithEvents equipoDescripcion As DataGridViewTextBoxColumn
-    Friend WithEvents marca As DataGridViewTextBoxColumn
-    Friend WithEvents modelo As DataGridViewTextBoxColumn
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents intervalo As DataGridViewTextBoxColumn
-    Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
-    Friend WithEvents precioTotal As DataGridViewTextBoxColumn
     Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents Label22 As Label
     Friend WithEvents txtCotizo2019 As TextBox
     Friend WithEvents txtConta As TextBox
-    Friend WithEvents txtTipoCliente As TextBox
-    Friend WithEvents txtEliminar As Button
     Friend WithEvents dgInicioNombres As DataGridView
     Friend WithEvents Label13 As Label
     Friend WithEvents btMinimizar As PictureBox
     Friend WithEvents Label33 As Label
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents txtCotizacion As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents btGuardarInf As Button
     Friend WithEvents Label36 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label38 As Label
     Friend WithEvents txtNombreEmpresa As Label
-    Friend WithEvents txtClaveE As Label
-    Friend WithEvents LabelEmpresa As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label42 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label30 As Label
-    Friend WithEvents txtExt As Label
     Friend WithEvents txtEstado As Label
     Friend WithEvents txtCveContacto As Label
     Friend WithEvents TextCorreo As Label
@@ -983,4 +1021,33 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents txtDomicilio As Label
     Friend WithEvents txtNombreC As Label
     Friend WithEvents txtNumCond As Label
+    Friend WithEvents partida As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents codigoServicio As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents equipoDescripcion As DataGridViewTextBoxColumn
+    Friend WithEvents marca As DataGridViewTextBoxColumn
+    Friend WithEvents modelo As DataGridViewTextBoxColumn
+    Friend WithEvents intervalo As DataGridViewTextBoxColumn
+    Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Cbcuando As ComboBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents CbModalidad As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents DTPHasta As DateTimePicker
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label11 As Label
 End Class

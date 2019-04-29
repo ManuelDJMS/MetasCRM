@@ -219,7 +219,7 @@ Public Class FrmProspectos
         txtNotas.Text = ""
         txtOrigen.Text = ""
         txtTipoIndustri.Text = ""
-        txtHorarioTrabajo.Text = ""
+        ' txtHorarioTrabajo.Text = ""
 
     End Sub
 
@@ -495,7 +495,7 @@ Public Class FrmProspectos
                 Admin.txtCelularProspecto.Text = txtCelular.Text ''
                 Admin.txtCorreoProspecto.Text = txtCorreo.Text ''
                 Admin.txtPuestoProspecto.Text = txtPuesto.Text
-                Admin.txtHorarioProspecto.Text = txtHorarioTrabajo.Text
+                'Admin.txtHorarioProspecto.Text = txtHorarioTrabajo.Text
                 Admin.txtCompaniaProspecto.Text = txtNombreCompania.Text ''
                 Admin.txtDireccionProspecto.Text = txtDireccion.Text ''
                 Admin.txtNumExtProspecto.Text = txtNumExt.Text ''
@@ -523,85 +523,83 @@ Public Class FrmProspectos
     End Sub
 
     Private Sub btCancelar_Click(sender As Object, e As EventArgs) Handles btCancelar.Click
-        'If txtEstado.Text.Equals("Convertido") Or txtClaveRecopila.Text.Trim.Equals("") Then
-        '    MsgBox("No se puede modificar este prospecto, ya se encuentra convertido o no se ah asignado alguna clave", MsgBoxStyle.Critical)
-        'Else
-        '    ''Mandar mensaje de que se convertira en contacto
-        '    resultado = MsgBox("Este prospecto será convertido a contacto, ¿Deseas continuar con el proceso?", vbYesNo, "Prospectos dice")
+        If txtEstado.Text.Equals("Convertido") Or txtClaveRecopila.Text.Trim.Equals("") Then
+            MsgBox("No se puede modificar este prospecto, ya se encuentra convertido o no se ah asignado alguna clave", MsgBoxStyle.Critical)
+        Else
+            resultado = MsgBox("Este titular de prospección será convertido a contacto de LIMS, ¿Deseas continuar con el proceso?", vbYesNo, "Pasar a contactos a LIMS")
 
-        '    If resultado = vbYes Then
-        '        'MsgBox("Continua")
-        '        Dim control As New FrmNuevoContacto
-        '        control.txtClaveRecopila.Text = txtClaveRecopila.Text
-        '        control.txtNombreEmplado.Text = txtNombreEmpleado.Text
-        '        control.txtUsuarioActual.Text = txtNombreEmpleado.Text
-        '        control.txtNombre.Text = txtNombreMod.Text
-        '        control.txtApellidoPaterno.Text = txtApellidos.Text
-        '        '  control.txtApellidoMaterno.Text = ""
-        '        control.txtCompania.Text = txtNombreCompania.Text
-        '        ' control.txtDepartamento.Text = ""
-        '        ' control.txtRFC.Text = ""
-        '        ' control.txtOrganizacion.Text = ""
-        '        control.cboStatus.Text = txtEstado.Text
-        '        'control.txtNumeroDeCuenta.Text = ""
-        '        control.txtCelular.Text = txtCelular.Text
-        '        control.txtTelefono.Text = txtTelefono.Text
-        '        control.txtExtension.Text = txtExt.Text
-        '        control.txtCorreo1.Text = txtCorreo.Text
-        '        ' control.txtCorreo2.Text = ""
-        '        ' control.txtFax.Text = ""
-        '        control.txtDireccion1.Text = txtDireccion.Text
-        '        'control.txtDireccion2.Text = ""
-        '        ' control.txtDireccion3.Text = ""
-        '        control.txtEstado.Text = txtEdo.Text
-        '        control.cboPais.Text = txtPais.Text
-        '        control.txtColonia.Text = txtColonia.Text
-        '        control.txtCiudad.Text = txtCiudad.Text
-        '        control.txtCodigoPostal.Text = txtCodigoPostal.Text
-        '        control.txtNumeroExterior.Text = txtNumExt.Text
-        '        control.cboOrigen.Text = txtOrigen.Text
-        '        control.cboTipoIndustria.Text = txtTipoIndustri.Text
-        '        ' control.txtTerminosDePago.Text = txtNumExt.Text
-        '        ' control.cboCategoria.Text = txtNumExt.Text
-        '        'control.txtIDFiscal.Text = txtNumExt.Text
-        '        'control.cboMoneda.Text = txtNumExt.Text
-        '        'control.cboOpcionesDePago.Text = txtNumExt.Text
-        '        'control.cboDefaultPO.Text = txtNumExt.Text
-        '        'control.cboModoDeEnvio.Text = txtNumExt.Text
-        '        'control.txtDescuentoDeCalibracion.Text = txtNumExt.Text
-        '        ' control.txtTaxException.Text = txtNumExt.Text
-        '        ' control.txtCuentaDeEnvio.Text = txtNumExt.Text
-        '        ' control.txtHorarioDeTrabajo.Text = txtNumExt.Text
-        '        'control.cboAvisoDeRecuperacion.Text = txtNumExt.Text
-        '        ''control.cboRequerimientosDeCalidad.Text = txtNumExt.Text
-        '        'control.cboVencimientoDeCalibracion.Text = txtNumExt.Text
-        '        control.txtNotas.Text = txtNotas.Text
-        '        'control.txtNombreDeArchivo.Text = txtNumExt.Text
-        '        control.txtDireccion1Facturacion.Text = ""
-        '        control.txtDireccion2Facturacion.Text = ""
-        '        control.txtDireccion3Facturacion.Text = ""
-        '        control.txtEstadoFacturacion.Text = ""
-        '        control.cboPaisFacturacion.Text = ""
-        '        control.txtColoniaFacturacion.Text = ""
-        '        control.txtCiudadFacturacion.Text = ""
-        '        control.txtCodigoPostalFacturacion.Text = ""
-        '        control.txtNumExteriorFacturacion.Text = ""
-        '        control.txtDireccion1Entrega.Text = ""
-        '        control.txtDireccion2Entrega.Text = ""
-        '        control.txtDireccion3Entrega.Text = ""
-        '        control.txtEstadoEntrega.Text = ""
-        '        control.cboPaisEntrega.Text = ""
-        '        control.txtColoniaEntrega.Text = ""
-        '        control.txtCiudadEntrega.Text = ""
-        '        control.txtCodigoPostalEntrega.Text = ""
-        '        control.txtNumExteriorEntrega.Text = ""
-        '        control.Show()
+            If resultado = vbYes Then
+                Dim control As New FrmNuevoContacto
+                control.txtClaveRecopila.Text = txtClaveRecopila.Text
+                control.txtNombreEmplado.Text = txtNombreEmpleado.Text
+                control.txtUsuarioActual.Text = txtNombreEmpleado.Text
+                control.txtNombre.Text = txtNombreMod.Text
+                control.txtApellidoPaterno.Text = txtApellidos.Text
+                '  control.txtApellidoMaterno.Text = ""
+                control.txtCompania.Text = txtNombreCompania.Text
+                ' control.txtDepartamento.Text = ""
+                ' control.txtRFC.Text = ""
+                ' control.txtOrganizacion.Text = ""
+                control.cboStatus.Text = txtEstado.Text
+                'control.txtNumeroDeCuenta.Text = ""
+                control.txtCelular.Text = txtCelular.Text
+                control.txtTelefono.Text = txtTelefono.Text
+                control.txtExtension.Text = txtExt.Text
+                control.txtCorreo1.Text = txtCorreo.Text
+                ' control.txtCorreo2.Text = ""
+                ' control.txtFax.Text = ""
+                control.txtDireccion1.Text = txtDireccion.Text
+                'control.txtDireccion2.Text = ""
+                ' control.txtDireccion3.Text = ""
+                control.txtEstado.Text = txtEdo.Text
+                control.cboPais.Text = txtPais.Text
+                control.txtColonia.Text = txtColonia.Text
+                control.txtCiudad.Text = txtCiudad.Text
+                control.txtCodigoPostal.Text = txtCodigoPostal.Text
+                control.txtNumeroExterior.Text = txtNumExt.Text
+                control.cboOrigen.Text = txtOrigen.Text
+                control.cboTipoIndustria.Text = txtTipoIndustri.Text
+                ' control.txtTerminosDePago.Text = txtNumExt.Text
+                ' control.cboCategoria.Text = txtNumExt.Text
+                'control.txtIDFiscal.Text = txtNumExt.Text
+                'control.cboMoneda.Text = txtNumExt.Text
+                'control.cboOpcionesDePago.Text = txtNumExt.Text
+                'control.cboDefaultPO.Text = txtNumExt.Text
+                'control.cboModoDeEnvio.Text = txtNumExt.Text
+                'control.txtDescuentoDeCalibracion.Text = txtNumExt.Text
+                ' control.txtTaxException.Text = txtNumExt.Text
+                ' control.txtCuentaDeEnvio.Text = txtNumExt.Text
+                ' control.txtHorarioDeTrabajo.Text = txtNumExt.Text
+                'control.cboAvisoDeRecuperacion.Text = txtNumExt.Text
+                ''control.cboRequerimientosDeCalidad.Text = txtNumExt.Text
+                'control.cboVencimientoDeCalibracion.Text = txtNumExt.Text
+                control.txtNotas.Text = txtNotas.Text
+                'control.txtNombreDeArchivo.Text = txtNumExt.Text
+                control.txtDireccion1Facturacion.Text = ""
+                control.txtDireccion2Facturacion.Text = ""
+                control.txtDireccion3Facturacion.Text = ""
+                control.txtEstadoFacturacion.Text = ""
+                control.cboPaisFacturacion.Text = ""
+                control.txtColoniaFacturacion.Text = ""
+                control.txtCiudadFacturacion.Text = ""
+                control.txtCodigoPostalFacturacion.Text = ""
+                control.txtNumExteriorFacturacion.Text = ""
+                control.txtDireccion1Entrega.Text = ""
+                control.txtDireccion2Entrega.Text = ""
+                control.txtDireccion3Entrega.Text = ""
+                control.txtEstadoEntrega.Text = ""
+                control.cboPaisEntrega.Text = ""
+                control.txtColoniaEntrega.Text = ""
+                control.txtCiudadEntrega.Text = ""
+                control.txtCodigoPostalEntrega.Text = ""
+                control.txtNumExteriorEntrega.Text = ""
+                control.Show()
 
-        '    Else
-        '        MsgBox("No continua")
-        '    End If
-        'End If
-        FrmEmergenteConvertir.ShowDialog()
+            Else
+                MsgBox("No continua")
+            End If
+        End If
+        ''FrmEmergenteConvertir.ShowDialog()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -620,7 +618,7 @@ Public Class FrmProspectos
                 Dim FechaEstimada As String
                 FechaEstimada = DTPFechaEstimadaDeLlamada.Value.Date.Year & "-" & DTPFechaEstimadaDeLlamada.Value.Date.Month & "-" & DTPFechaEstimadaDeLlamada.Value.Date.Day
                 MsgBox(FechaEstimada)
-                MetodoMetasCotizador()
+                conexionMetasCotizador.Open()
                 Dim R As String
                 R = "insert into ActividadLlamadaProspectos (Asunto, Comentarios, FechaEstimadaDeLlamada, RelacionadoCon, idProspecto) 
                      values ('" & txtAsuntoLlamada.Text & "','" & txtComentariosLlamada.Text & "',
@@ -628,6 +626,11 @@ Public Class FrmProspectos
                 Dim comando As New SqlCommand(R, conexionMetasCotizador)
                 comando.ExecuteNonQuery()
                 MsgBox("Llamada guardada correctamente", MsgBoxStyle.OkOnly)
+
+
+
+
+                ''''''''''
                 limpiarRegistroLlamada()
                 TabConsulta.SelectTab(1)
             Catch ex As Exception
@@ -717,49 +720,58 @@ Public Class FrmProspectos
                 Else
                     txtClaveProspecto.Text = lector(0)
                 End If
-                If ((lector(1) Is DBNull.Value) OrElse (lector(1) Is Nothing) Or (lector(2) Is DBNull.Value) OrElse (lector(2) Is Nothing)) Then
+                If ((lector(2) Is DBNull.Value) OrElse (lector(2) Is Nothing) Or (lector(3) Is DBNull.Value) OrElse (lector(3) Is Nothing)) Then
                     txtNombre.Text = vacio
                 Else
-                    txtNombre.Text = lector(1) & " " & lector(2)
-                    txtNombreMod.Text = lector(1)
-                    txtApellidos.Text = lector(2)
+                    txtNombre.Text = lector(2) & " " & lector(3)
+                    txtNombreMod.Text = lector(2)
+                    txtApellidos.Text = lector(3)
                 End If
                 'If ((lector(2) Is DBNull.Value) OrElse (lector(2) Is Nothing)) Then
                 '    txtApellidos.Text = vacio
                 'Else
                 '    txtApellidos.Text = lector(2)
                 'End If
-                If ((lector(3) Is DBNull.Value) OrElse (lector(3) Is Nothing)) Then
+                If ((lector(4) Is DBNull.Value) OrElse (lector(4) Is Nothing)) Then
                     txtTelefono.Text = vacio
                 Else
-                    txtTelefono.Text = lector(3)
+                    txtTelefono.Text = lector(4)
                 End If
                 ''''''
-                If ((lector(4) Is DBNull.Value) OrElse (lector(4) Is Nothing)) Then
+                If ((lector(5) Is DBNull.Value) OrElse (lector(5) Is Nothing)) Then
                     txtExt.Text = vacio
                 Else
-                    txtExt.Text = lector(4)
-                End If
-                If ((lector(5) Is DBNull.Value) OrElse (lector(5) Is Nothing)) Then
-                    txtCelular.Text = vacio
-                Else
-                    txtCelular.Text = lector(5)
+                    txtExt.Text = lector(5)
                 End If
                 If ((lector(6) Is DBNull.Value) OrElse (lector(6) Is Nothing)) Then
-                    txtCorreo.Text = vacio
+                    txtCelular.Text = vacio
                 Else
-                    txtCorreo.Text = lector(6)
+                    txtCelular.Text = lector(6)
                 End If
                 If ((lector(7) Is DBNull.Value) OrElse (lector(7) Is Nothing)) Then
-                    txtPuesto.Text = vacio
+                    txtCorreo.Text = vacio
                 Else
-                    txtPuesto.Text = lector(7)
+                    txtCorreo.Text = lector(7)
                 End If
                 If ((lector(8) Is DBNull.Value) OrElse (lector(8) Is Nothing)) Then
-                    txtHorarioTrabajo.Text = vacio
+                    txtPuesto.Text = vacio
                 Else
-                    txtHorarioTrabajo.Text = lector(8)
+                    txtPuesto.Text = lector(8)
                 End If
+
+                'If ((lector(8) Is DBNull.Value) OrElse (lector(8) Is Nothing)) Then
+                '    txtHorarioTrabajo.Text = vacio
+                'Else
+                '    txtHorarioTrabajo.Text = lector(8)
+                'End If
+
+
+
+
+
+
+
+
                 If ((lector(9) Is DBNull.Value) OrElse (lector(9) Is Nothing)) Then
                     txtNombreCompania.Text = vacio
                 Else
@@ -785,7 +797,7 @@ Public Class FrmProspectos
                 Else
                     txtColonia.Text = lector(13)
                 End If
-                If ((lector(13) Is DBNull.Value) OrElse (lector(14) Is Nothing)) Then
+                If ((lector(14) Is DBNull.Value) OrElse (lector(14) Is Nothing)) Then
                     txtPais.Text = vacio
                 Else
                     txtPais.Text = lector(14)
@@ -952,10 +964,17 @@ Public Class FrmProspectos
         End Try
     End Sub
 
-    Private Sub TabDetallesProspecto_Click(sender As Object, e As EventArgs) Handles TabDetallesProspecto.Click
-
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim control As New FrmEmergenteConvertir
+        control.txtidprospecto.Text = txtClaveRecopila.Text
+        control.ShowDialog()
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim control As New FrmNuevaProspeccion
+        control.txtidprospecto.Text = txtClaveRecopila.Text
+        control.ShowDialog()
+    End Sub
 
     Public Sub limpiarRegistroTareas()
         txtAsuntoTarea.Text = ""

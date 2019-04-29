@@ -238,7 +238,7 @@
         Panel8.BackColor = Color.DimGray
 
         ''-----------Poner invisibles----------
-
+        GroupBox4.Visible = False
         PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------

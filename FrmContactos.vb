@@ -27,7 +27,7 @@ Public Class FrmContactos
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
             With DGV
-                .RowsDefaultCellStyle.BackColor = Color.Silver
+                .RowsDefaultCellStyle.BackColor = Color.WhiteSmoke
                 .AlternatingRowsDefaultCellStyle.BackColor = Color.White
             End With
         Catch ex As Exception
@@ -59,7 +59,7 @@ Public Class FrmContactos
         Try
             Dim clave As String
             clave = DGInstrumentos.Rows(e.RowIndex).Cells(0).Value.ToString()
-            MsgBox("Seleccionaste: " & clave)
+            ' MsgBox("Seleccionaste: " & clave)
 
 
         Catch ex As Exception
@@ -89,7 +89,7 @@ Public Class FrmContactos
     Public Sub consultaDatosContactos(ByVal clave As String)
         Try
             Dim vacio As String = "---"
-            Dim cadenaCorreos As String
+            'Dim cadenaCorreos As String
             MetodoLIMS()
             Dim R As String
             R = "select SetupCustomerDetails.[CustomerId]
@@ -433,7 +433,7 @@ Public Class FrmContactos
                 conexionLIMS.Open()
                 DGAdicionales.Rows.Clear()
                 Dim x As String
-                MsgBox(clave)
+                'MsgBox(clave)
                 x = "select [CustomerEmailId], [FName], [LName], [Department], [EmailId] from [SetupCustomerEmails] where CustomerId= " & clave & ""
                 Dim comandox As New SqlCommand(x, conexionLIMS)
                 Dim lectorx As SqlDataReader
