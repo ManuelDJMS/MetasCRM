@@ -24,6 +24,23 @@ Public Class frmEdicionCot2018_2019
             TextCorreo.Text = lectorLIMS(7)
             lectorLIMS.Close()
             conexionLIMS.Close()
+            '-----------------Combo cuando ------------------------
+            comandoLIMS.CommandText = "select * from CuandoCondicion"
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                Cbcuando.Items.Add(lectorLIMS(1))
+            End While
+            Cbcuando.Text = lectorLIMS(1)
+            Cbcuando.Tag = lectorLIMS(0)
+            lectorLIMS.Close()
+
+            '-----------------Combo documentos------------------------
+            'comandoLIMS.CommandText = "select distinct DescripcionDocumento from CuandoCondicion"
+            'lectorLIMS = comandoLIMS.ExecuteReader
+            'While lectorLIMS.Read()
+            '    Cbcuando.Items.Add(lectorLIMS(1))
+            'End While
+            'lectorLIMS.Close()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
             cadena = Err.Description
