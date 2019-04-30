@@ -208,23 +208,43 @@ Public Class FrmCotizacion2018
     End Sub
 
     Private Sub BtCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
+
         Dim seleccionado As Boolean
+        Dim b As Boolean
         If DGCotizaciones.Rows.Count < 2 Then
             MsgBox("No hay articulos para Cotizar", MsgBoxStyle.Critical, "Error del sistema.")
         Else
+            '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
             For i As Integer = DGCotizaciones.Rows.Count() - 1 To 0 Step -1
                 seleccionado = DGCotizaciones.Rows(i).Cells(0).Value
                 If seleccionado = True Then
-
-                    frmEdicionCot2018_2019.Show()
+                    b = True
                     Exit For
                 Else
-
-                    MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
-                    Exit For
+                    b = False
                 End If
             Next
+            '----------------------------------------------------------------------------------------------------
+            If b = True Then
+                For i As Integer = DGCotizaciones.Rows.Count() - 1 To 0 Step -1
+                    seleccionado = DGCotizaciones.Rows(i).Cells(0).Value
+                    If seleccionado = True Then
+                        MetodoLIMS()
+                        comandoLIMS = conexionLIMS.CreateCommand
+                        R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price from  SetupCustomerEquipmentMapping 
+                            inner join SetUpEquipment on SetupCustomerEquipmentMapping.EquipId=SetUpEquipment.EquipId inner join SetupEquipmentServiceMapping on  
+                            SetupEquipment.EquipId=SetupEquipmentServiceMapping.EquipId where CustomerId=" & clave1 & "and SetUpEquipment.ItemNumber='" & DGCotizaciones.Rows(i).Cells(1).Value & "'"
+                        comandoLIMS.CommandText = R
+                        lectorLIMS = comandoLIMS.ExecuteReader
+                        lectorLIMS.Read()
+                        frmEdicionCot2018_2019.DGCotizaciones.Rows.Add(i + 1, lectorLIMS(2), lectorLIMS(7), 1, lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6), lectorLIMS(8))
+                    End If
+                Next
+                frmEdicionCot2018_2019.Show()
 
+            Else
+                MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
+            End If
         End If
 
     End Sub

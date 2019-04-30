@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmReportes
+Partial Class ImprimirCot
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,30 +22,40 @@ Partial Class FrmReportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.txtCot = New System.Windows.Forms.TextBox()
+        Me.cmdBuscar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ReportViewer1
+        'txtCot
         '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(971, 647)
-        Me.ReportViewer1.TabIndex = 0
+        Me.txtCot.Location = New System.Drawing.Point(30, 12)
+        Me.txtCot.Name = "txtCot"
+        Me.txtCot.Size = New System.Drawing.Size(100, 20)
+        Me.txtCot.TabIndex = 0
         '
-        'FrmReportes
+        'cmdBuscar
+        '
+        Me.cmdBuscar.Location = New System.Drawing.Point(147, 10)
+        Me.cmdBuscar.Name = "cmdBuscar"
+        Me.cmdBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBuscar.TabIndex = 1
+        Me.cmdBuscar.Text = "Button1"
+        Me.cmdBuscar.UseVisualStyleBackColor = True
+        '
+        'ImprimirCot
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(971, 647)
-        Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "FrmReportes"
-        Me.Text = "FrmReportes"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.ClientSize = New System.Drawing.Size(271, 54)
+        Me.Controls.Add(Me.cmdBuscar)
+        Me.Controls.Add(Me.txtCot)
+        Me.Name = "ImprimirCot"
+        Me.Text = "ImprimirCot"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents txtCot As TextBox
+    Friend WithEvents cmdBuscar As Button
 End Class
