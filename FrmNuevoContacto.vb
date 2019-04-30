@@ -61,7 +61,6 @@ Public Class FrmNuevoContacto
         End While
         lector.Close()
 
-
         comando.CommandText = "select [StateName], [StateId] from [StateMaster]"
         lector = comando.ExecuteReader
         While lector.Read()
@@ -70,7 +69,6 @@ Public Class FrmNuevoContacto
             txtEstadoEntrega.Items.Add(lector(0) & " - " & lector(1))
         End While
         lector.Close()
-
 
         comando.CommandText = "select [StateName], [StateId] from [MasterStateCountry]"
         lector = comando.ExecuteReader
@@ -81,24 +79,19 @@ Public Class FrmNuevoContacto
         End While
         lector.Close()
 
-
         cboMoneda.Items.Add("Mexican Peso")
         cboMoneda.Items.Add("U.S. Dollar")
         cboMoneda.Items.Add("Pound Sterling")
-
         cboOpcionesDePago.Items.Add("Diario")
         cboOpcionesDePago.Items.Add("Semanal")
         cboOpcionesDePago.Items.Add("Mensual")
         cboOpcionesDePago.Items.Add("Anual")
-
         cboAvisoDeRecuperacion.Items.Add("Llamada")
         cboAvisoDeRecuperacion.Items.Add("Texto")
         cboAvisoDeRecuperacion.Items.Add("Ambos")
-
         cboVencimientoDeCalibracion.Items.Add("Ninguna")
         cboVencimientoDeCalibracion.Items.Add("Fin de semana (Domingo)")
         cboVencimientoDeCalibracion.Items.Add("Fin de mes")
-
         cboCategoria.Items.Add("Categoria 1")
         cboCategoria.Items.Add("Categoria 2")
         cboCategoria.Items.Add("Categoria 3")
@@ -119,7 +112,7 @@ Public Class FrmNuevoContacto
             RecallNotice = "-"
         End If
 
-        MsgBox(RecallNotice)
+        'MsgBox(RecallNotice)
     End Sub
 
     Private Sub cboMoneda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMoneda.SelectedIndexChanged
@@ -133,7 +126,7 @@ Public Class FrmNuevoContacto
             MonedaSeleccionada = "-"
         End If
 
-        MsgBox(MonedaSeleccionada)
+        'MsgBox(MonedaSeleccionada)
     End Sub
 
     Private Sub cboModoDeEnvio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboModoDeEnvio.SelectedIndexChanged
@@ -146,7 +139,7 @@ Public Class FrmNuevoContacto
             lector = comando.ExecuteReader
             If lector.Read() Then
                 ShipMode = lector(0)
-                MsgBox(ShipMode)
+                'MsgBox(ShipMode)
             End If
             lector.Close()
             conexionLIMS.Close()
@@ -165,7 +158,7 @@ Public Class FrmNuevoContacto
             lector = comando.ExecuteReader
             If lector.Read() Then
                 DefaultPO = lector(0)
-                MsgBox(DefaultPO)
+                ' MsgBox(DefaultPO)
             End If
             lector.Close()
             conexionLIMS.Close()
@@ -200,7 +193,7 @@ Public Class FrmNuevoContacto
         'Catch ex As Exception
         '    MsgBox("Ocurrio un error en la lectura de datos de LIMS.", MsgBoxStyle.Exclamation)
         'End Try
-        MsgBox(CalDueDateAdj)
+        'MsgBox(CalDueDateAdj)
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -236,6 +229,8 @@ Public Class FrmNuevoContacto
         Me.Close()
     End Sub
 
+
+
     Private Sub cboRequerimientosDeCalidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRequerimientosDeCalidad.SelectedIndexChanged
         Try
             MetodoLIMS()
@@ -246,7 +241,7 @@ Public Class FrmNuevoContacto
             lector = comando.ExecuteReader
             If lector.Read() Then
                 QualityRequerment = lector(0)
-                MsgBox(QualityRequerment)
+                'MsgBox(QualityRequerment)
             End If
             lector.Close()
             conexionLIMS.Close()
@@ -599,7 +594,7 @@ Public Class FrmNuevoContacto
                             '" & cboPais.Text.Trim & "',
                             '" & cboPaisFacturacion.Text.Trim & "',
                             '" & cboPaisEntrega.Text.Trim & "') END"
-                MsgBox(cadena)
+                'MsgBox(cadena)
                 Dim comando As New SqlCommand(cadena, conexionLIMS)
                 If comando.ExecuteNonQuery() <> True Then
                     MsgBox("Contacto guardado correctamente en LIMS", MsgBoxStyle.Information)
@@ -627,7 +622,7 @@ Public Class FrmNuevoContacto
         lector = comando.ExecuteReader
         If lector.Read() Then
             source = lector(0)
-            MsgBox(source)
+            'MsgBox(source)
         Else
             source = "-"
         End If
@@ -645,7 +640,7 @@ Public Class FrmNuevoContacto
             lector = comando.ExecuteReader
             If lector.Read() Then
                 AdminType = lector(0)
-                MsgBox(AdminType)
+                'MsgBox(AdminType)
             Else
                 MsgBox("No hay nada")
             End If
@@ -666,11 +661,11 @@ Public Class FrmNuevoContacto
         valorFinal = valorFinal + 1
         lector.Close()
         conexionLIMS.Close()
-        MsgBox(valorFinal)
+        'MsgBox(valorFinal)
     End Sub
 
 
-    Private Sub actualizarEstadoDeProspecto()
+    Private Sub actualizarEstadoDeProspecto() '''''''''''''''''''''''''''''''''''''Modificacion del estado del prospecto
         Try
             MetodoMetasCotizador()
             Dim r As String

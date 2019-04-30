@@ -23,7 +23,7 @@ Partial Class FrmProspectos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProspectos))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabProspectos = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -242,7 +242,7 @@ Partial Class FrmProspectos
         Me.TabProspectos.Padding = New System.Windows.Forms.Padding(3)
         Me.TabProspectos.Size = New System.Drawing.Size(1140, 611)
         Me.TabProspectos.TabIndex = 5
-        Me.TabProspectos.Text = "Prospectos"
+        Me.TabProspectos.Text = "Titulares de prospección"
         '
         'Panel7
         '
@@ -487,14 +487,14 @@ Partial Class FrmProspectos
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Location = New System.Drawing.Point(3, 147)
         Me.DGConsulta.Name = "DGConsulta"
@@ -506,7 +506,6 @@ Partial Class FrmProspectos
         '
         Me.TabDetallesProspecto.BackColor = System.Drawing.Color.Gainsboro
         Me.TabDetallesProspecto.Controls.Add(Me.Panel8)
-        Me.TabDetallesProspecto.Controls.Add(Me.Button4)
         Me.TabDetallesProspecto.Controls.Add(Me.lblDescripcion)
         Me.TabDetallesProspecto.Controls.Add(Me.Label66)
         Me.TabDetallesProspecto.Controls.Add(Me.Panel4)
@@ -514,6 +513,7 @@ Partial Class FrmProspectos
         Me.TabDetallesProspecto.Controls.Add(Me.Label40)
         Me.TabDetallesProspecto.Controls.Add(Me.Label39)
         Me.TabDetallesProspecto.Controls.Add(Me.Label38)
+        Me.TabDetallesProspecto.Controls.Add(Me.btGuardar)
         Me.TabDetallesProspecto.Controls.Add(Me.Label36)
         Me.TabDetallesProspecto.Controls.Add(Me.Label31)
         Me.TabDetallesProspecto.Controls.Add(Me.Label30)
@@ -587,7 +587,7 @@ Partial Class FrmProspectos
         Me.TabDetallesProspecto.Name = "TabDetallesProspecto"
         Me.TabDetallesProspecto.Size = New System.Drawing.Size(1140, 611)
         Me.TabDetallesProspecto.TabIndex = 2
-        Me.TabDetallesProspecto.Text = "Detalles del prospecto"
+        Me.TabDetallesProspecto.Text = "Detalles del titular"
         Me.TabDetallesProspecto.ToolTipText = "Registrar un nuevo Cliente/Empresa"
         '
         'Panel8
@@ -596,7 +596,7 @@ Partial Class FrmProspectos
         Me.Panel8.Controls.Add(Me.Label47)
         Me.Panel8.Location = New System.Drawing.Point(584, 335)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(521, 27)
+        Me.Panel8.Size = New System.Drawing.Size(528, 27)
         Me.Panel8.TabIndex = 162
         '
         'Label47
@@ -612,13 +612,13 @@ Partial Class FrmProspectos
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Button4.BackColor = System.Drawing.Color.SteelBlue
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(970, 85)
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(952, 15)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(160, 33)
         Me.Button4.TabIndex = 166
@@ -777,7 +777,7 @@ Partial Class FrmProspectos
         Me.Panel3.Controls.Add(Me.Label42)
         Me.Panel3.Location = New System.Drawing.Point(584, 162)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(521, 27)
+        Me.Panel3.Size = New System.Drawing.Size(528, 27)
         Me.Panel3.TabIndex = 153
         '
         'Label42
@@ -873,10 +873,11 @@ Partial Class FrmProspectos
         '
         Me.txtClaveRecopila.Enabled = False
         Me.txtClaveRecopila.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClaveRecopila.Location = New System.Drawing.Point(521, 495)
+        Me.txtClaveRecopila.Location = New System.Drawing.Point(1009, 568)
         Me.txtClaveRecopila.Name = "txtClaveRecopila"
         Me.txtClaveRecopila.Size = New System.Drawing.Size(118, 20)
         Me.txtClaveRecopila.TabIndex = 134
+        Me.txtClaveRecopila.Visible = False
         '
         'txtNombreMod
         '
@@ -933,13 +934,13 @@ Partial Class FrmProspectos
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
         Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Label65)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.btCancelar)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.txtSaludo)
-        Me.Panel1.Controls.Add(Me.btGuardar)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1140, 66)
@@ -953,7 +954,7 @@ Partial Class FrmProspectos
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(805, 15)
+        Me.Button5.Location = New System.Drawing.Point(792, 15)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(160, 33)
         Me.Button5.TabIndex = 167
@@ -980,7 +981,7 @@ Partial Class FrmProspectos
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(506, 15)
+        Me.Button3.Location = New System.Drawing.Point(493, 15)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(143, 33)
         Me.Button3.TabIndex = 164
@@ -1006,7 +1007,7 @@ Partial Class FrmProspectos
         Me.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCancelar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCancelar.ForeColor = System.Drawing.Color.Black
-        Me.btCancelar.Location = New System.Drawing.Point(646, 15)
+        Me.btCancelar.Location = New System.Drawing.Point(633, 15)
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(160, 33)
         Me.btCancelar.TabIndex = 163
@@ -1042,7 +1043,7 @@ Partial Class FrmProspectos
         Me.btGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btGuardar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btGuardar.ForeColor = System.Drawing.Color.White
-        Me.btGuardar.Location = New System.Drawing.Point(963, 15)
+        Me.btGuardar.Location = New System.Drawing.Point(39, 464)
         Me.btGuardar.Name = "btGuardar"
         Me.btGuardar.Size = New System.Drawing.Size(167, 33)
         Me.btGuardar.TabIndex = 162
@@ -1248,6 +1249,7 @@ Partial Class FrmProspectos
         Me.txtCreador.Size = New System.Drawing.Size(45, 14)
         Me.txtCreador.TabIndex = 145
         Me.txtCreador.Text = "Creador"
+        Me.txtCreador.Visible = False
         '
         'txtCreado
         '
@@ -1580,7 +1582,7 @@ Partial Class FrmProspectos
         Me.TabActividad.Name = "TabActividad"
         Me.TabActividad.Size = New System.Drawing.Size(1140, 611)
         Me.TabActividad.TabIndex = 7
-        Me.TabActividad.Text = "Actividades"
+        Me.TabActividad.Text = "Actividades | Tareas"
         '
         'Label48
         '

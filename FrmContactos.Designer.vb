@@ -22,10 +22,10 @@ Partial Class FrmContactos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContactos))
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -143,17 +143,6 @@ Partial Class FrmContactos
         Me.Label41 = New System.Windows.Forms.Label()
         Me.TabEquipo = New System.Windows.Forms.TabPage()
         Me.DGInstrumentos = New System.Windows.Forms.DataGridView()
-        Me.EquipID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustEquipID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDarticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NoSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dep = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Locacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaAprox = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Activo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CBDataIncluded = New System.Windows.Forms.CheckBox()
         Me.CBOnSite = New System.Windows.Forms.CheckBox()
         Me.CBActivo = New System.Windows.Forms.CheckBox()
@@ -265,6 +254,7 @@ Partial Class FrmContactos
         Me.txtComentariosLlamada = New System.Windows.Forms.TextBox()
         Me.txtAsuntoLlamada = New System.Windows.Forms.TextBox()
         Me.TabTarea = New System.Windows.Forms.TabPage()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.DTPFechaDeVencimiento = New System.Windows.Forms.DateTimePicker()
         Me.btAgregarTarea = New System.Windows.Forms.Button()
         Me.EtiquetaNombreDeProspecto2 = New System.Windows.Forms.Label()
@@ -283,7 +273,15 @@ Partial Class FrmContactos
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Matricula = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NoSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dep = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Locacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaAprox = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Activo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -350,7 +348,7 @@ Partial Class FrmContactos
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1140, 613)
         Me.TabPage2.TabIndex = 5
-        Me.TabPage2.Text = "Consultar"
+        Me.TabPage2.Text = "Contactos de LIMS"
         '
         'Label3
         '
@@ -398,14 +396,14 @@ Partial Class FrmContactos
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Location = New System.Drawing.Point(14, 138)
         Me.DGConsulta.Name = "DGConsulta"
@@ -436,7 +434,7 @@ Partial Class FrmContactos
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(151, 33)
         Me.Button2.TabIndex = 166
-        Me.Button2.Text = "Actualizar registros"
+        Me.Button2.Text = "Refrescar lista"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Label26
@@ -561,7 +559,7 @@ Partial Class FrmContactos
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Size = New System.Drawing.Size(1140, 613)
         Me.TabPage1.TabIndex = 8
-        Me.TabPage1.Text = "Detalles de Contacto"
+        Me.TabPage1.Text = "Detalles de Contactos"
         '
         'TabControl1
         '
@@ -672,14 +670,14 @@ Partial Class FrmContactos
         Me.DGAdicionales.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGAdicionales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGAdicionales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGAdicionales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGAdicionales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGAdicionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGAdicionales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CA, Me.Nombre, Me.Apellidos, Me.Departamento, Me.Correo})
         Me.DGAdicionales.Location = New System.Drawing.Point(19, 382)
@@ -1651,93 +1649,21 @@ Partial Class FrmContactos
         Me.DGInstrumentos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGInstrumentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGInstrumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGInstrumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGInstrumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGInstrumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGInstrumentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EquipID, Me.CustEquipID, Me.IDarticulo, Me.Articulo, Me.NoSerie, Me.Modelo, Me.Marca, Me.Dep, Me.Locacion, Me.FechaAprox, Me.Activo})
+        Me.DGInstrumentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Articulo, Me.Matricula, Me.NoSerie, Me.Modelo, Me.Marca, Me.Dep, Me.Locacion, Me.FechaAprox, Me.Activo})
         Me.DGInstrumentos.Location = New System.Drawing.Point(19, 49)
         Me.DGInstrumentos.Name = "DGInstrumentos"
         Me.DGInstrumentos.ReadOnly = True
         Me.DGInstrumentos.Size = New System.Drawing.Size(1068, 456)
         Me.DGInstrumentos.TabIndex = 246
-        '
-        'EquipID
-        '
-        Me.EquipID.HeaderText = "EquipID"
-        Me.EquipID.Name = "EquipID"
-        Me.EquipID.ReadOnly = True
-        '
-        'CustEquipID
-        '
-        Me.CustEquipID.HeaderText = "CustEquipID"
-        Me.CustEquipID.Name = "CustEquipID"
-        Me.CustEquipID.ReadOnly = True
-        '
-        'IDarticulo
-        '
-        Me.IDarticulo.HeaderText = "ID Articulo"
-        Me.IDarticulo.Name = "IDarticulo"
-        Me.IDarticulo.ReadOnly = True
-        Me.IDarticulo.Width = 130
-        '
-        'Articulo
-        '
-        Me.Articulo.HeaderText = "Articulo"
-        Me.Articulo.Name = "Articulo"
-        Me.Articulo.ReadOnly = True
-        Me.Articulo.Width = 175
-        '
-        'NoSerie
-        '
-        Me.NoSerie.HeaderText = "No. Serie"
-        Me.NoSerie.Name = "NoSerie"
-        Me.NoSerie.ReadOnly = True
-        Me.NoSerie.Width = 130
-        '
-        'Modelo
-        '
-        Me.Modelo.HeaderText = "Modelo"
-        Me.Modelo.Name = "Modelo"
-        Me.Modelo.ReadOnly = True
-        Me.Modelo.Width = 120
-        '
-        'Marca
-        '
-        Me.Marca.HeaderText = "Marca"
-        Me.Marca.Name = "Marca"
-        Me.Marca.ReadOnly = True
-        Me.Marca.Width = 110
-        '
-        'Dep
-        '
-        Me.Dep.HeaderText = "Departamento"
-        Me.Dep.Name = "Dep"
-        Me.Dep.ReadOnly = True
-        '
-        'Locacion
-        '
-        Me.Locacion.HeaderText = "Locación"
-        Me.Locacion.Name = "Locacion"
-        Me.Locacion.ReadOnly = True
-        '
-        'FechaAprox
-        '
-        Me.FechaAprox.HeaderText = "Volver a calibrar"
-        Me.FechaAprox.Name = "FechaAprox"
-        Me.FechaAprox.ReadOnly = True
-        '
-        'Activo
-        '
-        Me.Activo.HeaderText = "Activo"
-        Me.Activo.Name = "Activo"
-        Me.Activo.ReadOnly = True
-        Me.Activo.Width = 60
         '
         'CBDataIncluded
         '
@@ -2724,7 +2650,7 @@ Partial Class FrmContactos
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(143, 33)
         Me.Button3.TabIndex = 164
-        Me.Button3.Text = "Nueva Actividad"
+        Me.Button3.Text = "Nueva actividad"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'txtNombreDeContacto
@@ -2771,7 +2697,7 @@ Partial Class FrmContactos
         Me.btGuardar.Name = "btGuardar"
         Me.btGuardar.Size = New System.Drawing.Size(167, 33)
         Me.btGuardar.TabIndex = 162
-        Me.btGuardar.Text = "Modificar este Contacto"
+        Me.btGuardar.Text = "Modificar este contacto"
         Me.btGuardar.UseVisualStyleBackColor = False
         '
         'TabActividades
@@ -2783,7 +2709,7 @@ Partial Class FrmContactos
         Me.TabActividades.Name = "TabActividades"
         Me.TabActividades.Size = New System.Drawing.Size(1140, 613)
         Me.TabActividades.TabIndex = 7
-        Me.TabActividades.Text = "Actividades"
+        Me.TabActividades.Text = "Actividades | Tareas"
         '
         'TabControlTareas
         '
@@ -2944,6 +2870,16 @@ Partial Class FrmContactos
         Me.TabTarea.Size = New System.Drawing.Size(684, 236)
         Me.TabTarea.TabIndex = 1
         Me.TabTarea.Text = "Nueva Tarea"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label21.Location = New System.Drawing.Point(115, 18)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(60, 15)
+        Me.Label21.TabIndex = 174
+        Me.Label21.Text = "Contacto:"
         '
         'DTPFechaDeVencimiento
         '
@@ -3128,15 +3064,66 @@ Partial Class FrmContactos
         Me.txtNombreEmpleado.TabIndex = 139
         Me.txtNombreEmpleado.Text = "Nombre Empleado"
         '
-        'Label21
+        'Articulo
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label21.Location = New System.Drawing.Point(115, 18)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(60, 15)
-        Me.Label21.TabIndex = 174
-        Me.Label21.Text = "Contacto:"
+        Me.Articulo.HeaderText = "Articulo"
+        Me.Articulo.Name = "Articulo"
+        Me.Articulo.ReadOnly = True
+        Me.Articulo.Width = 185
+        '
+        'Matricula
+        '
+        Me.Matricula.HeaderText = "Matricula"
+        Me.Matricula.Name = "Matricula"
+        Me.Matricula.ReadOnly = True
+        Me.Matricula.Width = 130
+        '
+        'NoSerie
+        '
+        Me.NoSerie.HeaderText = "No. Serie"
+        Me.NoSerie.Name = "NoSerie"
+        Me.NoSerie.ReadOnly = True
+        Me.NoSerie.Width = 130
+        '
+        'Modelo
+        '
+        Me.Modelo.HeaderText = "Modelo"
+        Me.Modelo.Name = "Modelo"
+        Me.Modelo.ReadOnly = True
+        Me.Modelo.Width = 120
+        '
+        'Marca
+        '
+        Me.Marca.HeaderText = "Marca"
+        Me.Marca.Name = "Marca"
+        Me.Marca.ReadOnly = True
+        Me.Marca.Width = 110
+        '
+        'Dep
+        '
+        Me.Dep.HeaderText = "Departamento"
+        Me.Dep.Name = "Dep"
+        Me.Dep.ReadOnly = True
+        '
+        'Locacion
+        '
+        Me.Locacion.HeaderText = "Locación"
+        Me.Locacion.Name = "Locacion"
+        Me.Locacion.ReadOnly = True
+        '
+        'FechaAprox
+        '
+        Me.FechaAprox.HeaderText = "Volver a calibrar"
+        Me.FechaAprox.Name = "FechaAprox"
+        Me.FechaAprox.ReadOnly = True
+        Me.FechaAprox.Width = 130
+        '
+        'Activo
+        '
+        Me.Activo.HeaderText = "Activo"
+        Me.Activo.Name = "Activo"
+        Me.Activo.ReadOnly = True
+        Me.Activo.Width = 60
         '
         'FrmContactos
         '
@@ -3454,10 +3441,10 @@ Partial Class FrmContactos
     Friend WithEvents txtAsuntoTarea As TextBox
     Friend WithEvents Label50 As Label
     Friend WithEvents txtCorreo2 As Label
-    Friend WithEvents EquipID As DataGridViewTextBoxColumn
-    Friend WithEvents CustEquipID As DataGridViewTextBoxColumn
-    Friend WithEvents IDarticulo As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label21 As Label
     Friend WithEvents Articulo As DataGridViewTextBoxColumn
+    Friend WithEvents Matricula As DataGridViewTextBoxColumn
     Friend WithEvents NoSerie As DataGridViewTextBoxColumn
     Friend WithEvents Modelo As DataGridViewTextBoxColumn
     Friend WithEvents Marca As DataGridViewTextBoxColumn
@@ -3465,6 +3452,4 @@ Partial Class FrmContactos
     Friend WithEvents Locacion As DataGridViewTextBoxColumn
     Friend WithEvents FechaAprox As DataGridViewTextBoxColumn
     Friend WithEvents Activo As DataGridViewTextBoxColumn
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label21 As Label
 End Class

@@ -118,6 +118,86 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="IndicadorNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorContactado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorWorking.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorNo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorConvertido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorNuevo2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorContactado2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorWorking2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorNo2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="IndicadorConvertido2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
+        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
+        ltjLqi/9NgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAV4AAAGGCAYAAAAzRulYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -1324,46 +1404,6 @@
         wWAwGKqDamQwGAyG6qAaGQwGg6EqYNj/ByaHnmX9yR+IAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="IndicadorNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorContactado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorWorking.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorNo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorConvertido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAV4AAAGGCAYAAAAzRulYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -1965,46 +2005,6 @@
         UI0M3QN3uGHst6xEJizIPRuSl30qoijfxrO2yudQZ0f2PNpjGAxG/6AaGQwGg6E6qEYGg8FgqA6qkcFg
         MBiqg2pkMBgMhuqgGhkMBoOhOqhGBoPBYKgOqpHBYDAYqoNqZDAYDIbqoBoZDAaDoTqoRgaDwWCoDqqR
         wWAwGKqDamQwGAyG6qAaGQwGg6EqYNj/ByaHnmX9yR+IAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="IndicadorNuevo2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorContactado2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorWorking2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorNo2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="IndicadorConvertido2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABZSURBVChTY1i0aBEIcwJxIxDfAeKfUBrEB4kzgBRw
-        AfFRIP6PBYPEuUCKmpAEseEGkCKQ0dgkYfguSBHIDdgkYfgnMSbdAylqRhNEx40gRUT5DoTxhNMiBgD2
-        ltjLqi/9NgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="PictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

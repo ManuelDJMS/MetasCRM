@@ -184,6 +184,7 @@ Partial Class FrmEmergenteConvertir
         Me.txtidprospecto.Name = "txtidprospecto"
         Me.txtidprospecto.Size = New System.Drawing.Size(85, 20)
         Me.txtidprospecto.TabIndex = 171
+        Me.txtidprospecto.Visible = False
         '
         'FrmEmergenteConvertir
         '

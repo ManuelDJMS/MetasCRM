@@ -43,6 +43,7 @@ Partial Class FrmNuevaProspeccion
         Me.txtidprospecto.Name = "txtidprospecto"
         Me.txtidprospecto.Size = New System.Drawing.Size(86, 20)
         Me.txtidprospecto.TabIndex = 179
+        Me.txtidprospecto.Visible = False
         '
         'txtDescripcion
         '

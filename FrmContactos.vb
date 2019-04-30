@@ -67,24 +67,24 @@ Public Class FrmContactos
         End Try
     End Sub
 
-    Public Sub ConsultaDatosEquipos(ByVal claveInstrumento As Integer)
-        Try
-            conexionLIMS.Open()
-            Dim R As String
-            R = " select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
-	            ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] ,SetupCustomerEquipmentMapping.[Location]
-	            ,SetupCustomerEquipmentMapping.[CALDue] ,SetupCustomerEquipmentMapping.[IsActive],SetUpEquipment.[ItemNumber]
-                ,SetUpEquipment.[AdditionalSepcification] from SetUpEquipment inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
-	            SetUpEquipment.EquipId where SetupCustomerEquipmentMapping.CustomerId = " & claveInstrumento & ""
-            Dim comando As New SqlCommand(R, conexionLIMS)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            lector.Read()
-            conexionLIMS.Close()
-        Catch ex As Exception
-            MsgBox("Error en la búsqueda.", MsgBoxStyle.Information)
-        End Try
-    End Sub
+    'Public Sub ConsultaDatosEquipos(ByVal claveInstrumento As Integer)
+    '    Try
+    '        conexionLIMS.Open()
+    '        Dim R As String
+    '        R = " select SetUpEquipment.[EquipId], SetupCustomerEquipmentMapping.CustomerId, SetupCustomerEquipmentMapping.[CustEquipMapId], SetUpEquipment.[EquipmentName], SetupCustomerEquipmentMapping.[InstrumentId]
+    '         ,SetupCustomerEquipmentMapping.[SrlNo], SetUpEquipment.[Model] ,SetUpEquipment.[Mfr] ,SetupCustomerEquipmentMapping.[Dept] ,SetupCustomerEquipmentMapping.[Location]
+    '         ,SetupCustomerEquipmentMapping.[CALDue] ,SetupCustomerEquipmentMapping.[IsActive],SetUpEquipment.[ItemNumber]
+    '            ,SetUpEquipment.[AdditionalSepcification] from SetUpEquipment inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
+    '         SetUpEquipment.EquipId where SetupCustomerEquipmentMapping.CustomerId = " & claveInstrumento & ""
+    '        Dim comando As New SqlCommand(R, conexionLIMS)
+    '        Dim lector As SqlDataReader
+    '        lector = comando.ExecuteReader
+    '        lector.Read()
+    '        conexionLIMS.Close()
+    '    Catch ex As Exception
+    '        MsgBox("Error en la búsqueda.", MsgBoxStyle.Information)
+    '    End Try
+    'End Sub
 
     Public Sub consultaDatosContactos(ByVal clave As String)
         Try
@@ -161,7 +161,7 @@ Public Class FrmContactos
                   ,SetupCustomerAddressDtls.[BillCountry]
                   ,SetupCustomerAddressDtls.[ShipCountry]
 	              from SetupCustomerDetails
-	              inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId  where SetupCustomerDetails.[CustomerId]= " & clave & ""
+	              inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId  where  SetupCustomerDetails.[CustomerId]= " & clave & ""
 
             Dim comando As New SqlCommand(R, conexionLIMS)
             Dim lector As SqlDataReader
@@ -454,7 +454,7 @@ Public Class FrmContactos
                     ,SetupCustomerEquipmentMapping.[Location]
 	                ,SetupCustomerEquipmentMapping.[CALDue]  ,SetupCustomerEquipmentMapping.[IsActive] from SetUpEquipment 
                     inner join SetupCustomerEquipmentMapping on SetupCustomerEquipmentMapping.EquipId=
-	                SetUpEquipment.EquipId  where SetupCustomerEquipmentMapping.CustomerId = " & clave & ""
+	                SetUpEquipment.EquipId  where  SetupCustomerEquipmentMapping.CustomerId = " & clave & ""
                 Dim comandoy As New SqlCommand(y, conexionLIMS)
                 Dim lectory As SqlDataReader
                 lectory = comandoy.ExecuteReader
@@ -547,8 +547,7 @@ Public Class FrmContactos
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 
-                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] 
-                order by [FirstName]"
+                left join [MetAs_Live-pruebas].[dbo].[SetupShippingMode] on [MetAs_Live-pruebas].[dbo].[SetupShippingMode].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[ShipMode] where AdminType > 0 order by [CustomerId]"
             Dim comando As New SqlCommand(R, conexionLIMS)
             comando.CommandType = CommandType.Text
             Dim da As New SqlDataAdapter(comando)
@@ -559,7 +558,6 @@ Public Class FrmContactos
         Catch ex As Exception
             MsgBox("Ocurrio un error en la lectura de datos, verifica nuevamente", MsgBoxStyle.Exclamation)
         End Try
-
     End Sub
 
     Private Sub txtNombreB_TextChanged(sender As Object, e As EventArgs) Handles txtNombreB.TextChanged
