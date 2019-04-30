@@ -109,7 +109,7 @@ Public Class ImprimirCot
         Dim Reportes As New ReportDataSource("DataSet1", Data.Tables(0))
         FrmReportes.ReportViewer1.LocalReport.DataSources.Clear()
         FrmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
-        FrmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Users\Software TI\Documents\GitHub\MetasCRM\Reportes\Cotizacion.rdlc"
+        FrmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Users\Software TI\Documents\GitHub\MetasCRM\Reportes\cot.rdlc"
         FrmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2, p2, p3, p4, p5, p10, p11, p12, p13, p14, p15, p16})
         FrmReportes.ReportViewer1.RefreshReport()
         FrmReportes.Show()

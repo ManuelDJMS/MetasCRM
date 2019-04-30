@@ -475,6 +475,7 @@
     <EmbeddedResource Include="FrmRelacionesContactoEmpresas.resx">
       <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cot.rdlc" />
     <EmbeddedResource Include="Reportes\Cotizacion.rdlc" />
     <EmbeddedResource Include="Reportes\FrmReportes.resx">
       <DependentUpon>FrmReportes.vb</DependentUpon>
