@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmEmergenteConvertir
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,9 @@ Partial Class FrmEmergenteConvertir
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmergenteConvertir))
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -33,23 +32,12 @@ Partial Class FrmEmergenteConvertir
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.txtOrdenCompra = New System.Windows.Forms.TextBox()
         Me.txtMonto = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidprospecto = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(348, 87)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(89, 15)
-        Me.Label9.TabIndex = 163
-        Me.Label9.Text = "OrdenCompra:"
         '
         'Label7
         '
@@ -154,13 +142,6 @@ Partial Class FrmEmergenteConvertir
         Me.txtDescripcion.Size = New System.Drawing.Size(231, 86)
         Me.txtDescripcion.TabIndex = 170
         '
-        'txtOrdenCompra
-        '
-        Me.txtOrdenCompra.Location = New System.Drawing.Point(443, 85)
-        Me.txtOrdenCompra.Name = "txtOrdenCompra"
-        Me.txtOrdenCompra.Size = New System.Drawing.Size(116, 20)
-        Me.txtOrdenCompra.TabIndex = 171
-        '
         'txtMonto
         '
         Me.txtMonto.Location = New System.Drawing.Point(443, 117)
@@ -184,7 +165,6 @@ Partial Class FrmEmergenteConvertir
         Me.txtidprospecto.Name = "txtidprospecto"
         Me.txtidprospecto.Size = New System.Drawing.Size(85, 20)
         Me.txtidprospecto.TabIndex = 171
-        Me.txtidprospecto.Visible = False
         '
         'FrmEmergenteConvertir
         '
@@ -193,10 +173,8 @@ Partial Class FrmEmergenteConvertir
         Me.ClientSize = New System.Drawing.Size(575, 183)
         Me.Controls.Add(Me.txtMonto)
         Me.Controls.Add(Me.txtidprospecto)
-        Me.Controls.Add(Me.txtOrdenCompra)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label12)
@@ -209,7 +187,6 @@ Partial Class FrmEmergenteConvertir
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel2 As Panel
@@ -219,7 +196,6 @@ Partial Class FrmEmergenteConvertir
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label27 As Label
     Friend WithEvents txtDescripcion As TextBox
-    Friend WithEvents txtOrdenCompra As TextBox
     Friend WithEvents txtMonto As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtidprospecto As TextBox

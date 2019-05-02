@@ -1,5 +1,7 @@
-﻿Public Class FrmHOME
+﻿Imports System.Data.SqlClient
+Public Class FrmHOME
     Private Sub FrmHOME_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MetodoMetasCotizador()
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.SetToolTip(Panel1, "Consulta y asigna datos dentro de MetAs")
         Me.ToolTip1.IsBalloon = True
@@ -25,6 +27,9 @@
 
         Label3.Text = "Fecha:    " & DTP.Value.ToShortDateString
 
+        consultaProspecciones()
+        alternarColorColumnas(DGOportunidades)
+
     End Sub
     Private Sub GroupBox4_Enter(sender As Object, e As EventArgs)
 
@@ -49,7 +54,7 @@
 
         ''-----------Poner invisibles----------
 
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -113,8 +118,7 @@
         Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
-
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -139,8 +143,7 @@
 
 
         ''-----------Poner invisibles----------
-
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -161,8 +164,7 @@
         Label6.ForeColor = Color.White
         Label17.ForeColor = Color.Black
         ''-----------Poner invisibles----------
-
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -213,8 +215,7 @@
         Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
-
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -239,7 +240,7 @@
 
         ''-----------Poner invisibles----------
         GroupBox4.Visible = False
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------
     End Sub
@@ -258,10 +259,8 @@
         Panel15.BackColor = Color.SteelBlue
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
-
         ''-----------Poner invisibles----------
-
-        PanelRecordatoriosHoy.Visible = False
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------
     End Sub
@@ -270,9 +269,6 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
 
     ''Private Sub PictureBox5_MouseHover(sender As Object, e As EventArgs) Handles PictureBox5.MouseHover
     ''    PictureBox5.Size = New Size(300, 300)
@@ -293,4 +289,40 @@
     ''Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     ''End Sub
+
+    Public Sub consultaProspecciones()
+        'Try
+        'conexionMetasCotizador.Open()
+        Dim R As String
+        R = "select Oportunidades.idOportunidad, Prospeccion.idProspeccion, Prospectos.Nombre, Prospectos.Apellidos, Prospectos.Correo, Prospectos.Compania, Prospeccion.Monto 
+                from Oportunidades inner join Prospeccion on Oportunidades.idProspeccion= Prospeccion.idProspeccion inner join Prospectos on Prospectos.idProspecto= Prospeccion.idProspecto order by Prospeccion.Monto desc"
+        Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        While lector.Read()
+            DGOportunidades.Rows.Add(lector(0), lector(2), lector(3), lector(4), lector(5), lector(6))
+        End While
+        lector.Close()
+        For Each fila As DataGridViewRow In DGOportunidades.Rows
+            fila.Cells("Monto").Style.BackColor = Color.DarkSeaGreen
+        Next
+        conexionMetasCotizador.Close()
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Critical)
+        'End Try
+    End Sub
+    Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
+        Try
+            With DGV
+                .RowsDefaultCellStyle.BackColor = Color.WhiteSmoke
+                .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            End With
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en el diseño de la tabla, puedes llamar al administrador de sistemas.", MsgBoxStyle.Exclamation)
+        End Try
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
 End Class

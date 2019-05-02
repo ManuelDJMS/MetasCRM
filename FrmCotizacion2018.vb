@@ -246,6 +246,7 @@ Public Class FrmCotizacion2018
                 MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
             End If
         End If
+        origen = "LIMS"
 
     End Sub
 End Class

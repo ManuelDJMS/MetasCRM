@@ -8,9 +8,11 @@ Public Class FrmNuevaProspeccion
             Try
                 conexionMetasCotizador.Open()
                 Dim R, status As String
+                Dim monto As Double
+                monto = 0.0
                 status = "Nuevo"
-                R = "insert into Prospeccion ([idProspecto], [Descripcion], [FechaCreacion], [FechaEdicion], [Status]) 
-                values(" & txtidprospecto.Text & ",'" & txtDescripcion.Text & "', (CONVERT(varchar(10), getdate(), 103)),(CONVERT(varchar(10), getdate(), 103)),'" & status & "')"
+                R = "insert into Prospeccion ([idProspecto], [Descripcion], [FechaCreacion], [FechaEdicion], [Status], [Source], [Monto])              
+                values(" & txtidprospecto.Text & ",'" & txtDescripcion.Text & "', (CONVERT(varchar(10), getdate(), 103)),(CONVERT(varchar(10), getdate(), 103)),'" & status & "','" & cboOrigen.Text & "'," & monto & ")"
                 Dim comando As New SqlCommand(R, conexionMetasCotizador)
                 comando.ExecuteNonQuery()
                 MsgBox("Oportunidad guardada correctamente", MsgBoxStyle.Information)
@@ -33,9 +35,11 @@ Public Class FrmNuevaProspeccion
                         Try
                             conexionMetasCotizador.Open()
                             Dim R, status As String
+                            Dim monto As Double
+                            monto = 0.0
                             status = "Nuevo"
-                            R = "insert into Prospeccion ([idProspecto], [Descripcion], [FechaCreacion], [FechaEdicion], [Status]) 
-                             values(" & txtidprospecto.Text & ",'" & txtDescripcion.Text & "', (CONVERT(varchar(10), getdate(), 103)),(CONVERT(varchar(10), getdate(), 103)),'" & status & "')"
+                            R = "insert into Prospeccion ([idProspecto], [Descripcion], [FechaCreacion], [FechaEdicion], [Status], [Source], [Monto])              
+                                    values(" & txtidprospecto.Text & ",'" & txtDescripcion.Text & "', (CONVERT(varchar(10), getdate(), 103)),(CONVERT(varchar(10), getdate(), 103)),'" & status & "','" & cboOrigen.Text & "'," & monto & ")"
                             Dim comando As New SqlCommand(R, conexionMetasCotizador)
                             comando.ExecuteNonQuery()
                             MsgBox("Oportunidad guardada correctamente", MsgBoxStyle.Information)
@@ -50,12 +54,14 @@ Public Class FrmNuevaProspeccion
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         End Try
-
     End Sub
 
     Private Sub FrmNuevaProspeccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim desc As String
         'desc = InputBox("Ingresa la descripción", "Prospección")
+        cboOrigen.Items.Add("Campaña")
+        cboOrigen.Items.Add("Seguimiento de cot")
+        cboOrigen.Items.Add("Otra")
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If txtidprospecto.Text.Equals("") Or txtDescripcion.Text.Equals("") Then
@@ -64,19 +70,22 @@ Public Class FrmNuevaProspeccion
             Try
                 conexionMetasCotizador.Open()
                 Dim R, status As String
+                Dim monto As Double = 0.0
                 status = "Nuevo"
-                R = "insert into Prospeccion ([idProspecto], [Descripcion], [FechaCreacion], [FechaEdicion], [Status]) 
-                values(" & txtidprospecto.Text & ",'" & txtDescripcion.Text & "', (CONVERT(varchar(10), getdate(), 103)),(CONVERT(varchar(10), getdate(), 103)),'" & status & "')"
+                R = "insert into Prospeccion ([idProspecto], [Descripcion], [FechaCreacion], [FechaEdicion], [Status], [Source], [Monto]) 
+                values(" & txtidprospecto.Text & ",'" & txtDescripcion.Text & "', (CONVERT(varchar(10), getdate(), 103)),(CONVERT(varchar(10), getdate(), 103)),'" & status & "','" & cboOrigen.Text & "'," & monto & ")"
                 Dim comando As New SqlCommand(R, conexionMetasCotizador)
                 comando.ExecuteNonQuery()
                 MsgBox("Oportunidad guardada correctamente", MsgBoxStyle.Information)
                 conexionMetasCotizador.Close()
                 consultaUltimo()
-                txtDescripcion.Text = ""
+                ''{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
                 Dim control As New FrmEmergenteConvertir
                 control.txtidprospecto.Text = ultimo
                 control.btGuardar.Text = "Guardar."
+                control.txtDescripcion.Text = txtDescripcion.Text
                 control.ShowDialog()
+                txtDescripcion.Text = ""
             Catch ex As Exception
                 MsgBox("Ocurrio un error.", MsgBoxStyle.Critical)
             End Try
@@ -87,7 +96,7 @@ Public Class FrmNuevaProspeccion
         Try
             conexionMetasCotizador.Open()
             Dim R As String
-            R = "  select Max(idProspeccion) from [MetasCotizador].[dbo].[Prospeccion]"
+            R = "select Max(idProspeccion) from [MetasCotizador].[dbo].[Prospeccion]"
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader

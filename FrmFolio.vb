@@ -109,4 +109,5 @@ Public Class FrmFolio
     Private Sub btBuscar_Click(sender As Object, e As EventArgs) Handles btBuscar.Click
         FrmBuscarEmpresaCom.Show()
     End Sub
+
 End Class
