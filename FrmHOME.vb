@@ -54,7 +54,7 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
 
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -118,7 +118,7 @@ Public Class FrmHOME
         Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -143,7 +143,7 @@ Public Class FrmHOME
 
 
         ''-----------Poner invisibles----------
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -164,7 +164,7 @@ Public Class FrmHOME
         Label6.ForeColor = Color.White
         Label17.ForeColor = Color.Black
         ''-----------Poner invisibles----------
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -215,7 +215,7 @@ Public Class FrmHOME
         Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -240,7 +240,7 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
         GroupBox4.Visible = False
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------
     End Sub
@@ -260,7 +260,7 @@ Public Class FrmHOME
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
         ''-----------Poner invisibles----------
-
+        GroupBox5.Visible = False
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------
     End Sub
@@ -320,5 +320,9 @@ Public Class FrmHOME
         Catch ex As Exception
             MsgBox("Ocurrio un error en el diseño de la tabla, puedes llamar al administrador de sistemas.", MsgBoxStyle.Exclamation)
         End Try
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
     End Sub
 End Class
