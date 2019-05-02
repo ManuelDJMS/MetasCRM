@@ -54,7 +54,7 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
 
-        PanelRecordatoriosHoy.Visible = False
+
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -119,7 +119,6 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
 
-        PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -145,7 +144,6 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
 
-        PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -167,7 +165,6 @@ Public Class FrmHOME
         Label17.ForeColor = Color.Black
         ''-----------Poner invisibles----------
 
-        PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -219,7 +216,6 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
 
-        PanelRecordatoriosHoy.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -244,7 +240,7 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
         GroupBox4.Visible = False
-        PanelRecordatoriosHoy.Visible = False
+
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------
     End Sub
@@ -264,7 +260,7 @@ Public Class FrmHOME
         Panel6.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
         ''-----------Poner invisibles----------
-        PanelRecordatoriosHoy.Visible = False
+
         PanelRecordatorioSemana.Visible = False
         ''--------------------------------------
     End Sub

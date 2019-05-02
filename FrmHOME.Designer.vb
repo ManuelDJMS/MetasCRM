@@ -84,7 +84,6 @@ Partial Class FrmHOME
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.DGOportunidades = New System.Windows.Forms.DataGridView()
-        Me.DGRecordatorios = New System.Windows.Forms.DataGridView()
         Me.idOportunidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Apellidos = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -92,20 +91,18 @@ Partial Class FrmHOME
         Me.Compania = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Monto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.idTarea = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Titular = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,11 +128,9 @@ Partial Class FrmHOME
         Me.Panel12.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGRecordatorios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -390,9 +385,9 @@ Partial Class FrmHOME
         Me.Label30.ForeColor = System.Drawing.Color.White
         Me.Label30.Location = New System.Drawing.Point(10, 12)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(127, 18)
+        Me.Label30.Size = New System.Drawing.Size(167, 18)
         Me.Label30.TabIndex = 0
-        Me.Label30.Text = "Búsqueda Cot 2018"
+        Me.Label30.Text = "Cotización Contactos LIMS"
         '
         'Label23
         '
@@ -499,9 +494,9 @@ Partial Class FrmHOME
         Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(10, 13)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(120, 18)
+        Me.Label17.Size = New System.Drawing.Size(167, 18)
         Me.Label17.TabIndex = 0
-        Me.Label17.Text = "Cotización Clientes"
+        Me.Label17.Text = "Cotización (Prospecciones)"
         '
         'Label13
         '
@@ -523,9 +518,9 @@ Partial Class FrmHOME
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(10, 12)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 18)
+        Me.Label7.Size = New System.Drawing.Size(102, 18)
         Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Contactos"
+        Me.Label7.Text = "Contactos LIMS"
         '
         'Panel1
         '
@@ -591,9 +586,9 @@ Partial Class FrmHOME
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(10, 13)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(142, 18)
+        Me.Label6.Size = New System.Drawing.Size(183, 18)
         Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Cotización sin formato"
+        Me.Label6.Text = "Cotización rápida sin formato"
         '
         'PanelRecordatorioSemana
         '
@@ -635,6 +630,7 @@ Partial Class FrmHOME
         'PictureBox6
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(678, 6)
         Me.PictureBox6.Name = "PictureBox6"
@@ -648,7 +644,7 @@ Partial Class FrmHOME
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(640, 13)
+        Me.Label24.Location = New System.Drawing.Point(640, 22)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(32, 15)
         Me.Label24.TabIndex = 28
@@ -691,7 +687,7 @@ Partial Class FrmHOME
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Gainsboro
-        Me.GroupBox4.Controls.Add(Me.DGRecordatorios)
+        Me.GroupBox4.Controls.Add(Me.DataGridView2)
         Me.GroupBox4.Controls.Add(Me.Panel12)
         Me.GroupBox4.Controls.Add(Me.Label16)
         Me.GroupBox4.Controls.Add(Me.Label18)
@@ -763,7 +759,7 @@ Partial Class FrmHOME
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(302, 13)
+        Me.Label25.Location = New System.Drawing.Point(302, 21)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(32, 15)
         Me.Label25.TabIndex = 28
@@ -773,6 +769,7 @@ Partial Class FrmHOME
         'PictureBox7
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
         Me.PictureBox7.Location = New System.Drawing.Point(340, 5)
         Me.PictureBox7.Name = "PictureBox7"
@@ -804,14 +801,6 @@ Partial Class FrmHOME
         Me.DGOportunidades.Name = "DGOportunidades"
         Me.DGOportunidades.Size = New System.Drawing.Size(721, 397)
         Me.DGOportunidades.TabIndex = 152
-        '
-        'DGRecordatorios
-        '
-        Me.DGRecordatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGRecordatorios.Location = New System.Drawing.Point(6, 48)
-        Me.DGRecordatorios.Name = "DGRecordatorios"
-        Me.DGRecordatorios.Size = New System.Drawing.Size(371, 586)
-        Me.DGRecordatorios.TabIndex = 152
         '
         'idOportunidad
         '
@@ -850,7 +839,9 @@ Partial Class FrmHOME
         'GroupBox5
         '
         Me.GroupBox5.BackColor = System.Drawing.Color.Gainsboro
-        Me.GroupBox5.Controls.Add(Me.DataGridView1)
+        Me.GroupBox5.Controls.Add(Me.Button2)
+        Me.GroupBox5.Controls.Add(Me.TextBox1)
+        Me.GroupBox5.Controls.Add(Me.Label26)
         Me.GroupBox5.Controls.Add(Me.Panel10)
         Me.GroupBox5.Controls.Add(Me.Label27)
         Me.GroupBox5.Controls.Add(Me.Label28)
@@ -862,59 +853,10 @@ Partial Class FrmHOME
         Me.GroupBox5.TabIndex = 62
         Me.GroupBox5.TabStop = False
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.DataGridView1.GridColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 39)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(721, 145)
-        Me.DataGridView1.TabIndex = 152
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Clave Oportunidad"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 70
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Titular"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Apellidos"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 110
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Correo"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 150
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Compañia"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 150
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Monto"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Silver
         Me.Panel10.Controls.Add(Me.Label22)
-        Me.Panel10.Controls.Add(Me.PictureBox5)
-        Me.Panel10.Controls.Add(Me.Label26)
         Me.Panel10.Location = New System.Drawing.Point(0, 0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(721, 42)
@@ -930,29 +872,6 @@ Partial Class FrmHOME
         Me.Label22.Size = New System.Drawing.Size(178, 15)
         Me.Label22.TabIndex = 152
         Me.Label22.Text = "Seguimiento de Oportunidades"
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(678, 6)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(27, 31)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 33
-        Me.PictureBox5.TabStop = False
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(640, 13)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(32, 15)
-        Me.Label26.TabIndex = 28
-        Me.Label26.Text = "Abrir"
-        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label27
         '
@@ -986,6 +905,70 @@ Partial Class FrmHOME
         Me.Label32.Size = New System.Drawing.Size(17, 19)
         Me.Label32.TabIndex = 135
         Me.Label32.Text = "*"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idTarea, Me.Descripcion, Me.Titular})
+        Me.DataGridView2.GridColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 42)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(383, 599)
+        Me.DataGridView2.TabIndex = 152
+        '
+        'idTarea
+        '
+        Me.idTarea.HeaderText = "idTarea"
+        Me.idTarea.Name = "idTarea"
+        Me.idTarea.Width = 50
+        '
+        'Descripcion
+        '
+        Me.Descripcion.HeaderText = "Descripción"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.Width = 180
+        '
+        'Titular
+        '
+        Me.Titular.HeaderText = "Titular"
+        Me.Titular.Name = "Titular"
+        Me.Titular.Width = 110
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(20, 72)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(221, 15)
+        Me.Label26.TabIndex = 152
+        Me.Label26.Text = "¿Tíenes una nueva tarea? Guardala aquí"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(23, 90)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(310, 58)
+        Me.TextBox1.TabIndex = 170
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(350, 115)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(141, 33)
+        Me.Button2.TabIndex = 173
+        Me.Button2.Text = "Guardar tarea"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'FrmHOME
         '
@@ -1054,13 +1037,11 @@ Partial Class FrmHOME
         Me.Panel12.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGRecordatorios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1125,7 +1106,6 @@ Partial Class FrmHOME
     Friend WithEvents Label25 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents DGOportunidades As DataGridView
-    Friend WithEvents DGRecordatorios As DataGridView
     Friend WithEvents idOportunidad As DataGridViewTextBoxColumn
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Apellidos As DataGridViewTextBoxColumn
@@ -1133,18 +1113,16 @@ Partial Class FrmHOME
     Friend WithEvents Compania As DataGridViewTextBoxColumn
     Friend WithEvents Monto As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label22 As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Label32 As Label
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents idTarea As DataGridViewTextBoxColumn
+    Friend WithEvents Descripcion As DataGridViewTextBoxColumn
+    Friend WithEvents Titular As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Button2 As Button
 End Class
