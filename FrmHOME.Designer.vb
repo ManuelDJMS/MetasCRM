@@ -66,15 +66,11 @@ Partial Class FrmHOME
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PanelRecordatoriosHoy = New System.Windows.Forms.GroupBox()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
         Me.PanelRecordatorioSemana = New System.Windows.Forms.GroupBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -84,6 +80,32 @@ Partial Class FrmHOME
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.DGOportunidades = New System.Windows.Forms.DataGridView()
+        Me.DGRecordatorios = New System.Windows.Forms.DataGridView()
+        Me.idOportunidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Apellidos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Compania = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Monto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,17 +124,24 @@ Partial Class FrmHOME
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        Me.PanelRecordatoriosHoy.SuspendLayout()
-        Me.Panel10.SuspendLayout()
         Me.PanelRecordatorioSemana.SuspendLayout()
         Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.Panel12.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGRecordatorios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.SteelBlue
+        Me.GroupBox1.Controls.Add(Me.Label29)
         Me.GroupBox1.Controls.Add(Me.PictureBox2)
         Me.GroupBox1.Controls.Add(Me.Label33)
         Me.GroupBox1.Controls.Add(Me.Label46)
@@ -120,8 +149,6 @@ Partial Class FrmHOME
         Me.GroupBox1.Controls.Add(Me.PictureBox3)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.DTP)
-        Me.GroupBox1.Controls.Add(Me.Panel3)
-        Me.GroupBox1.Controls.Add(Me.Panel2)
         Me.GroupBox1.Location = New System.Drawing.Point(199, -6)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1170, 57)
@@ -158,7 +185,7 @@ Partial Class FrmHOME
         Me.Label46.Cursor = System.Windows.Forms.Cursors.No
         Me.Label46.Font = New System.Drawing.Font("Calibri Light", 10.0!)
         Me.Label46.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label46.Location = New System.Drawing.Point(1082, 26)
+        Me.Label46.Location = New System.Drawing.Point(1093, 26)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(32, 17)
         Me.Label46.TabIndex = 138
@@ -169,7 +196,7 @@ Partial Class FrmHOME
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(1120, 19)
+        Me.PictureBox4.Location = New System.Drawing.Point(1129, 19)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -211,7 +238,7 @@ Partial Class FrmHOME
         '
         Me.Panel3.BackColor = System.Drawing.Color.DimGray
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(6, 12)
+        Me.Panel3.Location = New System.Drawing.Point(4, 538)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(203, 45)
         Me.Panel3.TabIndex = 39
@@ -233,7 +260,7 @@ Partial Class FrmHOME
         '
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Location = New System.Drawing.Point(215, 12)
+        Me.Panel2.Location = New System.Drawing.Point(3, 550)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(203, 45)
         Me.Panel2.TabIndex = 38
@@ -313,7 +340,9 @@ Partial Class FrmHOME
         Me.GroupBox3.Controls.Add(Me.PictureBox1)
         Me.GroupBox3.Controls.Add(Me.txtNombreAdmin)
         Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.Panel3)
         Me.GroupBox3.Controls.Add(Me.GroupBox2)
+        Me.GroupBox3.Controls.Add(Me.Panel2)
         Me.GroupBox3.Controls.Add(Me.Panel5)
         Me.GroupBox3.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox3.Location = New System.Drawing.Point(-3, -10)
@@ -566,84 +595,18 @@ Partial Class FrmHOME
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Cotización sin formato"
         '
-        'PanelRecordatoriosHoy
-        '
-        Me.PanelRecordatoriosHoy.BackColor = System.Drawing.Color.Gainsboro
-        Me.PanelRecordatoriosHoy.Controls.Add(Me.Panel10)
-        Me.PanelRecordatoriosHoy.Controls.Add(Me.Label28)
-        Me.PanelRecordatoriosHoy.Controls.Add(Me.Label27)
-        Me.PanelRecordatoriosHoy.Controls.Add(Me.Label26)
-        Me.PanelRecordatoriosHoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PanelRecordatoriosHoy.Location = New System.Drawing.Point(622, 72)
-        Me.PanelRecordatoriosHoy.Name = "PanelRecordatoriosHoy"
-        Me.PanelRecordatoriosHoy.Size = New System.Drawing.Size(721, 297)
-        Me.PanelRecordatoriosHoy.TabIndex = 61
-        Me.PanelRecordatoriosHoy.TabStop = False
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.Silver
-        Me.Panel10.Controls.Add(Me.Label42)
-        Me.Panel10.Location = New System.Drawing.Point(1, 0)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(720, 28)
-        Me.Panel10.TabIndex = 151
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label42.Location = New System.Drawing.Point(3, 5)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(180, 15)
-        Me.Label42.TabIndex = 152
-        Me.Label42.Text = "Recordatorios de prospecciones"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.ForeColor = System.Drawing.Color.Red
-        Me.Label28.Location = New System.Drawing.Point(412, -15)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(17, 19)
-        Me.Label28.TabIndex = 149
-        Me.Label28.Text = "*"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.Red
-        Me.Label27.Location = New System.Drawing.Point(438, -27)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(17, 19)
-        Me.Label27.TabIndex = 135
-        Me.Label27.Text = "*"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.Red
-        Me.Label26.Location = New System.Drawing.Point(444, -55)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(17, 19)
-        Me.Label26.TabIndex = 135
-        Me.Label26.Text = "*"
-        '
         'PanelRecordatorioSemana
         '
         Me.PanelRecordatorioSemana.BackColor = System.Drawing.Color.Gainsboro
+        Me.PanelRecordatorioSemana.Controls.Add(Me.DGOportunidades)
         Me.PanelRecordatorioSemana.Controls.Add(Me.Panel11)
         Me.PanelRecordatorioSemana.Controls.Add(Me.Label8)
         Me.PanelRecordatorioSemana.Controls.Add(Me.Label10)
         Me.PanelRecordatorioSemana.Controls.Add(Me.Label12)
         Me.PanelRecordatorioSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PanelRecordatorioSemana.Location = New System.Drawing.Point(622, 392)
+        Me.PanelRecordatorioSemana.Location = New System.Drawing.Point(631, 72)
         Me.PanelRecordatorioSemana.Name = "PanelRecordatorioSemana"
-        Me.PanelRecordatorioSemana.Size = New System.Drawing.Size(721, 320)
+        Me.PanelRecordatorioSemana.Size = New System.Drawing.Size(721, 436)
         Me.PanelRecordatorioSemana.TabIndex = 62
         Me.PanelRecordatorioSemana.TabStop = False
         '
@@ -651,21 +614,46 @@ Partial Class FrmHOME
         '
         Me.Panel11.BackColor = System.Drawing.Color.Silver
         Me.Panel11.Controls.Add(Me.Label1)
+        Me.Panel11.Controls.Add(Me.PictureBox6)
+        Me.Panel11.Controls.Add(Me.Label24)
         Me.Panel11.Location = New System.Drawing.Point(0, 0)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(721, 28)
-        Me.Panel11.TabIndex = 151
+        Me.Panel11.Size = New System.Drawing.Size(721, 42)
+        Me.Panel11.TabIndex = 169
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(3, 5)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(9, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 15)
+        Me.Label1.Size = New System.Drawing.Size(178, 15)
         Me.Label1.TabIndex = 152
-        Me.Label1.Text = "Recordatorios de clientes"
+        Me.Label1.Text = "Seguimiento de Oportunidades"
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(678, 6)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(27, 31)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 33
+        Me.PictureBox6.TabStop = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.Black
+        Me.Label24.Location = New System.Drawing.Point(640, 13)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(32, 15)
+        Me.Label24.TabIndex = 28
+        Me.Label24.Text = "Abrir"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
@@ -703,12 +691,13 @@ Partial Class FrmHOME
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBox4.Controls.Add(Me.DGRecordatorios)
         Me.GroupBox4.Controls.Add(Me.Panel12)
         Me.GroupBox4.Controls.Add(Me.Label16)
         Me.GroupBox4.Controls.Add(Me.Label18)
         Me.GroupBox4.Controls.Add(Me.Label20)
         Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox4.Location = New System.Drawing.Point(218, 72)
+        Me.GroupBox4.Location = New System.Drawing.Point(228, 72)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(383, 640)
         Me.GroupBox4.TabIndex = 64
@@ -718,21 +707,23 @@ Partial Class FrmHOME
         '
         Me.Panel12.BackColor = System.Drawing.Color.Silver
         Me.Panel12.Controls.Add(Me.Label14)
+        Me.Panel12.Controls.Add(Me.PictureBox7)
+        Me.Panel12.Controls.Add(Me.Label25)
         Me.Panel12.Location = New System.Drawing.Point(1, 0)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(382, 28)
+        Me.Panel12.Size = New System.Drawing.Size(382, 42)
         Me.Panel12.TabIndex = 151
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label14.Location = New System.Drawing.Point(3, 5)
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.Location = New System.Drawing.Point(15, 13)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(180, 15)
+        Me.Label14.Size = New System.Drawing.Size(140, 15)
         Me.Label14.TabIndex = 152
-        Me.Label14.Text = "Recordatorios de prospecciones"
+        Me.Label14.Text = "Tareas para el dia de hoy"
         '
         'Label16
         '
@@ -767,6 +758,235 @@ Partial Class FrmHOME
         Me.Label20.TabIndex = 135
         Me.Label20.Text = "*"
         '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.Black
+        Me.Label25.Location = New System.Drawing.Point(302, 13)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(32, 15)
+        Me.Label25.TabIndex = 28
+        Me.Label25.Text = "Abrir"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(340, 5)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(27, 31)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 33
+        Me.PictureBox7.TabStop = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label29.Location = New System.Drawing.Point(26, 23)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(68, 15)
+        Me.Label29.TabIndex = 152
+        Me.Label29.Text = "Bienvenido"
+        '
+        'DGOportunidades
+        '
+        Me.DGOportunidades.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
+        Me.DGOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGOportunidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idOportunidad, Me.Nombre, Me.Apellidos, Me.Correo, Me.Compania, Me.Monto})
+        Me.DGOportunidades.GridColor = System.Drawing.Color.Gainsboro
+        Me.DGOportunidades.Location = New System.Drawing.Point(0, 39)
+        Me.DGOportunidades.Name = "DGOportunidades"
+        Me.DGOportunidades.Size = New System.Drawing.Size(721, 397)
+        Me.DGOportunidades.TabIndex = 152
+        '
+        'DGRecordatorios
+        '
+        Me.DGRecordatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGRecordatorios.Location = New System.Drawing.Point(6, 48)
+        Me.DGRecordatorios.Name = "DGRecordatorios"
+        Me.DGRecordatorios.Size = New System.Drawing.Size(371, 586)
+        Me.DGRecordatorios.TabIndex = 152
+        '
+        'idOportunidad
+        '
+        Me.idOportunidad.HeaderText = "Clave Oportunidad"
+        Me.idOportunidad.Name = "idOportunidad"
+        Me.idOportunidad.Width = 70
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Titular"
+        Me.Nombre.Name = "Nombre"
+        '
+        'Apellidos
+        '
+        Me.Apellidos.HeaderText = "Apellidos"
+        Me.Apellidos.Name = "Apellidos"
+        Me.Apellidos.Width = 110
+        '
+        'Correo
+        '
+        Me.Correo.HeaderText = "Correo"
+        Me.Correo.Name = "Correo"
+        Me.Correo.Width = 150
+        '
+        'Compania
+        '
+        Me.Compania.HeaderText = "Compañia"
+        Me.Compania.Name = "Compania"
+        Me.Compania.Width = 150
+        '
+        'Monto
+        '
+        Me.Monto.HeaderText = "Monto"
+        Me.Monto.Name = "Monto"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBox5.Controls.Add(Me.DataGridView1)
+        Me.GroupBox5.Controls.Add(Me.Panel10)
+        Me.GroupBox5.Controls.Add(Me.Label27)
+        Me.GroupBox5.Controls.Add(Me.Label28)
+        Me.GroupBox5.Controls.Add(Me.Label32)
+        Me.GroupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox5.Location = New System.Drawing.Point(631, 528)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(721, 184)
+        Me.GroupBox5.TabIndex = 62
+        Me.GroupBox5.TabStop = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridView1.GridColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 39)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(721, 145)
+        Me.DataGridView1.TabIndex = 152
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Clave Oportunidad"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 70
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Titular"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Apellidos"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 110
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Correo"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 150
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Compañia"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.Width = 150
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Monto"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.Silver
+        Me.Panel10.Controls.Add(Me.Label22)
+        Me.Panel10.Controls.Add(Me.PictureBox5)
+        Me.Panel10.Controls.Add(Me.Label26)
+        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(721, 42)
+        Me.Panel10.TabIndex = 169
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(9, 13)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(178, 15)
+        Me.Label22.TabIndex = 152
+        Me.Label22.Text = "Seguimiento de Oportunidades"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(678, 6)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(27, 31)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 33
+        Me.PictureBox5.TabStop = False
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(640, 13)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(32, 15)
+        Me.Label26.TabIndex = 28
+        Me.Label26.Text = "Abrir"
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.Red
+        Me.Label27.Location = New System.Drawing.Point(412, -15)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(17, 19)
+        Me.Label27.TabIndex = 149
+        Me.Label27.Text = "*"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.Red
+        Me.Label28.Location = New System.Drawing.Point(438, -27)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(17, 19)
+        Me.Label28.TabIndex = 135
+        Me.Label28.Text = "*"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.Red
+        Me.Label32.Location = New System.Drawing.Point(444, -55)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(17, 19)
+        Me.Label32.TabIndex = 135
+        Me.Label32.Text = "*"
+        '
         'FrmHOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -774,8 +994,8 @@ Partial Class FrmHOME
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1366, 730)
         Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.PanelRecordatorioSemana)
-        Me.Controls.Add(Me.PanelRecordatoriosHoy)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
@@ -823,18 +1043,24 @@ Partial Class FrmHOME
         Me.Panel8.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
-        Me.PanelRecordatoriosHoy.ResumeLayout(False)
-        Me.PanelRecordatoriosHoy.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
         Me.PanelRecordatorioSemana.ResumeLayout(False)
         Me.PanelRecordatorioSemana.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGRecordatorios, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -873,14 +1099,7 @@ Partial Class FrmHOME
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents PanelRecordatoriosHoy As GroupBox
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label26 As Label
     Friend WithEvents PanelRecordatorioSemana As GroupBox
-    Friend WithEvents Panel11 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
@@ -899,4 +1118,33 @@ Partial Class FrmHOME
     Friend WithEvents Label16 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label20 As Label
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents DGOportunidades As DataGridView
+    Friend WithEvents DGRecordatorios As DataGridView
+    Friend WithEvents idOportunidad As DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As DataGridViewTextBoxColumn
+    Friend WithEvents Apellidos As DataGridViewTextBoxColumn
+    Friend WithEvents Correo As DataGridViewTextBoxColumn
+    Friend WithEvents Compania As DataGridViewTextBoxColumn
+    Friend WithEvents Monto As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label22 As Label
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label32 As Label
 End Class
