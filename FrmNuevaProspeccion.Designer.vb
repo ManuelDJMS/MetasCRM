@@ -33,6 +33,8 @@ Partial Class FrmNuevaProspeccion
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cboOrigen = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -89,7 +91,7 @@ Partial Class FrmNuevaProspeccion
         Me.Panel2.Controls.Add(Me.Label27)
         Me.Panel2.Location = New System.Drawing.Point(-1, -1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(657, 66)
+        Me.Panel2.Size = New System.Drawing.Size(653, 66)
         Me.Panel2.TabIndex = 180
         '
         'Button2
@@ -153,13 +155,33 @@ Partial Class FrmNuevaProspeccion
         Me.Label27.TabIndex = 152
         Me.Label27.Text = "Prospección"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(10, 136)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 15)
+        Me.Label1.TabIndex = 172
+        Me.Label1.Text = "Origen:"
+        '
+        'cboOrigen
+        '
+        Me.cboOrigen.FormattingEnabled = True
+        Me.cboOrigen.Location = New System.Drawing.Point(92, 134)
+        Me.cboOrigen.Name = "cboOrigen"
+        Me.cboOrigen.Size = New System.Drawing.Size(201, 21)
+        Me.cboOrigen.TabIndex = 181
+        '
         'FrmNuevaProspeccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(652, 148)
+        Me.ClientSize = New System.Drawing.Size(645, 180)
+        Me.Controls.Add(Me.cboOrigen)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label12)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "FrmNuevaProspeccion"
@@ -181,4 +203,6 @@ Partial Class FrmNuevaProspeccion
     Friend WithEvents Label26 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label27 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cboOrigen As ComboBox
 End Class
