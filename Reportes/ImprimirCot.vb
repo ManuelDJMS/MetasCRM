@@ -26,7 +26,7 @@ Public Class ImprimirCot
         lector2019 = comando2019.ExecuteReader
         lector2019.Read()
         Dim nombre, cargo, Compania, Domicilio, Email, Tel, Ext, elaboroCot, donde, precio, condiciones, entrega, modalidad,
-            observaciones, serv, instr, puntos, tra, met, result, ajuste, obser, correo, depto As String
+            observaciones, serv, instr, puntos, tra, met, result, ajuste, obser, correo, depto, rfc, razon As String
         Dim clave As Integer
         Dim fecha, vencimiento As Date
         If ((lector2019(0) Is DBNull.Value) OrElse (lector2019(0) Is Nothing)) Then
@@ -159,6 +159,16 @@ Public Class ImprimirCot
         Else
             correo = lector2019(34)
         End If
+        If ((lector2019(35) Is DBNull.Value) OrElse (lector2019(35) Is Nothing)) Then
+            rfc = "-"
+        Else
+            rfc = lector2019(35)
+        End If
+        If ((lector2019(36) Is DBNull.Value) OrElse (lector2019(36) Is Nothing)) Then
+            razon = "-"
+        Else
+            razon = lector2019(36)
+        End If
         lector2019.Close()
         vencimiento = fecha.AddDays(30)
         Dim Adaptador As New SqlDataAdapter
@@ -194,6 +204,8 @@ Public Class ImprimirCot
         Dim param30 = New SqlParameter("@oTemp", SqlDbType.VarChar)
         Dim param31 = New SqlParameter("@depto", SqlDbType.VarChar)
         Dim param32 = New SqlParameter("@emailG", SqlDbType.VarChar)
+        Dim param33 = New SqlParameter("@rfc", SqlDbType.VarChar)
+        Dim param34 = New SqlParameter("@razon", SqlDbType.VarChar)
         param1.Direction = ParameterDirection.Input
         param2.Direction = ParameterDirection.Input
         param3.Direction = ParameterDirection.Input
@@ -222,6 +234,8 @@ Public Class ImprimirCot
         param30.Direction = ParameterDirection.Input
         param31.Direction = ParameterDirection.Input
         param32.Direction = ParameterDirection.Input
+        param33.Direction = ParameterDirection.Input
+        param34.Direction = ParameterDirection.Input
         param1.Value = COT
         param2.Value = nombre
         param3.Value = cargo
@@ -250,6 +264,8 @@ Public Class ImprimirCot
         param30.Value = obser
         param31.Value = depto
         param32.Value = correo
+        param33.Value = rfc
+        param34.Value = razon
         Adaptador.SelectCommand.Parameters.Add(param1)
         Adaptador.SelectCommand.Parameters.Add(param2)
         Adaptador.SelectCommand.Parameters.Add(param3)
@@ -278,6 +294,8 @@ Public Class ImprimirCot
         Adaptador.SelectCommand.Parameters.Add(param30)
         Adaptador.SelectCommand.Parameters.Add(param31)
         Adaptador.SelectCommand.Parameters.Add(param32)
+        Adaptador.SelectCommand.Parameters.Add(param33)
+        Adaptador.SelectCommand.Parameters.Add(param34)
         Dim Data As New DataSet
         Adaptador.Fill(Data)
         Data.DataSetName = "Data1"
@@ -312,11 +330,13 @@ Public Class ImprimirCot
         Dim p30 As New ReportParameter("temporal", obser)
         Dim p31 As New ReportParameter("depto", depto)
         Dim p32 As New ReportParameter("emailG", correo)
+        Dim p33 As New ReportParameter("rfc", rfc)
+        Dim p34 As New ReportParameter("razon", razon)
         Dim Reportes As New ReportDataSource("DataSet1", Data.Tables(0))
         FrmReportes.ReportViewer1.LocalReport.DataSources.Clear()
         FrmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
         FrmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Users\Software TI\Documents\GitHub\MetasCRM\Reportes\cot.rdlc"
-        FrmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2, p2, p3, p4, p5, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32})
+        FrmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2, p2, p3, p4, p5, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34})
         FrmReportes.ReportViewer1.RefreshReport()
         FrmReportes.Show()
         conexion2019.Close()
