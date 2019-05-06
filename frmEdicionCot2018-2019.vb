@@ -367,4 +367,5 @@ Public Class frmEdicionCot2018_2019
         CboTiempo.Tag = lectorMetasCotizador(0)
         lectorMetasCotizador.Close()
     End Sub
+
 End Class

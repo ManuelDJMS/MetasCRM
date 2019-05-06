@@ -21,7 +21,7 @@ Public Class FrmCotizacion2018
             Bitacora("FrmCotizacion2018", "Error al cargar el formulario", Err.Number, cadena)
         End Try
     End Sub
-    Private Sub txtNombreE_TextChanged(sender As Object, e As EventArgs) Handles txtNombreE.TextChanged
+    Private Sub txtNombreE_TextChanged(sender As Object, e As EventArgs) Handles txtNombreE.TextChanged, TextBox1.TextChanged
         Try
             MetodoLIMS()
             comandoLIMS = conexionLIMS.CreateCommand

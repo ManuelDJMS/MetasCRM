@@ -149,7 +149,7 @@ Public Class frmCotizacionPorArticulo
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        FrmCotizacion2018.PanelFiltrado.Enabled = True
+        'FrmCotizacion2018.PanelFiltrado.Enabled = True
         FrmCotizacion2018.lblCot.Visible = True
         FrmCotizacion2018.DGCotizaciones.Enabled = True
         Me.Dispose()
