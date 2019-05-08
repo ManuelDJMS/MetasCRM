@@ -129,7 +129,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>0.07056cm</Top>
-            <Left>1.11908cm</Left>
+            <Left>1.23365cm</Left>
             <Height>0.472cm</Height>
             <Width>1.55314cm</Width>
             <Style>
@@ -163,7 +163,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>1.13803cm</Top>
-            <Left>1.11908cm</Left>
+            <Left>1.23365cm</Left>
             <Height>0.472cm</Height>
             <Width>1.54342cm</Width>
             <ZIndex>1</ZIndex>
@@ -198,7 +198,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>0.07056cm</Top>
-            <Left>10.68443cm</Left>
+            <Left>10.799cm</Left>
             <Height>0.472cm</Height>
             <Width>1.55314cm</Width>
             <ZIndex>2</ZIndex>
@@ -230,9 +230,9 @@
             </Paragraphs>
             <rd:DefaultName>dom</rd:DefaultName>
             <Top>0.71894cm</Top>
-            <Left>12.39459cm</Left>
+            <Left>12.50916cm</Left>
             <Height>0.472cm</Height>
-            <Width>7.89401cm</Width>
+            <Width>7.59374cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -264,9 +264,9 @@
             </Paragraphs>
             <rd:DefaultName>empresa</rd:DefaultName>
             <Top>0.07056cm</Top>
-            <Left>12.3434cm</Left>
+            <Left>12.45797cm</Left>
             <Height>0.472cm</Height>
-            <Width>7.9452cm</Width>
+            <Width>7.64493cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -298,7 +298,7 @@
             </Paragraphs>
             <rd:DefaultName>tel</rd:DefaultName>
             <Top>1.15567cm</Top>
-            <Left>2.75975cm</Left>
+            <Left>2.87432cm</Left>
             <Height>0.472cm</Height>
             <Width>4.04155cm</Width>
             <ZIndex>5</ZIndex>
@@ -332,7 +332,7 @@
             </Paragraphs>
             <rd:DefaultName>nombre1</rd:DefaultName>
             <Top>0.07056cm</Top>
-            <Left>2.75975cm</Left>
+            <Left>2.87432cm</Left>
             <Height>0.472cm</Height>
             <Width>7.58496cm</Width>
             <ZIndex>6</ZIndex>
@@ -365,7 +365,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox47</rd:DefaultName>
             <Top>1.15567cm</Top>
-            <Left>6.97769cm</Left>
+            <Left>7.09226cm</Left>
             <Height>0.472cm</Height>
             <Width>0.83313cm</Width>
             <ZIndex>7</ZIndex>
@@ -399,7 +399,7 @@
             </Paragraphs>
             <rd:DefaultName>ext</rd:DefaultName>
             <Top>1.15567cm</Top>
-            <Left>7.88137cm</Left>
+            <Left>7.99594cm</Left>
             <Height>0.472cm</Height>
             <Width>0.99188cm</Width>
             <ZIndex>8</ZIndex>
@@ -432,7 +432,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>1.68059cm</Top>
-            <Left>1.1098cm</Left>
+            <Left>1.22437cm</Left>
             <Height>0.472cm</Height>
             <Width>1.45234cm</Width>
             <ZIndex>9</ZIndex>
@@ -464,7 +464,7 @@
             </Paragraphs>
             <rd:DefaultName>correo</rd:DefaultName>
             <Top>1.68059cm</Top>
-            <Left>2.75975cm</Left>
+            <Left>2.87432cm</Left>
             <Height>0.472cm</Height>
             <Width>7.58496cm</Width>
             <ZIndex>10</ZIndex>
@@ -496,7 +496,7 @@
             </Paragraphs>
             <rd:DefaultName>cargo</rd:DefaultName>
             <Top>0.57784cm</Top>
-            <Left>2.75975cm</Left>
+            <Left>2.87432cm</Left>
             <Height>0.472cm</Height>
             <Width>7.58496cm</Width>
             <ZIndex>11</ZIndex>
@@ -531,9 +531,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
             <Top>2.49058cm</Top>
-            <Left>0.12342cm</Left>
+            <Left>0.23799cm</Left>
             <Height>0.556cm</Height>
-            <Width>20.1749cm</Width>
+            <Width>19.86491cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -549,7 +549,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.34075cm</Width>
+                  <Width>1.29735cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -652,7 +652,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.18147cm</Size>
+                    <Size>1.13807cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox15">
                         <CanGrow>true</CanGrow>
@@ -696,7 +696,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1.47567cm</Size>
+                        <Size>1.43227cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox13">
                             <CanGrow>true</CanGrow>
@@ -740,7 +740,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>6.55536cm</Size>
+                            <Size>6.51196cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox11">
                                 <CanGrow>true</CanGrow>
@@ -784,7 +784,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>1.49879cm</Size>
+                                <Size>1.45539cm</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox9">
                                     <CanGrow>true</CanGrow>
@@ -828,7 +828,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>1.55578cm</Size>
+                                    <Size>1.51238cm</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox7">
                                         <CanGrow>true</CanGrow>
@@ -872,7 +872,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>4.89986cm</Size>
+                                        <Size>4.85646cm</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox5">
                                             <CanGrow>true</CanGrow>
@@ -916,7 +916,7 @@
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>1.68592cm</Size>
+                                            <Size>1.64252cm</Size>
                                             <CellContents>
                                               <Textbox Name="Textbox3">
                                                 <CanGrow>true</CanGrow>
@@ -985,7 +985,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1.18147cm</Size>
+                    <Size>1.13807cm</Size>
                     <CellContents>
                       <Textbox Name="PartidaNo">
                         <CanGrow>true</CanGrow>
@@ -1038,7 +1038,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>1.47567cm</Size>
+                        <Size>1.43227cm</Size>
                         <CellContents>
                           <Textbox Name="Cant">
                             <CanGrow>true</CanGrow>
@@ -1091,7 +1091,7 @@
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>6.55536cm</Size>
+                            <Size>6.51196cm</Size>
                             <CellContents>
                               <Textbox Name="Tipo">
                                 <CanGrow>true</CanGrow>
@@ -1144,7 +1144,7 @@
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>1.49879cm</Size>
+                                <Size>1.45539cm</Size>
                                 <CellContents>
                                   <Textbox Name="Marca">
                                     <CanGrow>true</CanGrow>
@@ -1197,7 +1197,7 @@
                                     </SortExpression>
                                   </SortExpressions>
                                   <TablixHeader>
-                                    <Size>1.55578cm</Size>
+                                    <Size>1.51238cm</Size>
                                     <CellContents>
                                       <Textbox Name="Modelo">
                                         <CanGrow>true</CanGrow>
@@ -1250,7 +1250,7 @@
                                         </SortExpression>
                                       </SortExpressions>
                                       <TablixHeader>
-                                        <Size>4.89986cm</Size>
+                                        <Size>4.85646cm</Size>
                                         <CellContents>
                                           <Textbox Name="Alcance">
                                             <CanGrow>true</CanGrow>
@@ -1303,7 +1303,7 @@
                                             </SortExpression>
                                           </SortExpressions>
                                           <TablixHeader>
-                                            <Size>1.68592cm</Size>
+                                            <Size>1.64252cm</Size>
                                             <CellContents>
                                               <Textbox Name="Punitariocot">
                                                 <KeepTogether>true</KeepTogether>
@@ -1364,9 +1364,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>3.16641cm</Top>
-            <Left>0.14192cm</Left>
+            <Left>0.25649cm</Left>
             <Height>1.44799cm</Height>
-            <Width>20.19359cm</Width>
+            <Width>19.84641cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -1413,7 +1413,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox102</rd:DefaultName>
             <Top>13.57929cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.6cm</Height>
             <Width>3.07346cm</Width>
             <ZIndex>14</ZIndex>
@@ -1458,7 +1458,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox103</rd:DefaultName>
             <Top>13.57929cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.6cm</Height>
             <Width>14.85602cm</Width>
             <ZIndex>15</ZIndex>
@@ -1493,7 +1493,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox105</rd:DefaultName>
             <Top>14.21457cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.52062cm</Height>
             <Width>2.76458cm</Width>
             <ZIndex>16</ZIndex>
@@ -1528,7 +1528,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox107</rd:DefaultName>
             <Top>14.80575cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.46771cm</Height>
             <Width>1.4273cm</Width>
             <ZIndex>17</ZIndex>
@@ -1563,7 +1563,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox108</rd:DefaultName>
             <Top>15.20291cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.52062cm</Height>
             <Width>3.06374cm</Width>
             <ZIndex>18</ZIndex>
@@ -1598,7 +1598,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox109</rd:DefaultName>
             <Top>16.42909cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.52062cm</Height>
             <Width>3.06374cm</Width>
             <ZIndex>19</ZIndex>
@@ -1633,7 +1633,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox110</rd:DefaultName>
             <Top>17.05554cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.46771cm</Height>
             <Width>1.73271cm</Width>
             <ZIndex>20</ZIndex>
@@ -1668,7 +1668,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>17.48798cm</Top>
-            <Left>0.85172cm</Left>
+            <Left>0.96629cm</Left>
             <Height>0.46771cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>21</ZIndex>
@@ -1700,7 +1700,7 @@
             </Paragraphs>
             <rd:DefaultName>donde</rd:DefaultName>
             <Top>14.21457cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.52062cm</Height>
             <Width>14.89129cm</Width>
             <ZIndex>22</ZIndex>
@@ -1732,7 +1732,7 @@
             </Paragraphs>
             <rd:DefaultName>precio</rd:DefaultName>
             <Top>14.73519cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.46772cm</Height>
             <Width>14.85602cm</Width>
             <ZIndex>23</ZIndex>
@@ -1764,7 +1764,7 @@
             </Paragraphs>
             <rd:DefaultName>condiciones</rd:DefaultName>
             <Top>15.20532cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.84716cm</Height>
             <Width>14.85602cm</Width>
             <ZIndex>24</ZIndex>
@@ -1796,7 +1796,7 @@
             </Paragraphs>
             <rd:DefaultName>entrega</rd:DefaultName>
             <Top>16.43143cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.51828cm</Height>
             <Width>14.85602cm</Width>
             <ZIndex>25</ZIndex>
@@ -1828,7 +1828,7 @@
             </Paragraphs>
             <rd:DefaultName>modalidad</rd:DefaultName>
             <Top>16.94971cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.50299cm</Height>
             <Width>14.85602cm</Width>
             <ZIndex>26</ZIndex>
@@ -1860,7 +1860,7 @@
             </Paragraphs>
             <rd:DefaultName>observaciones</rd:DefaultName>
             <Top>17.52326cm</Top>
-            <Left>4.45869cm</Left>
+            <Left>4.57326cm</Left>
             <Height>0.47243cm</Height>
             <Width>14.85602cm</Width>
             <ZIndex>27</ZIndex>
@@ -1895,7 +1895,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox66</rd:DefaultName>
             <Top>12.6793cm</Top>
-            <Left>6.15049cm</Left>
+            <Left>6.26506cm</Left>
             <Height>0.50312cm</Height>
             <Width>8.29927cm</Width>
             <ZIndex>28</ZIndex>
@@ -1914,9 +1914,9 @@
             <Value>linea3</Value>
             <Sizing>FitProportional</Sizing>
             <Top>13.18242cm</Top>
-            <Left>0.12342cm</Left>
+            <Left>0.23799cm</Left>
             <Height>0.02646cm</Height>
-            <Width>20.0517cm</Width>
+            <Width>19.86491cm</Width>
             <ZIndex>29</ZIndex>
             <Style>
               <Border>
@@ -1945,7 +1945,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox66</rd:DefaultName>
             <Top>18.31319cm</Top>
-            <Left>6.15049cm</Left>
+            <Left>6.26506cm</Left>
             <Height>0.61905cm</Height>
             <Width>8.29927cm</Width>
             <ZIndex>30</ZIndex>
@@ -1964,9 +1964,9 @@
             <Value>linea3</Value>
             <Sizing>FitProportional</Sizing>
             <Top>18.96752cm</Top>
-            <Left>0.12342cm</Left>
+            <Left>0.23799cm</Left>
             <Height>0.14112cm</Height>
-            <Width>20.25296cm</Width>
+            <Width>19.83841cm</Width>
             <ZIndex>31</ZIndex>
             <Style>
               <Border>
@@ -2189,7 +2189,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>5.41067cm</Top>
-            <Left>17.21714cm</Left>
+            <Left>16.83384cm</Left>
             <Height>2.1825cm</Height>
             <Width>3.26906cm</Width>
             <ZIndex>32</ZIndex>
@@ -2220,7 +2220,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>19.69242cm</Top>
-            <Left>0.86144cm</Left>
+            <Left>0.97601cm</Left>
             <Height>0.46771cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>33</ZIndex>
@@ -2255,7 +2255,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>23.23952cm</Top>
-            <Left>0.86144cm</Left>
+            <Left>0.97601cm</Left>
             <Height>0.46771cm</Height>
             <Width>3.67094cm</Width>
             <ZIndex>34</ZIndex>
@@ -2290,8 +2290,8 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>24.4674cm</Top>
-            <Left>0.85172cm</Left>
-            <Height>0.46771cm</Height>
+            <Left>0.96629cm</Left>
+            <Height>0.6cm</Height>
             <Width>3.53214cm</Width>
             <ZIndex>35</ZIndex>
             <Style>
@@ -2325,7 +2325,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>19.17919cm</Top>
-            <Left>0.86144cm</Left>
+            <Left>0.97601cm</Left>
             <Height>0.46771cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>36</ZIndex>
@@ -2360,7 +2360,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>21.23211cm</Top>
-            <Left>0.86144cm</Left>
+            <Left>0.97601cm</Left>
             <Height>0.46771cm</Height>
             <Width>4.47563cm</Width>
             <ZIndex>37</ZIndex>
@@ -2395,7 +2395,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>21.74535cm</Top>
-            <Left>0.86144cm</Left>
+            <Left>0.97601cm</Left>
             <Height>0.46771cm</Height>
             <Width>3.69279cm</Width>
             <ZIndex>38</ZIndex>
@@ -2430,7 +2430,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
             <Top>23.82331cm</Top>
-            <Left>0.86144cm</Left>
+            <Left>0.97601cm</Left>
             <Height>0.46771cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>39</ZIndex>
@@ -2462,7 +2462,7 @@
             </Paragraphs>
             <rd:DefaultName>Serv</rd:DefaultName>
             <Top>19.17919cm</Top>
-            <Left>3.53783cm</Left>
+            <Left>3.6524cm</Left>
             <Height>0.46771cm</Height>
             <Width>15.77688cm</Width>
             <ZIndex>40</ZIndex>
@@ -2494,7 +2494,7 @@
             </Paragraphs>
             <rd:DefaultName>instrumento</rd:DefaultName>
             <Top>19.75274cm</Top>
-            <Left>3.53783cm</Left>
+            <Left>3.6524cm</Left>
             <Height>0.47795cm</Height>
             <Width>15.77688cm</Width>
             <ZIndex>41</ZIndex>
@@ -2526,7 +2526,7 @@
             </Paragraphs>
             <rd:DefaultName>puntos</rd:DefaultName>
             <Top>20.3718cm</Top>
-            <Left>3.53783cm</Left>
+            <Left>3.6524cm</Left>
             <Height>0.52062cm</Height>
             <Width>15.77688cm</Width>
             <ZIndex>42</ZIndex>
@@ -2558,9 +2558,9 @@
             </Paragraphs>
             <rd:DefaultName>trazabilidad</rd:DefaultName>
             <Top>21.23211cm</Top>
-            <Left>5.29574cm</Left>
+            <Left>5.41031cm</Left>
             <Height>0.46771cm</Height>
-            <Width>15.00258cm</Width>
+            <Width>14.69259cm</Width>
             <ZIndex>43</ZIndex>
             <Style>
               <Border>
@@ -2589,10 +2589,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>metodo</rd:DefaultName>
-            <Top>21.7351cm</Top>
-            <Left>5.29574cm</Left>
+            <Top>21.69982cm</Top>
+            <Left>5.40059cm</Left>
             <Height>1.24723cm</Height>
-            <Width>15.00258cm</Width>
+            <Width>14.70231cm</Width>
             <ZIndex>44</ZIndex>
             <Style>
               <Border>
@@ -2622,9 +2622,9 @@
             </Paragraphs>
             <rd:DefaultName>resultado</rd:DefaultName>
             <Top>23.15872cm</Top>
-            <Left>5.29574cm</Left>
+            <Left>5.41031cm</Left>
             <Height>0.54851cm</Height>
-            <Width>15.00258cm</Width>
+            <Width>14.69259cm</Width>
             <ZIndex>45</ZIndex>
             <Style>
               <Border>
@@ -2654,9 +2654,9 @@
             </Paragraphs>
             <rd:DefaultName>ajuste</rd:DefaultName>
             <Top>23.77779cm</Top>
-            <Left>5.29574cm</Left>
+            <Left>5.41031cm</Left>
             <Height>0.51323cm</Height>
-            <Width>15.00258cm</Width>
+            <Width>14.66609cm</Width>
             <ZIndex>46</ZIndex>
             <Style>
               <Border>
@@ -2686,9 +2686,9 @@
             </Paragraphs>
             <rd:DefaultName>temporal</rd:DefaultName>
             <Top>24.42188cm</Top>
-            <Left>5.28602cm</Left>
+            <Left>5.40059cm</Left>
             <Height>1.51865cm</Height>
-            <Width>15.00258cm</Width>
+            <Width>14.70231cm</Width>
             <ZIndex>47</ZIndex>
             <Style>
               <Border>
@@ -3003,9 +3003,9 @@
             </PageBreak>
             <KeepTogether>true</KeepTogether>
             <Top>8.36928cm</Top>
-            <Left>0.02658cm</Left>
+            <Left>0.14115cm</Left>
             <Height>3.82292cm</Height>
-            <Width>20.14854cm</Width>
+            <Width>19.96175cm</Width>
             <ZIndex>48</ZIndex>
             <Style>
               <Border>
@@ -3018,9 +3018,9 @@
             <Value>linea3</Value>
             <Sizing>FitProportional</Sizing>
             <Top>2.32898cm</Top>
-            <Left>0.11505cm</Left>
+            <Left>0.22962cm</Left>
             <Height>0.12632cm</Height>
-            <Width>20.26133cm</Width>
+            <Width>19.87546cm</Width>
             <ZIndex>49</ZIndex>
             <Style>
               <Border>
@@ -3030,7 +3030,7 @@
           </Image>
           <Line Name="Line2">
             <Top>0.07056cm</Top>
-            <Left>10.64915cm</Left>
+            <Left>10.76372cm</Left>
             <Height>2.22314cm</Height>
             <Width>0cm</Width>
             <ZIndex>50</ZIndex>
@@ -3061,7 +3061,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox66</rd:DefaultName>
             <Top>26.26335cm</Top>
-            <Left>6.10513cm</Left>
+            <Left>6.2197cm</Left>
             <Height>0.61905cm</Height>
             <Width>8.29927cm</Width>
             <ZIndex>51</ZIndex>
@@ -3080,8 +3080,9 @@
             <Value>linea3</Value>
             <Sizing>FitProportional</Sizing>
             <Top>26.78679cm</Top>
+            <Left>0.11457cm</Left>
             <Height>0.14112cm</Height>
-            <Width>20.25296cm</Width>
+            <Width>19.98833cm</Width>
             <ZIndex>52</ZIndex>
             <Style>
               <Border>
@@ -3089,63 +3090,254 @@
               </Border>
             </Style>
           </Image>
-          <Textbox Name="dom1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!dom.Value</Value>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Textbox Name="dom1">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!dom.Value</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <TextAlign>Left</TextAlign>
                     </Style>
-                  </TextRun>
-                </TextRuns>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>dom1</rd:DefaultName>
+                <Top>0.14112cm</Top>
+                <Left>2.59165cm</Left>
+                <Height>0.4677cm</Height>
+                <Width>14.30805cm</Width>
                 <Style>
-                  <TextAlign>Left</TextAlign>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
                 </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>dom1</rd:DefaultName>
-            <Top>27.03375cm</Top>
-            <Left>2.98817cm</Left>
-            <Height>0.4677cm</Height>
-            <Width>14.30805cm</Width>
+              </Textbox>
+              <Textbox Name="rfc">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!rfc.Value</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>rfc</rd:DefaultName>
+                <Top>0.78521cm</Top>
+                <Left>2.59165cm</Left>
+                <Height>0.46771cm</Height>
+                <Width>14.30805cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="razon">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!razon.Value</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>razon</rd:DefaultName>
+                <Top>1.42931cm</Top>
+                <Left>2.60428cm</Left>
+                <Height>0.46771cm</Height>
+                <Width>14.30805cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox119">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Domicilio:</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox111</rd:DefaultName>
+                <Top>0.14111cm</Top>
+                <Left>0.48374cm</Left>
+                <Height>0.46771cm</Height>
+                <Width>1.72014cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox123">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>RFC:</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox111</rd:DefaultName>
+                <Top>0.78521cm</Top>
+                <Left>0.48374cm</Left>
+                <Height>0.46771cm</Height>
+                <Width>1.72014cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox124">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Razón social:</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox111</rd:DefaultName>
+                <Top>1.42931cm</Top>
+                <Left>0.48374cm</Left>
+                <Height>0.46771cm</Height>
+                <Width>2.11666cm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>26.91767cm</Top>
+            <Left>0.0986cm</Left>
+            <Height>2.09986cm</Height>
+            <Width>20.0043cm</Width>
             <ZIndex>53</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Textbox>
-          <Textbox Name="rfc">
+          </Rectangle>
+          <Textbox Name="Textbox1">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!rfc.Value</Value>
+                    <Value>Solicitamos que las condiciones de servicios que se describen a continuación sean leídas y aceptadas, con la finalidad de ofrecer un mejor servicio.</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Left</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>rfc</rd:DefaultName>
-            <Top>27.67784cm</Top>
-            <Left>2.98817cm</Left>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>29.77814cm</Top>
+            <Left>0.0986cm</Left>
             <Height>0.46771cm</Height>
-            <Width>14.30805cm</Width>
+            <Width>19.9778cm</Width>
             <ZIndex>54</ZIndex>
             <Style>
               <Border>
@@ -3157,29 +3349,29 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="razon">
+          <Textbox Name="Textbox16">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!razon.Value</Value>
+                    <Value>Sobre el servico de calibración:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
+                <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>razon</rd:DefaultName>
-            <Top>28.32194cm</Top>
-            <Left>2.98817cm</Left>
-            <Height>0.46771cm</Height>
-            <Width>14.30805cm</Width>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>30.38696cm</Top>
+            <Left>0.53799cm</Left>
+            <Height>0.44125cm</Height>
+            <Width>4.69604cm</Width>
             <ZIndex>55</ZIndex>
             <Style>
               <Border>
@@ -3191,65 +3383,45 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox119">
-            <CanGrow>true</CanGrow>
+          <Rectangle Name="Rectangle2">
+            <PageBreak>
+              <BreakLocation>End</BreakLocation>
+            </PageBreak>
             <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Domicilio:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox111</rd:DefaultName>
-            <Top>27.03374cm</Top>
-            <Left>0.88026cm</Left>
-            <Height>0.46771cm</Height>
-            <Width>1.72014cm</Width>
+            <Top>29.15865cm</Top>
+            <Left>0.0986cm</Left>
+            <Height>0.2775cm</Height>
+            <Width>19.9778cm</Width>
             <ZIndex>56</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Textbox>
-          <Textbox Name="Textbox123">
+          </Rectangle>
+          <Textbox Name="Textbox17">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>RFC:</Value>
+                    <Value>Anomalias detectadas durante la calibración:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
+                <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox111</rd:DefaultName>
-            <Top>27.67784cm</Top>
-            <Left>0.88026cm</Left>
-            <Height>0.46771cm</Height>
-            <Width>1.72014cm</Width>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>35.10703cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
             <ZIndex>57</ZIndex>
             <Style>
               <Border>
@@ -3261,31 +3433,151 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox124">
+          <Textbox Name="Textbox129">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Razón social:</Value>
+                    <Value>En algunas ocasiones es imposible evaluar un desempeño hasta que se esta calibrando, si en esta etapa el instrumento presenta daño o anomalías no informada (como vicios ocultos, por ejemplo), se suspenderá la calibración y se informará al usuario de la anomalía detectada para tomar acciones pertinentes.</Value>
                     <Style>
+                      <FontStyle>Normal</FontStyle>
                       <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
                     </Style>
                   </TextRun>
                 </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>no se hace responsable por fallas o descomposturas que pudieran presentar los equipos durante la calibración y si por alguna falla ajena a </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>no se concluyera con el servicio (falla de energía eléctrica, error de especificaciones técnicas por parte del cliente o usuario como alcance de medición, clase de exactitud, puesta fuera del servicio por descompostura, cambio, etc., no informar previamente otra ubicación diferente a las instalaciones originales, el cliente o usuario no se encuentra, el cliente o usuario decide repentinamente que no se realizara el servicio de uno o todos los instrumento o equipos de medición cotizados, etc.) se cobrara el 50% de la orden de compra.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>En caso de separación del líquido en los termómetros de líquido en vidrio, </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>no se hace responsable en esta condición durante el transporte, recepción y/o entrega, así como durante la calibración. Queda por entendido que el cliente asume el riego cuando se aplique cualquier método para la corrección de la separación de líquido, ya sea por calentamiento o enfriamiento.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
                 <Style>
                   <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox111</rd:DefaultName>
-            <Top>28.32194cm</Top>
-            <Left>0.88026cm</Left>
-            <Height>0.46771cm</Height>
-            <Width>2.11666cm</Width>
+            <Top>35.24814cm</Top>
+            <Left>0.53796cm</Left>
+            <Height>4.78924cm</Height>
+            <Width>19.26053cm</Width>
             <ZIndex>58</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>De la recepción y recolección de equipos:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>39.73752cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>59</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3296,15 +3588,1611 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox132">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>La recepción y entrega de los equipos se realiza en nuestras instalaciones de lunes a viernes de 08 h 30 a 18 h 00. El equipo o instrumento de medición será recibido siempre y cuando no presente daño o deterioro aparente. Los instrumentos deben venir acompañados de especificaciones técnicas, manuales de operación, equipos periféricos para si funcionamiento, cables, conexiones, baterías, etc. Se entrega una hoja de recepción con todos los datos del cliente y las especificaciones técnicas del equipo. Una vez que el equipo es recibido en el laboratorio permanecerá 12 días hábiles para su calibración.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>A partir de que </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>informe de la conclusión de los servicios de calibración, el cliente o usuario tiene un tiempo de 20 días naturales para recolección, después de esa fecha </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> no se hace responsable de los mismos.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>puede programar la recolección y entrega de sus equipos, actividad que hacemos con extrema precaución y cuidado; sin embargo, hacemos de su conocimiento que no nos hacemos responsable de fallas o perdida total de los equipos (que pudiera darse durante el transporte de estos); por lo que le sugerimos que en la medida de los posible sean transportados por su cuenta y riesgo.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>En el caso de ser enviados por mensajería, </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>tiene un procedimiento especifico para el almacenaje, empaque y envío de los equipos. Le recordamos que los gastos generados por concepto de mensajería son cubiertos por el cliente.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>40.25814cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>4.78924cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>60</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox31">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Informe de calibración:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>45.0121cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>61</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox136">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>El informe de calibración entregado cumple con ISO/IEC 17025.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Si usted requiere que su(s) Informe(s) de calibración lleve(n) algún código de identificación o inventario, observación tolerancia, etc.; esta debe ser informada oportunamente y previo a la impresión del informe; ya que en cualquier reimpresión y reposición tiene un costo adicional de $100.00 M.N.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>45.568cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>1.84354cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>62</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox34">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Calibración en sitio:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>47.93216cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>63</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox138">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Para calibraciones en sitio se deja colocada una etiqueta por equipo calibrado y un reporte de servicio (no sustituye a un informe de calibración) que sirve de comprobante que </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>realizo un servicio de y que los informes de calibración están en proceso de elaboración.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Al recibir su confirmación de pedido nos comunicaremos con usted para fijar fecha y hora de llegada del personal de </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> en sus instalaciones (contratiempos serán avisados inmediatamente al cliente y/o usuario) misma que solicitamos amablemente sea respetad por ustedes ya que al llegar a sus instalaciones existirá una espera de 20 minutos por parte de </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>En caso de no ser atendidos nos veremos en la necesidad de retirarnos de sus instalaciones, teniendo que reprogramar el servicio. Hacemos de su conocimiento que también es responsabilidad del cliente y/o usuario atender al personal de </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V., </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>estar presente durante el inicio, transcurso y conclusión de los servicios para que el personal de </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>entregue el trabajo por medio del reporte de servicio; ya que si no está el responsable al momento de la conclusión de los mismos; </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>se deslinda de cualquier falla, problema, perdida, o anomalía que pudieran presentar el o los equipos calibrados a partir de que se abandonan las instalaciones del cliente y/o usuario.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Para una mejor programación y servicios es indispensable que por favor regrese la primera hoja de esta cotización firmada de conformidad acompañada de su respectiva orden de compra. Para cualquier duda o aclaración favor de contactarnos y con gusto le atendemos.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>48.45278cm</Top>
+            <Left>0.53796cm</Left>
+            <Height>5.50362cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>64</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>5.18468cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.80192cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>4.19556cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>7.12479cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox72">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Magnitud</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox72</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox74">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>N° de acreditación</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox74</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox76">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Acreditación vigente desde</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox76</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox78">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Servicio de calibración</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox78</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.83812cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox73">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Acústica, Vibraciones y Ultrasonido</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox73</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox75">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>A-05</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox75</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox77">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>2012-10-22</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox77</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox79">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>1 ms-2 a 50 ms-2 - (50 a 500) mV/(mm/s)</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox79</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox80">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Masa(Instrumento para pesar)</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox80</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox81">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>M-65</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox81</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox82">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>2011-09-07</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox82</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox83">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>5 g a 2000 kg</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox83</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Detalles" />
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <Top>53.3564cm</Top>
+            <Left>0.53799cm</Left>
+            <Height>2.03812cm</Height>
+            <Width>19.30695cm</Width>
+            <ZIndex>65</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="Textbox38">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Acreditaciones(Consulte página ema, a.c.       www.ema.org.mx:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>52.8005cm</Top>
+            <Left>0.53799cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>11.05543cm</Width>
+            <ZIndex>66</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox39">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Sobre el servicio de validación:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>55.39452cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>67</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox143">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>La naturaleza y alcance de los estudios de calibración y validación a ser desarrollados por </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V., </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>se describen detalladamente en cada uno de los protocolos de prueba, esto basado en los requerimientos del cliente y en las normas, guías y recomendaciones aplicables den cada caso particular.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>56.02098cm</Top>
+            <Left>0.53799cm</Left>
+            <Height>1.27029cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>68</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox44">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Anomalias detectadas durante la validación:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>57.29127cm</Top>
+            <Left>0.53796cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>69</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox144">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>no se hace responsable por fallas o descomposturas que pudieran presentar los equipos durante la calibración. Si por alguna falla ajena a </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>no se concluyera con el servicio (falla de energía eléctrica, error de especificaciones técnicas por parte del cliente y/o usuario equipo fuera de servicio por descompostura, cambio, etc., no informar previamente otra ubicación diferente a las instalaciones originales, el cliente o usuario no se encuentra, el cliente o usuario decide repentinamente que no se realizara el servicio de uno o todos los instrumento o equipos de medición cotizados, etc.) se cobrara el 50% de la orden de compra.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>57.81189cm</Top>
+            <Left>0.53799cm</Left>
+            <Height>2.03758cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>70</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox51">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Informe de validación:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>59.84947cm</Top>
+            <Left>0.53796cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>71</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox145">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>El informe de validación (Protocolo o reporte) entregado cumplirá con los requisitos acordados con el cliente y documentados en la cotización.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Si el cliente requiere que su(s) informe(s) de Calibración y/o validación lleve(n) algún código de identificación o inventario, observación, tolerancia etc.; esta debe ser informada oportunamente y previo a la impresión del informe, ya que cualquier reimpresión y reposición tiene un costo adicional.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>60.40536cm</Top>
+            <Left>0.53796cm</Left>
+            <Height>2.09049cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>72</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox61">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Confidencialidad:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>SteelBlue</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox16</rd:DefaultName>
+            <Top>62.04579cm</Top>
+            <Left>0.55936cm</Left>
+            <Height>0.52062cm</Height>
+            <Width>6.91587cm</Width>
+            <ZIndex>73</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox147">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>reconoce la importancia de proteger la información que recibe del cliente para la realización del servicio por que se asegura que el manejo de la información derivada de las actividades que ofrece a sus clientes será manejado de manera confidencial en estricta reserva y no revelará ningún dato de la información a ninguna otra parte, relacionada o no, sin el consentimiento previo escrito del cliente.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>La información acerca del cliente, obtenida de fuentes diferentes del cliente (por ejemplo, una persona que presenta una queja, los organismos reglamentarios) debe ser confidencial entre el cliente y </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> El proveedor (fuente) de esta información debe mantenerse como confidencial por parte de </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>y no debe compartirse con el cliente a menos que se haya acordado con la fuente.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>62.60168cm</Top>
+            <Left>0.55936cm</Left>
+            <Height>3.37813cm</Height>
+            <Width>19.17247cm</Width>
+            <ZIndex>74</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox149">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>De acuerdo con la normatividad vigente(NMX-Z55) el concepto Calibración se define como: Calibración: Operación que bajo condiciones específicas establece , en una primera etapa, una relación entre los valores y sus incertidumbres de medida asociadas obtenidas a partir de matrones de medida, y las correspondientes indicaciones con sus incertidumbres asociadas y en una segunda etapa, utiliza esta información para establecer una relación que permita obtener un resultado de medida a partir de una indicación. Es decir que una calibración es una comparación del resultado de un instrumento o equipo de medición vs un valor convencionalmente verdadero dado por un patrón de medición; en el cual se reporta un error de medición con una incertidumbre asociada. La calibración no incluye ningún tipo de reparación y el ajuste se realizará, siempre y cuando el instrumento o equipo de medición lo permita; el ajuste no es todos los casos es indicativo de que el equipo calibrado vaya a cumplir con una especificación prestablecida.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Un </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>* </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>al final de la descripción del procedimiento a realizar en cada partida de la cotización se refiere a servicio </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>No Acreditado.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>El </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Servicio Alterno </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>es un servicio realizado por un proveedor contratado por </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Esta cotización es conforme a lo indicado en la capacidad instalada que </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>MetAs, S.A. de C.V. </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>documenta en su sistema de gestión.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Numbered</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox111</rd:DefaultName>
+            <Top>30.82821cm</Top>
+            <Left>0.49154cm</Left>
+            <Height>4.27882cm</Height>
+            <Width>19.24029cm</Width>
+            <ZIndex>75</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Rectangle Name="Rectangle3">
+            <PageBreak>
+              <BreakLocation>End</BreakLocation>
+            </PageBreak>
+            <KeepTogether>true</KeepTogether>
+            <Top>47.58793cm</Top>
+            <Left>0.53796cm</Left>
+            <Height>0.16784cm</Height>
+            <Width>19.26053cm</Width>
+            <ZIndex>76</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
         </ReportItems>
-        <Height>12.34126in</Height>
+        <Height>26.03021in</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>8.06543in</Width>
+      <Width>7.98807in</Width>
       <Page>
         <PageHeader>
           <Height>3.00056cm</Height>
@@ -3315,7 +5203,7 @@
               <Source>Embedded</Source>
               <Value>descarga</Value>
               <Sizing>FitProportional</Sizing>
-              <Left>0.37697cm</Left>
+              <Left>0.49154cm</Left>
               <Height>2.03729cm</Height>
               <Width>4.1637cm</Width>
               <Style>
@@ -3345,7 +5233,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>1.20268cm</Top>
-              <Left>7.35632cm</Left>
+              <Left>7.47089cm</Left>
               <Height>0.74551cm</Height>
               <Width>5.22521cm</Width>
               <ZIndex>1</ZIndex>
@@ -3363,7 +5251,7 @@
               <Source>Embedded</Source>
               <Value>Apasionadosporlametrologia</Value>
               <Sizing>FitProportional</Sizing>
-              <Left>13.53254cm</Left>
+              <Left>13.38466cm</Left>
               <Height>0.58208cm</Height>
               <Width>6.72042cm</Width>
               <ZIndex>2</ZIndex>
@@ -3394,7 +5282,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>1.4993cm</Top>
-              <Left>3.53783cm</Left>
+              <Left>3.6524cm</Left>
               <Height>0.44889cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>3</ZIndex>
@@ -3430,7 +5318,7 @@
               </Paragraphs>
               <rd:DefaultName>numcot</rd:DefaultName>
               <Top>1.98347cm</Top>
-              <Left>3.53783cm</Left>
+              <Left>3.6524cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>4</ZIndex>
@@ -3485,8 +5373,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>1.98347cm</Top>
-              <Left>13.26406cm</Left>
+              <Top>2.01875cm</Top>
+              <Left>13.11618cm</Left>
               <Height>0.6cm</Height>
               <Width>1.5154cm</Width>
               <ZIndex>5</ZIndex>
@@ -3520,8 +5408,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>1.51785cm</Top>
-              <Left>15.40768cm</Left>
+              <Top>1.55313cm</Top>
+              <Left>15.2598cm</Left>
               <Height>0.51944cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>6</ZIndex>
@@ -3554,8 +5442,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>fecha</rd:DefaultName>
-              <Top>1.98347cm</Top>
-              <Left>14.95585cm</Left>
+              <Top>2.01875cm</Top>
+              <Left>14.80797cm</Left>
               <Height>0.6cm</Height>
               <Width>1.71096cm</Width>
               <ZIndex>7</ZIndex>
@@ -3589,8 +5477,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>1.98347cm</Top>
-              <Left>16.77264cm</Left>
+              <Top>2.01875cm</Top>
+              <Left>16.62476cm</Left>
               <Height>0.6cm</Height>
               <Width>1.41521cm</Width>
               <ZIndex>8</ZIndex>
@@ -3623,8 +5511,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>vencimiento</rd:DefaultName>
-              <Top>1.98347cm</Top>
-              <Left>18.36424cm</Left>
+              <Top>2.01875cm</Top>
+              <Left>18.21636cm</Left>
               <Height>0.6cm</Height>
               <Width>1.88872cm</Width>
               <ZIndex>9</ZIndex>
@@ -3643,9 +5531,9 @@
               <Value>LINEA1</Value>
               <Sizing>FitProportional</Sizing>
               <Top>2.75986cm</Top>
-              <Left>0.11505cm</Left>
+              <Left>0.22962cm</Left>
               <Height>0.19402cm</Height>
-              <Width>20.26133cm</Width>
+              <Width>19.87546cm</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border>
@@ -3670,9 +5558,9 @@
               <Value>linea3</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.56471cm</Top>
-              <Left>0.16256cm</Left>
+              <Left>0.09034cm</Left>
               <Height>0.07056cm</Height>
-              <Width>20.26682cm</Width>
+              <Width>20.19935cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3697,7 +5585,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox56</rd:DefaultName>
-              <Left>0.03267cm</Left>
+              <Top>0cm</Top>
+              <Left>0.14724cm</Left>
               <Height>0.6cm</Height>
               <Width>2.96425cm</Width>
               <ZIndex>1</ZIndex>
@@ -3728,7 +5617,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>elaboroCot</rd:DefaultName>
-              <Left>3.06748cm</Left>
+              <Top>0cm</Top>
+              <Left>3.18205cm</Left>
               <Height>0.6cm</Height>
               <Width>5.32499cm</Width>
               <ZIndex>2</ZIndex>
@@ -3761,7 +5651,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox55</rd:DefaultName>
               <Top>0.03527cm</Top>
-              <Left>14.36628cm</Left>
+              <Left>14.29406cm</Left>
               <Height>0.6cm</Height>
               <Width>2.05021cm</Width>
               <ZIndex>3</ZIndex>
@@ -3796,7 +5686,7 @@
               </Paragraphs>
               <rd:DefaultName>numcot1</rd:DefaultName>
               <Top>0.03527cm</Top>
-              <Left>16.41649cm</Left>
+              <Left>16.34427cm</Left>
               <Height>0.6cm</Height>
               <Width>1.27318cm</Width>
               <ZIndex>4</ZIndex>
@@ -3829,7 +5719,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox55</rd:DefaultName>
               <Top>0.03528cm</Top>
-              <Left>18.04337cm</Left>
+              <Left>17.97115cm</Left>
               <Height>0.52944cm</Height>
               <Width>1.17708cm</Width>
               <ZIndex>5</ZIndex>
@@ -3861,7 +5751,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.03527cm</Top>
-              <Left>19.22045cm</Left>
+              <Left>19.14823cm</Left>
               <Height>0.45888cm</Height>
               <Width>0.37295cm</Width>
               <ZIndex>6</ZIndex>
@@ -3895,7 +5785,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox55</rd:DefaultName>
               <Top>0.03527cm</Top>
-              <Left>19.54432cm</Left>
+              <Left>19.4721cm</Left>
               <Height>0.6cm</Height>
               <Width>0.24749cm</Width>
               <ZIndex>7</ZIndex>
@@ -3926,7 +5816,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>TotalPages</rd:DefaultName>
-              <Left>19.69923cm</Left>
+              <Top>0cm</Top>
+              <Left>19.62701cm</Left>
               <Height>0.45888cm</Height>
               <Width>0.47589cm</Width>
               <ZIndex>8</ZIndex>
@@ -3960,7 +5851,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox89</rd:DefaultName>
               <Top>0.90001cm</Top>
-              <Left>1.1098cm</Left>
+              <Left>1.22437cm</Left>
               <Height>0.38417cm</Height>
               <Width>2.59354cm</Width>
               <ZIndex>9</ZIndex>
@@ -3994,7 +5885,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox90</rd:DefaultName>
               <Top>1.50112cm</Top>
-              <Left>1.10083cm</Left>
+              <Left>1.2154cm</Left>
               <Height>0.37944cm</Height>
               <Width>4.2696cm</Width>
               <ZIndex>10</ZIndex>
@@ -4028,7 +5919,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox91</rd:DefaultName>
               <Top>1.73946cm</Top>
-              <Left>1.10083cm</Left>
+              <Left>1.2154cm</Left>
               <Height>0.37cm</Height>
               <Width>4.22043cm</Width>
               <ZIndex>11</ZIndex>
@@ -4062,7 +5953,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox41</rd:DefaultName>
               <Top>0.6cm</Top>
-              <Left>1.10083cm</Left>
+              <Left>1.2154cm</Left>
               <Height>0.47779cm</Height>
               <Width>2.46866cm</Width>
               <ZIndex>12</ZIndex>
@@ -4094,7 +5985,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox42</rd:DefaultName>
               <Top>1.31946cm</Top>
-              <Left>1.10083cm</Left>
+              <Left>1.2154cm</Left>
               <Height>0.42cm</Height>
               <Width>3.74492cm</Width>
               <ZIndex>13</ZIndex>
@@ -4126,7 +6017,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox43</rd:DefaultName>
               <Top>1.11307cm</Top>
-              <Left>1.10083cm</Left>
+              <Left>1.2154cm</Left>
               <Height>0.45cm</Height>
               <Width>2.59354cm</Width>
               <ZIndex>14</ZIndex>
@@ -4160,7 +6051,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox41</rd:DefaultName>
               <Top>0.67055cm</Top>
-              <Left>15.78338cm</Left>
+              <Left>15.71116cm</Left>
               <Height>0.47779cm</Height>
               <Width>2.25367cm</Width>
               <ZIndex>15</ZIndex>
@@ -4194,7 +6085,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox89</rd:DefaultName>
               <Top>1.06598cm</Top>
-              <Left>14.71241cm</Left>
+              <Left>14.64019cm</Left>
               <Height>0.49708cm</Height>
               <Width>5.6231cm</Width>
               <ZIndex>16</ZIndex>
@@ -4226,7 +6117,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox43</rd:DefaultName>
               <Top>1.28945cm</Top>
-              <Left>14.71241cm</Left>
+              <Left>14.64019cm</Left>
               <Height>0.45cm</Height>
               <Width>4.52089cm</Width>
               <ZIndex>17</ZIndex>
@@ -4258,7 +6149,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox42</rd:DefaultName>
               <Top>1.50112cm</Top>
-              <Left>14.71241cm</Left>
+              <Left>14.64019cm</Left>
               <Height>0.45cm</Height>
               <Width>3.74492cm</Width>
               <ZIndex>18</ZIndex>
@@ -4292,7 +6183,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox90</rd:DefaultName>
               <Top>1.73945cm</Top>
-              <Left>14.71241cm</Left>
+              <Left>14.64019cm</Left>
               <Height>0.37cm</Height>
               <Width>4.2696cm</Width>
               <ZIndex>19</ZIndex>
@@ -4324,7 +6215,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox18</rd:DefaultName>
               <Top>1.63167cm</Top>
-              <Left>9.0232cm</Left>
+              <Left>9.13777cm</Left>
               <Height>0.47779cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>20</ZIndex>
