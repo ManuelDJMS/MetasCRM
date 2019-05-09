@@ -194,7 +194,6 @@ Public Class frmEdicionCot2018_2019
     End Sub
 
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
-<<<<<<< HEAD
         ''--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         MetodoMetasCotizador()
         Dim maximo As Integer
@@ -233,12 +232,11 @@ Public Class frmEdicionCot2018_2019
 
         MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
 
-            FrmCotizacion2018.txtClave.Text = ""
-            FrmCotizacion2018.txtNombreE.Text = ""
-            FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
-            FrmCotizacion2018.DGEmpresas.DataSource = Nothing
-            Me.Dispose()
-=======
+        FrmCotizacion2018.txtClave.Text = ""
+        FrmCotizacion2018.txtNombreE.Text = ""
+        FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
+        FrmCotizacion2018.DGEmpresas.DataSource = Nothing
+        Me.Dispose()
         '''--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         'MetodoMetasCotizador()
         'comandoLIMS = conexionLIMS.CreateCommand
@@ -296,20 +294,19 @@ Public Class frmEdicionCot2018_2019
         '    FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
         '    FrmCotizacion2018.DGEmpresas.DataSource = Nothing
         '    Me.Dispose()
->>>>>>> 2412b40b41190dbb14dd736368c347ee40daad2e
         'Catch ex As Exception
         '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         '    cadena = Err.Description
         '    cadena = cadena.Replace("'", "")
         '    Bitacora("frmEdicionCot2018-2019", "Error al momento de guardar", Err.Number, cadena)
         'End Try
-<<<<<<< HEAD
+
         ''--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         MsgBox(CbModalidad.Tag.ToString)
-=======
+
         '''--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         'MsgBox(CbModalidad.Tag.ToString)
->>>>>>> 2412b40b41190dbb14dd736368c347ee40daad2e
+
     End Sub
 
     Private Sub CboValidez_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboValidez.SelectedIndexChanged
