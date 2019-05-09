@@ -37,10 +37,28 @@ Partial Class FrmModalidades
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.e = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.equipid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.d = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.df = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dep = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CalInterval = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CalCycle = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IsAc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InSiute = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Shor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -83,7 +101,7 @@ Partial Class FrmModalidades
         Me.DG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Clave, Me.Nombre})
         Me.DG.Location = New System.Drawing.Point(422, 78)
         Me.DG.Name = "DG"
-        Me.DG.Size = New System.Drawing.Size(415, 231)
+        Me.DG.Size = New System.Drawing.Size(415, 157)
         Me.DG.TabIndex = 56
         '
         'Clave
@@ -170,12 +188,111 @@ Partial Class FrmModalidades
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.e, Me.equipid, Me.d, Me.df, Me.Dep, Me.lo, Me.CalInterval, Me.CalCycle, Me.IsAc, Me.InSiute, Me.Shor, Me.Column1})
+        Me.DataGridView1.Location = New System.Drawing.Point(18, 345)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(1370, 157)
+        Me.DataGridView1.TabIndex = 61
+        '
+        'e
+        '
+        Me.e.HeaderText = "Customerid"
+        Me.e.Name = "e"
+        '
+        'equipid
+        '
+        Me.equipid.HeaderText = "equipid"
+        Me.equipid.Name = "equipid"
+        '
+        'd
+        '
+        Me.d.HeaderText = "Instrumentid"
+        Me.d.Name = "d"
+        '
+        'df
+        '
+        Me.df.HeaderText = "SrlNo"
+        Me.df.Name = "df"
+        '
+        'Dep
+        '
+        Me.Dep.HeaderText = "Dept"
+        Me.Dep.Name = "Dep"
+        '
+        'lo
+        '
+        Me.lo.HeaderText = "locatioon"
+        Me.lo.Name = "lo"
+        '
+        'CalInterval
+        '
+        Me.CalInterval.HeaderText = "CalInterval"
+        Me.CalInterval.Name = "CalInterval"
+        '
+        'CalCycle
+        '
+        Me.CalCycle.HeaderText = "Calcycle"
+        Me.CalCycle.Name = "CalCycle"
+        '
+        'IsAc
+        '
+        Me.IsAc.HeaderText = "isActive"
+        Me.IsAc.Name = "IsAc"
+        '
+        'InSiute
+        '
+        Me.InSiute.HeaderText = "OnSite"
+        Me.InSiute.Name = "InSiute"
+        '
+        'Shor
+        '
+        Me.Shor.HeaderText = "Notas"
+        Me.Shor.Name = "Shor"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Column1"
+        Me.Column1.Name = "Column1"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(804, 294)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(197, 32)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "Exporta"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(556, 294)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(197, 32)
+        Me.Button2.TabIndex = 59
+        Me.Button2.Text = "Exporta"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(-1, 541)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(1370, 189)
+        Me.DataGridView2.TabIndex = 61
+        '
         'FrmModalidades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(849, 322)
+        Me.ClientSize = New System.Drawing.Size(1499, 742)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btGuardar)
         Me.Controls.Add(Me.btNuevo)
         Me.Controls.Add(Me.txtModalidad)
@@ -189,6 +306,8 @@ Partial Class FrmModalidades
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,4 +327,20 @@ Partial Class FrmModalidades
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents e As DataGridViewTextBoxColumn
+    Friend WithEvents equipid As DataGridViewTextBoxColumn
+    Friend WithEvents d As DataGridViewTextBoxColumn
+    Friend WithEvents df As DataGridViewTextBoxColumn
+    Friend WithEvents Dep As DataGridViewTextBoxColumn
+    Friend WithEvents lo As DataGridViewTextBoxColumn
+    Friend WithEvents CalInterval As DataGridViewTextBoxColumn
+    Friend WithEvents CalCycle As DataGridViewTextBoxColumn
+    Friend WithEvents IsAc As DataGridViewTextBoxColumn
+    Friend WithEvents InSiute As DataGridViewTextBoxColumn
+    Friend WithEvents Shor As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Button2 As Button
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

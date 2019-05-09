@@ -291,6 +291,7 @@ Public Class FrmHOME
     ''End Sub
 
     Public Sub consultaProspecciones()
+
         'Try
         'conexionMetasCotizador.Open()
         Dim R As String
