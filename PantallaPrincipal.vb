@@ -11,7 +11,7 @@ Public Class PantallaPrincipal
 
     Private Sub AgregarNuevaEmpresaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         ''FrmLoginAdminVentas.ShowDialog()
-        FrmEmpresas.ShowDialog()
+        'FrmEmpresas.ShowDialog()
     End Sub
 
     Private Sub AutorizarSolicitudDeRegistroToolStripMenuItem_Click(sender As Object, e As EventArgs)

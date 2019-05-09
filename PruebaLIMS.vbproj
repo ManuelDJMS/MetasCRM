@@ -246,12 +246,6 @@
     <Compile Include="FrmCuandoCondicion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmpresas.Designer.vb">
-      <DependentUpon>FrmEmpresas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEmpresas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmLoginAdminGeneral.Designer.vb">
       <DependentUpon>FrmLoginAdminGeneral.vb</DependentUpon>
     </Compile>
@@ -441,9 +435,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCuandoCondicion.resx">
       <DependentUpon>FrmCuandoCondicion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmpresas.resx">
-      <DependentUpon>FrmEmpresas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginAdminGeneral.resx">
       <DependentUpon>FrmLoginAdminGeneral.vb</DependentUpon>
