@@ -81,7 +81,7 @@ Public Class FrmCotizacion2018
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
-                DGCotizaciones.Rows.Add(False, lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
+                DGCotizaciones.Rows.Add(False, lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
             End While
             lectorLIMS.Close()
             conexionLIMS.Close()
@@ -106,7 +106,7 @@ Public Class FrmCotizacion2018
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
-                DGCotizaciones.Rows.Add(False, lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
+                DGCotizaciones.Rows.Add(False, lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
             End While
             lectorLIMS.Close()
             conexionLIMS.Close()
@@ -165,7 +165,7 @@ Public Class FrmCotizacion2018
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
-                DGCotizaciones.Rows.Add(False, lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4))
+                DGCotizaciones.Rows.Add(False, lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
             End While
             lectorLIMS.Close()
             conexionLIMS.Close()
