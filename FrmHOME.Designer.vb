@@ -25,6 +25,7 @@ Partial Class FrmHOME
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHOME))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -67,22 +68,6 @@ Partial Class FrmHOME
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PanelRecordatorioSemana = New System.Windows.Forms.GroupBox()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.DGOportunidades = New System.Windows.Forms.DataGridView()
         Me.idOportunidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -90,19 +75,34 @@ Partial Class FrmHOME
         Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Compania = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Monto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.idTarea = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Titular = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.idTarea = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Titular = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,15 +122,17 @@ Partial Class FrmHOME
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.PanelRecordatorioSemana.SuspendLayout()
+        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel12.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         Me.Panel10.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -149,6 +151,17 @@ Partial Class FrmHOME
         Me.GroupBox1.Size = New System.Drawing.Size(1170, 57)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label29.Location = New System.Drawing.Point(26, 23)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(68, 15)
+        Me.Label29.TabIndex = 152
+        Me.Label29.Text = "Bienvenido"
         '
         'PictureBox2
         '
@@ -605,12 +618,59 @@ Partial Class FrmHOME
         Me.PanelRecordatorioSemana.TabIndex = 62
         Me.PanelRecordatorioSemana.TabStop = False
         '
+        'DGOportunidades
+        '
+        Me.DGOportunidades.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
+        Me.DGOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGOportunidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idOportunidad, Me.Nombre, Me.Apellidos, Me.Correo, Me.Compania, Me.Monto})
+        Me.DGOportunidades.GridColor = System.Drawing.Color.Gainsboro
+        Me.DGOportunidades.Location = New System.Drawing.Point(0, 39)
+        Me.DGOportunidades.Name = "DGOportunidades"
+        Me.DGOportunidades.Size = New System.Drawing.Size(721, 397)
+        Me.DGOportunidades.TabIndex = 152
+        '
+        'idOportunidad
+        '
+        Me.idOportunidad.HeaderText = "Clave Oportunidad"
+        Me.idOportunidad.Name = "idOportunidad"
+        Me.idOportunidad.Width = 70
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Titular"
+        Me.Nombre.Name = "Nombre"
+        '
+        'Apellidos
+        '
+        Me.Apellidos.HeaderText = "Apellidos"
+        Me.Apellidos.Name = "Apellidos"
+        Me.Apellidos.Width = 110
+        '
+        'Correo
+        '
+        Me.Correo.HeaderText = "Correo"
+        Me.Correo.Name = "Correo"
+        Me.Correo.Width = 150
+        '
+        'Compania
+        '
+        Me.Compania.HeaderText = "Compañia"
+        Me.Compania.Name = "Compania"
+        Me.Compania.Width = 150
+        '
+        'Monto
+        '
+        Me.Monto.HeaderText = "Monto"
+        Me.Monto.Name = "Monto"
+        '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.Silver
         Me.Panel11.Controls.Add(Me.Label1)
+        Me.Panel11.Controls.Add(Me.PictureBox5)
         Me.Panel11.Controls.Add(Me.PictureBox6)
-        Me.Panel11.Controls.Add(Me.Label24)
         Me.Panel11.Location = New System.Drawing.Point(0, 0)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(721, 42)
@@ -627,29 +687,29 @@ Partial Class FrmHOME
         Me.Label1.TabIndex = 152
         Me.Label1.Text = "Seguimiento de Oportunidades"
         '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(638, 3)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(27, 36)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 33
+        Me.PictureBox5.TabStop = False
+        '
         'PictureBox6
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(678, 6)
+        Me.PictureBox6.Location = New System.Drawing.Point(681, 3)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(27, 31)
+        Me.PictureBox6.Size = New System.Drawing.Size(26, 36)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 33
         Me.PictureBox6.TabStop = False
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(640, 22)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(32, 15)
-        Me.Label24.TabIndex = 28
-        Me.Label24.Text = "Abrir"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
@@ -699,16 +759,71 @@ Partial Class FrmHOME
         Me.GroupBox4.TabIndex = 64
         Me.GroupBox4.TabStop = False
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idTarea, Me.Descripcion, Me.Titular})
+        Me.DataGridView2.GridColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 42)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(383, 599)
+        Me.DataGridView2.TabIndex = 152
+        '
+        'idTarea
+        '
+        Me.idTarea.HeaderText = "idTarea"
+        Me.idTarea.Name = "idTarea"
+        Me.idTarea.Width = 50
+        '
+        'Descripcion
+        '
+        Me.Descripcion.HeaderText = "Descripción"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.Width = 180
+        '
+        'Titular
+        '
+        Me.Titular.HeaderText = "Titular"
+        Me.Titular.Name = "Titular"
+        Me.Titular.Width = 110
+        '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.Silver
-        Me.Panel12.Controls.Add(Me.Label14)
         Me.Panel12.Controls.Add(Me.PictureBox7)
-        Me.Panel12.Controls.Add(Me.Label25)
+        Me.Panel12.Controls.Add(Me.PictureBox8)
+        Me.Panel12.Controls.Add(Me.Label14)
         Me.Panel12.Location = New System.Drawing.Point(1, 0)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(382, 42)
         Me.Panel12.TabIndex = 151
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(299, 3)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(27, 36)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 153
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(342, 3)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(26, 36)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 154
+        Me.PictureBox8.TabStop = False
         '
         'Label14
         '
@@ -754,88 +869,6 @@ Partial Class FrmHOME
         Me.Label20.TabIndex = 135
         Me.Label20.Text = "*"
         '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(302, 21)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(32, 15)
-        Me.Label25.TabIndex = 28
-        Me.Label25.Text = "Abrir"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(340, 5)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(27, 31)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 33
-        Me.PictureBox7.TabStop = False
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label29.Location = New System.Drawing.Point(26, 23)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(68, 15)
-        Me.Label29.TabIndex = 152
-        Me.Label29.Text = "Bienvenido"
-        '
-        'DGOportunidades
-        '
-        Me.DGOportunidades.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DGOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        Me.DGOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGOportunidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idOportunidad, Me.Nombre, Me.Apellidos, Me.Correo, Me.Compania, Me.Monto})
-        Me.DGOportunidades.GridColor = System.Drawing.Color.Gainsboro
-        Me.DGOportunidades.Location = New System.Drawing.Point(0, 39)
-        Me.DGOportunidades.Name = "DGOportunidades"
-        Me.DGOportunidades.Size = New System.Drawing.Size(721, 397)
-        Me.DGOportunidades.TabIndex = 152
-        '
-        'idOportunidad
-        '
-        Me.idOportunidad.HeaderText = "Clave Oportunidad"
-        Me.idOportunidad.Name = "idOportunidad"
-        Me.idOportunidad.Width = 70
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Titular"
-        Me.Nombre.Name = "Nombre"
-        '
-        'Apellidos
-        '
-        Me.Apellidos.HeaderText = "Apellidos"
-        Me.Apellidos.Name = "Apellidos"
-        Me.Apellidos.Width = 110
-        '
-        'Correo
-        '
-        Me.Correo.HeaderText = "Correo"
-        Me.Correo.Name = "Correo"
-        Me.Correo.Width = 150
-        '
-        'Compania
-        '
-        Me.Compania.HeaderText = "Compañia"
-        Me.Compania.Name = "Compania"
-        Me.Compania.Width = 150
-        '
-        'Monto
-        '
-        Me.Monto.HeaderText = "Monto"
-        Me.Monto.Name = "Monto"
-        '
         'GroupBox5
         '
         Me.GroupBox5.BackColor = System.Drawing.Color.Gainsboro
@@ -853,6 +886,39 @@ Partial Class FrmHOME
         Me.GroupBox5.TabIndex = 62
         Me.GroupBox5.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(350, 115)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(141, 33)
+        Me.Button2.TabIndex = 173
+        Me.Button2.Text = "Guardar tarea"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(23, 90)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(310, 58)
+        Me.TextBox1.TabIndex = 170
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(20, 72)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(221, 15)
+        Me.Label26.TabIndex = 152
+        Me.Label26.Text = "¿Tíenes una nueva tarea? Guardala aquí"
+        '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Silver
@@ -869,9 +935,9 @@ Partial Class FrmHOME
         Me.Label22.ForeColor = System.Drawing.Color.Black
         Me.Label22.Location = New System.Drawing.Point(9, 13)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(178, 15)
+        Me.Label22.Size = New System.Drawing.Size(83, 15)
         Me.Label22.TabIndex = 152
-        Me.Label22.Text = "Seguimiento de Oportunidades"
+        Me.Label22.Text = "Tareas rápidas"
         '
         'Label27
         '
@@ -905,70 +971,6 @@ Partial Class FrmHOME
         Me.Label32.Size = New System.Drawing.Size(17, 19)
         Me.Label32.TabIndex = 135
         Me.Label32.Text = "*"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idTarea, Me.Descripcion, Me.Titular})
-        Me.DataGridView2.GridColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView2.Location = New System.Drawing.Point(0, 42)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(383, 599)
-        Me.DataGridView2.TabIndex = 152
-        '
-        'idTarea
-        '
-        Me.idTarea.HeaderText = "idTarea"
-        Me.idTarea.Name = "idTarea"
-        Me.idTarea.Width = 50
-        '
-        'Descripcion
-        '
-        Me.Descripcion.HeaderText = "Descripción"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.Width = 180
-        '
-        'Titular
-        '
-        Me.Titular.HeaderText = "Titular"
-        Me.Titular.Name = "Titular"
-        Me.Titular.Width = 110
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(20, 72)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(221, 15)
-        Me.Label26.TabIndex = 152
-        Me.Label26.Text = "¿Tíenes una nueva tarea? Guardala aquí"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(23, 90)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(310, 58)
-        Me.TextBox1.TabIndex = 170
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(350, 115)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(141, 33)
-        Me.Button2.TabIndex = 173
-        Me.Button2.Text = "Guardar tarea"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'FrmHOME
         '
@@ -1028,20 +1030,22 @@ Partial Class FrmHOME
         Me.Panel9.PerformLayout()
         Me.PanelRecordatorioSemana.ResumeLayout(False)
         Me.PanelRecordatorioSemana.PerformLayout()
+        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1101,9 +1105,6 @@ Partial Class FrmHOME
     Friend WithEvents Label20 As Label
     Friend WithEvents Panel11 As Panel
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Label24 As Label
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Label25 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents DGOportunidades As DataGridView
     Friend WithEvents idOportunidad As DataGridViewTextBoxColumn
@@ -1125,4 +1126,7 @@ Partial Class FrmHOME
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
 End Class
