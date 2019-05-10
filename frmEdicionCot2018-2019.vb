@@ -162,6 +162,13 @@ Public Class frmEdicionCot2018_2019
         CboValidez.Tag = lectorMetasCotizador(0)
         CboValidez.Text = lectorMetasCotizador(1)
         lectorMetasCotizador.Close()
+        For Each fila In DGCotizaciones.Rows
+            subtotal += Convert.ToDecimal(fila.Cells("precioUnitario").Value)
+        Next
+        iva = (subtotal * 0.16)
+        total = subtotal + iva
+        TextSubtotal.Text = subtotal
+        TextTotal.Text = total
         'Catch ex As Exception
         '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
         '    cadena = Err.Description
@@ -207,11 +214,7 @@ Public Class frmEdicionCot2018_2019
         comandoMetasCotizador = conexionMetasCotizador.CreateCommand
         fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
         fecharecepcion = Convert.ToDateTime(DTPHasta.Text).ToShortDateString
-        For Each fila In DGCotizaciones.Rows
-            subtotal += Convert.ToDecimal(fila.Cells("precioUnitario").Value)
-        Next
-        iva = (subtotal * 0.16)
-        total = subtotal + iva
+
         R = "insert into Cotizaciones (NumCot,idContacto,Origen,idLugarCondicion,idCuandoCondicion,idModalidadCondicion,idTiempoEntregaCondicion,idPagoCondicion,idLeyendaCondicion,
         idValidezCondicion,idMonedaCondicion,idDocumentoCondicion,idModoCont,Referencia,FechaDesde,FechaHasta,Observaciones,idUsuarioCotizacion,Subtotal,IVA,Total)
              values (" & maximo & "," & Val(txtCveContacto.Text) & ",'" & origen & "'," & Val(cboServicio.Tag) & "," & Val(Cbcuando.Tag) & "," & Val(CbModalidad.Tag) & "," & Val(CboTiempo.Tag) & "," &
@@ -349,4 +352,14 @@ Public Class frmEdicionCot2018_2019
         lectorMetasCotizador.Close()
     End Sub
 
+    Private Sub DGCotizaciones_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellEndEdit
+        subtotal = 0
+        For Each fila In DGCotizaciones.Rows
+            subtotal += (Convert.ToDecimal(fila.Cells("precioUnitario").Value) * Convert.ToDecimal(fila.Cells("cantidad").Value))
+        Next
+        iva = (subtotal * 0.16)
+        total = subtotal + iva
+        TextSubtotal.Text = subtotal
+        TextTotal.Text = total
+    End Sub
 End Class

@@ -102,6 +102,10 @@ Partial Class frmEdicionCot2018_2019
         Me.Label36 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label38 = New System.Windows.Forms.Label()
+        Me.TextSubtotal = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.TextTotal = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -118,6 +122,10 @@ Partial Class frmEdicionCot2018_2019
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.TextTotal)
+        Me.Panel1.Controls.Add(Me.Label29)
+        Me.Panel1.Controls.Add(Me.TextSubtotal)
+        Me.Panel1.Controls.Add(Me.Label28)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.DGCotizaciones)
@@ -126,7 +134,7 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel1.Controls.Add(Me.dgInicioNombres)
         Me.Panel1.Location = New System.Drawing.Point(8, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1220, 654)
+        Me.Panel1.Size = New System.Drawing.Size(1220, 666)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
@@ -187,7 +195,7 @@ Partial Class frmEdicionCot2018_2019
         Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partida, Me.Column1, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.intervalo, Me.precioUnitario, Me.Column2})
         Me.DGCotizaciones.Location = New System.Drawing.Point(8, 366)
         Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.Size = New System.Drawing.Size(1202, 285)
+        Me.DGCotizaciones.Size = New System.Drawing.Size(1202, 245)
         Me.DGCotizaciones.TabIndex = 156
         '
         'partida
@@ -909,12 +917,48 @@ Partial Class frmEdicionCot2018_2019
         Me.Label38.TabIndex = 152
         Me.Label38.Text = "Cotización"
         '
+        'TextSubtotal
+        '
+        Me.TextSubtotal.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextSubtotal.Location = New System.Drawing.Point(1107, 617)
+        Me.TextSubtotal.Name = "TextSubtotal"
+        Me.TextSubtotal.Size = New System.Drawing.Size(88, 21)
+        Me.TextSubtotal.TabIndex = 182
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(1043, 619)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(59, 14)
+        Me.Label28.TabIndex = 183
+        Me.Label28.Text = "Subtotal:"
+        '
+        'TextTotal
+        '
+        Me.TextTotal.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextTotal.Location = New System.Drawing.Point(1107, 640)
+        Me.TextTotal.Name = "TextTotal"
+        Me.TextTotal.Size = New System.Drawing.Size(88, 21)
+        Me.TextTotal.TabIndex = 184
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(1043, 642)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(40, 14)
+        Me.Label29.TabIndex = 185
+        Me.Label29.Text = "Total:"
+        '
         'frmEdicionCot2018_2019
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ClientSize = New System.Drawing.Size(1237, 698)
+        Me.ClientSize = New System.Drawing.Size(1237, 710)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Label13)
@@ -928,6 +972,7 @@ Partial Class frmEdicionCot2018_2019
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cotización 2018"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel6.ResumeLayout(False)
@@ -1026,4 +1071,8 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Label15 As Label
     Friend WithEvents txtReferencia As TextBox
     Friend WithEvents Label22 As Label
+    Friend WithEvents TextTotal As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents TextSubtotal As TextBox
+    Friend WithEvents Label28 As Label
 End Class
