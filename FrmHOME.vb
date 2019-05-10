@@ -323,10 +323,6 @@ Public Class FrmHOME
         End Try
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
-    End Sub
-
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         FrmModalidades.Show()
     End Sub
