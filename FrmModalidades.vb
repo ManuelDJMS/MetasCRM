@@ -74,4 +74,11 @@ Public Class FrmModalidades
             MsgBox("Error de lectura de datos.", MsgBoxStyle.Information)
         End Try
     End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+        Dim Admin As New FrmCotizadorLIMS
+
+        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        Admin.Show()
+    End Sub
 End Class
