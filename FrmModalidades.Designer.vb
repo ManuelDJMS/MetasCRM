@@ -23,14 +23,17 @@ Partial Class FrmModalidades
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModalidades))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabProspectos = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtidProspeccion = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtidProspecto = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtMonto = New System.Windows.Forms.Label()
         Me.txtOrigen = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.Label()
@@ -112,9 +115,6 @@ Partial Class FrmModalidades
         Me.IndicadorWorking2 = New System.Windows.Forms.PictureBox()
         Me.IndicadorNo2 = New System.Windows.Forms.PictureBox()
         Me.IndicadorConvertido2 = New System.Windows.Forms.PictureBox()
-        Me.txtidProspeccion = New System.Windows.Forms.Label()
-        Me.txtidProspecto = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabProspectos.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -210,6 +210,17 @@ Partial Class FrmModalidades
         Me.Label9.TabIndex = 152
         Me.Label9.Text = "Prospección"
         '
+        'txtidProspeccion
+        '
+        Me.txtidProspeccion.AutoSize = True
+        Me.txtidProspeccion.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtidProspeccion.Location = New System.Drawing.Point(220, 7)
+        Me.txtidProspeccion.Name = "txtidProspeccion"
+        Me.txtidProspeccion.Size = New System.Drawing.Size(74, 14)
+        Me.txtidProspeccion.TabIndex = 160
+        Me.txtidProspeccion.Text = "idProspeccion"
+        Me.txtidProspeccion.Visible = False
+        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.LightGray
@@ -231,6 +242,17 @@ Partial Class FrmModalidades
         Me.Label6.TabIndex = 152
         Me.Label6.Text = "Información relacionada al prospecto"
         '
+        'txtidProspecto
+        '
+        Me.txtidProspecto.AutoSize = True
+        Me.txtidProspecto.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtidProspecto.Location = New System.Drawing.Point(267, 7)
+        Me.txtidProspecto.Name = "txtidProspecto"
+        Me.txtidProspecto.Size = New System.Drawing.Size(64, 14)
+        Me.txtidProspecto.TabIndex = 160
+        Me.txtidProspecto.Text = "idProspecto"
+        Me.txtidProspecto.Visible = False
+        '
         'Label21
         '
         Me.Label21.AutoSize = True
@@ -242,6 +264,17 @@ Partial Class FrmModalidades
         Me.Label21.Size = New System.Drawing.Size(58, 14)
         Me.Label21.TabIndex = 164
         Me.Label21.Text = "click aquí"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(504, 628)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(23, 26)
+        Me.Label2.TabIndex = 164
+        Me.Label2.Text = "$"
         '
         'txtMonto
         '
@@ -627,14 +660,14 @@ Partial Class FrmModalidades
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsulta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsulta.Location = New System.Drawing.Point(6, 116)
         Me.DGConsulta.Name = "DGConsulta"
@@ -761,7 +794,7 @@ Partial Class FrmModalidades
         Me.Panel6.Controls.Add(Me.Label16)
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1140, 66)
+        Me.Panel6.Size = New System.Drawing.Size(880, 66)
         Me.Panel6.TabIndex = 151
         '
         'Label13
@@ -1128,39 +1161,6 @@ Partial Class FrmModalidades
         Me.IndicadorConvertido2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.IndicadorConvertido2.TabIndex = 164
         Me.IndicadorConvertido2.TabStop = False
-        '
-        'txtidProspeccion
-        '
-        Me.txtidProspeccion.AutoSize = True
-        Me.txtidProspeccion.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtidProspeccion.Location = New System.Drawing.Point(220, 7)
-        Me.txtidProspeccion.Name = "txtidProspeccion"
-        Me.txtidProspeccion.Size = New System.Drawing.Size(74, 14)
-        Me.txtidProspeccion.TabIndex = 160
-        Me.txtidProspeccion.Text = "idProspeccion"
-        Me.txtidProspeccion.Visible = False
-        '
-        'txtidProspecto
-        '
-        Me.txtidProspecto.AutoSize = True
-        Me.txtidProspecto.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtidProspecto.Location = New System.Drawing.Point(267, 7)
-        Me.txtidProspecto.Name = "txtidProspecto"
-        Me.txtidProspecto.Size = New System.Drawing.Size(64, 14)
-        Me.txtidProspecto.TabIndex = 160
-        Me.txtidProspecto.Text = "idProspecto"
-        Me.txtidProspecto.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(504, 628)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(23, 26)
-        Me.Label2.TabIndex = 164
-        Me.Label2.Text = "$"
         '
         'FrmModalidades
         '
