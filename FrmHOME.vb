@@ -127,7 +127,7 @@ Public Class FrmHOME
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
         Dim Admin As New FrmCotizadorLIMS
         Admin.MdiParent = Me
-        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
         Admin.Show()
         Panel1.BackColor = Color.DimGray
         Panel2.BackColor = Color.DimGray
@@ -152,7 +152,7 @@ Public Class FrmHOME
     Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
         Dim Admin As New FrmCotizadorLIMS
         Admin.MdiParent = Me
-        Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
+        'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
         Admin.Show()
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
