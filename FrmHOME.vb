@@ -51,11 +51,14 @@ Public Class FrmHOME
         Panel4.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
         Panel7.BackColor = Color.DimGray
-
+        Panel14.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
         Label7.ForeColor = Color.Black
         Label13.ForeColor = Color.White
         Label6.ForeColor = Color.White
         Label17.ForeColor = Color.White
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
@@ -118,11 +121,14 @@ Public Class FrmHOME
         Panel4.BackColor = Color.Gainsboro
         Panel9.BackColor = Color.DimGray
         Panel7.BackColor = Color.DimGray
-
+        Panel14.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
         Label7.ForeColor = Color.White
         Label13.ForeColor = Color.Black
         Label6.ForeColor = Color.White
         Label17.ForeColor = Color.White
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
@@ -141,6 +147,7 @@ Public Class FrmHOME
         Admin.Show()
         Panel1.BackColor = Color.DimGray
         Panel2.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
         Panel3.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
         ' Panel5.BackColor = Color.SteelBlue
@@ -149,6 +156,8 @@ Public Class FrmHOME
         Panel8.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
         Label15.ForeColor = Color.Black
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
         ' MsgBox("Modulo en mantenimiento")
 
 
@@ -167,15 +176,20 @@ Public Class FrmHOME
         Admin.MdiParent = Me
         'Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text
         Admin.Show()
+
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
         Panel7.BackColor = Color.Gainsboro
-
+        Panel14.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
         Label7.ForeColor = Color.White
         Label13.ForeColor = Color.White
         Label6.ForeColor = Color.White
         Label17.ForeColor = Color.Black
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
+
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
         Panel12.Visible = False
@@ -224,11 +238,14 @@ Public Class FrmHOME
         Panel4.BackColor = Color.DimGray
         Panel9.BackColor = Color.Gainsboro
         Panel7.BackColor = Color.DimGray
-
+        Panel14.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
         Label7.ForeColor = Color.White
         Label13.ForeColor = Color.White
         Label6.ForeColor = Color.Black
         Label17.ForeColor = Color.White
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
@@ -247,15 +264,22 @@ Public Class FrmHOME
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
         FrmCotizacion2018.MdiParent = Me
         FrmCotizacion2018.Show()
+
+
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
         Panel9.BackColor = Color.DimGray
-        Panel5.BackColor = Color.DimGray
         Panel7.BackColor = Color.DimGray
-        Panel14.BackColor = Color.SteelBlue
-        Panel15.BackColor = Color.DimGray
-        Panel6.BackColor = Color.DimGray
-        Panel8.BackColor = Color.DimGray
+        Panel14.BackColor = Color.Gainsboro
+        Panel16.BackColor = Color.DimGray
+        Label7.ForeColor = Color.White
+        Label13.ForeColor = Color.White
+        Label6.ForeColor = Color.White
+        Label17.ForeColor = Color.White
+        Label30.ForeColor = Color.Black
+        Label36.ForeColor = Color.White
+
+
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
@@ -267,7 +291,7 @@ Public Class FrmHOME
         ''--------------------------------------
     End Sub
 
-    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click, Label36.Click
+    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
         FrmFoliosDelAnioAnterior.MdiParent = Me
         FrmFoliosDelAnioAnterior.Show()
         ' Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text ''------------
@@ -278,9 +302,12 @@ Public Class FrmHOME
         Panel5.BackColor = Color.DimGray
         Panel7.BackColor = Color.DimGray
         Panel14.BackColor = Color.DimGray
-        Panel15.BackColor = Color.SteelBlue
+        Panel15.BackColor = Color.Gainsboro
         Panel6.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
         Panel8.BackColor = Color.DimGray
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
         Panel12.Visible = False
@@ -430,5 +457,33 @@ Public Class FrmHOME
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         consultaProspecciones()
+    End Sub
+
+    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
+        FrmAutorizarSolicitudes.MdiParent = Me
+        FrmAutorizarSolicitudes.Show()
+
+        Panel1.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel14.BackColor = Color.DimGray
+        Panel16.BackColor = Color.Gainsboro
+        Label7.ForeColor = Color.White
+        Label13.ForeColor = Color.White
+        Label6.ForeColor = Color.White
+        Label17.ForeColor = Color.White
+        Label30.ForeColor = Color.White
+
+        Label36.ForeColor = Color.Black
+
+        ''-----------Poner invisibles----------
+        GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
+        ''--------------------------------------
     End Sub
 End Class
