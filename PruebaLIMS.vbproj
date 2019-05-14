@@ -126,6 +126,12 @@
     <Compile Include="Cotizaciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCotizadorLIMS.Designer.vb">
+      <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCotizadorLIMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCotPorFolio.Designer.vb">
       <DependentUpon>FrmCotPorFolio.vb</DependentUpon>
     </Compile>
@@ -208,12 +214,6 @@
       <DependentUpon>frmCotizacionPorArticulo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCotizacionPorArticulo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCotizadorLIMS.Designer.vb">
-      <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCotizadorLIMS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEdicionCot2018-2019.Designer.vb">
@@ -376,6 +376,9 @@
     <EmbeddedResource Include="Cotizaciones.resx">
       <DependentUpon>Cotizaciones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCotizadorLIMS.resx">
+      <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCotPorFolio.resx">
       <DependentUpon>FrmCotPorFolio.vb</DependentUpon>
     </EmbeddedResource>
@@ -417,9 +420,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCotizacionPorArticulo.resx">
       <DependentUpon>frmCotizacionPorArticulo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCotizadorLIMS.resx">
-      <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEdicionCot2018-2019.resx">
       <DependentUpon>frmEdicionCot2018-2019.vb</DependentUpon>
