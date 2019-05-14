@@ -42,10 +42,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.txtCompaniaB = New System.Windows.Forms.TextBox()
         Me.txtCorreoB = New System.Windows.Forms.TextBox()
         Me.txtNombreB = New System.Windows.Forms.TextBox()
-        Me.cbClave = New System.Windows.Forms.CheckBox()
-        Me.cbTelefono = New System.Windows.Forms.CheckBox()
-        Me.cbNombre = New System.Windows.Forms.CheckBox()
-        Me.cbCorreo = New System.Windows.Forms.CheckBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabInformacionPersonal = New System.Windows.Forms.TabPage()
@@ -337,10 +333,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.TabPage2.Controls.Add(Me.txtCompaniaB)
         Me.TabPage2.Controls.Add(Me.txtCorreoB)
         Me.TabPage2.Controls.Add(Me.txtNombreB)
-        Me.TabPage2.Controls.Add(Me.cbClave)
-        Me.TabPage2.Controls.Add(Me.cbTelefono)
-        Me.TabPage2.Controls.Add(Me.cbNombre)
-        Me.TabPage2.Controls.Add(Me.cbCorreo)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -390,7 +382,7 @@ Partial Class FrmAutorizarSolicitudes
         '
         'DGConsulta
         '
-        Me.DGConsulta.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGConsulta.BackgroundColor = System.Drawing.Color.DimGray
         Me.DGConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGConsulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -499,54 +491,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.txtNombreB.Name = "txtNombreB"
         Me.txtNombreB.Size = New System.Drawing.Size(158, 20)
         Me.txtNombreB.TabIndex = 126
-        '
-        'cbClave
-        '
-        Me.cbClave.AutoSize = True
-        Me.cbClave.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cbClave.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbClave.Location = New System.Drawing.Point(989, 585)
-        Me.cbClave.Name = "cbClave"
-        Me.cbClave.Size = New System.Drawing.Size(136, 22)
-        Me.cbClave.TabIndex = 63
-        Me.cbClave.Text = "Clave de contacto"
-        Me.cbClave.UseVisualStyleBackColor = True
-        '
-        'cbTelefono
-        '
-        Me.cbTelefono.AutoSize = True
-        Me.cbTelefono.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cbTelefono.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbTelefono.Location = New System.Drawing.Point(1043, 586)
-        Me.cbTelefono.Name = "cbTelefono"
-        Me.cbTelefono.Size = New System.Drawing.Size(82, 22)
-        Me.cbTelefono.TabIndex = 62
-        Me.cbTelefono.Text = "Teléfono"
-        Me.cbTelefono.UseVisualStyleBackColor = True
-        '
-        'cbNombre
-        '
-        Me.cbNombre.AutoSize = True
-        Me.cbNombre.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cbNombre.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbNombre.Location = New System.Drawing.Point(982, 585)
-        Me.cbNombre.Name = "cbNombre"
-        Me.cbNombre.Size = New System.Drawing.Size(153, 22)
-        Me.cbNombre.TabIndex = 61
-        Me.cbNombre.Text = "Nombre de contacto"
-        Me.cbNombre.UseVisualStyleBackColor = True
-        '
-        'cbCorreo
-        '
-        Me.cbCorreo.AutoSize = True
-        Me.cbCorreo.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cbCorreo.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cbCorreo.Location = New System.Drawing.Point(989, 588)
-        Me.cbCorreo.Name = "cbCorreo"
-        Me.cbCorreo.Size = New System.Drawing.Size(69, 22)
-        Me.cbCorreo.TabIndex = 60
-        Me.cbCorreo.Text = "Correo"
-        Me.cbCorreo.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
@@ -3187,10 +3131,6 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents txtCompaniaB As TextBox
     Friend WithEvents txtCorreoB As TextBox
     Friend WithEvents txtNombreB As TextBox
-    Friend WithEvents cbClave As CheckBox
-    Friend WithEvents cbTelefono As CheckBox
-    Friend WithEvents cbNombre As CheckBox
-    Friend WithEvents cbCorreo As CheckBox
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabInformacionPersonal As TabPage
