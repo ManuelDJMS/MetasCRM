@@ -132,6 +132,8 @@ Partial Class FrmHOME
         Me.comena = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.Label36 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -165,6 +167,7 @@ Partial Class FrmHOME
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGLlamadas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
+        Me.Panel16.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -278,7 +281,7 @@ Partial Class FrmHOME
         '
         Me.Panel3.BackColor = System.Drawing.Color.DimGray
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(4, 538)
+        Me.Panel3.Location = New System.Drawing.Point(4, 583)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(203, 45)
         Me.Panel3.TabIndex = 39
@@ -300,7 +303,7 @@ Partial Class FrmHOME
         '
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Location = New System.Drawing.Point(3, 550)
+        Me.Panel2.Location = New System.Drawing.Point(3, 596)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(203, 45)
         Me.Panel2.TabIndex = 38
@@ -373,12 +376,14 @@ Partial Class FrmHOME
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.Panel16)
         Me.GroupBox3.Controls.Add(Me.Panel15)
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Label23)
         Me.GroupBox3.Controls.Add(Me.txtRol)
         Me.GroupBox3.Controls.Add(Me.PictureBox1)
         Me.GroupBox3.Controls.Add(Me.txtNombreAdmin)
+        Me.GroupBox3.Controls.Add(Me.Panel8)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Panel3)
         Me.GroupBox3.Controls.Add(Me.GroupBox2)
@@ -395,7 +400,7 @@ Partial Class FrmHOME
         '
         Me.Panel15.BackColor = System.Drawing.Color.DimGray
         Me.Panel15.Controls.Add(Me.Label31)
-        Me.Panel15.Location = New System.Drawing.Point(0, 487)
+        Me.Panel15.Location = New System.Drawing.Point(0, 564)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(212, 45)
         Me.Panel15.TabIndex = 43
@@ -589,7 +594,7 @@ Partial Class FrmHOME
         '
         Me.Panel6.BackColor = System.Drawing.Color.DimGray
         Me.Panel6.Controls.Add(Me.Label19)
-        Me.Panel6.Location = New System.Drawing.Point(-3, 554)
+        Me.Panel6.Location = New System.Drawing.Point(-3, 605)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(212, 45)
         Me.Panel6.TabIndex = 42
@@ -608,7 +613,7 @@ Partial Class FrmHOME
         '
         Me.Panel8.BackColor = System.Drawing.Color.DimGray
         Me.Panel8.Controls.Add(Me.Label21)
-        Me.Panel8.Location = New System.Drawing.Point(-3, 600)
+        Me.Panel8.Location = New System.Drawing.Point(1, 637)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(212, 45)
         Me.Panel8.TabIndex = 43
@@ -1222,6 +1227,28 @@ Partial Class FrmHOME
         Me.GroupBox6.TabIndex = 66
         Me.GroupBox6.TabStop = False
         '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.DimGray
+        Me.Panel16.Controls.Add(Me.Label36)
+        Me.Panel16.Location = New System.Drawing.Point(-1, 487)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(212, 45)
+        Me.Panel16.TabIndex = 43
+        Me.Panel16.Visible = False
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label36.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.ForeColor = System.Drawing.Color.YellowGreen
+        Me.Label36.Location = New System.Drawing.Point(10, 13)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(118, 18)
+        Me.Label36.TabIndex = 0
+        Me.Label36.Text = "Ordenes de venta"
+        '
         'FrmHOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1234,7 +1261,6 @@ Partial Class FrmHOME
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.PanelRecordatorioSemana)
         Me.Controls.Add(Me.Panel9)
-        Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
@@ -1303,6 +1329,8 @@ Partial Class FrmHOME
         CType(Me.DGLlamadas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel16.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1403,4 +1431,6 @@ Partial Class FrmHOME
     Friend WithEvents comena As DataGridViewTextBoxColumn
     Friend WithEvents fecha As DataGridViewTextBoxColumn
     Friend WithEvents DTPFechaTarea As DateTimePicker
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents Label36 As Label
 End Class
