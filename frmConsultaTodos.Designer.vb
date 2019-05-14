@@ -23,8 +23,8 @@ Partial Class frmConsultaTodos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaTodos))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextID = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -157,7 +157,7 @@ Partial Class frmConsultaTodos
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(1154, 1)
+        Me.PictureBox5.Location = New System.Drawing.Point(1204, 1)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -170,14 +170,14 @@ Partial Class frmConsultaTodos
         Me.DGCarrito.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCarrito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCarrito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCarrito.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCarrito.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCarrito.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
         Me.DGCarrito.Location = New System.Drawing.Point(607, 304)
@@ -249,14 +249,14 @@ Partial Class frmConsultaTodos
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ckSeleccionar, Me.partida, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.id, Me.intervalo, Me.precioUnitario, Me.precioTotal})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 335)
@@ -639,7 +639,7 @@ Partial Class frmConsultaTodos
         Me.TabConsulta.Multiline = True
         Me.TabConsulta.Name = "TabConsulta"
         Me.TabConsulta.SelectedIndex = 0
-        Me.TabConsulta.Size = New System.Drawing.Size(1178, 694)
+        Me.TabConsulta.Size = New System.Drawing.Size(1228, 694)
         Me.TabConsulta.TabIndex = 46
         '
         'TabFolios
@@ -658,7 +658,7 @@ Partial Class frmConsultaTodos
         Me.TabFolios.Location = New System.Drawing.Point(4, 24)
         Me.TabFolios.Name = "TabFolios"
         Me.TabFolios.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabFolios.Size = New System.Drawing.Size(1170, 666)
+        Me.TabFolios.Size = New System.Drawing.Size(1220, 666)
         Me.TabFolios.TabIndex = 5
         Me.TabFolios.Text = "Cotización "
         '
@@ -987,7 +987,7 @@ Partial Class frmConsultaTodos
         Me.btMinimizar.BackColor = System.Drawing.Color.Transparent
         Me.btMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btMinimizar.Image = CType(resources.GetObject("btMinimizar.Image"), System.Drawing.Image)
-        Me.btMinimizar.Location = New System.Drawing.Point(1088, 1)
+        Me.btMinimizar.Location = New System.Drawing.Point(1138, 1)
         Me.btMinimizar.Name = "btMinimizar"
         Me.btMinimizar.Size = New System.Drawing.Size(24, 24)
         Me.btMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1000,7 +1000,7 @@ Partial Class frmConsultaTodos
         Me.Label33.Cursor = System.Windows.Forms.Cursors.No
         Me.Label33.Font = New System.Drawing.Font("Calibri Light", 10.0!)
         Me.Label33.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label33.Location = New System.Drawing.Point(1018, 7)
+        Me.Label33.Location = New System.Drawing.Point(1068, 7)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(65, 17)
         Me.Label33.TabIndex = 159
@@ -1012,7 +1012,7 @@ Partial Class frmConsultaTodos
         Me.Label19.Cursor = System.Windows.Forms.Cursors.No
         Me.Label19.Font = New System.Drawing.Font("Calibri Light", 10.0!)
         Me.Label19.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label19.Location = New System.Drawing.Point(1119, 7)
+        Me.Label19.Location = New System.Drawing.Point(1169, 7)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(32, 17)
         Me.Label19.TabIndex = 161
@@ -1023,7 +1023,7 @@ Partial Class frmConsultaTodos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ClientSize = New System.Drawing.Size(1185, 709)
+        Me.ClientSize = New System.Drawing.Size(1237, 710)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.btMinimizar)
