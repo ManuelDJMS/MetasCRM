@@ -29,10 +29,13 @@ Partial Class FrmAutorizarSolicitudes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(944, 451)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.ClientSize = New System.Drawing.Size(1157, 673)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Location = New System.Drawing.Point(203, 47)
         Me.MaximizeBox = False
         Me.Name = "FrmAutorizarSolicitudes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Autorizaciòn de solicitudes"
         Me.ResumeLayout(False)
 
