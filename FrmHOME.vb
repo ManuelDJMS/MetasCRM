@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmHOME
     Private Sub FrmHOME_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MetodoMetasCotizador()
+
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.SetToolTip(Panel1, "Consulta y asigna datos dentro de MetAs")
         Me.ToolTip1.IsBalloon = True
@@ -30,6 +30,11 @@ Public Class FrmHOME
         consultaProspecciones()
         alternarColorColumnas(DGOportunidades)
 
+        consultaTareas()
+        alternarColorColumnas(DGTareas)
+
+        consultaLlamadas()
+        alternarColorColumnas(DGLlamadas)
     End Sub
     Private Sub GroupBox4_Enter(sender As Object, e As EventArgs)
 
@@ -53,8 +58,10 @@ Public Class FrmHOME
         Label17.ForeColor = Color.White
 
         ''-----------Poner invisibles----------
-
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -119,6 +126,9 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -144,6 +154,9 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -165,6 +178,9 @@ Public Class FrmHOME
         Label17.ForeColor = Color.Black
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -216,6 +232,9 @@ Public Class FrmHOME
 
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
         GroupBox4.Visible = False
         ''--------------------------------------
@@ -239,9 +258,12 @@ Public Class FrmHOME
         Panel8.BackColor = Color.DimGray
 
         ''-----------Poner invisibles----------
-        GroupBox4.Visible = False
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
 
@@ -261,7 +283,11 @@ Public Class FrmHOME
         Panel8.BackColor = Color.DimGray
         ''-----------Poner invisibles----------
         GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
         PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
 
@@ -291,26 +317,76 @@ Public Class FrmHOME
     ''End Sub
 
     Public Sub consultaProspecciones()
-
-        'Try
-        'conexionMetasCotizador.Open()
-        Dim R As String
-        R = "select Oportunidades.idOportunidad, Prospeccion.idProspeccion, Prospectos.Nombre, Prospectos.Apellidos, Prospectos.Correo, Prospectos.Compania, Prospeccion.Monto 
+        Try
+            DGOportunidades.Rows.Clear()
+            MetodoMetasCotizador()
+            'conexionMetasCotizador.Open()
+            Dim R As String
+            R = "select Oportunidades.idOportunidad, Prospeccion.idProspeccion, Prospectos.Nombre, Prospectos.Apellidos, Prospectos.Correo, Prospectos.Compania, Prospeccion.Monto 
                 from Oportunidades inner join Prospeccion on Oportunidades.idProspeccion= Prospeccion.idProspeccion inner join Prospectos on Prospectos.idProspecto= Prospeccion.idProspecto order by Prospeccion.Monto desc"
-        Dim comando As New SqlCommand(R, conexionMetasCotizador)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        While lector.Read()
-            DGOportunidades.Rows.Add(lector(0), lector(2), lector(3), lector(4), lector(5), lector(6))
-        End While
-        lector.Close()
-        For Each fila As DataGridViewRow In DGOportunidades.Rows
-            fila.Cells("Monto").Style.BackColor = Color.DarkSeaGreen
-        Next
-        conexionMetasCotizador.Close()
-        'Catch ex As Exception
-        '    MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Critical)
-        'End Try
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                DGOportunidades.Rows.Add(lector(0), lector(2), lector(3), lector(4), lector(5), lector(6))
+            End While
+            lector.Close()
+            For Each fila As DataGridViewRow In DGOportunidades.Rows
+                fila.Cells("Monto").Style.BackColor = Color.DarkSeaGreen
+            Next
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Public Sub consultaTareas()
+
+        Try
+            DGTareas.Rows.Clear()
+            conexionMetasCotizador.Open()
+            DGTareas.Columns(0).Visible = False
+            Dim R As String
+            R = " select ActividadTareaProspectos.idActividadTareaProspectos, ActividadTareaProspectos.Asunto, Prospectos.Nombre, Prospectos.Apellidos, Prospectos.Compania, Prospectos.Telefono from ActividadTareaProspectos 
+                inner join Prospectos on ActividadTareaProspectos.idProspecto = Prospectos.idProspecto order by ActividadTareaProspectos.idActividadTareaProspectos"
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                DGTareas.Rows.Add(lector(0), lector(1), (lector(2) & " " & lector(3)), lector(4), lector(5))
+            End While
+            lector.Close()
+            For Each fila As DataGridViewRow In DGOportunidades.Rows
+                fila.Cells("Monto").Style.BackColor = Color.DarkSeaGreen
+            Next
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Public Sub consultaLlamadas()
+        Try
+            DGLlamadas.Rows.Clear()
+            conexionMetasCotizador.Open()
+            DGTareas.Columns(0).Visible = False
+            Dim R As String
+            R = "select ActividadLlamadaProspectos.idActividadLlamadaProspectos, ActividadLlamadaProspectos.Asunto, concat(Prospectos.Nombre, ' ', Prospectos.Apellidos) as Titular, Prospectos.Compania, Prospectos.Telefono,
+            ActividadLlamadaProspectos.Comentarios, ActividadLlamadaProspectos.FechaEstimadaDeLlamada from ActividadLlamadaProspectos inner join Prospectos on ActividadLlamadaProspectos.idProspecto = Prospectos.idProspecto"
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                DGLlamadas.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6))
+            End While
+            lector.Close()
+            For Each fila As DataGridViewRow In DGOportunidades.Rows
+                fila.Cells("Monto").Style.BackColor = Color.DarkSeaGreen
+            Next
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Critical)
+        End Try
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
@@ -325,5 +401,34 @@ Public Class FrmHOME
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         FrmModalidades.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        conexionMetasCotizador.Open()
+        Dim R, a, b As String
+        Dim id As Integer = 4234
+        a = "Tareas rapidas"
+        b = "Asignado a tarea" And
+        R = "insert into ActividadTareaProspectos (Asunto, FechaDeVencimiento, AsignadoA, idProspecto, RelacionadoCon) values ('" & TextBox1.Text & "','" & DTPFechaTarea.Value.ToShortDateString & "','" & b & "'," & id & ",'" & a & "')"
+        Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        comando.ExecuteNonQuery()
+        MsgBox("Guardado correctamente", MsgBoxStyle.Information)
+        conexionMetasCotizador.Close()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        consultaTareas()
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        consultaLlamadas()
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        consultaProspecciones()
     End Sub
 End Class
