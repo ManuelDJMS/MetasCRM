@@ -85,4 +85,8 @@ Public Class FrmAutorizarSolicitudes
         MsgBox(clave)
         TabConsulta.SelectTab(1)
     End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Me.Dispose()
+    End Sub
 End Class
