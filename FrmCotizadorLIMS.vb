@@ -6,7 +6,7 @@ Public Class FrmCotizadorLIMS
 
 
         If Label2.Text.Equals("Parametro") Then
-            MsgBox("Sin busqueda por parametro, normal")
+            'MsgBox("Sin busqueda por parametro, normal")
             PanelNormal.Visible = True
             PanelCot.Visible = False
             'Try
@@ -27,10 +27,21 @@ Public Class FrmCotizadorLIMS
             '    Bitacora("FrmCotizacion2018", "Error al cargar el formulario", Err.Number, cadena)
             'End Try
         Else
-            MsgBox("Busqueda por parametro idProspecto")
+            'MsgBox("Busqueda por parametro idProspecto")
             PanelNormal.Visible = False
             PanelCot.Visible = True
             consultaID(Label2.Text)
+            MetodoLIMS()
+            comandoLIMS = conexionLIMS.CreateCommand
+            R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
+                 SetupCustomerEquipmentMapping.EquipId=SetUpEquipment.EquipId where CustomerId=" & Label2.Text
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGCotizaciones.Rows.Add(False, lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
+            End While
+            lectorLIMS.Close()
+            conexionLIMS.Close()
         End If
 
     End Sub
