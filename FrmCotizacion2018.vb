@@ -72,12 +72,11 @@ Public Class FrmCotizacion2018
     Private Sub txtMarca_TextChanged(sender As Object, e As EventArgs) Handles txtMarca.TextChanged
         Try
             MetodoLIMS()
-
             DGCotizaciones.Rows.Clear()
             comandoLIMS = conexionLIMS.CreateCommand
             R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
-                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%'"
+                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%' and EquipmentName like '" & TextArticulo.Text & "%'"
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
@@ -97,12 +96,11 @@ Public Class FrmCotizacion2018
     Private Sub txtModelo_TextChanged(sender As Object, e As EventArgs) Handles txtModelo.TextChanged
         Try
             MetodoLIMS()
-
             DGCotizaciones.Rows.Clear()
             comandoLIMS = conexionLIMS.CreateCommand
             R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
-                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%'"
+                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%' and EquipmentName like '" & TextArticulo.Text & "%'"
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
@@ -161,7 +159,7 @@ Public Class FrmCotizacion2018
             comandoLIMS = conexionLIMS.CreateCommand
             R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
-                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%'"
+                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%' and EquipmentName like '" & TextArticulo.Text & "%'"
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
@@ -248,5 +246,29 @@ Public Class FrmCotizacion2018
         End If
         origen = "LIMS"
 
+    End Sub
+
+    Private Sub TextArticulo_TextChanged(sender As Object, e As EventArgs) Handles TextArticulo.TextChanged
+        Try
+            MetodoLIMS()
+            DGCotizaciones.Rows.Clear()
+            comandoLIMS = conexionLIMS.CreateCommand
+            R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
+                 SetupCustomerEquipmentMapping.EquipId = SetUpEquipment.EquipId where CustomerId=" & clave1 & " and ItemNumber like '" & TextID.Text & "%' and 
+                 Mfr like'" & txtMarca.Text & "%' and Model like '" & txtModelo.Text & "%' and EquipmentName like '" & TextArticulo.Text & "%'"
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGCotizaciones.Rows.Add(False, lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
+            End While
+            lectorLIMS.Close()
+            conexionLIMS.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al filtrar por empresa", Err.Number, cadena)
+        End Try
     End Sub
 End Class
