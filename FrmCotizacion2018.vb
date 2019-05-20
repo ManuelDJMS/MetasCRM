@@ -235,7 +235,7 @@ Public Class FrmCotizacion2018
                         comandoLIMS.CommandText = R
                         lectorLIMS = comandoLIMS.ExecuteReader
                         lectorLIMS.Read()
-                        frmEdicionCot2018_2019.DGCotizaciones.Rows.Add(i + 1, lectorLIMS(2), lectorLIMS(7), 1, lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6), lectorLIMS(8))
+                        frmEdicionCot2018_2019.DGCotizaciones.Rows.Add(i + 1, lectorLIMS(2), lectorLIMS(7), 1, lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6), lectorLIMS(8), 0, lectorLIMS(1))
                     End If
                 Next
                 frmEdicionCot2018_2019.Show()
