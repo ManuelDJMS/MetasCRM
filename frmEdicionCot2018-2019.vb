@@ -210,7 +210,7 @@ Public Class frmEdicionCot2018_2019
         lector = comando.ExecuteReader
         lector.Read()
         If ((lector(0) Is DBNull.Value) OrElse (lector(0) Is Nothing)) Then
-            maximo = 0
+            maximo = 1
         Else
             maximo = lector(0) + 1
         End If
