@@ -209,13 +209,18 @@ Public Class frmEdicionCot2018_2019
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
         lector.Read()
-        maximo = lector(0) + 1
+        If ((lector(0) Is DBNull.Value) OrElse (lector(0) Is Nothing)) Then
+            maximo = 1
+        Else
+            maximo = lector(0) + 1
+        End If
+
         lector.Close()
         comandoMetasCotizador = conexionMetasCotizador.CreateCommand
         fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
         fecharecepcion = Convert.ToDateTime(DTPHasta.Text).ToShortDateString
 
-        R = "insert into Cotizaciones (NumCot,idContacto,Origen,idLugarCondicion,idCuandoCondicion,idModalidadCondicion,idTiempoEntregaCondicion,idPagoCondicion,idLeyendaCondicion,
+        R = "insert into Cotizaciones (NumCot, idContacto, Origen, idLugarCondicion, idCuandoCondicion, idModalidadCondicion, idTiempoEntregaCondicion, idPagoCondicion, idLeyendaCondicion,
         idValidezCondicion,idMonedaCondicion,idDocumentoCondicion,idModoCont,Referencia,FechaDesde,FechaHasta,Observaciones,idUsuarioCotizacion,Subtotal,IVA,Total)
              values (" & maximo & "," & Val(txtCveContacto.Text) & ",'" & origen & "'," & Val(cboServicio.Tag) & "," & Val(Cbcuando.Tag) & "," & Val(CbModalidad.Tag) & "," & Val(CboTiempo.Tag) & "," &
              Val(CCondPago.Tag) & "," & Val(CboLeyenda.Tag) & "," & Val(CboValidez.Tag) & "," & Val(CboMoneda.Tag) & "," & Val(ComboDocCond.Tag) & "," & Val(CboContabilizar.Tag) & ",'" &
@@ -224,7 +229,7 @@ Public Class frmEdicionCot2018_2019
         comandoMetasCotizador.ExecuteNonQuery()
 
         For i = 0 To DGCotizaciones.Rows.Count - 2
-            R = "insert into DetalleCotizaciones (NumCot,EquipId, PartidaNo,Cantidad, CantidadReal) values (" & maximo & ",'" & DGCotizaciones.Item(1, i).Value & "'," & Val(DGCotizaciones.Item(0, i).Value) & ",
+            R = "insert into DetalleCotizaciones (NumCot,EquipId, PartidaNo,Cantidad, CantidadReal) values (" & maximo & "," & DGCotizaciones.Item(10, i).Value & "," & Val(DGCotizaciones.Item(0, i).Value) & ",
                 " & Val(DGCotizaciones.Item(3, i).Value) & "," & Val(DGCotizaciones.Item(9, i).Value) & ")"
             comandoMetasCotizador.CommandText = R
             comandoMetasCotizador.ExecuteNonQuery()
