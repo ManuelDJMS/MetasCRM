@@ -1366,7 +1366,7 @@
             <Top>3.16641cm</Top>
             <Left>0.25649cm</Left>
             <Height>1.44799cm</Height>
-            <Width>19.84641cm</Width>
+            <Width>19.8464cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -5203,7 +5203,7 @@
               <Source>Embedded</Source>
               <Value>descarga</Value>
               <Sizing>FitProportional</Sizing>
-              <Left>0.49154cm</Left>
+              <Left>0.518cm</Left>
               <Height>2.03729cm</Height>
               <Width>4.1637cm</Width>
               <Style>
@@ -5233,7 +5233,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>1.20268cm</Top>
-              <Left>7.47089cm</Left>
+              <Left>7.49735cm</Left>
               <Height>0.74551cm</Height>
               <Width>5.22521cm</Width>
               <ZIndex>1</ZIndex>
@@ -5282,7 +5282,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>1.4993cm</Top>
-              <Left>3.6524cm</Left>
+              <Left>3.67886cm</Left>
               <Height>0.44889cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>3</ZIndex>
@@ -5531,7 +5531,7 @@
               <Value>LINEA1</Value>
               <Sizing>FitProportional</Sizing>
               <Top>2.75986cm</Top>
-              <Left>0.22962cm</Left>
+              <Left>0.25608cm</Left>
               <Height>0.19402cm</Height>
               <Width>19.87546cm</Width>
               <ZIndex>10</ZIndex>
