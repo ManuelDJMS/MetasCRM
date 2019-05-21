@@ -220,7 +220,7 @@ Public Class frmEdicionCot2018_2019
         fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
         fecharecepcion = Convert.ToDateTime(DTPHasta.Text).ToShortDateString
 
-        R = "insert into Cotizaciones (NumCot,idContacto,Origen,idLugarCondicion,idCuandoCondicion,idModalidadCondicion,idTiempoEntregaCondicion,idPagoCondicion,idLeyendaCondicion,
+        R = "insert into Cotizaciones (NumCot, idContacto, Origen, idLugarCondicion, idCuandoCondicion, idModalidadCondicion, idTiempoEntregaCondicion, idPagoCondicion, idLeyendaCondicion,
         idValidezCondicion,idMonedaCondicion,idDocumentoCondicion,idModoCont,Referencia,FechaDesde,FechaHasta,Observaciones,idUsuarioCotizacion,Subtotal,IVA,Total)
              values (" & maximo & "," & Val(txtCveContacto.Text) & ",'" & origen & "'," & Val(cboServicio.Tag) & "," & Val(Cbcuando.Tag) & "," & Val(CbModalidad.Tag) & "," & Val(CboTiempo.Tag) & "," &
              Val(CCondPago.Tag) & "," & Val(CboLeyenda.Tag) & "," & Val(CboValidez.Tag) & "," & Val(CboMoneda.Tag) & "," & Val(ComboDocCond.Tag) & "," & Val(CboContabilizar.Tag) & ",'" &
