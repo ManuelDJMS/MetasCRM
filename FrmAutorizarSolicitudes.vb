@@ -133,4 +133,18 @@ Public Class FrmAutorizarSolicitudes
             MsgBox("Ocurrio un error en la lectura de datos, llama al administrador general.")
         End Try
     End Sub
+
+    Private Sub btGuardar_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
+        ''Generar la orden de venta
+        Try
+            MetodoLIMS()
+            Dim R As String
+            R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, RecBy, ) values ("
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            comando.ExecuteNonQuery()
+            MsgBox("Orden de Venta generada correctamente", MsgBoxStyle.Information)
+        Catch ex As Exception
+            MsgBox("Error al cargar la Orden de venta.", MsgBoxStyle.Exclamation)
+        End Try
+    End Sub
 End Class
