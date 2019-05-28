@@ -28,74 +28,74 @@ Public Class cotLIMS
             Else
                 desde = lectorMetasCotizador(1)
             End If
-            MsgBox(desde)
-            If ((lectorMetasCotizador(2) Is DBNull.Value) OrElse (lectorMetasCotizador(2) Is Nothing)) Then
+        'MsgBox(desde)
+        If ((lectorMetasCotizador(2) Is DBNull.Value) OrElse (lectorMetasCotizador(2) Is Nothing)) Then
                 hasta = "-"
             Else
                 hasta = lectorMetasCotizador(2)
             End If
-            MsgBox(hasta)
-            If ((lectorMetasCotizador(3) Is DBNull.Value) OrElse (lectorMetasCotizador(3) Is Nothing)) Then
+        'MsgBox(hasta)
+        If ((lectorMetasCotizador(3) Is DBNull.Value) OrElse (lectorMetasCotizador(3) Is Nothing)) Then
                 nombre = "-"
             Else
                 nombre = lectorMetasCotizador(3)
             End If
-            MsgBox(nombre)
-            If ((lectorMetasCotizador(4) Is DBNull.Value) OrElse (lectorMetasCotizador(4) Is Nothing)) Then
+        'MsgBox(nombre)
+        If ((lectorMetasCotizador(4) Is DBNull.Value) OrElse (lectorMetasCotizador(4) Is Nothing)) Then
                 puesto = "-"
             Else
                 puesto = lectorMetasCotizador(4)
             End If
-            MsgBox(puesto)
-            If ((lectorMetasCotizador(5) Is DBNull.Value) OrElse (lectorMetasCotizador(5) Is Nothing)) Then
+        'MsgBox(puesto)
+        If ((lectorMetasCotizador(5) Is DBNull.Value) OrElse (lectorMetasCotizador(5) Is Nothing)) Then
                 tel = "-"
             Else
                 tel = lectorMetasCotizador(5)
             End If
-            MsgBox(tel)
-            If ((lectorMetasCotizador(6) Is DBNull.Value) OrElse (lectorMetasCotizador(6) Is Nothing)) Then
+        ' MsgBox(tel)
+        If ((lectorMetasCotizador(6) Is DBNull.Value) OrElse (lectorMetasCotizador(6) Is Nothing)) Then
                 ext = "-"
             Else
                 ext = lectorMetasCotizador(6)
             End If
-            MsgBox(ext)
-            If ((lectorMetasCotizador(7) Is DBNull.Value) OrElse (lectorMetasCotizador(7) Is Nothing)) Then
+        'MsgBox(ext)
+        If ((lectorMetasCotizador(7) Is DBNull.Value) OrElse (lectorMetasCotizador(7) Is Nothing)) Then
                 correo = "-"
             Else
                 correo = lectorMetasCotizador(7)
             End If
-            MsgBox(correo)
-            If ((lectorMetasCotizador(8) Is DBNull.Value) OrElse (lectorMetasCotizador(8) Is Nothing)) Then
+        'MsgBox(correo)
+        If ((lectorMetasCotizador(8) Is DBNull.Value) OrElse (lectorMetasCotizador(8) Is Nothing)) Then
                 emp = "-"
             Else
                 emp = lectorMetasCotizador(8)
             End If
-            MsgBox(emp)
-            If ((lectorMetasCotizador(9) Is DBNull.Value) OrElse (lectorMetasCotizador(9) Is Nothing)) Then
+        ' MsgBox(emp)
+        If ((lectorMetasCotizador(9) Is DBNull.Value) OrElse (lectorMetasCotizador(9) Is Nothing)) Then
                 dom = "-"
             Else
                 dom = lectorMetasCotizador(9)
             End If
-            MsgBox(dom)
-            If ((lectorMetasCotizador(10) Is DBNull.Value) OrElse (lectorMetasCotizador(10) Is Nothing)) Then
+        'MsgBox(dom)
+        If ((lectorMetasCotizador(10) Is DBNull.Value) OrElse (lectorMetasCotizador(10) Is Nothing)) Then
                 partida = "-"
             Else
                 partida = lectorMetasCotizador(10)
             End If
-            MsgBox(partida)
-            If ((lectorMetasCotizador(11) Is DBNull.Value) OrElse (lectorMetasCotizador(11) Is Nothing)) Then
+        'MsgBox(partida)
+        If ((lectorMetasCotizador(11) Is DBNull.Value) OrElse (lectorMetasCotizador(11) Is Nothing)) Then
                 can = "-"
             Else
                 can = lectorMetasCotizador(11)
             End If
-            MsgBox(can)
-            If ((lectorMetasCotizador(12) Is DBNull.Value) OrElse (lectorMetasCotizador(12) Is Nothing)) Then
-                equipId = "-"
-            Else
-                equipId = lectorMetasCotizador(12)
-            End If
-            MsgBox(equipId)
-            MetodoLIMS()
+        'MsgBox(can)
+        If ((lectorMetasCotizador(12) Is DBNull.Value) OrElse (lectorMetasCotizador(12) Is Nothing)) Then
+            equipId = "-"
+        Else
+            equipId = lectorMetasCotizador(12)
+        End If
+        'MsgBox(equipId)
+        MetodoLIMS()
             comandoLIMS = conexionLIMS.CreateCommand
             Dim L As String
         L = "SELECT EquipId,EquipmentName, Model, Mfr,ItemNumber,Accuracy from SetUpEquipment

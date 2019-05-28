@@ -64,6 +64,28 @@ Namespace My
                 Return CType(Me("METASINF_2019_3ConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=SERVER3\COMPAC2;Initial Catalog=MetasCotizador;User ID=sa;Password=Me"& _ 
+            "t99011578a")>  _
+        Public ReadOnly Property MetasCotizadorConnectionString() As String
+            Get
+                Return CType(Me("MetasCotizadorConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DATABASESERVER\COMPAC;Initial Catalog=MetAs_Live-pruebas;User ID=sa;P"& _ 
+            "assword=Contpaq1")>  _
+        Public ReadOnly Property MetAs_Live_pruebasConnectionString() As String
+            Get
+                Return CType(Me("MetAs_Live_pruebasConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

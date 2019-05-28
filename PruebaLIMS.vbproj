@@ -351,6 +351,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reportes\cotLIMS.Designer.vb">
+      <DependentUpon>cotLIMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\cotLIMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -358,6 +364,12 @@
     </Compile>
     <Compile Include="Reportes\DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FIRMA.Designer.vb">
+      <DependentUpon>FIRMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FIRMA.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\FrmReportes.Designer.vb">
       <DependentUpon>FrmReportes.vb</DependentUpon>
@@ -467,7 +479,13 @@
       <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cot.rdlc" />
-    <EmbeddedResource Include="Reportes\Cotizacion.rdlc" />
+    <EmbeddedResource Include="Reportes\a.rdlc" />
+    <EmbeddedResource Include="Reportes\cotLIMS.resx">
+      <DependentUpon>cotLIMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FIRMA.resx">
+      <DependentUpon>FIRMA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReportes.resx">
       <DependentUpon>FrmReportes.vb</DependentUpon>
     </EmbeddedResource>
