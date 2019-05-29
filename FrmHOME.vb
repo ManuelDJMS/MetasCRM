@@ -486,4 +486,33 @@ Public Class FrmHOME
         GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
+
+    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
+        FrmTiemposCondicion.MdiParent = Me
+        FrmTiemposCondicion.Show()
+
+        Panel1.BackColor = Color.DimGray
+        Panel4.BackColor = Color.DimGray
+        Panel9.BackColor = Color.DimGray
+        Panel7.BackColor = Color.DimGray
+        Panel14.BackColor = Color.DimGray
+        Panel16.BackColor = Color.DimGray
+        Panel17.BackColor = Color.Gainsboro
+        Label7.ForeColor = Color.White
+        Label13.ForeColor = Color.White
+        Label6.ForeColor = Color.White
+        Label17.ForeColor = Color.White
+        Label30.ForeColor = Color.White
+        Label36.ForeColor = Color.White
+        Label37.ForeColor = Color.Black
+
+        ''-----------Poner invisibles----------
+        GroupBox5.Visible = False
+        Panel12.Visible = False
+        DGTareas.Visible = False
+        GroupBox6.Visible = False
+        PanelRecordatorioSemana.Visible = False
+        GroupBox4.Visible = False
+        ''--------------------------------------
+    End Sub
 End Class
