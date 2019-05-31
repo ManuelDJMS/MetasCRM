@@ -29,6 +29,8 @@ Partial Public Class DataSet1
     
     Private tableECliente As EClienteDataTable
     
+    Private tablecotLIMS As cotLIMSDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -64,6 +66,9 @@ Partial Public Class DataSet1
             If (Not (ds.Tables("ECliente")) Is Nothing) Then
                 MyBase.Tables.Add(New EClienteDataTable(ds.Tables("ECliente")))
             End If
+            If (Not (ds.Tables("cotLIMS")) Is Nothing) Then
+                MyBase.Tables.Add(New cotLIMSDataTable(ds.Tables("cotLIMS")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -98,6 +103,16 @@ Partial Public Class DataSet1
     Public ReadOnly Property ECliente() As EClienteDataTable
         Get
             Return Me.tableECliente
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property cotLIMS() As cotLIMSDataTable
+        Get
+            Return Me.tablecotLIMS
         End Get
     End Property
     
@@ -174,6 +189,9 @@ Partial Public Class DataSet1
             If (Not (ds.Tables("ECliente")) Is Nothing) Then
                 MyBase.Tables.Add(New EClienteDataTable(ds.Tables("ECliente")))
             End If
+            If (Not (ds.Tables("cotLIMS")) Is Nothing) Then
+                MyBase.Tables.Add(New cotLIMSDataTable(ds.Tables("cotLIMS")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -218,6 +236,12 @@ Partial Public Class DataSet1
                 Me.tableECliente.InitVars
             End If
         End If
+        Me.tablecotLIMS = CType(MyBase.Tables("cotLIMS"),cotLIMSDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablecotLIMS) Is Nothing) Then
+                Me.tablecotLIMS.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -232,6 +256,8 @@ Partial Public Class DataSet1
         MyBase.Tables.Add(Me.tableDetalle)
         Me.tableECliente = New EClienteDataTable()
         MyBase.Tables.Add(Me.tableECliente)
+        Me.tablecotLIMS = New cotLIMSDataTable()
+        MyBase.Tables.Add(Me.tablecotLIMS)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -243,6 +269,12 @@ Partial Public Class DataSet1
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Private Function ShouldSerializeECliente() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Private Function ShouldSerializecotLIMS() As Boolean
         Return false
     End Function
     
@@ -309,6 +341,9 @@ Partial Public Class DataSet1
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Public Delegate Sub EClienteRowChangeEventHandler(ByVal sender As Object, ByVal e As EClienteRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Public Delegate Sub cotLIMSRowChangeEventHandler(ByVal sender As Object, ByVal e As cotLIMSRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -1415,6 +1450,682 @@ Partial Public Class DataSet1
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "EClienteDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class cotLIMSDataTable
+        Inherits Global.System.Data.TypedTableBase(Of cotLIMSRow)
+        
+        Private columnNumCot As Global.System.Data.DataColumn
+        
+        Private columnFechaDesde As Global.System.Data.DataColumn
+        
+        Private columnFechaHasta As Global.System.Data.DataColumn
+        
+        Private columnnom As Global.System.Data.DataColumn
+        
+        Private columnPuesto As Global.System.Data.DataColumn
+        
+        Private columnTelefono As Global.System.Data.DataColumn
+        
+        Private columnExt As Global.System.Data.DataColumn
+        
+        Private columnCorreo As Global.System.Data.DataColumn
+        
+        Private columnCompania As Global.System.Data.DataColumn
+        
+        Private columnDomicilioConsig As Global.System.Data.DataColumn
+        
+        Private columnPartidaNo As Global.System.Data.DataColumn
+        
+        Private columnCantidad As Global.System.Data.DataColumn
+        
+        Private columnEquipId As Global.System.Data.DataColumn
+        
+        Private columnEquipmentName As Global.System.Data.DataColumn
+        
+        Private columnMfr As Global.System.Data.DataColumn
+        
+        Private columnModel As Global.System.Data.DataColumn
+        
+        Private columnServiceDescription As Global.System.Data.DataColumn
+        
+        Private columnPrice As Global.System.Data.DataColumn
+        
+        Private columnsub As Global.System.Data.DataColumn
+        
+        Private columnidUsuarioAdministrador As Global.System.Data.DataColumn
+        
+        Private columnNombre As Global.System.Data.DataColumn
+        
+        Private columnlugar As Global.System.Data.DataColumn
+        
+        Private columnmoneda As Global.System.Data.DataColumn
+        
+        Private columnterminos As Global.System.Data.DataColumn
+        
+        Private columnterminos1 As Global.System.Data.DataColumn
+        
+        Private columnmodalidad As Global.System.Data.DataColumn
+        
+        Private columnObservaciones As Global.System.Data.DataColumn
+        
+        Private columnCalibrationMethod As Global.System.Data.DataColumn
+        
+        Private columnServiceDescription1 As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "cotLIMS"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NumCotColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNumCot
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property FechaDesdeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaDesde
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property FechaHastaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaHasta
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property nomColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnom
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property PuestoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPuesto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TelefonoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTelefono
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ExtColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CorreoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCorreo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CompaniaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCompania
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property DomicilioConsigColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDomicilioConsig
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property PartidaNoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPartidaNo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CantidadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCantidad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property EquipIdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEquipId
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property EquipmentNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEquipmentName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property MfrColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMfr
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ModelColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnModel
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ServiceDescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnServiceDescription
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property PriceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPrice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property subColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsub
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property idUsuarioAdministradorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidUsuarioAdministrador
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NombreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombre
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property lugarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnlugar
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property monedaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmoneda
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property terminosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnterminos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property terminos1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnterminos1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property modalidadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmodalidad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ObservacionesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnObservaciones
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CalibrationMethodColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCalibrationMethod
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ServiceDescription1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnServiceDescription1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As cotLIMSRow
+            Get
+                Return CType(Me.Rows(index),cotLIMSRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event cotLIMSRowChanging As cotLIMSRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event cotLIMSRowChanged As cotLIMSRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event cotLIMSRowDeleting As cotLIMSRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event cotLIMSRowDeleted As cotLIMSRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overloads Sub AddcotLIMSRow(ByVal row As cotLIMSRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overloads Function AddcotLIMSRow( _
+                    ByVal NumCot As Integer,  _
+                    ByVal FechaDesde As String,  _
+                    ByVal FechaHasta As String,  _
+                    ByVal nom As String,  _
+                    ByVal Puesto As String,  _
+                    ByVal Telefono As String,  _
+                    ByVal Ext As String,  _
+                    ByVal Correo As String,  _
+                    ByVal Compania As String,  _
+                    ByVal DomicilioConsig As String,  _
+                    ByVal PartidaNo As Integer,  _
+                    ByVal Cantidad As Integer,  _
+                    ByVal EquipId As String,  _
+                    ByVal EquipmentName As String,  _
+                    ByVal Mfr As String,  _
+                    ByVal Model As String,  _
+                    ByVal ServiceDescription As String,  _
+                    ByVal Price As Decimal,  _
+                    ByVal _sub As Decimal,  _
+                    ByVal idUsuarioAdministrador As Integer,  _
+                    ByVal Nombre As String,  _
+                    ByVal lugar As String,  _
+                    ByVal moneda As String,  _
+                    ByVal terminos As String,  _
+                    ByVal terminos1 As String,  _
+                    ByVal modalidad As String,  _
+                    ByVal Observaciones As String,  _
+                    ByVal CalibrationMethod As String,  _
+                    ByVal ServiceDescription1 As String) As cotLIMSRow
+            Dim rowcotLIMSRow As cotLIMSRow = CType(Me.NewRow,cotLIMSRow)
+            Dim columnValuesArray() As Object = New Object() {NumCot, FechaDesde, FechaHasta, nom, Puesto, Telefono, Ext, Correo, Compania, DomicilioConsig, PartidaNo, Cantidad, EquipId, EquipmentName, Mfr, Model, ServiceDescription, Price, _sub, idUsuarioAdministrador, Nombre, lugar, moneda, terminos, terminos1, modalidad, Observaciones, CalibrationMethod, ServiceDescription1}
+            rowcotLIMSRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowcotLIMSRow)
+            Return rowcotLIMSRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As cotLIMSDataTable = CType(MyBase.Clone,cotLIMSDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New cotLIMSDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnNumCot = MyBase.Columns("NumCot")
+            Me.columnFechaDesde = MyBase.Columns("FechaDesde")
+            Me.columnFechaHasta = MyBase.Columns("FechaHasta")
+            Me.columnnom = MyBase.Columns("nom")
+            Me.columnPuesto = MyBase.Columns("Puesto")
+            Me.columnTelefono = MyBase.Columns("Telefono")
+            Me.columnExt = MyBase.Columns("Ext")
+            Me.columnCorreo = MyBase.Columns("Correo")
+            Me.columnCompania = MyBase.Columns("Compania")
+            Me.columnDomicilioConsig = MyBase.Columns("DomicilioConsig")
+            Me.columnPartidaNo = MyBase.Columns("PartidaNo")
+            Me.columnCantidad = MyBase.Columns("Cantidad")
+            Me.columnEquipId = MyBase.Columns("EquipId")
+            Me.columnEquipmentName = MyBase.Columns("EquipmentName")
+            Me.columnMfr = MyBase.Columns("Mfr")
+            Me.columnModel = MyBase.Columns("Model")
+            Me.columnServiceDescription = MyBase.Columns("ServiceDescription")
+            Me.columnPrice = MyBase.Columns("Price")
+            Me.columnsub = MyBase.Columns("sub")
+            Me.columnidUsuarioAdministrador = MyBase.Columns("idUsuarioAdministrador")
+            Me.columnNombre = MyBase.Columns("Nombre")
+            Me.columnlugar = MyBase.Columns("lugar")
+            Me.columnmoneda = MyBase.Columns("moneda")
+            Me.columnterminos = MyBase.Columns("terminos")
+            Me.columnterminos1 = MyBase.Columns("terminos1")
+            Me.columnmodalidad = MyBase.Columns("modalidad")
+            Me.columnObservaciones = MyBase.Columns("Observaciones")
+            Me.columnCalibrationMethod = MyBase.Columns("CalibrationMethod")
+            Me.columnServiceDescription1 = MyBase.Columns("ServiceDescription1")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnNumCot = New Global.System.Data.DataColumn("NumCot", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNumCot)
+            Me.columnFechaDesde = New Global.System.Data.DataColumn("FechaDesde", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaDesde)
+            Me.columnFechaHasta = New Global.System.Data.DataColumn("FechaHasta", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaHasta)
+            Me.columnnom = New Global.System.Data.DataColumn("nom", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnom)
+            Me.columnPuesto = New Global.System.Data.DataColumn("Puesto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPuesto)
+            Me.columnTelefono = New Global.System.Data.DataColumn("Telefono", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTelefono)
+            Me.columnExt = New Global.System.Data.DataColumn("Ext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExt)
+            Me.columnCorreo = New Global.System.Data.DataColumn("Correo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCorreo)
+            Me.columnCompania = New Global.System.Data.DataColumn("Compania", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCompania)
+            Me.columnDomicilioConsig = New Global.System.Data.DataColumn("DomicilioConsig", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDomicilioConsig)
+            Me.columnPartidaNo = New Global.System.Data.DataColumn("PartidaNo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPartidaNo)
+            Me.columnCantidad = New Global.System.Data.DataColumn("Cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCantidad)
+            Me.columnEquipId = New Global.System.Data.DataColumn("EquipId", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEquipId)
+            Me.columnEquipmentName = New Global.System.Data.DataColumn("EquipmentName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEquipmentName)
+            Me.columnMfr = New Global.System.Data.DataColumn("Mfr", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMfr)
+            Me.columnModel = New Global.System.Data.DataColumn("Model", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnModel)
+            Me.columnServiceDescription = New Global.System.Data.DataColumn("ServiceDescription", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnServiceDescription)
+            Me.columnPrice = New Global.System.Data.DataColumn("Price", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPrice)
+            Me.columnsub = New Global.System.Data.DataColumn("sub", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnsub.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "subColumn")
+            Me.columnsub.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnsub")
+            Me.columnsub.ExtendedProperties.Add("Generator_UserColumnName", "sub")
+            MyBase.Columns.Add(Me.columnsub)
+            Me.columnidUsuarioAdministrador = New Global.System.Data.DataColumn("idUsuarioAdministrador", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidUsuarioAdministrador)
+            Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombre)
+            Me.columnlugar = New Global.System.Data.DataColumn("lugar", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnlugar)
+            Me.columnmoneda = New Global.System.Data.DataColumn("moneda", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmoneda)
+            Me.columnterminos = New Global.System.Data.DataColumn("terminos", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnterminos)
+            Me.columnterminos1 = New Global.System.Data.DataColumn("terminos1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnterminos1)
+            Me.columnmodalidad = New Global.System.Data.DataColumn("modalidad", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmodalidad)
+            Me.columnObservaciones = New Global.System.Data.DataColumn("Observaciones", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnObservaciones)
+            Me.columnCalibrationMethod = New Global.System.Data.DataColumn("CalibrationMethod", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCalibrationMethod)
+            Me.columnServiceDescription1 = New Global.System.Data.DataColumn("ServiceDescription1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnServiceDescription1)
+            Me.columnNumCot.AllowDBNull = false
+            Me.columnFechaDesde.MaxLength = 50
+            Me.columnFechaHasta.MaxLength = 50
+            Me.columnnom.ReadOnly = true
+            Me.columnnom.MaxLength = 301
+            Me.columnPuesto.MaxLength = 150
+            Me.columnTelefono.MaxLength = 150
+            Me.columnExt.MaxLength = 150
+            Me.columnCorreo.MaxLength = 2147483647
+            Me.columnCompania.MaxLength = 255
+            Me.columnDomicilioConsig.MaxLength = 255
+            Me.columnEquipId.AllowDBNull = false
+            Me.columnEquipId.MaxLength = 50
+            Me.columnEquipmentName.MaxLength = 2147483647
+            Me.columnMfr.MaxLength = 2147483647
+            Me.columnModel.MaxLength = 2147483647
+            Me.columnServiceDescription.MaxLength = 2147483647
+            Me.columnsub.ReadOnly = true
+            Me.columnidUsuarioAdministrador.AllowDBNull = false
+            Me.columnNombre.MaxLength = 50
+            Me.columnlugar.MaxLength = 70
+            Me.columnmoneda.MaxLength = 120
+            Me.columnterminos.MaxLength = 300
+            Me.columnterminos1.MaxLength = 200
+            Me.columnmodalidad.MaxLength = 70
+            Me.columnObservaciones.MaxLength = 150
+            Me.columnCalibrationMethod.MaxLength = 2147483647
+            Me.columnServiceDescription1.MaxLength = 2147483647
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function NewcotLIMSRow() As cotLIMSRow
+            Return CType(Me.NewRow,cotLIMSRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New cotLIMSRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(cotLIMSRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.cotLIMSRowChangedEvent) Is Nothing) Then
+                RaiseEvent cotLIMSRowChanged(Me, New cotLIMSRowChangeEvent(CType(e.Row,cotLIMSRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.cotLIMSRowChangingEvent) Is Nothing) Then
+                RaiseEvent cotLIMSRowChanging(Me, New cotLIMSRowChangeEvent(CType(e.Row,cotLIMSRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.cotLIMSRowDeletedEvent) Is Nothing) Then
+                RaiseEvent cotLIMSRowDeleted(Me, New cotLIMSRowChangeEvent(CType(e.Row,cotLIMSRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.cotLIMSRowDeletingEvent) Is Nothing) Then
+                RaiseEvent cotLIMSRowDeleting(Me, New cotLIMSRowChangeEvent(CType(e.Row,cotLIMSRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub RemovecotLIMSRow(ByVal row As cotLIMSRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DataSet1 = New DataSet1()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "cotLIMSDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -2690,6 +3401,757 @@ Partial Public Class DataSet1
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class cotLIMSRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablecotLIMS As cotLIMSDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablecotLIMS = CType(Me.Table,cotLIMSDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property NumCot() As Integer
+            Get
+                Return CType(Me(Me.tablecotLIMS.NumCotColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablecotLIMS.NumCotColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property FechaDesde() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.FechaDesdeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaDesde' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.FechaDesdeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property FechaHasta() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.FechaHastaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaHasta' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.FechaHastaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property nom() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.nomColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'nom' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.nomColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Puesto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.PuestoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Puesto' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.PuestoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Telefono() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.TelefonoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Telefono' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.TelefonoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Ext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.ExtColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Ext' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.ExtColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Correo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.CorreoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Correo' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.CorreoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Compania() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.CompaniaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Compania' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.CompaniaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property DomicilioConsig() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.DomicilioConsigColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DomicilioConsig' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.DomicilioConsigColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property PartidaNo() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.PartidaNoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PartidaNo' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.PartidaNoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Cantidad() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.CantidadColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Cantidad' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.CantidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property EquipId() As String
+            Get
+                Return CType(Me(Me.tablecotLIMS.EquipIdColumn),String)
+            End Get
+            Set
+                Me(Me.tablecotLIMS.EquipIdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property EquipmentName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.EquipmentNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EquipmentName' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.EquipmentNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Mfr() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.MfrColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Mfr' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.MfrColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Model() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.ModelColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Model' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.ModelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property ServiceDescription() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.ServiceDescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ServiceDescription' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.ServiceDescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Price() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.PriceColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Price' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.PriceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property _sub() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.subColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'sub' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.subColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property idUsuarioAdministrador() As Integer
+            Get
+                Return CType(Me(Me.tablecotLIMS.idUsuarioAdministradorColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablecotLIMS.idUsuarioAdministradorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Nombre() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.NombreColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Nombre' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.NombreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property lugar() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.lugarColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'lugar' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.lugarColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property moneda() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.monedaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'moneda' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.monedaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property terminos() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.terminosColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'terminos' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.terminosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property terminos1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.terminos1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'terminos1' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.terminos1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property modalidad() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.modalidadColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'modalidad' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.modalidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Observaciones() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.ObservacionesColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Observaciones' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.ObservacionesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CalibrationMethod() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.CalibrationMethodColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CalibrationMethod' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.CalibrationMethodColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property ServiceDescription1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablecotLIMS.ServiceDescription1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ServiceDescription1' de la tabla 'cotLIMS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecotLIMS.ServiceDescription1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsFechaDesdeNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.FechaDesdeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetFechaDesdeNull()
+            Me(Me.tablecotLIMS.FechaDesdeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsFechaHastaNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.FechaHastaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetFechaHastaNull()
+            Me(Me.tablecotLIMS.FechaHastaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsnomNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.nomColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetnomNull()
+            Me(Me.tablecotLIMS.nomColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPuestoNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.PuestoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPuestoNull()
+            Me(Me.tablecotLIMS.PuestoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTelefonoNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.TelefonoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTelefonoNull()
+            Me(Me.tablecotLIMS.TelefonoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsExtNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.ExtColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetExtNull()
+            Me(Me.tablecotLIMS.ExtColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCorreoNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.CorreoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCorreoNull()
+            Me(Me.tablecotLIMS.CorreoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCompaniaNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.CompaniaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCompaniaNull()
+            Me(Me.tablecotLIMS.CompaniaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsDomicilioConsigNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.DomicilioConsigColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetDomicilioConsigNull()
+            Me(Me.tablecotLIMS.DomicilioConsigColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPartidaNoNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.PartidaNoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPartidaNoNull()
+            Me(Me.tablecotLIMS.PartidaNoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCantidadNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.CantidadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCantidadNull()
+            Me(Me.tablecotLIMS.CantidadColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsEquipmentNameNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.EquipmentNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetEquipmentNameNull()
+            Me(Me.tablecotLIMS.EquipmentNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsMfrNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.MfrColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetMfrNull()
+            Me(Me.tablecotLIMS.MfrColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsModelNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.ModelColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetModelNull()
+            Me(Me.tablecotLIMS.ModelColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsServiceDescriptionNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.ServiceDescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetServiceDescriptionNull()
+            Me(Me.tablecotLIMS.ServiceDescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPriceNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.PriceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPriceNull()
+            Me(Me.tablecotLIMS.PriceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Is_subNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.subColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Set_subNull()
+            Me(Me.tablecotLIMS.subColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNombreNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.NombreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNombreNull()
+            Me(Me.tablecotLIMS.NombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IslugarNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.lugarColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetlugarNull()
+            Me(Me.tablecotLIMS.lugarColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsmonedaNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.monedaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetmonedaNull()
+            Me(Me.tablecotLIMS.monedaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsterminosNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.terminosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetterminosNull()
+            Me(Me.tablecotLIMS.terminosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isterminos1Null() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.terminos1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setterminos1Null()
+            Me(Me.tablecotLIMS.terminos1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsmodalidadNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.modalidadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetmodalidadNull()
+            Me(Me.tablecotLIMS.modalidadColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsObservacionesNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.ObservacionesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetObservacionesNull()
+            Me(Me.tablecotLIMS.ObservacionesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCalibrationMethodNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.CalibrationMethodColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCalibrationMethodNull()
+            Me(Me.tablecotLIMS.CalibrationMethodColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsServiceDescription1Null() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS.ServiceDescription1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetServiceDescription1Null()
+            Me(Me.tablecotLIMS.ServiceDescription1Column) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -2747,6 +4209,42 @@ Partial Public Class DataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property Row() As EClienteRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Public Class cotLIMSRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As cotLIMSRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New(ByVal row As cotLIMSRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Row() As cotLIMSRow
             Get
                 Return Me.eventRow
             End Get
@@ -3552,6 +5050,586 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.SelectCommand.Parameters(30).Value = CType(razon,String)
             End If
             Dim dataTable As DataSet1.EClienteDataTable = New DataSet1.EClienteDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class cotLIMSTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "cotLIMS"
+            tableMapping.ColumnMappings.Add("NumCot", "NumCot")
+            tableMapping.ColumnMappings.Add("FechaDesde", "FechaDesde")
+            tableMapping.ColumnMappings.Add("FechaHasta", "FechaHasta")
+            tableMapping.ColumnMappings.Add("nom", "nom")
+            tableMapping.ColumnMappings.Add("Puesto", "Puesto")
+            tableMapping.ColumnMappings.Add("Telefono", "Telefono")
+            tableMapping.ColumnMappings.Add("Ext", "Ext")
+            tableMapping.ColumnMappings.Add("Correo", "Correo")
+            tableMapping.ColumnMappings.Add("Compania", "Compania")
+            tableMapping.ColumnMappings.Add("DomicilioConsig", "DomicilioConsig")
+            tableMapping.ColumnMappings.Add("PartidaNo", "PartidaNo")
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad")
+            tableMapping.ColumnMappings.Add("EquipId", "EquipId")
+            tableMapping.ColumnMappings.Add("EquipmentName", "EquipmentName")
+            tableMapping.ColumnMappings.Add("Mfr", "Mfr")
+            tableMapping.ColumnMappings.Add("Model", "Model")
+            tableMapping.ColumnMappings.Add("ServiceDescription", "ServiceDescription")
+            tableMapping.ColumnMappings.Add("Price", "Price")
+            tableMapping.ColumnMappings.Add("sub", "sub")
+            tableMapping.ColumnMappings.Add("idUsuarioAdministrador", "idUsuarioAdministrador")
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre")
+            tableMapping.ColumnMappings.Add("lugar", "lugar")
+            tableMapping.ColumnMappings.Add("moneda", "moneda")
+            tableMapping.ColumnMappings.Add("terminos", "terminos")
+            tableMapping.ColumnMappings.Add("terminos1", "terminos1")
+            tableMapping.ColumnMappings.Add("modalidad", "modalidad")
+            tableMapping.ColumnMappings.Add("Observaciones", "Observaciones")
+            tableMapping.ColumnMappings.Add("CalibrationMethod", "CalibrationMethod")
+            tableMapping.ColumnMappings.Add("ServiceDescription1", "ServiceDescription1")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.PruebaLIMS.My.MySettings.Default.MetasCotizadorConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.cotLIMS"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCot", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaDesde", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaHasta", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@puesto", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ext", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@com", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dom", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@partidad", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cant", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@equiId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nomEquip", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mfr", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@model", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@servicio", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precio", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sub", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cveElaboro", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@elaborocot", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correoElaboro", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lugar", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@moneda", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@terminos", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@modalidad", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@obser", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@calMetodo", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@serDescripcion", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill( _
+                    ByVal dataTable As DataSet1.cotLIMSDataTable,  _
+                    ByVal numCot As Global.System.Nullable(Of Integer),  _
+                    ByVal fechaDesde As Global.System.Nullable(Of Date),  _
+                    ByVal fechaHasta As Global.System.Nullable(Of Date),  _
+                    ByVal nombre As String,  _
+                    ByVal puesto As String,  _
+                    ByVal telefono As String,  _
+                    ByVal ext As String,  _
+                    ByVal correo As String,  _
+                    ByVal com As String,  _
+                    ByVal dom As String,  _
+                    ByVal partidad As Global.System.Nullable(Of Integer),  _
+                    ByVal cant As Global.System.Nullable(Of Integer),  _
+                    ByVal equiId As Global.System.Nullable(Of Integer),  _
+                    ByVal nomEquip As String,  _
+                    ByVal mfr As String,  _
+                    ByVal model As String,  _
+                    ByVal servicio As String,  _
+                    ByVal precio As String,  _
+                    ByVal _sub As String,  _
+                    ByVal cveElaboro As Global.System.Nullable(Of Integer),  _
+                    ByVal elaborocot As String,  _
+                    ByVal correoElaboro As String,  _
+                    ByVal lugar As String,  _
+                    ByVal moneda As String,  _
+                    ByVal terminos As String,  _
+                    ByVal modalidad As String,  _
+                    ByVal obser As String,  _
+                    ByVal calMetodo As String,  _
+                    ByVal serDescripcion As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (numCot.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(numCot.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (fechaDesde.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(fechaDesde.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (fechaHasta.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(fechaHasta.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (nombre Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(nombre,String)
+            End If
+            If (puesto Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(puesto,String)
+            End If
+            If (telefono Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(telefono,String)
+            End If
+            If (ext Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(ext,String)
+            End If
+            If (correo Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(correo,String)
+            End If
+            If (com Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(com,String)
+            End If
+            If (dom Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(dom,String)
+            End If
+            If (partidad.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(11).Value = CType(partidad.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (cant.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(12).Value = CType(cant.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (equiId.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(13).Value = CType(equiId.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (nomEquip Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(14).Value = CType(nomEquip,String)
+            End If
+            If (mfr Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(15).Value = CType(mfr,String)
+            End If
+            If (model Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(16).Value = CType(model,String)
+            End If
+            If (servicio Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(servicio,String)
+            End If
+            If (precio Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(precio,String)
+            End If
+            If (_sub Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(_sub,String)
+            End If
+            If (cveElaboro.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(cveElaboro.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (elaborocot Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(elaborocot,String)
+            End If
+            If (correoElaboro Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(correoElaboro,String)
+            End If
+            If (lugar Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(23).Value = CType(lugar,String)
+            End If
+            If (moneda Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(24).Value = CType(moneda,String)
+            End If
+            If (terminos Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(25).Value = CType(terminos,String)
+            End If
+            If (modalidad Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(26).Value = CType(modalidad,String)
+            End If
+            If (obser Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(27).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(27).Value = CType(obser,String)
+            End If
+            If (calMetodo Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(28).Value = CType(calMetodo,String)
+            End If
+            If (serDescripcion Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(29).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(29).Value = CType(serDescripcion,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData( _
+                    ByVal numCot As Global.System.Nullable(Of Integer),  _
+                    ByVal fechaDesde As Global.System.Nullable(Of Date),  _
+                    ByVal fechaHasta As Global.System.Nullable(Of Date),  _
+                    ByVal nombre As String,  _
+                    ByVal puesto As String,  _
+                    ByVal telefono As String,  _
+                    ByVal ext As String,  _
+                    ByVal correo As String,  _
+                    ByVal com As String,  _
+                    ByVal dom As String,  _
+                    ByVal partidad As Global.System.Nullable(Of Integer),  _
+                    ByVal cant As Global.System.Nullable(Of Integer),  _
+                    ByVal equiId As Global.System.Nullable(Of Integer),  _
+                    ByVal nomEquip As String,  _
+                    ByVal mfr As String,  _
+                    ByVal model As String,  _
+                    ByVal servicio As String,  _
+                    ByVal precio As String,  _
+                    ByVal _sub As String,  _
+                    ByVal cveElaboro As Global.System.Nullable(Of Integer),  _
+                    ByVal elaborocot As String,  _
+                    ByVal correoElaboro As String,  _
+                    ByVal lugar As String,  _
+                    ByVal moneda As String,  _
+                    ByVal terminos As String,  _
+                    ByVal modalidad As String,  _
+                    ByVal obser As String,  _
+                    ByVal calMetodo As String,  _
+                    ByVal serDescripcion As String) As DataSet1.cotLIMSDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (numCot.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(numCot.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (fechaDesde.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(fechaDesde.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (fechaHasta.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(fechaHasta.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (nombre Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(nombre,String)
+            End If
+            If (puesto Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(puesto,String)
+            End If
+            If (telefono Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(telefono,String)
+            End If
+            If (ext Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(ext,String)
+            End If
+            If (correo Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(correo,String)
+            End If
+            If (com Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(com,String)
+            End If
+            If (dom Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(dom,String)
+            End If
+            If (partidad.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(11).Value = CType(partidad.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (cant.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(12).Value = CType(cant.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (equiId.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(13).Value = CType(equiId.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (nomEquip Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(14).Value = CType(nomEquip,String)
+            End If
+            If (mfr Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(15).Value = CType(mfr,String)
+            End If
+            If (model Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(16).Value = CType(model,String)
+            End If
+            If (servicio Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(servicio,String)
+            End If
+            If (precio Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(precio,String)
+            End If
+            If (_sub Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(_sub,String)
+            End If
+            If (cveElaboro.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(cveElaboro.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (elaborocot Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(elaborocot,String)
+            End If
+            If (correoElaboro Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(correoElaboro,String)
+            End If
+            If (lugar Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(23).Value = CType(lugar,String)
+            End If
+            If (moneda Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(24).Value = CType(moneda,String)
+            End If
+            If (terminos Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(25).Value = CType(terminos,String)
+            End If
+            If (modalidad Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(26).Value = CType(modalidad,String)
+            End If
+            If (obser Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(27).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(27).Value = CType(obser,String)
+            End If
+            If (calMetodo Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(28).Value = CType(calMetodo,String)
+            End If
+            If (serDescripcion Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(29).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(29).Value = CType(serDescripcion,String)
+            End If
+            Dim dataTable As DataSet1.cotLIMSDataTable = New DataSet1.cotLIMSDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

@@ -483,6 +483,7 @@
     <EmbeddedResource Include="Reportes\cotLIMS.resx">
       <DependentUpon>cotLIMS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cotLIMSProspectos.rdlc" />
     <EmbeddedResource Include="Reportes\FIRMA.resx">
       <DependentUpon>FIRMA.vb</DependentUpon>
     </EmbeddedResource>

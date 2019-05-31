@@ -652,7 +652,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.13807cm</Size>
+                    <Size>1.32488cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox15">
                         <CanGrow>true</CanGrow>
@@ -985,7 +985,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1.13807cm</Size>
+                    <Size>1.32488cm</Size>
                     <CellContents>
                       <Textbox Name="PartidaNo">
                         <CanGrow>true</CanGrow>
@@ -1366,7 +1366,7 @@
             <Top>3.16641cm</Top>
             <Left>0.25649cm</Left>
             <Height>1.44799cm</Height>
-            <Width>19.8464cm</Width>
+            <Width>20.03321cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>

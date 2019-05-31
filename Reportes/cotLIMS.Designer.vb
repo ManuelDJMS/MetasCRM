@@ -28,7 +28,7 @@ Partial Class cotLIMS
         '
         'cmdBuscar
         '
-        Me.cmdBuscar.Location = New System.Drawing.Point(127, 12)
+        Me.cmdBuscar.Location = New System.Drawing.Point(35, 40)
         Me.cmdBuscar.Name = "cmdBuscar"
         Me.cmdBuscar.Size = New System.Drawing.Size(75, 23)
         Me.cmdBuscar.TabIndex = 3
@@ -46,11 +46,11 @@ Partial Class cotLIMS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(246, 45)
+        Me.ClientSize = New System.Drawing.Size(262, 76)
         Me.Controls.Add(Me.cmdBuscar)
         Me.Controls.Add(Me.txtCot)
         Me.Name = "cotLIMS"
-        Me.Text = "V"
+        Me.Text = "Cotización PROSPECTOS"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
