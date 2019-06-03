@@ -13,6 +13,9 @@ Public Class FrmTiemposCondicion
     End Sub
 
     Public Sub consultaOrdenesDeVenta()
+        'DGAgregados.Rows.Clear()
+        ' DGAgregados.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
         Try
             MetodoLIMS()
             DGRes.Rows.Clear()
@@ -56,16 +59,18 @@ Public Class FrmTiemposCondicion
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ''Generar facuturas de ordenes de venta
-        ' Try
-        Dim seleccionado As Boolean
+        DGAgregados.Rows.Clear()
+        DGAgregados.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        Try
+            Dim seleccionado As Boolean
             Dim b As Boolean
             If DGRes.Rows.Count < 2 Then
                 MsgBox("No hay ordenes de venta seleccionadas.", MsgBoxStyle.Critical, "Error del sistema.")
             Else
                 '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
                 For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
-                seleccionado = DGRes.Rows(i).Cells(7).Value
-                If seleccionado = True Then
+                    seleccionado = DGRes.Rows(i).Cells(7).Value
+                    If seleccionado = True Then
                         b = True
                         Exit For
                     Else
@@ -75,20 +80,20 @@ Public Class FrmTiemposCondicion
                 '----------------------------------------------------------------------------------------------------
                 If b = True Then
                     For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
-                    seleccionado = DGRes.Rows(i).Cells(7).Value
-                    If seleccionado = True Then
-                        invoice = DGRes.Rows(i).Cells(1).Value.ToString()
-                        asignarDatos(invoice)
-                    End If
+                        seleccionado = DGRes.Rows(i).Cells(7).Value
+                        If seleccionado = True Then
+                            invoice = DGRes.Rows(i).Cells(1).Value.ToString()
+                            asignarDatos(invoice)
+                        End If
                     Next
                     'accion post
                 Else
                     MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
             End If
-        'Catch ex As Exception
-        ' MsgBox("Error al enviar correos.")
-        ' End Try
+        Catch ex As Exception
+            MsgBox("Error al enviar correos.")
+        End Try
     End Sub
 
     Public Sub exportarExcel()
@@ -171,6 +176,10 @@ Public Class FrmTiemposCondicion
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        exportarExcel()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         exportarExcel()
     End Sub
 End Class
