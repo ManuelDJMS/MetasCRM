@@ -129,7 +129,7 @@ Public Class FrmTiemposCondicion
             cadena = "select WorkOrderDetails.BillingNumber, SalesOrderDetails.RefNo, SalesOrderDetails.[PaymentTerms], SetupCustomerDetails.Organization, SetupCustomerDetails.Mobile, 
 		              SetupCustomerDetails.Email, SetupCustomerDetails.KeyFiscal, WorkOrderDetails.SOId, SetupCustomerDetails.DefaultPO,  SetupCustomerDetails.Currency, 
 		              WorkOrderDetails.WOId,SetupCustomerEquipmentMapping.InstrumentId,SetupServices.ServiceName, SetupServices.ShortNote, 
-		              [SetUpEquipment].EquipmentName, WorkOrderDetails.WorkAmount
+		              [SetUpEquipment].EquipmentName, WorkOrderDetails.WorkAmount, [ShipmentDetailsTable].[ShipingCharge]
 		              from WorkOrderDetails 
 		              inner join SalesOrderDetails on WorkOrderDetails.SOId=SalesOrderDetails.SOId 
 		              inner join SetupCustomerDetails on WorkOrderDetails.CustomerId=SetupCustomerDetails.CustomerId
@@ -153,34 +153,34 @@ Public Class FrmTiemposCondicion
             Else
                 DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), lector(7), lector(8), lector(1), lector(2), lector(9),
                lector(10), lector(12), lector(13), lector(11), lector(14), lector(15), lector(15), 16,
-               "Total", "4", "CFDII", "FolioComercial", "FormaPagoComecial", "USO CFDI MANUAL", "METODO PAGO MANUAL",
+               "Total", "4", "CFDII", "FolioComercial", "FormaPagoComecial", "G03", "METODO PAGO MANUAL",
                "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial", "Descripcion Servicio", 1,
                "TotalFinal", "E48 - Unidad de servicio", "Clave Prodcuto SAT")
 
                 If bandera = 0 Then
-                    DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), 0, 0, 0, lector(2), lector(9),
-                       lector(10), "Envio", "Envio", "-", "Servicio de logistica", 0, 0, 0,
-                       0, "4", "CFDII", "FolioComercial", "FormaPagoComecial", "USO CFDI MANUAL", "METODO PAGO MANUAL",
-                       "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial", "Descripcion Servicio", 1,
-                       "TotalFinal", "E48 - Unidad de servicio", "Clave Prodcuto SAT")
+                    DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), 0, 0, 0, lector(2), lector(9), 0, "Servicio logística",
+                                         "Servicio logística", "-", "Servicio logística (DHL sin seguro)", lector(16), 0, 16, 0, "4", "CFDII", "FolioComercial",
+                                         "FormaPagoComecial", "G03", "METODO PAGO MANUAL", "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial",
+                                         "Descripcion Servicio", 1, "TotalFinal", "E48 - Unidad de servicio", "81141600 - Manejo de cadena de suministros")
                     bandera = 1
                 End If
             End If
         End While
 
-        'For Each linea In DGAgregados.Rows
-        '    'linea.Cells(17).Value = linea.Cells(15).Value + linea.Cells(16).Value ''subtotal
-        '    linea.Cells(18).Value = linea.Cells(16).Value * 1.16
-        '    linea.Cells(30).Value = linea.Cells(18).Value
-        '    'linea.Cells(21).Value = linea.Cells(18).Value * 1.16
-        '    'linea.Cells(31).Value = linea.Cells(18).Value
-        '    'linea.Cells(34).Value = linea.Cells(21).Value
-        '    'linea.Cells(36).Value = "Servicio de Calibración a " & linea.Cells(15).Value
-        '    'linea.Cells(39).Value = linea.Cells(18).Value
-        '    'linea.Cells(42).Value = linea.Cells(39).Value * 1.16
-        '    'linea.Cells(43).Value = linea.Cells(42).Value * linea.Cells(37).Value
-        '    'linea.Cells(21).Value = linea.Cells(15).Value * linea.Cells(20).Value
-        'Next
+        For Each linea In DGAgregados.Rows
+            linea.Cells(16).Value = linea.Cells(15).Value ''subtotal
+            linea.Cells(18).Value = linea.Cells(16).Value * 1.16
+            linea.Cells(30).Value = linea.Cells(18).Value
+            'linea.Cells(21).Value = linea.Cells(18).Value * 1.16
+            'linea.Cells(31).Value = linea.Cells(18).Value
+            'linea.Cells(34).Value = linea.Cells(21).Value
+            'linea.Cells(36).Value = "Servicio de Calibración a " & linea.Cells(15).Value
+            'linea.Cells(39).Value = linea.Cells(18).Value
+            'linea.Cells(42).Value = linea.Cells(39).Value * 1.16
+            'linea.Cells(43).Value = linea.Cells(42).Value * linea.Cells(37).Value
+            'linea.Cells(21).Value = linea.Cells(15).Value * linea.Cells(20).Value
+        Next
+
         lector.Close()
             conexionLIMS.Close()
             'Catch ex As Exception
