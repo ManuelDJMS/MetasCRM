@@ -23,10 +23,12 @@ Partial Class FrmCotizacion2018
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCotizacion2018))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btCerrar = New System.Windows.Forms.PictureBox()
         Me.Tab2018 = New System.Windows.Forms.TabPage()
+        Me.TextArticulo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.btCotizacion = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,11 +44,6 @@ Partial Class FrmCotizacion2018
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
-        Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LabelNombre = New System.Windows.Forms.Label()
         Me.DGEmpresas = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -63,8 +60,11 @@ Partial Class FrmCotizacion2018
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
-        Me.TextArticulo = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.btCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tab2018.SuspendLayout()
         CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,6 +118,24 @@ Partial Class FrmCotizacion2018
         Me.Tab2018.Size = New System.Drawing.Size(1140, 625)
         Me.Tab2018.TabIndex = 5
         Me.Tab2018.Text = "Nueva cotización"
+        '
+        'TextArticulo
+        '
+        Me.TextArticulo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextArticulo.Location = New System.Drawing.Point(394, 342)
+        Me.TextArticulo.Name = "TextArticulo"
+        Me.TextArticulo.Size = New System.Drawing.Size(139, 21)
+        Me.TextArticulo.TabIndex = 174
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(337, 344)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(54, 15)
+        Me.Label6.TabIndex = 175
+        Me.Label6.Text = "Artículo:"
         '
         'btCotizacion
         '
@@ -257,50 +275,20 @@ Partial Class FrmCotizacion2018
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 380)
         Me.DGCotizaciones.Name = "DGCotizaciones"
         Me.DGCotizaciones.Size = New System.Drawing.Size(1108, 234)
         Me.DGCotizaciones.TabIndex = 155
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Seleccionar"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 80
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "MetAs_id"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 160
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Equipo"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 400
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Marca"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 200
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Modelo"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 200
         '
         'LabelNombre
         '
@@ -319,14 +307,14 @@ Partial Class FrmCotizacion2018
         Me.DGEmpresas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGEmpresas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGEmpresas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGEmpresas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGEmpresas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGEmpresas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column10, Me.Column11})
         Me.DGEmpresas.Location = New System.Drawing.Point(14, 99)
@@ -465,23 +453,35 @@ Partial Class FrmCotizacion2018
         Me.TabConsulta.Size = New System.Drawing.Size(1148, 653)
         Me.TabConsulta.TabIndex = 43
         '
-        'TextArticulo
+        'Column9
         '
-        Me.TextArticulo.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextArticulo.Location = New System.Drawing.Point(394, 342)
-        Me.TextArticulo.Name = "TextArticulo"
-        Me.TextArticulo.Size = New System.Drawing.Size(139, 21)
-        Me.TextArticulo.TabIndex = 174
+        Me.Column9.HeaderText = "Seleccionar"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 80
         '
-        'Label6
+        'Column5
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(337, 344)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(54, 15)
-        Me.Label6.TabIndex = 175
-        Me.Label6.Text = "Artículo:"
+        Me.Column5.HeaderText = "MetAs_id"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 160
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Equipo"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 400
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Marca"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 200
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Modelo"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 200
         '
         'FrmCotizacion2018
         '
@@ -536,11 +536,6 @@ Partial Class FrmCotizacion2018
     Friend WithEvents btCotizacion As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Column9 As DataGridViewCheckBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -549,4 +544,9 @@ Partial Class FrmCotizacion2018
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents TextArticulo As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Column9 As DataGridViewCheckBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

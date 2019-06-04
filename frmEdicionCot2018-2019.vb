@@ -7,15 +7,25 @@ Public Class frmEdicionCot2018_2019
 
     Private Sub frmEdicionCot2018_2019_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Try
-        MetodoLIMS()
         DTPHasta.Value.AddDays(30)
-        comandoLIMS = conexionLIMS.CreateCommand
+
+        'origen = "PROSPECCION"
+        If origen = "PROSPECCION" Then
+            MetodoMetasCotizador()
+            comandoLIMS = conexionMetasCotizador.CreateCommand
+            R = "select idProspecto,Prospectos.Compania, concat(Nombre,' ', Apellidos), DomicilioFiscal, Empresas.Ciudad, EdoConsig, Telefono, Correo from Prospectos inner join 
+             Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa where idProspecto=" & empresa
+        Else
+            MetodoLIMS()
+            comandoLIMS = conexionLIMS.CreateCommand
             R = "select [SetupCustomerDetails].CustomerId, isnull(Organization,'-'), isnull(concat(FirstName, ' ' , MiddleName, ' ', LastName),'-') as Nombre, 
                 isnull(ContAddress1,'-'), isnull(ContCity,'-'), isnull(ContState,'-'), isnull(Phone,'-'), isnull(Email,'-') 
                 from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] inner join  
                 SetupCustomerAddressDtls on [SetupCustomerDetails].CustomerId=[SetupCustomerAddressDtls].CustomerId
                 where [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].CustomerId=" & empresa
-            comandoLIMS.CommandText = R
+        End If
+        MsgBox(R)
+        comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             lectorLIMS.Read()
             txtCveContacto.Text = lectorLIMS(0)
