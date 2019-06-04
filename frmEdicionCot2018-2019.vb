@@ -24,7 +24,6 @@ Public Class frmEdicionCot2018_2019
                 SetupCustomerAddressDtls on [SetupCustomerDetails].CustomerId=[SetupCustomerAddressDtls].CustomerId
                 where [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].CustomerId=" & empresa
         End If
-        MsgBox(R)
         comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             lectorLIMS.Read()

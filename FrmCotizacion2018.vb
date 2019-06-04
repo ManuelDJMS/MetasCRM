@@ -51,7 +51,7 @@ Public Class FrmCotizacion2018
             MetodoLIMS()
             DGCotizaciones.Rows.Clear()
             clave1 = DGEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
-            empresa = DGEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
+            empresa = Val(DGEmpresas.Rows(e.RowIndex).Cells(0).Value)
             comandoLIMS = conexionLIMS.CreateCommand
             R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId=SetUpEquipment.EquipId where CustomerId=" & clave1

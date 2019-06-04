@@ -4,7 +4,7 @@ Module MetAsInf2018
     Public conexion2018 As SqlConnection              ''Base de datos METASINF-2019
     Public comando2018 As SqlCommand
     Public lector2018 As SqlDataReader
-    Public empresa As Integer
+    Public empresa As Integer = 0
     Public clave As String
     Public origen As String
     'Public conexionprueba As String = "Data Source=SERVER3\COMPAC2;Initial Catalog=METASINF-2019-2; User Id=sa; Password=Met99011578a;Integrated Security=False"

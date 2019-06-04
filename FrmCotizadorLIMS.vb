@@ -3,7 +3,7 @@ Public Class FrmCotizadorLIMS
     Dim R As String
     Dim clave1 As String
     Private Sub FrmCotizadorLIMS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If empresa.Equals("") Then
+        If empresa = 0 Then
             Label20.Visible = False
             Label21.Visible = False
             MetodoMetasCotizador()
@@ -18,7 +18,6 @@ Public Class FrmCotizadorLIMS
             conexionMetasCotizador.Close()
         Else
             PanelNormal.Enabled = False
-            MsgBox(empresa)
             consultaID(empresa)
         End If
         MetodoLIMS()
@@ -142,6 +141,7 @@ Public Class FrmCotizadorLIMS
     Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
         If e.ColumnIndex = DGCotizaciones.Columns.Item("s").Index Then
             DgAgregar.Rows.Add(DGCotizaciones.Rows(e.RowIndex).Cells(1).Value)
+
         End If
     End Sub
 
@@ -151,7 +151,7 @@ Public Class FrmCotizadorLIMS
         txtNombreCompania.Text = DGEmpresas.Rows(e.RowIndex).Cells(3).Value
         txtCorreo.Text = DGEmpresas.Rows(e.RowIndex).Cells(5).Value
         txtTelefono.Text = DGEmpresas.Rows(e.RowIndex).Cells(6).Value
-        empresa = DGEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
+        empresa = Val(DGEmpresas.Rows(e.RowIndex).Cells(0).Value)
     End Sub
 
     Private Sub BtCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click

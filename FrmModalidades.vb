@@ -78,7 +78,7 @@ Public Class FrmModalidades
     Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
         Dim Admin As New FrmCotizadorLIMS
         'Admin.Label2.Text = txtidProspecto.Text
-        empresa = txtidProspecto.Text
+        empresa = Val(txtidProspecto.Text)
         MsgBox(empresa)
         Admin.Show()
     End Sub
