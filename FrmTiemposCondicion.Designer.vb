@@ -22,63 +22,15 @@ Partial Class FrmTiemposCondicion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTiemposCondicion))
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DGAgregados = New System.Windows.Forms.DataGridView()
-        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column36 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column37 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column43 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column44 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column45 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column46 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column47 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column48 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DGRes = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -98,6 +50,7 @@ Partial Class FrmTiemposCondicion
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.txtNombreB = New System.Windows.Forms.TextBox()
@@ -105,15 +58,47 @@ Partial Class FrmTiemposCondicion
         Me.txtCompaniaB = New System.Windows.Forms.TextBox()
         Me.txtCorreoB = New System.Windows.Forms.TextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column37 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column43 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column44 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column47 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column48 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGAgregados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabConsulta
@@ -151,312 +136,52 @@ Partial Class FrmTiemposCondicion
         Me.DGAgregados.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DGAgregados.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGAgregados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGAgregados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGAgregados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGAgregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGAgregados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column23, Me.Column26, Me.Column27, Me.Column28, Me.Column29, Me.Column30, Me.Column31, Me.Column24, Me.Column25, Me.Column32, Me.Column33, Me.Column35, Me.Column36, Me.Column37, Me.Column34, Me.Column38, Me.Column39, Me.Column41, Me.Column42, Me.Column43, Me.Column40, Me.Column44, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column11, Me.Column10, Me.Column12, Me.Column13, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column19, Me.Column20, Me.Column21, Me.Column45, Me.Column46, Me.Column47, Me.Column48})
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGAgregados.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DGAgregados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column23, Me.Column26, Me.Column27, Me.Column28, Me.Column29, Me.Column30, Me.Column31, Me.Column24, Me.Column25, Me.Column32, Me.Column33, Me.Column35, Me.Column37, Me.Column34, Me.Column38, Me.Column39, Me.Column42, Me.Column43, Me.Column44, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column6, Me.Column7, Me.Column8, Me.Column13, Me.Column14, Me.Column15, Me.Column21, Me.Column47, Me.Column48})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGAgregados.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGAgregados.Location = New System.Drawing.Point(6, 344)
         Me.DGAgregados.Name = "DGAgregados"
         Me.DGAgregados.Size = New System.Drawing.Size(1128, 272)
         Me.DGAgregados.TabIndex = 161
-        '
-        'Column23
-        '
-        Me.Column23.HeaderText = "Invoice"
-        Me.Column23.Name = "Column23"
-        '
-        'Column26
-        '
-        Me.Column26.HeaderText = "Organizacion"
-        Me.Column26.Name = "Column26"
-        '
-        'Column27
-        '
-        Me.Column27.HeaderText = "Celular"
-        Me.Column27.Name = "Column27"
-        '
-        'Column28
-        '
-        Me.Column28.HeaderText = "Correo"
-        Me.Column28.Name = "Column28"
-        '
-        'Column29
-        '
-        Me.Column29.HeaderText = "Key Fiscal CC"
-        Me.Column29.Name = "Column29"
-        '
-        'Column30
-        '
-        Me.Column30.HeaderText = "#OrdenVenta"
-        Me.Column30.Name = "Column30"
-        '
-        'Column31
-        '
-        Me.Column31.HeaderText = "#OrdenCompra"
-        Me.Column31.Name = "Column31"
-        '
-        'Column24
-        '
-        Me.Column24.HeaderText = "Ref/Cotizacion"
-        Me.Column24.Name = "Column24"
-        '
-        'Column25
-        '
-        Me.Column25.HeaderText = "Teminos de pago"
-        Me.Column25.Name = "Column25"
-        '
-        'Column32
-        '
-        Me.Column32.HeaderText = "Moneda"
-        Me.Column32.Name = "Column32"
-        '
-        'Column33
-        '
-        Me.Column33.HeaderText = "#OrdenTrabajo"
-        Me.Column33.Name = "Column33"
-        '
-        'Column35
-        '
-        Me.Column35.HeaderText = "Servicio"
-        Me.Column35.Name = "Column35"
-        '
-        'Column36
-        '
-        Me.Column36.HeaderText = "FeeType UnidadMedida"
-        Me.Column36.Name = "Column36"
-        '
-        'Column37
-        '
-        Me.Column37.HeaderText = "Nota"
-        Me.Column37.Name = "Column37"
-        '
-        'Column34
-        '
-        Me.Column34.HeaderText = "MetAs ID"
-        Me.Column34.Name = "Column34"
-        '
-        'Column38
-        '
-        Me.Column38.HeaderText = "Equipo"
-        Me.Column38.Name = "Column38"
-        '
-        'Column39
-        '
-        Me.Column39.HeaderText = "PrecioUnitarioWO"
-        Me.Column39.Name = "Column39"
-        '
-        'Column41
-        '
-        Me.Column41.HeaderText = "CostoEnvio"
-        Me.Column41.Name = "Column41"
-        '
-        'Column42
-        '
-        Me.Column42.HeaderText = "Subtotal"
-        Me.Column42.Name = "Column42"
-        '
-        'Column43
-        '
-        Me.Column43.HeaderText = "IVA%"
-        Me.Column43.Name = "Column43"
-        '
-        'Column40
-        '
-        Me.Column40.HeaderText = "IVAWO"
-        Me.Column40.Name = "Column40"
-        '
-        'Column44
-        '
-        Me.Column44.HeaderText = "Total"
-        Me.Column44.Name = "Column44"
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Concepto"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 70
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Serie"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 70
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Folio"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 70
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Condicion"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 70
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Forma de Pago"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 70
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Uso CFDI"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 70
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Metodo Pago"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 70
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Codigo"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 70
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Cliente"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 70
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Subtotal"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 70
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "IVA"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 70
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "IEPS"
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 70
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "Total"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 70
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "Codigo producto"
-        Me.Column13.Name = "Column13"
-        Me.Column13.Width = 70
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "Producto"
-        Me.Column14.Name = "Column14"
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "Cantidad"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 70
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "Unidad"
-        Me.Column16.Name = "Column16"
-        '
-        'Column17
-        '
-        Me.Column17.HeaderText = "Precio"
-        Me.Column17.Name = "Column17"
-        Me.Column17.Width = 70
-        '
-        'Column18
-        '
-        Me.Column18.HeaderText = "IVA"
-        Me.Column18.Name = "Column18"
-        Me.Column18.Width = 70
-        '
-        'Column19
-        '
-        Me.Column19.HeaderText = "IEPS"
-        Me.Column19.Name = "Column19"
-        Me.Column19.Width = 70
-        '
-        'Column20
-        '
-        Me.Column20.HeaderText = "Total Unitario"
-        Me.Column20.Name = "Column20"
-        Me.Column20.Width = 70
-        '
-        'Column21
-        '
-        Me.Column21.HeaderText = "Total"
-        Me.Column21.Name = "Column21"
-        Me.Column21.Width = 70
-        '
-        'Column45
-        '
-        Me.Column45.HeaderText = "clave Prod/Serv Comercial"
-        Me.Column45.Name = "Column45"
-        '
-        'Column46
-        '
-        Me.Column46.HeaderText = "Unidad Medida comercial"
-        Me.Column46.Name = "Column46"
-        '
-        'Column47
-        '
-        Me.Column47.HeaderText = "Clave unidad SAT"
-        Me.Column47.Name = "Column47"
-        '
-        'Column48
-        '
-        Me.Column48.HeaderText = "ClaveProducto SAT"
-        Me.Column48.Name = "Column48"
         '
         'DGRes
         '
         Me.DGRes.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DGRes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGRes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGRes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGRes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGRes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Correo, Me.Column5, Me.Column22, Me.Obser, Me.Column4})
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGRes.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGRes.DefaultCellStyle = DataGridViewCellStyle5
         Me.DGRes.Location = New System.Drawing.Point(6, 126)
         Me.DGRes.Name = "DGRes"
         Me.DGRes.Size = New System.Drawing.Size(1128, 212)
@@ -500,11 +225,11 @@ Partial Class FrmTiemposCondicion
         '
         'Obser
         '
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Green
-        DataGridViewCellStyle14.Format = "$ .00"
-        DataGridViewCellStyle14.NullValue = "0"
-        Me.Obser.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Green
+        DataGridViewCellStyle4.Format = "$ .00"
+        DataGridViewCellStyle4.NullValue = "0"
+        Me.Obser.DefaultCellStyle = DataGridViewCellStyle4
         Me.Obser.HeaderText = "Total"
         Me.Obser.Name = "Obser"
         Me.Obser.Width = 120
@@ -635,6 +360,18 @@ Partial Class FrmTiemposCondicion
         Me.Label26.TabIndex = 165
         Me.Label26.Text = "Ordenes de venta para facturar"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(777, 15)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(36, 33)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -701,17 +438,181 @@ Partial Class FrmTiemposCondicion
         Me.PictureBox5.TabIndex = 44
         Me.PictureBox5.TabStop = False
         '
-        'PictureBox2
+        'Column23
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(777, 15)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(36, 33)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.Column23.HeaderText = "Invoice"
+        Me.Column23.Name = "Column23"
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "Organizacion"
+        Me.Column26.Name = "Column26"
+        '
+        'Column27
+        '
+        Me.Column27.HeaderText = "Celular"
+        Me.Column27.Name = "Column27"
+        '
+        'Column28
+        '
+        Me.Column28.HeaderText = "Correo"
+        Me.Column28.Name = "Column28"
+        '
+        'Column29
+        '
+        Me.Column29.HeaderText = "Key Fiscal CC"
+        Me.Column29.Name = "Column29"
+        '
+        'Column30
+        '
+        Me.Column30.HeaderText = "#OrdenVenta"
+        Me.Column30.Name = "Column30"
+        '
+        'Column31
+        '
+        Me.Column31.HeaderText = "#OrdenCompra"
+        Me.Column31.Name = "Column31"
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "Ref/Cotizacion"
+        Me.Column24.Name = "Column24"
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "Teminos de pago"
+        Me.Column25.Name = "Column25"
+        '
+        'Column32
+        '
+        Me.Column32.HeaderText = "Moneda"
+        Me.Column32.Name = "Column32"
+        '
+        'Column33
+        '
+        Me.Column33.HeaderText = "#OrdenTrabajo"
+        Me.Column33.Name = "Column33"
+        '
+        'Column35
+        '
+        Me.Column35.HeaderText = "Servicio"
+        Me.Column35.Name = "Column35"
+        '
+        'Column37
+        '
+        Me.Column37.HeaderText = "Nota"
+        Me.Column37.Name = "Column37"
+        '
+        'Column34
+        '
+        Me.Column34.HeaderText = "MetAs ID"
+        Me.Column34.Name = "Column34"
+        '
+        'Column38
+        '
+        Me.Column38.HeaderText = "Equipo"
+        Me.Column38.Name = "Column38"
+        '
+        'Column39
+        '
+        Me.Column39.HeaderText = "PrecioUnitarioWO"
+        Me.Column39.Name = "Column39"
+        '
+        'Column42
+        '
+        Me.Column42.HeaderText = "Subtotal"
+        Me.Column42.Name = "Column42"
+        '
+        'Column43
+        '
+        Me.Column43.HeaderText = "IVA%"
+        Me.Column43.Name = "Column43"
+        '
+        'Column44
+        '
+        Me.Column44.HeaderText = "Total"
+        Me.Column44.Name = "Column44"
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Concepto"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 70
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Serie"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Folio"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 70
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Forma de Pago"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.Width = 70
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Uso CFDI"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.Width = 70
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Metodo Pago"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 70
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Codigo"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 70
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Cliente"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 70
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "Codigo producto"
+        Me.Column13.Name = "Column13"
+        Me.Column13.Width = 70
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "Producto"
+        Me.Column14.Name = "Column14"
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "Cantidad"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 70
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "Total"
+        Me.Column21.Name = "Column21"
+        Me.Column21.Width = 70
+        '
+        'Column47
+        '
+        Me.Column47.HeaderText = "Clave unidad SAT"
+        Me.Column47.Name = "Column47"
+        '
+        'Column48
+        '
+        Me.Column48.HeaderText = "ClaveProducto SAT"
+        Me.Column48.Name = "Column48"
         '
         'FrmTiemposCondicion
         '
@@ -734,9 +635,9 @@ Partial Class FrmTiemposCondicion
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -770,6 +671,7 @@ Partial Class FrmTiemposCondicion
     Friend WithEvents Column22 As DataGridViewTextBoxColumn
     Friend WithEvents Obser As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewCheckBoxColumn
+    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Column23 As DataGridViewTextBoxColumn
     Friend WithEvents Column26 As DataGridViewTextBoxColumn
     Friend WithEvents Column27 As DataGridViewTextBoxColumn
@@ -782,41 +684,25 @@ Partial Class FrmTiemposCondicion
     Friend WithEvents Column32 As DataGridViewTextBoxColumn
     Friend WithEvents Column33 As DataGridViewTextBoxColumn
     Friend WithEvents Column35 As DataGridViewTextBoxColumn
-    Friend WithEvents Column36 As DataGridViewTextBoxColumn
     Friend WithEvents Column37 As DataGridViewTextBoxColumn
     Friend WithEvents Column34 As DataGridViewTextBoxColumn
     Friend WithEvents Column38 As DataGridViewTextBoxColumn
     Friend WithEvents Column39 As DataGridViewTextBoxColumn
-    Friend WithEvents Column41 As DataGridViewTextBoxColumn
     Friend WithEvents Column42 As DataGridViewTextBoxColumn
     Friend WithEvents Column43 As DataGridViewTextBoxColumn
-    Friend WithEvents Column40 As DataGridViewTextBoxColumn
     Friend WithEvents Column44 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents Column16 As DataGridViewTextBoxColumn
-    Friend WithEvents Column17 As DataGridViewTextBoxColumn
-    Friend WithEvents Column18 As DataGridViewTextBoxColumn
-    Friend WithEvents Column19 As DataGridViewTextBoxColumn
-    Friend WithEvents Column20 As DataGridViewTextBoxColumn
     Friend WithEvents Column21 As DataGridViewTextBoxColumn
-    Friend WithEvents Column45 As DataGridViewTextBoxColumn
-    Friend WithEvents Column46 As DataGridViewTextBoxColumn
     Friend WithEvents Column47 As DataGridViewTextBoxColumn
     Friend WithEvents Column48 As DataGridViewTextBoxColumn
-    Friend WithEvents PictureBox2 As PictureBox
 End Class

@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmTiemposCondicion
     Dim invoice As String
+    Dim variable As String
+    Dim bandera As Boolean = False
     Private Sub FrmTiemposCondicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         consultaOrdenesDeVenta()
         alternarColorColumnas(DGRes)
@@ -57,8 +59,8 @@ Public Class FrmTiemposCondicion
         ''Generar facuturas de ordenes de venta
         DGAgregados.Rows.Clear()
         DGAgregados.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        Try
-            Dim seleccionado As Boolean
+        ' Try
+        Dim seleccionado As Boolean
             Dim b As Boolean
             If DGRes.Rows.Count < 2 Then
                 MsgBox("No hay ordenes de venta seleccionadas.", MsgBoxStyle.Critical, "Error del sistema.")
@@ -87,9 +89,9 @@ Public Class FrmTiemposCondicion
                     MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
             End If
-        Catch ex As Exception
-            MsgBox("Error al enviar correos.")
-        End Try
+            'Catch ex As Exception
+        '    MsgBox("Error al enviar correos.")
+        ' End Try
     End Sub
     Public Sub exportarExcel()
         Dim fichero As New SaveFileDialog()
@@ -118,15 +120,16 @@ Public Class FrmTiemposCondicion
         End If
     End Sub
     Public Sub asignarDatos(ByVal x As String)
-        Try
-            MetodoLIMS()
-            'DGAgregados.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-            Dim linea As DataGridViewRow
+        'Try
+        MetodoLIMS()
+        bandera = 0
+        'DGAgregados.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        Dim linea As DataGridViewRow
             Dim cadena As String
             cadena = "select WorkOrderDetails.BillingNumber, SalesOrderDetails.RefNo, SalesOrderDetails.[PaymentTerms], SetupCustomerDetails.Organization, SetupCustomerDetails.Mobile, 
 		              SetupCustomerDetails.Email, SetupCustomerDetails.KeyFiscal, WorkOrderDetails.SOId, SetupCustomerDetails.DefaultPO,  SetupCustomerDetails.Currency, 
-		              WorkOrderDetails.WOId,SetupCustomerEquipmentMapping.InstrumentId,SetupServices.ServiceName, SetupServices.[FeeType], SetupServices.ShortNote, 
-		              [SetUpEquipment].EquipmentName, WorkOrderDetails.WorkAmount, WorkOrderDetails.WorkTax, [ShipmentDetailsTable].[ShipingCharge]
+		              WorkOrderDetails.WOId,SetupCustomerEquipmentMapping.InstrumentId,SetupServices.ServiceName, SetupServices.ShortNote, 
+		              [SetUpEquipment].EquipmentName, WorkOrderDetails.WorkAmount
 		              from WorkOrderDetails 
 		              inner join SalesOrderDetails on WorkOrderDetails.SOId=SalesOrderDetails.SOId 
 		              inner join SetupCustomerDetails on WorkOrderDetails.CustomerId=SetupCustomerDetails.CustomerId
@@ -138,29 +141,51 @@ Public Class FrmTiemposCondicion
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
             While lector.Read()
+            If variable = lector(0) Then
                 DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), lector(7), lector(8), lector(1), lector(2), lector(9),
-                lector(10), lector(12), lector(13), lector(14), lector(11), lector(15), lector(16), lector(18), "Subtotal", 16,
-                lector(17), "Total", "4", "CFDII", "FolioComercial", lector(2), "FormaPagoComecial", "USO CFDI MANUAL", "METODO PAGO MANUAL",
-                lector(6), "ClienteComercial", "Subtotal", 16, 0, "Total", "Codigo Servicio Comercial", "Descripcion Servicio", 1,
-                "SERVICIO", "PRECIO", 16, 0, "TotalUnitario", "TotalFinal", "Clave Prod/Serv Comercial", "SERVICIO", "E48 - Unidad de servicio", "Clave Prodcuto SAT")
-            End While
-            For Each linea In DGAgregados.Rows
-                linea.Cells(18).Value = linea.Cells(16).Value + linea.Cells(17).Value
-                linea.Cells(20).Value = linea.Cells(18).Value * 0.16
-                linea.Cells(21).Value = linea.Cells(18).Value * 1.16
-                linea.Cells(31).Value = linea.Cells(18).Value
-                linea.Cells(34).Value = linea.Cells(21).Value
-                linea.Cells(36).Value = "Servicio de Calibración a " & linea.Cells(15).Value
-                linea.Cells(39).Value = linea.Cells(18).Value
-                linea.Cells(42).Value = linea.Cells(39).Value * 1.16
-                linea.Cells(43).Value = linea.Cells(42).Value * linea.Cells(37).Value
-                'linea.Cells(21).Value = linea.Cells(15).Value * linea.Cells(20).Value
-            Next
-            lector.Close()
+               lector(10), lector(12), lector(13), lector(11), lector(14), lector(15), lector(15), 16,
+               "Total", "4", "CFDII", "FolioComercial", "FormaPagoComecial", "USO CFDI MANUAL", "METODO PAGO MANUAL",
+               "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial", "Descripcion Servicio", 1,
+               "TotalFinal", "E48 - Unidad de servicio", "Clave Prodcuto SAT")
+                variable = lector(0).ToString
+                MsgBox(variable)
+
+            Else
+                DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), lector(7), lector(8), lector(1), lector(2), lector(9),
+               lector(10), lector(12), lector(13), lector(11), lector(14), lector(15), lector(15), 16,
+               "Total", "4", "CFDII", "FolioComercial", "FormaPagoComecial", "USO CFDI MANUAL", "METODO PAGO MANUAL",
+               "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial", "Descripcion Servicio", 1,
+               "TotalFinal", "E48 - Unidad de servicio", "Clave Prodcuto SAT")
+
+                If bandera = 0 Then
+                    DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), 0, 0, 0, lector(2), lector(9),
+                       lector(10), "Envio", "Envio", "-", "Servicio de logistica", 0, 0, 0,
+                       0, "4", "CFDII", "FolioComercial", "FormaPagoComecial", "USO CFDI MANUAL", "METODO PAGO MANUAL",
+                       "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial", "Descripcion Servicio", 1,
+                       "TotalFinal", "E48 - Unidad de servicio", "Clave Prodcuto SAT")
+                    bandera = 1
+                End If
+            End If
+        End While
+
+        'For Each linea In DGAgregados.Rows
+        '    'linea.Cells(17).Value = linea.Cells(15).Value + linea.Cells(16).Value ''subtotal
+        '    linea.Cells(18).Value = linea.Cells(16).Value * 1.16
+        '    linea.Cells(30).Value = linea.Cells(18).Value
+        '    'linea.Cells(21).Value = linea.Cells(18).Value * 1.16
+        '    'linea.Cells(31).Value = linea.Cells(18).Value
+        '    'linea.Cells(34).Value = linea.Cells(21).Value
+        '    'linea.Cells(36).Value = "Servicio de Calibración a " & linea.Cells(15).Value
+        '    'linea.Cells(39).Value = linea.Cells(18).Value
+        '    'linea.Cells(42).Value = linea.Cells(39).Value * 1.16
+        '    'linea.Cells(43).Value = linea.Cells(42).Value * linea.Cells(37).Value
+        '    'linea.Cells(21).Value = linea.Cells(15).Value * linea.Cells(20).Value
+        'Next
+        lector.Close()
             conexionLIMS.Close()
-        Catch ex As Exception
-            MsgBox("Error en lectura de datos.", MsgBoxStyle.Information)
-        End Try
+            'Catch ex As Exception
+        '    MsgBox("Error en lectura de datos.", MsgBoxStyle.Information)
+        'End Try
     End Sub
 
     Private Sub DGCotizaciones_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DGAgregados.CellEndEdit
