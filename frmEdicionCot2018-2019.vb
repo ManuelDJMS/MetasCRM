@@ -251,6 +251,7 @@ Public Class frmEdicionCot2018_2019
         FrmCotizacion2018.txtNombreE.Text = ""
         FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
         FrmCotizacion2018.DGEmpresas.DataSource = Nothing
+        empresa = 0
         Me.Dispose()
 
     End Sub

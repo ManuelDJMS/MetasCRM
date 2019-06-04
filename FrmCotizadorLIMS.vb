@@ -171,6 +171,7 @@ Public Class FrmCotizadorLIMS
                 frmEdicionCot2018_2019.DGCotizaciones.Rows.Add(i + 1, lectorLIMS(2), lectorLIMS(7), 1, lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6), lectorLIMS(8), 0, lectorLIMS(1))
             Next
             frmEdicionCot2018_2019.Show()
+            Me.Dispose()
         End If
     End Sub
 

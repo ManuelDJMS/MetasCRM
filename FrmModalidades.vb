@@ -79,7 +79,7 @@ Public Class FrmModalidades
         Dim Admin As New FrmCotizadorLIMS
         'Admin.Label2.Text = txtidProspecto.Text
         empresa = Val(txtidProspecto.Text)
-        MsgBox(empresa)
         Admin.Show()
+        Me.Dispose()
     End Sub
 End Class
