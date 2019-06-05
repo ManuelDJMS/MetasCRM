@@ -22,7 +22,7 @@ Public Class FrmAutorizarSolicitudes
             MetodoMetasCotizador()
             DGOportunidades.Rows.Clear()
             Dim R As String
-            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Subtotal, Cotizaciones.IVA, Cotizaciones.Total from Cotizaciones"
+            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Subtotal, Cotizaciones.IVA, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS'"
             'R = "select Cotizaciones.NumCot, Cotizaciones.idContacto from Cotizaciones"
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             comando.CommandType = CommandType.Text
