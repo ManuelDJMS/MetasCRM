@@ -379,7 +379,12 @@ Public Class FrmHOME
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
+
+            ProgressBar1.Visible = True
+
+
             While lector.Read()
+                ProgressBar1.Value = ProgressBar1.Value + 1
                 DGTareas.Rows.Add(lector(0), lector(1), (lector(2) & " " & lector(3)), lector(4), lector(5))
             End While
             lector.Close()
