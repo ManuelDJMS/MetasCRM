@@ -160,8 +160,8 @@ Public Class FrmTiemposCondicion
                 If bandera = 0 Then
                     DGAgregados.Rows.Add(lector(0), lector(3), lector(4), lector(5), lector(6), 0, 0, 0, lector(2), lector(9), 0, "Servicio logística",
                                          "Servicio logística", "-", "Servicio logística (DHL sin seguro)", lector(16), 0, 16, 0, "4", "CFDII", "FolioComercial",
-                                         "FormaPagoComecial", "G03", "METODO PAGO MANUAL", "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial",
-                                         "Descripcion Servicio", 1, "TotalFinal", "E48 - Unidad de servicio", "81141600 - Manejo de cadena de suministros")
+                                         "99-Por definir", "G03", "PPD-Pago en parcialidades o diferido", "CodigoComercial", "ClienteComercial", "Codigo Servicio Comercial",
+                                         "Descripcion Servicio", 1, "TotalFinal", "E48-Unidad de servicio", "81141600-Manejo de cadena de suministros")
                     bandera = 1
                 End If
             End If
