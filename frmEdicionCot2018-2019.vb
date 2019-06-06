@@ -6,25 +6,16 @@ Public Class frmEdicionCot2018_2019
     Dim iva As Double
 
     Private Sub frmEdicionCot2018_2019_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Try
-        DTPHasta.Value.AddDays(30)
-
-        'origen = "PROSPECCION"
-        'If origen = "PROSPECCION" Then
-        '    MetodoMetasCotizador()
-        '    comandoLIMS = conexionMetasCotizador.CreateCommand
-        '    R = "select idProspecto,Prospectos.Compania, concat(Nombre,' ', Apellidos), DomicilioFiscal, Empresas.Ciudad, EdoConsig, Telefono, Correo from Prospectos inner join 
-        '     Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa where idProspecto=" & empresa
-        'Else
-        MetodoLIMS()
+        Try
+            DTPHasta.Value.AddDays(30)
+            MetodoLIMS()
             comandoLIMS = conexionLIMS.CreateCommand
             R = "select [SetupCustomerDetails].CustomerId, isnull(Organization,'-'), isnull(concat(FirstName, ' ' , MiddleName, ' ', LastName),'-') as Nombre, 
                 isnull(ContAddress1,'-'), isnull(ContCity,'-'), isnull(ContState,'-'), isnull(Phone,'-'), isnull(Email,'-') 
                 from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] inner join  
                 SetupCustomerAddressDtls on [SetupCustomerDetails].CustomerId=[SetupCustomerAddressDtls].CustomerId
                 where [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].CustomerId=" & empresa
-        'End If
-        comandoLIMS.CommandText = R
+            comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             lectorLIMS.Read()
             txtCveContacto.Text = lectorLIMS(0)
@@ -178,12 +169,12 @@ Public Class frmEdicionCot2018_2019
         total = subtotal + iva
         TextSubtotal.Text = subtotal
         TextTotal.Text = total
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-        '    cadena = Err.Description
-        '    cadena = cadena.Replace("'", "")
-        '    Bitacora("frmEdicionCot2018-2019", "Error al cargar el formulario", Err.Number, cadena)
-        'End Try
+        Catch ex As Exception
+        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+        cadena = Err.Description
+        cadena = cadena.Replace("'", "")
+        Bitacora("frmEdicionCot2018-2019", "Error al cargar el formulario", Err.Number, cadena)
+        End Try
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Dispose()
@@ -249,11 +240,13 @@ Public Class frmEdicionCot2018_2019
 
         MsgBox("Guardado correctamente.", MsgBoxStyle.Information)
 
-        FrmCotizacion2018.txtClave.Text = ""
-        FrmCotizacion2018.txtNombreE.Text = ""
-        FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
-        FrmCotizacion2018.DGEmpresas.DataSource = Nothing
+        'FrmCotizacion2018.txtClave.Text = ""
+        'FrmCotizacion2018.txtNombreE.Text = ""
+        'FrmCotizacion2018.DGCotizaciones.DataSource = Nothing
+        'FrmCotizacion2018.DGEmpresas.DataSource = Nothing
+        FrmCotizadorLIMS.DgAgregar.Rows.Clear()
         empresa = 0
+
         Me.Dispose()
 
     End Sub
