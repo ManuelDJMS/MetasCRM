@@ -143,6 +143,15 @@ Partial Class FrmContactos
         Me.Label41 = New System.Windows.Forms.Label()
         Me.TabEquipo = New System.Windows.Forms.TabPage()
         Me.DGInstrumentos = New System.Windows.Forms.DataGridView()
+        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Matricula = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NoSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dep = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Locacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaAprox = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Activo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CBDataIncluded = New System.Windows.Forms.CheckBox()
         Me.CBOnSite = New System.Windows.Forms.CheckBox()
         Me.CBActivo = New System.Windows.Forms.CheckBox()
@@ -273,15 +282,6 @@ Partial Class FrmContactos
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.txtNombreEmpleado = New System.Windows.Forms.Label()
-        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Matricula = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NoSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dep = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Locacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaAprox = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Activo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1664,6 +1664,67 @@ Partial Class FrmContactos
         Me.DGInstrumentos.ReadOnly = True
         Me.DGInstrumentos.Size = New System.Drawing.Size(1068, 456)
         Me.DGInstrumentos.TabIndex = 246
+        '
+        'Articulo
+        '
+        Me.Articulo.HeaderText = "Articulo"
+        Me.Articulo.Name = "Articulo"
+        Me.Articulo.ReadOnly = True
+        Me.Articulo.Width = 185
+        '
+        'Matricula
+        '
+        Me.Matricula.HeaderText = "Matricula"
+        Me.Matricula.Name = "Matricula"
+        Me.Matricula.ReadOnly = True
+        Me.Matricula.Width = 130
+        '
+        'NoSerie
+        '
+        Me.NoSerie.HeaderText = "No. Serie"
+        Me.NoSerie.Name = "NoSerie"
+        Me.NoSerie.ReadOnly = True
+        Me.NoSerie.Width = 130
+        '
+        'Modelo
+        '
+        Me.Modelo.HeaderText = "Modelo"
+        Me.Modelo.Name = "Modelo"
+        Me.Modelo.ReadOnly = True
+        Me.Modelo.Width = 120
+        '
+        'Marca
+        '
+        Me.Marca.HeaderText = "Marca"
+        Me.Marca.Name = "Marca"
+        Me.Marca.ReadOnly = True
+        Me.Marca.Width = 110
+        '
+        'Dep
+        '
+        Me.Dep.HeaderText = "Departamento"
+        Me.Dep.Name = "Dep"
+        Me.Dep.ReadOnly = True
+        '
+        'Locacion
+        '
+        Me.Locacion.HeaderText = "Locación"
+        Me.Locacion.Name = "Locacion"
+        Me.Locacion.ReadOnly = True
+        '
+        'FechaAprox
+        '
+        Me.FechaAprox.HeaderText = "Volver a calibrar"
+        Me.FechaAprox.Name = "FechaAprox"
+        Me.FechaAprox.ReadOnly = True
+        Me.FechaAprox.Width = 130
+        '
+        'Activo
+        '
+        Me.Activo.HeaderText = "Activo"
+        Me.Activo.Name = "Activo"
+        Me.Activo.ReadOnly = True
+        Me.Activo.Width = 60
         '
         'CBDataIncluded
         '
@@ -3063,67 +3124,6 @@ Partial Class FrmContactos
         Me.txtNombreEmpleado.Size = New System.Drawing.Size(113, 17)
         Me.txtNombreEmpleado.TabIndex = 139
         Me.txtNombreEmpleado.Text = "Nombre Empleado"
-        '
-        'Articulo
-        '
-        Me.Articulo.HeaderText = "Articulo"
-        Me.Articulo.Name = "Articulo"
-        Me.Articulo.ReadOnly = True
-        Me.Articulo.Width = 185
-        '
-        'Matricula
-        '
-        Me.Matricula.HeaderText = "Matricula"
-        Me.Matricula.Name = "Matricula"
-        Me.Matricula.ReadOnly = True
-        Me.Matricula.Width = 130
-        '
-        'NoSerie
-        '
-        Me.NoSerie.HeaderText = "No. Serie"
-        Me.NoSerie.Name = "NoSerie"
-        Me.NoSerie.ReadOnly = True
-        Me.NoSerie.Width = 130
-        '
-        'Modelo
-        '
-        Me.Modelo.HeaderText = "Modelo"
-        Me.Modelo.Name = "Modelo"
-        Me.Modelo.ReadOnly = True
-        Me.Modelo.Width = 120
-        '
-        'Marca
-        '
-        Me.Marca.HeaderText = "Marca"
-        Me.Marca.Name = "Marca"
-        Me.Marca.ReadOnly = True
-        Me.Marca.Width = 110
-        '
-        'Dep
-        '
-        Me.Dep.HeaderText = "Departamento"
-        Me.Dep.Name = "Dep"
-        Me.Dep.ReadOnly = True
-        '
-        'Locacion
-        '
-        Me.Locacion.HeaderText = "Locación"
-        Me.Locacion.Name = "Locacion"
-        Me.Locacion.ReadOnly = True
-        '
-        'FechaAprox
-        '
-        Me.FechaAprox.HeaderText = "Volver a calibrar"
-        Me.FechaAprox.Name = "FechaAprox"
-        Me.FechaAprox.ReadOnly = True
-        Me.FechaAprox.Width = 130
-        '
-        'Activo
-        '
-        Me.Activo.HeaderText = "Activo"
-        Me.Activo.Name = "Activo"
-        Me.Activo.ReadOnly = True
-        Me.Activo.Width = 60
         '
         'FrmContactos
         '

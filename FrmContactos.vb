@@ -162,6 +162,7 @@ Public Class FrmContactos
                   ,SetupCustomerAddressDtls.[ShipCountry]
 	              from SetupCustomerDetails
 	              inner join SetupCustomerAddressDtls on SetupCustomerDetails.CustomerId =  SetupCustomerAddressDtls.CustomerId  where  SetupCustomerDetails.[CustomerId]= " & clave & ""
+            'MsgBox(clave)
 
             Dim comando As New SqlCommand(R, conexionLIMS)
             Dim lector As SqlDataReader
@@ -266,7 +267,7 @@ Public Class FrmContactos
                     txtCalDueDate.Text = "Nuclear"
                 ElseIf lector(20).ToString.Trim.Equals("1") Then
                     txtCalDueDate.Text = "ISO"
-                ElseIf lector(20).toString.Trim.Equals("2") Then
+                ElseIf lector(20).ToString.Trim.Equals("2") Then
                     txtCalDueDate.Text = "Ninguno"
                 ElseIf lector(20).ToString.Trim.Equals("3") Then
                     txtCalDueDate.Text = "Aplica"
@@ -530,6 +531,15 @@ Public Class FrmContactos
         End If
     End Sub
 
+    Private Sub btGuardar_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
+        MsgBox(txtNumeroDeCuenta.Text)
+        Dim con As New FrmNuevoContacto
+        con.txtNumeroDeCuenta.Text = txtNumeroDeCuenta.Text
+        MsgBox(txtNumeroDeCuenta.Text)
+        ban = True
+        con.ShowDialog()
+    End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         consultaGeneralContactos()
         txtNombreB.Text = ""
@@ -543,7 +553,7 @@ Public Class FrmContactos
             MetodoLIMS()
             DGConsulta.Refresh()
             Dim R As String
-            R = "  select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
+            R = "select [CustomerId] as idContacto, [FirstName] as [Nombre], [LastName] as [Apellidos], [CompanyName] as Empresa, [CustAccountNo] as [No. Cuenta], [Email] as Correo, [PaymentTerms] as [Terminos de pago], [CustomerType] as [Tipo de Contacto], [IsTaxable] as [¿Con IVA?] from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
                 inner join [MetAs_Live-pruebas].[dbo].[MasterPoPickList] on [MetAs_Live-pruebas].[dbo].[MasterPoPickList].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[DefaultPO] 
                 left join [MetAs_Live-pruebas].[dbo].[SetupCustomerSource] on [MetAs_Live-pruebas].[dbo].[SetupCustomerSource].[id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[Source] 
                 left join [MetAs_Live-pruebas].[dbo].[MasterCustomerType] on [MetAs_Live-pruebas].[dbo].[MasterCustomerType].[Id] = [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].[AdminType] 

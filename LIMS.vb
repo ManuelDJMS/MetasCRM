@@ -3,6 +3,7 @@ Module LIMS              ''--------------------------BASE DE DATOS LIMS---------
     Public conexionLIMS As SqlConnection
     Public comandoLIMS As SqlCommand
     Public lectorLIMS As SqlDataReader
+    Public ban As Boolean = True
     Sub MetodoLIMS()
         Try
             'conexionLIMS = New SqlConnection("Data Source=107.180.70.168\METASSQLEXPRESS;Initial Catalog=MetAs_Live;Persist Security Info=False;User ID=sa;Password=Bws123bws")

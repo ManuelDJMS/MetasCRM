@@ -9,96 +9,99 @@ Public Class FrmNuevoContacto
     Private Sub btCancelar_Click(sender As Object, e As EventArgs) Handles btCancelar.Click
         Me.Dispose()
     End Sub
-
     Private Sub FrmNuevoContacto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MetodoLIMS()
-        '' cargar datos de las tablas SetupCustomerSource
-        '' cargar datos de las tablas SetupQualityRequierement
-        Dim R As String
-        R = "select CustomerSource from SetupCustomerSource"
-        Dim comando As New SqlCommand(R, conexionLIMS)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        While lector.Read()
-            cboOrigen.Items.Add(lector(0))
-        End While
-        lector.Close()
+        If ban = True Then
+            txtNumeroDeCuenta.Text = FrmContactos.txtNumeroDeCuenta.Text
+        Else
+            '' cargar datos de las tablas SetupCustomerSource
+            '' cargar datos de las tablas SetupQualityRequierement
+            Dim R As String
+            R = "Select CustomerSource from SetupCustomerSource"
+            Dim comando As New SqlCommand(R, conexionLIMS)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                cboOrigen.Items.Add(lector(0))
+            End While
+            lector.Close()
 
-        'cadena = "select QualityRqment from SetupQualityRequirement"
-        comando.CommandText = "select QualityRqment from SetupQualityRequirement"
-        lector = comando.ExecuteReader
-        While lector.Read()
-            cboRequerimientosDeCalidad.Items.Add(lector(0))
-        End While
-        lector.Close()
-
-
-
-        ''Reacomodar el nombre de los registros que se cambiarona español en las tablas del sistema 
-
+            'cadena = "Select QualityRqment from SetupQualityRequirement"
+            comando.CommandText = "Select QualityRqment from SetupQualityRequirement"
+            lector = comando.ExecuteReader
+            While lector.Read()
+                cboRequerimientosDeCalidad.Items.Add(lector(0))
+            End While
+            lector.Close()
 
 
-        comando.CommandText = "select [CustomerType] from MasterCustomerType"
-        lector = comando.ExecuteReader
-        While lector.Read()
-            cboTipoIndustria.Items.Add(lector(0))
-        End While
-        lector.Close()
 
-        comando.CommandText = "select [POPickList] from [MasterPoPickList]"
-        lector = comando.ExecuteReader
-        While lector.Read()
-            cboDefaultPO.Items.Add(lector(0))
-            cboDefaultPO.Text = ""
-        End While
-        lector.Close()
+            ''Reacomodar el nombre de los registros que se cambiarona español en las tablas del sistema 
 
 
-        comando.CommandText = "select [ShipVia] from [SetupShippingMode]"
-        lector = comando.ExecuteReader
-        While lector.Read()
-            cboModoDeEnvio.Items.Add(lector(0))
-        End While
-        lector.Close()
 
-        comando.CommandText = "select [StateName], [StateId] from [StateMaster]"
-        lector = comando.ExecuteReader
-        While lector.Read()
-            txtEstado.Items.Add(lector(0) & " - " & lector(1))
-            txtEstadoFacturacion.Items.Add(lector(0) & " - " & lector(1))
-            txtEstadoEntrega.Items.Add(lector(0) & " - " & lector(1))
-        End While
-        lector.Close()
+            comando.CommandText = "Select [CustomerType] from MasterCustomerType"
+            lector = comando.ExecuteReader
+            While lector.Read()
+                cboTipoIndustria.Items.Add(lector(0))
+            End While
+            lector.Close()
 
-        comando.CommandText = "select [StateName], [StateId] from [MasterStateCountry]"
-        lector = comando.ExecuteReader
-        While lector.Read()
-            cboPais.Items.Add(lector(0) & " - " & lector(1))
-            cboPaisEntrega.Items.Add(lector(0) & " - " & lector(1))
-            cboPaisFacturacion.Items.Add(lector(0) & " - " & lector(1))
-        End While
-        lector.Close()
+            comando.CommandText = "Select [POPickList] from [MasterPoPickList]"
+            lector = comando.ExecuteReader
+            While lector.Read()
+                cboDefaultPO.Items.Add(lector(0))
+                cboDefaultPO.Text = ""
+            End While
+            lector.Close()
 
-        cboMoneda.Items.Add("Mexican Peso")
-        cboMoneda.Items.Add("U.S. Dollar")
-        cboMoneda.Items.Add("Pound Sterling")
-        cboOpcionesDePago.Items.Add("Diario")
-        cboOpcionesDePago.Items.Add("Semanal")
-        cboOpcionesDePago.Items.Add("Mensual")
-        cboOpcionesDePago.Items.Add("Anual")
-        cboAvisoDeRecuperacion.Items.Add("Llamada")
-        cboAvisoDeRecuperacion.Items.Add("Texto")
-        cboAvisoDeRecuperacion.Items.Add("Ambos")
-        cboVencimientoDeCalibracion.Items.Add("Ninguna")
-        cboVencimientoDeCalibracion.Items.Add("Fin de semana (Domingo)")
-        cboVencimientoDeCalibracion.Items.Add("Fin de mes")
-        cboCategoria.Items.Add("Categoria 1")
-        cboCategoria.Items.Add("Categoria 2")
-        cboCategoria.Items.Add("Categoria 3")
-        cboCategoria.Items.Add("Categoria 4")
-        cboCategoria.Items.Add("Categoria 5")
 
-        conexionLIMS.Close()
+            comando.CommandText = "Select [ShipVia] from [SetupShippingMode]"
+            lector = comando.ExecuteReader
+            While lector.Read()
+                cboModoDeEnvio.Items.Add(lector(0))
+            End While
+            lector.Close()
+
+            comando.CommandText = "Select [StateName], [StateId] from [StateMaster]"
+            lector = comando.ExecuteReader
+            While lector.Read()
+                txtEstado.Items.Add(lector(0) & " - " & lector(1))
+                txtEstadoFacturacion.Items.Add(lector(0) & " - " & lector(1))
+                txtEstadoEntrega.Items.Add(lector(0) & " - " & lector(1))
+            End While
+            lector.Close()
+
+            comando.CommandText = "Select [StateName], [StateId] from [MasterStateCountry]"
+            lector = comando.ExecuteReader
+            While lector.Read()
+                cboPais.Items.Add(lector(0) & " - " & lector(1))
+                cboPaisEntrega.Items.Add(lector(0) & " - " & lector(1))
+                cboPaisFacturacion.Items.Add(lector(0) & " - " & lector(1))
+            End While
+            lector.Close()
+
+            cboMoneda.Items.Add("Mexican Peso")
+            cboMoneda.Items.Add("U.S. Dollar")
+            cboMoneda.Items.Add("Pound Sterling")
+            cboOpcionesDePago.Items.Add("Diario")
+            cboOpcionesDePago.Items.Add("Semanal")
+            cboOpcionesDePago.Items.Add("Mensual")
+            cboOpcionesDePago.Items.Add("Anual")
+            cboAvisoDeRecuperacion.Items.Add("Llamada")
+            cboAvisoDeRecuperacion.Items.Add("Texto")
+            cboAvisoDeRecuperacion.Items.Add("Ambos")
+            cboVencimientoDeCalibracion.Items.Add("Ninguna")
+            cboVencimientoDeCalibracion.Items.Add("Fin de semana (Domingo)")
+            cboVencimientoDeCalibracion.Items.Add("Fin de mes")
+            cboCategoria.Items.Add("Categoria 1")
+            cboCategoria.Items.Add("Categoria 2")
+            cboCategoria.Items.Add("Categoria 3")
+            cboCategoria.Items.Add("Categoria 4")
+            cboCategoria.Items.Add("Categoria 5")
+
+            conexionLIMS.Close()
+        End If
     End Sub
 
     Private Sub cboAvisoDeRecuperacion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAvisoDeRecuperacion.SelectedIndexChanged

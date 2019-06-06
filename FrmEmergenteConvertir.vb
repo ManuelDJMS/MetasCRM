@@ -112,6 +112,10 @@ Public Class FrmEmergenteConvertir
             MsgBox("Ocurrio un error.", MsgBoxStyle.Critical)
         End Try
     End Sub
+
+    Private Sub btVerListado_Click(sender As Object, e As EventArgs) Handles btVerListado.Click
+
+    End Sub
 End Class
 
 
