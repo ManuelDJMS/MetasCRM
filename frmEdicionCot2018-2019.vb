@@ -10,20 +10,20 @@ Public Class frmEdicionCot2018_2019
         DTPHasta.Value.AddDays(30)
 
         'origen = "PROSPECCION"
-        If origen = "PROSPECCION" Then
-            MetodoMetasCotizador()
-            comandoLIMS = conexionMetasCotizador.CreateCommand
-            R = "select idProspecto,Prospectos.Compania, concat(Nombre,' ', Apellidos), DomicilioFiscal, Empresas.Ciudad, EdoConsig, Telefono, Correo from Prospectos inner join 
-             Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa where idProspecto=" & empresa
-        Else
-            MetodoLIMS()
+        'If origen = "PROSPECCION" Then
+        '    MetodoMetasCotizador()
+        '    comandoLIMS = conexionMetasCotizador.CreateCommand
+        '    R = "select idProspecto,Prospectos.Compania, concat(Nombre,' ', Apellidos), DomicilioFiscal, Empresas.Ciudad, EdoConsig, Telefono, Correo from Prospectos inner join 
+        '     Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa where idProspecto=" & empresa
+        'Else
+        MetodoLIMS()
             comandoLIMS = conexionLIMS.CreateCommand
             R = "select [SetupCustomerDetails].CustomerId, isnull(Organization,'-'), isnull(concat(FirstName, ' ' , MiddleName, ' ', LastName),'-') as Nombre, 
                 isnull(ContAddress1,'-'), isnull(ContCity,'-'), isnull(ContState,'-'), isnull(Phone,'-'), isnull(Email,'-') 
                 from [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] inner join  
                 SetupCustomerAddressDtls on [SetupCustomerDetails].CustomerId=[SetupCustomerAddressDtls].CustomerId
                 where [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails].CustomerId=" & empresa
-        End If
+        'End If
         comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             lectorLIMS.Read()

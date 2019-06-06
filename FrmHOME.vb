@@ -262,8 +262,8 @@ Public Class FrmHOME
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        FrmCotizacion2018.MdiParent = Me
-        FrmCotizacion2018.Show()
+        FrmCotizadorLIMS.MdiParent = Me
+        FrmCotizadorLIMS.Show()
 
 
         Panel1.BackColor = Color.DimGray
@@ -380,11 +380,11 @@ Public Class FrmHOME
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
 
-            ProgressBar1.Visible = True
+            'ProgressBar1.Visible = True
 
 
             While lector.Read()
-                ProgressBar1.Value = ProgressBar1.Value + 1
+                ' ProgressBar1.Value = ProgressBar1.Value + 1
                 DGTareas.Rows.Add(lector(0), lector(1), (lector(2) & " " & lector(3)), lector(4), lector(5))
             End While
             lector.Close()

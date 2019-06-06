@@ -6,7 +6,7 @@ Public Class FrmCotizacion2018
         Try
             MetodoLIMS()
             comandoLIMS = conexionLIMS.CreateCommand
-            R = "select CustomerId, concat(FirstName, ' ' , MiddleName) as Nombre, LastName,  Organization, KeyFiscal, Email FROM SetupCustomerDetails"
+            R = "select CustomerId, concat(FirstName, ' ' , MiddleName) as Nombre, LastName,  Organization, KeyFiscal, Email, Phone FROM SetupCustomerDetails"
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             While lectorLIMS.Read()
@@ -263,12 +263,17 @@ Public Class FrmCotizacion2018
             End While
             lectorLIMS.Close()
             conexionLIMS.Close()
-
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
             cadena = Err.Description
             cadena = cadena.Replace("'", "")
             Bitacora("FrmCotizacion2018", "Error al filtrar por empresa", Err.Number, cadena)
         End Try
+    End Sub
+
+    Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
+        If e.ColumnIndex = DGCotizaciones.Columns.Item("s").Index Then
+            DgAgregar.Rows.Add(DGCotizaciones.Rows(e.RowIndex).Cells(1).Value)
+        End If
     End Sub
 End Class

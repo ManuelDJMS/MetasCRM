@@ -3,25 +3,24 @@ Public Class FrmCotizadorLIMS
     Dim R As String
     Dim clave1 As String
     Private Sub FrmCotizadorLIMS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If empresa = 0 Then
-            Label20.Visible = False
-            Label21.Visible = False
-            MetodoMetasCotizador()
-            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
-            R = "select idProspecto, Nombre, Apellidos,  Prospectos.Compania, RFC, Correo,Telefono FROM Prospectos inner join Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa"
-            comandoMetasCotizador.CommandText = R
-            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
-            While lectorMetasCotizador.Read()
-                DGEmpresas.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
-            End While
-            lectorMetasCotizador.Close()
-            conexionMetasCotizador.Close()
-        Else
-            PanelNormal.Enabled = False
-            consultaID(empresa)
-        End If
+        ' If empresa = 0 Then
+        'Label20.Visible = False
+        '    Label21.Visible = False
         MetodoLIMS()
         comandoLIMS = conexionLIMS.CreateCommand
+        R = "select CustomerId, concat(FirstName, ' ' , MiddleName) as Nombre, LastName,  Organization, KeyFiscal, Email, Phone FROM SetupCustomerDetails"
+        comandoLIMS.CommandText = R
+        lectorLIMS = comandoLIMS.ExecuteReader
+        While lectorLIMS.Read()
+            DGEmpresas.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6))
+        End While
+        lectorLIMS.Close()
+        'Else
+        '    PanelNormal.Enabled = False
+        '    consultaID(empresa)
+        'End If
+
+
         R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId=SetUpEquipment.EquipId"
         comandoLIMS.CommandText = R
@@ -32,56 +31,23 @@ Public Class FrmCotizadorLIMS
         lectorLIMS.Close()
         conexionLIMS.Close()
     End Sub
-
-    Private Sub TxtClave_TextChanged(sender As Object, e As EventArgs) Handles txtClave.TextChanged
-        Try
-            PanelNormal.Visible = True
-
-            MetodoMetasCotizador()
-            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
-            DGEmpresas.Rows.Clear()
-            If DGEmpresas.Rows.Count < 2 Then
-            Else
-                DGEmpresas.Rows.RemoveAt(DGEmpresas.CurrentRow.Index)
-            End If
-            R = "select idProspecto, Nombre, Apellidos,  Prospectos.Compania, RFC, Correo FROM Prospectos inner join Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa
-                where idProspecto like '" & txtClave.Text & "%'
-                and Correo like '" & TextCorreo.Text & "%'"
-            comandoMetasCotizador.CommandText = R
-            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
-            While lectorMetasCotizador.Read()
-                DGEmpresas.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5))
-            End While
-            lectorMetasCotizador.Close()
-            conexionMetasCotizador.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
-            cadena = Err.Description
-            cadena = cadena.Replace("'", "")
-            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
-        End Try
-    End Sub
-
     Private Sub TextCorreo_TextChanged(sender As Object, e As EventArgs) Handles TextCorreo.TextChanged
         Try
-            PanelNormal.Visible = True
-            PanelCot.Visible = False
-            MetodoMetasCotizador()
-            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            MetodoLIMS()
+            comandoLIMS = conexionLIMS.CreateCommand
             DGEmpresas.Rows.Clear()
             If DGEmpresas.Rows.Count < 2 Then
             Else
                 DGEmpresas.Rows.RemoveAt(DGEmpresas.CurrentRow.Index)
             End If
-            R = "select idProspecto, Nombre, Apellidos,  Prospectos.Compania, RFC, Correo FROM Prospectos inner join Empresas on Prospectos.idClaveEmpresa=Empresas.Clavempresa
-                where idProspecto like '" & txtClave.Text & "%'
-                and Correo like '" & TextCorreo.Text & "%'"
-            comandoMetasCotizador.CommandText = R
-            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
-            While lectorMetasCotizador.Read()
-                DGEmpresas.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5))
+            R = "select CustomerId, concat(FirstName, ' ' , MiddleName) as Nombre, LastName,  Organization, KeyFiscal, Email, Phone FROM SetupCustomerDetails 
+                where CustomerId like '" & txtClave.Text & "%' and Email like '" & TextCorreo.Text & "%'"
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGEmpresas.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
             End While
-            lectorMetasCotizador.Close()
+            lectorLIMS.Close()
             conexionMetasCotizador.Close()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
@@ -171,7 +137,6 @@ Public Class FrmCotizadorLIMS
                 frmEdicionCot2018_2019.DGCotizaciones.Rows.Add(i + 1, lectorLIMS(2), lectorLIMS(7), 1, lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6), lectorLIMS(8), 0, lectorLIMS(1))
             Next
             frmEdicionCot2018_2019.Show()
-            Me.Dispose()
         End If
     End Sub
 
@@ -268,6 +233,32 @@ Public Class FrmCotizadorLIMS
             cadena = Err.Description
             cadena = cadena.Replace("'", "")
             Bitacora("FrmCotizacion2018", "Error al filtrar por empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TxtClave_TextChanged(sender As Object, e As EventArgs) Handles txtClave.TextChanged
+        Try
+            MetodoLIMS()
+            comandoLIMS = conexionLIMS.CreateCommand
+            DGEmpresas.Rows.Clear()
+            If DGEmpresas.Rows.Count < 2 Then
+            Else
+                DGEmpresas.Rows.RemoveAt(DGEmpresas.CurrentRow.Index)
+            End If
+            R = "select CustomerId, concat(FirstName, ' ' , MiddleName) as Nombre, LastName,  Organization, KeyFiscal, Email, Phone FROM SetupCustomerDetails 
+                where CustomerId like '" & txtClave.Text & "%' and Email like '" & TextCorreo.Text & "%'"
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            While lectorLIMS.Read()
+                DGEmpresas.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5))
+            End While
+            lectorLIMS.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
         End Try
     End Sub
 End Class
