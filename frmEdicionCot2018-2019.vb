@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmEdicionCot2018_2019
     Dim R As String
-    Dim subtotal As Decimal
-    Dim total As Decimal
-    Dim iva As Decimal
+    Dim subtotal As Double
+    Dim total As Double
+    Dim iva As Double
 
     Private Sub frmEdicionCot2018_2019_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Try
