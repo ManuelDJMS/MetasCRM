@@ -445,7 +445,6 @@ Public Class FrmContactos
                 lectorx.Close()
                 conexionLIMS.Close()
 
-
                 conexionLIMS.Open()
                 DGInstrumentos.Rows.Clear()
                 Dim y As String
