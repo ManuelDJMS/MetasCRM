@@ -4,6 +4,8 @@ Imports System.Data.OleDb
 Public Class FrmContactos
     Dim claveConsultaAdd As String
     Dim isActive, isCOD, isTaxable, isCallDataReq, isOOT, isCall, isDigitalCertified, isShipActive As Boolean
+    Dim nom, app, apm As String
+    Dim clave As Integer
     Private Sub FrmContactos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MetodoLIMS()
         consultaGeneralContactos()
@@ -428,6 +430,10 @@ Public Class FrmContactos
 
                 txtKeyFiscal.Text = lector(43)
                 txtOrganizacion.Text = lector(44)
+                clave = lector(0)
+                nom = lector(2)
+                app = lector(3)
+                apm = lector(4)
                 lector.Close()
                 conexionLIMS.Close()
 
@@ -531,12 +537,115 @@ Public Class FrmContactos
     End Sub
 
     Private Sub btGuardar_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
-        MsgBox(txtNumeroDeCuenta.Text)
+        'MsgBox(txtNumeroDeCuenta.Text)
         Dim con As New FrmNuevoContacto
-        con.txtNumeroDeCuenta.Text = txtNumeroDeCuenta.Text
-        MsgBox(txtNumeroDeCuenta.Text)
-        ban = True
-        con.ShowDialog()
+        con.txtNombre.Text = Me.nom
+        con.txtApellidoPaterno.Text = Me.app
+        con.txtApellidoMaterno.Text = Me.apm
+        con.txtCompania.Text = Me.txtNombreCompania.Text
+        con.txtDepartamento.Text = Me.txtDepartamento.Text
+        con.txtRFC.Text = Me.txtIDFiscal.Text
+        con.txtOrganizacion.Text = Me.txtOrganizacion.Text
+        con.txtTelefono.Text = Me.txtTelefono.Text
+        con.txtFax.Text = Me.txtFax.Text
+        con.txtNumeroDeCuenta.Text = Me.txtNumeroDeCuenta.Text
+        con.txtCelular.Text = Me.txtCelular.Text
+        con.txtCorreo1.Text = Me.txtCorreo1.Text
+        con.txtCorreo2.Text = Me.txtCorreo2.Text
+        con.txtExtension.Text = Me.txtExtension.Text
+        'CONTACTO
+        con.txtDireccion1.Text = Me.txtDireccion.Text
+        con.txtDireccion2.Text = Me.txtDireccion2.Text
+        con.txtDireccion3.Text = Me.txtDireccion3.Text
+        con.txtEstado.Text = Me.txtEdo.Text
+        con.txtCiudad.Text = Me.txtCiudad.Text
+        con.txtCodigoPostal.Text = Me.txtCodigoPostal.Text
+        con.cboPais.Text = Me.txtPais.Text
+        con.txtNumeroExterior.Text = Me.txtNumExt.Text
+        con.txtColonia.Text = Me.txtColonia.Text
+        'FACTURACION
+        con.txtDireccion1Facturacion.Text = Me.txtDireccion1DeFacturacion.Text
+        con.txtDireccion2Facturacion.Text = Me.txtDireccion2DeFacturacion.Text
+        con.txtDireccion3Facturacion.Text = Me.txtDireccion3DeFacturacion.Text
+        con.txtEstadoFacturacion.Text = Me.txtEstadoDeFacturacion.Text
+        con.txtCiudadFacturacion.Text = Me.txtCiudadDeFacturacion.Text
+        con.txtCodigoPostalFacturacion.Text = Me.txtCPDeFacturacion.Text
+        con.cboPaisFacturacion.Text = Me.txtPaisDeFacturacion.Text
+        con.txtNumExteriorFacturacion.Text = Me.txtNumeroExteriorDeFacturacion.Text
+        con.txtColoniaFacturacion.Text = Me.txtColoniaDeFacturacion.Text
+        'ENTREGA
+        con.txtDireccion1Entrega.Text = Me.txtDireccion1DeEntrega.Text
+        con.txtDireccion2Entrega.Text = Me.txtDireccion2DeEntrega.Text
+        con.txtDireccion3Entrega.Text = Me.txtDireccion3DeFacturacion.Text
+        con.txtEstadoEntrega.Text = Me.txtEstadoDeEntrega.Text
+        con.txtCiudadEntrega.Text = Me.txtCiudadDeEntrega.Text
+        con.txtCodigoPostalEntrega.Text = Me.txtCPDeEntrega.Text
+        con.cboPaisEntrega.Text = Me.txtPaisDeEntrega.Text
+        con.txtNumExteriorEntrega.Text = Me.txtNumeroExteriorDeEntrega.Text
+        con.txtColoniaEntrega.Text = Me.txtColoniaDeEntrega.Text
+        'Informacion Administrativa
+        con.cboOrigen.Text = Me.txtOrigenContacto.Text
+        con.cboTipoIndustria.Text = Me.txtTipoDeCliente.Text
+        con.txtTerminosDePago.Text = Me.txtTerminosDePago.Text
+        con.cboCategoria.Text = Me.txtCategoria.Text
+        If Me.cbCOD.Checked = True Then
+            con.cbCOD.Checked = True
+        Else
+            con.cbCOD.Checked = False
+        End If
+        If Me.cbTaxable.Checked = True Then
+            con.cbTaxable.Checked = True
+        Else
+            con.cbTaxable.Checked = False
+        End If
+        con.txtIDFiscal.Text = Me.txtIDFiscal.Text
+        con.cboMoneda.Text = Me.txtMoneda.Text
+        con.cboOpcionesDePago.Text = Me.Label2.Text
+        ' MsgBox(Me.txtDefaultPO.Text)
+        con.cboDefaultPO.Text = Me.txtDefaultPO.Text
+        con.cboModoDeEnvio.Text = Me.txtModoDeEnvio.Text
+        If Me.cbActivo1.Checked = True Then
+            con.cbActivo1.Checked = True
+        Else
+            con.cbActivo1.Checked = False
+        End If
+        con.txtDescuentoDeCalibracion.Text = Me.txtDescuentoDeCal.Text
+        con.txtTaxException.Text = Me.txtTaxEx.Text
+        con.txtCuentaDeEnvio.Text = Me.txtCuentaDeEnvio.Text
+        If Me.cbActivo2.Checked = True Then
+            con.cbActivo2.Checked = True
+        Else
+            con.cbActivo2.Checked = False
+        End If
+        con.txtHorarioDeTrabajo.Text = Me.txtHorarioDeTrabajo.Text
+        con.cboAvisoDeRecuperacion.Text = Me.txtAvisoDeRecupeacion.Text
+        'INFORMACIÓN TECNICA 
+        If Me.CBCalibrationDataRequiered.Checked = True Then
+            con.cbDatosRequeridos.Checked = True
+        Else
+            con.cbDatosRequeridos.Checked = False
+        End If
+        If Me.CBOOTNoticeRequiered.Checked = True Then
+            con.cbOOT.Checked = True
+        Else
+            con.cbOOT.Checked = False
+        End If
+        If Me.CBRequiresCalHistory.Checked = True Then
+            con.cbHistorialDeCalibracion.Checked = True
+        Else
+            con.cbHistorialDeCalibracion.Checked = False
+        End If
+        If Me.CBOnlyDigitalCer.Checked = True Then
+            con.cbCertificado.Checked = True
+        Else
+            con.cbCertificado.Checked = False
+        End If
+        con.cboRequerimientosDeCalidad.Text = Me.txtCalidad.Text
+        con.cboVencimientoDeCalibracion.Text = Me.txtCalDueDate.Text
+        con.txtNotas.Text = Me.txtNotasLab.Text
+        ban = False
+        con.Show()
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -784,8 +893,6 @@ Public Class FrmContactos
         CBOOTNoticeRequiered.Checked = False
         CBRequiresCalHistory.Checked = False
         CBOnlyDigitalCer.Checked = False
-
-
     End Sub
 End Class
 

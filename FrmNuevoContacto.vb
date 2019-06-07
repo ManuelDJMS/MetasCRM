@@ -11,8 +11,8 @@ Public Class FrmNuevoContacto
     End Sub
     Private Sub FrmNuevoContacto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MetodoLIMS()
-        If ban = True Then
-            txtNumeroDeCuenta.Text = FrmContactos.txtNumeroDeCuenta.Text
+        If ban = False Then
+            btGuardar.Text = "ACTUALIZAR"
         Else
             '' cargar datos de las tablas SetupCustomerSource
             '' cargar datos de las tablas SetupQualityRequierement
@@ -34,11 +34,7 @@ Public Class FrmNuevoContacto
             End While
             lector.Close()
 
-
-
             ''Reacomodar el nombre de los registros que se cambiarona español en las tablas del sistema 
-
-
 
             comando.CommandText = "Select [CustomerType] from MasterCustomerType"
             lector = comando.ExecuteReader

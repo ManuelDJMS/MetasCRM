@@ -2215,7 +2215,7 @@ Partial Class FrmNuevoContacto
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(153, 15)
         Me.Label68.TabIndex = 152
-        Me.Label68.Text = "Informaciòn administrativa"
+        Me.Label68.Text = "Información administrativa"
         '
         'txtCuentaDeEnvio
         '
