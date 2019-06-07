@@ -2,10 +2,15 @@
 Imports System.Data.SqlClient
 Public Class FrmAutorizarSolicitudes
     Dim CustimerId As Integer
+    Dim cotizacion As Integer
     Private Sub FrmAutorizarSolicitudes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         consultaGeneralDeCotizaciones()
         consultaContactos()
-        alternarColorColumnas(DGOportunidades)
+        alternarColorColumnas(DGRes)
+        agregar_a_Res()
+    End Sub
+
+    Public Sub agregar_a_Res()
         For i = 0 To DGOportunidades.Rows.Count - 2
             MetodoLIMS()
             Dim R As String = "select concat([FirstName], ' ',  [MiddleName], ' ', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
@@ -13,7 +18,7 @@ Public Class FrmAutorizarSolicitudes
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
             lector.Read()
-            DGReal.Rows.Add(Val(DGOportunidades.Item(0, i).Value), lector(0), lector(1), DGOportunidades.Item(2, i).Value, DGOportunidades.Item(3, i).Value, DGOportunidades.Item(4, i).Value, Val(DGOportunidades.Item(5, i).Value), Val(DGOportunidades.Item(6, i).Value), Val(DGOportunidades.Item(7, i).Value), lector(2))
+            DGRes.Rows.Add(Val(DGOportunidades.Item(0, i).Value), lector(0), lector(1), DGOportunidades.Item(2, i).Value, DGOportunidades.Item(3, i).Value, DGOportunidades.Item(4, i).Value, Val(DGOportunidades.Item(5, i).Value), lector(2), False, DGContactos.Item(3, i).Value, "", "", "", "", "", "", 3, "Client A", "")
             conexionLIMS.Close()
         Next i
     End Sub
@@ -22,7 +27,7 @@ Public Class FrmAutorizarSolicitudes
             MetodoMetasCotizador()
             DGOportunidades.Rows.Clear()
             Dim R As String
-            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Subtotal, Cotizaciones.IVA, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS'"
+            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS'"
             'R = "select Cotizaciones.NumCot, Cotizaciones.idContacto from Cotizaciones"
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             comando.CommandType = CommandType.Text
@@ -45,7 +50,11 @@ Public Class FrmAutorizarSolicitudes
             DGContactos.Rows.Clear()
             Dim R As String
             'R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Subtotal, Cotizaciones.IVA, Cotizaciones.Total from Cotizaciones"
-            R = "select [CustomerId], concat([FirstName], ' ',  [MiddleName], ' ', [LastName]), [CompanyName] from [SetupCustomerDetails]"
+            R = "select [SetupCustomerDetails].[CustomerId], concat([SetupCustomerDetails].[FirstName], ' ',  [SetupCustomerDetails].[MiddleName], ' ', [SetupCustomerDetails].[LastName]) as Contacto, 
+                  [SetupCustomerDetails].[CompanyName], [SetupCustomerDetails].[CustAccountNo],
+                  [SetupCustomerAddressDtls].[ShipAddress1], [SetupCustomerAddressDtls].[ShipAddress2], [SetupCustomerAddressDtls].[ShipAddress3], [SetupCustomerAddressDtls].[ShipCity], 
+                  [SetupCustomerAddressDtls].[ShipState], [SetupCustomerAddressDtls].[ShipZip], [SetupCustomerAddressDtls].[ShipCountry] 
+                  from [SetupCustomerDetails] inner join [SetupCustomerAddressDtls] on [SetupCustomerDetails].CustomerId = [SetupCustomerAddressDtls].CustomerId"
             Dim comando As New SqlCommand(R, conexionLIMS)
             comando.CommandType = CommandType.Text
             Dim da As New SqlDataAdapter(comando)
@@ -71,10 +80,10 @@ Public Class FrmAutorizarSolicitudes
         End Try
     End Sub
 
-    Private Sub DGReal_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGReal.RowHeaderMouseClick
+    Private Sub DGRes_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGRes.RowHeaderMouseClick
         Dim numCot As String
-        numCot = DGReal.Rows(e.RowIndex).Cells(0).Value.ToString()
-        CustimerId = DGReal.Rows(e.RowIndex).Cells(9).Value.ToString()
+        numCot = DGRes.Rows(e.RowIndex).Cells(0).Value.ToString()
+        CustimerId = DGRes.Rows(e.RowIndex).Cells(7).Value.ToString()
         txtClaveRecopilada.Text = numCot
         consultaContactos(CustimerId)
         consultaCot(numCot)
@@ -146,5 +155,106 @@ Public Class FrmAutorizarSolicitudes
         Catch ex As Exception
             MsgBox("Error al cargar la Orden de venta.", MsgBoxStyle.Exclamation)
         End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ''Generar
+        ' Try
+        Dim seleccionado As Boolean
+        Dim R As String
+        Dim b, RecDate, OnSite As Boolean
+        RecDate = True
+        OnSite = False
+        If DGRes.Rows.Count < 2 Then
+            MsgBox("No hay ordenes de venta seleccionadas.", MsgBoxStyle.Critical, "Error del sistema.")
+        Else
+            '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
+            For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
+                seleccionado = DGRes.Rows(i).Cells(8).Value
+                If seleccionado = True Then
+                    b = True
+                    Exit For
+                Else
+                    b = False
+                End If
+            Next
+            '----------------------------------------------------------------------------------------------------
+            If b = True Then
+                For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
+                    seleccionado = DGRes.Rows(i).Cells(8).Value
+                    If seleccionado = True Then
+                        ''guardar OrdesDeVenta
+                        MetodoLIMS()
+                        'R = "update [INFORMES-SERVICIOS] set correoEnviado=1, HojasEnviadas='" & DGRes.Rows(i).Cells(7).Value.ToString & "', ObservacionesRec='" & DGRes.Rows(i).Cells(5).Value.ToString & "' where Folio = " & Val(DGRes.Rows(i).Cells(0).Value) & " and NumCot=" & Val(DGRes.Rows(i).Cells(2).Value) & " and Empresa ='" & DGRes.Rows(i).Cells(1).Value.ToString() & "'"
+                        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo]
+      ,[RefNo]    
+      ,[RecBy]
+      ,[Priority]     
+      ,[ReceivedVia]
+      ,[ShipVia]
+      ,[Remarks]
+      ,[CreatedBy]
+      ,[CreatedOn]
+      ,[ModifiedBy]
+      ,[ModifiedOn]
+      ,[SalesAmount]
+      ,[SalesDiscount]
+      ,[SalesTax]
+      ,[Scheduled]    
+      ,[BillTo]
+      ,[TrackingNo]
+      ,[BoxCount]
+      ,[Weight]
+      ,[Volume]
+      ,[PaymentTerms]) values(" & Val(DGRes.Rows(i).Cells(7).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "', (CONVERT(varchar(10), getdate(), 103)), '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')"
+                        Dim comando As New SqlCommand(R, conexionLIMS)
+                        comando.ExecuteNonQuery()
+                        conexionLIMS.Close()
+                        'MsgBox(R)
+
+                        ''For p = 0 To DGRes.Rows.Count - 2
+                        ''    R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry) values(" & Val(DGRes.Rows(p).Cells(7).Value) & ",'" & DGRes.Rows(p).Cells(9).Value.ToString & "', (CONVERT(varchar(10), getdate(), 103)),'" & RecDate & "','" & OnSite & "','" & DGRes.Rows(p).Cells(10).Value.ToString & "','" & DGRes.Rows(p).Cells(11).Value.ToString & "','" & DGRes.Rows(p).Cells(12).Value.ToString & "','" & DGRes.Rows(p).Cells(13).Value.ToString & "','" & DGRes.Rows(p).Cells(14).Value.ToString & "','" & DGRes.Rows(p).Cells(15).Value.ToString & "','" & DGRes.Rows(p).Cells(16).Value.ToString & "','" & DGRes.Rows(p).Cells(17).Value.ToString & "','" & DGRes.Rows(p).Cells(18).Value.ToString & "')"
+                        ''    'Dim comando As New SqlCommand(R, conexionLIMS)
+                        ''    'comando.ExecuteNonQuery()
+                        ''    'conexionLIMS.Close()
+                        ''    MsgBox(R)
+                        ''Next p
+                        ''MsgBox("Guardado en 2019 correctamente.", MsgBoxStyle.Information)
+
+                    End If
+                Next
+                'accion post
+            Else
+                MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
+            End If
+        End If
+        'Catch ex As Exception
+        '    MsgBox("Error al enviar correos.")
+        ' End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ''Actualizar
+        consultaGeneralDeCotizaciones()
+        consultaContactos()
+        DGRes.Rows.Clear()
+        agregar_a_Res()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ''Dim R As String
+        ''Dim b, RecDate, OnSite As Boolean
+        ''RecDate = True
+        ''OnSite = False
+
+
+        ''For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
+
+        ''    R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry) values(" & Val(DGRes.Rows(i).Cells(7).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "')"
+        ''    MsgBox(R)
+        ''Next
+
+
+
     End Sub
 End Class
