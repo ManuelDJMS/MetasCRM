@@ -29,6 +29,7 @@ Partial Class FrmNuevoContacto
         Me.btCancelar = New System.Windows.Forms.Button()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.GBInfo = New System.Windows.Forms.GroupBox()
+        Me.ID = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
@@ -273,7 +274,6 @@ Partial Class FrmNuevoContacto
         Me.txtUsuarioActual.TabIndex = 168
         Me.txtUsuarioActual.Text = "Nombre"
         Me.txtUsuarioActual.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.txtUsuarioActual.Visible = False
         '
         'btCancelar
         '
@@ -306,6 +306,7 @@ Partial Class FrmNuevoContacto
         '
         'GBInfo
         '
+        Me.GBInfo.Controls.Add(Me.ID)
         Me.GBInfo.Controls.Add(Me.PictureBox1)
         Me.GBInfo.Controls.Add(Me.Label40)
         Me.GBInfo.Controls.Add(Me.Label30)
@@ -355,6 +356,15 @@ Partial Class FrmNuevoContacto
         Me.GBInfo.Size = New System.Drawing.Size(881, 309)
         Me.GBInfo.TabIndex = 169
         Me.GBInfo.TabStop = False
+        '
+        'ID
+        '
+        Me.ID.AutoSize = True
+        Me.ID.Location = New System.Drawing.Point(810, 46)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(45, 13)
+        Me.ID.TabIndex = 182
+        Me.ID.Text = "Label83"
         '
         'PictureBox1
         '
@@ -2642,4 +2652,5 @@ Partial Class FrmNuevoContacto
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label82 As Label
+    Friend WithEvents ID As Label
 End Class
