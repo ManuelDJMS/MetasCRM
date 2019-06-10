@@ -32,6 +32,8 @@ Public Class FrmTiemposCondicion
             End While
             lector.Close()
             conexionLIMS.Close()
+
+
         Catch ex As Exception
             MsgBox("Error en lectura de datos.", MsgBoxStyle.Information)
         End Try
