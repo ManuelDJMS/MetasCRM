@@ -136,6 +136,8 @@ Partial Class FrmHOME
         Me.comena = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.Label38 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,6 +173,7 @@ Partial Class FrmHOME
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGLlamadas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
+        Me.Panel18.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -429,6 +432,7 @@ Partial Class FrmHOME
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.Panel18)
         Me.GroupBox3.Controls.Add(Me.Panel17)
         Me.GroupBox3.Controls.Add(Me.Panel16)
         Me.GroupBox3.Controls.Add(Me.Panel15)
@@ -1281,6 +1285,27 @@ Partial Class FrmHOME
         Me.GroupBox6.TabIndex = 66
         Me.GroupBox6.TabStop = False
         '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.DimGray
+        Me.Panel18.Controls.Add(Me.Label38)
+        Me.Panel18.Location = New System.Drawing.Point(0, 487)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(212, 45)
+        Me.Panel18.TabIndex = 44
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label38.Font = New System.Drawing.Font("Calibri", 11.25!)
+        Me.Label38.ForeColor = System.Drawing.Color.White
+        Me.Label38.Location = New System.Drawing.Point(10, 13)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(94, 18)
+        Me.Label38.TabIndex = 0
+        Me.Label38.Text = "Recordatorios"
+        '
         'FrmHOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1363,6 +1388,8 @@ Partial Class FrmHOME
         CType(Me.DGLlamadas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel18.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1467,4 +1494,6 @@ Partial Class FrmHOME
     Friend WithEvents Label36 As Label
     Friend WithEvents Panel17 As Panel
     Friend WithEvents Label37 As Label
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents Label38 As Label
 End Class
