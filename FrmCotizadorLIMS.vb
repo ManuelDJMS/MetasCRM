@@ -121,7 +121,7 @@ Public Class FrmCotizadorLIMS
     End Sub
 
     Private Sub BtCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
-        origen = "PROSPECCION"
+        origen = "LIMS"
         If DgAgregar.Rows.Count < 2 Then
             MsgBox("No hay articulos para Cotizar", MsgBoxStyle.Critical, "Error del sistema.")
         Else
