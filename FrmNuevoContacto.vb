@@ -13,6 +13,7 @@ Public Class FrmNuevoContacto
         MetodoLIMS()
         If ban = False Then
             btGuardar.Text = "ACTUALIZAR"
+            Me.Text = "Actualizar datos de contacto"
         Else
             '' cargar datos de las tablas SetupCustomerSource
             '' cargar datos de las tablas SetupQualityRequierement
@@ -101,34 +102,42 @@ Public Class FrmNuevoContacto
     End Sub
 
     Private Sub cboAvisoDeRecuperacion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAvisoDeRecuperacion.SelectedIndexChanged
-        If cboAvisoDeRecuperacion.Text.Equals("Call") Then
+        aviso()
+        'MsgBox(RecallNotice)
+    End Sub
+    Public Sub aviso()
+        If cboAvisoDeRecuperacion.Text = "Llamada" Then
             RecallNotice = "0"
-        ElseIf cboAvisoDeRecuperacion.Text.Equals("Text") Then
+        ElseIf cboAvisoDeRecuperacion.Text = "Texto" Then
             RecallNotice = "1"
-        ElseIf cboAvisoDeRecuperacion.Text.Equals("Both") Then
+        ElseIf cboAvisoDeRecuperacion.Text = "Ambos" Then
             RecallNotice = "2"
         Else
             RecallNotice = "-"
         End If
-
-        'MsgBox(RecallNotice)
     End Sub
 
+
     Private Sub cboMoneda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMoneda.SelectedIndexChanged
-        If cboMoneda.Text.Equals("Mexican Peso") Then
+        moneda()
+        'MsgBox(MonedaSeleccionada)
+    End Sub
+    Public Sub moneda()
+        If cboMoneda.Text = "Peso Mexicano" Then
             MonedaSeleccionada = "0"
-        ElseIf cboMoneda.Text.Equals("U.S. Dollar") Then
+        ElseIf cboMoneda.Text = "U.S. Dollar" Then
             MonedaSeleccionada = "1"
-        ElseIf cboMoneda.Text.Equals("Pound Sterling") Then
+        ElseIf cboMoneda.Text = "Pound Sterling" Then
             MonedaSeleccionada = "2"
         Else
             MonedaSeleccionada = "-"
         End If
-
-        'MsgBox(MonedaSeleccionada)
     End Sub
 
     Private Sub cboModoDeEnvio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboModoDeEnvio.SelectedIndexChanged
+        envio()
+    End Sub
+    Public Sub envio()
         Try
             MetodoLIMS()
             Dim r As String
@@ -148,6 +157,9 @@ Public Class FrmNuevoContacto
         End Try
     End Sub
     Private Sub cboDefaultPO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDefaultPO.SelectedIndexChanged
+        po()
+    End Sub
+    Public Sub po()
         Try
             MetodoLIMS()
             Dim r As String
@@ -168,6 +180,7 @@ Public Class FrmNuevoContacto
     End Sub
 
     Private Sub cboVencimientoDeCalibracion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboVencimientoDeCalibracion.SelectedIndexChanged
+        vencimiento()
         'Try
         '    ConexionGlobal()
         '    Dim r As String
@@ -176,15 +189,7 @@ Public Class FrmNuevoContacto
         '    Dim lector As SqlDataReader
         '    lector = comando.ExecuteReader
         '    If lector.Read() Then
-        If cboVencimientoDeCalibracion.Text.Equals("None") Then
-            CalDueDateAdj = "0"
-        ElseIf cboVencimientoDeCalibracion.Text.Equals("End of Week (Sunday)") Then
-            CalDueDateAdj = "1"
-        ElseIf cboVencimientoDeCalibracion.Text.Equals("End of Month") Then
-            CalDueDateAdj = "2"
-        Else
-            CalDueDateAdj = "0"
-        End If
+
         '    End If
         '    lector.Close()
         '    conexion.Close()
@@ -194,7 +199,17 @@ Public Class FrmNuevoContacto
         'End Try
         'MsgBox(CalDueDateAdj)
     End Sub
-
+    Public Sub vencimiento()
+        If cboVencimientoDeCalibracion.Text.Equals("Nunca") Then
+            CalDueDateAdj = "0"
+        ElseIf cboVencimientoDeCalibracion.Text.Equals("Fin de semana (Sabado)") Then
+            CalDueDateAdj = "1"
+        ElseIf cboVencimientoDeCalibracion.Text.Equals("Fin de mes") Then
+            CalDueDateAdj = "2"
+        Else
+            CalDueDateAdj = "0"
+        End If
+    End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         FrmBusquedaCuentas.ShowDialog()
     End Sub
@@ -228,9 +243,10 @@ Public Class FrmNuevoContacto
         Me.Close()
     End Sub
 
-
-
     Private Sub cboRequerimientosDeCalidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRequerimientosDeCalidad.SelectedIndexChanged
+        requerimientos()
+    End Sub
+    Public Sub requerimientos()
         Try
             MetodoLIMS()
             Dim r As String
@@ -442,173 +458,276 @@ Public Class FrmNuevoContacto
     Private Sub btGuardar_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
         verificarFinal()
         MetodoLIMS()
+
         'Dim quienModifico, FechaModificacion As String
         '' quienModifico = "-"
         ''FechaModificacion = "-"
         Dim indicador1, indicador2 As String
-        If cbActivo1.Checked = True Then
-            indicador1 = "Y"
-        Else
-            indicador1 = "N"
-        End If
-        If cbActivo2.Checked = True Then
-            indicador2 = "Y"
-        Else
-            indicador2 = "N"
-        End If
-        If cbCOD.Checked = True Then
-            isCod = "Y"
-        Else
-            isCod = "N"
-        End If
-        If cbTaxable.Checked = True Then
-            isTaxable = "Y"
-        Else
-            isTaxable = "N"
-        End If
-        If cbDatosRequeridos.Checked = True Then
-            isCalDataReq = "Y"
-        Else
-            isCalDataReq = "N"
-        End If
-        If cbOOT.Checked = True Then
-            isOOT = "Y"
-        Else
-            isOOT = "N"
-        End If
-        If cbHistorialDeCalibracion.Checked = True Then
-            isCalHistory = "Y"
-        Else
-            isCalHistory = "N"
-        End If
-        If cbCertificado.Checked = True Then
-            isDigitalCertified = "Y"
-        Else
-            isDigitalCertified = "N"
-        End If
+            If cbActivo1.Checked = True Then
+                indicador1 = "Y"
+            Else
+                indicador1 = "N"
+            End If
+            If cbActivo2.Checked = True Then
+                indicador2 = "Y"
+            Else
+                indicador2 = "N"
+            End If
+            If cbCOD.Checked = True Then
+                isCod = "Y"
+            Else
+                isCod = "N"
+            End If
+            If cbTaxable.Checked = True Then
+                isTaxable = "Y"
+            Else
+                isTaxable = "N"
+            End If
+            If cbDatosRequeridos.Checked = True Then
+                isCalDataReq = "Y"
+            Else
+                isCalDataReq = "N"
+            End If
+            If cbOOT.Checked = True Then
+                isOOT = "Y"
+            Else
+                isOOT = "N"
+            End If
+            If cbHistorialDeCalibracion.Checked = True Then
+                isCalHistory = "Y"
+            Else
+                isCalHistory = "N"
+            End If
+            If cbCertificado.Checked = True Then
+                isDigitalCertified = "Y"
+            Else
+                isDigitalCertified = "N"
+            End If
         If cbActivo2.Checked = True Then
             AccActive = "Y"
         Else
             AccActive = "N"
         End If
-        ''validar que no esten vacios los campos obligatorios, que se guarden en contactos
-        If txtNombre.Text.Equals("") Or txtApellidoPaterno.Text.Equals("") Or txtApellidoMaterno.Text.Equals("") Or txtCompania.Text.Equals("") Or txtRFC.Text.Equals("") Or txtOrganizacion.Text.Equals("") Or cboStatus.Text.Equals("") Or txtNumeroDeCuenta.Text.Equals("") Or txtCelular.Text.Equals("") Or txtCorreo1.Text.Equals("") Or txtDireccion1.Text.Equals("") Or txtEstado.Text.Equals("") Or cboPais.Text.Equals("") Or txtColonia.Text.Equals("") Or txtCiudad.Text.Equals("") Or txtCodigoPostal.Text.Equals("") Or txtNumeroExterior.Text.Equals("") Or cboDefaultPO.Text.Equals("") Then
-            MsgBox("Completa los campos obligatorios.", MsgBoxStyle.Exclamation)
+        source = "1"
+        AdminType = "1"
+        If btGuardar.Text = "Convertir" Then
+            ''validar que no esten vacios los campos obligatorios, que se guarden en contactos
+            If txtNombre.Text.Equals("") Or txtApellidoPaterno.Text.Equals("") Or txtApellidoMaterno.Text.Equals("") Or txtCompania.Text.Equals("") Or txtRFC.Text.Equals("") Or txtOrganizacion.Text.Equals("") Or cboStatus.Text.Equals("") Or txtNumeroDeCuenta.Text.Equals("") Or txtCelular.Text.Equals("") Or txtCorreo1.Text.Equals("") Or txtDireccion1.Text.Equals("") Or txtEstado.Text.Equals("") Or cboPais.Text.Equals("") Or txtColonia.Text.Equals("") Or txtCiudad.Text.Equals("") Or txtCodigoPostal.Text.Equals("") Or txtNumeroExterior.Text.Equals("") Or cboDefaultPO.Text.Equals("") Then
+                MsgBox("Completa los campos obligatorios.", MsgBoxStyle.Exclamation)
+            Else
+                ''Inserta
+                Try
+                    ''--------------------------------------------------------------guardar en Tabla principal de contactos con la insercion 2da en las direcciones de contactos adicionales-----------------------------------------------------------------------------------
+                    Dim cadena As String
+                    cadena = "IF NOT EXISTS (SELECT CompanyName FROM SetupCustomerDetails WHERE SetupCustomerDetails.CompanyName='" & txtCompania.Text & "')
+                     BEGIN
+                           insert into SetupCustomerDetails (CustAccountNo, FirstName, MiddleName, LastName, Phone, Mobile, Email, 
+                                Fax, CompanyName, IsActive, Source, AdminType, PaymentTerms, IsCod, IsTaxable, IsCallDataReq, 
+                                IsOOTNoticeReq, IsCallHistoryReq, QualityReqment, CallDueDateAdj, LabNotes, CreatedBy, CreatedOn, 
+                                 DefaultPO, ShipMode, CalDiscount, TaxExemption, Department, 
+                                Email2, CategoryCustomer, TaxIDNo, Currency, PaymentOption, ShipmentAccount, 
+                                WorkingHours, RecallNotice, IsDigitalCertificate, IsShipAccActive, 
+                                KeyFiscal, Organization)  values ('" & txtNumeroDeCuenta.Text.Trim & "',
+                                '" & txtNombre.Text.Trim & "',
+                                '" & txtApellidoPaterno.Text.Trim & "',
+                                '" & txtApellidoMaterno.Text.Trim & "',
+                                '" & txtTelefono.Text.Trim & "',
+                                '" & txtCelular.Text.Trim & "',
+                                '" & txtCorreo1.Text.Trim & "',
+                                '" & txtFax.Text.Trim & "',
+                                '" & txtCompania.Text.Trim & "',
+                                '" & indicador1 & "',
+                                '" & source & "',
+                                '" & AdminType & "',
+                                '" & txtTerminosDePago.Text.Trim & "',
+                                '" & isCod & "',
+                                '" & isTaxable & "',
+                                '" & isCalDataReq & "',
+                                '" & isOOT & "',
+                                '" & isCalHistory & "',
+                                '" & QualityRequerment & "',
+                                '" & CalDueDateAdj & "',
+                                '" & txtNotas.Text.Trim & "',
+                                '" & txtUsuarioActual.Text.Trim & "',
+                                '" & DTPFechaActual.Value.Date & "',                         
+                                '" & DefaultPO & "',
+                                '" & ShipMode & "',
+                                '" & txtDescuentoDeCalibracion.Text.Trim & "',
+                                '" & txtTaxException.Text.Trim & "',
+                                '" & txtDepartamento.Text.Trim & "',
+                                '" & txtCorreo2.Text.Trim & "',
+                                '" & cboCategoria.Text.Trim & "',
+                                '" & txtIDFiscal.Text.Trim & "',
+                                '" & MonedaSeleccionada & "',
+                                '" & cboOpcionesDePago.Text.Trim & "',
+                                '" & txtCuentaDeEnvio.Text.Trim & "',
+                                '" & txtHorarioDeTrabajo.Text.Trim & "',
+                                '" & RecallNotice & "',
+                                '" & isDigitalCertified & "',
+                                '" & AccActive & "',
+                                '" & txtRFC.Text.Trim & "',
+                                '" & txtOrganizacion.Text.Trim & "')             
+                         SET NOCOUNT ON
+                           insert into SetupCustomerAddressDtls (
+                                 [CustomerId]
+                                ,[ContAddress1]
+                                ,[ContAddress2]
+                                ,[ContAddress3]
+                                ,[ContCity]
+                                ,[ContState]
+                                ,[ContZip]
+                                ,[BillAddress1]
+                                ,[BillAddress2]
+                                ,[BillAddress3]  
+                                ,[BillCity]  
+                                ,[BillState]
+                                ,[BillZip]                           
+                                ,[ShipAddress1]  
+                                ,[ShipAddress2]
+                                ,[ShipAddress3]
+                                ,[ShipCity]
+                                ,[ShipState]
+                                ,[ShipZip]
+                          ,[ContCountry]
+                          ,[BillCountry]
+                                ,[ShipCountry]) values (
+                                '" & valorFinal & "',
+                                '" & txtDireccion1.Text.Trim & "',
+                                '" & txtDireccion2.Text.Trim & "',
+                                '" & txtDireccion3.Text.Trim & "',
+                                '" & txtCiudad.Text.Trim & "',
+                                '" & txtEstado.Text.Trim & "',
+                                '" & txtCodigoPostal.Text.Trim & "',
+                                '" & txtDireccion1Facturacion.Text.Trim & "',
+                                '" & txtDireccion2Facturacion.Text.Trim & "',
+                                '" & txtDireccion3Facturacion.Text.Trim & "',
+                                '" & txtCiudadFacturacion.Text.Trim & "',
+                                '" & txtEstadoFacturacion.Text.Trim & "',
+                                '" & txtCodigoPostalFacturacion.Text.Trim & "',
+                                '" & txtDireccion1Entrega.Text.Trim & "',
+                                '" & txtDireccion2Entrega.Text.Trim & "',
+                                '" & txtDireccion3Entrega.Text.Trim & "',
+                                '" & txtCiudadEntrega.Text.Trim & "',
+                                '" & txtEstadoEntrega.Text.Trim & "',
+                                '" & txtCodigoPostalEntrega.Text.Trim & "',
+                                '" & cboPais.Text.Trim & "',
+                                '" & cboPaisFacturacion.Text.Trim & "',
+                                '" & cboPaisEntrega.Text.Trim & "') END"
+                    'MsgBox(cadena)
+                    Dim comando As New SqlCommand(cadena, conexionLIMS)
+                    If comando.ExecuteNonQuery() <> True Then
+                        MsgBox("Contacto guardado correctamente en LIMS", MsgBoxStyle.Information)
+                        ''actualizar el estado del prospecto
+                        actualizarEstadoDeProspecto()
+                        Me.Dispose()
+                        Dim admin As New FrmProspectos
+                        admin.MdiParent = FrmHOME
+                        admin.Show()
+                    Else
+                        MsgBox("Ya existe el nombre de la compañia, no podemos agregar otro contacto con la misma empresa", MsgBoxStyle.Critical)
+                    End If
+                Catch ex As Exception
+                    MsgBox("Ocurrio un error en insertar los datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+                End Try
+            End If
         Else
-            ''Inserta
-            Try
-                ''--------------------------------------------------------------guardar en Tabla principal de contactos con la insercion 2da en las direcciones de contactos adicionales-----------------------------------------------------------------------------------
+            'MsgBox("si sirve")
+            ' Try
+            'MsgBox(cboMoneda.Text)
+            moneda()
+            aviso()
+                vencimiento()
+                requerimientos()
+                po()
+                envio()
+                'MsgBox(MonedaSeleccionada)
+
                 Dim cadena As String
-                cadena = "IF NOT EXISTS (SELECT CompanyName FROM SetupCustomerDetails WHERE SetupCustomerDetails.CompanyName='" & txtCompania.Text & "')
-                 BEGIN
-                       insert into SetupCustomerDetails (CustAccountNo, FirstName, MiddleName, LastName, Phone, Mobile, Email, 
-                            Fax, CompanyName, IsActive, Source, AdminType, PaymentTerms, IsCod, IsTaxable, IsCallDataReq, 
-                            IsOOTNoticeReq, IsCallHistoryReq, QualityReqment, CallDueDateAdj, LabNotes, CreatedBy, CreatedOn, 
-                             DefaultPO, ShipMode, CalDiscount, TaxExemption, Department, 
-                            Email2, CategoryCustomer, TaxIDNo, Currency, PaymentOption, ShipmentAccount, 
-                            WorkingHours, RecallNotice, IsDigitalCertificate, IsShipAccActive, 
-                            KeyFiscal, Organization)  values ('" & txtNumeroDeCuenta.Text.Trim & "',
-                            '" & txtNombre.Text.Trim & "',
-                            '" & txtApellidoPaterno.Text.Trim & "',
-                            '" & txtApellidoMaterno.Text.Trim & "',
-                            '" & txtTelefono.Text.Trim & "',
-                            '" & txtCelular.Text.Trim & "',
-                            '" & txtCorreo1.Text.Trim & "',
-                            '" & txtFax.Text.Trim & "',
-                            '" & txtCompania.Text.Trim & "',
-                            '" & indicador1 & "',
-                            '" & source & "',
-                            '" & AdminType & "',
-                            '" & txtTerminosDePago.Text.Trim & "',
-                            '" & isCod & "',
-                            '" & isTaxable & "',
-                            '" & isCalDataReq & "',
-                            '" & isOOT & "',
-                            '" & isCalHistory & "',
-                            '" & QualityRequerment & "',
-                            '" & CalDueDateAdj & "',
-                            '" & txtNotas.Text.Trim & "',
-                            '" & txtUsuarioActual.Text.Trim & "',
-                            '" & DTPFechaActual.Value.Date & "',                         
-                            '" & DefaultPO & "',
-                            '" & ShipMode & "',
-                            '" & txtDescuentoDeCalibracion.Text.Trim & "',
-                            '" & txtTaxException.Text.Trim & "',
-                            '" & txtDepartamento.Text.Trim & "',
-                            '" & txtCorreo2.Text.Trim & "',
-                            '" & cboCategoria.Text.Trim & "',
-                            '" & txtIDFiscal.Text.Trim & "',
-                            '" & MonedaSeleccionada & "',
-                            '" & cboOpcionesDePago.Text.Trim & "',
-                            '" & txtCuentaDeEnvio.Text.Trim & "',
-                            '" & txtHorarioDeTrabajo.Text.Trim & "',
-                            '" & RecallNotice & "',
-                            '" & isDigitalCertified & "',
-                            '" & AccActive & "',
-                            '" & txtRFC.Text.Trim & "',
-                            '" & txtOrganizacion.Text.Trim & "')             
-                     SET NOCOUNT ON
-                       insert into SetupCustomerAddressDtls (
-                             [CustomerId]
-                            ,[ContAddress1]
-                            ,[ContAddress2]
-                            ,[ContAddress3]
-                            ,[ContCity]
-                            ,[ContState]
-                            ,[ContZip]
-                            ,[BillAddress1]
-                            ,[BillAddress2]
-                            ,[BillAddress3]  
-                            ,[BillCity]  
-                            ,[BillState]
-                            ,[BillZip]                           
-                            ,[ShipAddress1]  
-                            ,[ShipAddress2]
-                            ,[ShipAddress3]
-                            ,[ShipCity]
-                            ,[ShipState]
-                            ,[ShipZip]
-                      ,[ContCountry]
-                      ,[BillCountry]
-                            ,[ShipCountry]) values (
-                            '" & valorFinal & "',
-                            '" & txtDireccion1.Text.Trim & "',
-                            '" & txtDireccion2.Text.Trim & "',
-                            '" & txtDireccion3.Text.Trim & "',
-                            '" & txtCiudad.Text.Trim & "',
-                            '" & txtEstado.Text.Trim & "',
-                            '" & txtCodigoPostal.Text.Trim & "',
-                            '" & txtDireccion1Facturacion.Text.Trim & "',
-                            '" & txtDireccion2Facturacion.Text.Trim & "',
-                            '" & txtDireccion3Facturacion.Text.Trim & "',
-                            '" & txtCiudadFacturacion.Text.Trim & "',
-                            '" & txtEstadoFacturacion.Text.Trim & "',
-                            '" & txtCodigoPostalFacturacion.Text.Trim & "',
-                            '" & txtDireccion1Entrega.Text.Trim & "',
-                            '" & txtDireccion2Entrega.Text.Trim & "',
-                            '" & txtDireccion3Entrega.Text.Trim & "',
-                            '" & txtCiudadEntrega.Text.Trim & "',
-                            '" & txtEstadoEntrega.Text.Trim & "',
-                            '" & txtCodigoPostalEntrega.Text.Trim & "',
-                            '" & cboPais.Text.Trim & "',
-                            '" & cboPaisFacturacion.Text.Trim & "',
-                            '" & cboPaisEntrega.Text.Trim & "') END"
-                'MsgBox(cadena)
-                Dim comando As New SqlCommand(cadena, conexionLIMS)
-                If comando.ExecuteNonQuery() <> True Then
-                    MsgBox("Contacto guardado correctamente en LIMS", MsgBoxStyle.Information)
-                    ''actualizar el estado del prospecto
-                    actualizarEstadoDeProspecto()
-                    Me.Dispose()
-                    Dim admin As New FrmProspectos
-                    admin.MdiParent = FrmHOME
-                    admin.Show()
-                Else
-                    MsgBox("Ya existe el nombre de la compañia, no podemos agregar otro contacto con la misma empresa", MsgBoxStyle.Critical)
-                End If
-            Catch ex As Exception
-                MsgBox("Ocurrio un error en insertar los datos, verifica nuevamente", MsgBoxStyle.Exclamation)
-            End Try
+                cadena = "Update SetupCustomerDetails Set 
+                CustAccountNo = '" & txtNumeroDeCuenta.Text.Trim & "',
+                FirstName = '" & txtNombre.Text.Trim & "',
+                MiddleName ='" & txtApellidoPaterno.Text.Trim & "',
+                LastName = '" & txtApellidoMaterno.Text.Trim & "',
+                Phone ='" & txtTelefono.Text.Trim & "',
+                Mobile ='" & txtCelular.Text.Trim & "',
+                Email ='" & txtCorreo1.Text.Trim & "',
+                Fax ='" & txtFax.Text.Trim & "',
+                CompanyName ='" & txtCompania.Text.Trim & "',
+                IsActive ='" & indicador1 & "',
+                source ='" & source & "',
+                AdminType ='" & AdminType & "',
+                PaymentTerms ='" & txtTerminosDePago.Text.Trim & "',
+                isCod ='" & isCod & "',
+                isTaxable ='" & isTaxable & "',
+                IsCallDataReq ='" & isCalDataReq & "',
+                IsOOTNoticeReq ='" & isOOT & "',
+                IsCallHistoryReq ='" & isCalHistory & "',
+                QualityReqment ='" & QualityRequerment & "',
+                CallDueDateAdj ='" & CalDueDateAdj & "',
+                LabNotes ='" & txtNotas.Text.Trim & "',
+                CreatedBy ='" & txtUsuarioActual.Text.Trim & "',
+                CreatedOn ='" & DTPFechaActual.Value.Date & "',                         
+                DefaultPO ='" & DefaultPO & "',
+                ShipMode ='" & ShipMode & "',
+                CalDiscount ='" & txtDescuentoDeCalibracion.Text.Trim & "',
+                TaxExemption ='" & txtTaxException.Text.Trim & "',
+                Department ='" & txtDepartamento.Text.Trim & "',
+                Email2 ='" & txtCorreo2.Text.Trim & "',
+                CategoryCustomer ='" & cboCategoria.Text.Trim & "',
+                Currency ='" & MonedaSeleccionada & "',
+                PaymentOption ='" & cboOpcionesDePago.Text.Trim & "',
+                ShipmentAccount ='" & txtCuentaDeEnvio.Text.Trim & "',
+                WorkingHours ='" & txtHorarioDeTrabajo.Text.Trim & "',
+                RecallNotice ='" & RecallNotice & "',
+                IsDigitalCertificate ='" & isDigitalCertified & "',
+                IsShipAccActive ='" & AccActive & "',
+                KeyFiscal ='" & txtRFC.Text.Trim & "',
+                Organization ='" & txtOrganizacion.Text.Trim & "' 
+                where [CustomerId] ='" & Val(ID.Text) & "'"
+            'MsgBox(cadena)
+            conexionLIMS.Open()
+            Dim comando As New SqlCommand(cadena, conexionLIMS)
+                lectorLIMS = comando.ExecuteReader
+                lectorLIMS.Close()
+            Dim cadena2 As String
+            cadena2 = "Update SetupCustomerAddressDtls Set                                 
+                [ContAddress1] = '" & txtDireccion1.Text.Trim & "',
+                [ContAddress2] = '" & txtDireccion2.Text.Trim & "',
+                [ContAddress3] = '" & txtDireccion3.Text.Trim & "',
+                [ContCity] = '" & txtCiudad.Text.Trim & "',
+                [ContState] = '" & txtEstado.Text.Trim & "',
+                [ContZip] = '" & txtCodigoPostal.Text.Trim & "',
+                [BillAddress1] = '" & txtDireccion1Facturacion.Text.Trim & "',
+                [BillAddress2] = '" & txtDireccion2Facturacion.Text.Trim & "',
+                [BillAddress3] = '" & txtDireccion3Facturacion.Text.Trim & "',
+                [BillCity] = '" & txtCiudadFacturacion.Text.Trim & "',
+                [BillState] = '" & txtEstadoFacturacion.Text.Trim & "',
+                [BillZip] = '" & txtCodigoPostalFacturacion.Text.Trim & "',                   
+                [ShipAddress1] = '" & txtDireccion1Entrega.Text.Trim & "',
+                [ShipAddress2] = '" & txtDireccion2Entrega.Text.Trim & "',
+                [ShipAddress3] = '" & txtDireccion3Entrega.Text.Trim & "',
+                [ShipCity] = '" & txtCiudadEntrega.Text.Trim & "',
+                [ShipState] = '" & txtEstadoEntrega.Text.Trim & "',
+                [ShipZip] = '" & txtCodigoPostalEntrega.Text.Trim & "',
+                [ContCountry] = '" & cboPais.Text.Trim & "',
+                [BillCountry] = '" & cboPaisFacturacion.Text.Trim & "',
+                [ShipCountry] ='" & cboPaisEntrega.Text.Trim & "' 
+                where [CustomerId] ='" & Val(ID.Text) & "'"
+            'MsgBox(cadena)
+            Dim comando2 As New SqlCommand(cadena2, conexionLIMS)
+            lectorLIMS = comando2.ExecuteReader
+            lectorLIMS.Close()
+            'MsgBox(cadena2)
+            MsgBox("Contacto actualizado correctamente en LIMS", MsgBoxStyle.Information)
+            ''actualizar el estado del prospecto
+            'actualizarEstadoDeProspecto()
+            Me.Dispose()
+                'Dim admin As New 
+            'admin.MdiParent = FrmHOME
+            'admin.Show()
+            'Catch ex As Exception
+            '    MsgBox("Ocurrio un error en insertar los datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+            'End Try
         End If
     End Sub
 
