@@ -36,7 +36,7 @@ Public Class FrmAutorizarSolicitudes
             MetodoMetasCotizador()
             'DGOportunidades.Rows.Clear()
             Dim R As String
-            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS'"
+            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS' and Creado=0"
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             comando.CommandType = CommandType.Text
             Dim da As New SqlDataAdapter(comando)
@@ -147,18 +147,6 @@ Public Class FrmAutorizarSolicitudes
         End Try
     End Sub
 
-    'Private Sub btGuardar_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
-    '    Try
-    '        MetodoLIMS()
-    '        Dim R As String
-    '        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, RecBy, ) values ("
-    '        Dim comando As New SqlCommand(R, conexionLIMS)
-    '        comando.ExecuteNonQuery()
-    '        MsgBox("Orden de Venta generada correctamente", MsgBoxStyle.Information)
-    '    Catch ex As Exception
-    '        MsgBox("Error al cargar la Orden de venta.", MsgBoxStyle.Exclamation)
-    '    End Try
-    'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ''Generar
@@ -187,15 +175,26 @@ Public Class FrmAutorizarSolicitudes
                         seleccionado = DGRes.Rows(i).Cells(8).Value
                         If seleccionado = True Then
                             MetodoLIMS()
-                            R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) values(" & Val(DGRes.Rows(i).Cells(7).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "', (CONVERT(varchar(10), getdate(), 103)), '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')"
+                            R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', '', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
                             Dim comando As New SqlCommand(R, conexionLIMS)
                             comando.ExecuteNonQuery()
                             conexionLIMS.Close()
+
+                            MetodoMetasCotizador()
+                            R = "update Cotizaciones set Creado=1 where NumCot=" & Val(DGRes.Rows(i).Cells(0).Value) & ""
+                            Dim coma As New SqlCommand(R, conexionMetasCotizador)
+                            MsgBox(R)
+                            coma.ExecuteNonQuery()
+                            conexionMetasCotizador.Close()
                         End If
                     Next
                     MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
+                    consultaGeneralDeCotizaciones()
+                    consultaContactos()
+                    DGRes.Rows.Clear()
+                    agregar_a_Res()
                 Else
-                    MsgBox("No ha seleccionado ningún artículo", MsgBoxStyle.Critical, "Error del sistema.")
+                    MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
             End If
         Catch ex As Exception
@@ -209,5 +208,23 @@ Public Class FrmAutorizarSolicitudes
         consultaContactos()
         DGRes.Rows.Clear()
         agregar_a_Res()
+    End Sub
+
+    Private Sub txtNumeroDeCuentaB_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroDeCuentaB.TextChanged
+        Try
+            For Each row As DataGridViewRow In DGRes.Rows
+                row.Selected = False
+                If CStr(row.Cells(0).Value) = txtNumeroDeCuentaB.Text Then
+                    row.Selected = True
+                    Exit For
+                ElseIf CStr(row.Cells(0).Value).ToLower = Nothing Then
+                    row.Selected = False
+                Else
+                    row.Selected = False
+                End If
+            Next
+        Catch ex As Exception
+            MsgBox("No se encuentra dicho número de cotización.", MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 End Class

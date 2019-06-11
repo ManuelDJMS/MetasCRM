@@ -24,6 +24,7 @@ Partial Class FrmAutorizarSolicitudes
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -46,16 +47,32 @@ Partial Class FrmAutorizarSolicitudes
         Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DGRes = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Obser = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Customerid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CustAccount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DGContactos = New System.Windows.Forms.DataGridView()
         Me.DGOportunidades = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.LabelCorreo = New System.Windows.Forms.Label()
-        Me.LabelNombre = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -73,10 +90,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtNombreB = New System.Windows.Forms.TextBox()
         Me.txtNumeroDeCuentaB = New System.Windows.Forms.TextBox()
-        Me.txtCompaniaB = New System.Windows.Forms.TextBox()
-        Me.txtCorreoB = New System.Windows.Forms.TextBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -133,26 +147,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Obser = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Customerid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.CustAccount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,15 +180,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.TabPage2.Controls.Add(Me.DGRes)
         Me.TabPage2.Controls.Add(Me.DGContactos)
         Me.TabPage2.Controls.Add(Me.DGOportunidades)
-        Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Controls.Add(Me.Label37)
-        Me.TabPage2.Controls.Add(Me.LabelCorreo)
-        Me.TabPage2.Controls.Add(Me.LabelNombre)
         Me.TabPage2.Controls.Add(Me.Panel2)
-        Me.TabPage2.Controls.Add(Me.txtNombreB)
-        Me.TabPage2.Controls.Add(Me.txtNumeroDeCuentaB)
-        Me.TabPage2.Controls.Add(Me.txtCompaniaB)
-        Me.TabPage2.Controls.Add(Me.txtCorreoB)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -224,10 +211,135 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGRes.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DGRes.Location = New System.Drawing.Point(14, 116)
+        Me.DGRes.Location = New System.Drawing.Point(14, 85)
         Me.DGRes.Name = "DGRes"
-        Me.DGRes.Size = New System.Drawing.Size(1101, 479)
+        Me.DGRes.Size = New System.Drawing.Size(1109, 522)
         Me.DGRes.TabIndex = 162
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "NumCot"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 75
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Contacto"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 210
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Empresa"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 210
+        '
+        'Correo
+        '
+        Me.Correo.HeaderText = "Referencia"
+        Me.Correo.Name = "Correo"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Fecha Desde"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 140
+        '
+        'Column22
+        '
+        Me.Column22.HeaderText = "Fecha Hasta"
+        Me.Column22.Name = "Column22"
+        Me.Column22.Width = 140
+        '
+        'Obser
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green
+        DataGridViewCellStyle2.Format = "$ .00"
+        DataGridViewCellStyle2.NullValue = "0"
+        Me.Obser.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Obser.HeaderText = "Total"
+        Me.Obser.Name = "Obser"
+        '
+        'Customerid
+        '
+        Me.Customerid.HeaderText = "CustomerID"
+        Me.Customerid.Name = "Customerid"
+        Me.Customerid.Visible = False
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Generar"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewCheckBoxColumn1.Width = 80
+        '
+        'CustAccount
+        '
+        Me.CustAccount.HeaderText = "Account"
+        Me.CustAccount.Name = "CustAccount"
+        Me.CustAccount.Visible = False
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "ShipAdress1"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Visible = False
+        '
+        'Column20
+        '
+        Me.Column20.HeaderText = "ShipAdress2"
+        Me.Column20.Name = "Column20"
+        Me.Column20.Visible = False
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "ShipAdress3"
+        Me.Column21.Name = "Column21"
+        Me.Column21.Visible = False
+        '
+        'Column23
+        '
+        Me.Column23.HeaderText = "ShipCity"
+        Me.Column23.Name = "Column23"
+        Me.Column23.Visible = False
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "ShipState"
+        Me.Column24.Name = "Column24"
+        Me.Column24.Visible = False
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "ShipZip"
+        Me.Column25.Name = "Column25"
+        Me.Column25.Visible = False
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "ShipTo"
+        Me.Column26.Name = "Column26"
+        Me.Column26.Visible = False
+        '
+        'Column27
+        '
+        Me.Column27.HeaderText = "CategoryCustomer"
+        Me.Column27.Name = "Column27"
+        Me.Column27.Visible = False
+        '
+        'Column28
+        '
+        Me.Column28.HeaderText = "ShipCounty"
+        Me.Column28.Name = "Column28"
+        Me.Column28.Visible = False
+        '
+        'Column29
+        '
+        Me.Column29.HeaderText = "CustomerID"
+        Me.Column29.Name = "Column29"
+        Me.Column29.Visible = False
         '
         'DGContactos
         '
@@ -315,49 +427,22 @@ Partial Class FrmAutorizarSolicitudes
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(28, 80)
+        Me.Label3.Location = New System.Drawing.Point(311, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 18)
         Me.Label3.TabIndex = 155
         Me.Label3.Text = "NumCot:"
         '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(589, 80)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(74, 18)
-        Me.Label37.TabIndex = 155
-        Me.Label37.Text = "Compañia:"
-        '
-        'LabelCorreo
-        '
-        Me.LabelCorreo.AutoSize = True
-        Me.LabelCorreo.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelCorreo.Location = New System.Drawing.Point(885, 80)
-        Me.LabelCorreo.Name = "LabelCorreo"
-        Me.LabelCorreo.Size = New System.Drawing.Size(54, 18)
-        Me.LabelCorreo.TabIndex = 159
-        Me.LabelCorreo.Text = "Correo:"
-        '
-        'LabelNombre
-        '
-        Me.LabelNombre.AutoSize = True
-        Me.LabelNombre.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelNombre.Location = New System.Drawing.Point(305, 80)
-        Me.LabelNombre.Name = "LabelNombre"
-        Me.LabelNombre.Size = New System.Drawing.Size(63, 18)
-        Me.LabelNombre.TabIndex = 154
-        Me.LabelNombre.Text = "Nombre:"
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.Controls.Add(Me.dtp)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.DGReal)
+        Me.Panel2.Controls.Add(Me.txtNumeroDeCuentaB)
         Me.Panel2.Controls.Add(Me.Label26)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Label27)
@@ -387,12 +472,13 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(543, 15)
+        Me.Button4.Location = New System.Drawing.Point(679, 15)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(120, 33)
         Me.Button4.TabIndex = 166
         Me.Button4.Text = "Actualizar"
         Me.Button4.UseVisualStyleBackColor = False
+        Me.Button4.Visible = False
         '
         'Button2
         '
@@ -434,7 +520,7 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGReal.DefaultCellStyle = DataGridViewCellStyle17
         Me.DGReal.GridColor = System.Drawing.Color.Gainsboro
-        Me.DGReal.Location = New System.Drawing.Point(412, 3)
+        Me.DGReal.Location = New System.Drawing.Point(548, 3)
         Me.DGReal.Name = "DGReal"
         DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
@@ -542,37 +628,13 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label27.TabIndex = 152
         Me.Label27.Text = "Cotizaciones"
         '
-        'txtNombreB
-        '
-        Me.txtNombreB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreB.Location = New System.Drawing.Point(374, 80)
-        Me.txtNombreB.Name = "txtNombreB"
-        Me.txtNombreB.Size = New System.Drawing.Size(158, 20)
-        Me.txtNombreB.TabIndex = 126
-        '
         'txtNumeroDeCuentaB
         '
         Me.txtNumeroDeCuentaB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumeroDeCuentaB.Location = New System.Drawing.Point(97, 80)
+        Me.txtNumeroDeCuentaB.Location = New System.Drawing.Point(380, 32)
         Me.txtNumeroDeCuentaB.Name = "txtNumeroDeCuentaB"
-        Me.txtNumeroDeCuentaB.Size = New System.Drawing.Size(158, 20)
+        Me.txtNumeroDeCuentaB.Size = New System.Drawing.Size(107, 20)
         Me.txtNumeroDeCuentaB.TabIndex = 128
-        '
-        'txtCompaniaB
-        '
-        Me.txtCompaniaB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCompaniaB.Location = New System.Drawing.Point(669, 80)
-        Me.txtCompaniaB.Name = "txtCompaniaB"
-        Me.txtCompaniaB.Size = New System.Drawing.Size(158, 20)
-        Me.txtCompaniaB.TabIndex = 128
-        '
-        'txtCorreoB
-        '
-        Me.txtCorreoB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreoB.Location = New System.Drawing.Point(945, 80)
-        Me.txtCorreoB.Name = "txtCorreoB"
-        Me.txtCorreoB.Size = New System.Drawing.Size(158, 20)
-        Me.txtCorreoB.TabIndex = 128
         '
         'TabPage1
         '
@@ -1103,6 +1165,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.txtClaveRecopilada.Name = "txtClaveRecopilada"
         Me.txtClaveRecopilada.Size = New System.Drawing.Size(100, 20)
         Me.txtClaveRecopilada.TabIndex = 165
+        Me.txtClaveRecopilada.Visible = False
         '
         'Button3
         '
@@ -1118,6 +1181,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button3.TabIndex = 164
         Me.Button3.Text = "Nueva actividad"
         Me.Button3.UseVisualStyleBackColor = False
+        Me.Button3.Visible = False
         '
         'txtNombreDeContacto
         '
@@ -1165,6 +1229,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.btGuardar.TabIndex = 162
         Me.btGuardar.Text = "Generar OV"
         Me.btGuardar.UseVisualStyleBackColor = False
+        Me.btGuardar.Visible = False
         '
         'PictureBox5
         '
@@ -1178,118 +1243,13 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
         '
-        'DataGridViewTextBoxColumn1
+        'dtp
         '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "NumCot"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 75
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Contacto"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 210
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Empresa"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 210
-        '
-        'Correo
-        '
-        Me.Correo.HeaderText = "Referencia"
-        Me.Correo.Name = "Correo"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Fecha Desde"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 140
-        '
-        'Column22
-        '
-        Me.Column22.HeaderText = "Fecha Hasta"
-        Me.Column22.Name = "Column22"
-        Me.Column22.Width = 140
-        '
-        'Obser
-        '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green
-        DataGridViewCellStyle2.Format = "$ .00"
-        DataGridViewCellStyle2.NullValue = "0"
-        Me.Obser.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Obser.HeaderText = "Total"
-        Me.Obser.Name = "Obser"
-        '
-        'Customerid
-        '
-        Me.Customerid.HeaderText = "CustomerID"
-        Me.Customerid.Name = "Customerid"
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Generar"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        Me.DataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.DataGridViewCheckBoxColumn1.Width = 80
-        '
-        'CustAccount
-        '
-        Me.CustAccount.HeaderText = "Account"
-        Me.CustAccount.Name = "CustAccount"
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "ShipAdress1"
-        Me.Column8.Name = "Column8"
-        '
-        'Column20
-        '
-        Me.Column20.HeaderText = "ShipAdress2"
-        Me.Column20.Name = "Column20"
-        '
-        'Column21
-        '
-        Me.Column21.HeaderText = "ShipAdress3"
-        Me.Column21.Name = "Column21"
-        '
-        'Column23
-        '
-        Me.Column23.HeaderText = "ShipCity"
-        Me.Column23.Name = "Column23"
-        '
-        'Column24
-        '
-        Me.Column24.HeaderText = "ShipState"
-        Me.Column24.Name = "Column24"
-        '
-        'Column25
-        '
-        Me.Column25.HeaderText = "ShipZip"
-        Me.Column25.Name = "Column25"
-        '
-        'Column26
-        '
-        Me.Column26.HeaderText = "ShipTo"
-        Me.Column26.Name = "Column26"
-        '
-        'Column27
-        '
-        Me.Column27.HeaderText = "CategoryCustomer"
-        Me.Column27.Name = "Column27"
-        '
-        'Column28
-        '
-        Me.Column28.HeaderText = "ShipCounty"
-        Me.Column28.Name = "Column28"
-        '
-        'Column29
-        '
-        Me.Column29.HeaderText = "CustomerID"
-        Me.Column29.Name = "Column29"
+        Me.dtp.Location = New System.Drawing.Point(287, 6)
+        Me.dtp.Name = "dtp"
+        Me.dtp.Size = New System.Drawing.Size(230, 20)
+        Me.dtp.TabIndex = 167
+        Me.dtp.Visible = False
         '
         'FrmAutorizarSolicitudes
         '
@@ -1308,7 +1268,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.Text = "Autorizaciòn de solicitudes"
         Me.TabConsulta.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGContactos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1332,18 +1291,12 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents TabConsulta As TabControl
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents LabelCorreo As Label
-    Friend WithEvents LabelNombre As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button2 As Button
     Friend WithEvents Label26 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label27 As Label
     Friend WithEvents txtNumeroDeCuentaB As TextBox
-    Friend WithEvents txtCompaniaB As TextBox
-    Friend WithEvents txtCorreoB As TextBox
-    Friend WithEvents txtNombreB As TextBox
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtClaveRecopilada As TextBox
@@ -1435,4 +1388,5 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents Column27 As DataGridViewTextBoxColumn
     Friend WithEvents Column28 As DataGridViewTextBoxColumn
     Friend WithEvents Column29 As DataGridViewTextBoxColumn
+    Friend WithEvents dtp As DateTimePicker
 End Class
