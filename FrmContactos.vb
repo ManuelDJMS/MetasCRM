@@ -5,7 +5,7 @@ Public Class FrmContactos
     Dim claveConsultaAdd As String
     Dim isActive, isCOD, isTaxable, isCallDataReq, isOOT, isCall, isDigitalCertified, isShipActive As Boolean
     Dim nom, app, apm As String
-    Dim clave As Integer
+    Dim c As Integer
     Private Sub FrmContactos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MetodoLIMS()
         consultaGeneralContactos()
@@ -25,6 +25,8 @@ Public Class FrmContactos
         cboRelacionadoConTareas.Items.Add("Personales")
         cboRelacionadoConTareas.Items.Add("Avisos")
         cboRelacionadoConTareas.Items.Add("Otros")
+        'botonesEnable()
+
     End Sub
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
@@ -170,7 +172,6 @@ Public Class FrmContactos
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader()
             If lector.Read() Then
-
                 txtClaveRecopilada.Text = lector(0)
                 txtNumeroDeCuenta.Text = lector(1)
                 txtNombreDeContacto.Text = lector(2) & " " & lector(3) & " " & lector(4)
@@ -309,13 +310,6 @@ Public Class FrmContactos
                     txtTipoDeCliente.Text = "Publica"
                 End If
 
-
-
-
-
-
-
-
                 txtTerminosDePago.Text = lector(13)
                 txtCategoria.Text = lector(32)
                 txtIDFiscal.Text = lector(33)
@@ -430,7 +424,7 @@ Public Class FrmContactos
 
                 txtKeyFiscal.Text = lector(43)
                 txtOrganizacion.Text = lector(44)
-                clave = lector(0)
+                c = lector(0)
                 nom = lector(2)
                 app = lector(3)
                 apm = lector(4)
@@ -539,54 +533,225 @@ Public Class FrmContactos
     Private Sub btGuardar_Click(sender As Object, e As EventArgs) Handles btGuardar.Click
         'MsgBox(txtNumeroDeCuenta.Text)
         Dim con As New FrmNuevoContacto
+        con.ID.Text = Me.c
         con.txtNombre.Text = Me.nom
         con.txtApellidoPaterno.Text = Me.app
         con.txtApellidoMaterno.Text = Me.apm
         con.txtCompania.Text = Me.txtNombreCompania.Text
-        con.txtDepartamento.Text = Me.txtDepartamento.Text
+        If Me.txtDepartamento.Text <> "t" Then
+            con.txtDepartamento.Text = Me.txtDepartamento.Text
+        Else
+            con.txtDepartamento.Text = " "
+        End If
         con.txtRFC.Text = Me.txtIDFiscal.Text
         con.txtOrganizacion.Text = Me.txtOrganizacion.Text
-        con.txtTelefono.Text = Me.txtTelefono.Text
-        con.txtFax.Text = Me.txtFax.Text
+        If Me.txtTelefono.Text <> "t" Then
+            con.txtTelefono.Text = Me.txtTelefono.Text
+        Else
+            con.txtTelefono.Text = " "
+        End If
+        If Me.txtFax.Text <> "t" Then
+            con.txtFax.Text = Me.txtFax.Text
+        Else
+            con.txtFax.Text = " "
+        End If
         con.txtNumeroDeCuenta.Text = Me.txtNumeroDeCuenta.Text
         con.txtCelular.Text = Me.txtCelular.Text
         con.txtCorreo1.Text = Me.txtCorreo1.Text
-        con.txtCorreo2.Text = Me.txtCorreo2.Text
-        con.txtExtension.Text = Me.txtExtension.Text
+        If Me.txtCorreo2.Text <> "t" Then
+            con.txtCorreo2.Text = Me.txtCorreo2.Text
+        Else
+            con.txtExtension.Text = " "
+        End If
         'CONTACTO
         con.txtDireccion1.Text = Me.txtDireccion.Text
-        con.txtDireccion2.Text = Me.txtDireccion2.Text
-        con.txtDireccion3.Text = Me.txtDireccion3.Text
-        con.txtEstado.Text = Me.txtEdo.Text
-        con.txtCiudad.Text = Me.txtCiudad.Text
-        con.txtCodigoPostal.Text = Me.txtCodigoPostal.Text
-        con.cboPais.Text = Me.txtPais.Text
-        con.txtNumeroExterior.Text = Me.txtNumExt.Text
-        con.txtColonia.Text = Me.txtColonia.Text
+        If Me.txtDireccion2.Text <> "t" Then
+            con.txtDireccion2.Text = Me.txtDireccion2.Text
+        Else
+            con.txtDireccion2.Text = " "
+        End If
+        If Me.txtDireccion3.Text <> "t" Then
+            con.txtDireccion3.Text = Me.txtDireccion2.Text
+        Else
+            con.txtDireccion3.Text = " "
+        End If
+        If Me.txtEdo.Text <> "t" Then
+            con.txtEstado.Text = Me.txtEdo.Text
+        Else
+            con.txtEstado.Text = " "
+        End If
+        If Me.txtCiudad.Text <> "t" Then
+            con.txtCiudad.Text = Me.txtCiudad.Text
+        Else
+            con.txtCiudad.Text = " "
+        End If
+        If Me.txtCodigoPostal.Text <> "t" Then
+            con.txtCodigoPostal.Text = Me.txtCodigoPostal.Text
+        Else
+            con.txtCodigoPostal.Text = " "
+        End If
+        If Me.txtPais.Text <> "t" Then
+            con.cboPais.Text = Me.txtPais.Text
+        Else
+            con.cboPais.Text = " "
+        End If
+        If Me.txtNumExt.Text <> "t" Then
+            con.txtNumeroExterior.Text = Me.txtNumExt.Text
+        Else
+            con.txtNumeroExterior.Text = " "
+        End If
+        If Me.txtColonia.Text <> "t" Then
+            con.txtColonia.Text = Me.txtColonia.Text
+        Else
+            con.txtColonia.Text = " "
+        End If
+        'con.txtEstado.Text = Me.txtEdo.Text
+        'con.txtCiudad.Text = Me.txtCiudad.Text
+        'con.txtCodigoPostal.Text = Me.txtCodigoPostal.Text
+        'con.cboPais.Text = Me.txtPais.Text
+        'con.txtNumeroExterior.Text = Me.txtNumExt.Text
+        'con.txtColonia.Text = Me.txtColonia.Text
         'FACTURACION
-        con.txtDireccion1Facturacion.Text = Me.txtDireccion1DeFacturacion.Text
-        con.txtDireccion2Facturacion.Text = Me.txtDireccion2DeFacturacion.Text
-        con.txtDireccion3Facturacion.Text = Me.txtDireccion3DeFacturacion.Text
-        con.txtEstadoFacturacion.Text = Me.txtEstadoDeFacturacion.Text
-        con.txtCiudadFacturacion.Text = Me.txtCiudadDeFacturacion.Text
-        con.txtCodigoPostalFacturacion.Text = Me.txtCPDeFacturacion.Text
-        con.cboPaisFacturacion.Text = Me.txtPaisDeFacturacion.Text
-        con.txtNumExteriorFacturacion.Text = Me.txtNumeroExteriorDeFacturacion.Text
-        con.txtColoniaFacturacion.Text = Me.txtColoniaDeFacturacion.Text
+        If Me.txtDireccion1DeFacturacion.Text <> "t" Then
+            con.txtDireccion1Facturacion.Text = Me.txtDireccion1DeFacturacion.Text
+        Else
+            con.txtDireccion1Facturacion.Text = " "
+        End If
+        If Me.txtDireccion2DeFacturacion.Text <> "t" Then
+            con.txtDireccion2Facturacion.Text = Me.txtDireccion2DeFacturacion.Text
+        Else
+            con.txtDireccion2Facturacion.Text = " "
+        End If
+        If Me.txtDireccion3DeFacturacion.Text <> "t" Then
+            con.txtDireccion3Facturacion.Text = Me.txtDireccion3DeFacturacion.Text
+        Else
+            con.txtDireccion3Facturacion.Text = " "
+        End If
+        If Me.txtEstadoDeFacturacion.Text <> "t" Then
+            con.txtEstadoFacturacion.Text = Me.txtEstadoDeFacturacion.Text
+        Else
+            con.txtEstadoFacturacion.Text = " "
+        End If
+        If Me.txtCiudadDeFacturacion.Text <> "t" Then
+            con.txtCiudadFacturacion.Text = Me.txtCiudadDeFacturacion.Text
+        Else
+            con.txtCiudadFacturacion.Text = " "
+        End If
+        If Me.txtCPDeFacturacion.Text <> "t" Then
+            con.txtCodigoPostalFacturacion.Text = Me.txtCPDeFacturacion.Text
+        Else
+            con.txtCodigoPostalFacturacion.Text = " "
+        End If
+        If Me.txtPaisDeFacturacion.Text <> "t" Then
+            con.cboPaisFacturacion.Text = Me.txtPaisDeFacturacion.Text
+        Else
+            con.cboPaisFacturacion.Text = " "
+        End If
+        If Me.txtNumeroExteriorDeFacturacion.Text <> "t" Then
+            con.txtNumExteriorFacturacion.Text = Me.txtNumeroExteriorDeFacturacion.Text
+        Else
+            con.txtNumExteriorFacturacion.Text = " "
+        End If
+        If Me.txtColoniaDeFacturacion.Text <> "t" Then
+            con.txtColoniaFacturacion.Text = Me.txtColoniaDeFacturacion.Text
+        Else
+            con.txtColoniaFacturacion.Text = " "
+        End If
+        'con.txtCiudadFacturacion.Text = Me.txtCiudadDeFacturacion.Text
+        'con.txtCodigoPostalFacturacion.Text = Me.txtCPDeFacturacion.Text
+        'con.cboPaisFacturacion.Text = Me.txtPaisDeFacturacion.Text
+        'con.txtNumExteriorFacturacion.Text = Me.txtNumeroExteriorDeFacturacion.Text
+        'con.txtColoniaFacturacion.Text = Me.txtColoniaDeFacturacion.Text
         'ENTREGA
-        con.txtDireccion1Entrega.Text = Me.txtDireccion1DeEntrega.Text
-        con.txtDireccion2Entrega.Text = Me.txtDireccion2DeEntrega.Text
-        con.txtDireccion3Entrega.Text = Me.txtDireccion3DeFacturacion.Text
-        con.txtEstadoEntrega.Text = Me.txtEstadoDeEntrega.Text
-        con.txtCiudadEntrega.Text = Me.txtCiudadDeEntrega.Text
-        con.txtCodigoPostalEntrega.Text = Me.txtCPDeEntrega.Text
-        con.cboPaisEntrega.Text = Me.txtPaisDeEntrega.Text
-        con.txtNumExteriorEntrega.Text = Me.txtNumeroExteriorDeEntrega.Text
-        con.txtColoniaEntrega.Text = Me.txtColoniaDeEntrega.Text
+        If Me.txtDireccion1DeEntrega.Text <> "t" Then
+            con.txtDireccion1Entrega.Text = Me.txtDireccion1DeEntrega.Text
+        Else
+            con.txtDireccion1Entrega.Text = " "
+        End If
+
+        If Me.txtDireccion2DeEntrega.Text <> "t" Then
+            con.txtDireccion2Entrega.Text = Me.txtDireccion2DeEntrega.Text
+        Else
+            con.txtDireccion2Entrega.Text = " "
+        End If
+
+        If Me.txtDireccion3DeEntrega.Text <> "t" Then
+            con.txtDireccion3Entrega.Text = Me.txtDireccion3DeEntrega.Text
+        Else
+            con.txtDireccion3Entrega.Text = " "
+        End If
+
+        If Me.txtEstadoDeEntrega.Text <> "t" Then
+            con.txtEstadoEntrega.Text = Me.txtEstadoDeEntrega.Text
+        Else
+            con.txtEstadoEntrega.Text = " "
+        End If
+
+        If Me.txtCiudadDeEntrega.Text <> "t" Then
+            con.txtCiudadEntrega.Text = Me.txtCiudadDeEntrega.Text
+        Else
+            con.txtCiudadEntrega.Text = " "
+        End If
+
+        If Me.txtCPDeEntrega.Text <> "t" Then
+            con.txtCodigoPostalEntrega.Text = Me.txtCPDeEntrega.Text
+        Else
+            con.txtCodigoPostalEntrega.Text = " "
+        End If
+
+        If Me.txtPaisDeEntrega.Text <> "t" Then
+            con.cboPaisEntrega.Text = Me.txtPaisDeEntrega.Text
+        Else
+            con.cboPaisEntrega.Text = " "
+        End If
+
+        If Me.txtNumeroExteriorDeEntrega.Text <> "t" Then
+            con.txtNumExteriorEntrega.Text = Me.txtNumeroExteriorDeEntrega.Text
+        Else
+            con.txtNumExteriorEntrega.Text = " "
+        End If
+
+        If Me.txtColoniaDeEntrega.Text <> "t" Then
+            con.txtColoniaEntrega.Text = Me.txtColoniaDeEntrega.Text
+        Else
+            con.txtColoniaEntrega.Text = " "
+        End If
+        'con.txtDireccion1Entrega.Text = Me.txtDireccion1DeEntrega.Text
+        'con.txtDireccion2Entrega.Text = Me.txtDireccion2DeEntrega.Text
+        'con.txtDireccion3Entrega.Text = Me.txtDireccion3DeFacturacion.Text
+        'con.txtEstadoEntrega.Text = Me.txtEstadoDeEntrega.Text
+        'con.txtCiudadEntrega.Text = Me.txtCiudadDeEntrega.Text
+        'con.txtCodigoPostalEntrega.Text = Me.txtCPDeEntrega.Text
+        'con.cboPaisEntrega.Text = Me.txtPaisDeEntrega.Text
+        'con.txtNumExteriorEntrega.Text = Me.txtNumeroExteriorDeEntrega.Text
+        'con.txtColoniaEntrega.Text = Me.txtColoniaDeEntrega.Text
         'Informacion Administrativa
-        con.cboOrigen.Text = Me.txtOrigenContacto.Text
-        con.cboTipoIndustria.Text = Me.txtTipoDeCliente.Text
-        con.txtTerminosDePago.Text = Me.txtTerminosDePago.Text
+        If Me.txtOrigenContacto.Text <> "t" Then
+            con.cboOrigen.Text = Me.txtOrigenContacto.Text
+        Else
+            con.cboOrigen.Text = " "
+        End If
+
+        If Me.txtTipoDeCliente.Text <> "t" Then
+            con.cboTipoIndustria.Text = Me.txtTipoDeCliente.Text
+        Else
+            con.cboTipoIndustria.Text = " "
+        End If
+
+        If Me.txtTerminosDePago.Text <> "t" Then
+            con.txtTerminosDePago.Text = Me.txtTerminosDePago.Text
+        Else
+            con.txtTerminosDePago.Text = " "
+        End If
+
+        If Me.txtTerminosDePago.Text <> "t" Then
+            con.txtTerminosDePago.Text = Me.txtTerminosDePago.Text
+        Else
+            con.txtTerminosDePago.Text = " "
+        End If
+        'con.cboOrigen.Text = Me.txtOrigenContacto.Text
+        'con.cboTipoIndustria.Text = Me.txtTipoDeCliente.Text
+        'con.txtTerminosDePago.Text = Me.txtTerminosDePago.Text
         con.cboCategoria.Text = Me.txtCategoria.Text
         If Me.cbCOD.Checked = True Then
             con.cbCOD.Checked = True
@@ -598,7 +763,13 @@ Public Class FrmContactos
         Else
             con.cbTaxable.Checked = False
         End If
-        con.txtIDFiscal.Text = Me.txtIDFiscal.Text
+
+        If Me.txtIDFiscal.Text <> "t" Then
+            con.txtIDFiscal.Text = Me.txtIDFiscal.Text
+        Else
+            con.txtIDFiscal.Text = " "
+        End If
+        'con.txtIDFiscal.Text = Me.txtIDFiscal.Text
         con.cboMoneda.Text = Me.txtMoneda.Text
         con.cboOpcionesDePago.Text = Me.Label2.Text
         ' MsgBox(Me.txtDefaultPO.Text)
@@ -609,15 +780,39 @@ Public Class FrmContactos
         Else
             con.cbActivo1.Checked = False
         End If
-        con.txtDescuentoDeCalibracion.Text = Me.txtDescuentoDeCal.Text
-        con.txtTaxException.Text = Me.txtTaxEx.Text
-        con.txtCuentaDeEnvio.Text = Me.txtCuentaDeEnvio.Text
+
+        If Me.txtDescuentoDeCal.Text <> "t" Then
+            con.txtDescuentoDeCalibracion.Text = Me.txtDescuentoDeCal.Text
+        Else
+            con.txtDescuentoDeCalibracion.Text = " "
+        End If
+
+        If Me.txtTaxEx.Text <> "t" Then
+            con.txtTaxException.Text = Me.txtTaxEx.Text
+        Else
+            con.txtTaxException.Text = " "
+        End If
+
+        If Me.txtCuentaDeEnvio.Text <> "t" Then
+            con.txtCuentaDeEnvio.Text = Me.txtCuentaDeEnvio.Text
+        Else
+            con.txtCuentaDeEnvio.Text = " "
+        End If
+        'con.txtDescuentoDeCalibracion.Text = Me.txtDescuentoDeCal.Text
+        'con.txtTaxException.Text = Me.txtTaxEx.Text
+        'con.txtCuentaDeEnvio.Text = Me.txtCuentaDeEnvio.Text
         If Me.cbActivo2.Checked = True Then
             con.cbActivo2.Checked = True
         Else
             con.cbActivo2.Checked = False
         End If
-        con.txtHorarioDeTrabajo.Text = Me.txtHorarioDeTrabajo.Text
+
+        If Me.txtHorarioDeTrabajo.Text <> "t" Then
+            con.txtHorarioDeTrabajo.Text = Me.txtHorarioDeTrabajo.Text
+        Else
+            con.txtHorarioDeTrabajo.Text = " "
+        End If
+        'con.txtHorarioDeTrabajo.Text = Me.txtHorarioDeTrabajo.Text
         con.cboAvisoDeRecuperacion.Text = Me.txtAvisoDeRecupeacion.Text
         'INFORMACIÓN TECNICA 
         If Me.CBCalibrationDataRequiered.Checked = True Then
@@ -642,6 +837,11 @@ Public Class FrmContactos
         End If
         con.cboRequerimientosDeCalidad.Text = Me.txtCalidad.Text
         con.cboVencimientoDeCalibracion.Text = Me.txtCalDueDate.Text
+        If Me.txtNotasLab.Text <> "t" Then
+            con.txtNotas.Text = Me.txtNotasLab.Text
+        Else
+            con.txtNotas.Text = " "
+        End If
         con.txtNotas.Text = Me.txtNotasLab.Text
         ban = False
         con.Show()
@@ -893,6 +1093,14 @@ Public Class FrmContactos
         CBOOTNoticeRequiered.Checked = False
         CBRequiresCalHistory.Checked = False
         CBOnlyDigitalCer.Checked = False
+    End Sub
+
+    Public Sub botonesEnable()
+        If txtNombreDeContacto.Text = "Nombre del contacto" Then
+            Button3.Enabled = False
+            btGuardar.Enabled = False
+            btAgregarLlamada.Enabled = False
+        End If
     End Sub
 End Class
 

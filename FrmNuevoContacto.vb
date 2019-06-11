@@ -632,10 +632,10 @@ Public Class FrmNuevoContacto
             End If
         Else
             'MsgBox("si sirve")
-            ' Try
-            'MsgBox(cboMoneda.Text)
-            moneda()
-            aviso()
+            Try
+                'MsgBox(cboMoneda.Text)
+                moneda()
+                aviso()
                 vencimiento()
                 requerimientos()
                 po()
@@ -684,13 +684,13 @@ Public Class FrmNuevoContacto
                 KeyFiscal ='" & txtRFC.Text.Trim & "',
                 Organization ='" & txtOrganizacion.Text.Trim & "' 
                 where [CustomerId] ='" & Val(ID.Text) & "'"
-            'MsgBox(cadena)
-            conexionLIMS.Open()
-            Dim comando As New SqlCommand(cadena, conexionLIMS)
+                'MsgBox(cadena)
+                conexionLIMS.Open()
+                Dim comando As New SqlCommand(cadena, conexionLIMS)
                 lectorLIMS = comando.ExecuteReader
                 lectorLIMS.Close()
-            Dim cadena2 As String
-            cadena2 = "Update SetupCustomerAddressDtls Set                                 
+                Dim cadena2 As String
+                cadena2 = "Update SetupCustomerAddressDtls Set                                 
                 [ContAddress1] = '" & txtDireccion1.Text.Trim & "',
                 [ContAddress2] = '" & txtDireccion2.Text.Trim & "',
                 [ContAddress3] = '" & txtDireccion3.Text.Trim & "',
@@ -713,21 +713,21 @@ Public Class FrmNuevoContacto
                 [BillCountry] = '" & cboPaisFacturacion.Text.Trim & "',
                 [ShipCountry] ='" & cboPaisEntrega.Text.Trim & "' 
                 where [CustomerId] ='" & Val(ID.Text) & "'"
-            'MsgBox(cadena)
-            Dim comando2 As New SqlCommand(cadena2, conexionLIMS)
-            lectorLIMS = comando2.ExecuteReader
-            lectorLIMS.Close()
-            'MsgBox(cadena2)
-            MsgBox("Contacto actualizado correctamente en LIMS", MsgBoxStyle.Information)
-            ''actualizar el estado del prospecto
-            'actualizarEstadoDeProspecto()
-            Me.Dispose()
-                'Dim admin As New 
-            'admin.MdiParent = FrmHOME
-            'admin.Show()
-            'Catch ex As Exception
-            '    MsgBox("Ocurrio un error en insertar los datos, verifica nuevamente", MsgBoxStyle.Exclamation)
-            'End Try
+                'MsgBox(cadena)
+                Dim comando2 As New SqlCommand(cadena2, conexionLIMS)
+                lectorLIMS = comando2.ExecuteReader
+                lectorLIMS.Close()
+                'MsgBox(cadena2)
+                MsgBox("Contacto actualizado correctamente en LIMS", MsgBoxStyle.Information)
+                ''actualizar el estado del prospecto
+                'actualizarEstadoDeProspecto()
+                Me.Dispose()
+                Dim admin As New 
+                admin.MdiParent = FrmHOME
+                admin.Show()
+            Catch ex As Exception
+                MsgBox("Ocurrio un error en insertar los datos, verifica nuevamente", MsgBoxStyle.Exclamation)
+            End Try
         End If
     End Sub
 
