@@ -356,6 +356,12 @@
     <Compile Include="Reportes\cotLIMS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\cotLIMSAct.Designer.vb">
+      <DependentUpon>cotLIMSAct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\cotLIMSAct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -479,9 +485,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cot.rdlc" />
     <EmbeddedResource Include="Reportes\a.rdlc" />
+    <EmbeddedResource Include="Reportes\cotActualizada.rdlc" />
     <EmbeddedResource Include="Reportes\cotLIMS-Contactos.rdlc" />
     <EmbeddedResource Include="Reportes\cotLIMS.resx">
       <DependentUpon>cotLIMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cotLIMSAct.resx">
+      <DependentUpon>cotLIMSAct.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cotLIMSProspectos.rdlc" />
     <EmbeddedResource Include="Reportes\FIRMA.resx">
