@@ -722,9 +722,9 @@ Public Class FrmNuevoContacto
                 ''actualizar el estado del prospecto
                 'actualizarEstadoDeProspecto()
                 Me.Dispose()
-                Dim admin As New 
-                admin.MdiParent = FrmHOME
-                admin.Show()
+                'Dim admin As New 
+                'admin.MdiParent = FrmHOME
+                'admin.Show()
             Catch ex As Exception
                 MsgBox("Ocurrio un error en insertar los datos, verifica nuevamente", MsgBoxStyle.Exclamation)
             End Try
