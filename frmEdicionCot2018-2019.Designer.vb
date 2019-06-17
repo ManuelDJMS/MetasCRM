@@ -906,7 +906,7 @@ Partial Class frmEdicionCot2018_2019
         '
         'Column1
         '
-        Me.Column1.HeaderText = "Número de Equipo"
+        Me.Column1.HeaderText = "Número de Artículo (SKU)"
         Me.Column1.Name = "Column1"
         '
         'codigoServicio
@@ -923,13 +923,13 @@ Partial Class frmEdicionCot2018_2019
         '
         'equipoDescripcion
         '
-        Me.equipoDescripcion.HeaderText = "Equipo/Descripción"
+        Me.equipoDescripcion.HeaderText = "Descripción"
         Me.equipoDescripcion.Name = "equipoDescripcion"
         Me.equipoDescripcion.Width = 250
         '
         'marca
         '
-        Me.marca.HeaderText = "Marca"
+        Me.marca.HeaderText = "Marca/Fabricante"
         Me.marca.Name = "marca"
         '
         'modelo

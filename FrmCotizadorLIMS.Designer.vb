@@ -72,18 +72,18 @@ Partial Class FrmCotizadorLIMS
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
-        Me.s = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.s = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.Tab2018.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -557,9 +557,9 @@ Partial Class FrmCotizadorLIMS
         Me.lblCot.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCot.Location = New System.Drawing.Point(11, 337)
         Me.lblCot.Name = "lblCot"
-        Me.lblCot.Size = New System.Drawing.Size(67, 18)
+        Me.lblCot.Size = New System.Drawing.Size(216, 18)
         Me.lblCot.TabIndex = 156
-        Me.lblCot.Text = "Artículos:"
+        Me.lblCot.Text = "Catálogo de Número de Artículos:"
         '
         'lblModelo
         '
@@ -601,42 +601,6 @@ Partial Class FrmCotizadorLIMS
         Me.DGCotizaciones.Size = New System.Drawing.Size(1120, 225)
         Me.DGCotizaciones.TabIndex = 155
         '
-        's
-        '
-        Me.s.HeaderText = "Seleccionar"
-        Me.s.Name = "s"
-        Me.s.Width = 80
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.Visible = False
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "MetAs_id"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 160
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Equipo"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 400
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Marca"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 200
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Modelo"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 200
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
@@ -657,6 +621,7 @@ Partial Class FrmCotizadorLIMS
         Me.Label2.Size = New System.Drawing.Size(61, 15)
         Me.Label2.TabIndex = 166
         Me.Label2.Text = "Parametro"
+        Me.Label2.Visible = False
         '
         'Label26
         '
@@ -702,6 +667,42 @@ Partial Class FrmCotizadorLIMS
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 143
         Me.PictureBox5.TabStop = False
+        '
+        's
+        '
+        Me.s.HeaderText = "Seleccionar"
+        Me.s.Name = "s"
+        Me.s.Width = 80
+        '
+        'ID
+        '
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.Visible = False
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Número de Artículo (SKU)"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 160
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Descripción"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 400
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Marca/Fabricante"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 200
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Modelo"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 200
         '
         'FrmCotizadorLIMS
         '
