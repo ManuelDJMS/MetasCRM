@@ -61,7 +61,6 @@ Partial Class FrmCotizadorLIMS
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DgAgregar = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btCotizacion = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtMarca = New System.Windows.Forms.TextBox()
@@ -72,18 +71,20 @@ Partial Class FrmCotizadorLIMS
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.s = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.Tab2018.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -119,6 +120,7 @@ Partial Class FrmCotizadorLIMS
         Me.Tab2018.Controls.Add(Me.PanelCot)
         Me.Tab2018.Controls.Add(Me.Panel5)
         Me.Tab2018.Controls.Add(Me.PanelNormal)
+        Me.Tab2018.Controls.Add(Me.DgAgregar)
         Me.Tab2018.Controls.Add(Me.btCotizacion)
         Me.Tab2018.Controls.Add(Me.Label3)
         Me.Tab2018.Controls.Add(Me.txtMarca)
@@ -336,7 +338,6 @@ Partial Class FrmCotizadorLIMS
         Me.PanelNormal.Controls.Add(Me.TextCorreo)
         Me.PanelNormal.Controls.Add(Me.Label5)
         Me.PanelNormal.Controls.Add(Me.DGEmpresas)
-        Me.PanelNormal.Controls.Add(Me.DgAgregar)
         Me.PanelNormal.Location = New System.Drawing.Point(408, 91)
         Me.PanelNormal.Name = "PanelNormal"
         Me.PanelNormal.Size = New System.Drawing.Size(726, 243)
@@ -410,7 +411,7 @@ Partial Class FrmCotizadorLIMS
         Me.DGEmpresas.Name = "DGEmpresas"
         Me.DGEmpresas.ReadOnly = True
         Me.DGEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGEmpresas.Size = New System.Drawing.Size(691, 204)
+        Me.DGEmpresas.Size = New System.Drawing.Size(691, 119)
         Me.DGEmpresas.TabIndex = 154
         '
         'Column1
@@ -477,18 +478,11 @@ Partial Class FrmCotizadorLIMS
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgAgregar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DgAgregar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgAgregar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4})
-        Me.DgAgregar.Location = New System.Drawing.Point(424, 163)
+        Me.DgAgregar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.Column9})
+        Me.DgAgregar.Location = New System.Drawing.Point(17, 525)
         Me.DgAgregar.Name = "DgAgregar"
-        Me.DgAgregar.Size = New System.Drawing.Size(145, 141)
+        Me.DgAgregar.Size = New System.Drawing.Size(433, 77)
         Me.DgAgregar.TabIndex = 182
-        Me.DgAgregar.Visible = False
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Modelo"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 200
         '
         'btCotizacion
         '
@@ -598,8 +592,44 @@ Partial Class FrmCotizadorLIMS
         Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s, Me.ID, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 390)
         Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.Size = New System.Drawing.Size(1120, 225)
+        Me.DGCotizaciones.Size = New System.Drawing.Size(1120, 102)
         Me.DGCotizaciones.TabIndex = 155
+        '
+        's
+        '
+        Me.s.HeaderText = "Seleccionar"
+        Me.s.Name = "s"
+        Me.s.Width = 80
+        '
+        'ID
+        '
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.Visible = False
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Número de Artículo (SKU)"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 160
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Descripción"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 400
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Marca/Fabricante"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 200
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Modelo"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 200
         '
         'Panel2
         '
@@ -668,41 +698,16 @@ Partial Class FrmCotizadorLIMS
         Me.PictureBox5.TabIndex = 143
         Me.PictureBox5.TabStop = False
         '
-        's
+        'DataGridViewTextBoxColumn4
         '
-        Me.s.HeaderText = "Seleccionar"
-        Me.s.Name = "s"
-        Me.s.Width = 80
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 200
         '
-        'ID
+        'Column9
         '
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.Visible = False
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Número de Artículo (SKU)"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 160
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Descripción"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 400
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Marca/Fabricante"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 200
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Modelo"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 200
+        Me.Column9.HeaderText = "Servicio"
+        Me.Column9.Name = "Column9"
         '
         'FrmCotizadorLIMS
         '
@@ -788,7 +793,6 @@ Partial Class FrmCotizadorLIMS
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents DgAgregar As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents TextArticulo As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents s As DataGridViewCheckBoxColumn
@@ -797,4 +801,6 @@ Partial Class FrmCotizadorLIMS
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class
