@@ -22,9 +22,16 @@ Partial Class frmEdicionCot2018_2019
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEdicionCot2018_2019))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DGDetalles = New System.Windows.Forms.DataGridView()
+        Me.DGCopia = New System.Windows.Forms.DataGridView()
+        Me.DGEquipos = New System.Windows.Forms.DataGridView()
+        Me.DGServicios = New System.Windows.Forms.DataGridView()
         Me.TextTotal = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.TextSubtotal = New System.Windows.Forms.TextBox()
@@ -34,6 +41,18 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.DGCotizaciones = New System.Windows.Forms.DataGridView()
+        Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.equipoDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.txtReferencia = New System.Windows.Forms.TextBox()
         Me.CboContabilizar = New System.Windows.Forms.ComboBox()
@@ -92,22 +111,30 @@ Partial Class frmEdicionCot2018_2019
         Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label38 = New System.Windows.Forms.Label()
-        Me.partida = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.equipoDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.modelo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.intervalo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtMaximo = New System.Windows.Forms.Label()
+        Me.g = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel1.SuspendLayout()
+        CType(Me.DGDetalles, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGCopia, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGEquipos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.DGCotizaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,11 +145,13 @@ Partial Class frmEdicionCot2018_2019
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.TextTotal)
         Me.Panel1.Controls.Add(Me.Label29)
         Me.Panel1.Controls.Add(Me.TextSubtotal)
@@ -135,13 +164,84 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel1.Controls.Add(Me.dgInicioNombres)
         Me.Panel1.Location = New System.Drawing.Point(8, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1220, 666)
+        Me.Panel1.Size = New System.Drawing.Size(1220, 676)
         Me.Panel1.TabIndex = 0
+        '
+        'DGDetalles
+        '
+        Me.DGDetalles.BackgroundColor = System.Drawing.Color.DimGray
+        Me.DGDetalles.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGDetalles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DGDetalles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDetalles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DGDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGDetalles.Location = New System.Drawing.Point(616, 12)
+        Me.DGDetalles.Name = "DGDetalles"
+        Me.DGDetalles.Size = New System.Drawing.Size(43, 37)
+        Me.DGDetalles.TabIndex = 187
+        Me.DGDetalles.Visible = False
+        '
+        'DGCopia
+        '
+        Me.DGCopia.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGCopia.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGCopia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DGCopia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCopia.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DGCopia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGCopia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.g, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn13, Me.Column4})
+        Me.DGCopia.Location = New System.Drawing.Point(6, 46)
+        Me.DGCopia.Name = "DGCopia"
+        Me.DGCopia.Size = New System.Drawing.Size(732, 250)
+        Me.DGCopia.TabIndex = 187
+        '
+        'DGEquipos
+        '
+        Me.DGEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGEquipos.Location = New System.Drawing.Point(575, 10)
+        Me.DGEquipos.Name = "DGEquipos"
+        Me.DGEquipos.Size = New System.Drawing.Size(35, 38)
+        Me.DGEquipos.TabIndex = 186
+        Me.DGEquipos.Visible = False
+        '
+        'DGServicios
+        '
+        Me.DGServicios.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGServicios.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGServicios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.DGServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.Column5, Me.DataGridViewTextBoxColumn3, Me.Column6})
+        Me.DGServicios.Location = New System.Drawing.Point(759, 46)
+        Me.DGServicios.Name = "DGServicios"
+        Me.DGServicios.Size = New System.Drawing.Size(443, 193)
+        Me.DGServicios.TabIndex = 186
         '
         'TextTotal
         '
         Me.TextTotal.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextTotal.Location = New System.Drawing.Point(1107, 640)
+        Me.TextTotal.Location = New System.Drawing.Point(1122, 645)
         Me.TextTotal.Name = "TextTotal"
         Me.TextTotal.Size = New System.Drawing.Size(88, 21)
         Me.TextTotal.TabIndex = 184
@@ -150,7 +250,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(1043, 642)
+        Me.Label29.Location = New System.Drawing.Point(1058, 647)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(40, 14)
         Me.Label29.TabIndex = 185
@@ -159,7 +259,7 @@ Partial Class frmEdicionCot2018_2019
         'TextSubtotal
         '
         Me.TextSubtotal.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextSubtotal.Location = New System.Drawing.Point(1107, 617)
+        Me.TextSubtotal.Location = New System.Drawing.Point(1122, 622)
         Me.TextSubtotal.Name = "TextSubtotal"
         Me.TextSubtotal.Size = New System.Drawing.Size(88, 21)
         Me.TextSubtotal.TabIndex = 182
@@ -168,7 +268,7 @@ Partial Class frmEdicionCot2018_2019
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(1043, 619)
+        Me.Label28.Location = New System.Drawing.Point(1058, 624)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(59, 14)
         Me.Label28.TabIndex = 183
@@ -220,20 +320,92 @@ Partial Class frmEdicionCot2018_2019
         Me.DGCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DGCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGCotizaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DGCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partida, Me.Column1, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.intervalo, Me.precioUnitario, Me.Column2, Me.Column3})
-        Me.DGCotizaciones.Location = New System.Drawing.Point(8, 366)
+        Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.partida, Me.Column1, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.intervalo, Me.precioUnitario, Me.Column2, Me.Column3, Me.s})
+        Me.DGCotizaciones.Location = New System.Drawing.Point(8, 370)
         Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.Size = New System.Drawing.Size(1202, 245)
+        Me.DGCotizaciones.Size = New System.Drawing.Size(1042, 239)
         Me.DGCotizaciones.TabIndex = 156
+        '
+        'partida
+        '
+        Me.partida.HeaderText = "Partida"
+        Me.partida.Name = "partida"
+        Me.partida.Width = 50
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Número de Artículo (SKU)"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 130
+        '
+        'codigoServicio
+        '
+        Me.codigoServicio.HeaderText = "Código Servicio"
+        Me.codigoServicio.Name = "codigoServicio"
+        Me.codigoServicio.Visible = False
+        Me.codigoServicio.Width = 80
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.Width = 70
+        '
+        'equipoDescripcion
+        '
+        Me.equipoDescripcion.HeaderText = "Descripción"
+        Me.equipoDescripcion.Name = "equipoDescripcion"
+        Me.equipoDescripcion.Width = 200
+        '
+        'marca
+        '
+        Me.marca.HeaderText = "Marca/Fabricante"
+        Me.marca.Name = "marca"
+        Me.marca.Width = 130
+        '
+        'modelo
+        '
+        Me.modelo.HeaderText = "Modelo"
+        Me.modelo.Name = "modelo"
+        Me.modelo.Width = 90
+        '
+        'intervalo
+        '
+        Me.intervalo.HeaderText = "Intervalo"
+        Me.intervalo.Name = "intervalo"
+        Me.intervalo.Visible = False
+        '
+        'precioUnitario
+        '
+        Me.precioUnitario.HeaderText = "Precio"
+        Me.precioUnitario.Name = "precioUnitario"
+        Me.precioUnitario.Width = 70
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Cantidad Real"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 80
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "ID"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Visible = False
+        '
+        's
+        '
+        Me.s.HeaderText = "Añadir Servicio"
+        Me.s.Name = "s"
         '
         'Panel5
         '
@@ -842,7 +1014,10 @@ Partial Class frmEdicionCot2018_2019
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.LightGray
+        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Controls.Add(Me.DGEquipos)
         Me.Panel7.Controls.Add(Me.btGuardarInf)
+        Me.Panel7.Controls.Add(Me.DGDetalles)
         Me.Panel7.Controls.Add(Me.Label36)
         Me.Panel7.Controls.Add(Me.PictureBox1)
         Me.Panel7.Controls.Add(Me.Label38)
@@ -850,6 +1025,20 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(1220, 56)
         Me.Panel7.TabIndex = 160
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(865, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(151, 33)
+        Me.Button1.TabIndex = 166
+        Me.Button1.Text = "Activar Servicios"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'btGuardarInf
         '
@@ -864,6 +1053,7 @@ Partial Class frmEdicionCot2018_2019
         Me.btGuardarInf.TabIndex = 166
         Me.btGuardarInf.Text = "Guardar Cotización"
         Me.btGuardarInf.UseVisualStyleBackColor = False
+        Me.btGuardarInf.Visible = False
         '
         'Label36
         '
@@ -898,66 +1088,111 @@ Partial Class frmEdicionCot2018_2019
         Me.Label38.TabIndex = 152
         Me.Label38.Text = "Cotización"
         '
-        'partida
+        'GroupBox1
         '
-        Me.partida.HeaderText = "Partida"
-        Me.partida.Name = "partida"
-        Me.partida.Width = 50
+        Me.GroupBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBox1.Controls.Add(Me.DGCopia)
+        Me.GroupBox1.Controls.Add(Me.DGServicios)
+        Me.GroupBox1.Controls.Add(Me.Label32)
+        Me.GroupBox1.Controls.Add(Me.Label31)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 370)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(1202, 251)
+        Me.GroupBox1.TabIndex = 188
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Visible = False
         '
-        'Column1
+        'Label31
         '
-        Me.Column1.HeaderText = "Número de Artículo (SKU)"
-        Me.Column1.Name = "Column1"
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.White
+        Me.Label31.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label31.Location = New System.Drawing.Point(380, 29)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(358, 14)
+        Me.Label31.TabIndex = 140
+        Me.Label31.Text = "Selecciona las casillas para agregar servicios a las partidas."
         '
-        'codigoServicio
+        'Label32
         '
-        Me.codigoServicio.HeaderText = "Código Servicio"
-        Me.codigoServicio.Name = "codigoServicio"
-        Me.codigoServicio.Width = 80
+        Me.Label32.AutoSize = True
+        Me.Label32.BackColor = System.Drawing.Color.White
+        Me.Label32.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.Green
+        Me.Label32.Location = New System.Drawing.Point(7, 16)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(164, 18)
+        Me.Label32.TabIndex = 140
+        Me.Label32.Text = "Resumen de la cotización"
         '
-        'cantidad
+        'DataGridViewTextBoxColumn2
         '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.Width = 55
+        Me.DataGridViewTextBoxColumn2.HeaderText = "idListaDetalle"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'equipoDescripcion
+        'Column5
         '
-        Me.equipoDescripcion.HeaderText = "Descripción"
-        Me.equipoDescripcion.Name = "equipoDescripcion"
-        Me.equipoDescripcion.Width = 250
+        Me.Column5.HeaderText = "EquipID"
+        Me.Column5.Name = "Column5"
         '
-        'marca
+        'DataGridViewTextBoxColumn3
         '
-        Me.marca.HeaderText = "Marca/Fabricante"
-        Me.marca.Name = "marca"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "idServicio"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'modelo
+        'Column6
         '
-        Me.modelo.HeaderText = "Modelo"
-        Me.modelo.Name = "modelo"
+        Me.Column6.HeaderText = "Servicio"
+        Me.Column6.Name = "Column6"
         '
-        'intervalo
+        'txtMaximo
         '
-        Me.intervalo.HeaderText = "Intervalo"
-        Me.intervalo.Name = "intervalo"
-        Me.intervalo.Width = 250
+        Me.txtMaximo.AutoSize = True
+        Me.txtMaximo.Cursor = System.Windows.Forms.Cursors.No
+        Me.txtMaximo.Font = New System.Drawing.Font("Calibri Light", 10.0!)
+        Me.txtMaximo.ForeColor = System.Drawing.SystemColors.Menu
+        Me.txtMaximo.Location = New System.Drawing.Point(715, 9)
+        Me.txtMaximo.Name = "txtMaximo"
+        Me.txtMaximo.Size = New System.Drawing.Size(38, 17)
+        Me.txtMaximo.TabIndex = 163
+        Me.txtMaximo.Text = "texto"
+        Me.txtMaximo.Visible = False
         '
-        'precioUnitario
+        'g
         '
-        Me.precioUnitario.HeaderText = "Precio"
-        Me.precioUnitario.Name = "precioUnitario"
-        Me.precioUnitario.Width = 70
+        Me.g.HeaderText = "idPartidaDetalle"
+        Me.g.Name = "g"
+        Me.g.Width = 95
         '
-        'Column2
+        'DataGridViewTextBoxColumn7
         '
-        Me.Column2.HeaderText = "Cantidad Real"
-        Me.Column2.Name = "Column2"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Descripción"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Width = 200
         '
-        'Column3
+        'DataGridViewTextBoxColumn8
         '
-        Me.Column3.HeaderText = "ID"
-        Me.Column3.Name = "Column3"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Marca/Fabricante"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Width = 120
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 120
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.HeaderText = "IdArticulo"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = ""
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 40
         '
         'frmEdicionCot2018_2019
         '
@@ -969,6 +1204,7 @@ Partial Class frmEdicionCot2018_2019
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.btMinimizar)
+        Me.Controls.Add(Me.txtMaximo)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Panel1)
@@ -979,6 +1215,10 @@ Partial Class frmEdicionCot2018_2019
         Me.Text = "Cotización 2018"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DGDetalles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGCopia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGEquipos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel6.ResumeLayout(False)
@@ -994,6 +1234,8 @@ Partial Class frmEdicionCot2018_2019
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1071,6 +1313,10 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents Label29 As Label
     Friend WithEvents TextSubtotal As TextBox
     Friend WithEvents Label28 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents DGServicios As DataGridView
+    Friend WithEvents DGCopia As DataGridView
+    Friend WithEvents DGEquipos As DataGridView
     Friend WithEvents partida As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents codigoServicio As DataGridViewTextBoxColumn
@@ -1082,4 +1328,20 @@ Partial Class frmEdicionCot2018_2019
     Friend WithEvents precioUnitario As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents s As DataGridViewCheckBoxColumn
+    Friend WithEvents DGDetalles As DataGridView
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents txtMaximo As Label
+    Friend WithEvents g As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewCheckBoxColumn
 End Class

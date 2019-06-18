@@ -107,7 +107,6 @@ Public Class FrmCotizadorLIMS
     Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
         If e.ColumnIndex = DGCotizaciones.Columns.Item("s").Index Then
             DgAgregar.Rows.Add(DGCotizaciones.Rows(e.RowIndex).Cells(1).Value)
-
         End If
     End Sub
 
@@ -261,6 +260,7 @@ Public Class FrmCotizadorLIMS
             Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TabConsulta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabConsulta.SelectedIndexChanged
         If TabConsulta.SelectedTab Is TabPage1 Then
             MetodoMetasCotizador()
@@ -554,4 +554,20 @@ Public Class FrmCotizadorLIMS
             Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
         End Try
     End Sub
+=======
+
+    'Private Sub DGCotizaciones_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellClick
+    '    If e.ColumnIndex = 0 Then
+    '        For Each fila In DGCotizaciones.Rows
+    '            fila.Cells(21).Value = fila.Cells(15).Value * fila.Cells(20).Value
+    '            If Convert.ToBoolean(fila.Cells(0).Value) = True Then
+    '                fila.Cells(0).Value = False
+    '            End If
+    '            If Convert.ToBoolean(fila.Cells(0).Value) = True Then
+    '                MsgBox(fila.Cells(0).Value)
+    '            End If
+    '        Next
+    '    End If
+    'End Sub
+>>>>>>> 726fce7ccb8b2ca408ceb948528bd47c58749607
 End Class

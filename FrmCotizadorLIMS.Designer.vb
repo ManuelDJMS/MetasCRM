@@ -85,6 +85,7 @@ Partial Class FrmCotizadorLIMS
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgCot = New System.Windows.Forms.DataGridView()
         Me.NumCot = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -135,6 +136,9 @@ Partial Class FrmCotizadorLIMS
         Me.Label28 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+=======
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+>>>>>>> 726fce7ccb8b2ca408ceb948528bd47c58749607
         Me.TabConsulta.SuspendLayout()
         Me.Tab2018.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -176,6 +180,7 @@ Partial Class FrmCotizadorLIMS
         Me.Tab2018.Controls.Add(Me.PanelCot)
         Me.Tab2018.Controls.Add(Me.Panel5)
         Me.Tab2018.Controls.Add(Me.PanelNormal)
+        Me.Tab2018.Controls.Add(Me.DgAgregar)
         Me.Tab2018.Controls.Add(Me.btCotizacion)
         Me.Tab2018.Controls.Add(Me.Label3)
         Me.Tab2018.Controls.Add(Me.txtMarca)
@@ -393,7 +398,6 @@ Partial Class FrmCotizadorLIMS
         Me.PanelNormal.Controls.Add(Me.TextCorreo)
         Me.PanelNormal.Controls.Add(Me.Label5)
         Me.PanelNormal.Controls.Add(Me.DGEmpresas)
-        Me.PanelNormal.Controls.Add(Me.DgAgregar)
         Me.PanelNormal.Location = New System.Drawing.Point(408, 91)
         Me.PanelNormal.Name = "PanelNormal"
         Me.PanelNormal.Size = New System.Drawing.Size(726, 243)
@@ -467,7 +471,7 @@ Partial Class FrmCotizadorLIMS
         Me.DGEmpresas.Name = "DGEmpresas"
         Me.DGEmpresas.ReadOnly = True
         Me.DGEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGEmpresas.Size = New System.Drawing.Size(691, 204)
+        Me.DGEmpresas.Size = New System.Drawing.Size(691, 119)
         Me.DGEmpresas.TabIndex = 154
         '
         'Column1
@@ -535,9 +539,9 @@ Partial Class FrmCotizadorLIMS
         Me.DgAgregar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle39
         Me.DgAgregar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgAgregar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4})
-        Me.DgAgregar.Location = New System.Drawing.Point(424, 163)
+        Me.DgAgregar.Location = New System.Drawing.Point(120, 528)
         Me.DgAgregar.Name = "DgAgregar"
-        Me.DgAgregar.Size = New System.Drawing.Size(145, 141)
+        Me.DgAgregar.Size = New System.Drawing.Size(261, 77)
         Me.DgAgregar.TabIndex = 182
         Me.DgAgregar.Visible = False
         '
@@ -655,7 +659,7 @@ Partial Class FrmCotizadorLIMS
         Me.DGCotizaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s, Me.ID, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DGCotizaciones.Location = New System.Drawing.Point(14, 390)
         Me.DGCotizaciones.Name = "DGCotizaciones"
-        Me.DGCotizaciones.Size = New System.Drawing.Size(1120, 225)
+        Me.DGCotizaciones.Size = New System.Drawing.Size(1120, 215)
         Me.DGCotizaciones.TabIndex = 155
         '
         's
@@ -882,6 +886,7 @@ Partial Class FrmCotizadorLIMS
         '
         'Label8
         '
+<<<<<<< HEAD
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(891, 71)
@@ -1224,6 +1229,8 @@ Partial Class FrmCotizadorLIMS
         Me.Button2.Text = "Re-Imprimir Cotización"
         Me.Button2.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> 726fce7ccb8b2ca408ceb948528bd47c58749607
         'FrmCotizadorLIMS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
