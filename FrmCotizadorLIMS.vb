@@ -261,4 +261,297 @@ Public Class FrmCotizadorLIMS
             Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
         End Try
     End Sub
+    Private Sub TabConsulta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabConsulta.SelectedIndexChanged
+        If TabConsulta.SelectedTab Is TabPage1 Then
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone, x2.Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
+             inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+             on x2.Customerid=x3.CustomerId"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgEmpresa.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        End If
+    End Sub
+
+    Private Sub DgEmpresa_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgEmpresa.RowHeaderMouseClick
+        If dgCot.Rows.Count < 2 Then
+        Else
+            dgCot.Rows.RemoveAt(DGCotizaciones.CurrentRow.Index)
+            dgCot.Rows.Clear()
+        End If
+        empresa = Val(DGEmpresas.Rows(e.RowIndex).Cells(0).Value)
+        MetodoMetasCotizador()
+        comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+        R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa
+        comandoMetasCotizador.CommandText = R
+        lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+        While lectorMetasCotizador.Read()
+            dgCot.Rows.Add(lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(4), lectorMetasCotizador(8), lectorMetasCotizador(11), lectorMetasCotizador(5), lectorMetasCotizador(6), lectorMetasCotizador(7), lectorMetasCotizador(8), lectorMetasCotizador(10), lectorMetasCotizador(12), lectorMetasCotizador(14))
+        End While
+        lectorMetasCotizador.Close()
+        conexionMetasCotizador.Close()
+    End Sub
+
+    Private Sub TxtNombreE_TextChanged(sender As Object, e As EventArgs) Handles txtNombreE.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgEmpresa.Rows.Clear()
+            If dgEmpresa.Rows.Count < 2 Then
+            Else
+                dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
+            End If
+            R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
+                "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgEmpresa.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextDom_TextChanged(sender As Object, e As EventArgs) Handles TextDom.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgEmpresa.Rows.Clear()
+            If dgEmpresa.Rows.Count < 2 Then
+            Else
+                dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
+            End If
+            R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
+                "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgEmpresa.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextEmail_TextChanged(sender As Object, e As EventArgs) Handles TextEmail.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgEmpresa.Rows.Clear()
+            If dgEmpresa.Rows.Count < 2 Then
+            Else
+                dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
+            End If
+            R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
+                "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgEmpresa.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TxtCP_TextChanged(sender As Object, e As EventArgs) Handles txtCP.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgEmpresa.Rows.Clear()
+            If dgEmpresa.Rows.Count < 2 Then
+            Else
+                dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
+            End If
+            R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
+                "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgEmpresa.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextTel_TextChanged(sender As Object, e As EventArgs) Handles TextTel.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgEmpresa.Rows.Clear()
+            If dgEmpresa.Rows.Count < 2 Then
+            Else
+                dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
+            End If
+            R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
+                "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgEmpresa.Rows.Add(lectorMetasCotizador(0), lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(3), lectorMetasCotizador(4), lectorMetasCotizador(5), lectorMetasCotizador(6))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextSKU_TextChanged(sender As Object, e As EventArgs) Handles TextSKU.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgCot.Rows.Clear()
+            If dgCot.Rows.Count < 2 Then
+            Else
+                dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
+            End If
+            R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
+              " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
+              "Model like '" & TextModelo.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgCot.Rows.Add(lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(4), lectorMetasCotizador(8), lectorMetasCotizador(11), lectorMetasCotizador(5), lectorMetasCotizador(6), lectorMetasCotizador(7), lectorMetasCotizador(8), lectorMetasCotizador(10), lectorMetasCotizador(12), lectorMetasCotizador(14))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextDescripcion_TextChanged(sender As Object, e As EventArgs) Handles TextDescripcion.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgCot.Rows.Clear()
+            If dgCot.Rows.Count < 2 Then
+            Else
+                dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
+            End If
+            R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
+              " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
+              "Model like '" & TextModelo.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgCot.Rows.Add(lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(4), lectorMetasCotizador(8), lectorMetasCotizador(11), lectorMetasCotizador(5), lectorMetasCotizador(6), lectorMetasCotizador(7), lectorMetasCotizador(8), lectorMetasCotizador(10), lectorMetasCotizador(12), lectorMetasCotizador(14))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextMarca_TextChanged(sender As Object, e As EventArgs) Handles TextMarca.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgCot.Rows.Clear()
+            If dgCot.Rows.Count < 2 Then
+            Else
+                dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
+            End If
+            R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
+              " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
+              "Model like '" & TextModelo.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgCot.Rows.Add(lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(4), lectorMetasCotizador(8), lectorMetasCotizador(11), lectorMetasCotizador(5), lectorMetasCotizador(6), lectorMetasCotizador(7), lectorMetasCotizador(8), lectorMetasCotizador(10), lectorMetasCotizador(12), lectorMetasCotizador(14))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
+
+    Private Sub TextModelo_TextChanged(sender As Object, e As EventArgs) Handles TextModelo.TextChanged
+        Try
+            MetodoMetasCotizador()
+            comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+            dgCot.Rows.Clear()
+            If dgCot.Rows.Count < 2 Then
+            Else
+                dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
+            End If
+            R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
+              " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
+              "Model like '" & TextModelo.Text & "%'"
+            comandoMetasCotizador.CommandText = R
+            lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
+            While lectorMetasCotizador.Read()
+                dgCot.Rows.Add(lectorMetasCotizador(1), lectorMetasCotizador(2), lectorMetasCotizador(4), lectorMetasCotizador(8), lectorMetasCotizador(11), lectorMetasCotizador(5), lectorMetasCotizador(6), lectorMetasCotizador(7), lectorMetasCotizador(8), lectorMetasCotizador(10), lectorMetasCotizador(12), lectorMetasCotizador(14))
+            End While
+            lectorMetasCotizador.Close()
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del sistema.")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmCotizacion2018", "Error al buscar la empresa", Err.Number, cadena)
+        End Try
+    End Sub
 End Class
