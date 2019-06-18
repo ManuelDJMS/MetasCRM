@@ -38,7 +38,7 @@ Public Class Cotizaciones
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
         While lector.Read
-            frmEdicionCot2018_2019.DGAdicionales.Rows.Add(lector(0))
+            frmEdicionCot2018_2019.DGServicios.Rows.Add(lector(0))
         End While
         conexionMetasCotizador.Close()
         lector.Close()
@@ -68,7 +68,7 @@ Public Class Cotizaciones
                 For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
                     seleccionado = DGRes.Rows(i).Cells(4).Value
                     If seleccionado = True Then
-                        FrmCotizadorLIMS.DgAgregar.Rows.Add(txtEquipID.Text, DGRes.Rows(i).Cells(0).Value)
+                        frmEdicionCot2018_2019.DGServicios.Rows.Add(txtIDListaDetalle.Text, txtEquipID.Text, DGRes.Rows(i).Cells(0).Value, DGRes.Rows(i).Cells(1).Value)
                     End If
                 Next
                 'accion post

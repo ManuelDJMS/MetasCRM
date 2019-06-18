@@ -11,6 +11,9 @@ Public Class FrmAutorizarSolicitudes
     End Sub
 
     Public Sub agregar_a_Res()
+        'DGOportunidades = Tabla de cotizaciones
+        'DGContactos = Tabla de contactos
+        'DGRes = tabla de resultados
         Try
             For i = 0 To DGOportunidades.Rows.Count - 2
                 MetodoLIMS()
