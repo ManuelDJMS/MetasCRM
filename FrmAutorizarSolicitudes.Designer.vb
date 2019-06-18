@@ -211,9 +211,9 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGRes.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DGRes.Location = New System.Drawing.Point(14, 431)
+        Me.DGRes.Location = New System.Drawing.Point(14, 87)
         Me.DGRes.Name = "DGRes"
-        Me.DGRes.Size = New System.Drawing.Size(1109, 176)
+        Me.DGRes.Size = New System.Drawing.Size(1109, 520)
         Me.DGRes.TabIndex = 162
         '
         'DataGridViewTextBoxColumn1
@@ -380,6 +380,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGContactos.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DGContactos.Size = New System.Drawing.Size(1045, 146)
         Me.DGContactos.TabIndex = 160
+        Me.DGContactos.Visible = False
         '
         'DGOportunidades
         '
@@ -420,6 +421,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGOportunidades.RowsDefaultCellStyle = DataGridViewCellStyle13
         Me.DGOportunidades.Size = New System.Drawing.Size(1045, 133)
         Me.DGOportunidades.TabIndex = 160
+        Me.DGOportunidades.Visible = False
         '
         'Panel2
         '
