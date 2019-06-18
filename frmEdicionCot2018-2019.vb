@@ -170,20 +170,25 @@ Public Class frmEdicionCot2018_2019
         total = subtotal + iva
         TextSubtotal.Text = subtotal
             TextTotal.Text = total
+
+
+            DGCotizaciones.Visible = False
             consultaEquipos()
-            consultaGeneralDeDetalles()
+            Button1.PerformClick()
+            consultaGeneralDeDetalles(Val(txtMaximo.Text))
             agregar_a_Res()
             alternarColorColumnas(DGCotizaciones)
             alternarColorColumnas(DGCopia)
             alternarColorColumnas(DGServicios)
             alternarColorColumnas(DGEquipos)
             alternarColorColumnas(DGDetalles)
+
+
         Catch ex As Exception
         MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
         cadena = Err.Description
         cadena = cadena.Replace("'", "")
             Bitacora("frmEdicionCot2018-2019", "Error al cargar el formulario", Err.Number, cadena)
-
         End Try
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -215,33 +220,46 @@ Public Class frmEdicionCot2018_2019
         'agregar los ServiceID a las regillas-----------------------------------
 
 
-        'consultar ultima Cotizacion-----------------------------------------------------------------------------------------------
-        MetodoMetasCotizador()
-        Dim comandoo As New SqlCommand("select MAX(Numcot) from [Cotizaciones]", conexionMetasCotizador)
-        Dim lectora As SqlDataReader
-        lectora = comandoo.ExecuteReader
-        lectora.Read()
-        If ((lectora(0) Is DBNull.Value) OrElse (lectora(0) Is Nothing)) Then
-            ultimo = 1
-        Else
-            ultimo = lectora(0)
-        End If
-        lectora.Close()
-        conexionMetasCotizador.Close()
+        ''consultar ultima Cotizacion-----------------------------------------------------------------------------------------------
+        'MetodoMetasCotizador()
+        'Dim comandoo As New SqlCommand("select MAX(Numcot) from [Cotizaciones]", conexionMetasCotizador)
+        'Dim lectora As SqlDataReader
+        'lectora = comandoo.ExecuteReader
+        'lectora.Read()
+        'If ((lectora(0) Is DBNull.Value) OrElse (lectora(0) Is Nothing)) Then
+        '    ultimo = 1
+        'Else
+        '    ultimo = lectora(0)
+        'End If
+        'lectora.Close()
+        'conexionMetasCotizador.Close()
 
 
         ''consultar los ultimos detalles de la ultima cotizacion
-        'MetodoMetasCotizador()
-        'Dim com As New SqlCommand("select [DetalleCotizaciones].idListaCotizacion from [DetalleCotizaciones] where [DetalleCotizaciones].NumCot=" & maximo & "", conexionMetasCotizador)
-        'Dim lect As SqlDataReader
-        'lect = com.ExecuteReader
-        'While lect.Read
-        '    DGAdicionales.Rows.Add(ultimo, lect(0))
-        'End While
-        'lect.Close()
-        'conexionMetasCotizador.Close()
+        ''MetodoMetasCotizador()
+        ''Dim com As New SqlCommand("select [DetalleCotizaciones].idListaCotizacion from [DetalleCotizaciones] where [DetalleCotizaciones].NumCot=" & maximo & "", conexionMetasCotizador)
+        ''Dim lect As SqlDataReader
+        ''lect = com.ExecuteReader
+        ''While lect.Read
+        ''    DGAdicionales.Rows.Add(ultimo, lect(0))
+        ''End While
+        ''lect.Close()
+        ''conexionMetasCotizador.Close()
+        ''
 
-        'Me.Dispose()
+
+        ''Procedimiento para guardar los detalles de servicios
+
+        For i = 0 To DGCotizaciones.Rows.Count - 2
+            MetodoMetasCotizador()
+            R = "insert into ServiciosEnCotizaciones (idListaCotizacion, idServicio) values (" & Val(DGServicios.Item(0, i).Value) & "," & Val(DGServicios.Item(2, i).Value) & ")"
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            comando.ExecuteNonQuery()
+            MsgBox("Cotización guardada correctamente", MsgBoxStyle.Information)
+            conexionMetasCotizador.Close()
+        Next i
+
+        Me.Dispose()
     End Sub
 
     Private Sub CboValidez_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboValidez.SelectedIndexChanged
@@ -385,9 +403,7 @@ Public Class frmEdicionCot2018_2019
     Private Sub DGCopia_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCopia.CellContentClick
 
         If e.ColumnIndex = DGCopia.Columns.Item("Column4").Index Then
-
             ' DGServicios.Rows.Add(DGCopia.Rows(e.RowIndex).Cells(0).Value)
-
             'MostrarServicios
             Dim Admin As New Cotizaciones
             Admin.txtEquipID.Text = DGCopia.Rows(e.RowIndex).Cells(4).Value
@@ -399,65 +415,50 @@ Public Class frmEdicionCot2018_2019
         End If
     End Sub
 
-
-
-
-
-
-
-
-
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
-        '''-------------------------------------ACTIVAR SERVICIOS-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        'MetodoMetasCotizador()
+        ''-------------------------------------ACTIVAR SERVICIOS-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        MetodoMetasCotizador()
 
-        'Dim R As String
-        'Dim comando As New SqlCommand("select MAX(Numcot) from [Cotizaciones]", conexionMetasCotizador)
-        'Dim lector As SqlDataReader
-        'lector = comando.ExecuteReader
-        'lector.Read()
-        'If ((lector(0) Is DBNull.Value) OrElse (lector(0) Is Nothing)) Then
-        '    maximo = 1
-        'Else
-        '    maximo = lector(0) + 1
-        'End If
+        Dim R As String
+        Dim comando As New SqlCommand("select MAX(Numcot) from [Cotizaciones]", conexionMetasCotizador)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        lector.Read()
+        If ((lector(0) Is DBNull.Value) OrElse (lector(0) Is Nothing)) Then
+            maximo = 1
+        Else
+            maximo = lector(0) + 1
+        End If
 
-        'lector.Close()
-        'comandoMetasCotizador = conexionMetasCotizador.CreateCommand
-        'fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
-        'fecharecepcion = Convert.ToDateTime(DTPHasta.Text).ToShortDateString
+        lector.Close()
+        comandoMetasCotizador = conexionMetasCotizador.CreateCommand
+        fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
+        fecharecepcion = Convert.ToDateTime(DTPHasta.Text).ToShortDateString
 
-        'R = "insert into Cotizaciones (NumCot, idContacto, Origen, idLugarCondicion, idCuandoCondicion, idModalidadCondicion, idTiempoEntregaCondicion, idPagoCondicion, idLeyendaCondicion,
-        'idValidezCondicion,idMonedaCondicion,idDocumentoCondicion,idModoCont,Referencia,FechaDesde,FechaHasta,Observaciones,idUsuarioCotizacion,Subtotal,IVA,Total,Creado)
-        '     values (" & maximo & "," & Val(txtCveContacto.Text) & ",'" & origen & "'," & Val(cboServicio.Tag) & "," & Val(Cbcuando.Tag) & "," & Val(CbModalidad.Tag) & "," & Val(CboTiempo.Tag) & "," &
-        '     Val(CCondPago.Tag) & "," & Val(CboLeyenda.Tag) & "," & Val(CboValidez.Tag) & "," & Val(CboMoneda.Tag) & "," & Val(ComboDocCond.Tag) & "," & Val(CboContabilizar.Tag) & ",'" &
-        '     txtReferencia.Text & "','" & fechaActual & "','" & fecharecepcion & "','" & txtObservaciones.Text & "'," & Val(txtCotizo2019.Text) & "," & subtotal & "," & iva & "," & total & ",0)"
-        'MsgBox(R)
-        'comandoMetasCotizador.CommandText = R
-        'comandoMetasCotizador.ExecuteNonQuery()
+        R = "insert into Cotizaciones (NumCot, idContacto, Origen, idLugarCondicion, idCuandoCondicion, idModalidadCondicion, idTiempoEntregaCondicion, idPagoCondicion, idLeyendaCondicion,
+        idValidezCondicion,idMonedaCondicion,idDocumentoCondicion,idModoCont,Referencia,FechaDesde,FechaHasta,Observaciones,idUsuarioCotizacion,Subtotal,IVA,Total,Creado)
+             values (" & maximo & "," & Val(txtCveContacto.Text) & ",'" & origen & "'," & Val(cboServicio.Tag) & "," & Val(Cbcuando.Tag) & "," & Val(CbModalidad.Tag) & "," & Val(CboTiempo.Tag) & "," &
+             Val(CCondPago.Tag) & "," & Val(CboLeyenda.Tag) & "," & Val(CboValidez.Tag) & "," & Val(CboMoneda.Tag) & "," & Val(ComboDocCond.Tag) & "," & Val(CboContabilizar.Tag) & ",'" &
+             txtReferencia.Text & "','" & fechaActual & "','" & fecharecepcion & "','" & txtObservaciones.Text & "'," & Val(txtCotizo2019.Text) & "," & subtotal & "," & iva & "," & total & ",0)"
+        MsgBox(R)
+        comandoMetasCotizador.CommandText = R
+        comandoMetasCotizador.ExecuteNonQuery()
 
-        'For i = 0 To DGCotizaciones.Rows.Count - 2
-        '    R = "insert into DetalleCotizaciones (NumCot,EquipId, PartidaNo,Cantidad, CantidadReal) values (" & maximo & "," & DGCotizaciones.Item(10, i).Value & "," & Val(DGCotizaciones.Item(0, i).Value) & ",
-        '        " & Val(DGCotizaciones.Item(3, i).Value) & "," & Val(DGCotizaciones.Item(9, i).Value) & ")"
-        '    MsgBox(R)
-        '    comandoMetasCotizador.CommandText = R
-        '    comandoMetasCotizador.ExecuteNonQuery()
-        'Next i
+        For i = 0 To DGCotizaciones.Rows.Count - 2
+            R = "insert into DetalleCotizaciones (NumCot,EquipId, PartidaNo,Cantidad, CantidadReal) values (" & maximo & "," & DGCotizaciones.Item(10, i).Value & "," & Val(DGCotizaciones.Item(0, i).Value) & ",
+                " & Val(DGCotizaciones.Item(3, i).Value) & "," & Val(DGCotizaciones.Item(9, i).Value) & ")"
+            MsgBox(R)
+            comandoMetasCotizador.CommandText = R
+            comandoMetasCotizador.ExecuteNonQuery()
+        Next i
 
-        'MsgBox("Guardado correctamente.", MsgBoxStyle.Information)
-        'FrmCotizadorLIMS.DgAgregar.Rows.Clear()
-        'empresa = 0
+        MsgBox("Guardado correctamente.", MsgBoxStyle.Information)
+        FrmCotizadorLIMS.DgAgregar.Rows.Clear()
+        empresa = 0
 
-
-        '''Consulta de los ID guardados
-        'MetodoLIMS()
-        'Dim comandos As New SqlCommand("select [DetalleCotizaciones].idListaCotizacion from [DetalleCotizaciones] where [DetalleCotizaciones].NumCot=" & maximo & "", conexionLIMS)
-        'Dim lectora As SqlDataReader
-        'lectora = comandos.ExecuteReader
-        'While lectora.Read
-        '    DGCopia.Rows.Add()
-        'End While
+        'MsgBox("Ultima Cot Generada: " & maximo)
+        txtMaximo.Text = maximo
 
 
         'Habilitar componentes
@@ -467,7 +468,6 @@ Public Class frmEdicionCot2018_2019
         DGServicios.Visible = True
         btGuardarInf.Visible = True
         DGCotizaciones.Visible = False
-
     End Sub
 
     Public Sub agregar_a_Res()
@@ -487,12 +487,12 @@ Public Class frmEdicionCot2018_2019
         End Try
     End Sub
 
-    Public Sub consultaGeneralDeDetalles()
+    Public Sub consultaGeneralDeDetalles(ByVal NumCot As Integer)
         Try                      ''''Consulta de algunos campos solamente
             MetodoMetasCotizador()
             'DGOportunidades.Rows.Clear()
             Dim R As String
-            R = "SELECT * FROM [MetasCotizador].[dbo].[DetalleCotizaciones]"
+            R = "SELECT * FROM [MetasCotizador].[dbo].[DetalleCotizaciones] where NumCot=" & NumCot & ""
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             comando.CommandType = CommandType.Text
             Dim da As New SqlDataAdapter(comando)
@@ -504,6 +504,7 @@ Public Class frmEdicionCot2018_2019
             MsgBox("Ocurrio un error")
         End Try
     End Sub
+
     Public Sub consultaEquipos()
         Try
             MetodoLIMS()
