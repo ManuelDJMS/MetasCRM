@@ -72,11 +72,12 @@ Partial Class FrmAutorizarSolicitudes
         Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DGContactos = New System.Windows.Forms.DataGridView()
         Me.DGOportunidades = New System.Windows.Forms.DataGridView()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.DGReal = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -87,10 +88,10 @@ Partial Class FrmAutorizarSolicitudes
         Me.t = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.txtNumeroDeCuentaB = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtNumeroDeCuentaB = New System.Windows.Forms.TextBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -147,7 +148,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,9 +211,9 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGRes.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DGRes.Location = New System.Drawing.Point(14, 85)
+        Me.DGRes.Location = New System.Drawing.Point(14, 431)
         Me.DGRes.Name = "DGRes"
-        Me.DGRes.Size = New System.Drawing.Size(1109, 522)
+        Me.DGRes.Size = New System.Drawing.Size(1109, 176)
         Me.DGRes.TabIndex = 162
         '
         'DataGridViewTextBoxColumn1
@@ -380,7 +380,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGContactos.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DGContactos.Size = New System.Drawing.Size(1045, 146)
         Me.DGContactos.TabIndex = 160
-        Me.DGContactos.Visible = False
         '
         'DGOportunidades
         '
@@ -421,17 +420,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGOportunidades.RowsDefaultCellStyle = DataGridViewCellStyle13
         Me.DGOportunidades.Size = New System.Drawing.Size(1045, 133)
         Me.DGOportunidades.TabIndex = 160
-        Me.DGOportunidades.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(311, 32)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 18)
-        Me.Label3.TabIndex = 155
-        Me.Label3.Text = "NumCot:"
         '
         'Panel2
         '
@@ -450,6 +438,14 @@ Partial Class FrmAutorizarSolicitudes
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1140, 66)
         Me.Panel2.TabIndex = 152
+        '
+        'dtp
+        '
+        Me.dtp.Location = New System.Drawing.Point(287, 6)
+        Me.dtp.Name = "dtp"
+        Me.dtp.Size = New System.Drawing.Size(230, 20)
+        Me.dtp.TabIndex = 167
+        Me.dtp.Visible = False
         '
         'Button1
         '
@@ -493,6 +489,16 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button2.TabIndex = 166
         Me.Button2.Text = "Actualizar"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(311, 32)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 18)
+        Me.Label3.TabIndex = 155
+        Me.Label3.Text = "NumCot:"
         '
         'DGReal
         '
@@ -595,6 +601,14 @@ Partial Class FrmAutorizarSolicitudes
         Me.Column7.HeaderText = "Generar"
         Me.Column7.Name = "Column7"
         '
+        'txtNumeroDeCuentaB
+        '
+        Me.txtNumeroDeCuentaB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNumeroDeCuentaB.Location = New System.Drawing.Point(380, 32)
+        Me.txtNumeroDeCuentaB.Name = "txtNumeroDeCuentaB"
+        Me.txtNumeroDeCuentaB.Size = New System.Drawing.Size(107, 20)
+        Me.txtNumeroDeCuentaB.TabIndex = 128
+        '
         'Label26
         '
         Me.Label26.AutoSize = True
@@ -627,14 +641,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label27.Size = New System.Drawing.Size(74, 15)
         Me.Label27.TabIndex = 152
         Me.Label27.Text = "Cotizaciones"
-        '
-        'txtNumeroDeCuentaB
-        '
-        Me.txtNumeroDeCuentaB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumeroDeCuentaB.Location = New System.Drawing.Point(380, 32)
-        Me.txtNumeroDeCuentaB.Name = "txtNumeroDeCuentaB"
-        Me.txtNumeroDeCuentaB.Size = New System.Drawing.Size(107, 20)
-        Me.txtNumeroDeCuentaB.TabIndex = 128
         '
         'TabPage1
         '
@@ -1242,14 +1248,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
-        '
-        'dtp
-        '
-        Me.dtp.Location = New System.Drawing.Point(287, 6)
-        Me.dtp.Name = "dtp"
-        Me.dtp.Size = New System.Drawing.Size(230, 20)
-        Me.dtp.TabIndex = 167
-        Me.dtp.Visible = False
         '
         'FrmAutorizarSolicitudes
         '

@@ -106,19 +106,7 @@ Public Class FrmCotizadorLIMS
 
     Private Sub DGCotizaciones_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGCotizaciones.CellContentClick
         If e.ColumnIndex = DGCotizaciones.Columns.Item("s").Index Then
-
-            'DgAgregar.Rows.Add(DGCotizaciones.Rows(e.RowIndex).Cells(1).Value)
-
-
-            ''Mostrar el emergente para los servicios
-            Dim Admin As New Cotizaciones
-            Admin.consultaServicios(DGCotizaciones.Rows(e.RowIndex).Cells(1).Value)
-
-            'Admin.txtEquipID.Text =
-            '    DGCotizaciones.Rows(e.RowIndex).Cells(1).Value
-            Admin.ShowDialog()
-
-
+            DgAgregar.Rows.Add(DGCotizaciones.Rows(e.RowIndex).Cells(1).Value)
         End If
     End Sub
 

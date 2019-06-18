@@ -28,6 +28,25 @@ Public Class Cotizaciones
         End Try
     End Sub
 
+
+    Public Sub consultaDetalleCotizaciones(ByVal numCot As Integer)
+        'Try
+        MetodoMetasCotizador()
+        Dim R As String
+        R = "select [DetalleCotizaciones].idListaCotizacion from [DetalleCotizaciones] where [DetalleCotizaciones].NumCot =" & numCot & ""
+        Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        While lector.Read
+            frmEdicionCot2018_2019.DGAdicionales.Rows.Add(lector(0))
+        End While
+        conexionMetasCotizador.Close()
+        lector.Close()
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Information)
+        'End Try
+    End Sub
+
     Private Sub btCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
         Dim seleccionado As Boolean
         Dim b As Boolean
