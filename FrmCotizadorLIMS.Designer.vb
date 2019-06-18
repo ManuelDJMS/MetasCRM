@@ -85,7 +85,6 @@ Partial Class FrmCotizadorLIMS
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgCot = New System.Windows.Forms.DataGridView()
         Me.NumCot = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -136,9 +135,7 @@ Partial Class FrmCotizadorLIMS
         Me.Label28 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
-=======
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
->>>>>>> 726fce7ccb8b2ca408ceb948528bd47c58749607
         Me.TabConsulta.SuspendLayout()
         Me.Tab2018.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -886,7 +883,6 @@ Partial Class FrmCotizadorLIMS
         '
         'Label8
         '
-<<<<<<< HEAD
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(891, 71)
@@ -1229,8 +1225,6 @@ Partial Class FrmCotizadorLIMS
         Me.Button2.Text = "Re-Imprimir Cotización"
         Me.Button2.UseVisualStyleBackColor = False
         '
-=======
->>>>>>> 726fce7ccb8b2ca408ceb948528bd47c58749607
         'FrmCotizadorLIMS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
