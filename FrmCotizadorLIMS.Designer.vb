@@ -801,6 +801,8 @@ Partial Class FrmCotizadorLIMS
         Me.dgCot.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumCot, Me.partida, Me.DataGridViewTextBoxColumn1, Me.codigoServicio, Me.cantidad, Me.equipoDescripcion, Me.marca, Me.modelo, Me.intervalo, Me.precioUnitario, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.dgCot.Location = New System.Drawing.Point(14, 372)
         Me.dgCot.Name = "dgCot"
+        Me.dgCot.ReadOnly = True
+        Me.dgCot.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgCot.Size = New System.Drawing.Size(1108, 245)
         Me.dgCot.TabIndex = 203
         '
@@ -808,69 +810,81 @@ Partial Class FrmCotizadorLIMS
         '
         Me.NumCot.HeaderText = "NumCot"
         Me.NumCot.Name = "NumCot"
+        Me.NumCot.ReadOnly = True
         Me.NumCot.Width = 80
         '
         'partida
         '
         Me.partida.HeaderText = "Partida"
         Me.partida.Name = "partida"
+        Me.partida.ReadOnly = True
         Me.partida.Width = 50
         '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.HeaderText = "Número de Artículo (SKU)"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'codigoServicio
         '
         Me.codigoServicio.HeaderText = "Código Servicio"
         Me.codigoServicio.Name = "codigoServicio"
+        Me.codigoServicio.ReadOnly = True
         Me.codigoServicio.Width = 80
         '
         'cantidad
         '
         Me.cantidad.HeaderText = "Cantidad"
         Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
         Me.cantidad.Width = 55
         '
         'equipoDescripcion
         '
         Me.equipoDescripcion.HeaderText = "Descripción"
         Me.equipoDescripcion.Name = "equipoDescripcion"
+        Me.equipoDescripcion.ReadOnly = True
         Me.equipoDescripcion.Width = 180
         '
         'marca
         '
         Me.marca.HeaderText = "Marca/Fabricante"
         Me.marca.Name = "marca"
+        Me.marca.ReadOnly = True
         '
         'modelo
         '
         Me.modelo.HeaderText = "Modelo"
         Me.modelo.Name = "modelo"
+        Me.modelo.ReadOnly = True
         '
         'intervalo
         '
         Me.intervalo.HeaderText = "Intervalo"
         Me.intervalo.Name = "intervalo"
+        Me.intervalo.ReadOnly = True
         Me.intervalo.Width = 200
         '
         'precioUnitario
         '
         Me.precioUnitario.HeaderText = "Precio"
         Me.precioUnitario.Name = "precioUnitario"
+        Me.precioUnitario.ReadOnly = True
         Me.precioUnitario.Width = 70
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.HeaderText = "ID"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 80
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.HeaderText = "Orden de Venta"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'TextTel
         '
