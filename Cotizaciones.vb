@@ -4,7 +4,7 @@ Imports System.Data.OleDb
 
 Public Class Cotizaciones
     Private Sub Cotizaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        alternarColorColumnas(DGRes)
     End Sub
 
     Public Sub consultaServicios(ByVal EquipID As Integer)
@@ -26,6 +26,14 @@ Public Class Cotizaciones
         Catch ex As Exception
             MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Information)
         End Try
+        For n As Integer = DGRes.Rows.Count - 1 To 0 Step -1
+
+            Dim row As DataGridViewRow = DGRes.Rows(n)
+
+            If (row.Cells(1).Value Is DBNull.Value) Then
+                DGRes.Rows.Remove(row)
+            End If
+        Next
     End Sub
 
 
@@ -78,4 +86,17 @@ Public Class Cotizaciones
             End If
         End If
     End Sub
+
+    Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
+        Try
+            With DGV
+                .RowsDefaultCellStyle.BackColor = Color.WhiteSmoke
+                .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            End With
+        Catch ex As Exception
+            MsgBox("Ocurrio un error en el diseño de la tabla, puedes llamar al administrador de sistemas.", MsgBoxStyle.Exclamation)
+        End Try
+    End Sub
+
+
 End Class
