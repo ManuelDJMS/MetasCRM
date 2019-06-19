@@ -216,7 +216,7 @@ Public Class frmEdicionCot2018_2019
     End Sub
 
     Private Sub btGuardarInf_Click(sender As Object, e As EventArgs) Handles btGuardarInf.Click
-        Dim ultimo As Integer
+        'Dim ultimo As Integer
         'agregar los ServiceID a las regillas-----------------------------------
 
 
