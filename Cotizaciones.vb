@@ -26,15 +26,23 @@ Public Class Cotizaciones
         Catch ex As Exception
             MsgBox("Ocurrio un error en la lectura de datos.", MsgBoxStyle.Information)
         End Try
-        For n As Integer = DGRes.Rows.Count - 1 To 0 Step -1
+        'For n As Integer = DGRes.Rows.Count - 1 To 0 Step -1
 
-            Dim row As DataGridViewRow = DGRes.Rows(n)
+        '    Dim row As DataGridViewRow = DGRes.Rows(n)
 
-            If (row.Cells(1).Value Is DBNull.Value) Then
-                DGRes.Rows.Remove(row)
-            End If
-        Next
+        '    If (row.Cells(1).Value Is DBNull.Value) Then
+        '        DGRes.Rows.Remove(row)
+        '    End If
+        'Next
     End Sub
+
+    'Private Sub _DGV1_RowValidated(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGRes.RowValidated
+    '    If (DGRes.RowCount > 0) Then
+    '        If DGRes.Rows(e.RowIndex).Cells(0).Value() = String.Empty Then
+    '            DGRes.Rows.Remove(DGRes.CurrentRow)
+    '        End If
+    '    End If
+    'End Sub
 
 
     Public Sub consultaDetalleCotizaciones(ByVal numCot As Integer)
