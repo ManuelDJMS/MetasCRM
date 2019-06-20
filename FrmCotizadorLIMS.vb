@@ -4,9 +4,6 @@ Public Class FrmCotizadorLIMS
     Dim R As String
     Dim clave1 As String
     Private Sub FrmCotizadorLIMS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' If empresa = 0 Then
-        'Label20.Visible = False
-        '    Label21.Visible = False
         MetodoLIMS()
         comandoLIMS = conexionLIMS.CreateCommand
         R = "select CustomerId, concat(FirstName, ' ' , MiddleName) as Nombre, LastName,  Organization, KeyFiscal, Email, Phone FROM SetupCustomerDetails"
@@ -16,12 +13,6 @@ Public Class FrmCotizadorLIMS
             DGEmpresas.Rows.Add(lectorLIMS(0), lectorLIMS(1), lectorLIMS(2), lectorLIMS(3), lectorLIMS(4), lectorLIMS(5), lectorLIMS(6))
         End While
         lectorLIMS.Close()
-        'Else
-        '    PanelNormal.Enabled = False
-        '    consultaID(empresa)
-        'End If
-
-
         R = "SELECT CustomerId, SetUpEquipment.EquipId, ItemNumber, EquipmentName, Mfr, Model from  SetupCustomerEquipmentMapping inner join SetUpEquipment on 
                  SetupCustomerEquipmentMapping.EquipId=SetUpEquipment.EquipId"
         comandoLIMS.CommandText = R
