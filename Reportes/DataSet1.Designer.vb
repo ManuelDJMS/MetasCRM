@@ -2219,6 +2219,12 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function FindByNumCot(ByVal NumCot As Integer) As cotLIMS3Row
+            Return CType(Me.Rows.Find(New Object() {NumCot}),cotLIMS3Row)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As cotLIMS3DataTable = CType(MyBase.Clone,cotLIMS3DataTable)
             cln.InitVars
@@ -2326,7 +2332,9 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columndomFac)
             Me.columnTaxIDNo = New Global.System.Data.DataColumn("TaxIDNo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTaxIDNo)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNumCot}, true))
             Me.columnNumCot.AllowDBNull = false
+            Me.columnNumCot.Unique = true
             Me.columnFechaDesde.MaxLength = 50
             Me.columnFechaHasta.MaxLength = 50
             Me.columnNombre.ReadOnly = true
@@ -2343,8 +2351,7 @@ Partial Public Class DataSet1
             Me.columnArticulo.MaxLength = 2147483647
             Me.columnServiceDescription.MaxLength = 2147483647
             Me.columnsub.ReadOnly = true
-            Me.columnidUsuarioAdministrador.AllowDBNull = false
-            Me.columnNombre1.MaxLength = 50
+            Me.columnNombre1.MaxLength = 80
             Me.columnlugar.MaxLength = 70
             Me.columnmoneda.MaxLength = 120
             Me.columnpago.MaxLength = 300
@@ -4486,7 +4493,12 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property idUsuarioAdministrador() As Integer
             Get
-                Return CType(Me(Me.tablecotLIMS3.idUsuarioAdministradorColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tablecotLIMS3.idUsuarioAdministradorColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'idUsuarioAdministrador' de la tabla 'cotLIMS3' es DBNull."& _ 
+                            "", e)
+                End Try
             End Get
             Set
                 Me(Me.tablecotLIMS3.idUsuarioAdministradorColumn) = value
@@ -4824,6 +4836,18 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub Set_subNull()
             Me(Me.tablecotLIMS3.subColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsidUsuarioAdministradorNull() As Boolean
+            Return Me.IsNull(Me.tablecotLIMS3.idUsuarioAdministradorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetidUsuarioAdministradorNull()
+            Me(Me.tablecotLIMS3.idUsuarioAdministradorColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

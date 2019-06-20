@@ -14,7 +14,7 @@ Public Class cotLIMSAct
         Dim cve As Integer
         Dim R As String
         'Dim name, mfr, model, service, price, subt As String
-        R = "Select [Cotizaciones].NumCot,FechaDesde,FechaHasta,[FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, [Department],[Phone],[Email],
+        R = "Select [Cotizaciones].NumCot,FechaDesde,FechaHasta,[FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, [Department],[Phone],[SetupCustomerDetails].[Email],
 				[CompanyName], [ContAddress1] + ' '+  [ContCity] +', '+ [ContState]+'. ' + [ContCountry] +'. CP '+ [ContZip] AS DomCont, PartidaNo, Cantidad,[DetalleCotizaciones].[EquipId],
 				[SetUpEquipment].[EquipmentName]+', '+[Mfr] +', '+[Model] AS Articulo,[ServiceDescription],[SetupEquipmentServiceMapping].[Price], [idUsuarioAdministrador], [Usuarios].[Nombre], [LugarCondicion].[Descripcon] AS lugar, [MonedaCondicion].[Descripcion] AS moneda, 
 				[PagoCondicion].[Descripcion] AS pago, [TiemposEntregaCondicion].[Descripcion] AS entrega, [ModalidadCondicion].[Descripcion] AS modalidad,

@@ -244,7 +244,7 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ECliente" msprop:Generator_TableClassName="EClienteDataTable" msprop:Generator_TableVarName="tableECliente" msprop:Generator_RowChangedName="EClienteRowChanged" msprop:Generator_TablePropName="ECliente" msprop:Generator_RowDeletingName="EClienteRowDeleting" msprop:Generator_RowChangingName="EClienteRowChanging" msprop:Generator_RowEvHandlerName="EClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="EClienteRowDeleted" msprop:Generator_RowClassName="EClienteRow" msprop:Generator_UserTableName="ECliente" msprop:Generator_RowEvArgName="EClienteRowChangeEvent">
+        <xs:element name="ECliente" msprop:Generator_TableClassName="EClienteDataTable" msprop:Generator_TableVarName="tableECliente" msprop:Generator_TablePropName="ECliente" msprop:Generator_RowDeletingName="EClienteRowDeleting" msprop:Generator_RowChangingName="EClienteRowChanging" msprop:Generator_RowEvHandlerName="EClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="EClienteRowDeleted" msprop:Generator_UserTableName="ECliente" msprop:Generator_RowChangedName="EClienteRowChanged" msprop:Generator_RowEvArgName="EClienteRowChangeEvent" msprop:Generator_RowClassName="EClienteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
@@ -467,7 +467,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cotLIMS" msprop:Generator_TableClassName="cotLIMSDataTable" msprop:Generator_TableVarName="tablecotLIMS" msprop:Generator_TablePropName="cotLIMS" msprop:Generator_RowDeletingName="cotLIMSRowDeleting" msprop:Generator_RowChangingName="cotLIMSRowChanging" msprop:Generator_RowEvHandlerName="cotLIMSRowChangeEventHandler" msprop:Generator_RowDeletedName="cotLIMSRowDeleted" msprop:Generator_UserTableName="cotLIMS" msprop:Generator_RowChangedName="cotLIMSRowChanged" msprop:Generator_RowEvArgName="cotLIMSRowChangeEvent" msprop:Generator_RowClassName="cotLIMSRow">
+        <xs:element name="cotLIMS" msprop:Generator_TableClassName="cotLIMSDataTable" msprop:Generator_TableVarName="tablecotLIMS" msprop:Generator_RowChangedName="cotLIMSRowChanged" msprop:Generator_TablePropName="cotLIMS" msprop:Generator_RowDeletingName="cotLIMSRowDeleting" msprop:Generator_RowChangingName="cotLIMSRowChanging" msprop:Generator_RowEvHandlerName="cotLIMSRowChangeEventHandler" msprop:Generator_RowDeletedName="cotLIMSRowDeleted" msprop:Generator_RowClassName="cotLIMSRow" msprop:Generator_UserTableName="cotLIMS" msprop:Generator_RowEvArgName="cotLIMSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NumCot" msprop:Generator_ColumnVarNameInTable="columnNumCot" msprop:Generator_ColumnPropNameInRow="NumCot" msprop:Generator_ColumnPropNameInTable="NumCotColumn" msprop:Generator_UserColumnName="NumCot" type="xs:int" />
@@ -725,11 +725,11 @@
               </xs:element>
               <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
               <xs:element name="sub" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsub" msprop:Generator_ColumnPropNameInRow="_sub" msprop:Generator_ColumnPropNameInTable="subColumn" msprop:Generator_UserColumnName="sub" type="xs:decimal" minOccurs="0" />
-              <xs:element name="idUsuarioAdministrador" msprop:Generator_ColumnVarNameInTable="columnidUsuarioAdministrador" msprop:Generator_ColumnPropNameInRow="idUsuarioAdministrador" msprop:Generator_ColumnPropNameInTable="idUsuarioAdministradorColumn" msprop:Generator_UserColumnName="idUsuarioAdministrador" type="xs:int" />
+              <xs:element name="idUsuarioAdministrador" msprop:Generator_ColumnVarNameInTable="columnidUsuarioAdministrador" msprop:Generator_ColumnPropNameInRow="idUsuarioAdministrador" msprop:Generator_ColumnPropNameInTable="idUsuarioAdministradorColumn" msprop:Generator_UserColumnName="idUsuarioAdministrador" type="xs:int" minOccurs="0" />
               <xs:element name="Nombre1" msprop:Generator_ColumnVarNameInTable="columnNombre1" msprop:Generator_ColumnPropNameInRow="Nombre1" msprop:Generator_ColumnPropNameInTable="Nombre1Column" msprop:Generator_UserColumnName="Nombre1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="80" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -811,6 +811,10 @@
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ECliente" />
       <xs:field xpath="mstns:Numcot" />
+    </xs:unique>
+    <xs:unique name="cotLIMS3_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cotLIMS3" />
+      <xs:field xpath="mstns:NumCot" />
     </xs:unique>
   </xs:element>
 </xs:schema>
