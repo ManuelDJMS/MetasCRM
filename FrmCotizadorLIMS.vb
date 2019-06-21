@@ -257,7 +257,7 @@ Public Class FrmCotizadorLIMS
             MetodoMetasCotizador()
             comandoMetasCotizador = conexionMetasCotizador.CreateCommand
             R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone, x2.Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
-             inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+             inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerAddressDtls] x3
              on x2.Customerid=x3.CustomerId"
             comandoMetasCotizador.CommandText = R
             lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
@@ -279,7 +279,7 @@ Public Class FrmCotizadorLIMS
         MetodoMetasCotizador()
         comandoMetasCotizador = conexionMetasCotizador.CreateCommand
         R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
-              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] x3
 			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa
         comandoMetasCotizador.CommandText = R
         lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
@@ -300,7 +300,7 @@ Public Class FrmCotizadorLIMS
                 dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
             End If
             R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
-                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerAddressDtls] x3
                 on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
                 "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
             comandoMetasCotizador.CommandText = R
@@ -328,7 +328,7 @@ Public Class FrmCotizadorLIMS
                 dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
             End If
             R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
-                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerAddressDtls] x3
                 on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
                 "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
             comandoMetasCotizador.CommandText = R
@@ -356,7 +356,7 @@ Public Class FrmCotizadorLIMS
                 dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
             End If
             R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
-                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerAddressDtls] x3
                 on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
                 "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
             comandoMetasCotizador.CommandText = R
@@ -384,7 +384,7 @@ Public Class FrmCotizadorLIMS
                 dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
             End If
             R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
-                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerAddressDtls] x3
                 on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
                 "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
             comandoMetasCotizador.CommandText = R
@@ -412,7 +412,7 @@ Public Class FrmCotizadorLIMS
                 dgEmpresa.Rows.RemoveAt(dgEmpresa.CurrentRow.Index)
             End If
             R = "select distinct idContacto, FirstName + ' ' + MiddleName as Cliente, CompanyName, ContAddress1, ContZip, Phone,Email from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x1
-                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerAddressDtls] x3
+                inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] x2 on x1.idContacto =x2.CustomerId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupCustomerAddressDtls] x3
                 on x2.Customerid=x3.CustomerId where CompanyName like '" & txtNombreE.Text & "%' and Email like '" & TextEmail.Text & "%' and ContAddress1 like '" & TextDom.Text &
                 "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
             comandoMetasCotizador.CommandText = R
@@ -440,7 +440,7 @@ Public Class FrmCotizadorLIMS
                 dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
             End If
             R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
-              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] x3
 			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
               " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
               "Model like '" & TextModelo.Text & "%'"
@@ -469,7 +469,7 @@ Public Class FrmCotizadorLIMS
                 dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
             End If
             R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
-              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] x3
 			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
               " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
               "Model like '" & TextModelo.Text & "%'"
@@ -498,7 +498,7 @@ Public Class FrmCotizadorLIMS
                 dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
             End If
             R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
-              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] x3
 			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
               " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
               "Model like '" & TextModelo.Text & "%'"
@@ -527,7 +527,7 @@ Public Class FrmCotizadorLIMS
                 dgCot.Rows.RemoveAt(dgCot.CurrentRow.Index)
             End If
             R = "SELECT idContacto, x1.NumCot, PartidaNo, x1.EquipId, ItemNumber, EquipmentName, Mfr, Model, ServiceDescription,RelationItemNo, Price, Cantidad, SrlNo, RelationItemNo, Creado from [SERVER3\COMPAC2].[MetasCotizador].[dbo].[DetalleCotizaciones] x1
-              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Pruebas].[dbo].[SetupEquipmentServiceMapping] x3
+              inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipment] x2 on x1.EquipId=x2.EquipId inner join [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] x3
 			  on x1.EquipId=x3.EquipId inner join [SERVER3\COMPAC2].[MetasCotizador].[dbo].[Cotizaciones] x4 on x1.NumCot=x4.NumCot where idContacto=" & empresa &
               " and ItemNumber like '" & TextSKU.Text & "%' and EquipmentName like '" & TextDescripcion.Text & "%' and Mfr like '" & TextMarca.Text & "%' and " &
               "Model like '" & TextModelo.Text & "%'"
@@ -575,8 +575,8 @@ Public Class FrmCotizadorLIMS
 				INNER JOIN [PagoCondicion] ON [Cotizaciones].[idPagoCondicion] = [PagoCondicion].[idPagoCondicion]
 				INNER JOIN [TiemposEntregaCondicion] ON [Cotizaciones].[idTiempoEntregaCondicion] = [TiemposEntregaCondicion].[idTiempoEntregaCondicion]
 				INNER JOIN [ModalidadCondicion] ON [Cotizaciones].[idModalidadCondicion] = [ModalidadCondicion].[idModalidadCondicion]
-				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetUpEquipment] ON [SetUpEquipment].[EquipId] = [DetalleCotizaciones].[EquipId]
-				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupEquipmentServiceMapping] ON [SetUpEquipment].[EquipId] =[SetupEquipmentServiceMapping].[EquipId]			
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetUpEquipment] ON [SetUpEquipment].[EquipId] = [DetalleCotizaciones].[EquipId]
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] ON [SetUpEquipment].[EquipId] =[SetupEquipmentServiceMapping].[EquipId]			
                 WHERE [Cotizaciones].NumCot = '" & COT & "'"
         comandoMetasCotizador.CommandText = R
         lectorMetasCotizador = comandoMetasCotizador.ExecuteReader
@@ -931,8 +931,8 @@ Public Class FrmCotizadorLIMS
 				INNER JOIN [PagoCondicion] ON [Cotizaciones].[idPagoCondicion] = [PagoCondicion].[idPagoCondicion]
 				INNER JOIN [TiemposEntregaCondicion] ON [Cotizaciones].[idTiempoEntregaCondicion] = [TiemposEntregaCondicion].[idTiempoEntregaCondicion]
 				INNER JOIN [ModalidadCondicion] ON [Cotizaciones].[idModalidadCondicion] = [ModalidadCondicion].[idModalidadCondicion]
-				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetUpEquipment] ON [SetUpEquipment].[EquipId] = [DetalleCotizaciones].[EquipId]
-				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupEquipmentServiceMapping] ON [SetUpEquipment].[EquipId] =[SetupEquipmentServiceMapping].[EquipId]			
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetUpEquipment] ON [SetUpEquipment].[EquipId] = [DetalleCotizaciones].[EquipId]
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-Clouding].[dbo].[SetupEquipmentServiceMapping] ON [SetUpEquipment].[EquipId] =[SetupEquipmentServiceMapping].[EquipId]			
                 WHERE [Cotizaciones].NumCot = '" & COT & "'"
         comandoMetasCotizador.CommandText = R
         lectorMetasCotizador = comandoMetasCotizador.ExecuteReader

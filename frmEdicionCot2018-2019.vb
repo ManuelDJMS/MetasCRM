@@ -5,6 +5,7 @@ Public Class frmEdicionCot2018_2019
     Dim total As Double
     Dim iva As Double
     Dim maximo As Integer
+    Dim inventarioCliente, observacion As String
 
     Private Sub frmEdicionCot2018_2019_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -13,9 +14,9 @@ Public Class frmEdicionCot2018_2019
             comandoLIMS = conexionLIMS.CreateCommand
             R = "select [SetupCustomerDetails].CustomerId, isnull(Organization,'-'), isnull(concat(FirstName, ' ' , MiddleName, ' ', LastName),'-') as Nombre, 
                 isnull(ContAddress1,'-'), isnull(ContCity,'-'), isnull(ContState,'-'), isnull(Phone,'-'), isnull(Email,'-') 
-                from [MetAs_Live].[dbo].[SetupCustomerDetails] inner join  
+                from [MetAs_Live-Clouding].[dbo].[SetupCustomerDetails] inner join  
                 SetupCustomerAddressDtls on [SetupCustomerDetails].CustomerId=[SetupCustomerAddressDtls].CustomerId
-                where [MetAs_Live].[dbo].[SetupCustomerDetails].CustomerId=" & empresa
+                where [MetAs_Live-Clouding].[dbo].[SetupCustomerDetails].CustomerId=" & empresa
             comandoLIMS.CommandText = R
             lectorLIMS = comandoLIMS.ExecuteReader
             lectorLIMS.Read()
@@ -238,6 +239,19 @@ Public Class frmEdicionCot2018_2019
                 End If
                 lectora.Close()
                 conexionMetasCotizador.Close()
+
+
+                For i = 0 To DGCopia.Rows.Count - 2
+                    MetodoMetasCotizador()
+                    inventarioCliente = InputBox("¿Deseas agregar el número de inventario del articulo: """ & DGCopia.Item(1, i).Value.ToString & """ del cliente?", "No. de Inventario de cliente")
+                    Dim cad As String = "update DetalleCotizaciones set identificadorInventarioCliente='" & inventarioCliente & "', Observaciones='" & DGCopia.Item(6, i).Value.ToString & "'
+                    where idListaCotizacion =" & Val(DGCopia.Item(0, i).Value) & ""
+                    Dim t As New SqlCommand(cad, conexionMetasCotizador)
+                    t.ExecuteNonQuery()
+                    conexionMetasCotizador.Close()
+                Next i
+
+
                 '---------------------------------------------------------------------------------------------------------------------------
                 MetodoMetasCotizador()
                 Dim R As String
@@ -249,25 +263,30 @@ Public Class frmEdicionCot2018_2019
                 comando.ExecuteNonQuery()
                 ' MsgBox("Actualizado")
                 conexionMetasCotizador.Close()
+
+
+                ''Procedimiento para guardar los detalles de servicios
+                Try
+                    For i = 0 To DGServicios.Rows.Count - 2
+                        MetodoMetasCotizador()
+                        R = "insert into ServiciosEnCotizaciones (idListaCotizacion, idServicio) values (" & Val(DGServicios.Item(0, i).Value) & "," & Val(DGServicios.Item(2, i).Value) & ")"
+                        Dim x As New SqlCommand(R, conexionMetasCotizador)
+                        x.ExecuteNonQuery()
+                        conexionMetasCotizador.Close()
+                    Next i
+                    MsgBox("Cotización guardada correctamente", MsgBoxStyle.Information)
+                Catch ex As Exception
+                    MsgBox("Error de guardado.", MsgBoxStyle.Critical)
+                End Try
+                Me.Dispose()
+
+
             Catch ex As Exception
                 MsgBox("Error de lectura de datos de ultima COT", MsgBoxStyle.Critical)
             End Try
         End If
 
-        ''Procedimiento para guardar los detalles de servicios
-        Try
-            For i = 0 To DGServicios.Rows.Count - 2
-                MetodoMetasCotizador()
-                R = "insert into ServiciosEnCotizaciones (idListaCotizacion, idServicio) values (" & Val(DGServicios.Item(0, i).Value) & "," & Val(DGServicios.Item(2, i).Value) & ")"
-                Dim comando As New SqlCommand(R, conexionMetasCotizador)
-                comando.ExecuteNonQuery()
-                conexionMetasCotizador.Close()
-            Next i
-            MsgBox("Cotización guardada correctamente", MsgBoxStyle.Information)
-        Catch ex As Exception
-            MsgBox("Error de guardado.", MsgBoxStyle.Critical)
-        End Try
-        Me.Dispose()
+
     End Sub
 
     Private Sub CboValidez_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboValidez.SelectedIndexChanged
@@ -444,6 +463,7 @@ Public Class frmEdicionCot2018_2019
         fechaActual = Convert.ToDateTime(DTPDesde.Text).ToShortDateString
         fecharecepcion = Convert.ToDateTime(DTPHasta.Text).ToShortDateString
 
+
         R = "insert into Cotizaciones (NumCot, idContacto, Origen, idLugarCondicion, idCuandoCondicion, idModalidadCondicion, idTiempoEntregaCondicion, idPagoCondicion, idLeyendaCondicion,
         idValidezCondicion,idMonedaCondicion,idDocumentoCondicion,idModoCont,Referencia,FechaDesde,FechaHasta,Observaciones,idUsuarioCotizacion,Subtotal,IVA,Total,Creado)
              values (" & maximo & "," & Val(txtCveContacto.Text) & ",'" & origen & "'," & Val(cboServicio.Tag) & "," & Val(Cbcuando.Tag) & "," & Val(CbModalidad.Tag) & "," & Val(CboTiempo.Tag) & "," &
@@ -454,8 +474,8 @@ Public Class frmEdicionCot2018_2019
         comandoMetasCotizador.ExecuteNonQuery()
 
         For i = 0 To DGCotizaciones.Rows.Count - 2
-            R = "insert into DetalleCotizaciones (NumCot,EquipId, PartidaNo,Cantidad, CantidadReal) values (" & maximo & "," & DGCotizaciones.Item(10, i).Value & "," & Val(DGCotizaciones.Item(0, i).Value) & ",
-                " & Val(DGCotizaciones.Item(3, i).Value) & "," & Val(DGCotizaciones.Item(9, i).Value) & ")"
+            R = "insert into DetalleCotizaciones (NumCot,EquipId, PartidaNo,Cantidad, CantidadReal, identificadorInventarioCliente, Observaciones) values (" & maximo & "," & DGCotizaciones.Item(10, i).Value & "," & Val(DGCotizaciones.Item(0, i).Value) & ",
+                " & Val(DGCotizaciones.Item(3, i).Value) & "," & Val(DGCotizaciones.Item(9, i).Value) & ",'-','-')"
             'MsgBox(R)
             comandoMetasCotizador.CommandText = R
             comandoMetasCotizador.ExecuteNonQuery()
