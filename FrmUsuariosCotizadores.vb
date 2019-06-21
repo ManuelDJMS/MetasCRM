@@ -18,6 +18,11 @@ Public Class FrmUsuariosCotizadores
     Dim objOutlook As Object
     Dim quienEnvia As String
     Dim Ruta As String
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
     Dim resultado As String
     Dim seleccion As String
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click

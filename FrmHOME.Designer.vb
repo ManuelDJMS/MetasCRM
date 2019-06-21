@@ -59,6 +59,8 @@ Partial Class FrmHOME
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Panel16 = New System.Windows.Forms.Panel()
@@ -136,8 +138,8 @@ Partial Class FrmHOME
         Me.comena = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Panel18 = New System.Windows.Forms.Panel()
-        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,6 +150,7 @@ Partial Class FrmHOME
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.Panel18.SuspendLayout()
         Me.Panel17.SuspendLayout()
         Me.Panel16.SuspendLayout()
         Me.Panel15.SuspendLayout()
@@ -173,7 +176,7 @@ Partial Class FrmHOME
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGLlamadas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
-        Me.Panel18.SuspendLayout()
+        Me.Panel19.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -188,6 +191,7 @@ Partial Class FrmHOME
         Me.GroupBox1.Controls.Add(Me.Panel7)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.DTP)
+        Me.GroupBox1.Controls.Add(Me.txtNombreAdmin)
         Me.GroupBox1.Controls.Add(Me.Panel4)
         Me.GroupBox1.Location = New System.Drawing.Point(199, -6)
         Me.GroupBox1.Name = "GroupBox1"
@@ -198,13 +202,13 @@ Partial Class FrmHOME
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label29.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.White
         Me.Label29.Location = New System.Drawing.Point(26, 23)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(68, 15)
+        Me.Label29.Size = New System.Drawing.Size(86, 18)
         Me.Label29.TabIndex = 152
-        Me.Label29.Text = "Bienvenido"
+        Me.Label29.Text = "Bienvenido: "
         '
         'PictureBox2
         '
@@ -273,7 +277,7 @@ Partial Class FrmHOME
         '
         Me.Panel7.BackColor = System.Drawing.Color.DimGray
         Me.Panel7.Controls.Add(Me.Label17)
-        Me.Panel7.Location = New System.Drawing.Point(107, 12)
+        Me.Panel7.Location = New System.Drawing.Point(595, 8)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(212, 45)
         Me.Panel7.TabIndex = 34
@@ -305,7 +309,7 @@ Partial Class FrmHOME
         'DTP
         '
         Me.DTP.Enabled = False
-        Me.DTP.Location = New System.Drawing.Point(107, 21)
+        Me.DTP.Location = New System.Drawing.Point(542, 21)
         Me.DTP.Name = "DTP"
         Me.DTP.Size = New System.Drawing.Size(245, 20)
         Me.DTP.TabIndex = 30
@@ -315,7 +319,7 @@ Partial Class FrmHOME
         '
         Me.Panel4.BackColor = System.Drawing.Color.DimGray
         Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Location = New System.Drawing.Point(140, 12)
+        Me.Panel4.Location = New System.Drawing.Point(575, 12)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(212, 45)
         Me.Panel4.TabIndex = 40
@@ -380,11 +384,11 @@ Partial Class FrmHOME
         'txtNombreAdmin
         '
         Me.txtNombreAdmin.AutoSize = True
-        Me.txtNombreAdmin.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreAdmin.ForeColor = System.Drawing.Color.White
-        Me.txtNombreAdmin.Location = New System.Drawing.Point(51, 186)
+        Me.txtNombreAdmin.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreAdmin.ForeColor = System.Drawing.Color.MintCream
+        Me.txtNombreAdmin.Location = New System.Drawing.Point(118, 23)
         Me.txtNombreAdmin.Name = "txtNombreAdmin"
-        Me.txtNombreAdmin.Size = New System.Drawing.Size(111, 15)
+        Me.txtNombreAdmin.Size = New System.Drawing.Size(130, 18)
         Me.txtNombreAdmin.TabIndex = 28
         Me.txtNombreAdmin.Text = "Cotizador para LIMS"
         Me.txtNombreAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -435,12 +439,12 @@ Partial Class FrmHOME
         Me.GroupBox3.Controls.Add(Me.Panel18)
         Me.GroupBox3.Controls.Add(Me.Panel17)
         Me.GroupBox3.Controls.Add(Me.Panel16)
+        Me.GroupBox3.Controls.Add(Me.Panel19)
         Me.GroupBox3.Controls.Add(Me.Panel15)
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Label23)
         Me.GroupBox3.Controls.Add(Me.txtRol)
         Me.GroupBox3.Controls.Add(Me.PictureBox1)
-        Me.GroupBox3.Controls.Add(Me.txtNombreAdmin)
         Me.GroupBox3.Controls.Add(Me.Panel8)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Panel3)
@@ -454,11 +458,32 @@ Partial Class FrmHOME
         Me.GroupBox3.TabIndex = 31
         Me.GroupBox3.TabStop = False
         '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.DimGray
+        Me.Panel18.Controls.Add(Me.Label38)
+        Me.Panel18.Location = New System.Drawing.Point(0, 461)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(212, 45)
+        Me.Panel18.TabIndex = 44
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label38.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label38.Location = New System.Drawing.Point(10, 13)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(94, 18)
+        Me.Label38.TabIndex = 0
+        Me.Label38.Text = "Recordatorios"
+        '
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.DimGray
         Me.Panel17.Controls.Add(Me.Label37)
-        Me.Panel17.Location = New System.Drawing.Point(0, 441)
+        Me.Panel17.Location = New System.Drawing.Point(0, 415)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(212, 45)
         Me.Panel17.TabIndex = 43
@@ -468,7 +493,7 @@ Partial Class FrmHOME
         Me.Label37.AutoSize = True
         Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label37.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.Color.Aquamarine
+        Me.Label37.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label37.Location = New System.Drawing.Point(10, 13)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(78, 18)
@@ -479,7 +504,7 @@ Partial Class FrmHOME
         '
         Me.Panel16.BackColor = System.Drawing.Color.DimGray
         Me.Panel16.Controls.Add(Me.Label36)
-        Me.Panel16.Location = New System.Drawing.Point(0, 395)
+        Me.Panel16.Location = New System.Drawing.Point(0, 369)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(212, 45)
         Me.Panel16.TabIndex = 43
@@ -488,8 +513,8 @@ Partial Class FrmHOME
         '
         Me.Label36.AutoSize = True
         Me.Label36.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label36.Font = New System.Drawing.Font("Calibri", 11.25!)
-        Me.Label36.ForeColor = System.Drawing.Color.White
+        Me.Label36.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label36.Location = New System.Drawing.Point(10, 13)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(118, 18)
@@ -522,7 +547,7 @@ Partial Class FrmHOME
         '
         Me.Panel14.BackColor = System.Drawing.Color.DimGray
         Me.Panel14.Controls.Add(Me.Label30)
-        Me.Panel14.Location = New System.Drawing.Point(0, 349)
+        Me.Panel14.Location = New System.Drawing.Point(0, 323)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(212, 45)
         Me.Panel14.TabIndex = 41
@@ -531,11 +556,11 @@ Partial Class FrmHOME
         '
         Me.Label30.AutoSize = True
         Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label30.Font = New System.Drawing.Font("Calibri Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.PaleGreen
+        Me.Label30.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label30.Location = New System.Drawing.Point(10, 12)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(70, 18)
+        Me.Label30.Size = New System.Drawing.Size(72, 18)
         Me.Label30.TabIndex = 0
         Me.Label30.Text = "Cotización"
         '
@@ -555,7 +580,7 @@ Partial Class FrmHOME
         Me.txtRol.AutoSize = True
         Me.txtRol.Font = New System.Drawing.Font("Calibri Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRol.ForeColor = System.Drawing.Color.White
-        Me.txtRol.Location = New System.Drawing.Point(12, 212)
+        Me.txtRol.Location = New System.Drawing.Point(13, 202)
         Me.txtRol.Name = "txtRol"
         Me.txtRol.Size = New System.Drawing.Size(188, 15)
         Me.txtRol.TabIndex = 33
@@ -566,9 +591,9 @@ Partial Class FrmHOME
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(38, 67)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 63)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(140, 113)
+        Me.PictureBox1.Size = New System.Drawing.Size(212, 125)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 33
         Me.PictureBox1.TabStop = False
@@ -650,8 +675,8 @@ Partial Class FrmHOME
         '
         Me.Label7.AutoSize = True
         Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label7.Font = New System.Drawing.Font("Calibri Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label7.Location = New System.Drawing.Point(10, 12)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(102, 18)
@@ -662,7 +687,7 @@ Partial Class FrmHOME
         '
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Location = New System.Drawing.Point(-3, 247)
+        Me.Panel1.Location = New System.Drawing.Point(-3, 221)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(212, 45)
         Me.Panel1.TabIndex = 33
@@ -681,7 +706,7 @@ Partial Class FrmHOME
         '
         Me.Panel9.BackColor = System.Drawing.Color.DimGray
         Me.Panel9.Controls.Add(Me.Label6)
-        Me.Panel9.Location = New System.Drawing.Point(-3, 293)
+        Me.Panel9.Location = New System.Drawing.Point(-3, 267)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(212, 45)
         Me.Panel9.TabIndex = 45
@@ -690,11 +715,11 @@ Partial Class FrmHOME
         '
         Me.Label6.AutoSize = True
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label6.Font = New System.Drawing.Font("Calibri Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label6.Location = New System.Drawing.Point(10, 13)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 18)
+        Me.Label6.Size = New System.Drawing.Size(125, 18)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Cotizar sin formato"
         '
@@ -1285,26 +1310,26 @@ Partial Class FrmHOME
         Me.GroupBox6.TabIndex = 66
         Me.GroupBox6.TabStop = False
         '
-        'Panel18
+        'Panel19
         '
-        Me.Panel18.BackColor = System.Drawing.Color.DimGray
-        Me.Panel18.Controls.Add(Me.Label38)
-        Me.Panel18.Location = New System.Drawing.Point(0, 487)
-        Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(212, 45)
-        Me.Panel18.TabIndex = 44
+        Me.Panel19.BackColor = System.Drawing.Color.DimGray
+        Me.Panel19.Controls.Add(Me.Label39)
+        Me.Panel19.Location = New System.Drawing.Point(0, 507)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(212, 45)
+        Me.Panel19.TabIndex = 43
         '
-        'Label38
+        'Label39
         '
-        Me.Label38.AutoSize = True
-        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label38.Font = New System.Drawing.Font("Calibri", 11.25!)
-        Me.Label38.ForeColor = System.Drawing.Color.White
-        Me.Label38.Location = New System.Drawing.Point(10, 13)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(94, 18)
-        Me.Label38.TabIndex = 0
-        Me.Label38.Text = "Recordatorios"
+        Me.Label39.AutoSize = True
+        Me.Label39.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label39.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label39.Location = New System.Drawing.Point(10, 13)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(125, 18)
+        Me.Label39.TabIndex = 0
+        Me.Label39.Text = "Correos semanales"
         '
         'FrmHOME
         '
@@ -1346,6 +1371,8 @@ Partial Class FrmHOME
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel18.PerformLayout()
         Me.Panel17.ResumeLayout(False)
         Me.Panel17.PerformLayout()
         Me.Panel16.ResumeLayout(False)
@@ -1388,8 +1415,8 @@ Partial Class FrmHOME
         CType(Me.DGLlamadas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
-        Me.Panel18.ResumeLayout(False)
-        Me.Panel18.PerformLayout()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1496,4 +1523,6 @@ Partial Class FrmHOME
     Friend WithEvents Label37 As Label
     Friend WithEvents Panel18 As Panel
     Friend WithEvents Label38 As Label
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents Label39 As Label
 End Class

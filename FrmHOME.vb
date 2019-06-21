@@ -291,7 +291,7 @@ Public Class FrmHOME
         ''--------------------------------------
     End Sub
 
-    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
+    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click, Label39.Click
         FrmFoliosDelAnioAnterior.MdiParent = Me
         FrmFoliosDelAnioAnterior.Show()
         ' Admin.txtNombreEmpleado.Text = txtNombreAdmin.Text ''------------
