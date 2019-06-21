@@ -18,7 +18,7 @@ Public Class FrmAutorizarSolicitudes
             For i = 0 To DGOportunidades.Rows.Count - 2
                 MetodoLIMS()
                 'Dim R As String = "select concat([FirstName], '',  [MiddleName], '', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
-                Dim R As String = "  select concat([SetupCustomerDetails].[FirstName], '', [SetupCustomerDetails].[MiddleName], '', [SetupCustomerDetails].[LastName]), 
+                Dim R As String = "select concat([SetupCustomerDetails].[FirstName], '', [SetupCustomerDetails].[MiddleName], '', [SetupCustomerDetails].[LastName]), 
             [SetupCustomerDetails].[CompanyName],[SetupCustomerDetails].[CustAccountNo], [SetupCustomerDetails].CustomerId, [SetupCustomerAddressDtls].[ShipAddress1],
             [SetupCustomerAddressDtls].[ShipAddress2],[SetupCustomerAddressDtls].[ShipAddress3], [SetupCustomerAddressDtls].[ShipCity], [SetupCustomerAddressDtls].[ShipState],
             [SetupCustomerAddressDtls].[ShipZip],[SetupCustomerAddressDtls].[ShipCountry] from [SetupCustomerDetails] 
@@ -35,8 +35,8 @@ Public Class FrmAutorizarSolicitudes
         End Try
     End Sub
     Public Sub consultaGeneralDeCotizaciones()
-        Try                      ''''Consulta de algunos campos solamente
-            MetodoMetasCotizador()
+        'Try                      ''''Consulta de algunos campos solamente
+        MetodoMetasCotizador()
             'DGOportunidades.Rows.Clear()
             Dim R As String
             R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS' and Creado=0"
@@ -47,14 +47,14 @@ Public Class FrmAutorizarSolicitudes
             da.Fill(dt)
             DGOportunidades.DataSource = dt
             conexionMetasCotizador.Close()
-        Catch ex As Exception
-            MsgBox("Ocurrio un error")
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error")
+        'End Try
     End Sub
 
     Public Sub consultaContactos()
-        Try
-            MetodoLIMS()
+        'Try
+        MetodoLIMS()
             'DGContactos.Rows.Clear()
             Dim R As String
             R = "select [SetupCustomerDetails].[CustomerId], concat([SetupCustomerDetails].[FirstName], ' ',  [SetupCustomerDetails].[MiddleName], ' ', [SetupCustomerDetails].[LastName]) as Contacto, 
@@ -69,22 +69,22 @@ Public Class FrmAutorizarSolicitudes
             da.Fill(dt)
             DGContactos.DataSource = dt
             conexionLIMS.Close()
-        Catch ex As Exception
-            MsgBox("Ocurrio un error en la lectura de datos, llama al administrador general.")
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error en la lectura de datos, llama al administrador general.")
+        'End Try
     End Sub
 
 
 
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
-        Try
-            With DGV
+        'Try
+        With DGV
                 .RowsDefaultCellStyle.BackColor = Color.WhiteSmoke
                 .AlternatingRowsDefaultCellStyle.BackColor = Color.White
             End With
-        Catch ex As Exception
-            MsgBox("Ocurrio un error en el diseño de la tabla, puedes llamar al administrador de sistemas.", MsgBoxStyle.Exclamation)
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error en el diseño de la tabla, puedes llamar al administrador de sistemas.", MsgBoxStyle.Exclamation)
+        'End Try
     End Sub
 
     Private Sub DGRes_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGRes.RowHeaderMouseClick
@@ -103,8 +103,8 @@ Public Class FrmAutorizarSolicitudes
     End Sub
 
     Sub consultaContactos(ByVal CustomerId As Integer)
-        Try
-            MetodoLIMS()
+        'Try
+        MetodoLIMS()
             Dim R As String = "select isnull(CustAccountNo,'-'), isnull(FirstName,'-'), isnull(MiddleName,'-'), isnull(LastName,'-'),
                                 isnull(Phone,'-'), isnull(Mobile,'-'), isnull(Email,'-'), isnull(CompanyName,'-'), isnull(KeyFiscal,'-') 
                                 from [SetupCustomerDetails] where [SetupCustomerDetails].[CustomerId]=" & CustomerId & ""
@@ -121,14 +121,14 @@ Public Class FrmAutorizarSolicitudes
             txtKeyFiscal.Text = lector(8)
             lector.Close()
             conexionLIMS.Close()
-        Catch ex As Exception
-            MsgBox("Error de lectura de datos.", MsgBoxStyle.Information)
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Error de lectura de datos.", MsgBoxStyle.Information)
+        'End Try
     End Sub
 
     Sub consultaCot(ByVal numCot As Integer)
-        Try
-            MetodoMetasCotizador()
+        'Try
+        MetodoMetasCotizador()
             Dim R As String
             R = "select isnull(Referencia,'-'), isnull(Observaciones,'-'), isnull(FechaDesde,'-'), isnull(FechaHasta,'-'),
                 isnull(Subtotal,'-'), isnull(IVA,'-'), isnull(Total,'-') from Cotizaciones where Cotizaciones.NumCot=" & numCot & ""
@@ -145,16 +145,16 @@ Public Class FrmAutorizarSolicitudes
             txtTotal.Text = lector(6)
             lector.Close()
             conexionMetasCotizador.Close()
-        Catch ex As Exception
-            MsgBox("Ocurrio un error en la lectura de datos, llama al administrador general.")
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error en la lectura de datos, llama al administrador general.")
+        'End Try
     End Sub
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ''Generar
-        Try
-            Dim seleccionado As Boolean
+        'Try
+        Dim seleccionado As Boolean
             Dim R As String
             Dim b, RecDate, OnSite As Boolean
             RecDate = True
@@ -179,46 +179,52 @@ Public Class FrmAutorizarSolicitudes
                         Dim cu, ca As Integer
                         Dim fecha As String
                         If seleccionado = True Then
-                            MetodoLIMS()
-                            R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
-                                    values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', '', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
-                            Dim comando As New SqlCommand(R, conexionLIMS)
-                            'MsgBox(R)
-                            comando.ExecuteNonQuery()
-                            cu = Val(DGRes.Rows(i).Cells(19).Value)
-                            ca = DGRes.Rows(i).Cells(9).Value
-                            fecha = dtp.Value.ToShortDateString
-                            MetodoLIMS()
-                            R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
-                                    FROM [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] 
-                                    where [CustomerId] = '" & Val(cu) & "' and [CustAccountNo] = '" & Val(ca) & "'  and [RecDate] = '" & fecha & "' ORDER BY [SOId] DESC"
-                            ' MsgBox(R)
-                            Dim comando2 As New SqlCommand(R, conexionLIMS)
-                            Dim lector As SqlDataReader
-                            lector = comando2.ExecuteReader
-                            lector.Read()
-                            Dim numOV As Integer = lector(0)
-                            'MsgBox(numOV)
-                            MetodoMetasCotizador()
-                            R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(0).Value) & ""
-                            Dim coma As New SqlCommand(R, conexionMetasCotizador)
-                            'MsgBox(R)
-                            coma.ExecuteNonQuery()
-                            conexionMetasCotizador.Close()
-                        End If
+                        MetodoLIMS()
+                        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
+                                values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', '', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
+                        Dim comando As New SqlCommand(R, conexionLIMS)
+                        'MsgBox(R)
+                        comando.ExecuteNonQuery()
+                        cu = Val(DGRes.Rows(i).Cells(19).Value)
+                        ca = DGRes.Rows(i).Cells(9).Value
+                        fecha = dtp.Value.ToShortDateString
+                        conexionLIMS.Close()
+
+
+                        MetodoLIMS()
+                        R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
+                                FROM SalesOrderDetails where [CustomerId] = '" & Val(cu) & "' and [CustAccountNo] = '" & Val(ca) & "'  and [RecDate] = '" & fecha & "' ORDER BY [SOId] DESC"
+                        ' MsgBox(R)
+                        Dim comando2 As New SqlCommand(R, conexionLIMS)
+                        Dim lector As SqlDataReader
+                        lector = comando2.ExecuteReader
+                        lector.Read()
+                        Dim numOV As Integer = lector(0)
+                        'MsgBox(numOV)
+                        conexionLIMS.Close()
+
+
+                        MetodoMetasCotizador()
+                        R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(0).Value) & ""
+                        Dim coma As New SqlCommand(R, conexionMetasCotizador)
+                        'MsgBox(R)
+                        coma.ExecuteNonQuery()
+                        conexionMetasCotizador.Close()
+                    End If
                     Next
                     MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
                     consultaGeneralDeCotizaciones()
                     consultaContactos()
                     DGRes.Rows.Clear()
-                    agregar_a_Res()
-                Else
+                agregar_a_Res()
+
+            Else
                     MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
             End If
-        Catch ex As Exception
-            MsgBox("Error al enviar correos.")
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Error al enviar correos.")
+        'End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

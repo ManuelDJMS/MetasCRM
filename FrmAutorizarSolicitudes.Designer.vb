@@ -148,6 +148,8 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,6 +179,8 @@ Partial Class FrmAutorizarSolicitudes
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.Gainsboro
+        Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.DGRes)
         Me.TabPage2.Controls.Add(Me.DGContactos)
         Me.TabPage2.Controls.Add(Me.DGOportunidades)
@@ -211,9 +215,9 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGRes.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DGRes.Location = New System.Drawing.Point(14, 87)
+        Me.DGRes.Location = New System.Drawing.Point(14, 72)
         Me.DGRes.Name = "DGRes"
-        Me.DGRes.Size = New System.Drawing.Size(1109, 520)
+        Me.DGRes.Size = New System.Drawing.Size(1109, 508)
         Me.DGRes.TabIndex = 162
         '
         'DataGridViewTextBoxColumn1
@@ -366,7 +370,7 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGContactos.DefaultCellStyle = DataGridViewCellStyle6
         Me.DGContactos.GridColor = System.Drawing.Color.Gainsboro
-        Me.DGContactos.Location = New System.Drawing.Point(31, 279)
+        Me.DGContactos.Location = New System.Drawing.Point(31, 214)
         Me.DGContactos.Name = "DGContactos"
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
@@ -378,7 +382,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGContactos.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DGContactos.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DGContactos.Size = New System.Drawing.Size(1045, 146)
+        Me.DGContactos.Size = New System.Drawing.Size(1045, 136)
         Me.DGContactos.TabIndex = 160
         Me.DGContactos.Visible = False
         '
@@ -407,7 +411,7 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGOportunidades.DefaultCellStyle = DataGridViewCellStyle11
         Me.DGOportunidades.GridColor = System.Drawing.Color.Gainsboro
-        Me.DGOportunidades.Location = New System.Drawing.Point(31, 125)
+        Me.DGOportunidades.Location = New System.Drawing.Point(31, 72)
         Me.DGOportunidades.Name = "DGOportunidades"
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
@@ -419,7 +423,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGOportunidades.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         DataGridViewCellStyle13.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DGOportunidades.RowsDefaultCellStyle = DataGridViewCellStyle13
-        Me.DGOportunidades.Size = New System.Drawing.Size(1045, 133)
+        Me.DGOportunidades.Size = New System.Drawing.Size(1045, 136)
         Me.DGOportunidades.TabIndex = 160
         Me.DGOportunidades.Visible = False
         '
@@ -1251,6 +1255,26 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(11, 586)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(38, 15)
+        Me.Label8.TabIndex = 257
+        Me.Label8.Text = "Nota:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(55, 587)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(357, 14)
+        Me.Label9.TabIndex = 256
+        Me.Label9.Text = "Selecciona las cotizaciones que se convertiran a orden de venta en LIMS"
+        '
         'FrmAutorizarSolicitudes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1268,6 +1292,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Text = "Autorizaciòn de solicitudes"
         Me.TabConsulta.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGContactos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1389,4 +1414,6 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents Column28 As DataGridViewTextBoxColumn
     Friend WithEvents Column29 As DataGridViewTextBoxColumn
     Friend WithEvents dtp As DateTimePicker
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class
