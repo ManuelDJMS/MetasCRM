@@ -2271,38 +2271,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="pago">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!pago.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>pago</rd:DefaultName>
-            <Top>13.24158cm</Top>
-            <Left>3.43918cm</Left>
-            <Height>1.01627cm</Height>
-            <Width>16.35902cm</Width>
-            <ZIndex>28</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="entrega">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -2324,7 +2292,7 @@
             <Left>3.43918cm</Left>
             <Height>0.56472cm</Height>
             <Width>16.35902cm</Width>
-            <ZIndex>29</ZIndex>
+            <ZIndex>28</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2356,7 +2324,7 @@
             <Left>3.4489cm</Left>
             <Height>0.47124cm</Height>
             <Width>16.35902cm</Width>
-            <ZIndex>30</ZIndex>
+            <ZIndex>29</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2388,7 +2356,7 @@
             <Left>3.43918cm</Left>
             <Height>0.43243cm</Height>
             <Width>16.35902cm</Width>
-            <ZIndex>31</ZIndex>
+            <ZIndex>30</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2617,7 +2585,7 @@
             <Left>16.8699cm</Left>
             <Height>1.99729cm</Height>
             <Width>3.40895cm</Width>
-            <ZIndex>32</ZIndex>
+            <ZIndex>31</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2633,7 +2601,7 @@
             <Left>0.08717cm</Left>
             <Height>0.2775cm</Height>
             <Width>19.9778cm</Width>
-            <ZIndex>33</ZIndex>
+            <ZIndex>32</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2667,7 +2635,7 @@
             <Left>0.14156cm</Left>
             <Height>0.46771cm</Height>
             <Width>20.18371cm</Width>
-            <ZIndex>34</ZIndex>
+            <ZIndex>33</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2702,7 +2670,7 @@
             <Left>0.53756cm</Left>
             <Height>0.52062cm</Height>
             <Width>5.49872cm</Width>
-            <ZIndex>35</ZIndex>
+            <ZIndex>34</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2902,7 +2870,7 @@
             <Left>0.53756cm</Left>
             <Height>9.35882cm</Height>
             <Width>19.24029cm</Width>
-            <ZIndex>36</ZIndex>
+            <ZIndex>35</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2934,7 +2902,7 @@
             <Left>0.51387cm</Left>
             <Height>0.52062cm</Height>
             <Width>9.07059cm</Width>
-            <ZIndex>37</ZIndex>
+            <ZIndex>36</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3044,7 +3012,7 @@
             <Left>0.49018cm</Left>
             <Height>4.17299cm</Height>
             <Width>19.29405cm</Width>
-            <ZIndex>38</ZIndex>
+            <ZIndex>37</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3077,7 +3045,7 @@
             <Left>0.53756cm</Left>
             <Height>0.52062cm</Height>
             <Width>10.5296cm</Width>
-            <ZIndex>39</ZIndex>
+            <ZIndex>38</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3223,7 +3191,7 @@
             <Left>0.49018cm</Left>
             <Height>6.34257cm</Height>
             <Width>19.19849cm</Width>
-            <ZIndex>40</ZIndex>
+            <ZIndex>39</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3256,7 +3224,7 @@
             <Left>0.49018cm</Left>
             <Height>0.52062cm</Height>
             <Width>19.1748cm</Width>
-            <ZIndex>41</ZIndex>
+            <ZIndex>40</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3312,7 +3280,7 @@
             <Left>0.49018cm</Left>
             <Height>2.1357cm</Height>
             <Width>19.19849cm</Width>
-            <ZIndex>42</ZIndex>
+            <ZIndex>41</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3345,7 +3313,7 @@
             <Left>0.53756cm</Left>
             <Height>0.52062cm</Height>
             <Width>19.1748cm</Width>
-            <ZIndex>43</ZIndex>
+            <ZIndex>42</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3419,7 +3387,7 @@
             <Left>0.53756cm</Left>
             <Height>2.1357cm</Height>
             <Width>19.19849cm</Width>
-            <ZIndex>44</ZIndex>
+            <ZIndex>43</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3452,7 +3420,7 @@
             <Left>0.48317cm</Left>
             <Height>0.52062cm</Height>
             <Width>19.1748cm</Width>
-            <ZIndex>45</ZIndex>
+            <ZIndex>44</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3591,7 +3559,7 @@
             <Left>0.48317cm</Left>
             <Height>3.03528cm</Height>
             <Width>19.19849cm</Width>
-            <ZIndex>46</ZIndex>
+            <ZIndex>45</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3624,7 +3592,7 @@
             <Left>5.98171cm</Left>
             <Height>0.50312cm</Height>
             <Width>8.29927cm</Width>
-            <ZIndex>47</ZIndex>
+            <ZIndex>46</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3642,7 +3610,7 @@
             <Top>11.2368cm</Top>
             <Height>0.09894cm</Height>
             <Width>20.54994cm</Width>
-            <ZIndex>48</ZIndex>
+            <ZIndex>47</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3658,7 +3626,7 @@
             <Left>0.53756cm</Left>
             <Height>0.25104cm</Height>
             <Width>19.12041cm</Width>
-            <ZIndex>49</ZIndex>
+            <ZIndex>48</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3689,7 +3657,7 @@
             <Left>0.48317cm</Left>
             <Height>0.52062cm</Height>
             <Width>19.1748cm</Width>
-            <ZIndex>50</ZIndex>
+            <ZIndex>49</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3721,7 +3689,7 @@
             <Left>0.48317cm</Left>
             <Height>0.6cm</Height>
             <Width>19.19849cm</Width>
-            <ZIndex>51</ZIndex>
+            <ZIndex>50</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3877,7 +3845,6 @@
                                   <Value>Acústica, Vibraciones y Ultrasonido</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3913,7 +3880,6 @@
                                   <Value>A-05</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3949,7 +3915,6 @@
                                   <Value>2012/10/22</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3990,7 +3955,6 @@
                                   <Value>Densidad</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4026,7 +3990,6 @@
                                   <Value>DEN-09</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4062,7 +4025,6 @@
                                   <Value>2011/09/21</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4103,7 +4065,6 @@
                                   <Value>Eléctrica</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4139,7 +4100,6 @@
                                   <Value>E-67</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4175,7 +4135,6 @@
                                   <Value>2012/08/20</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4216,7 +4175,6 @@
                                   <Value>Humedad</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4252,7 +4210,6 @@
                                   <Value>H-05</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4288,7 +4245,6 @@
                                   <Value>2012/03/29</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4329,7 +4285,6 @@
                                   <Value>Masa</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4365,7 +4320,6 @@
                                   <Value>M-129</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4401,7 +4355,6 @@
                                   <Value>2011/09/07</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4442,7 +4395,6 @@
                                   <Value>Mediciones Especiales</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4478,7 +4430,6 @@
                                   <Value>ME-15</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4514,7 +4465,6 @@
                                   <Value>2017/11/17</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4555,7 +4505,6 @@
                                   <Value>Presión</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4591,7 +4540,6 @@
                                   <Value>P-44</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4627,7 +4575,6 @@
                                   <Value>2012/04/19</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4668,7 +4615,6 @@
                                   <Value>Temperatura</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4704,7 +4650,6 @@
                                   <Value>T-38</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4740,7 +4685,6 @@
                                   <Value>2012/03/29</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4781,7 +4725,6 @@
                                   <Value>Tiempo y Frecuencia</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4817,7 +4760,6 @@
                                   <Value>TF-22</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4853,7 +4795,6 @@
                                   <Value>2017/11/06</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4894,7 +4835,6 @@
                                   <Value>Volumen</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4930,7 +4870,6 @@
                                   <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4966,7 +4905,6 @@
                                   <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -5007,7 +4945,6 @@
                                   <Value>Óptica</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -5043,7 +4980,6 @@
                                   <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -5079,7 +5015,6 @@
                                   <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -5134,13 +5069,45 @@
             <Left>0.45247cm</Left>
             <Height>7.2cm</Height>
             <Width>19.2055cm</Width>
-            <ZIndex>52</ZIndex>
+            <ZIndex>51</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox13">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Declarado en cada partida.</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>13.27686cm</Top>
+            <Left>3.45294cm</Left>
+            <Height>0.45006cm</Height>
+            <Width>16.35498cm</Width>
+            <ZIndex>52</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>22.76713in</Height>
         <Style />
@@ -6265,10 +6232,6 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="entrega">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -6384,11 +6347,6 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>5</RowIndex>
           <ParameterName>com</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>5</RowIndex>
-          <ParameterName>entrega</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
