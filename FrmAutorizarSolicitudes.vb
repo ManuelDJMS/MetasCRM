@@ -4,63 +4,41 @@ Public Class FrmAutorizarSolicitudes
     Dim CustimerId As Integer
     Dim cotizacion As Integer
     Private Sub FrmAutorizarSolicitudes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'consultaGeneralDeCotizaciones()
-        'consultaContactos()
-        'alternarColorColumnas(DGRes)
-        'agregar_a_Res()
-        MetodoMetasCotizador()
-        'Dim R As String = "select concat([FirstName], '',  [MiddleName], '', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
-        Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Referencia, FechaDesde, FechaHasta, Total from [MetasCotizador].[dbo].[Cotizaciones] x1
-				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId]"
-        Dim comando As New SqlCommand(R, conexionMetasCotizador)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        While lector.Read()
-            DGRes.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6))
-        End While
-        conexionMetasCotizador.Close()
-    End Sub
-
-    Public Sub agregar_a_Res()
-        'DGOportunidades = Tabla de cotizaciones
-        'DGContactos = Tabla de contactos
-        'DGRes = tabla de resultados
-        'Try
-        For i = 0 To DGOportunidades.Rows.Count - 2
-                MetodoLIMS()
-                'Dim R As String = "select concat([FirstName], '',  [MiddleName], '', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
-                Dim R As String = "select concat([SetupCustomerDetails].[FirstName], '', [SetupCustomerDetails].[MiddleName], '', [SetupCustomerDetails].[LastName]), 
-            [SetupCustomerDetails].[CompanyName],[SetupCustomerDetails].[CustAccountNo], [SetupCustomerDetails].CustomerId, [SetupCustomerAddressDtls].[ShipAddress1],
-            [SetupCustomerAddressDtls].[ShipAddress2],[SetupCustomerAddressDtls].[ShipAddress3], [SetupCustomerAddressDtls].[ShipCity], [SetupCustomerAddressDtls].[ShipState],
-            [SetupCustomerAddressDtls].[ShipZip],[SetupCustomerAddressDtls].[ShipCountry] from [SetupCustomerDetails] 
-            inner join [SetupCustomerAddressDtls] on [SetupCustomerDetails].CustomerId = [SetupCustomerAddressDtls].CustomerId where [SetupCustomerDetails].CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
-                Dim comando As New SqlCommand(R, conexionLIMS)
-                Dim lector As SqlDataReader
-                lector = comando.ExecuteReader
-                lector.Read()
-                DGRes.Rows.Add(Val(DGOportunidades.Item(0, i).Value), lector(0), lector(1), DGOportunidades.Item(2, i).Value, DGOportunidades.Item(3, i).Value, DGOportunidades.Item(4, i).Value, Val(DGOportunidades.Item(5, i).Value), lector(2), False, lector(2), lector(4), lector(5), lector(6), lector(7), lector(8), lector(9), 3, "Client A", lector(10), Val(DGOportunidades.Item(1, i).Value))
-                conexionLIMS.Close()
-            Next i
-        'Catch ex As Exception
-        '    MsgBox("Ocurrio un error en la lectura de datos de cotizaciones.", MsgBoxStyle.Information)
-        'End Try
+        consultaGeneralDeCotizaciones()
     End Sub
     Public Sub consultaGeneralDeCotizaciones()
         'Try                      ''''Consulta de algunos campos solamente
-        MetodoMetasCotizador()
-            'DGOportunidades.Rows.Clear()
-            Dim R As String
-            R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS' and Creado=0"
-            Dim comando As New SqlCommand(R, conexionMetasCotizador)
-            comando.CommandType = CommandType.Text
-            Dim da As New SqlDataAdapter(comando)
-            Dim dt As New DataTable
-            da.Fill(dt)
-            DGOportunidades.DataSource = dt
-            conexionMetasCotizador.Close()
+        'MetodoMetasCotizador()
+        '    'DGOportunidades.Rows.Clear()
+        '    Dim R As String
+        '    R = "select Cotizaciones.NumCot, Cotizaciones.idContacto, Cotizaciones.Referencia, Cotizaciones.FechaDesde, Cotizaciones.FechaHasta, Cotizaciones.Total from Cotizaciones where Cotizaciones.Origen='LIMS' and Creado=0"
+        '    Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        '    comando.CommandType = CommandType.Text
+        '    Dim da As New SqlDataAdapter(comando)
+        '    Dim dt As New DataTable
+        '    da.Fill(dt)
+        '    DGOportunidades.DataSource = dt
+        '    conexionMetasCotizador.Close()
         'Catch ex As Exception
         '    MsgBox("Ocurrio un error")
         'End Try
+        Try
+            MetodoMetasCotizador()
+            Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Referencia, FechaDesde, FechaHasta, Total, CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId] where Creado= 0"
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                DGRes.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7), False, lector(8))
+            End While
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmAutorizarSolicitudes", "Error al cargar el formulario", Err.Number, cadena)
+        End Try
     End Sub
 
     Public Sub consultaContactos()
@@ -193,41 +171,42 @@ Public Class FrmAutorizarSolicitudes
                         MetodoLIMS()
                         R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
                                 values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', ' " & DGRes.Rows(i).Cells(0).Value & "', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
-                        Dim comando As New SqlCommand(R, conexionLIMS)
-                        'MsgBox(R)
+                        Dim comando As New SqlCommand
+                        comando = conexionLIMS.CreateCommand
+                        comando.CommandText = R
                         comando.ExecuteNonQuery()
                         cu = Val(DGRes.Rows(i).Cells(19).Value)
                         ca = DGRes.Rows(i).Cells(9).Value
                         fecha = dtp.Value.ToShortDateString
                         conexionLIMS.Close()
-
+                        'MsgBox("inserta en sales order")
 
                         MetodoLIMS()
                         R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
                                 FROM SalesOrderDetails where [CustomerId] = '" & Val(cu) & "' and [CustAccountNo] = '" & Val(ca) & "'  and [RecDate] = '" & fecha & "' ORDER BY [SOId] DESC"
-                        ' MsgBox(R)
+
                         Dim comando2 As New SqlCommand(R, conexionLIMS)
                         Dim lector As SqlDataReader
                         lector = comando2.ExecuteReader
                         lector.Read()
                         Dim numOV As Integer = lector(0)
-                        'MsgBox(numOV)
+                        MsgBox(numOV)
                         conexionLIMS.Close()
 
 
                         MetodoMetasCotizador()
                         R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(0).Value) & ""
                         Dim coma As New SqlCommand(R, conexionMetasCotizador)
-                        'MsgBox(R)
+
                         coma.ExecuteNonQuery()
                         conexionMetasCotizador.Close()
                     End If
                     Next
                     MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
-                    consultaGeneralDeCotizaciones()
-                    consultaContactos()
-                    DGRes.Rows.Clear()
-                agregar_a_Res()
+                '    consultaGeneralDeCotizaciones()
+                '    consultaContactos()
+                '    DGRes.Rows.Clear()
+                'agregar_a_Res()
 
             Else
                     MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
@@ -279,4 +258,5 @@ Public Class FrmAutorizarSolicitudes
             MsgBox("No se encuentra dicho número de cotización.", MsgBoxStyle.Exclamation)
         End Try
     End Sub
+
 End Class
