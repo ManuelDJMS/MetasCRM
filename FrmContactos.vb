@@ -91,8 +91,8 @@ Public Class FrmContactos
     'End Sub
 
     Public Sub consultaDatosContactos(ByVal clave As String)
-        Try
-            Dim vacio As String = "---"
+        'Try
+        Dim vacio As String = "---"
             'Dim cadenaCorreos As String
             MetodoLIMS()
             Dim R As String
@@ -481,9 +481,9 @@ Public Class FrmContactos
             Else
                 MsgBox("No existen datos de registro.", MsgBoxStyle.Information)
             End If
-        Catch ex As Exception
-            MsgBox("Ocurrio un error de lectura.", MsgBoxStyle.Information)
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error de lectura.", MsgBoxStyle.Information)
+        'End Try
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click

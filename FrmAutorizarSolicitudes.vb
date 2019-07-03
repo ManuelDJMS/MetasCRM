@@ -4,18 +4,29 @@ Public Class FrmAutorizarSolicitudes
     Dim CustimerId As Integer
     Dim cotizacion As Integer
     Private Sub FrmAutorizarSolicitudes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        consultaGeneralDeCotizaciones()
-        consultaContactos()
-        alternarColorColumnas(DGRes)
-        agregar_a_Res()
+        'consultaGeneralDeCotizaciones()
+        'consultaContactos()
+        'alternarColorColumnas(DGRes)
+        'agregar_a_Res()
+        MetodoMetasCotizador()
+        'Dim R As String = "select concat([FirstName], '',  [MiddleName], '', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
+        Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Referencia, FechaDesde, FechaHasta, Total from [MetasCotizador].[dbo].[Cotizaciones] x1
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId]"
+        Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        While lector.Read()
+            DGRes.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6))
+        End While
+        conexionMetasCotizador.Close()
     End Sub
 
     Public Sub agregar_a_Res()
         'DGOportunidades = Tabla de cotizaciones
         'DGContactos = Tabla de contactos
         'DGRes = tabla de resultados
-        Try
-            For i = 0 To DGOportunidades.Rows.Count - 2
+        'Try
+        For i = 0 To DGOportunidades.Rows.Count - 2
                 MetodoLIMS()
                 'Dim R As String = "select concat([FirstName], '',  [MiddleName], '', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
                 Dim R As String = "select concat([SetupCustomerDetails].[FirstName], '', [SetupCustomerDetails].[MiddleName], '', [SetupCustomerDetails].[LastName]), 
@@ -30,9 +41,9 @@ Public Class FrmAutorizarSolicitudes
                 DGRes.Rows.Add(Val(DGOportunidades.Item(0, i).Value), lector(0), lector(1), DGOportunidades.Item(2, i).Value, DGOportunidades.Item(3, i).Value, DGOportunidades.Item(4, i).Value, Val(DGOportunidades.Item(5, i).Value), lector(2), False, lector(2), lector(4), lector(5), lector(6), lector(7), lector(8), lector(9), 3, "Client A", lector(10), Val(DGOportunidades.Item(1, i).Value))
                 conexionLIMS.Close()
             Next i
-        Catch ex As Exception
-            MsgBox("Ocurrio un error en la lectura de datos de cotizaciones.", MsgBoxStyle.Information)
-        End Try
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error en la lectura de datos de cotizaciones.", MsgBoxStyle.Information)
+        'End Try
     End Sub
     Public Sub consultaGeneralDeCotizaciones()
         'Try                      ''''Consulta de algunos campos solamente
@@ -229,10 +240,26 @@ Public Class FrmAutorizarSolicitudes
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ''Actualizar
-        consultaGeneralDeCotizaciones()
-        consultaContactos()
-        DGRes.Rows.Clear()
-        agregar_a_Res()
+        'consultaGeneralDeCotizaciones()
+        'consultaContactos()
+        'DGRes.Rows.Clear()
+        'agregar_a_Res()
+        MetodoMetasCotizador()
+        If DGRes.Rows.Count < 2 Then
+
+        Else
+            DGRes.Rows.Clear()
+        End If
+        'Dim R As String = "select concat([FirstName], '',  [MiddleName], '', [LastName]), [CompanyName], CustomerId from [SetupCustomerDetails] where CustomerId=" & Val(DGOportunidades.Item(1, i).Value) & ""
+        Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Referencia, FechaDesde, FechaHasta, Total from [MetasCotizador].[dbo].[Cotizaciones] x1
+				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId]"
+        Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
+        While lector.Read()
+            DGRes.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6))
+        End While
+        conexionMetasCotizador.Close()
     End Sub
 
     Private Sub txtNumeroDeCuentaB_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroDeCuentaB.TextChanged
