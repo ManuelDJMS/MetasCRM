@@ -77,7 +77,7 @@ Public Class cotLIMSAct
         services = lectorMetasCotizador(25)
         MsgBox(services)
         domFac = lectorMetasCotizador(26)
-        MsgBox()
+
         rfc = lectorMetasCotizador(27)
         correoEla = lectorMetasCotizador(28)
         depto = lectorMetasCotizador(29)
