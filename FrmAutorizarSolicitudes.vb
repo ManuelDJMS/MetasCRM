@@ -236,4 +236,7 @@ Public Class FrmAutorizarSolicitudes
         End Try
     End Sub
 
+    Private Sub BtSinCot_Click(sender As Object, e As EventArgs) Handles btSinCot.Click
+        FrmFiltrar.Show()
+    End Sub
 End Class

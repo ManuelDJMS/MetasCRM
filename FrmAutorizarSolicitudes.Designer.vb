@@ -69,6 +69,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGContactos = New System.Windows.Forms.DataGridView()
         Me.DGOportunidades = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.OV = New System.Windows.Forms.Label()
         Me.cusAcount = New System.Windows.Forms.Label()
         Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -133,7 +134,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.OV = New System.Windows.Forms.Label()
+        Me.btSinCot = New System.Windows.Forms.Button()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -433,6 +434,7 @@ Partial Class FrmAutorizarSolicitudes
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.Controls.Add(Me.btSinCot)
         Me.Panel2.Controls.Add(Me.OV)
         Me.Panel2.Controls.Add(Me.cusAcount)
         Me.Panel2.Controls.Add(Me.dtp)
@@ -448,10 +450,19 @@ Partial Class FrmAutorizarSolicitudes
         Me.Panel2.Size = New System.Drawing.Size(1140, 66)
         Me.Panel2.TabIndex = 152
         '
+        'OV
+        '
+        Me.OV.AutoSize = True
+        Me.OV.Location = New System.Drawing.Point(654, 12)
+        Me.OV.Name = "OV"
+        Me.OV.Size = New System.Drawing.Size(45, 13)
+        Me.OV.TabIndex = 169
+        Me.OV.Text = "Label10"
+        '
         'cusAcount
         '
         Me.cusAcount.AutoSize = True
-        Me.cusAcount.Location = New System.Drawing.Point(757, 39)
+        Me.cusAcount.Location = New System.Drawing.Point(654, 38)
         Me.cusAcount.Name = "cusAcount"
         Me.cusAcount.Size = New System.Drawing.Size(45, 13)
         Me.cusAcount.TabIndex = 168
@@ -1146,14 +1157,20 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
         '
-        'OV
+        'btSinCot
         '
-        Me.OV.AutoSize = True
-        Me.OV.Location = New System.Drawing.Point(757, 13)
-        Me.OV.Name = "OV"
-        Me.OV.Size = New System.Drawing.Size(45, 13)
-        Me.OV.TabIndex = 169
-        Me.OV.Text = "Label10"
+        Me.btSinCot.BackColor = System.Drawing.Color.Green
+        Me.btSinCot.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btSinCot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btSinCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btSinCot.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btSinCot.ForeColor = System.Drawing.Color.White
+        Me.btSinCot.Location = New System.Drawing.Point(782, 15)
+        Me.btSinCot.Name = "btSinCot"
+        Me.btSinCot.Size = New System.Drawing.Size(83, 33)
+        Me.btSinCot.TabIndex = 181
+        Me.btSinCot.Text = "Sin Cot"
+        Me.btSinCot.UseVisualStyleBackColor = False
         '
         'FrmAutorizarSolicitudes
         '
@@ -1285,4 +1302,5 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents Column18 As DataGridViewTextBoxColumn
     Friend WithEvents cusAcount As Label
     Friend WithEvents OV As Label
+    Friend WithEvents btSinCot As Button
 End Class
