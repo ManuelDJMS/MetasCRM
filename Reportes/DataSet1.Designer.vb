@@ -1855,8 +1855,6 @@ Partial Public Class DataSet1
         
         Private columnComparacion As Global.System.Data.DataColumn
         
-        Private columnServiceName As Global.System.Data.DataColumn
-        
         Private columnDescrip As Global.System.Data.DataColumn
         
         Private columnPrice As Global.System.Data.DataColumn
@@ -1873,8 +1871,6 @@ Partial Public Class DataSet1
         
         Private columnpago As Global.System.Data.DataColumn
         
-        Private columnentrega As Global.System.Data.DataColumn
-        
         Private columnmodalidad As Global.System.Data.DataColumn
         
         Private columnObservaciones As Global.System.Data.DataColumn
@@ -1890,8 +1886,6 @@ Partial Public Class DataSet1
         Private columnEmail1 As Global.System.Data.DataColumn
         
         Private columnDepto As Global.System.Data.DataColumn
-        
-        Private columnFirma As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -2034,14 +2028,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ServiceNameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnServiceName
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property DescripColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnDescrip
@@ -2101,14 +2087,6 @@ Partial Public Class DataSet1
         Public ReadOnly Property pagoColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnpago
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property entregaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnentrega
             End Get
         End Property
         
@@ -2177,14 +2155,6 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property FirmaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFirma
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2235,7 +2205,6 @@ Partial Public Class DataSet1
                     ByVal Cantidad As Integer,  _
                     ByVal EquipId As String,  _
                     ByVal Comparacion As String,  _
-                    ByVal ServiceName As String,  _
                     ByVal Descrip As String,  _
                     ByVal Price As Decimal,  _
                     ByVal _sub As Decimal,  _
@@ -2244,7 +2213,6 @@ Partial Public Class DataSet1
                     ByVal lugar As String,  _
                     ByVal moneda As String,  _
                     ByVal pago As String,  _
-                    ByVal entrega As String,  _
                     ByVal modalidad As String,  _
                     ByVal Observaciones As String,  _
                     ByVal CalibrationMethod As String,  _
@@ -2252,10 +2220,9 @@ Partial Public Class DataSet1
                     ByVal domFac As String,  _
                     ByVal TaxIDNo As String,  _
                     ByVal Email1 As String,  _
-                    ByVal Depto As String,  _
-                    ByVal Firma() As Byte) As cotLIMS4Row
+                    ByVal Depto As String) As cotLIMS4Row
             Dim rowcotLIMS4Row As cotLIMS4Row = CType(Me.NewRow,cotLIMS4Row)
-            Dim columnValuesArray() As Object = New Object() {NumCot, FechaDesde, FechaHasta, Nombre, Departament, Phone, Email, CompanyName, DomCont, Partidad, Cantidad, EquipId, Comparacion, ServiceName, Descrip, Price, _sub, idUsuarioAdministrador, Nombre1, lugar, moneda, pago, entrega, modalidad, Observaciones, CalibrationMethod, ServiceDescription, domFac, TaxIDNo, Email1, Depto, Firma}
+            Dim columnValuesArray() As Object = New Object() {NumCot, FechaDesde, FechaHasta, Nombre, Departament, Phone, Email, CompanyName, DomCont, Partidad, Cantidad, EquipId, Comparacion, Descrip, Price, _sub, idUsuarioAdministrador, Nombre1, lugar, moneda, pago, modalidad, Observaciones, CalibrationMethod, ServiceDescription, domFac, TaxIDNo, Email1, Depto}
             rowcotLIMS4Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowcotLIMS4Row)
             Return rowcotLIMS4Row
@@ -2297,7 +2264,6 @@ Partial Public Class DataSet1
             Me.columnCantidad = MyBase.Columns("Cantidad")
             Me.columnEquipId = MyBase.Columns("EquipId")
             Me.columnComparacion = MyBase.Columns("Comparacion")
-            Me.columnServiceName = MyBase.Columns("ServiceName")
             Me.columnDescrip = MyBase.Columns("Descrip")
             Me.columnPrice = MyBase.Columns("Price")
             Me.columnsub = MyBase.Columns("sub")
@@ -2306,7 +2272,6 @@ Partial Public Class DataSet1
             Me.columnlugar = MyBase.Columns("lugar")
             Me.columnmoneda = MyBase.Columns("moneda")
             Me.columnpago = MyBase.Columns("pago")
-            Me.columnentrega = MyBase.Columns("entrega")
             Me.columnmodalidad = MyBase.Columns("modalidad")
             Me.columnObservaciones = MyBase.Columns("Observaciones")
             Me.columnCalibrationMethod = MyBase.Columns("CalibrationMethod")
@@ -2315,7 +2280,6 @@ Partial Public Class DataSet1
             Me.columnTaxIDNo = MyBase.Columns("TaxIDNo")
             Me.columnEmail1 = MyBase.Columns("Email1")
             Me.columnDepto = MyBase.Columns("Depto")
-            Me.columnFirma = MyBase.Columns("Firma")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2347,8 +2311,6 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnEquipId)
             Me.columnComparacion = New Global.System.Data.DataColumn("Comparacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnComparacion)
-            Me.columnServiceName = New Global.System.Data.DataColumn("ServiceName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnServiceName)
             Me.columnDescrip = New Global.System.Data.DataColumn("Descrip", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDescrip)
             Me.columnPrice = New Global.System.Data.DataColumn("Price", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
@@ -2368,8 +2330,6 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnmoneda)
             Me.columnpago = New Global.System.Data.DataColumn("pago", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpago)
-            Me.columnentrega = New Global.System.Data.DataColumn("entrega", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnentrega)
             Me.columnmodalidad = New Global.System.Data.DataColumn("modalidad", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmodalidad)
             Me.columnObservaciones = New Global.System.Data.DataColumn("Observaciones", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -2386,8 +2346,6 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnEmail1)
             Me.columnDepto = New Global.System.Data.DataColumn("Depto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDepto)
-            Me.columnFirma = New Global.System.Data.DataColumn("Firma", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFirma)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNumCot}, true))
             Me.columnNumCot.AllowDBNull = false
             Me.columnNumCot.Unique = true
@@ -2410,7 +2368,6 @@ Partial Public Class DataSet1
             Me.columnEquipId.MaxLength = 50
             Me.columnComparacion.ReadOnly = true
             Me.columnComparacion.MaxLength = 2147483647
-            Me.columnServiceName.MaxLength = 50
             Me.columnDescrip.ReadOnly = true
             Me.columnDescrip.MaxLength = 2147483647
             Me.columnsub.ReadOnly = true
@@ -2418,7 +2375,6 @@ Partial Public Class DataSet1
             Me.columnlugar.MaxLength = 70
             Me.columnmoneda.MaxLength = 120
             Me.columnpago.MaxLength = 300
-            Me.columnentrega.MaxLength = 200
             Me.columnmodalidad.MaxLength = 70
             Me.columnObservaciones.MaxLength = 150
             Me.columnCalibrationMethod.MaxLength = 2147483647
@@ -4511,21 +4467,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ServiceName() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablecotLIMS4.ServiceNameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ServiceName' de la tabla 'cotLIMS4' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablecotLIMS4.ServiceNameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Descrip() As String
             Get
                 Try 
@@ -4647,21 +4588,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property entrega() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablecotLIMS4.entregaColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'entrega' de la tabla 'cotLIMS4' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablecotLIMS4.entregaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property modalidad() As String
             Get
                 Try 
@@ -4777,21 +4703,6 @@ Partial Public Class DataSet1
             End Get
             Set
                 Me(Me.tablecotLIMS4.DeptoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Firma() As Byte()
-            Get
-                Try 
-                    Return CType(Me(Me.tablecotLIMS4.FirmaColumn),Byte())
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Firma' de la tabla 'cotLIMS4' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablecotLIMS4.FirmaColumn) = value
             End Set
         End Property
         
@@ -4929,18 +4840,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsServiceNameNull() As Boolean
-            Return Me.IsNull(Me.tablecotLIMS4.ServiceNameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetServiceNameNull()
-            Me(Me.tablecotLIMS4.ServiceNameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsDescripNull() As Boolean
             Return Me.IsNull(Me.tablecotLIMS4.DescripColumn)
         End Function
@@ -5037,18 +4936,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsentregaNull() As Boolean
-            Return Me.IsNull(Me.tablecotLIMS4.entregaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetentregaNull()
-            Me(Me.tablecotLIMS4.entregaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsmodalidadNull() As Boolean
             Return Me.IsNull(Me.tablecotLIMS4.modalidadColumn)
         End Function
@@ -5141,18 +5028,6 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetDeptoNull()
             Me(Me.tablecotLIMS4.DeptoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsFirmaNull() As Boolean
-            Return Me.IsNull(Me.tablecotLIMS4.FirmaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetFirmaNull()
-            Me(Me.tablecotLIMS4.FirmaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -6588,7 +6463,6 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("Cantidad", "Cantidad")
             tableMapping.ColumnMappings.Add("EquipId", "EquipId")
             tableMapping.ColumnMappings.Add("Comparacion", "Comparacion")
-            tableMapping.ColumnMappings.Add("ServiceName", "ServiceName")
             tableMapping.ColumnMappings.Add("Descrip", "Descrip")
             tableMapping.ColumnMappings.Add("Price", "Price")
             tableMapping.ColumnMappings.Add("sub", "sub")
@@ -6597,7 +6471,6 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("lugar", "lugar")
             tableMapping.ColumnMappings.Add("moneda", "moneda")
             tableMapping.ColumnMappings.Add("pago", "pago")
-            tableMapping.ColumnMappings.Add("entrega", "entrega")
             tableMapping.ColumnMappings.Add("modalidad", "modalidad")
             tableMapping.ColumnMappings.Add("Observaciones", "Observaciones")
             tableMapping.ColumnMappings.Add("CalibrationMethod", "CalibrationMethod")
@@ -6606,7 +6479,6 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("TaxIDNo", "TaxIDNo")
             tableMapping.ColumnMappings.Add("Email1", "Email1")
             tableMapping.ColumnMappings.Add("Depto", "Depto")
-            tableMapping.ColumnMappings.Add("Firma", "Firma")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -6642,13 +6514,13 @@ Namespace DataSet1TableAdapters
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lugar", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@moneda", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pago", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@entrega", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@modalidad", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@obser", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@calMetodo", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@serDescripcion", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@domFactura", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@rfc", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@firma", Global.System.Data.SqlDbType.Image, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6673,13 +6545,13 @@ Namespace DataSet1TableAdapters
                     ByVal lugar As String,  _
                     ByVal moneda As String,  _
                     ByVal pago As String,  _
+                    ByVal entrega As String,  _
                     ByVal modalidad As String,  _
                     ByVal obser As String,  _
                     ByVal calMetodo As String,  _
                     ByVal serDescripcion As String,  _
                     ByVal domFactura As String,  _
-                    ByVal rfc As String,  _
-                    ByVal firma() As Byte) As Integer
+                    ByVal rfc As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (numCot.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(numCot.Value,Integer)
@@ -6761,40 +6633,40 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(16).Value = CType(pago,String)
             End If
-            If (modalidad Is Nothing) Then
+            If (entrega Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(17).Value = CType(modalidad,String)
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(entrega,String)
             End If
-            If (obser Is Nothing) Then
+            If (modalidad Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(18).Value = CType(obser,String)
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(modalidad,String)
             End If
-            If (calMetodo Is Nothing) Then
+            If (obser Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(19).Value = CType(calMetodo,String)
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(obser,String)
             End If
-            If (serDescripcion Is Nothing) Then
+            If (calMetodo Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(20).Value = CType(serDescripcion,String)
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(calMetodo,String)
             End If
-            If (domFactura Is Nothing) Then
+            If (serDescripcion Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(21).Value = CType(domFactura,String)
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(serDescripcion,String)
             End If
-            If (rfc Is Nothing) Then
+            If (domFactura Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(22).Value = CType(rfc,String)
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(domFactura,String)
             End If
-            If (firma Is Nothing) Then
+            If (rfc Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(23).Value = CType(firma,Byte())
+                Me.Adapter.SelectCommand.Parameters(23).Value = CType(rfc,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6824,13 +6696,13 @@ Namespace DataSet1TableAdapters
                     ByVal lugar As String,  _
                     ByVal moneda As String,  _
                     ByVal pago As String,  _
+                    ByVal entrega As String,  _
                     ByVal modalidad As String,  _
                     ByVal obser As String,  _
                     ByVal calMetodo As String,  _
                     ByVal serDescripcion As String,  _
                     ByVal domFactura As String,  _
-                    ByVal rfc As String,  _
-                    ByVal firma() As Byte) As DataSet1.cotLIMS4DataTable
+                    ByVal rfc As String) As DataSet1.cotLIMS4DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (numCot.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(numCot.Value,Integer)
@@ -6912,40 +6784,40 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(16).Value = CType(pago,String)
             End If
-            If (modalidad Is Nothing) Then
+            If (entrega Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(17).Value = CType(modalidad,String)
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(entrega,String)
             End If
-            If (obser Is Nothing) Then
+            If (modalidad Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(18).Value = CType(obser,String)
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(modalidad,String)
             End If
-            If (calMetodo Is Nothing) Then
+            If (obser Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(19).Value = CType(calMetodo,String)
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(obser,String)
             End If
-            If (serDescripcion Is Nothing) Then
+            If (calMetodo Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(20).Value = CType(serDescripcion,String)
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(calMetodo,String)
             End If
-            If (domFactura Is Nothing) Then
+            If (serDescripcion Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(21).Value = CType(domFactura,String)
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(serDescripcion,String)
             End If
-            If (rfc Is Nothing) Then
+            If (domFactura Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(22).Value = CType(rfc,String)
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(domFactura,String)
             End If
-            If (firma Is Nothing) Then
+            If (rfc Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(23).Value = CType(firma,Byte())
+                Me.Adapter.SelectCommand.Parameters(23).Value = CType(rfc,String)
             End If
             Dim dataTable As DataSet1.cotLIMS4DataTable = New DataSet1.cotLIMS4DataTable()
             Me.Adapter.Fill(dataTable)
