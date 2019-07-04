@@ -136,13 +136,15 @@
             For i = 0 To vColeccion.Length - 1
                 FrmFiltarCampo.dgEmpresas.Rows.Add(False, vColeccion(i))
             Next
+            empresa = dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
             FrmFiltarCampo.Show()
         Else
-            bancorreo = True
-            FrmCompletarOV.txtNombreCompania.Text = dgEmpresas.Rows(e.RowIndex).Cells(3).Value.ToString()
+            bancorreo = 1
+            empresa = dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
             FrmCompletarOV.Show()
 
         End If
+
         'Dim direccion As String
         'Dim colonia As String
         'Dim ban As Integer

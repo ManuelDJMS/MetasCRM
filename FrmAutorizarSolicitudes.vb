@@ -8,21 +8,16 @@ Public Class FrmAutorizarSolicitudes
     End Sub
     Public Sub consultaGeneralDeCotizaciones()
         Try
-            If bancorreo = True Then
-
-            Else
-                MetodoMetasCotizador()
-                Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Referencia, FechaDesde, FechaHasta, Total, CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
+            MetodoMetasCotizador()
+            Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Referencia, FechaDesde, FechaHasta, Total, CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
 				INNER JOIN [DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId] where Creado= 0"
-                Dim comando As New SqlCommand(R, conexionMetasCotizador)
-                Dim lector As SqlDataReader
-                lector = comando.ExecuteReader
-                While lector.Read()
-                    DGRes.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7), False, lector(8))
-                End While
-                conexionMetasCotizador.Close()
-            End If
-            bancorreo = False
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                DGRes.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7), False, lector(8))
+            End While
+            conexionMetasCotizador.Close()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
             cadena = Err.Description
@@ -191,6 +186,7 @@ Public Class FrmAutorizarSolicitudes
                     Next
                     MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
                     MetodoMetasCotizador()
+                    bancorreo = 2
                     FrmCompletarOV.var.Text = Me.cusAcount.Text
                     FrmCompletarOV.NumOV.Text = Me.OV.Text
                     FrmCompletarOV.ShowDialog()
