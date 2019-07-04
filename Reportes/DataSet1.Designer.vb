@@ -6514,7 +6514,6 @@ Namespace DataSet1TableAdapters
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lugar", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@moneda", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pago", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@entrega", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@modalidad", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@obser", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@calMetodo", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6545,7 +6544,6 @@ Namespace DataSet1TableAdapters
                     ByVal lugar As String,  _
                     ByVal moneda As String,  _
                     ByVal pago As String,  _
-                    ByVal entrega As String,  _
                     ByVal modalidad As String,  _
                     ByVal obser As String,  _
                     ByVal calMetodo As String,  _
@@ -6633,40 +6631,35 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(16).Value = CType(pago,String)
             End If
-            If (entrega Is Nothing) Then
+            If (modalidad Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(17).Value = CType(entrega,String)
-            End If
-            If (modalidad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(18).Value = CType(modalidad,String)
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(modalidad,String)
             End If
             If (obser Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(19).Value = CType(obser,String)
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(obser,String)
             End If
             If (calMetodo Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(20).Value = CType(calMetodo,String)
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(calMetodo,String)
             End If
             If (serDescripcion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(21).Value = CType(serDescripcion,String)
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(serDescripcion,String)
             End If
             If (domFactura Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(22).Value = CType(domFactura,String)
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(domFactura,String)
             End If
             If (rfc Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(23).Value = CType(rfc,String)
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(rfc,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6696,7 +6689,6 @@ Namespace DataSet1TableAdapters
                     ByVal lugar As String,  _
                     ByVal moneda As String,  _
                     ByVal pago As String,  _
-                    ByVal entrega As String,  _
                     ByVal modalidad As String,  _
                     ByVal obser As String,  _
                     ByVal calMetodo As String,  _
@@ -6784,40 +6776,35 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(16).Value = CType(pago,String)
             End If
-            If (entrega Is Nothing) Then
+            If (modalidad Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(17).Value = CType(entrega,String)
-            End If
-            If (modalidad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(18).Value = CType(modalidad,String)
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(modalidad,String)
             End If
             If (obser Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(19).Value = CType(obser,String)
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(obser,String)
             End If
             If (calMetodo Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(20).Value = CType(calMetodo,String)
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(calMetodo,String)
             End If
             If (serDescripcion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(21).Value = CType(serDescripcion,String)
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(serDescripcion,String)
             End If
             If (domFactura Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(22).Value = CType(domFactura,String)
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(domFactura,String)
             End If
             If (rfc Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(23).Value = CType(rfc,String)
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(rfc,String)
             End If
             Dim dataTable As DataSet1.cotLIMS4DataTable = New DataSet1.cotLIMS4DataTable()
             Me.Adapter.Fill(dataTable)

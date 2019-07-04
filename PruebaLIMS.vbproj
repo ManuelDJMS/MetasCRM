@@ -350,12 +350,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reportes\cotLIMS.Designer.vb">
-      <DependentUpon>cotLIMS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\cotLIMS.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Reportes\cotLIMSAct.Designer.vb">
       <DependentUpon>cotLIMSAct.vb</DependentUpon>
     </Compile>
@@ -370,22 +364,10 @@
     <Compile Include="Reportes\DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\FIRMA.Designer.vb">
-      <DependentUpon>FIRMA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\FIRMA.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Reportes\FrmReportes.Designer.vb">
       <DependentUpon>FrmReportes.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmReportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ImprimirCot.Designer.vb">
-      <DependentUpon>ImprimirCot.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ImprimirCot.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -483,25 +465,13 @@
     <EmbeddedResource Include="FrmRelacionesContactoEmpresas.resx">
       <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\cot.rdlc" />
-    <EmbeddedResource Include="Reportes\a.rdlc" />
     <EmbeddedResource Include="Reportes\cotActualizada.rdlc" />
-    <EmbeddedResource Include="Reportes\cotLIMS-Contactos.rdlc" />
-    <EmbeddedResource Include="Reportes\cotLIMS.resx">
-      <DependentUpon>cotLIMS.vb</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CotizacionModelo.rdlc" />
     <EmbeddedResource Include="Reportes\cotLIMSAct.resx">
       <DependentUpon>cotLIMSAct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\cotLIMSProspectos.rdlc" />
-    <EmbeddedResource Include="Reportes\FIRMA.resx">
-      <DependentUpon>FIRMA.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReportes.resx">
       <DependentUpon>FrmReportes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ImprimirCot.resx">
-      <DependentUpon>ImprimirCot.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportesGenerales.resx">
       <DependentUpon>FrmReportesGenerales.vb</DependentUpon>
@@ -521,7 +491,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

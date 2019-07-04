@@ -43,39 +43,39 @@ Public Class cotLIMSAct
         'While lectorMetasCotizador.Read()
         lectorMetasCotizador.Read()
         desde = lectorMetasCotizador(1)
-        MsgBox(desde)
+        ' MsgBox(desde)
         hasta = lectorMetasCotizador(2)
-        MsgBox(hasta)
+        ' MsgBox(hasta)
         nombre = lectorMetasCotizador(3)
-        MsgBox(nombre)
+        ' MsgBox(nombre)
         puesto = lectorMetasCotizador(4)
-        MsgBox(puesto)
+        'MsgBox(puesto)
         tel = lectorMetasCotizador(5)
-        MsgBox(tel)
+        '  MsgBox(tel)
         correo = lectorMetasCotizador(6)
-        MsgBox(correo)
+        'MsgBox(correo)
         emp = lectorMetasCotizador(7)
-        MsgBox(emp)
+        ' MsgBox(emp)
         dom = lectorMetasCotizador(8)
-        MsgBox(dom)
+        ' MsgBox(dom)
         cve = lectorMetasCotizador(17)
-        MsgBox(cve)
+        'MsgBox(cve)
         cotizo = lectorMetasCotizador(18)
-        MsgBox(cotizo)
+        ' MsgBox(cotizo)
         lugar = lectorMetasCotizador(19)
-        MsgBox(lugar)
+        ' MsgBox(lugar)
         moneda = lectorMetasCotizador(20)
-        MsgBox(moneda)
+        'MsgBox(moneda)
         pago = lectorMetasCotizador(21)
-        MsgBox(pago)
+        'MsgBox(pago)
         modalidad = lectorMetasCotizador(22)
-        MsgBox(modalidad)
+        'MsgBox(modalidad)
         obser = lectorMetasCotizador(23)
-        MsgBox(obser)
+        ' MsgBox(obser)
         calmetho = lectorMetasCotizador(24)
-        MsgBox(calmetho)
+        'MsgBox(calmetho)
         services = lectorMetasCotizador(25)
-        MsgBox(services)
+        ' MsgBox(services)
         domFac = lectorMetasCotizador(26)
 
         rfc = lectorMetasCotizador(27)
@@ -105,7 +105,7 @@ Public Class cotLIMSAct
         Dim param15 = New SqlParameter("@lugar", SqlDbType.VarChar)
         Dim param16 = New SqlParameter("@moneda", SqlDbType.VarChar)
         Dim param17 = New SqlParameter("@pago", SqlDbType.VarChar)
-        Dim param18 = New SqlParameter("@entrega", SqlDbType.VarChar)
+        'Dim param18 = New SqlParameter("@entrega", SqlDbType.VarChar)
         Dim param19 = New SqlParameter("@modalidad", SqlDbType.VarChar)
         Dim param20 = New SqlParameter("@obser", SqlDbType.VarChar)
         Dim param21 = New SqlParameter("@calMetodo", SqlDbType.VarChar)
@@ -129,7 +129,7 @@ Public Class cotLIMSAct
         param15.Direction = ParameterDirection.Input
         param16.Direction = ParameterDirection.Input
         param17.Direction = ParameterDirection.Input
-        param18.Direction = ParameterDirection.Input
+        'param18.Direction = ParameterDirection.Input
         param19.Direction = ParameterDirection.Input
         param20.Direction = ParameterDirection.Input
         param21.Direction = ParameterDirection.Input
@@ -153,7 +153,7 @@ Public Class cotLIMSAct
         param15.Value = lugar
         param16.Value = moneda
         param17.Value = pago
-        param18.Value = entrega
+        'param18.Value = entrega
         param19.Value = modalidad
         param20.Value = obser
         param21.Value = calmetho
@@ -177,7 +177,7 @@ Public Class cotLIMSAct
         Adaptador.SelectCommand.Parameters.Add(param15)
         Adaptador.SelectCommand.Parameters.Add(param16)
         Adaptador.SelectCommand.Parameters.Add(param17)
-        Adaptador.SelectCommand.Parameters.Add(param18)
+        'Adaptador.SelectCommand.Parameters.Add(param18)
         Adaptador.SelectCommand.Parameters.Add(param19)
         Adaptador.SelectCommand.Parameters.Add(param20)
         Adaptador.SelectCommand.Parameters.Add(param21)
@@ -207,20 +207,20 @@ Public Class cotLIMSAct
         Dim p15 As New ReportParameter("lugar", lugar)
         Dim p16 As New ReportParameter("moneda", moneda)
         Dim p17 As New ReportParameter("pago", pago)
-        Dim p18 As New ReportParameter("entrega", entrega)
+        'Dim p18 As New ReportParameter("entrega", entrega)
         Dim p19 As New ReportParameter("modalidad", modalidad)
         Dim p20 As New ReportParameter("obser", obser)
         Dim p21 As New ReportParameter("calMetodo", calmetho)
-        Dim p22 As New ReportParameter("serDescripcion", services)
+        Dim p22 As New ReportParameter("serDescription", services)
         Dim p23 As New ReportParameter("domFac", domFac)
         Dim p24 As New ReportParameter("rfc", rfc)
 
         Dim Reportes As New ReportDataSource("DataSet1", Data.Tables(0))
         FrmReportes.ReportViewer1.LocalReport.DataSources.Clear()
         FrmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
-        FrmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Users\Software TI\Documents\GitHub\MetasCRM\Reportes\cotActualizada.rdlc"
+        FrmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Users\Software TI\Documents\GitHub\MetasCRM\Reportes\CotizacionModelo.rdlc"
         FrmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17,
-                                                            p18, p19, p20, p21, p22, p23, p24})
+                                                             p19, p20, p21, p22, p23, p24})
         FrmReportes.ReportViewer1.RefreshReport()
         FrmReportes.Show()
         conexionMetasCotizador.Close()
