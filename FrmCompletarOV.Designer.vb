@@ -67,7 +67,7 @@ Partial Class FrmCompletarOV
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtOrdenCompra = New System.Windows.Forms.TextBox()
         Me.btCotizacion = New System.Windows.Forms.Button()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.NumOV = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.var = New System.Windows.Forms.Label()
         CType(Me.btSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -278,7 +278,7 @@ Partial Class FrmCompletarOV
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.var)
-        Me.Panel2.Controls.Add(Me.Label21)
+        Me.Panel2.Controls.Add(Me.NumOV)
         Me.Panel2.Controls.Add(Me.Label26)
         Me.Panel2.Controls.Add(Me.Label22)
         Me.Panel2.Controls.Add(Me.PictureBox1)
@@ -536,15 +536,15 @@ Partial Class FrmCompletarOV
         Me.btCotizacion.Text = "GUARDAR"
         Me.btCotizacion.UseVisualStyleBackColor = False
         '
-        'Label21
+        'NumOV
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(538, 18)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(20, 14)
-        Me.Label21.TabIndex = 168
-        Me.Label21.Text = "ov"
+        Me.NumOV.AutoSize = True
+        Me.NumOV.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumOV.Location = New System.Drawing.Point(538, 18)
+        Me.NumOV.Name = "NumOV"
+        Me.NumOV.Size = New System.Drawing.Size(20, 14)
+        Me.NumOV.TabIndex = 168
+        Me.NumOV.Text = "ov"
         '
         'Label22
         '
@@ -565,6 +565,7 @@ Partial Class FrmCompletarOV
         Me.var.Size = New System.Drawing.Size(20, 14)
         Me.var.TabIndex = 170
         Me.var.Text = "ov"
+        Me.var.Visible = False
         '
         'FrmCompletarOV
         '
@@ -641,7 +642,7 @@ Partial Class FrmCompletarOV
     Friend WithEvents txtPeso As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents btCotizacion As Button
-    Friend WithEvents Label21 As Label
+    Friend WithEvents NumOV As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents var As Label
 End Class
