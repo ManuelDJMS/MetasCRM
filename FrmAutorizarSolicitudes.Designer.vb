@@ -78,17 +78,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgCot = New System.Windows.Forms.DataGridView()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.txtQuienCotizo = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -133,6 +123,15 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,7 +140,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgCot, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -535,7 +534,7 @@ Partial Class FrmAutorizarSolicitudes
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
+        Me.TabPage1.Controls.Add(Me.dgCot)
         Me.TabPage1.Controls.Add(Me.Label57)
         Me.TabPage1.Controls.Add(Me.txtQuienCotizo)
         Me.TabPage1.Controls.Add(Me.Panel5)
@@ -577,13 +576,13 @@ Partial Class FrmAutorizarSolicitudes
         Me.TabPage1.TabIndex = 8
         Me.TabPage1.Text = "Detalles de la cotización"
         '
-        'DataGridView1
+        'dgCot
         '
         DataGridViewCellStyle14.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gray
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
+        Me.dgCot.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
+        Me.dgCot.BackgroundColor = System.Drawing.Color.Gray
+        Me.dgCot.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgCot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
         DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle15.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -591,9 +590,9 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column11, Me.Column10, Me.Column12, Me.Column13, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18})
+        Me.dgCot.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        Me.dgCot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgCot.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column11, Me.Column10, Me.Column12, Me.Column13, Me.Column14, Me.Column16, Me.Column17, Me.Column18})
         DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle16.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -601,10 +600,10 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle16
-        Me.DataGridView1.GridColor = System.Drawing.Color.Gainsboro
-        Me.DataGridView1.Location = New System.Drawing.Point(14, 231)
-        Me.DataGridView1.Name = "DataGridView1"
+        Me.dgCot.DefaultCellStyle = DataGridViewCellStyle16
+        Me.dgCot.GridColor = System.Drawing.Color.Gainsboro
+        Me.dgCot.Location = New System.Drawing.Point(47, 228)
+        Me.dgCot.Name = "dgCot"
         DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle17.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -612,67 +611,11 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.dgCot.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
         DataGridViewCellStyle18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle18
-        Me.DataGridView1.Size = New System.Drawing.Size(1112, 296)
-        Me.DataGridView1.TabIndex = 278
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "#Instrumetro"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 80
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "ServCatalogo"
-        Me.Column11.Name = "Column11"
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Tipo"
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 190
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "Marca"
-        Me.Column12.Name = "Column12"
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "Modelo"
-        Me.Column13.Name = "Column13"
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "No. Serie"
-        Me.Column14.Name = "Column14"
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "ID"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 80
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "Alcance"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 160
-        '
-        'Column17
-        '
-        Me.Column17.HeaderText = "Precio"
-        Me.Column17.Name = "Column17"
-        Me.Column17.Width = 80
-        '
-        'Column18
-        '
-        Me.Column18.HeaderText = "Cantidad real"
-        Me.Column18.Name = "Column18"
-        Me.Column18.Width = 80
+        Me.dgCot.RowsDefaultCellStyle = DataGridViewCellStyle18
+        Me.dgCot.Size = New System.Drawing.Size(1034, 296)
+        Me.dgCot.TabIndex = 278
         '
         'Label57
         '
@@ -1139,6 +1082,56 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
         '
+        'Column9
+        '
+        Me.Column9.HeaderText = "#Instrumetro"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 80
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "ServCatalogo"
+        Me.Column11.Name = "Column11"
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Tipo"
+        Me.Column10.Name = "Column10"
+        Me.Column10.Width = 190
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "Marca"
+        Me.Column12.Name = "Column12"
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "Modelo"
+        Me.Column13.Name = "Column13"
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "No. Serie"
+        Me.Column14.Name = "Column14"
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "Alcance"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 160
+        '
+        'Column17
+        '
+        Me.Column17.HeaderText = "Precio"
+        Me.Column17.Name = "Column17"
+        Me.Column17.Width = 80
+        '
+        'Column18
+        '
+        Me.Column18.HeaderText = "Cantidad real"
+        Me.Column18.Name = "Column18"
+        Me.Column18.Width = 80
+        '
         'FrmAutorizarSolicitudes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1165,7 +1158,7 @@ Partial Class FrmAutorizarSolicitudes
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgCot, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -1196,7 +1189,7 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents DGOportunidades As DataGridView
     Friend WithEvents DGContactos As DataGridView
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgCot As DataGridView
     Friend WithEvents Label57 As Label
     Friend WithEvents txtQuienCotizo As Label
     Friend WithEvents Panel5 As Panel
@@ -1230,16 +1223,6 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents txtFechaHasta As Label
     Friend WithEvents Label59 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents Column14 As DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents Column16 As DataGridViewTextBoxColumn
-    Friend WithEvents Column17 As DataGridViewTextBoxColumn
-    Friend WithEvents Column18 As DataGridViewTextBoxColumn
     Friend WithEvents Label7 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
@@ -1268,4 +1251,13 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents dtp As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column17 As DataGridViewTextBoxColumn
+    Friend WithEvents Column18 As DataGridViewTextBoxColumn
 End Class
