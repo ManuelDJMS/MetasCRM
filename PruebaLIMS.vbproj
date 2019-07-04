@@ -125,6 +125,12 @@
     <Compile Include="Cotizaciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCompletarOV.Designer.vb">
+      <DependentUpon>FrmCompletarOV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompletarOV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCotizadorLIMS.Designer.vb">
       <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
     </Compile>
@@ -374,6 +380,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Cotizaciones.resx">
       <DependentUpon>Cotizaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompletarOV.resx">
+      <DependentUpon>FrmCompletarOV.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCotizadorLIMS.resx">
       <DependentUpon>FrmCotizadorLIMS.vb</DependentUpon>
