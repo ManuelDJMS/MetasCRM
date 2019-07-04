@@ -1,22 +1,5 @@
 ﻿
 Public Class FrmBusquedadFolio
-    Private Sub FrmBusquedadFolio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Parte para llenar el data de aarticulos------------este es el que selecciona-----------------------------------------------------------------------------
-        MetodoMetasInf2019()
-        comando2019 = conexion2019.CreateCommand
-        Dim R As String
-        R = "select [MetasCotizador-3].[dbo].[PRE-FACTURA].Fecha, [MetasCotizador-3].[dbo].[PRE-FACTURA].Folio,
-        [METASINF-2019-3].[dbo].[MetAsInf].Compania, [MetasCotizador-3].[dbo].[PRE-FACTURA].Total
-        from [MetasCotizador-3].[dbo].[PRE-FACTURA] inner join [METASINF-2019-3].[dbo].[MetAsInf] on [MetasCotizador-3].[dbo].[PRE-FACTURA].ClaveEmpresa= [METASINF-2019-3].[dbo].[MetAsInf].Clavempresa
-        inner join  [METASINF-2019-3].[dbo].[Contactos-Clientes-Usuarios] on [MetasCotizador-3].[dbo].[PRE-FACTURA].ClaveContacto=[METASINF-2019-3].[dbo].[Contactos-Clientes-Usuarios].ClaveContacto"
-        comando2019.CommandText = R
-        lector2019 = comando2019.ExecuteReader
-        While lector2019.Read()
-            dgFolios.Rows.Add(lector2019(0), lector2019(1), lector2019(2), lector2019(3))
-        End While
-        lector2019.Close()
-        'clase.Close()
-    End Sub
     Private Sub dtHasta_ValueChanged(sender As Object, e As EventArgs) Handles dtHasta.ValueChanged
         Try
             Dim fechadesde, fechahasta As String

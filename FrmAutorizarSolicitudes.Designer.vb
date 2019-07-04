@@ -79,6 +79,15 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgCot = New System.Windows.Forms.DataGridView()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.txtQuienCotizo = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -123,15 +132,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -459,9 +459,9 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(945, 15)
+        Me.Button1.Location = New System.Drawing.Point(982, 15)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(168, 33)
+        Me.Button1.Size = New System.Drawing.Size(131, 33)
         Me.Button1.TabIndex = 166
         Me.Button1.Text = "Generar OV"
         Me.Button1.UseVisualStyleBackColor = False
@@ -473,7 +473,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(825, 15)
+        Me.Button2.Location = New System.Drawing.Point(865, 15)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 33)
         Me.Button2.TabIndex = 166
@@ -616,6 +616,56 @@ Partial Class FrmAutorizarSolicitudes
         Me.dgCot.RowsDefaultCellStyle = DataGridViewCellStyle18
         Me.dgCot.Size = New System.Drawing.Size(1034, 296)
         Me.dgCot.TabIndex = 278
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "#Instrumetro"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 80
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "ServCatalogo"
+        Me.Column11.Name = "Column11"
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Tipo"
+        Me.Column10.Name = "Column10"
+        Me.Column10.Width = 190
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "Marca"
+        Me.Column12.Name = "Column12"
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "Modelo"
+        Me.Column13.Name = "Column13"
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "No. Serie"
+        Me.Column14.Name = "Column14"
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "Alcance"
+        Me.Column16.Name = "Column16"
+        Me.Column16.Width = 160
+        '
+        'Column17
+        '
+        Me.Column17.HeaderText = "Precio"
+        Me.Column17.Name = "Column17"
+        Me.Column17.Width = 80
+        '
+        'Column18
+        '
+        Me.Column18.HeaderText = "Cantidad real"
+        Me.Column18.Name = "Column18"
+        Me.Column18.Width = 80
         '
         'Label57
         '
@@ -1081,56 +1131,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "#Instrumetro"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 80
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "ServCatalogo"
-        Me.Column11.Name = "Column11"
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Tipo"
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 190
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "Marca"
-        Me.Column12.Name = "Column12"
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "Modelo"
-        Me.Column13.Name = "Column13"
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "No. Serie"
-        Me.Column14.Name = "Column14"
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "Alcance"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 160
-        '
-        'Column17
-        '
-        Me.Column17.HeaderText = "Precio"
-        Me.Column17.Name = "Column17"
-        Me.Column17.Width = 80
-        '
-        'Column18
-        '
-        Me.Column18.HeaderText = "Cantidad real"
-        Me.Column18.Name = "Column18"
-        Me.Column18.Width = 80
         '
         'FrmAutorizarSolicitudes
         '
