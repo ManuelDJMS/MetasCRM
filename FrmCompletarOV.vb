@@ -17,8 +17,8 @@ Public Class FrmCompletarOV
 
         End If
         Dim comando As New SqlCommand(R, conexionLIMS)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
         lector.Read()
 
         txtNombreCompania.Text = lector(5)
@@ -31,6 +31,7 @@ Public Class FrmCompletarOV
 
         txtDireccion.Text = lector(7)
         terminosPago.Text = lector(6)
+<<<<<<< HEAD
         numCuenta.Text = var.Text
         lector.Close()
         R = "SELECT [Id],[ShipVia] FROM [MetAs_Live-pruebas].[dbo].[SetupShippingMode]"
@@ -41,6 +42,8 @@ Public Class FrmCompletarOV
             cboRecepcion.Items.Add(lector2(1))
             embarcarPor.Items.Add(lector2(1))
         End While
+=======
+>>>>>>> ff5ec5f856146f7d75b19ff457d9eaa26ac141fa
         If bancorreo = 2 Then
             numCuenta.Text = var.Text
         ElseIf bancorreo = 3 Then
