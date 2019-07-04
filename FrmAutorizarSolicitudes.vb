@@ -129,83 +129,83 @@ Public Class FrmAutorizarSolicitudes
         Dim con As FrmCompletarOV
         Dim cliente As String
         Dim cu, ca As Integer
-        'Try
-        Dim seleccionado As Boolean
-        Dim R As String
-        Dim b, RecDate, OnSite As Boolean
-        RecDate = True
-        OnSite = False
-        If DGRes.Rows.Count < 2 Then
-            MsgBox("No hay ordenes de venta seleccionadas.", MsgBoxStyle.Critical, "Error del sistema.")
-        Else
-            '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
-            For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
-                seleccionado = DGRes.Rows(i).Cells(8).Value
-                If seleccionado = True Then
-                    b = True
-                    Exit For
-                Else
-                    b = False
-                End If
-            Next
-            '----------------------------------------------------------------------------------------------------
-            If b = True Then
+        Try
+            Dim seleccionado As Boolean
+            Dim R As String
+            Dim b, RecDate, OnSite As Boolean
+            RecDate = True
+            OnSite = False
+            If DGRes.Rows.Count < 2 Then
+                MsgBox("No hay ordenes de venta seleccionadas.", MsgBoxStyle.Critical, "Error del sistema.")
+            Else
+                '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
                 For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
                     seleccionado = DGRes.Rows(i).Cells(8).Value
-
-                    Dim fecha As String
                     If seleccionado = True Then
-                        MetodoLIMS()
-                        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
-                            values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', ' " & DGRes.Rows(i).Cells(0).Value & "', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
-                        Dim comando As New SqlCommand
-                        comando = conexionLIMS.CreateCommand
-                        comando.CommandText = R
-                        comando.ExecuteNonQuery()
-                        cu = Val(DGRes.Rows(i).Cells(19).Value)
-                        ca = DGRes.Rows(i).Cells(9).Value
-                        cusAcount.Text = ca
-                        fecha = dtp.Value.ToShortDateString
-                        conexionLIMS.Close()
-                        MetodoLIMS()
-                        R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
-                            FROM SalesOrderDetails where [CustomerId] = '" & Val(cu) & "' and [CustAccountNo] = '" & Val(ca) & "'  and [RecDate] = '" & fecha & "' ORDER BY [SOId] DESC"
-                        Dim comando2 As New SqlCommand(R, conexionLIMS)
-                        Dim lector As SqlDataReader
-                        lector = comando2.ExecuteReader
-                        lector.Read()
-                        Dim numOV As Integer = lector(0)
-                        conexionLIMS.Close()
-                        MetodoMetasCotizador()
-                        R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(0).Value) & ""
-                        Dim coma As New SqlCommand(R, conexionMetasCotizador)
-                        OV.Text = numOV
-                        coma.ExecuteNonQuery()
-                        conexionMetasCotizador.Close()
+                        b = True
+                        Exit For
+                    Else
+                        b = False
                     End If
                 Next
-                MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
-                MetodoMetasCotizador()
-                FrmCompletarOV.var.Text = Me.cusAcount.Text
-                FrmCompletarOV.NumOV.Text = Me.OV.Text
-                FrmCompletarOV.ShowDialog()
+                '----------------------------------------------------------------------------------------------------
+                If b = True Then
+                    For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
+                        seleccionado = DGRes.Rows(i).Cells(8).Value
 
-                If DGRes.Rows.Count < 2 Then
+                        Dim fecha As String
+                        If seleccionado = True Then
+                            MetodoLIMS()
+                            R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
+                            values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', ' " & DGRes.Rows(i).Cells(0).Value & "', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
+                            Dim comando As New SqlCommand
+                            comando = conexionLIMS.CreateCommand
+                            comando.CommandText = R
+                            comando.ExecuteNonQuery()
+                            cu = Val(DGRes.Rows(i).Cells(19).Value)
+                            ca = DGRes.Rows(i).Cells(9).Value
+                            cusAcount.Text = ca
+                            fecha = dtp.Value.ToShortDateString
+                            conexionLIMS.Close()
+                            MetodoLIMS()
+                            R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
+                            FROM SalesOrderDetails where [CustomerId] = '" & Val(cu) & "' and [CustAccountNo] = '" & Val(ca) & "'  and [RecDate] = '" & fecha & "' ORDER BY [SOId] DESC"
+                            Dim comando2 As New SqlCommand(R, conexionLIMS)
+                            Dim lector As SqlDataReader
+                            lector = comando2.ExecuteReader
+                            lector.Read()
+                            Dim numOV As Integer = lector(0)
+                            conexionLIMS.Close()
+                            MetodoMetasCotizador()
+                            R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(0).Value) & ""
+                            Dim coma As New SqlCommand(R, conexionMetasCotizador)
+                            OV.Text = numOV
+                            coma.ExecuteNonQuery()
+                            conexionMetasCotizador.Close()
+                        End If
+                    Next
+                    MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
+                    MetodoMetasCotizador()
+                    FrmCompletarOV.var.Text = Me.cusAcount.Text
+                    FrmCompletarOV.NumOV.Text = Me.OV.Text
+                    FrmCompletarOV.ShowDialog()
 
+                    If DGRes.Rows.Count < 2 Then
+
+                    Else
+                        DGRes.Rows.Clear()
+                    End If
+                    consultaGeneralDeCotizaciones()
                 Else
-                    DGRes.Rows.Clear()
+                    MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
-                consultaGeneralDeCotizaciones()
-            Else
-                MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
             End If
-        End If
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-        '    cadena = Err.Description
-        '    cadena = cadena.Replace("'", "")
-        '    Bitacora("FrmAutorizarSolicitudes", "Error al guardar la OV", Err.Number, cadena)
-        'End Try
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+        cadena = Err.Description
+        cadena = cadena.Replace("'", "")
+        Bitacora("FrmAutorizarSolicitudes", "Error al guardar la OV", Err.Number, cadena)
+        End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
