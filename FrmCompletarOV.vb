@@ -31,9 +31,23 @@ Public Class FrmCompletarOV
 
         txtDireccion.Text = lector(7)
         terminosPago.Text = lector(6)
-<<<<<<< HEAD
         numCuenta.Text = var.Text
+
+
+        If bancorreo = 2 Then
+            numCuenta.Text = var.Text
+        ElseIf bancorreo = 3 Then
+            numCuenta.Text = lector(1)
+        End If
         lector.Close()
+        bancorreo = False
+        correos = ""
+        bancorreo = 0
+
+
+
+
+
         R = "SELECT [Id],[ShipVia] FROM [MetAs_Live-pruebas].[dbo].[SetupShippingMode]"
         Dim comando2 As New SqlCommand(R, conexionLIMS)
         Dim lector2 As SqlDataReader
@@ -42,17 +56,6 @@ Public Class FrmCompletarOV
             cboRecepcion.Items.Add(lector2(1))
             embarcarPor.Items.Add(lector2(1))
         End While
-=======
->>>>>>> ff5ec5f856146f7d75b19ff457d9eaa26ac141fa
-        If bancorreo = 2 Then
-            numCuenta.Text = var.Text
-        ElseIf bancorreo = 3 Then
-            numCuenta.Text = lector(1)
-        End If
-
-        bancorreo = False
-        correos = ""
-        bancorreo = 0
     End Sub
 
     Private Sub btCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
