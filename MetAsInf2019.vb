@@ -4,6 +4,7 @@ Imports System.IO
 Imports System.Collections
 Module MetAsInf2019
     Public servidor As String = "[DATABASESERVER\COMPAC].[MetAs_Live-pruebas].[dbo]." 'Esta variable sirve para alojar el servidor para las consultas
+    Public bancorreo As Boolean 'Esta variable es una bandera para abrir cierto formukario
     Public conexion2019 As SqlConnection              ''Base de datos METASINF-2019
     Public comando2019 As SqlCommand
     Public lector2019 As SqlDataReader

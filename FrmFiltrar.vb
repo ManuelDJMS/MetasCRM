@@ -138,7 +138,10 @@
             Next
             FrmFiltarCampo.Show()
         Else
+            bancorreo = True
+            FrmCompletarOV.txtNombreCompania.Text = dgEmpresas.Rows(e.RowIndex).Cells(3).Value.ToString()
             FrmCompletarOV.Show()
+
         End If
         'Dim direccion As String
         'Dim colonia As String
