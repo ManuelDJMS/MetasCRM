@@ -473,9 +473,9 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(945, 15)
+        Me.Button1.Location = New System.Drawing.Point(982, 15)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(168, 33)
+        Me.Button1.Size = New System.Drawing.Size(131, 33)
         Me.Button1.TabIndex = 166
         Me.Button1.Text = "Generar OV"
         Me.Button1.UseVisualStyleBackColor = False
@@ -487,7 +487,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(825, 15)
+        Me.Button2.Location = New System.Drawing.Point(865, 15)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 33)
         Me.Button2.TabIndex = 166
