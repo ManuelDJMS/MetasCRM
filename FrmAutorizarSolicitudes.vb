@@ -186,6 +186,7 @@ Public Class FrmAutorizarSolicitudes
                     Next
                     MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
                     MetodoMetasCotizador()
+                    bancorreo = 2
                     FrmCompletarOV.var.Text = Me.cusAcount.Text
                     FrmCompletarOV.NumOV.Text = Me.OV.Text
                     FrmCompletarOV.ShowDialog()
@@ -202,9 +203,9 @@ Public Class FrmAutorizarSolicitudes
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-        cadena = Err.Description
-        cadena = cadena.Replace("'", "")
-        Bitacora("FrmAutorizarSolicitudes", "Error al guardar la OV", Err.Number, cadena)
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmAutorizarSolicitudes", "Error al guardar la OV", Err.Number, cadena)
         End Try
     End Sub
 

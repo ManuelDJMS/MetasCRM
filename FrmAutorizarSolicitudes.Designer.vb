@@ -69,6 +69,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.DGContactos = New System.Windows.Forms.DataGridView()
         Me.DGOportunidades = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btSinCot = New System.Windows.Forms.Button()
         Me.OV = New System.Windows.Forms.Label()
         Me.cusAcount = New System.Windows.Forms.Label()
         Me.dtp = New System.Windows.Forms.DateTimePicker()
@@ -134,7 +135,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.btSinCot = New System.Windows.Forms.Button()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -450,6 +450,21 @@ Partial Class FrmAutorizarSolicitudes
         Me.Panel2.Size = New System.Drawing.Size(1140, 66)
         Me.Panel2.TabIndex = 152
         '
+        'btSinCot
+        '
+        Me.btSinCot.BackColor = System.Drawing.Color.Green
+        Me.btSinCot.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btSinCot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btSinCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btSinCot.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btSinCot.ForeColor = System.Drawing.Color.White
+        Me.btSinCot.Location = New System.Drawing.Point(782, 15)
+        Me.btSinCot.Name = "btSinCot"
+        Me.btSinCot.Size = New System.Drawing.Size(83, 33)
+        Me.btSinCot.TabIndex = 181
+        Me.btSinCot.Text = "Sin Cot"
+        Me.btSinCot.UseVisualStyleBackColor = False
+        '
         'OV
         '
         Me.OV.AutoSize = True
@@ -458,6 +473,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.OV.Size = New System.Drawing.Size(45, 13)
         Me.OV.TabIndex = 169
         Me.OV.Text = "Label10"
+        Me.OV.Visible = False
         '
         'cusAcount
         '
@@ -1156,21 +1172,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
-        '
-        'btSinCot
-        '
-        Me.btSinCot.BackColor = System.Drawing.Color.Green
-        Me.btSinCot.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btSinCot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.btSinCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btSinCot.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btSinCot.ForeColor = System.Drawing.Color.White
-        Me.btSinCot.Location = New System.Drawing.Point(782, 15)
-        Me.btSinCot.Name = "btSinCot"
-        Me.btSinCot.Size = New System.Drawing.Size(83, 33)
-        Me.btSinCot.TabIndex = 181
-        Me.btSinCot.Text = "Sin Cot"
-        Me.btSinCot.UseVisualStyleBackColor = False
         '
         'FrmAutorizarSolicitudes
         '

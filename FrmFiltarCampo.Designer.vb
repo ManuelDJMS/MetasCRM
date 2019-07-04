@@ -33,10 +33,11 @@ Partial Class FrmFiltarCampo
         Me.txtCotizacion19 = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.dgEmpresas = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btSalir = New System.Windows.Forms.PictureBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btSalir = New System.Windows.Forms.PictureBox()
+        Me.btSinCot = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +48,7 @@ Partial Class FrmFiltarCampo
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.btSinCot)
         Me.Panel1.Controls.Add(Me.Panel7)
         Me.Panel1.Controls.Add(Me.dgEmpresas)
         Me.Panel1.Location = New System.Drawing.Point(4, 28)
@@ -151,8 +153,19 @@ Partial Class FrmFiltarCampo
         Me.dgEmpresas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.DataGridViewTextBoxColumn2})
         Me.dgEmpresas.Location = New System.Drawing.Point(14, 66)
         Me.dgEmpresas.Name = "dgEmpresas"
-        Me.dgEmpresas.Size = New System.Drawing.Size(390, 195)
+        Me.dgEmpresas.Size = New System.Drawing.Size(390, 159)
         Me.dgEmpresas.TabIndex = 156
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Seleccionar"
+        Me.Column1.Name = "Column1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Correo"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 240
         '
         'Label1
         '
@@ -178,16 +191,20 @@ Partial Class FrmFiltarCampo
         Me.btSalir.TabIndex = 157
         Me.btSalir.TabStop = False
         '
-        'Column1
+        'btSinCot
         '
-        Me.Column1.HeaderText = "Seleccionar"
-        Me.Column1.Name = "Column1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Correo"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 240
+        Me.btSinCot.BackColor = System.Drawing.Color.Green
+        Me.btSinCot.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btSinCot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btSinCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btSinCot.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btSinCot.ForeColor = System.Drawing.Color.White
+        Me.btSinCot.Location = New System.Drawing.Point(321, 220)
+        Me.btSinCot.Name = "btSinCot"
+        Me.btSinCot.Size = New System.Drawing.Size(83, 33)
+        Me.btSinCot.TabIndex = 182
+        Me.btSinCot.Text = "Aceptar"
+        Me.btSinCot.UseVisualStyleBackColor = False
         '
         'FrmFiltarCampo
         '
@@ -227,4 +244,5 @@ Partial Class FrmFiltarCampo
     Friend WithEvents Label38 As Label
     Friend WithEvents Column1 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents btSinCot As Button
 End Class

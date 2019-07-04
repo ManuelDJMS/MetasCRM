@@ -26,6 +26,7 @@ Partial Class FrmCompletarOV
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btSalir = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btCotizacion = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PanelCot = New System.Windows.Forms.Panel()
@@ -42,7 +43,10 @@ Partial Class FrmCompletarOV
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.NumOV = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.var = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -53,7 +57,7 @@ Partial Class FrmCompletarOV
         Me.Label19 = New System.Windows.Forms.Label()
         Me.cboRecepcion = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtVolumen = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtPeso = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -61,15 +65,11 @@ Partial Class FrmCompletarOV
         Me.Label15 = New System.Windows.Forms.Label()
         Me.cboRecibidoPor = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtRefCot = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.dtpFechaRecep = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtOrdenCompra = New System.Windows.Forms.TextBox()
-        Me.btCotizacion = New System.Windows.Forms.Button()
-        Me.NumOV = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.var = New System.Windows.Forms.Label()
         CType(Me.btSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -117,6 +117,20 @@ Partial Class FrmCompletarOV
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(585, 558)
         Me.Panel1.TabIndex = 167
+        '
+        'btCotizacion
+        '
+        Me.btCotizacion.BackColor = System.Drawing.Color.SteelBlue
+        Me.btCotizacion.FlatAppearance.BorderSize = 0
+        Me.btCotizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btCotizacion.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btCotizacion.ForeColor = System.Drawing.Color.White
+        Me.btCotizacion.Location = New System.Drawing.Point(461, 516)
+        Me.btCotizacion.Name = "btCotizacion"
+        Me.btCotizacion.Size = New System.Drawing.Size(111, 33)
+        Me.btCotizacion.TabIndex = 179
+        Me.btCotizacion.Text = "ENVIAR"
+        Me.btCotizacion.UseVisualStyleBackColor = False
         '
         'Panel3
         '
@@ -277,16 +291,26 @@ Partial Class FrmCompletarOV
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.var)
         Me.Panel2.Controls.Add(Me.NumOV)
         Me.Panel2.Controls.Add(Me.Label26)
         Me.Panel2.Controls.Add(Me.Label22)
+        Me.Panel2.Controls.Add(Me.var)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Label27)
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(569, 46)
         Me.Panel2.TabIndex = 0
+        '
+        'NumOV
+        '
+        Me.NumOV.AutoSize = True
+        Me.NumOV.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumOV.Location = New System.Drawing.Point(538, 18)
+        Me.NumOV.Name = "NumOV"
+        Me.NumOV.Size = New System.Drawing.Size(20, 14)
+        Me.NumOV.TabIndex = 168
+        Me.NumOV.Text = "ov"
         '
         'Label26
         '
@@ -298,6 +322,27 @@ Partial Class FrmCompletarOV
         Me.Label26.Size = New System.Drawing.Size(228, 18)
         Me.Label26.TabIndex = 168
         Me.Label26.Text = "Completar datos de Orden de venta"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(462, 18)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(62, 15)
+        Me.Label22.TabIndex = 169
+        Me.Label22.Text = "NÚM. OV:"
+        '
+        'var
+        '
+        Me.var.AutoSize = True
+        Me.var.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.var.Location = New System.Drawing.Point(539, 3)
+        Me.var.Name = "var"
+        Me.var.Size = New System.Drawing.Size(20, 14)
+        Me.var.TabIndex = 170
+        Me.var.Text = "ov"
+        Me.var.Visible = False
         '
         'PictureBox1
         '
@@ -330,7 +375,7 @@ Partial Class FrmCompletarOV
         Me.Panel4.Controls.Add(Me.Label19)
         Me.Panel4.Controls.Add(Me.cboRecepcion)
         Me.Panel4.Controls.Add(Me.Label18)
-        Me.Panel4.Controls.Add(Me.TextBox4)
+        Me.Panel4.Controls.Add(Me.txtVolumen)
         Me.Panel4.Controls.Add(Me.Label17)
         Me.Panel4.Controls.Add(Me.txtPeso)
         Me.Panel4.Controls.Add(Me.Label16)
@@ -338,7 +383,7 @@ Partial Class FrmCompletarOV
         Me.Panel4.Controls.Add(Me.Label15)
         Me.Panel4.Controls.Add(Me.cboRecibidoPor)
         Me.Panel4.Controls.Add(Me.Label14)
-        Me.Panel4.Controls.Add(Me.TextBox1)
+        Me.Panel4.Controls.Add(Me.txtRefCot)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.dtpFechaRecep)
         Me.Panel4.Controls.Add(Me.Label11)
@@ -378,6 +423,7 @@ Partial Class FrmCompletarOV
         '
         'embarcarPor
         '
+        Me.embarcarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.embarcarPor.FormattingEnabled = True
         Me.embarcarPor.Location = New System.Drawing.Point(133, 174)
         Me.embarcarPor.Name = "embarcarPor"
@@ -396,6 +442,7 @@ Partial Class FrmCompletarOV
         '
         'cboRecepcion
         '
+        Me.cboRecepcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRecepcion.FormattingEnabled = True
         Me.cboRecepcion.Location = New System.Drawing.Point(133, 146)
         Me.cboRecepcion.Name = "cboRecepcion"
@@ -412,12 +459,12 @@ Partial Class FrmCompletarOV
         Me.Label18.TabIndex = 190
         Me.Label18.Text = "Medio de recepción:"
         '
-        'TextBox4
+        'txtVolumen
         '
-        Me.TextBox4.Location = New System.Drawing.Point(462, 112)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(93, 20)
-        Me.TextBox4.TabIndex = 189
+        Me.txtVolumen.Location = New System.Drawing.Point(462, 112)
+        Me.txtVolumen.Name = "txtVolumen"
+        Me.txtVolumen.Size = New System.Drawing.Size(93, 20)
+        Me.txtVolumen.TabIndex = 189
         '
         'Label17
         '
@@ -465,7 +512,9 @@ Partial Class FrmCompletarOV
         '
         'cboRecibidoPor
         '
+        Me.cboRecibidoPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRecibidoPor.FormattingEnabled = True
+        Me.cboRecibidoPor.Items.AddRange(New Object() {"Susana", "Osvaldo", "Karina"})
         Me.cboRecibidoPor.Location = New System.Drawing.Point(133, 64)
         Me.cboRecibidoPor.Name = "cboRecibidoPor"
         Me.cboRecibidoPor.Size = New System.Drawing.Size(200, 21)
@@ -481,18 +530,18 @@ Partial Class FrmCompletarOV
         Me.Label14.TabIndex = 182
         Me.Label14.Text = "Recibido por:"
         '
-        'TextBox1
+        'txtRefCot
         '
-        Me.TextBox1.Location = New System.Drawing.Point(462, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(93, 20)
-        Me.TextBox1.TabIndex = 181
+        Me.txtRefCot.Location = New System.Drawing.Point(462, 10)
+        Me.txtRefCot.Name = "txtRefCot"
+        Me.txtRefCot.Size = New System.Drawing.Size(93, 20)
+        Me.txtRefCot.TabIndex = 181
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(391, 7)
+        Me.Label13.Location = New System.Drawing.Point(391, 12)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(66, 15)
         Me.Label13.TabIndex = 179
@@ -522,51 +571,6 @@ Partial Class FrmCompletarOV
         Me.txtOrdenCompra.Size = New System.Drawing.Size(200, 20)
         Me.txtOrdenCompra.TabIndex = 0
         '
-        'btCotizacion
-        '
-        Me.btCotizacion.BackColor = System.Drawing.Color.SteelBlue
-        Me.btCotizacion.FlatAppearance.BorderSize = 0
-        Me.btCotizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btCotizacion.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btCotizacion.ForeColor = System.Drawing.Color.White
-        Me.btCotizacion.Location = New System.Drawing.Point(461, 516)
-        Me.btCotizacion.Name = "btCotizacion"
-        Me.btCotizacion.Size = New System.Drawing.Size(111, 33)
-        Me.btCotizacion.TabIndex = 179
-        Me.btCotizacion.Text = "GUARDAR"
-        Me.btCotizacion.UseVisualStyleBackColor = False
-        '
-        'NumOV
-        '
-        Me.NumOV.AutoSize = True
-        Me.NumOV.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumOV.Location = New System.Drawing.Point(538, 18)
-        Me.NumOV.Name = "NumOV"
-        Me.NumOV.Size = New System.Drawing.Size(20, 14)
-        Me.NumOV.TabIndex = 168
-        Me.NumOV.Text = "ov"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(462, 18)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(62, 15)
-        Me.Label22.TabIndex = 169
-        Me.Label22.Text = "NÚM. OV:"
-        '
-        'var
-        '
-        Me.var.AutoSize = True
-        Me.var.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.var.Location = New System.Drawing.Point(370, 19)
-        Me.var.Name = "var"
-        Me.var.Size = New System.Drawing.Size(20, 14)
-        Me.var.TabIndex = 170
-        Me.var.Text = "ov"
-        Me.var.Visible = False
-        '
         'FrmCompletarOV
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -579,6 +583,7 @@ Partial Class FrmCompletarOV
         Me.Controls.Add(Me.btSalir)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmCompletarOV"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Completar OV"
         CType(Me.btSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -626,7 +631,7 @@ Partial Class FrmCompletarOV
     Friend WithEvents Label15 As Label
     Friend WithEvents cboRecibidoPor As ComboBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtRefCot As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents dtpFechaRecep As DateTimePicker
     Friend WithEvents Label11 As Label
@@ -637,7 +642,7 @@ Partial Class FrmCompletarOV
     Friend WithEvents Label19 As Label
     Friend WithEvents cboRecepcion As ComboBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtVolumen As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents txtPeso As TextBox
     Friend WithEvents Label16 As Label
