@@ -86,6 +86,64 @@ Public Class FrmCotizacionInformal
     End Sub
     Private Sub btEnviar_Click(sender As Object, e As EventArgs) Handles btEnviar.Click
         'Try
+        If txtDestinatario.Text.Equals("") Or txtAsunto.Text.Equals("") Or txtCuerpo.Text.Equals("") Or txtNombre.Text.Equals("") Or txtReferencia.Text.Equals("") Or txtMonto.Text.Equals("") Or txtAdicionalesS.Text.Equals("") Then
+            MsgBox("Completa los campos obligatorios.", MsgBoxStyle.Critical)
+        Else
+            fechaActual = DTPFechaActual.Value
+            NameFirma = "Departamento de Ventas"
+            Puesto = "Ventas"
+            destinataro = txtDestinatario.Text
+            quienEnvia = "Sandra Justo"
+            cca = txtcc.Text
+            calibracion = DTP.Value
+            referencia = txtReferencia.Text
+            Asunto = txtAsunto.Text
+            CuerpoMensaje = "<html><body>"
+            CuerpoMensaje = CuerpoMensaje & "<p><span style=font-size:11.0pt;font-family:Helvetica><b>Buen día " & txtNombre.Text & ", en atención a su amable solicitud me permito enviarle una respuesta.</b></span></p>"
+            ''CuerpoMensaje = CuerpoMensaje & "<span style=font-size:11.0pt;font-family:Helvetica>__________________________________________________________</span><br>"
+            CuerpoMensaje = CuerpoMensaje & "<span style=font-size:10.0pt;font-family:Helvetica>" & txtCuerpo.Text & "</span><br>"
+            ''CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'>Monto Total: <b>$" & txtMonto.Text & ".00</b><br>"
+            ''CuerpoMensaje = CuerpoMensaje & "<span style=font-size:11.0pt;font-family:Helvetica>__________________________________________________________</span><br>"
+            CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>Si usted desea una cotización formal, favor de confirmar por este mismo medio indicando datos completos de su empresa, así como especificaciones técnicas completa de su equipo.</b></span></p>"
+            CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>De antemano agradecemos el habernos contactado.</b></span></p><br>"
+            CuerpoMensaje = CuerpoMensaje & "<span style=font-size:9.0pt;font-family:Helvetica><b>Observaciones adicionales: </b></span><br>"
+            CuerpoMensaje = CuerpoMensaje & "<span style=font-size:9.0pt;font-family:Helvetica>" & txtAdicionalesS.Text & "</span>"
+            'CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>Nota ó Referencia: </b>" & referencia & "<br></span></p>"
+            'CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>Fecha estimada para sus calibraciones: </b>" & calibracion & "<br></span></p>"
+
+            CuerpoMensaje = CuerpoMensaje & "</body></html>"
+            'establecemos las funciones
+            'Dim resultado As String
+            objOutlook = CreateObject("Outlook.Application")
+            objOutlookMsg = objOutlook.CreateItem(0)
+            If rb.Checked = True Then
+                With objOutlookMsg
+                    .CC = cca
+                    .Subject = Asunto
+                    .HTMLBody = CuerpoMensaje
+                    .To = destinataro
+                    .Display
+                    .Attachments.Add(OpenFileDialog1.FileName)
+                End With
+            Else
+                With objOutlookMsg
+                    .CC = cca
+                    .Subject = Asunto
+                    .HTMLBody = CuerpoMensaje
+                    .To = destinataro
+                    .Display
+                    '.Attachments.Add(OpenFileDialog1.FileName)
+                End With
+            End If
+            objOutlookMsg = Nothing
+            objOutlook = Nothing
+            guardarCotizacionEnBD()
+
+        End If
+        'Catch ex As Exception
+        '    MsgBox("Ocurrio un error, comunicate con el administrador de sistemas.", MsgBoxStyle.Exclamation)
+        '    MsgBox("Descripciòn del error: " & ex.ToString)
+        'End Try
 
     End Sub
     Function GetBoiler(ByVal sFile As String) As String
