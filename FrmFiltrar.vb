@@ -140,6 +140,7 @@
             FrmFiltarCampo.Show()
         Else
             bancorreo = 1
+            correos2 = False
             empresa = dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
             FrmCompletarOV.Show()
 

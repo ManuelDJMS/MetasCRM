@@ -12,7 +12,7 @@ Public Class FrmCompletarOV
             NumOV.Visible = False
             Label13.Visible = False
             txtRefCot.Visible = False
-            bancorreo = 3
+            'bancorreo = 3
         ElseIf bancorreo = 2 Then
             R = "SELECT [SetupCustomerAddressDtls].[CustomerId],[CustAccountNo],[FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
             FROM [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
@@ -26,22 +26,26 @@ Public Class FrmCompletarOV
         lector.Read()
 
         txtNombreCompania.Text = lector(5)
-        If bancorreo = 3 Then
-            txtCorreo.Text = correos
-        Else
+        'If correos2 = False Then
+        '    txtCorreo.Text = correos
+        'Else
 
-            txtCorreo.Text = lector(4)
-        End If
+        '    txtCorreo.Text = lector(4)
+        'End If
 
         txtDireccion.Text = lector(7)
         terminosPago.Text = lector(6)
         numCuenta.Text = var.Text
 
+        numCuenta.Text = lector(1)
+        If correos2 = False Then
 
-        If bancorreo = 2 Then
-            numCuenta.Text = var.Text
-        ElseIf bancorreo = 3 Then
-            numCuenta.Text = lector(1)
+
+            txtCorreo.Text = lector(4)
+        Else
+            txtCorreo.Text = correos
+            'numCuenta.Text = var.Text
+
         End If
         lector.Close()
         bancorreo = False

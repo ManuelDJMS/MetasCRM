@@ -24,6 +24,7 @@
             Next
             correos = RTrim(LTrim(correos.Substring(1, correos.Length - 1)))
             bancorreo = 1
+            correos2 = True
             FrmCompletarOV.Show()
             Me.Dispose()
         Else
