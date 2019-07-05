@@ -140,11 +140,12 @@
             FrmFiltarCampo.Show()
         Else
             bancorreo = 1
+            correos2 = False
             empresa = dgEmpresas.Rows(e.RowIndex).Cells(0).Value.ToString()
             FrmCompletarOV.Show()
 
         End If
-
+        Me.Dispose()
         'Dim direccion As String
         'Dim colonia As String
         'Dim ban As Integer

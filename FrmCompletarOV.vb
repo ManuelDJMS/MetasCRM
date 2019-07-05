@@ -9,7 +9,11 @@ Public Class FrmCompletarOV
             R = "Select [SetupCustomerAddressDtls].[CustomerId], [CustAccountNo], [FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
                 FROM [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x1 INNER JOIN [SetupCustomerAddressDtls] ON x1.[CustomerId] = [SetupCustomerAddressDtls].[CustomerId]
 		        where x1.[CustomerId] =" & empresa
-            bancorreo = 3
+            Label22.Visible = False
+            NumOV.Visible = False
+            Label13.Visible = False
+            txtRefCot.Visible = False
+            'bancorreo = 3
         ElseIf bancorreo = 2 Then
             R = "SELECT [SetupCustomerAddressDtls].[CustomerId],[CustAccountNo],[FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
             FROM [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
@@ -23,12 +27,12 @@ Public Class FrmCompletarOV
         lector.Read()
 
         txtNombreCompania.Text = lector(5)
-        If bancorreo = 3 Then
-            txtCorreo.Text = correos
-        Else
+        'If correos2 = False Then
+        '    txtCorreo.Text = correos
+        'Else
 
-            txtCorreo.Text = lector(4)
-        End If
+        '    txtCorreo.Text = lector(4)
+        'End If
 
         txtDireccion.Text = lector(7)
         terminosPago.Text = lector(6)
@@ -36,16 +40,25 @@ Public Class FrmCompletarOV
         customerId = (lector(0))
 
 
+        numCuenta.Text = lector(1)
+        If correos2 = False Then
 
-        If bancorreo = 2 Then
-            numCuenta.Text = var.Text
-        ElseIf bancorreo = 3 Then
-            numCuenta.Text = lector(1)
+
+            txtCorreo.Text = lector(4)
+        Else
+            txtCorreo.Text = correos
+            'numCuenta.Text = var.Text
+
         End If
         lector.Close()
         bancorreo = False
         correos = ""
         bancorreo = 0
+
+        empresa = 0
+
+
+
 
         R = "SELECT [Id],[ShipVia] FROM [MetAs_Live-pruebas].[dbo].[SetupShippingMode]"
         Dim comando2 As New SqlCommand(R, conexionLIMS)
