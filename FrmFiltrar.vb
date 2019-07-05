@@ -144,7 +144,7 @@
             FrmCompletarOV.Show()
 
         End If
-
+        Me.Dispose()
         'Dim direccion As String
         'Dim colonia As String
         'Dim ban As Integer

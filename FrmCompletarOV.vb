@@ -8,6 +8,10 @@ Public Class FrmCompletarOV
             R = "Select [SetupCustomerAddressDtls].[CustomerId], [CustAccountNo], [FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
                 FROM [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x1 INNER JOIN [SetupCustomerAddressDtls] ON x1.[CustomerId] = [SetupCustomerAddressDtls].[CustomerId]
 		        where x1.[CustomerId] =" & empresa
+            Label22.Visible = False
+            NumOV.Visible = False
+            Label13.Visible = False
+            txtRefCot.Visible = False
             bancorreo = 3
         ElseIf bancorreo = 2 Then
             R = "SELECT [SetupCustomerAddressDtls].[CustomerId],[CustAccountNo],[FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
@@ -43,7 +47,7 @@ Public Class FrmCompletarOV
         bancorreo = False
         correos = ""
         bancorreo = 0
-
+        empresa = 0
 
 
 
