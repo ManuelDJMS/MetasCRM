@@ -1,6 +1,7 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Class FrmCompletarOV
+    Dim customerId As Integer
     Private Sub FrmCompletarOV_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MetodoLIMS()
         Dim R As String
@@ -17,8 +18,8 @@ Public Class FrmCompletarOV
 
         End If
         Dim comando As New SqlCommand(R, conexionLIMS)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
+        Dim lector As SqlDataReader
+        lector = comando.ExecuteReader
         lector.Read()
 
         txtNombreCompania.Text = lector(5)
@@ -32,6 +33,8 @@ Public Class FrmCompletarOV
         txtDireccion.Text = lector(7)
         terminosPago.Text = lector(6)
         numCuenta.Text = var.Text
+        customerId = (lector(0))
+
 
 
         If bancorreo = 2 Then
@@ -44,10 +47,6 @@ Public Class FrmCompletarOV
         correos = ""
         bancorreo = 0
 
-
-
-
-
         R = "SELECT [Id],[ShipVia] FROM [MetAs_Live-pruebas].[dbo].[SetupShippingMode]"
         Dim comando2 As New SqlCommand(R, conexionLIMS)
         Dim lector2 As SqlDataReader
@@ -59,24 +58,36 @@ Public Class FrmCompletarOV
     End Sub
 
     Private Sub btCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
-        Try
-            MetodoLIMS()
-            Dim R As String
-            R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
-                [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
-                [Volume] = '" & txtVolumen.Text & "'
-                where [SOId] = " & Val(NumOV.Text) & ""
-            MsgBox(R)
-            Dim coma As New SqlCommand(R, conexionLIMS)
-            coma.ExecuteNonQuery()
-            MsgBox("ORDEN DE VENTA " & NumOV.Text & " ACTUALIZADA")
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-            cadena = Err.Description
-            cadena = cadena.Replace("'", "")
-            Bitacora("FrmCompletarOV", "Error al actualizar la OV", Err.Number, cadena)
-        End Try
-        Me.Dispose()
+        'Try
+        MetodoLIMS()
+        '    Dim R As String
+        '    R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
+        '        [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
+        '        [Volume] = '" & txtVolumen.Text & "'
+        '        where [SOId] = " & Val(NumOV.Text) & ""
+        '    MsgBox(R)
+        '    Dim coma As New SqlCommand(R, conexionLIMS)
+        '    coma.ExecuteNonQuery()
+        '    MsgBox("ORDEN DE VENTA " & NumOV.Text & " ACTUALIZADA")
+        'Catch ex As Exception
+        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+        '    cadena = Err.Description
+        '    cadena = cadena.Replace("'", "")
+        '    Bitacora("FrmCompletarOV", "Error al actualizar la OV", Err.Number, cadena)
+        'End Try
+        'Me.Dispose()
+
+        Dim R As String
+        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite,[PONo],[RecBy],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
+                            values(" & customerId & ",'" & numCuenta.Text & "','" & dtpFechaRecep.Value.ToShortDateString & "', '" & True & "','" & False & "', '" & txtOrdenCompra.Text & "','" & cboRecibidoPor.Text & "','" & cboRecepcion.Text & "', '" & embarcarPor.Text & "', '" & txtObservaciones.Text & "', 'USR00000008', '" & dtpFechaRecep.Value.ToShortDateString & "', '" & txtCantCajas.Text & "', '" & txtPeso.Text & "', '" & txtVolumen.Text & "','" & terminosPago.Text & "')"
+        MsgBox(R)
+        Dim comando As New SqlCommand
+        comando = conexionLIMS.CreateCommand
+        comando.CommandText = R
+        comando.ExecuteNonQuery()
+        MsgBox("ORDEN DE VENTA GUARDADA")
+
+
     End Sub
 
     Private Sub btSalir_Click(sender As Object, e As EventArgs) Handles btSalir.Click

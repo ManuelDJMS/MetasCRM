@@ -184,7 +184,7 @@ Public Class FrmAutorizarSolicitudes
                             conexionMetasCotizador.Close()
                         End If
                     Next
-                    MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
+                    'MsgBox("Ordenes de venta generadas correctamente.", MsgBoxStyle.Information)
                     MetodoMetasCotizador()
                     bancorreo = 2
                     FrmCompletarOV.var.Text = Me.cusAcount.Text
