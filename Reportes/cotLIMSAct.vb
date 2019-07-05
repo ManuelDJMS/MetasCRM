@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
 Imports System.Configuration
+Imports System.Reflection
 Public Class cotLIMSAct
     Private Sub cmdBuscar_Click(sender As Object, e As EventArgs) Handles cmdBuscar.Click
         Dim COT As Integer
@@ -222,7 +223,19 @@ Public Class cotLIMSAct
         FrmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17,
                                                              p19, p20, p21, p22, p23, p24})
         FrmReportes.ReportViewer1.RefreshReport()
+
+        Dim nombreCot As String = "COT"
+        nombreCot = nombreCot + COT.ToString
+        MsgBox(nombreCot)
+        'Me.ReportEmbeddedResource = "MyAppNamespace.CotizacionModelo.rdlc"
+        FrmReportes.ReportViewer1.LocalReport.ReportEmbeddedResource = "MyAppNamespace.CotizacionModelo.rdlc"
+        Dim pdfContent As Byte() = FrmReportes.ReportViewer1.LocalReport.Render("PDF")
+        Dim pdfPath As String = "C:\Users\Software TI\Documents\REPORTES\" & nombreCot & ".pdf"
+        Dim pdfFile As New System.IO.FileStream(pdfPath, System.IO.FileMode.Create)
+        pdfFile.Write(pdfContent, 0, pdfContent.Length)
+        pdfFile.Close()
         FrmReportes.Show()
         conexionMetasCotizador.Close()
     End Sub
+
 End Class

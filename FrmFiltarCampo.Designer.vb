@@ -25,6 +25,7 @@ Partial Class FrmFiltarCampo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFiltarCampo))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btSinCot = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btGuardarInf = New System.Windows.Forms.Button()
         Me.Label36 = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class FrmFiltarCampo
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btSalir = New System.Windows.Forms.PictureBox()
-        Me.btSinCot = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,6 +55,21 @@ Partial Class FrmFiltarCampo
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(426, 269)
         Me.Panel1.TabIndex = 163
+        '
+        'btSinCot
+        '
+        Me.btSinCot.BackColor = System.Drawing.Color.Green
+        Me.btSinCot.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btSinCot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btSinCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btSinCot.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btSinCot.ForeColor = System.Drawing.Color.White
+        Me.btSinCot.Location = New System.Drawing.Point(321, 220)
+        Me.btSinCot.Name = "btSinCot"
+        Me.btSinCot.Size = New System.Drawing.Size(83, 33)
+        Me.btSinCot.TabIndex = 182
+        Me.btSinCot.Text = "Aceptar"
+        Me.btSinCot.UseVisualStyleBackColor = False
         '
         'Panel7
         '
@@ -190,21 +205,6 @@ Partial Class FrmFiltarCampo
         Me.btSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btSalir.TabIndex = 157
         Me.btSalir.TabStop = False
-        '
-        'btSinCot
-        '
-        Me.btSinCot.BackColor = System.Drawing.Color.Green
-        Me.btSinCot.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btSinCot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.btSinCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btSinCot.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btSinCot.ForeColor = System.Drawing.Color.White
-        Me.btSinCot.Location = New System.Drawing.Point(321, 220)
-        Me.btSinCot.Name = "btSinCot"
-        Me.btSinCot.Size = New System.Drawing.Size(83, 33)
-        Me.btSinCot.TabIndex = 182
-        Me.btSinCot.Text = "Aceptar"
-        Me.btSinCot.UseVisualStyleBackColor = False
         '
         'FrmFiltarCampo
         '

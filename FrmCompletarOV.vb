@@ -42,9 +42,8 @@ Public Class FrmCompletarOV
 
         numCuenta.Text = lector(1)
         If correos2 = False Then
-
-
             txtCorreo.Text = lector(4)
+            MsgBox(txtCorreo.Text)
         Else
             txtCorreo.Text = correos
             'numCuenta.Text = var.Text
@@ -56,10 +55,6 @@ Public Class FrmCompletarOV
         bancorreo = 0
 
         empresa = 0
-
-
-
-
         R = "SELECT [Id],[ShipVia] FROM [MetAs_Live-pruebas].[dbo].[SetupShippingMode]"
         Dim comando2 As New SqlCommand(R, conexionLIMS)
         Dim lector2 As SqlDataReader
@@ -71,36 +66,34 @@ Public Class FrmCompletarOV
     End Sub
 
     Private Sub btCotizacion_Click(sender As Object, e As EventArgs) Handles btCotizacion.Click
-        'Try
-        MetodoLIMS()
-        '    Dim R As String
-        '    R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
-        '        [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
-        '        [Volume] = '" & txtVolumen.Text & "'
-        '        where [SOId] = " & Val(NumOV.Text) & ""
-        '    MsgBox(R)
-        '    Dim coma As New SqlCommand(R, conexionLIMS)
-        '    coma.ExecuteNonQuery()
-        '    MsgBox("ORDEN DE VENTA " & NumOV.Text & " ACTUALIZADA")
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-        '    cadena = Err.Description
-        '    cadena = cadena.Replace("'", "")
-        '    Bitacora("FrmCompletarOV", "Error al actualizar la OV", Err.Number, cadena)
-        'End Try
-        'Me.Dispose()
-
-        Dim R As String
-        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite,[PONo],[RecBy],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
+        Try
+            MetodoLIMS()
+            Dim R As String
+            If NumOV.Text = "ov" Then
+                R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite,[PONo],[RecBy],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
                             values(" & customerId & ",'" & numCuenta.Text & "','" & dtpFechaRecep.Value.ToShortDateString & "', '" & True & "','" & False & "', '" & txtOrdenCompra.Text & "','" & cboRecibidoPor.Text & "','" & cboRecepcion.Text & "', '" & embarcarPor.Text & "', '" & txtObservaciones.Text & "', 'USR00000008', '" & dtpFechaRecep.Value.ToShortDateString & "', '" & txtCantCajas.Text & "', '" & txtPeso.Text & "', '" & txtVolumen.Text & "','" & terminosPago.Text & "')"
-        MsgBox(R)
-        Dim comando As New SqlCommand
-        comando = conexionLIMS.CreateCommand
-        comando.CommandText = R
-        comando.ExecuteNonQuery()
-        MsgBox("ORDEN DE VENTA GUARDADA")
-
-
+                MsgBox(R)
+                Dim comando As New SqlCommand
+                comando = conexionLIMS.CreateCommand
+                comando.CommandText = R
+                comando.ExecuteNonQuery()
+                MsgBox("ORDEN DE VENTA GUARDADA")
+            Else
+                R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
+                [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
+                [Volume] = '" & txtVolumen.Text & "'
+                where [SOId] = " & Val(NumOV.Text) & ""
+                Dim coma As New SqlCommand(R, conexionLIMS)
+                coma.ExecuteNonQuery()
+                MsgBox("ORDEN DE VENTA " & NumOV.Text & " ACTUALIZADA")
+            End If
+        Catch ex As Exception
+        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+        cadena = Err.Description
+        cadena = cadena.Replace("'", "")
+        Bitacora("FrmCompletarOV", "Error al actualizar la OV", Err.Number, cadena)
+        End Try
+        Me.Dispose()
     End Sub
 
     Private Sub btSalir_Click(sender As Object, e As EventArgs) Handles btSalir.Click
