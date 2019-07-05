@@ -535,6 +535,7 @@
     <Content Include="cotizador.ico" />
     <Content Include="prospecciones.png" />
     <Content Include="prospecciones_select.png" />
+    <Content Include="Resources\firma_correo.png" />
     <Content Include="Resources\prospecciones.png" />
     <Content Include="Resources\prospecciones_select.png" />
     <Content Include="SqlServerTypes\Loader.cs" />

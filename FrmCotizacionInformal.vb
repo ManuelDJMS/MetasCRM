@@ -86,65 +86,17 @@ Public Class FrmCotizacionInformal
     End Sub
     Private Sub btEnviar_Click(sender As Object, e As EventArgs) Handles btEnviar.Click
         'Try
-        If txtDestinatario.Text.Equals("") Or txtAsunto.Text.Equals("") Or txtCuerpo.Text.Equals("") Or txtNombre.Text.Equals("") Or txtReferencia.Text.Equals("") Or txtMonto.Text.Equals("") Or txtAdicionalesS.Text.Equals("") Then
-            MsgBox("Completa los campos obligatorios.", MsgBoxStyle.Critical)
-        Else
-            fechaActual = DTPFechaActual.Value
-            NameFirma = "Departamento de Ventas"
-            Puesto = "Ventas"
-            destinataro = txtDestinatario.Text
-            quienEnvia = "Sandra Justo"
-            cca = txtcc.Text
-            calibracion = DTP.Value
-            referencia = txtReferencia.Text
-            Asunto = txtAsunto.Text
-            CuerpoMensaje = "<html><body>"
-            CuerpoMensaje = CuerpoMensaje & "<p><span style=font-size:11.0pt;font-family:Helvetica><b>Buen día " & txtNombre.Text & ", en atención a su amable solicitud me permito enviarle una respuesta.</b></span></p>"
-            ''CuerpoMensaje = CuerpoMensaje & "<span style=font-size:11.0pt;font-family:Helvetica>__________________________________________________________</span><br>"
-            CuerpoMensaje = CuerpoMensaje & "<span style=font-size:10.0pt;font-family:Helvetica>" & txtCuerpo.Text & "</span><br>"
-            ''CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'>Monto Total: <b>$" & txtMonto.Text & ".00</b><br>"
-            ''CuerpoMensaje = CuerpoMensaje & "<span style=font-size:11.0pt;font-family:Helvetica>__________________________________________________________</span><br>"
-            CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>Si usted desea una cotización formal, favor de confirmar por este mismo medio indicando datos completos de su empresa, así como especificaciones técnicas completa de su equipo.</b></span></p>"
-            CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>De antemano agradecemos el habernos contactado.</b></span></p><br>"
-            CuerpoMensaje = CuerpoMensaje & "<span style=font-size:9.0pt;font-family:Helvetica><b>Observaciones adicionales: </b></span><br>"
-            CuerpoMensaje = CuerpoMensaje & "<span style=font-size:9.0pt;font-family:Helvetica>" & txtAdicionalesS.Text & "</span>"
-            'CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>Nota ó Referencia: </b>" & referencia & "<br></span></p>"
-            'CuerpoMensaje = CuerpoMensaje & "<p><span style='font-size:11.0pt;font-family:Helvetica'><b>Fecha estimada para sus calibraciones: </b>" & calibracion & "<br></span></p>"
 
-            CuerpoMensaje = CuerpoMensaje & "</body></html>"
-            'establecemos las funciones
-            'Dim resultado As String
-            objOutlook = CreateObject("Outlook.Application")
-            objOutlookMsg = objOutlook.CreateItem(0)
-            If rb.Checked = True Then
-                With objOutlookMsg
-                    .CC = cca
-                    .Subject = Asunto
-                    .HTMLBody = CuerpoMensaje
-                    .To = destinataro
-                    .Display
-                    .Attachments.Add(OpenFileDialog1.FileName)
-                End With
-            Else
-                With objOutlookMsg
-                    .CC = cca
-                    .Subject = Asunto
-                    .HTMLBody = CuerpoMensaje
-                    .To = destinataro
-                    .Display
-                    '.Attachments.Add(OpenFileDialog1.FileName)
-                End With
-            End If
-            objOutlookMsg = Nothing
-            objOutlook = Nothing
-            guardarCotizacionEnBD()
-
-        End If
-        'Catch ex As Exception
-        '    MsgBox("Ocurrio un error, comunicate con el administrador de sistemas.", MsgBoxStyle.Exclamation)
-        '    MsgBox("Descripciòn del error: " & ex.ToString)
-        'End Try
     End Sub
+    Function GetBoiler(ByVal sFile As String) As String
+        'Dick Kusleika
+        Dim fso As Object
+        Dim ts As Object
+        fso = CreateObject("Scripting.FileSystemObject")
+        ts = fso.GetFile(sFile).OpenAsTextStream(1, -2)
+        GetBoiler = ts.readall
+        ts.Close
+    End Function
     Private Sub btSeleccionar_Click(sender As Object, e As EventArgs) Handles btSeleccionar.Click
         ' Try
         OpenFileDialog1.ShowDialog()
@@ -369,38 +321,38 @@ Public Class FrmCotizacionInformal
         conexionMetasCotizador.Close()
         ' Catch ex As Exception
         'MsgBox(" Ocurrio un error en la conexión de base de datos.", MsgBoxStyle.Exclamation)
-        'MsgBox("Descripciòn del error: " & ex.ToString)
+        'MsgBox(" Descripciòn del error: " & ex.ToString)
         ' End Try
         For Each fila As DataGridViewRow In DGConsultaCot.Rows
-            fila.Cells("NumCot").Style.BackColor = Color.LightSteelBlue
+            fila.Cells(" NumCot").Style.BackColor = Color.LightSteelBlue
         Next
     End Sub
 
     Public Sub consultaGeneral()
-        'AZAEL TENIA COMENTADO EL TRY Y CATCH 
-        DGConsultaCot.Rows.Clear()
-        Dim Incio As String = FechaInicio.Value.Date
-        Dim Final As String = FechaFinal.Value.Date
-        Try
-            MetodoMetasCotizador()
-            'conexion2.Open()
-            Dim R As String
-            R = " select * from COTIZACIONES_INFORMALES"
-            Dim comando As New SqlCommand(R, conexionMetasCotizador)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            While lector.Read()
-                DGConsultaCot.Rows.Add(lector(1), lector(2), lector(15), lector(0), lector(9), lector(7), lector(16), lector(8))
-            End While
-            lector.Close()
-            conexionMetasCotizador.Close()
-        Catch ex As Exception
-            MsgBox(" Ocurrio un error en la conexión de base de datos.", MsgBoxStyle.Exclamation)
-            MsgBox("Descripciòn del error: " & ex.ToString)
-        End Try
-        For Each fila As DataGridViewRow In DGConsultaCot.Rows
-            fila.Cells("NumCot").Style.BackColor = Color.LightSteelBlue
-        Next
+        ''AZAEL TENIA COMENTADO EL TRY Y CATCH 
+        'DGConsultaCot.Rows.Clear()
+        'Dim Incio As String = FechaInicio.Value.Date
+        'Dim Final As String = FechaFinal.Value.Date
+        'Try
+        '    MetodoMetasCotizador()
+        '    'conexion2.Open()
+        '    Dim R As String
+        '    R = " select * from COTIZACIONES_INFORMALES"
+        '    Dim comando As New SqlCommand(R, conexionMetasCotizador)
+        '    Dim lector As SqlDataReader
+        '    lector = comando.ExecuteReader
+        '    While lector.Read()
+        '        DGConsultaCot.Rows.Add(lector(1), lector(2), lector(15), lector(0), lector(9), lector(7), lector(16), lector(8))
+        '    End While
+        '    lector.Close()
+        '    conexionMetasCotizador.Close()
+        'Catch ex As Exception
+        '    MsgBox(" Ocurrio un error en la conexión de base de datos.", MsgBoxStyle.Exclamation)
+        '    MsgBox(" Descripciòn del error: " & ex.ToString)
+        'End Try
+        'For Each fila As DataGridViewRow In DGConsultaCot.Rows
+        '    fila.Cells(" NumCot").Style.BackColor = Color.LightSteelBlue
+        'Next
     End Sub
 
     Private Sub txtClaveCot_TextChanged(sender As Object, e As EventArgs) Handles txtClaveCot.TextChanged
@@ -485,7 +437,7 @@ Public Class FrmCotizacionInformal
         Dim Final As String = FechaFinal.Value.Date
         R = "select NombrePersona, Compania, NumeroCuentaLIMS, idCotizacionInformal, [FechaDeCotizaciónInformal], [FechaPropuestaParaCalibracion], [Status], [MontoTotalPrecio] from [COTIZACIONES_INFORMALES] where COTIZACIONES_INFORMALES.FechaDeCotizaciónInformal >= '" & Incio & "' and COTIZACIONES_INFORMALES.FechaDeCotizaciónInformal <='" & Final & "' and [COTIZACIONES_INFORMALES].NombrePersona Like '%' + @Nombre + '%'"
         '[COTIZACIONES_INFORMALES].NombrePersona Like '%' + @Nombre + '%'"
-        Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
         comando.CommandType = CommandType.Text
         comando.Parameters.AddWithValue("@Nombre", txtNameBusq.Text)
         Dim da As New SqlDataAdapter(comando)
