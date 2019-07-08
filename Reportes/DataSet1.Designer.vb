@@ -2566,11 +2566,7 @@ Partial Public Class DataSet1
         
         Private columnTaxIDNo As Global.System.Data.DataColumn
         
-        Private columnBillAddress1 As Global.System.Data.DataColumn
-        
-        Private columnBillAddress2 As Global.System.Data.DataColumn
-        
-        Private columnBillAddress3 As Global.System.Data.DataColumn
+        Private columnDomFacturacion As Global.System.Data.DataColumn
         
         Private columnBillCity As Global.System.Data.DataColumn
         
@@ -2582,11 +2578,7 @@ Partial Public Class DataSet1
         
         Private columnCompanyName As Global.System.Data.DataColumn
         
-        Private columnContAddress1 As Global.System.Data.DataColumn
-        
-        Private columnContAddress2 As Global.System.Data.DataColumn
-        
-        Private columnContAddress3 As Global.System.Data.DataColumn
+        Private columndomContacto As Global.System.Data.DataColumn
         
         Private columnContCity As Global.System.Data.DataColumn
         
@@ -2598,11 +2590,7 @@ Partial Public Class DataSet1
         
         Private columnShipVia As Global.System.Data.DataColumn
         
-        Private columnShipAddress1 As Global.System.Data.DataColumn
-        
-        Private columnShipAddress2 As Global.System.Data.DataColumn
-        
-        Private columnShipAddress3 As Global.System.Data.DataColumn
+        Private columndomEnvio As Global.System.Data.DataColumn
         
         Private columnShipCity As Global.System.Data.DataColumn
         
@@ -2687,25 +2675,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property BillAddress1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property DomFacturacionColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBillAddress1
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property BillAddress2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnBillAddress2
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property BillAddress3Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnBillAddress3
+                Return Me.columnDomFacturacion
             End Get
         End Property
         
@@ -2751,25 +2723,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ContAddress1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property domContactoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnContAddress1
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ContAddress2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnContAddress2
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ContAddress3Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnContAddress3
+                Return Me.columndomContacto
             End Get
         End Property
         
@@ -2815,25 +2771,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ShipAddress1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property domEnvioColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnShipAddress1
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ShipAddress2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnShipAddress2
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ShipAddress3Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnShipAddress3
+                Return Me.columndomEnvio
             End Get
         End Property
         
@@ -2903,30 +2843,24 @@ Partial Public Class DataSet1
                     ByVal CustAccountNo As String,  _
                     ByVal RZ As String,  _
                     ByVal TaxIDNo As String,  _
-                    ByVal BillAddress1 As String,  _
-                    ByVal BillAddress2 As String,  _
-                    ByVal BillAddress3 As String,  _
+                    ByVal DomFacturacion As String,  _
                     ByVal BillCity As String,  _
                     ByVal BillState As String,  _
                     ByVal BillZip As String,  _
                     ByVal BillCountry As String,  _
                     ByVal CompanyName As String,  _
-                    ByVal ContAddress1 As String,  _
-                    ByVal ContAddress2 As String,  _
-                    ByVal ContAddress3 As String,  _
+                    ByVal domContacto As String,  _
                     ByVal ContCity As String,  _
                     ByVal ContState As String,  _
                     ByVal ContZip As String,  _
                     ByVal ContCountry As String,  _
                     ByVal ShipVia As String,  _
-                    ByVal ShipAddress1 As String,  _
-                    ByVal ShipAddress2 As String,  _
-                    ByVal ShipAddress3 As String,  _
+                    ByVal domEnvio As String,  _
                     ByVal ShipCity As String,  _
                     ByVal ShipState As String,  _
                     ByVal ShipZip As String) As ConfirmacionDeDatosRow
             Dim rowConfirmacionDeDatosRow As ConfirmacionDeDatosRow = CType(Me.NewRow,ConfirmacionDeDatosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, CustomerId, CustAccountNo, RZ, TaxIDNo, BillAddress1, BillAddress2, BillAddress3, BillCity, BillState, BillZip, BillCountry, CompanyName, ContAddress1, ContAddress2, ContAddress3, ContCity, ContState, ContZip, ContCountry, ShipVia, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip}
+            Dim columnValuesArray() As Object = New Object() {Nothing, CustomerId, CustAccountNo, RZ, TaxIDNo, DomFacturacion, BillCity, BillState, BillZip, BillCountry, CompanyName, domContacto, ContCity, ContState, ContZip, ContCountry, ShipVia, domEnvio, ShipCity, ShipState, ShipZip}
             rowConfirmacionDeDatosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowConfirmacionDeDatosRow)
             Return rowConfirmacionDeDatosRow
@@ -2960,25 +2894,19 @@ Partial Public Class DataSet1
             Me.columnCustAccountNo = MyBase.Columns("CustAccountNo")
             Me.columnRZ = MyBase.Columns("RZ")
             Me.columnTaxIDNo = MyBase.Columns("TaxIDNo")
-            Me.columnBillAddress1 = MyBase.Columns("BillAddress1")
-            Me.columnBillAddress2 = MyBase.Columns("BillAddress2")
-            Me.columnBillAddress3 = MyBase.Columns("BillAddress3")
+            Me.columnDomFacturacion = MyBase.Columns("DomFacturacion")
             Me.columnBillCity = MyBase.Columns("BillCity")
             Me.columnBillState = MyBase.Columns("BillState")
             Me.columnBillZip = MyBase.Columns("BillZip")
             Me.columnBillCountry = MyBase.Columns("BillCountry")
             Me.columnCompanyName = MyBase.Columns("CompanyName")
-            Me.columnContAddress1 = MyBase.Columns("ContAddress1")
-            Me.columnContAddress2 = MyBase.Columns("ContAddress2")
-            Me.columnContAddress3 = MyBase.Columns("ContAddress3")
+            Me.columndomContacto = MyBase.Columns("domContacto")
             Me.columnContCity = MyBase.Columns("ContCity")
             Me.columnContState = MyBase.Columns("ContState")
             Me.columnContZip = MyBase.Columns("ContZip")
             Me.columnContCountry = MyBase.Columns("ContCountry")
             Me.columnShipVia = MyBase.Columns("ShipVia")
-            Me.columnShipAddress1 = MyBase.Columns("ShipAddress1")
-            Me.columnShipAddress2 = MyBase.Columns("ShipAddress2")
-            Me.columnShipAddress3 = MyBase.Columns("ShipAddress3")
+            Me.columndomEnvio = MyBase.Columns("domEnvio")
             Me.columnShipCity = MyBase.Columns("ShipCity")
             Me.columnShipState = MyBase.Columns("ShipState")
             Me.columnShipZip = MyBase.Columns("ShipZip")
@@ -2997,12 +2925,8 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnRZ)
             Me.columnTaxIDNo = New Global.System.Data.DataColumn("TaxIDNo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTaxIDNo)
-            Me.columnBillAddress1 = New Global.System.Data.DataColumn("BillAddress1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBillAddress1)
-            Me.columnBillAddress2 = New Global.System.Data.DataColumn("BillAddress2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBillAddress2)
-            Me.columnBillAddress3 = New Global.System.Data.DataColumn("BillAddress3", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBillAddress3)
+            Me.columnDomFacturacion = New Global.System.Data.DataColumn("DomFacturacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDomFacturacion)
             Me.columnBillCity = New Global.System.Data.DataColumn("BillCity", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBillCity)
             Me.columnBillState = New Global.System.Data.DataColumn("BillState", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3013,12 +2937,8 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnBillCountry)
             Me.columnCompanyName = New Global.System.Data.DataColumn("CompanyName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCompanyName)
-            Me.columnContAddress1 = New Global.System.Data.DataColumn("ContAddress1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnContAddress1)
-            Me.columnContAddress2 = New Global.System.Data.DataColumn("ContAddress2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnContAddress2)
-            Me.columnContAddress3 = New Global.System.Data.DataColumn("ContAddress3", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnContAddress3)
+            Me.columndomContacto = New Global.System.Data.DataColumn("domContacto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndomContacto)
             Me.columnContCity = New Global.System.Data.DataColumn("ContCity", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnContCity)
             Me.columnContState = New Global.System.Data.DataColumn("ContState", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3029,12 +2949,8 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnContCountry)
             Me.columnShipVia = New Global.System.Data.DataColumn("ShipVia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnShipVia)
-            Me.columnShipAddress1 = New Global.System.Data.DataColumn("ShipAddress1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnShipAddress1)
-            Me.columnShipAddress2 = New Global.System.Data.DataColumn("ShipAddress2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnShipAddress2)
-            Me.columnShipAddress3 = New Global.System.Data.DataColumn("ShipAddress3", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnShipAddress3)
+            Me.columndomEnvio = New Global.System.Data.DataColumn("domEnvio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndomEnvio)
             Me.columnShipCity = New Global.System.Data.DataColumn("ShipCity", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnShipCity)
             Me.columnShipState = New Global.System.Data.DataColumn("ShipState", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3049,25 +2965,22 @@ Partial Public Class DataSet1
             Me.columnCustAccountNo.MaxLength = 150
             Me.columnRZ.MaxLength = 250
             Me.columnTaxIDNo.MaxLength = 250
-            Me.columnBillAddress1.MaxLength = 2147483647
-            Me.columnBillAddress2.MaxLength = 2147483647
-            Me.columnBillAddress3.MaxLength = 2147483647
+            Me.columnDomFacturacion.ReadOnly = true
+            Me.columnDomFacturacion.MaxLength = 2147483647
             Me.columnBillCity.MaxLength = 2147483647
             Me.columnBillState.MaxLength = 150
             Me.columnBillZip.MaxLength = 2147483647
             Me.columnBillCountry.MaxLength = 50
             Me.columnCompanyName.MaxLength = 450
-            Me.columnContAddress1.MaxLength = 2147483647
-            Me.columnContAddress2.MaxLength = 2147483647
-            Me.columnContAddress3.MaxLength = 2147483647
+            Me.columndomContacto.ReadOnly = true
+            Me.columndomContacto.MaxLength = 2147483647
             Me.columnContCity.MaxLength = 2147483647
             Me.columnContState.MaxLength = 150
             Me.columnContZip.MaxLength = 2147483647
             Me.columnContCountry.MaxLength = 50
             Me.columnShipVia.MaxLength = 50
-            Me.columnShipAddress1.MaxLength = 2147483647
-            Me.columnShipAddress2.MaxLength = 2147483647
-            Me.columnShipAddress3.MaxLength = 2147483647
+            Me.columndomEnvio.ReadOnly = true
+            Me.columndomEnvio.MaxLength = 2147483647
             Me.columnShipCity.MaxLength = 50
             Me.columnShipState.MaxLength = 50
             Me.columnShipZip.MaxLength = 50
@@ -5807,49 +5720,17 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property BillAddress1() As String
+        Public Property DomFacturacion() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.BillAddress1Column),String)
+                    Return CType(Me(Me.tableConfirmacionDeDatos.DomFacturacionColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BillAddress1' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DomFacturacion' de la tabla 'ConfirmacionDeDatos' es DBNu"& _ 
+                            "ll.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableConfirmacionDeDatos.BillAddress1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property BillAddress2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.BillAddress2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BillAddress2' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableConfirmacionDeDatos.BillAddress2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property BillAddress3() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.BillAddress3Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BillAddress3' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableConfirmacionDeDatos.BillAddress3Column) = value
+                Me(Me.tableConfirmacionDeDatos.DomFacturacionColumn) = value
             End Set
         End Property
         
@@ -5932,49 +5813,17 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ContAddress1() As String
+        Public Property domContacto() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.ContAddress1Column),String)
+                    Return CType(Me(Me.tableConfirmacionDeDatos.domContactoColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ContAddress1' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'domContacto' de la tabla 'ConfirmacionDeDatos' es DBNull."& _ 
+                            "", e)
                 End Try
             End Get
             Set
-                Me(Me.tableConfirmacionDeDatos.ContAddress1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ContAddress2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.ContAddress2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ContAddress2' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableConfirmacionDeDatos.ContAddress2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ContAddress3() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.ContAddress3Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ContAddress3' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableConfirmacionDeDatos.ContAddress3Column) = value
+                Me(Me.tableConfirmacionDeDatos.domContactoColumn) = value
             End Set
         End Property
         
@@ -6056,49 +5905,16 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ShipAddress1() As String
+        Public Property domEnvio() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.ShipAddress1Column),String)
+                    Return CType(Me(Me.tableConfirmacionDeDatos.domEnvioColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ShipAddress1' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'domEnvio' de la tabla 'ConfirmacionDeDatos' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableConfirmacionDeDatos.ShipAddress1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ShipAddress2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.ShipAddress2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ShipAddress2' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableConfirmacionDeDatos.ShipAddress2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ShipAddress3() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableConfirmacionDeDatos.ShipAddress3Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ShipAddress3' de la tabla 'ConfirmacionDeDatos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableConfirmacionDeDatos.ShipAddress3Column) = value
+                Me(Me.tableConfirmacionDeDatos.domEnvioColumn) = value
             End Set
         End Property
         
@@ -6197,38 +6013,14 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsBillAddress1Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.BillAddress1Column)
+        Public Function IsDomFacturacionNull() As Boolean
+            Return Me.IsNull(Me.tableConfirmacionDeDatos.DomFacturacionColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetBillAddress1Null()
-            Me(Me.tableConfirmacionDeDatos.BillAddress1Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsBillAddress2Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.BillAddress2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetBillAddress2Null()
-            Me(Me.tableConfirmacionDeDatos.BillAddress2Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsBillAddress3Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.BillAddress3Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetBillAddress3Null()
-            Me(Me.tableConfirmacionDeDatos.BillAddress3Column) = Global.System.Convert.DBNull
+        Public Sub SetDomFacturacionNull()
+            Me(Me.tableConfirmacionDeDatos.DomFacturacionColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6293,38 +6085,14 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsContAddress1Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.ContAddress1Column)
+        Public Function IsdomContactoNull() As Boolean
+            Return Me.IsNull(Me.tableConfirmacionDeDatos.domContactoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetContAddress1Null()
-            Me(Me.tableConfirmacionDeDatos.ContAddress1Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsContAddress2Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.ContAddress2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetContAddress2Null()
-            Me(Me.tableConfirmacionDeDatos.ContAddress2Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsContAddress3Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.ContAddress3Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetContAddress3Null()
-            Me(Me.tableConfirmacionDeDatos.ContAddress3Column) = Global.System.Convert.DBNull
+        Public Sub SetdomContactoNull()
+            Me(Me.tableConfirmacionDeDatos.domContactoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6389,38 +6157,14 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsShipAddress1Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.ShipAddress1Column)
+        Public Function IsdomEnvioNull() As Boolean
+            Return Me.IsNull(Me.tableConfirmacionDeDatos.domEnvioColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetShipAddress1Null()
-            Me(Me.tableConfirmacionDeDatos.ShipAddress1Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsShipAddress2Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.ShipAddress2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetShipAddress2Null()
-            Me(Me.tableConfirmacionDeDatos.ShipAddress2Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsShipAddress3Null() As Boolean
-            Return Me.IsNull(Me.tableConfirmacionDeDatos.ShipAddress3Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetShipAddress3Null()
-            Me(Me.tableConfirmacionDeDatos.ShipAddress3Column) = Global.System.Convert.DBNull
+        Public Sub SetdomEnvioNull()
+            Me(Me.tableConfirmacionDeDatos.domEnvioColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8409,25 +8153,19 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("CustAccountNo", "CustAccountNo")
             tableMapping.ColumnMappings.Add("RZ", "RZ")
             tableMapping.ColumnMappings.Add("TaxIDNo", "TaxIDNo")
-            tableMapping.ColumnMappings.Add("BillAddress1", "BillAddress1")
-            tableMapping.ColumnMappings.Add("BillAddress2", "BillAddress2")
-            tableMapping.ColumnMappings.Add("BillAddress3", "BillAddress3")
+            tableMapping.ColumnMappings.Add("DomFacturacion", "DomFacturacion")
             tableMapping.ColumnMappings.Add("BillCity", "BillCity")
             tableMapping.ColumnMappings.Add("BillState", "BillState")
             tableMapping.ColumnMappings.Add("BillZip", "BillZip")
             tableMapping.ColumnMappings.Add("BillCountry", "BillCountry")
             tableMapping.ColumnMappings.Add("CompanyName", "CompanyName")
-            tableMapping.ColumnMappings.Add("ContAddress1", "ContAddress1")
-            tableMapping.ColumnMappings.Add("ContAddress2", "ContAddress2")
-            tableMapping.ColumnMappings.Add("ContAddress3", "ContAddress3")
+            tableMapping.ColumnMappings.Add("domContacto", "domContacto")
             tableMapping.ColumnMappings.Add("ContCity", "ContCity")
             tableMapping.ColumnMappings.Add("ContState", "ContState")
             tableMapping.ColumnMappings.Add("ContZip", "ContZip")
             tableMapping.ColumnMappings.Add("ContCountry", "ContCountry")
             tableMapping.ColumnMappings.Add("ShipVia", "ShipVia")
-            tableMapping.ColumnMappings.Add("ShipAddress1", "ShipAddress1")
-            tableMapping.ColumnMappings.Add("ShipAddress2", "ShipAddress2")
-            tableMapping.ColumnMappings.Add("ShipAddress3", "ShipAddress3")
+            tableMapping.ColumnMappings.Add("domEnvio", "domEnvio")
             tableMapping.ColumnMappings.Add("ShipCity", "ShipCity")
             tableMapping.ColumnMappings.Add("ShipState", "ShipState")
             tableMapping.ColumnMappings.Add("ShipZip", "ShipZip")
@@ -8455,28 +8193,23 @@ Namespace DataSet1TableAdapters
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cusAccount", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@razonSocial", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@rfc", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facDom", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facColonia", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facDelegacion", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facDom", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facCiudad", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facEstado", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facCP", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@facPais", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nomCertificado", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertDom", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertColonia", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertDelegacion", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertDom", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertCiudad", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertEstado", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertCP", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertPais", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvioPor", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvDom", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvColonia", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvDelegacion", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvDom", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvCiudad", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvEstado", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EnvCP", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numGuia", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8491,27 +8224,22 @@ Namespace DataSet1TableAdapters
                     ByVal razonSocial As String,  _
                     ByVal rfc As String,  _
                     ByVal facDom As String,  _
-                    ByVal facColonia As String,  _
-                    ByVal facDelegacion As String,  _
                     ByVal facCiudad As String,  _
                     ByVal facEstado As String,  _
                     ByVal facCP As String,  _
                     ByVal facPais As String,  _
                     ByVal nomCertificado As String,  _
                     ByVal CertDom As String,  _
-                    ByVal CertColonia As String,  _
-                    ByVal CertDelegacion As String,  _
                     ByVal CertCiudad As String,  _
                     ByVal CertEstado As String,  _
                     ByVal CertCP As String,  _
                     ByVal CertPais As String,  _
                     ByVal EnvioPor As String,  _
                     ByVal EnvDom As String,  _
-                    ByVal EnvColonia As String,  _
-                    ByVal EnvDelegacion As String,  _
                     ByVal EnvCiudad As String,  _
                     ByVal EnvEstado As String,  _
-                    ByVal EnvCP As String) As Integer
+                    ByVal EnvCP As String,  _
+                    ByVal numGuia As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (SOId.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(SOId.Value,Integer)
@@ -8543,110 +8271,85 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(6).Value = CType(facDom,String)
             End If
-            If (facColonia Is Nothing) Then
+            If (facCiudad Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(7).Value = CType(facColonia,String)
-            End If
-            If (facDelegacion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(8).Value = CType(facDelegacion,String)
-            End If
-            If (facCiudad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(9).Value = CType(facCiudad,String)
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(facCiudad,String)
             End If
             If (facEstado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(10).Value = CType(facEstado,String)
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(facEstado,String)
             End If
             If (facCP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(11).Value = CType(facCP,String)
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(facCP,String)
             End If
             If (facPais Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(12).Value = CType(facPais,String)
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(facPais,String)
             End If
             If (nomCertificado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(13).Value = CType(nomCertificado,String)
+                Me.Adapter.SelectCommand.Parameters(11).Value = CType(nomCertificado,String)
             End If
             If (CertDom Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(14).Value = CType(CertDom,String)
-            End If
-            If (CertColonia Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(15).Value = CType(CertColonia,String)
-            End If
-            If (CertDelegacion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(16).Value = CType(CertDelegacion,String)
+                Me.Adapter.SelectCommand.Parameters(12).Value = CType(CertDom,String)
             End If
             If (CertCiudad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(17).Value = CType(CertCiudad,String)
+                Me.Adapter.SelectCommand.Parameters(13).Value = CType(CertCiudad,String)
             End If
             If (CertEstado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(18).Value = CType(CertEstado,String)
+                Me.Adapter.SelectCommand.Parameters(14).Value = CType(CertEstado,String)
             End If
             If (CertCP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(19).Value = CType(CertCP,String)
+                Me.Adapter.SelectCommand.Parameters(15).Value = CType(CertCP,String)
             End If
             If (CertPais Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(20).Value = CType(CertPais,String)
+                Me.Adapter.SelectCommand.Parameters(16).Value = CType(CertPais,String)
             End If
             If (EnvioPor Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(21).Value = CType(EnvioPor,String)
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(EnvioPor,String)
             End If
             If (EnvDom Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(22).Value = CType(EnvDom,String)
-            End If
-            If (EnvColonia Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(23).Value = CType(EnvColonia,String)
-            End If
-            If (EnvDelegacion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(24).Value = CType(EnvDelegacion,String)
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(EnvDom,String)
             End If
             If (EnvCiudad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(25).Value = CType(EnvCiudad,String)
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(EnvCiudad,String)
             End If
             If (EnvEstado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(26).Value = CType(EnvEstado,String)
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(EnvEstado,String)
             End If
             If (EnvCP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(27).Value = CType(EnvCP,String)
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(EnvCP,String)
+            End If
+            If (numGuia.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(numGuia.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8666,27 +8369,22 @@ Namespace DataSet1TableAdapters
                     ByVal razonSocial As String,  _
                     ByVal rfc As String,  _
                     ByVal facDom As String,  _
-                    ByVal facColonia As String,  _
-                    ByVal facDelegacion As String,  _
                     ByVal facCiudad As String,  _
                     ByVal facEstado As String,  _
                     ByVal facCP As String,  _
                     ByVal facPais As String,  _
                     ByVal nomCertificado As String,  _
                     ByVal CertDom As String,  _
-                    ByVal CertColonia As String,  _
-                    ByVal CertDelegacion As String,  _
                     ByVal CertCiudad As String,  _
                     ByVal CertEstado As String,  _
                     ByVal CertCP As String,  _
                     ByVal CertPais As String,  _
                     ByVal EnvioPor As String,  _
                     ByVal EnvDom As String,  _
-                    ByVal EnvColonia As String,  _
-                    ByVal EnvDelegacion As String,  _
                     ByVal EnvCiudad As String,  _
                     ByVal EnvEstado As String,  _
-                    ByVal EnvCP As String) As DataSet1.ConfirmacionDeDatosDataTable
+                    ByVal EnvCP As String,  _
+                    ByVal numGuia As Global.System.Nullable(Of Integer)) As DataSet1.ConfirmacionDeDatosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (SOId.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(SOId.Value,Integer)
@@ -8718,110 +8416,85 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(6).Value = CType(facDom,String)
             End If
-            If (facColonia Is Nothing) Then
+            If (facCiudad Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(7).Value = CType(facColonia,String)
-            End If
-            If (facDelegacion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(8).Value = CType(facDelegacion,String)
-            End If
-            If (facCiudad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(9).Value = CType(facCiudad,String)
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(facCiudad,String)
             End If
             If (facEstado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(10).Value = CType(facEstado,String)
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(facEstado,String)
             End If
             If (facCP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(11).Value = CType(facCP,String)
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(facCP,String)
             End If
             If (facPais Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(12).Value = CType(facPais,String)
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(facPais,String)
             End If
             If (nomCertificado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(13).Value = CType(nomCertificado,String)
+                Me.Adapter.SelectCommand.Parameters(11).Value = CType(nomCertificado,String)
             End If
             If (CertDom Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(14).Value = CType(CertDom,String)
-            End If
-            If (CertColonia Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(15).Value = CType(CertColonia,String)
-            End If
-            If (CertDelegacion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(16).Value = CType(CertDelegacion,String)
+                Me.Adapter.SelectCommand.Parameters(12).Value = CType(CertDom,String)
             End If
             If (CertCiudad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(17).Value = CType(CertCiudad,String)
+                Me.Adapter.SelectCommand.Parameters(13).Value = CType(CertCiudad,String)
             End If
             If (CertEstado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(18).Value = CType(CertEstado,String)
+                Me.Adapter.SelectCommand.Parameters(14).Value = CType(CertEstado,String)
             End If
             If (CertCP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(19).Value = CType(CertCP,String)
+                Me.Adapter.SelectCommand.Parameters(15).Value = CType(CertCP,String)
             End If
             If (CertPais Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(20).Value = CType(CertPais,String)
+                Me.Adapter.SelectCommand.Parameters(16).Value = CType(CertPais,String)
             End If
             If (EnvioPor Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(21).Value = CType(EnvioPor,String)
+                Me.Adapter.SelectCommand.Parameters(17).Value = CType(EnvioPor,String)
             End If
             If (EnvDom Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(22).Value = CType(EnvDom,String)
-            End If
-            If (EnvColonia Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(23).Value = CType(EnvColonia,String)
-            End If
-            If (EnvDelegacion Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(24).Value = CType(EnvDelegacion,String)
+                Me.Adapter.SelectCommand.Parameters(18).Value = CType(EnvDom,String)
             End If
             If (EnvCiudad Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(25).Value = CType(EnvCiudad,String)
+                Me.Adapter.SelectCommand.Parameters(19).Value = CType(EnvCiudad,String)
             End If
             If (EnvEstado Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(26).Value = CType(EnvEstado,String)
+                Me.Adapter.SelectCommand.Parameters(20).Value = CType(EnvEstado,String)
             End If
             If (EnvCP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.SelectCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(27).Value = CType(EnvCP,String)
+                Me.Adapter.SelectCommand.Parameters(21).Value = CType(EnvCP,String)
+            End If
+            If (numGuia.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(22).Value = CType(numGuia.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As DataSet1.ConfirmacionDeDatosDataTable = New DataSet1.ConfirmacionDeDatosDataTable()
             Me.Adapter.Fill(dataTable)

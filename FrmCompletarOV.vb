@@ -79,7 +79,7 @@ Public Class FrmCompletarOV
                 comando.ExecuteNonQuery()
                 MsgBox("ORDEN DE VENTA GUARDADA")
             Else
-                R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
+                R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', RecDate ='" & dtpFechaRecep.Value.ToShortDateString & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
                 [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
                 [Volume] = '" & txtVolumen.Text & "'
                 where [SOId] = " & Val(NumOV.Text) & ""

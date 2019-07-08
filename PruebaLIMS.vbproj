@@ -356,6 +356,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reportes\ConfirmacionDeDatos.Designer.vb">
+      <DependentUpon>ConfirmacionDeDatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ConfirmacionDeDatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\cotLIMSAct.Designer.vb">
       <DependentUpon>cotLIMSAct.vb</DependentUpon>
     </Compile>
@@ -473,6 +479,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRelacionesContactoEmpresas.resx">
       <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ConfirmacionDeDatos.rdlc" />
+    <EmbeddedResource Include="Reportes\ConfirmacionDeDatos.resx">
+      <DependentUpon>ConfirmacionDeDatos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cotActualizada.rdlc" />
     <EmbeddedResource Include="Reportes\CotizacionModelo.rdlc" />
