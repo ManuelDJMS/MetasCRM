@@ -215,9 +215,8 @@ Partial Class FrmCompletarOV
         Me.txtCorreo.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.Location = New System.Drawing.Point(83, 34)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(96, 14)
+        Me.txtCorreo.Size = New System.Drawing.Size(0, 14)
         Me.txtCorreo.TabIndex = 162
-        Me.txtCorreo.Text = "Correo electronico"
         '
         'Label9
         '

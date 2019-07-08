@@ -24,50 +24,18 @@ Partial Class FrmAutorizarSolicitudes
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAutorizarSolicitudes))
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAutorizarSolicitudes))
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabConsulta = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DGRes = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Obser = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Customerid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.CustAccount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGContactos = New System.Windows.Forms.DataGridView()
-        Me.DGOportunidades = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btSinCot = New System.Windows.Forms.Button()
         Me.OV = New System.Windows.Forms.Label()
@@ -135,11 +103,39 @@ Partial Class FrmAutorizarSolicitudes
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btGuardar = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.TextTel = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextDom = New System.Windows.Forms.TextBox()
+        Me.TextEmail = New System.Windows.Forms.TextBox()
+        Me.txtNombreE = New System.Windows.Forms.TextBox()
+        Me.txtCP = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LabelNombre = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustAccount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Obser = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Customerid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabConsulta.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGContactos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -166,8 +162,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.DGRes)
-        Me.TabPage2.Controls.Add(Me.DGContactos)
-        Me.TabPage2.Controls.Add(Me.DGOportunidades)
         Me.TabPage2.Controls.Add(Me.Panel2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
@@ -210,7 +204,7 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGRes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGRes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.Correo, Me.DataGridViewTextBoxColumn4, Me.Column22, Me.Obser, Me.Customerid, Me.DataGridViewCheckBoxColumn1, Me.CustAccount, Me.Column8, Me.Column20, Me.Column21, Me.Column23, Me.Column24, Me.Column25, Me.Column26, Me.Column27, Me.Column28, Me.Column29})
+        Me.DGRes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.CustAccount, Me.Column8, Me.Column20, Me.Column21, Me.Correo, Me.DataGridViewTextBoxColumn4, Me.Column22, Me.Obser, Me.Customerid, Me.Column23, Me.Column24, Me.Column25, Me.Column26, Me.Column27, Me.Column28, Me.Column29})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -219,221 +213,24 @@ Partial Class FrmAutorizarSolicitudes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGRes.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DGRes.Location = New System.Drawing.Point(14, 72)
+        Me.DGRes.Location = New System.Drawing.Point(14, 117)
         Me.DGRes.Name = "DGRes"
-        Me.DGRes.Size = New System.Drawing.Size(1109, 508)
+        Me.DGRes.Size = New System.Drawing.Size(1109, 463)
         Me.DGRes.TabIndex = 162
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "NumCot"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 75
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Contacto"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 210
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Empresa"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 210
-        '
-        'Correo
-        '
-        Me.Correo.HeaderText = "Referencia"
-        Me.Correo.Name = "Correo"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Fecha Desde"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 140
-        '
-        'Column22
-        '
-        Me.Column22.HeaderText = "Fecha Hasta"
-        Me.Column22.Name = "Column22"
-        Me.Column22.Width = 140
-        '
-        'Obser
-        '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green
-        DataGridViewCellStyle2.Format = "$ .00"
-        DataGridViewCellStyle2.NullValue = "0"
-        Me.Obser.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Obser.HeaderText = "Total"
-        Me.Obser.Name = "Obser"
-        '
-        'Customerid
-        '
-        Me.Customerid.HeaderText = "CustomerID"
-        Me.Customerid.Name = "Customerid"
-        Me.Customerid.Visible = False
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Generar"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        Me.DataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.DataGridViewCheckBoxColumn1.Width = 80
-        '
-        'CustAccount
-        '
-        Me.CustAccount.HeaderText = "Account"
-        Me.CustAccount.Name = "CustAccount"
-        Me.CustAccount.Visible = False
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "ShipAdress1"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Visible = False
-        '
-        'Column20
-        '
-        Me.Column20.HeaderText = "ShipAdress2"
-        Me.Column20.Name = "Column20"
-        Me.Column20.Visible = False
-        '
-        'Column21
-        '
-        Me.Column21.HeaderText = "ShipAdress3"
-        Me.Column21.Name = "Column21"
-        Me.Column21.Visible = False
-        '
-        'Column23
-        '
-        Me.Column23.HeaderText = "ShipCity"
-        Me.Column23.Name = "Column23"
-        Me.Column23.Visible = False
-        '
-        'Column24
-        '
-        Me.Column24.HeaderText = "ShipState"
-        Me.Column24.Name = "Column24"
-        Me.Column24.Visible = False
-        '
-        'Column25
-        '
-        Me.Column25.HeaderText = "ShipZip"
-        Me.Column25.Name = "Column25"
-        Me.Column25.Visible = False
-        '
-        'Column26
-        '
-        Me.Column26.HeaderText = "ShipTo"
-        Me.Column26.Name = "Column26"
-        Me.Column26.Visible = False
-        '
-        'Column27
-        '
-        Me.Column27.HeaderText = "CategoryCustomer"
-        Me.Column27.Name = "Column27"
-        Me.Column27.Visible = False
-        '
-        'Column28
-        '
-        Me.Column28.HeaderText = "ShipCounty"
-        Me.Column28.Name = "Column28"
-        Me.Column28.Visible = False
-        '
-        'Column29
-        '
-        Me.Column29.HeaderText = "CustomerID"
-        Me.Column29.Name = "Column29"
-        Me.Column29.Visible = False
-        '
-        'DGContactos
-        '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGContactos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DGContactos.BackgroundColor = System.Drawing.Color.DimGray
-        Me.DGContactos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGContactos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGContactos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.DGContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGContactos.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DGContactos.GridColor = System.Drawing.Color.Gainsboro
-        Me.DGContactos.Location = New System.Drawing.Point(31, 214)
-        Me.DGContactos.Name = "DGContactos"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGContactos.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGContactos.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DGContactos.Size = New System.Drawing.Size(1045, 136)
-        Me.DGContactos.TabIndex = 160
-        Me.DGContactos.Visible = False
-        '
-        'DGOportunidades
-        '
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGOportunidades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
-        Me.DGOportunidades.BackgroundColor = System.Drawing.Color.DimGray
-        Me.DGOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGOportunidades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
-        Me.DGOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGOportunidades.DefaultCellStyle = DataGridViewCellStyle11
-        Me.DGOportunidades.GridColor = System.Drawing.Color.Gainsboro
-        Me.DGOportunidades.Location = New System.Drawing.Point(31, 72)
-        Me.DGOportunidades.Name = "DGOportunidades"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGOportunidades.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGOportunidades.RowsDefaultCellStyle = DataGridViewCellStyle13
-        Me.DGOportunidades.Size = New System.Drawing.Size(1045, 136)
-        Me.DGOportunidades.TabIndex = 160
-        Me.DGOportunidades.Visible = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.Controls.Add(Me.TextTel)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.TextDom)
+        Me.Panel2.Controls.Add(Me.TextEmail)
+        Me.Panel2.Controls.Add(Me.txtNombreE)
+        Me.Panel2.Controls.Add(Me.txtCP)
+        Me.Panel2.Controls.Add(Me.Label19)
+        Me.Panel2.Controls.Add(Me.LabelNombre)
+        Me.Panel2.Controls.Add(Me.Label25)
+        Me.Panel2.Controls.Add(Me.Label28)
         Me.Panel2.Controls.Add(Me.btSinCot)
         Me.Panel2.Controls.Add(Me.OV)
         Me.Panel2.Controls.Add(Me.cusAcount)
@@ -447,7 +244,7 @@ Partial Class FrmAutorizarSolicitudes
         Me.Panel2.Controls.Add(Me.Label27)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1140, 66)
+        Me.Panel2.Size = New System.Drawing.Size(1140, 111)
         Me.Panel2.TabIndex = 152
         '
         'btSinCot
@@ -525,7 +322,7 @@ Partial Class FrmAutorizarSolicitudes
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(311, 32)
+        Me.Label3.Location = New System.Drawing.Point(11, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 18)
         Me.Label3.TabIndex = 155
@@ -534,9 +331,9 @@ Partial Class FrmAutorizarSolicitudes
         'txtNumeroDeCuentaB
         '
         Me.txtNumeroDeCuentaB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumeroDeCuentaB.Location = New System.Drawing.Point(380, 32)
+        Me.txtNumeroDeCuentaB.Location = New System.Drawing.Point(80, 74)
         Me.txtNumeroDeCuentaB.Name = "txtNumeroDeCuentaB"
-        Me.txtNumeroDeCuentaB.Size = New System.Drawing.Size(107, 20)
+        Me.txtNumeroDeCuentaB.Size = New System.Drawing.Size(71, 20)
         Me.txtNumeroDeCuentaB.TabIndex = 128
         '
         'Label26
@@ -619,42 +416,42 @@ Partial Class FrmAutorizarSolicitudes
         '
         'dgCot
         '
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgCot.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgCot.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgCot.BackgroundColor = System.Drawing.Color.Gray
         Me.dgCot.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgCot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgCot.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgCot.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgCot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCot.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column11, Me.Column10, Me.Column12, Me.Column13, Me.Column14, Me.Column16, Me.Column17, Me.Column18})
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgCot.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgCot.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgCot.GridColor = System.Drawing.Color.Gainsboro
         Me.dgCot.Location = New System.Drawing.Point(47, 228)
         Me.dgCot.Name = "dgCot"
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgCot.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgCot.RowsDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgCot.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgCot.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgCot.Size = New System.Drawing.Size(1034, 296)
         Me.dgCot.TabIndex = 278
         '
@@ -1173,6 +970,222 @@ Partial Class FrmAutorizarSolicitudes
         Me.PictureBox5.TabIndex = 43
         Me.PictureBox5.TabStop = False
         '
+        'TextTel
+        '
+        Me.TextTel.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextTel.Location = New System.Drawing.Point(1004, 73)
+        Me.TextTel.Name = "TextTel"
+        Me.TextTel.Size = New System.Drawing.Size(69, 21)
+        Me.TextTel.TabIndex = 212
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(931, 75)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(67, 18)
+        Me.Label10.TabIndex = 211
+        Me.Label10.Text = "Teléfono:"
+        '
+        'TextDom
+        '
+        Me.TextDom.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextDom.Location = New System.Drawing.Point(459, 75)
+        Me.TextDom.Name = "TextDom"
+        Me.TextDom.Size = New System.Drawing.Size(123, 21)
+        Me.TextDom.TabIndex = 206
+        '
+        'TextEmail
+        '
+        Me.TextEmail.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextEmail.Location = New System.Drawing.Point(657, 75)
+        Me.TextEmail.Name = "TextEmail"
+        Me.TextEmail.Size = New System.Drawing.Size(113, 21)
+        Me.TextEmail.TabIndex = 210
+        '
+        'txtNombreE
+        '
+        Me.txtNombreE.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreE.Location = New System.Drawing.Point(228, 75)
+        Me.txtNombreE.Name = "txtNombreE"
+        Me.txtNombreE.Size = New System.Drawing.Size(138, 21)
+        Me.txtNombreE.TabIndex = 205
+        '
+        'txtCP
+        '
+        Me.txtCP.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCP.Location = New System.Drawing.Point(849, 75)
+        Me.txtCP.Name = "txtCP"
+        Me.txtCP.Size = New System.Drawing.Size(56, 21)
+        Me.txtCP.TabIndex = 208
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(597, 76)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(54, 18)
+        Me.Label19.TabIndex = 209
+        Me.Label19.Text = "Correo:"
+        '
+        'LabelNombre
+        '
+        Me.LabelNombre.AutoSize = True
+        Me.LabelNombre.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNombre.Location = New System.Drawing.Point(157, 76)
+        Me.LabelNombre.Name = "LabelNombre"
+        Me.LabelNombre.Size = New System.Drawing.Size(65, 18)
+        Me.LabelNombre.TabIndex = 203
+        Me.LabelNombre.Text = "Empresa:"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(372, 76)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(71, 18)
+        Me.Label25.TabIndex = 204
+        Me.Label25.Text = "Domicilio:"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(815, 74)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(28, 18)
+        Me.Label28.TabIndex = 207
+        Me.Label28.Text = "CP:"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Generar"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewCheckBoxColumn1.Width = 50
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "NumCot"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 50
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Contacto"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Empresa"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 180
+        '
+        'CustAccount
+        '
+        Me.CustAccount.HeaderText = "Correo"
+        Me.CustAccount.Name = "CustAccount"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Domicilio"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 130
+        '
+        'Column20
+        '
+        Me.Column20.HeaderText = "CP"
+        Me.Column20.Name = "Column20"
+        Me.Column20.Width = 40
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "Teléfono"
+        Me.Column21.Name = "Column21"
+        Me.Column21.Width = 80
+        '
+        'Correo
+        '
+        Me.Correo.HeaderText = "Referencia"
+        Me.Correo.Name = "Correo"
+        Me.Correo.Width = 80
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Fecha Desde"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 70
+        '
+        'Column22
+        '
+        Me.Column22.HeaderText = "Fecha Hasta"
+        Me.Column22.Name = "Column22"
+        Me.Column22.Width = 70
+        '
+        'Obser
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green
+        DataGridViewCellStyle2.Format = "$ .00"
+        DataGridViewCellStyle2.NullValue = "0"
+        Me.Obser.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Obser.HeaderText = "Total"
+        Me.Obser.Name = "Obser"
+        Me.Obser.Width = 80
+        '
+        'Customerid
+        '
+        Me.Customerid.HeaderText = "CustomerID"
+        Me.Customerid.Name = "Customerid"
+        Me.Customerid.Visible = False
+        '
+        'Column23
+        '
+        Me.Column23.HeaderText = "ShipCity"
+        Me.Column23.Name = "Column23"
+        Me.Column23.Visible = False
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "ShipState"
+        Me.Column24.Name = "Column24"
+        Me.Column24.Visible = False
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "ShipZip"
+        Me.Column25.Name = "Column25"
+        Me.Column25.Visible = False
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "ShipTo"
+        Me.Column26.Name = "Column26"
+        Me.Column26.Visible = False
+        '
+        'Column27
+        '
+        Me.Column27.HeaderText = "CategoryCustomer"
+        Me.Column27.Name = "Column27"
+        Me.Column27.Visible = False
+        '
+        'Column28
+        '
+        Me.Column28.HeaderText = "ShipCounty"
+        Me.Column28.Name = "Column28"
+        Me.Column28.Visible = False
+        '
+        'Column29
+        '
+        Me.Column29.HeaderText = "CustomerID"
+        Me.Column29.Name = "Column29"
+        Me.Column29.Visible = False
+        '
         'FrmAutorizarSolicitudes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1192,8 +1205,6 @@ Partial Class FrmAutorizarSolicitudes
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.DGRes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGContactos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGOportunidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1228,8 +1239,6 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents Label47 As Label
     Friend WithEvents btGuardar As Button
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents DGOportunidades As DataGridView
-    Friend WithEvents DGContactos As DataGridView
     Friend WithEvents dgCot As DataGridView
     Friend WithEvents Label57 As Label
     Friend WithEvents txtQuienCotizo As Label
@@ -1269,26 +1278,6 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents Label2 As Label
     Friend WithEvents DGRes As DataGridView
     Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents Correo As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column22 As DataGridViewTextBoxColumn
-    Friend WithEvents Obser As DataGridViewTextBoxColumn
-    Friend WithEvents Customerid As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
-    Friend WithEvents CustAccount As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column20 As DataGridViewTextBoxColumn
-    Friend WithEvents Column21 As DataGridViewTextBoxColumn
-    Friend WithEvents Column23 As DataGridViewTextBoxColumn
-    Friend WithEvents Column24 As DataGridViewTextBoxColumn
-    Friend WithEvents Column25 As DataGridViewTextBoxColumn
-    Friend WithEvents Column26 As DataGridViewTextBoxColumn
-    Friend WithEvents Column27 As DataGridViewTextBoxColumn
-    Friend WithEvents Column28 As DataGridViewTextBoxColumn
-    Friend WithEvents Column29 As DataGridViewTextBoxColumn
     Friend WithEvents dtp As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
@@ -1304,4 +1293,34 @@ Partial Class FrmAutorizarSolicitudes
     Friend WithEvents cusAcount As Label
     Friend WithEvents OV As Label
     Friend WithEvents btSinCot As Button
+    Friend WithEvents TextTel As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TextDom As TextBox
+    Friend WithEvents TextEmail As TextBox
+    Friend WithEvents txtNombreE As TextBox
+    Friend WithEvents txtCP As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents LabelNombre As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents CustAccount As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column20 As DataGridViewTextBoxColumn
+    Friend WithEvents Column21 As DataGridViewTextBoxColumn
+    Friend WithEvents Correo As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column22 As DataGridViewTextBoxColumn
+    Friend WithEvents Obser As DataGridViewTextBoxColumn
+    Friend WithEvents Customerid As DataGridViewTextBoxColumn
+    Friend WithEvents Column23 As DataGridViewTextBoxColumn
+    Friend WithEvents Column24 As DataGridViewTextBoxColumn
+    Friend WithEvents Column25 As DataGridViewTextBoxColumn
+    Friend WithEvents Column26 As DataGridViewTextBoxColumn
+    Friend WithEvents Column27 As DataGridViewTextBoxColumn
+    Friend WithEvents Column28 As DataGridViewTextBoxColumn
+    Friend WithEvents Column29 As DataGridViewTextBoxColumn
 End Class
