@@ -489,6 +489,7 @@
     <EmbeddedResource Include="Reportes\cotLIMSAct.resx">
       <DependentUpon>cotLIMSAct.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FomaDeTransito.rdlc" />
     <EmbeddedResource Include="Reportes\FrmReportes.resx">
       <DependentUpon>FrmReportes.vb</DependentUpon>
     </EmbeddedResource>

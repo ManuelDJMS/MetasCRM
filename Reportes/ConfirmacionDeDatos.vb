@@ -202,13 +202,109 @@ Public Class ConfirmacionDeDatos
             'Me.ReportEmbeddedResource = "MyAppNamespace.CotizacionModelo.rdlc"
             FrmReportes.ReportViewer1.LocalReport.ReportEmbeddedResource = "MyAppNamespace.ConfirmacionDeDatos.rdlc"
             Dim pdfContent As Byte() = FrmReportes.ReportViewer1.LocalReport.Render("PDF")
-            Dim pdfPath As String = "\\10.10.10.7\Public-2\REPORTES\CONFIRMACION_DATOS\" & nombreConfirmacion & ".pdf"
+            Dim pdfPath As String = "C:\Users\Software TI\Desktop\REPORTES\" & nombreConfirmacion & ".pdf"
             Dim pdfFile As New System.IO.FileStream(pdfPath, System.IO.FileMode.Create)
             pdfFile.Write(pdfContent, 0, pdfContent.Length)
-            pdfFile.Close()
-            FrmReportes.Show()
+            'pdfFile.Close()
             conexionLIMS.Close()
+
+
+
+
+
+
+
+            MetodoLIMS()
+            MetodoMetasInf2019()
+            comandoLIMS = conexionLIMS.CreateCommand
+            'Dim fechaRecep As Date
+            Dim customerID2, cliente2, companyName2, telefono2, emanil2, terminosPago2 As String
+            'Dim customerId, cusAccount, cpFac As Integer
+            R = "SELECT [SalesOrderDetails].[SOId],[SalesOrderDetails].[CustomerId], [CompanyName],[FirstName] + ' ' + [MiddleName]+' '+[LastName] AS Cliente, [Phone], [Email], 
+                    [SetupCustomerDetails].[PaymentTerms],ROW_NUMBER() OVER(ORDER BY [SalesOrderDetails].SOId ASC) AS Partidad, WOId, [WorkOrderDetails].[CustEquipMapId],[SetupCustomerEquipmentMapping].[InstrumentId], 
+                    [EquipmentName]+','+[Model]+ '.  ' +[Mfr]+''+[SetupCustomerEquipmentMapping].[SrlNo] AS Equipo, [Accuracy], [Uncertainity], isnull([LabInst],'') as Accesorios
+                    FROM [MetAs_Live-pruebas].[dbo].[SalesOrderDetails]
+                    INNER JOIN [SetupCustomerDetails] ON [SalesOrderDetails].[CustomerId] = [SetupCustomerDetails].[CustomerId]
+                    INNER JOIN [WorkOrderDetails] ON [SalesOrderDetails].[SOId] = [WorkOrderDetails].[SOId]
+                    INNER JOIN [SetupCustomerEquipmentMapping] ON [WorkOrderDetails].[CustEquipMapId] = [SetupCustomerEquipmentMapping].[CustEquipMapId]
+                    INNER JOIN [SetUpEquipment] ON [SetupCustomerEquipmentMapping].[EquipId] =  [SetUpEquipment].[EquipId] WHERE [SalesOrderDetails].[SOId] ='" & OV & "'"
+            comandoLIMS.CommandText = R
+            lectorLIMS = comandoLIMS.ExecuteReader
+            lectorLIMS.Read()
+            customerID2 = lectorLIMS(1)
+            'MsgBox(customerID2)
+            companyName2 = lectorLIMS(2)
+            'MsgBox(companyName2)
+            cliente2 = lectorLIMS(3)
+            'MsgBox(cliente2)
+            telefono2 = lectorLIMS(4)
+            'MsgBox(telefono2)
+            emanil2 = lectorLIMS(5)
+            'MsgBox(emanil2)
+            terminosPago2 = lectorLIMS(6)
+            'MsgBox(terminosPago2)
+            conexionLIMS.Close()
+            Dim Adaptador2 As New SqlDataAdapter
+            Adaptador2.SelectCommand = New SqlCommand
+            Adaptador2.SelectCommand.Connection = conexionLIMS
+            Adaptador2.SelectCommand.CommandText = "FormaDeTransito"
+            Adaptador2.SelectCommand.CommandType = CommandType.StoredProcedure
+            Dim param1a = New SqlParameter("@SOId", SqlDbType.VarChar)
+            Dim param2a = New SqlParameter("@CustomerId", SqlDbType.VarChar)
+            Dim param7a = New SqlParameter("@Cliente", SqlDbType.VarChar)
+            Dim param3a = New SqlParameter("@CompanyName", SqlDbType.VarChar)
+            Dim param4a = New SqlParameter("@telefono", SqlDbType.VarChar)
+            Dim param5a = New SqlParameter("@Email", SqlDbType.VarChar)
+            Dim param6a = New SqlParameter("@terminosPago", SqlDbType.VarChar)
+            param1a.Direction = ParameterDirection.Input
+            param2a.Direction = ParameterDirection.Input
+            param3a.Direction = ParameterDirection.Input
+            param4a.Direction = ParameterDirection.Input
+            param5a.Direction = ParameterDirection.Input
+            param6a.Direction = ParameterDirection.Input
+            param7a.Direction = ParameterDirection.Input
+            param1a.Value = OV
+            param2a.Value = customerID2
+            param3a.Value = companyName2
+            param4a.Value = telefono2
+            param5a.Value = emanil2
+            param6a.Value = terminosPago2
+            param7a.Value = cliente2
+            Adaptador2.SelectCommand.Parameters.Add(param1a)
+            Adaptador2.SelectCommand.Parameters.Add(param2a)
+            Adaptador2.SelectCommand.Parameters.Add(param3a)
+            Adaptador2.SelectCommand.Parameters.Add(param4a)
+            Adaptador2.SelectCommand.Parameters.Add(param5a)
+            Adaptador2.SelectCommand.Parameters.Add(param6a)
+            Adaptador2.SelectCommand.Parameters.Add(param7a)
+            Dim Data2 As New DataSet
+            Adaptador2.Fill(Data2)
+            Data.DataSetName = "Data1"
+            Dim Datasource2 As New ReportDataSource("DataSet1", Data.Tables(0))
+            Datasource.Name = "DataSet1"
+            Datasource.Value = Data.Tables(0)
+            Dim p1a As New ReportParameter("SOId", OV)
+            Dim p2a As New ReportParameter("CustomerId", customerID2)
+            Dim p3a As New ReportParameter("CompanyName", cliente2)
+            Dim p4a As New ReportParameter("telefono", telefono2)
+            Dim p5a As New ReportParameter("Email", emanil2)
+            Dim p6a As New ReportParameter("terminosPago", terminosPago2)
+            Dim p7a As New ReportParameter("Cliente", terminosPago2)
+            Dim Reportes2 As New ReportDataSource("DataSet1", Data.Tables(0))
+            FrmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+            FrmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
+            FrmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Users\Software TI\Documents\GitHub\MetasCRM\Reportes\FomaDeTransito.rdlc"
+            FrmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1a, p2a, p3a, p4a, p5a, p6a, p7a})
+            FrmReportes.ReportViewer1.RefreshReport()
+            Dim nombreFormaTransito As String = "Forma-de-Transito-OV-"
+            nombreFormaTransito = nombreFormaTransito + OV.ToString
+            MsgBox(nombreFormaTransito)
+            FrmReportes.ReportViewer1.LocalReport.ReportEmbeddedResource = "MyAppNamespace.FomaDeTransito.rdlc"
+            Dim pdfContent2 As Byte() = FrmReportes.ReportViewer1.LocalReport.Render("PDF")
+            Dim pdfPath2 As String = "C:\Users\Software TI\Desktop\REPORTES\Forma_Transito\" & nombreFormaTransito & ".pdf"
+            Dim pdfFile2 As New System.IO.FileStream(pdfPath2, System.IO.FileMode.Create)
+            pdfFile.Write(pdfContent2, 0, pdfContent2.Length)
+            pdfFile.Close()
         End If
     End Sub
-
 End Class
