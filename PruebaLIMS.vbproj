@@ -317,6 +317,12 @@
     <Compile Include="FrmReportesGenerales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmSeguimientoCot.Designer.vb">
+      <DependentUpon>FrmSeguimientoCot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSeguimientoCot.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmTiemposCondicion.Designer.vb">
       <DependentUpon>FrmTiemposCondicion.vb</DependentUpon>
     </Compile>
@@ -479,6 +485,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRelacionesContactoEmpresas.resx">
       <DependentUpon>FrmRelacionesContactoEmpresas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSeguimientoCot.resx">
+      <DependentUpon>FrmSeguimientoCot.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ConfirmacionDeDatos.rdlc" />
     <EmbeddedResource Include="Reportes\ConfirmacionDeDatos.resx">
