@@ -202,7 +202,7 @@ Public Class ConfirmacionDeDatos
             'Me.ReportEmbeddedResource = "MyAppNamespace.CotizacionModelo.rdlc"
             FrmReportes.ReportViewer1.LocalReport.ReportEmbeddedResource = "MyAppNamespace.ConfirmacionDeDatos.rdlc"
             Dim pdfContent As Byte() = FrmReportes.ReportViewer1.LocalReport.Render("PDF")
-            Dim pdfPath As String = "\\10.10.10.7\Public-2\REPORTES\CONFIRMACION DE DATOS\" & nombreConfirmacion & ".pdf"
+            Dim pdfPath As String = "\\10.10.10.7\Public-2\REPORTES\CONFIRMACION_DATOS\" & nombreConfirmacion & ".pdf"
             Dim pdfFile As New System.IO.FileStream(pdfPath, System.IO.FileMode.Create)
             pdfFile.Write(pdfContent, 0, pdfContent.Length)
             pdfFile.Close()

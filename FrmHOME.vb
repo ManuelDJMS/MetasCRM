@@ -549,4 +549,8 @@ Public Class FrmHOME
         GroupBox4.Visible = False
         ''--------------------------------------
     End Sub
+
+    Private Sub Label40_Click(sender As Object, e As EventArgs) Handles Label40.Click
+        ConfirmacionDeDatos.Show()
+    End Sub
 End Class

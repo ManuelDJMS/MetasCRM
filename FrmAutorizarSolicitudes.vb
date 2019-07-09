@@ -12,7 +12,6 @@ Public Class FrmAutorizarSolicitudes
             Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Email, ContAddress1, ContZip, Phone, Referencia, FechaDesde, FechaHasta, Total, x2.CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
 				INNER JOIN " & servidor & "[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId] 
                 inner join " & servidor & "[SetupCustomerAddressDtls] x3 on x2.[CustomerId]=x3.[CustomerId] where Creado= 0"
-            MsgBox(R)
             Dim comando As New SqlCommand(R, conexionMetasCotizador)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
@@ -125,6 +124,29 @@ Public Class FrmAutorizarSolicitudes
         End Try
     End Sub
 
+    Sub busquedas()
+        Try
+            DGRes.Rows.Clear()
+            MetodoMetasCotizador()
+            Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Email, ContAddress1, ContZip, Phone, Referencia, FechaDesde, FechaHasta, Total, x2.CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
+				INNER JOIN " & servidor & "[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId] 
+                inner join " & servidor & "[SetupCustomerAddressDtls] x3 on x2.[CustomerId]=x3.[CustomerId] where Creado= 0 and CompanyName like '" & txtNombreE.Text & "%' and ContAddress1 like '" & TextDom.Text & "%'
+                and Email like '" & TextEmail.Text & "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
+            Dim comando As New SqlCommand(R, conexionMetasCotizador)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            While lector.Read()
+                DGRes.Rows.Add(False, lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7), lector(8), lector(9), lector(10), lector(11), lector(12))
+            End While
+            conexionMetasCotizador.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+            cadena = Err.Description
+            cadena = cadena.Replace("'", "")
+            Bitacora("FrmAutorizarSolicitudes", "Error al cargar el formulario", Err.Number, cadena)
+        End Try
+    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ''Generar
@@ -158,8 +180,10 @@ Public Class FrmAutorizarSolicitudes
                         Dim fecha As String
                         If seleccionado = True Then
                             MetodoLIMS()
-                        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, ShipCity, ShipState, ShipZip, ShipTo, CategoryCustomer, ShipCountry,[PONo],[RefNo],[RecBy],[Priority],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[ModifiedBy],[ModifiedOn],[SalesAmount],[SalesDiscount],[SalesTax],[Scheduled],[BillTo],[TrackingNo],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
-                            values(" & Val(DGRes.Rows(i).Cells(19).Value) & ",'" & DGRes.Rows(i).Cells(9).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" & False & "','" & DGRes.Rows(i).Cells(10).Value & "','" & DGRes.Rows(i).Cells(11).Value & "','" & DGRes.Rows(i).Cells(12).Value & "','" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(14).Value & "','" & DGRes.Rows(i).Cells(15).Value & "','" & DGRes.Rows(i).Cells(16).Value & "','" & DGRes.Rows(i).Cells(17).Value & "','" & DGRes.Rows(i).Cells(18).Value & "', '', ' " & DGRes.Rows(i).Cells(0).Value & "', '', '', '', '', '', 'USR00000008', '" & dtp.Value.ToShortDateString & "', '', '', '', '', '', '', '', '', '', '', '', '')"
+                        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RefNo,RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, [CreatedBy],[CreatedOn]) 
+                            values(" & Val(DGRes.Rows(i).Cells(12).Value) & ",'" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(1).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" &
+                            False & "','" & DGRes.Rows(i).Cells(5).Value & "','-','-','USR00000008', '" &
+                        dtp.Value.ToShortDateString & "')"
 
                         Dim comando As New SqlCommand
                             comando = conexionLIMS.CreateCommand
@@ -173,7 +197,7 @@ Public Class FrmAutorizarSolicitudes
                             MetodoLIMS()
                         R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
                             FROM SalesOrderDetails where RefNo= " & Val(DGRes.Rows(i).Cells(1).Value) & " ORDER BY [SOId] DESC"
-                        MsgBox(R)
+
                         Dim comando2 As New SqlCommand(R, conexionLIMS)
                             Dim lector As SqlDataReader
                             lector = comando2.ExecuteReader
@@ -183,7 +207,7 @@ Public Class FrmAutorizarSolicitudes
                             MetodoMetasCotizador()
                         R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(1).Value) & ""
 
-                        MsgBox(R)
+
                         Dim coma As New SqlCommand(R, conexionMetasCotizador)
                             OV.Text = numOV
                             coma.ExecuteNonQuery()
@@ -229,7 +253,7 @@ Public Class FrmAutorizarSolicitudes
         Try
             For Each row As DataGridViewRow In DGRes.Rows
                 row.Selected = False
-                If CStr(row.Cells(0).Value) = txtNumeroDeCuentaB.Text Then
+                If CStr(row.Cells(1).Value) = txtNumeroDeCuentaB.Text Then
                     row.Selected = True
                     Exit For
                 ElseIf CStr(row.Cells(0).Value).ToLower = Nothing Then
@@ -245,5 +269,25 @@ Public Class FrmAutorizarSolicitudes
 
     Private Sub BtSinCot_Click(sender As Object, e As EventArgs) Handles btSinCot.Click
         FrmFiltrar.Show()
+    End Sub
+
+    Private Sub TxtNombreE_TextChanged(sender As Object, e As EventArgs) Handles txtNombreE.TextChanged
+        busquedas()
+    End Sub
+
+    Private Sub TextDom_TextChanged(sender As Object, e As EventArgs) Handles TextDom.TextChanged
+        busquedas()
+    End Sub
+
+    Private Sub TextEmail_TextChanged(sender As Object, e As EventArgs) Handles TextEmail.TextChanged
+        busquedas()
+    End Sub
+
+    Private Sub TxtCP_TextChanged(sender As Object, e As EventArgs) Handles txtCP.TextChanged
+        busquedas()
+    End Sub
+
+    Private Sub TextTel_TextChanged(sender As Object, e As EventArgs) Handles TextTel.TextChanged
+        busquedas()
     End Sub
 End Class
