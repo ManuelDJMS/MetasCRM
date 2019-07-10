@@ -96,12 +96,12 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.53326cm</Width>
+                  <Width>0.07938cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1.07625cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -114,6 +114,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
+                                    <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -198,7 +199,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>2.19949cm</Size>
+                    <Size>1.49716cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox17">
                         <CanGrow>true</CanGrow>
@@ -209,6 +210,7 @@
                               <TextRun>
                                 <Value>Partidad</Value>
                                 <Style>
+                                  <FontSize>8pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -241,7 +243,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>2.35824cm</Size>
+                        <Size>1.71297cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox15">
                             <CanGrow>true</CanGrow>
@@ -250,8 +252,24 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>WOId</Value>
+                                    <Value>Orden de</Value>
                                     <Style>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
+                              </Paragraph>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Trabajo</Value>
+                                    <Style>
+                                      <FontSize>8pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -284,17 +302,18 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>3.09907cm</Size>
+                            <Size>8.52178cm</Size>
                             <CellContents>
-                              <Textbox Name="Textbox13">
+                              <Textbox Name="Textbox83">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Cust Equip Map Id</Value>
+                                        <Value>Descripción</Value>
                                         <Style>
+                                          <FontSize>11pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Color>White</Color>
                                         </Style>
@@ -305,7 +324,7 @@
                                     </Style>
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>Textbox13</rd:DefaultName>
+                                <rd:DefaultName>Textbox83</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Style>None</Style>
@@ -327,17 +346,18 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>3.09907cm</Size>
+                                <Size>4.93614cm</Size>
                                 <CellContents>
-                                  <Textbox Name="Textbox11">
+                                  <Textbox Name="Textbox7">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>Instrument Id</Value>
+                                            <Value>Intervalo Nominal</Value>
                                             <Style>
+                                              <FontSize>11pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                               <Color>White</Color>
                                             </Style>
@@ -348,7 +368,7 @@
                                         </Style>
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>Textbox11</rd:DefaultName>
+                                    <rd:DefaultName>Textbox7</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -370,17 +390,18 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>3.09907cm</Size>
+                                    <Size>4.55254cm</Size>
                                     <CellContents>
-                                      <Textbox Name="Textbox83">
+                                      <Textbox Name="Textbox5">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>Puntos</Value>
                                                 <Style>
+                                                  <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                   <Color>White</Color>
                                                 </Style>
@@ -391,7 +412,7 @@
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox83</rd:DefaultName>
+                                        <rd:DefaultName>Textbox5</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -413,17 +434,18 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>3.09907cm</Size>
+                                        <Size>4.66356cm</Size>
                                         <CellContents>
-                                          <Textbox Name="Textbox7">
+                                          <Textbox Name="Textbox3">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>Accuracy</Value>
+                                                    <Value>Accesorios</Value>
                                                     <Style>
+                                                      <FontSize>11pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Color>White</Color>
                                                     </Style>
@@ -434,7 +456,7 @@
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox7</rd:DefaultName>
+                                            <rd:DefaultName>Textbox3</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Style>None</Style>
@@ -454,97 +476,7 @@
                                         </CellContents>
                                       </TablixHeader>
                                       <TablixMembers>
-                                        <TablixMember>
-                                          <TablixHeader>
-                                            <Size>3.09907cm</Size>
-                                            <CellContents>
-                                              <Textbox Name="Textbox5">
-                                                <CanGrow>true</CanGrow>
-                                                <KeepTogether>true</KeepTogether>
-                                                <Paragraphs>
-                                                  <Paragraph>
-                                                    <TextRuns>
-                                                      <TextRun>
-                                                        <Value>Uncertainity</Value>
-                                                        <Style>
-                                                          <FontWeight>Bold</FontWeight>
-                                                          <Color>White</Color>
-                                                        </Style>
-                                                      </TextRun>
-                                                    </TextRuns>
-                                                    <Style>
-                                                      <TextAlign>Center</TextAlign>
-                                                    </Style>
-                                                  </Paragraph>
-                                                </Paragraphs>
-                                                <rd:DefaultName>Textbox5</rd:DefaultName>
-                                                <Style>
-                                                  <Border>
-                                                    <Style>None</Style>
-                                                  </Border>
-                                                  <BottomBorder>
-                                                    <Color>LightGrey</Color>
-                                                    <Style>Solid</Style>
-                                                    <Width>1pt</Width>
-                                                  </BottomBorder>
-                                                  <BackgroundColor>SteelBlue</BackgroundColor>
-                                                  <PaddingLeft>2pt</PaddingLeft>
-                                                  <PaddingRight>2pt</PaddingRight>
-                                                  <PaddingTop>2pt</PaddingTop>
-                                                  <PaddingBottom>2pt</PaddingBottom>
-                                                </Style>
-                                              </Textbox>
-                                            </CellContents>
-                                          </TablixHeader>
-                                          <TablixMembers>
-                                            <TablixMember>
-                                              <TablixHeader>
-                                                <Size>4.71238cm</Size>
-                                                <CellContents>
-                                                  <Textbox Name="Textbox3">
-                                                    <CanGrow>true</CanGrow>
-                                                    <KeepTogether>true</KeepTogether>
-                                                    <Paragraphs>
-                                                      <Paragraph>
-                                                        <TextRuns>
-                                                          <TextRun>
-                                                            <Value>Accesorios</Value>
-                                                            <Style>
-                                                              <FontWeight>Bold</FontWeight>
-                                                              <Color>White</Color>
-                                                            </Style>
-                                                          </TextRun>
-                                                        </TextRuns>
-                                                        <Style>
-                                                          <TextAlign>Center</TextAlign>
-                                                        </Style>
-                                                      </Paragraph>
-                                                    </Paragraphs>
-                                                    <rd:DefaultName>Textbox3</rd:DefaultName>
-                                                    <Style>
-                                                      <Border>
-                                                        <Style>None</Style>
-                                                      </Border>
-                                                      <BottomBorder>
-                                                        <Color>LightGrey</Color>
-                                                        <Style>Solid</Style>
-                                                        <Width>1pt</Width>
-                                                      </BottomBorder>
-                                                      <BackgroundColor>SteelBlue</BackgroundColor>
-                                                      <PaddingLeft>2pt</PaddingLeft>
-                                                      <PaddingRight>2pt</PaddingRight>
-                                                      <PaddingTop>2pt</PaddingTop>
-                                                      <PaddingBottom>2pt</PaddingBottom>
-                                                    </Style>
-                                                  </Textbox>
-                                                </CellContents>
-                                              </TablixHeader>
-                                              <TablixMembers>
-                                                <TablixMember />
-                                              </TablixMembers>
-                                            </TablixMember>
-                                          </TablixMembers>
-                                        </TablixMember>
+                                        <TablixMember />
                                       </TablixMembers>
                                     </TablixMember>
                                   </TablixMembers>
@@ -569,7 +501,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>2.19949cm</Size>
+                    <Size>1.49716cm</Size>
                     <CellContents>
                       <Textbox Name="Partidad">
                         <CanGrow>true</CanGrow>
@@ -620,7 +552,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>2.35824cm</Size>
+                        <Size>1.71297cm</Size>
                         <CellContents>
                           <Textbox Name="WOId">
                             <CanGrow>true</CanGrow>
@@ -660,27 +592,27 @@
                       </TablixHeader>
                       <TablixMembers>
                         <TablixMember>
-                          <Group Name="CustEquipMapId">
+                          <Group Name="Equipo">
                             <GroupExpressions>
-                              <GroupExpression>=Fields!CustEquipMapId.Value</GroupExpression>
+                              <GroupExpression>=Fields!Equipo.Value</GroupExpression>
                             </GroupExpressions>
                           </Group>
                           <SortExpressions>
                             <SortExpression>
-                              <Value>=Fields!CustEquipMapId.Value</Value>
+                              <Value>=Fields!Equipo.Value</Value>
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>3.09907cm</Size>
+                            <Size>8.52178cm</Size>
                             <CellContents>
-                              <Textbox Name="CustEquipMapId">
+                              <Textbox Name="Equipo">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>=Fields!CustEquipMapId.Value</Value>
+                                        <Value>=Fields!Equipo.Value</Value>
                                         <Style>
                                           <FontWeight>Normal</FontWeight>
                                           <Color>#333333</Color>
@@ -690,7 +622,7 @@
                                     <Style />
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>CustEquipMapId</rd:DefaultName>
+                                <rd:DefaultName>Equipo</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Style>None</Style>
@@ -711,27 +643,27 @@
                           </TablixHeader>
                           <TablixMembers>
                             <TablixMember>
-                              <Group Name="InstrumentId">
+                              <Group Name="Accuracy">
                                 <GroupExpressions>
-                                  <GroupExpression>=Fields!InstrumentId.Value</GroupExpression>
+                                  <GroupExpression>=Fields!Accuracy.Value</GroupExpression>
                                 </GroupExpressions>
                               </Group>
                               <SortExpressions>
                                 <SortExpression>
-                                  <Value>=Fields!InstrumentId.Value</Value>
+                                  <Value>=Fields!Accuracy.Value</Value>
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>3.09907cm</Size>
+                                <Size>4.93614cm</Size>
                                 <CellContents>
-                                  <Textbox Name="InstrumentId">
+                                  <Textbox Name="Accuracy">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>=Fields!InstrumentId.Value</Value>
+                                            <Value>=Fields!Accuracy.Value</Value>
                                             <Style>
                                               <FontWeight>Normal</FontWeight>
                                               <Color>#333333</Color>
@@ -741,7 +673,7 @@
                                         <Style />
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>InstrumentId</rd:DefaultName>
+                                    <rd:DefaultName>Accuracy</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -762,27 +694,27 @@
                               </TablixHeader>
                               <TablixMembers>
                                 <TablixMember>
-                                  <Group Name="Equipo">
+                                  <Group Name="Uncertainity">
                                     <GroupExpressions>
-                                      <GroupExpression>=Fields!Equipo.Value</GroupExpression>
+                                      <GroupExpression>=Fields!Uncertainity.Value</GroupExpression>
                                     </GroupExpressions>
                                   </Group>
                                   <SortExpressions>
                                     <SortExpression>
-                                      <Value>=Fields!Equipo.Value</Value>
+                                      <Value>=Fields!Uncertainity.Value</Value>
                                     </SortExpression>
                                   </SortExpressions>
                                   <TablixHeader>
-                                    <Size>3.09907cm</Size>
+                                    <Size>4.55254cm</Size>
                                     <CellContents>
-                                      <Textbox Name="Equipo">
+                                      <Textbox Name="Uncertainity">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!Equipo.Value</Value>
+                                                <Value>=Fields!Uncertainity.Value</Value>
                                                 <Style>
                                                   <FontWeight>Normal</FontWeight>
                                                   <Color>#333333</Color>
@@ -792,7 +724,7 @@
                                             <Style />
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Equipo</rd:DefaultName>
+                                        <rd:DefaultName>Uncertainity</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -813,27 +745,27 @@
                                   </TablixHeader>
                                   <TablixMembers>
                                     <TablixMember>
-                                      <Group Name="Accuracy">
+                                      <Group Name="Accesorios">
                                         <GroupExpressions>
-                                          <GroupExpression>=Fields!Accuracy.Value</GroupExpression>
+                                          <GroupExpression>=Fields!Accesorios.Value</GroupExpression>
                                         </GroupExpressions>
                                       </Group>
                                       <SortExpressions>
                                         <SortExpression>
-                                          <Value>=Fields!Accuracy.Value</Value>
+                                          <Value>=Fields!Accesorios.Value</Value>
                                         </SortExpression>
                                       </SortExpressions>
                                       <TablixHeader>
-                                        <Size>3.09907cm</Size>
+                                        <Size>4.66356cm</Size>
                                         <CellContents>
-                                          <Textbox Name="Accuracy">
+                                          <Textbox Name="Accesorios">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!Accuracy.Value</Value>
+                                                    <Value>=Fields!Accesorios.Value</Value>
                                                     <Style>
                                                       <FontWeight>Normal</FontWeight>
                                                       <Color>#333333</Color>
@@ -843,7 +775,7 @@
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Accuracy</rd:DefaultName>
+                                            <rd:DefaultName>Accesorios</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Style>None</Style>
@@ -863,113 +795,7 @@
                                         </CellContents>
                                       </TablixHeader>
                                       <TablixMembers>
-                                        <TablixMember>
-                                          <Group Name="Uncertainity">
-                                            <GroupExpressions>
-                                              <GroupExpression>=Fields!Uncertainity.Value</GroupExpression>
-                                            </GroupExpressions>
-                                          </Group>
-                                          <SortExpressions>
-                                            <SortExpression>
-                                              <Value>=Fields!Uncertainity.Value</Value>
-                                            </SortExpression>
-                                          </SortExpressions>
-                                          <TablixHeader>
-                                            <Size>3.09907cm</Size>
-                                            <CellContents>
-                                              <Textbox Name="Uncertainity">
-                                                <CanGrow>true</CanGrow>
-                                                <KeepTogether>true</KeepTogether>
-                                                <Paragraphs>
-                                                  <Paragraph>
-                                                    <TextRuns>
-                                                      <TextRun>
-                                                        <Value>=Fields!Uncertainity.Value</Value>
-                                                        <Style>
-                                                          <FontWeight>Normal</FontWeight>
-                                                          <Color>#333333</Color>
-                                                        </Style>
-                                                      </TextRun>
-                                                    </TextRuns>
-                                                    <Style />
-                                                  </Paragraph>
-                                                </Paragraphs>
-                                                <rd:DefaultName>Uncertainity</rd:DefaultName>
-                                                <Style>
-                                                  <Border>
-                                                    <Style>None</Style>
-                                                  </Border>
-                                                  <BottomBorder>
-                                                    <Color>LightGrey</Color>
-                                                    <Style>Solid</Style>
-                                                    <Width>1pt</Width>
-                                                  </BottomBorder>
-                                                  <BackgroundColor>White</BackgroundColor>
-                                                  <PaddingLeft>2pt</PaddingLeft>
-                                                  <PaddingRight>2pt</PaddingRight>
-                                                  <PaddingTop>2pt</PaddingTop>
-                                                  <PaddingBottom>2pt</PaddingBottom>
-                                                </Style>
-                                              </Textbox>
-                                            </CellContents>
-                                          </TablixHeader>
-                                          <TablixMembers>
-                                            <TablixMember>
-                                              <Group Name="Accesorios">
-                                                <GroupExpressions>
-                                                  <GroupExpression>=Fields!Accesorios.Value</GroupExpression>
-                                                </GroupExpressions>
-                                              </Group>
-                                              <SortExpressions>
-                                                <SortExpression>
-                                                  <Value>=Fields!Accesorios.Value</Value>
-                                                </SortExpression>
-                                              </SortExpressions>
-                                              <TablixHeader>
-                                                <Size>4.71238cm</Size>
-                                                <CellContents>
-                                                  <Textbox Name="Accesorios">
-                                                    <CanGrow>true</CanGrow>
-                                                    <KeepTogether>true</KeepTogether>
-                                                    <Paragraphs>
-                                                      <Paragraph>
-                                                        <TextRuns>
-                                                          <TextRun>
-                                                            <Value>=Fields!Accesorios.Value</Value>
-                                                            <Style>
-                                                              <FontWeight>Normal</FontWeight>
-                                                              <Color>#333333</Color>
-                                                            </Style>
-                                                          </TextRun>
-                                                        </TextRuns>
-                                                        <Style />
-                                                      </Paragraph>
-                                                    </Paragraphs>
-                                                    <rd:DefaultName>Accesorios</rd:DefaultName>
-                                                    <Style>
-                                                      <Border>
-                                                        <Style>None</Style>
-                                                      </Border>
-                                                      <BottomBorder>
-                                                        <Color>LightGrey</Color>
-                                                        <Style>Solid</Style>
-                                                        <Width>1pt</Width>
-                                                      </BottomBorder>
-                                                      <BackgroundColor>White</BackgroundColor>
-                                                      <PaddingLeft>2pt</PaddingLeft>
-                                                      <PaddingRight>2pt</PaddingRight>
-                                                      <PaddingTop>2pt</PaddingTop>
-                                                      <PaddingBottom>2pt</PaddingBottom>
-                                                    </Style>
-                                                  </Textbox>
-                                                </CellContents>
-                                              </TablixHeader>
-                                              <TablixMembers>
-                                                <TablixMember />
-                                              </TablixMembers>
-                                            </TablixMember>
-                                          </TablixMembers>
-                                        </TablixMember>
+                                        <TablixMember />
                                       </TablixMembers>
                                     </TablixMember>
                                   </TablixMembers>
@@ -987,8 +813,8 @@
             <DataSetName>DataSet1</DataSetName>
             <Top>2.88396cm</Top>
             <Left>0.51268cm</Left>
-            <Height>1.2cm</Height>
-            <Width>25.29871cm</Width>
+            <Height>1.67625cm</Height>
+            <Width>25.96353cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1012,8 +838,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>0.42458cm</Top>
-            <Left>0.51268cm</Left>
+            <Top>0.17639cm</Top>
+            <Left>0.44212cm</Left>
             <Height>0.6cm</Height>
             <Width>1.67979cm</Width>
             <ZIndex>1</ZIndex>
@@ -1042,10 +868,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Cliente</rd:DefaultName>
-            <Top>0.42458cm</Top>
-            <Left>2.19247cm</Left>
+            <Top>0.17639cm</Top>
+            <Left>2.15719cm</Left>
             <Height>0.6cm</Height>
-            <Width>11.17833cm</Width>
+            <Width>13.46666cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1074,8 +900,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>1.09514cm</Top>
-            <Left>0.51268cm</Left>
+            <Top>0.84695cm</Top>
+            <Left>0.44212cm</Left>
             <Height>0.6cm</Height>
             <Width>1.67979cm</Width>
             <ZIndex>3</ZIndex>
@@ -1104,10 +930,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Email</rd:DefaultName>
-            <Top>1.09514cm</Top>
-            <Left>2.19247cm</Left>
+            <Top>0.84695cm</Top>
+            <Left>2.12191cm</Left>
             <Height>0.6cm</Height>
-            <Width>11.17833cm</Width>
+            <Width>13.46666cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -1136,8 +962,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>1.09514cm</Top>
-            <Left>13.47664cm</Left>
+            <Top>0.84695cm</Top>
+            <Left>15.8708cm</Left>
             <Height>0.6cm</Height>
             <Width>1.865cm</Width>
             <ZIndex>5</ZIndex>
@@ -1166,10 +992,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>telefono</rd:DefaultName>
-            <Top>1.09514cm</Top>
-            <Left>15.41219cm</Left>
+            <Top>0.84695cm</Top>
+            <Left>17.80635cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.39919cm</Width>
+            <Width>8.66986cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -1198,8 +1024,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>0.42458cm</Top>
-            <Left>13.47664cm</Left>
+            <Top>0.17639cm</Top>
+            <Left>15.8708cm</Left>
             <Height>0.6cm</Height>
             <Width>1.82972cm</Width>
             <ZIndex>7</ZIndex>
@@ -1228,10 +1054,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
-            <Top>0.42458cm</Top>
-            <Left>15.41219cm</Left>
+            <Top>0.17639cm</Top>
+            <Left>17.77108cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.39919cm</Width>
+            <Width>8.70513cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1258,10 +1084,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>terminosPago</rd:DefaultName>
-            <Top>1.76569cm</Top>
-            <Left>17.07907cm</Left>
+            <Top>1.55278cm</Top>
+            <Left>19.47323cm</Left>
             <Height>0.6cm</Height>
-            <Width>8.73232cm</Width>
+            <Width>7.00298cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -1290,8 +1116,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>1.76569cm</Top>
-            <Left>13.44136cm</Left>
+            <Top>1.5175cm</Top>
+            <Left>15.83552cm</Left>
             <Height>0.6cm</Height>
             <Width>3.53188cm</Width>
             <ZIndex>10</ZIndex>
@@ -1306,10 +1132,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>5.87262in</Height>
+        <Height>2.00804in</Height>
         <Style />
       </Body>
-      <Width>10.30618in</Width>
+      <Width>10.54714in</Width>
       <Page>
         <PageHeader>
           <Height>4.49792cm</Height>
@@ -1351,7 +1177,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>2.08326cm</Top>
-              <Left>10.97833cm</Left>
+              <Left>7.02295cm</Left>
               <Height>0.74551cm</Height>
               <Width>5.22521cm</Width>
               <ZIndex>1</ZIndex>
@@ -1369,8 +1195,8 @@
               <Source>Embedded</Source>
               <Value>Apasionadosporlametrologia</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.33455cm</Top>
-              <Left>19.35145cm</Left>
+              <Top>0.37983cm</Top>
+              <Left>19.75579cm</Left>
               <Height>0.58208cm</Height>
               <Width>6.72042cm</Width>
               <ZIndex>2</ZIndex>
@@ -1400,8 +1226,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>0.96191cm</Top>
-              <Left>20.96604cm</Left>
+              <Top>1.00719cm</Top>
+              <Left>21.37038cm</Left>
               <Height>0.55472cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>3</ZIndex>
@@ -1436,8 +1262,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>SOId</rd:DefaultName>
-              <Top>0.91663cm</Top>
-              <Left>23.57187cm</Left>
+              <Top>0.96191cm</Top>
+              <Left>23.97621cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>4</ZIndex>
@@ -1456,7 +1282,7 @@
               <Top>1.93996cm</Top>
               <Left>0.10583cm</Left>
               <Height>0cm</Height>
-              <Width>26.07187cm</Width>
+              <Width>26.68389cm</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -1482,7 +1308,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox75</rd:DefaultName>
               <Top>2.82877cm</Top>
-              <Left>4.28625cm</Left>
+              <Left>0.33087cm</Left>
               <Height>0.6cm</Height>
               <Width>18.42792cm</Width>
               <ZIndex>6</ZIndex>
@@ -1498,7 +1324,7 @@
             </Textbox>
             <Line Name="Line2">
               <Top>3.42877cm</Top>
-              <Left>4.28625cm</Left>
+              <Left>0.33087cm</Left>
               <Height>0cm</Height>
               <Width>18.42792cm</Width>
               <ZIndex>7</ZIndex>
@@ -1532,7 +1358,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>3.60515cm</Top>
-              <Left>9.84062cm</Left>
+              <Left>5.88524cm</Left>
               <Height>0.75165cm</Height>
               <Width>7.58cm</Width>
               <ZIndex>8</ZIndex>
@@ -1554,7 +1380,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.09021cm</Height>
+          <Height>2.03729cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1780,8 +1606,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox41</rd:DefaultName>
-              <Top>0.10583cm</Top>
-              <Left>22.65751cm</Left>
+              <Top>0.18166cm</Top>
+              <Left>23.27758cm</Left>
               <Height>0.47779cm</Height>
               <Width>2.25367cm</Width>
               <ZIndex>6</ZIndex>
@@ -1814,8 +1640,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox89</rd:DefaultName>
-              <Top>0.6189cm</Top>
-              <Left>21.58654cm</Left>
+              <Top>0.69473cm</Top>
+              <Left>22.20661cm</Left>
               <Height>0.49708cm</Height>
               <Width>4.24722cm</Width>
               <ZIndex>7</ZIndex>
@@ -1846,8 +1672,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox43</rd:DefaultName>
-              <Top>0.8869cm</Top>
-              <Left>21.58654cm</Left>
+              <Top>0.96273cm</Top>
+              <Left>22.20661cm</Left>
               <Height>0.45cm</Height>
               <Width>4.24722cm</Width>
               <ZIndex>8</ZIndex>
@@ -1878,8 +1704,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox42</rd:DefaultName>
-              <Top>1.11598cm</Top>
-              <Left>21.58654cm</Left>
+              <Top>1.19181cm</Top>
+              <Left>22.20661cm</Left>
               <Height>0.45cm</Height>
               <Width>4.2696cm</Width>
               <ZIndex>9</ZIndex>
@@ -1912,8 +1738,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox90</rd:DefaultName>
-              <Top>1.42168cm</Top>
-              <Left>21.58654cm</Left>
+              <Top>1.55384cm</Top>
+              <Left>22.20661cm</Left>
               <Height>0.37cm</Height>
               <Width>4.2696cm</Width>
               <ZIndex>10</ZIndex>
@@ -1944,8 +1770,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox18</rd:DefaultName>
-              <Top>1.21001cm</Top>
-              <Left>13.19287cm</Left>
+              <Top>0.71402cm</Top>
+              <Left>13.12386cm</Left>
               <Height>0.47779cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>11</ZIndex>
@@ -1962,7 +1788,7 @@
             <Line Name="Line3">
               <Top>0.07056cm</Top>
               <Height>0cm</Height>
-              <Width>26.07187cm</Width>
+              <Width>26.78972cm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1980,10 +1806,10 @@
         </PageFooter>
         <PageHeight>21.59cm</PageHeight>
         <PageWidth>27.94cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
-        <TopMargin>2cm</TopMargin>
-        <BottomMargin>2cm</BottomMargin>
+        <LeftMargin>0.5cm</LeftMargin>
+        <RightMargin>0.5cm</RightMargin>
+        <TopMargin>0.5cm</TopMargin>
+        <BottomMargin>0.5cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>
