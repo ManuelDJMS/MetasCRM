@@ -4,28 +4,9 @@ Public Class FrmAutorizarSolicitudes
     Dim CustimerId As Integer
     Dim cotizacion As Integer
     Private Sub FrmAutorizarSolicitudes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        consultaGeneralDeCotizaciones()
+        consultaGeneralDeCotizaciones(DGRes)
     End Sub
-    Public Sub consultaGeneralDeCotizaciones()
-        Try
-            MetodoMetasCotizador()
-            Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Email, ContAddress1, ContZip, Phone, Referencia, FechaDesde, FechaHasta, Total, x2.CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
-				INNER JOIN " & servidor & "[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId] 
-                inner join " & servidor & "[SetupCustomerAddressDtls] x3 on x2.[CustomerId]=x3.[CustomerId] where Creado= 0"
-            Dim comando As New SqlCommand(R, conexionMetasCotizador)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            While lector.Read()
-                DGRes.Rows.Add(False, lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7), lector(8), lector(9), lector(10), lector(11), lector(12))
-            End While
-            conexionMetasCotizador.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-            cadena = Err.Description
-            cadena = cadena.Replace("'", "")
-            Bitacora("FrmAutorizarSolicitudes", "Error al cargar el formulario", Err.Number, cadena)
-        End Try
-    End Sub
+
     Public Sub alternarColorColumnas(ByVal DGV As DataGridView)
         Try
             With DGV
@@ -124,28 +105,7 @@ Public Class FrmAutorizarSolicitudes
         End Try
     End Sub
 
-    Sub busquedas()
-        Try
-            DGRes.Rows.Clear()
-            MetodoMetasCotizador()
-            Dim R As String = "select x1.NumCot, [FirstName] +' '+ [MiddleName] +' '+ [LastName] AS Nombre, CompanyName, Email, ContAddress1, ContZip, Phone, Referencia, FechaDesde, FechaHasta, Total, x2.CustomerId, CustAccountNo from [MetasCotizador].[dbo].[Cotizaciones] x1
-				INNER JOIN " & servidor & "[SetupCustomerDetails] x2 ON x1.idContacto = x2.[CustomerId] 
-                inner join " & servidor & "[SetupCustomerAddressDtls] x3 on x2.[CustomerId]=x3.[CustomerId] where Creado= 0 and CompanyName like '" & txtNombreE.Text & "%' and ContAddress1 like '" & TextDom.Text & "%'
-                and Email like '" & TextEmail.Text & "%' and ContZip like '" & txtCP.Text & "%' and Phone like '" & TextTel.Text & "%'"
-            Dim comando As New SqlCommand(R, conexionMetasCotizador)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            While lector.Read()
-                DGRes.Rows.Add(False, lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7), lector(8), lector(9), lector(10), lector(11), lector(12))
-            End While
-            conexionMetasCotizador.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-            cadena = Err.Description
-            cadena = cadena.Replace("'", "")
-            Bitacora("FrmAutorizarSolicitudes", "Error al cargar el formulario", Err.Number, cadena)
-        End Try
-    End Sub
+
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -226,8 +186,8 @@ Public Class FrmAutorizarSolicitudes
                     Else
                         DGRes.Rows.Clear()
                     End If
-                    consultaGeneralDeCotizaciones()
-                Else
+                consultaGeneralDeCotizaciones(DGRes)
+            Else
                     MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
             End If
@@ -246,7 +206,7 @@ Public Class FrmAutorizarSolicitudes
         Else
             DGRes.Rows.Clear()
         End If
-        consultaGeneralDeCotizaciones()
+        consultaGeneralDeCotizaciones(DGRes)
     End Sub
 
     Private Sub txtNumeroDeCuentaB_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroDeCuentaB.TextChanged
@@ -272,22 +232,22 @@ Public Class FrmAutorizarSolicitudes
     End Sub
 
     Private Sub TxtNombreE_TextChanged(sender As Object, e As EventArgs) Handles txtNombreE.TextChanged
-        busquedas()
+        busquedas(DGRes, TextEmail, txtCP, txtNombreE, TextDom, TextTel)
     End Sub
 
     Private Sub TextDom_TextChanged(sender As Object, e As EventArgs) Handles TextDom.TextChanged
-        busquedas()
+        busquedas(DGRes, TextEmail, txtCP, txtNombreE, TextDom, TextTel)
     End Sub
 
     Private Sub TextEmail_TextChanged(sender As Object, e As EventArgs) Handles TextEmail.TextChanged
-        busquedas()
+        busquedas(DGRes, TextEmail, txtCP, txtNombreE, TextDom, TextTel)
     End Sub
 
     Private Sub TxtCP_TextChanged(sender As Object, e As EventArgs) Handles txtCP.TextChanged
-        busquedas()
+        busquedas(DGRes, TextEmail, txtCP, txtNombreE, TextDom, TextTel)
     End Sub
 
     Private Sub TextTel_TextChanged(sender As Object, e As EventArgs) Handles TextTel.TextChanged
-        busquedas()
+        busquedas(DGRes, TextEmail, txtCP, txtNombreE, TextDom, TextTel)
     End Sub
 End Class

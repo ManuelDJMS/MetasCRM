@@ -522,8 +522,8 @@ Public Class FrmHOME
     End Sub
 
     Private Sub Label38_Click(sender As Object, e As EventArgs) Handles Label38.Click
-        FrmUsuariosCotizadores.MdiParent = Me
-        FrmUsuariosCotizadores.Show()
+        FrmSeguimientoCot.MdiParent = Me
+        FrmSeguimientoCot.Show()
 
         Panel1.BackColor = Color.DimGray
         Panel4.BackColor = Color.DimGray
