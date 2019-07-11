@@ -70,6 +70,7 @@ Public Class FrmSeguimientoCot
         Dim seleccionado As Boolean
         Dim R As String
         Dim b, RecDate, OnSite As Boolean
+
         RecDate = True
         OnSite = False '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
         For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
@@ -89,6 +90,12 @@ Public Class FrmSeguimientoCot
                     Dim correos As String
                     correos = DGRes.Rows(i).Cells(4).Value
                     Dim vColeccion() As String = correos.Split(";")
+                    numcotfrm = DGRes.Rows(i).Cells(1).Value
+                    empresafrm = DGRes.Rows(i).Cells(3).Value
+                    Contacto = DGRes.Rows(i).Cells(2).Value
+                    Total = DGRes.Rows(i).Cells(11).Value
+                    Referencia = DGRes.Rows(i).Cells(8).Value
+                    corrreofrm = DGRes.Rows(i).Cells(4).Value
                     If vColeccion.Length > 1 Then
                         For ii = 0 To vColeccion.Length - 1
                             FrmFiltarCampo.dgEmpresas.Rows.Add(False, vColeccion(ii))
@@ -153,56 +160,39 @@ Public Class FrmSeguimientoCot
                     </head>
                     <body lang=ES-MX link='#0563C1' vlink='#954F72' style='tab-interval:35.4pt'>
                         <p style ='color:#4169E1';><span style=font-size:11.0pt;font-family:Helvetica><b>Estimado Cliente,</b></span></p>
-                        <p style='font-size:110%;'>Le informamos que ha llegado al almacén de MetAs un envío por parte de ustedes.<p>
-                        <p style='font-size:110%;'>El proceso de su servicio iniciará.<p>
+                        <p style='font-size:110%;'>Buen día, es un gusto saludarle, se envió a su cuenta de correo electrónico la cotización solicitada con la siguiente información, con la siguiente información:<p>
+                        
+                        
                         <table>
                             <tr>
-                                <td>Click para:</td>
+                                <td>Número de Cotización:</td>
+                                <td>" & numcotfrm & "</td>
                             </tr>
                             <tr>
-                                <td>Descargar acreditamientos EMA</td>
-
+                                <td>Empresa:</td>
+                                <td>" & empresafrm & "</td>
                             </tr>
                             <tr>
-                                <td><a href='www.metas.com.mx/acreditacion.html'>www.metas.com.mx/acreditacion.html</a></td>
-
+                                <td>Contacto:</td>
+                                <td>" & Contacto & "</td>
                             </tr>
                             <tr>
-                                <td></td>
-
+                                <td>Referencia:</td>
+                                <td>" & Referencia & "</td>
                             </tr>
                             <tr>
-                                <td>Venta de instrumentos calibrados</td>
-                            </tr>
-                            <tr>
-                                <td><a href='www.metas.com.mx/catalogo-instr-calib.htm'>www.metas.com.mx/catalogo-instr-calib.htm</a></td>
-
-                            </tr>
-                            <tr>
-                                <td></td>
-
-                            </tr>
-                            <tr>
-                                <td>Entérese de nuestros próximos  cursos de metrología</td>
-
-                            </tr>
-                            <tr>
-                                <td><a href='www.metas.com.mx/calendariocursos.htm'>www.metas.com.mx/calendariocursos.htm</a></td>
-
-                            </tr>
-                            <tr>
-                                <td></td>
-
+                                <td>Total:</td>
+                                <td>" & Total & "</td>
                             </tr>
                         </table>
+                        <p><span style=font-size:11.0pt;font-family:Helvetica>Le agradecería pudiera confirmar la recepción de la misma, o en que estatus se encuentra, esto con la finalidad de poder ofrecerle un mejor servicio, y atender todas y cada una de sus inquietudes.</span></p>
+                        <p><span style=font-size:11.0pt;font-family:Helvetica>En espera de una respuesta favorable a este correo y agradeciendo todas sus atenciones quedo a sus órdenes</span></p>
                         <p style='color:#4169E1';><span style=font-size:11.0pt;font-family:Helvetica><b>Saludos Cordiales,</b></span></p><br>
                         <p style='color:#4169E1';><span style=font-size:11.0pt;font-family:Helvetica><b>Atentamente,</b></span></p><br>
                         <div Class=WordSection1>
                         <p class=MsoNormal><span style='font-size:12.0pt;font-family:' Bahnschrift Light',sans-serif'><o:p>&nbsp;</o:p></span></p>
                         <p class=MsoNormal><span style='font-size:12.0pt;font-family:' Bahnschrift Light',sans-serif'>
-                        Almacén y Envíos.<br>
-                        Equipo de Almacén y Envíos<br>
-                        </span><span style='font-family:' Bahnschrift Light',sans-serif'><a href='mailto:logistica@metas.mx'>logistica<span style='font-size:12.0pt'>@metas.mx</span></a></span><span style='font-size:12.0pt;font-family:' Bahnschrift Light',sans-serif'><br>
+                       Área de Ventas de Servicios de Calibración.<br>
                         Teléfono: 01 (341) 413 61 23<o:p></o:p></span></p>
                         <p class=MsoNormal>
                         <span style='mso-ignore:vglayout;position:
@@ -232,10 +222,11 @@ Public Class FrmSeguimientoCot
                         objOutlookMsg = objOutlook.CreateItem(0)
                         With objOutlookMsg
                             '.CC = cca
-                            .Subject = "AVISO DE LLEGADA DE ENVÍO AL ALMACÉN DE METAS"
+                            .Subject = "Seguimiento a Cotización (" & numcotfrm & ")"
                             .HTMLBody = R
-                            .To = "sistemas3@metas.com.mx"
+                            .To = corrreofrm
                             .Display
+                            '.send
                         End With
                         'End If
                         objOutlookMsg = Nothing
