@@ -4,11 +4,12 @@ Public Class FrmCompletarOV
     Dim customerId As Integer
     Dim objOutlook As Object
     Dim objOutlookMsg As Object
+    Dim DirEnv, estEnv, cdEnv, cpEnv As String
     Private Sub FrmCompletarOV_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MetodoLIMS()
         Dim R As String
         If bancorreo = 1 Then
-            R = "Select [SetupCustomerAddressDtls].[CustomerId], [CustAccountNo], [FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
+            R = "Select [SetupCustomerAddressDtls].[CustomerId], [CustAccountNo], [FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1], [ShipAddress1],[ShipCity],[ShipState],[ShipZip]
                 FROM [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] x1 INNER JOIN [SetupCustomerAddressDtls] ON x1.[CustomerId] = [SetupCustomerAddressDtls].[CustomerId]
 		        where x1.[CustomerId] =" & empresa
             Label22.Visible = False
@@ -17,11 +18,10 @@ Public Class FrmCompletarOV
             txtRefCot.Visible = False
             'bancorreo = 3
         ElseIf bancorreo = 2 Then
-            R = "SELECT [SetupCustomerAddressDtls].[CustomerId],[CustAccountNo],[FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1]
+            R = "SELECT [SetupCustomerAddressDtls].[CustomerId],[CustAccountNo],[FirstName] +' '+[MiddleName] +' '+ [LastName] as Nombre ,[Phone],[Email],[CompanyName],[PaymentTerms], [ContAddress1], [ShipAddress1],[ShipCity],[ShipState],[ShipZip]
             FROM [MetAs_Live-pruebas].[dbo].[SetupCustomerDetails] 
 	        INNER JOIN [SetupCustomerAddressDtls] ON [SetupCustomerDetails].[CustomerId] = [SetupCustomerAddressDtls].[CustomerId]
 		    where [CustAccountNo] = '" & var.Text & "'"
-
         End If
         Dim comando As New SqlCommand(R, conexionLIMS)
         Dim lector As SqlDataReader
@@ -45,12 +45,16 @@ Public Class FrmCompletarOV
         numCuenta.Text = lector(1)
         If correos2 = False Then
             txtCorreo.Text = lector(4)
-            MsgBox(txtCorreo.Text)
+            'MsgBox(txtCorreo.Text)
         Else
             txtCorreo.Text = correos
             'numCuenta.Text = var.Text
 
         End If
+        DirEnv = lector(8)
+        cdEnv = lector(9)
+        estEnv = lector(10)
+        cpEnv = lector(11)
         lector.Close()
         bancorreo = False
         correos = ""
@@ -72,19 +76,32 @@ Public Class FrmCompletarOV
             MetodoLIMS()
             Dim R As String
             If NumOV.Text = "ov" Then
-                R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite,[PONo],[RecBy],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[BoxCount],[Weight],[Volume],[PaymentTerms]) 
-                            values(" & customerId & ",'" & numCuenta.Text & "','" & dtpFechaRecep.Value.ToShortDateString & "', '" & True & "','" & False & "', '" & txtOrdenCompra.Text & "','" & cboRecibidoPor.Text & "','" & cboRecepcion.Text & "', '" & embarcarPor.Text & "', '" & txtObservaciones.Text & "', 'USR00000008', '" & dtpFechaRecep.Value.ToShortDateString & "', '" & txtCantCajas.Text & "', '" & txtPeso.Text & "', '" & txtVolumen.Text & "','" & terminosPago.Text & "')"
-                MsgBox(R)
+                If domEnvio.Checked = True Then
+                    R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite,[PONo],[RecBy],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[BoxCount],[Weight],[Volume],[PaymentTerms], [RefNo], [ShipAddress1],[ShipCity],[ShipState],[ShipZip]) 
+                                            values(" & customerId & ",'" & numCuenta.Text & "','" & dtpFechaRecep.Value.ToShortDateString & "', '" & True & "','" & False & "', '" & txtOrdenCompra.Text & "','" & cboRecibidoPor.Text & "','" & cboRecepcion.Text & "', '" & embarcarPor.Text & "', '" & txtObservaciones.Text & "', 'USR00000008', '" & dtpFechaRecep.Value.ToShortDateString & "', '" & txtCantCajas.Text & "', '" & txtPeso.Text & "', '" & txtVolumen.Text & "','" & terminosPago.Text & "', ' ', '" & DirEnv.ToString & "', '" & cdEnv.ToString & "', '" & estEnv.ToString & "', '" & cpEnv.ToString & "')"
+                    ''MsgBox(R)
+                Else
+                    R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RecDate, DataRequested, OnSite,[PONo],[RecBy],[ReceivedVia],[ShipVia],[Remarks],[CreatedBy],[CreatedOn],[BoxCount],[Weight],[Volume],[PaymentTerms], [RefNo]) 
+                                        values(" & customerId & ",'" & numCuenta.Text & "','" & dtpFechaRecep.Value.ToShortDateString & "', '" & True & "','" & False & "', '" & txtOrdenCompra.Text & "','" & cboRecibidoPor.Text & "','" & cboRecepcion.Text & "', '" & embarcarPor.Text & "', '" & txtObservaciones.Text & "', 'USR00000008', '" & dtpFechaRecep.Value.ToShortDateString & "', '" & txtCantCajas.Text & "', '" & txtPeso.Text & "', '" & txtVolumen.Text & "','" & terminosPago.Text & "', ' ')"
+                    ''MsgBox(R)
+                End If
                 Dim comando As New SqlCommand
                 comando = conexionLIMS.CreateCommand
                 comando.CommandText = R
                 comando.ExecuteNonQuery()
                 MsgBox("ORDEN DE VENTA GUARDADA")
             Else
-                R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', RecDate ='" & dtpFechaRecep.Value.ToShortDateString & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
+                If domEnvio.Checked = True Then
+                    R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', RecDate ='" & dtpFechaRecep.Value.ToShortDateString & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
+                [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
+                [Volume] = '" & txtVolumen.Text & "',  [ShipAddress1] = '" & DirEnv.ToString & "', [ShipCity] = '" & cdEnv.ToString & "',[ShipState] = '" & estEnv.ToString & "', [ShipZip]  = '" & cpEnv.ToString & "'
+                where [SOId] = " & Val(NumOV.Text) & ""
+                Else
+                    R = "UPDATE [MetAs_Live-pruebas].[dbo].[SalesOrderDetails] set [PONo] = '" & txtOrdenCompra.Text & "', RecDate ='" & dtpFechaRecep.Value.ToShortDateString & "', [RecBy] = '" & cboRecibidoPor.Text & "', [BoxCount] = '" & txtCantCajas.Text & "', 
                 [Weight] = '" & txtPeso.Text & "', [ReceivedVia] = '" & cboRecepcion.Text & "', [ShipVia] = '" & embarcarPor.Text & "', [Remarks] ='" & txtObservaciones.Text & "', [RefNo] = '" & txtRefCot.Text & "',
                 [Volume] = '" & txtVolumen.Text & "'
                 where [SOId] = " & Val(NumOV.Text) & ""
+                End If
                 Dim coma As New SqlCommand(R, conexionLIMS)
                 coma.ExecuteNonQuery()
                 MsgBox("ORDEN DE VENTA " & NumOV.Text & " ACTUALIZADA")
@@ -233,7 +250,6 @@ Public Class FrmCompletarOV
                 'End If
                 objOutlookMsg = Nothing
                 objOutlook = Nothing
-
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")

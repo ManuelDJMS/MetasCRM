@@ -30,6 +30,7 @@ Partial Class FrmCompletarOV
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PanelCot = New System.Windows.Forms.Panel()
+        Me.domEnvio = New System.Windows.Forms.CheckBox()
         Me.terminosPago = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.numCuenta = New System.Windows.Forms.Label()
@@ -50,6 +51,7 @@ Partial Class FrmCompletarOV
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.txtRefCot = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -65,7 +67,6 @@ Partial Class FrmCompletarOV
         Me.Label15 = New System.Windows.Forms.Label()
         Me.cboRecibidoPor = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtRefCot = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.dtpFechaRecep = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -113,6 +114,8 @@ Partial Class FrmCompletarOV
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.txtVolumen)
+        Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Location = New System.Drawing.Point(5, 41)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(585, 558)
@@ -168,6 +171,16 @@ Partial Class FrmCompletarOV
         Me.PanelCot.Name = "PanelCot"
         Me.PanelCot.Size = New System.Drawing.Size(566, 86)
         Me.PanelCot.TabIndex = 177
+        '
+        'domEnvio
+        '
+        Me.domEnvio.AutoSize = True
+        Me.domEnvio.Location = New System.Drawing.Point(345, 178)
+        Me.domEnvio.Name = "domEnvio"
+        Me.domEnvio.Size = New System.Drawing.Size(112, 17)
+        Me.domEnvio.TabIndex = 196
+        Me.domEnvio.Text = "Domicilio de envio"
+        Me.domEnvio.UseVisualStyleBackColor = True
         '
         'terminosPago
         '
@@ -367,6 +380,8 @@ Partial Class FrmCompletarOV
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.domEnvio)
+        Me.Panel4.Controls.Add(Me.txtRefCot)
         Me.Panel4.Controls.Add(Me.txtObservaciones)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label20)
@@ -374,15 +389,12 @@ Partial Class FrmCompletarOV
         Me.Panel4.Controls.Add(Me.Label19)
         Me.Panel4.Controls.Add(Me.cboRecepcion)
         Me.Panel4.Controls.Add(Me.Label18)
-        Me.Panel4.Controls.Add(Me.txtVolumen)
-        Me.Panel4.Controls.Add(Me.Label17)
         Me.Panel4.Controls.Add(Me.txtPeso)
         Me.Panel4.Controls.Add(Me.Label16)
         Me.Panel4.Controls.Add(Me.txtCantCajas)
         Me.Panel4.Controls.Add(Me.Label15)
         Me.Panel4.Controls.Add(Me.cboRecibidoPor)
         Me.Panel4.Controls.Add(Me.Label14)
-        Me.Panel4.Controls.Add(Me.txtRefCot)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.dtpFechaRecep)
         Me.Panel4.Controls.Add(Me.Label11)
@@ -391,6 +403,16 @@ Partial Class FrmCompletarOV
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(566, 297)
         Me.Panel4.TabIndex = 178
+        '
+        'txtRefCot
+        '
+        Me.txtRefCot.AutoSize = True
+        Me.txtRefCot.Font = New System.Drawing.Font("Calibri Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRefCot.Location = New System.Drawing.Point(459, 13)
+        Me.txtRefCot.Name = "txtRefCot"
+        Me.txtRefCot.Size = New System.Drawing.Size(57, 14)
+        Me.txtRefCot.TabIndex = 168
+        Me.txtRefCot.Text = "Cotizacion"
         '
         'txtObservaciones
         '
@@ -460,20 +482,22 @@ Partial Class FrmCompletarOV
         '
         'txtVolumen
         '
-        Me.txtVolumen.Location = New System.Drawing.Point(462, 112)
+        Me.txtVolumen.Location = New System.Drawing.Point(362, 523)
         Me.txtVolumen.Name = "txtVolumen"
         Me.txtVolumen.Size = New System.Drawing.Size(93, 20)
         Me.txtVolumen.TabIndex = 189
+        Me.txtVolumen.Visible = False
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(391, 117)
+        Me.Label17.Location = New System.Drawing.Point(291, 528)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(60, 15)
         Me.Label17.TabIndex = 188
         Me.Label17.Text = "Volumen:"
+        Me.Label17.Visible = False
         '
         'txtPeso
         '
@@ -529,13 +553,6 @@ Partial Class FrmCompletarOV
         Me.Label14.TabIndex = 182
         Me.Label14.Text = "Recibido por:"
         '
-        'txtRefCot
-        '
-        Me.txtRefCot.Location = New System.Drawing.Point(462, 10)
-        Me.txtRefCot.Name = "txtRefCot"
-        Me.txtRefCot.Size = New System.Drawing.Size(93, 20)
-        Me.txtRefCot.TabIndex = 181
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -586,6 +603,7 @@ Partial Class FrmCompletarOV
         Me.Text = "Completar OV"
         CType(Me.btSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.PanelCot.ResumeLayout(False)
@@ -630,7 +648,6 @@ Partial Class FrmCompletarOV
     Friend WithEvents Label15 As Label
     Friend WithEvents cboRecibidoPor As ComboBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents txtRefCot As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents dtpFechaRecep As DateTimePicker
     Friend WithEvents Label11 As Label
@@ -649,4 +666,6 @@ Partial Class FrmCompletarOV
     Friend WithEvents NumOV As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents var As Label
+    Friend WithEvents txtRefCot As Label
+    Friend WithEvents domEnvio As CheckBox
 End Class

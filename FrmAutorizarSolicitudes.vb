@@ -113,8 +113,8 @@ Public Class FrmAutorizarSolicitudes
         'Dim con As FrmCompletarOV
         'Dim cliente As String
         Dim cu, ca As Integer
-        'Try
-        Dim seleccionado As Boolean
+        Try
+            Dim seleccionado As Boolean
             Dim R As String
             Dim b, RecDate, OnSite As Boolean
             RecDate = True
@@ -124,8 +124,8 @@ Public Class FrmAutorizarSolicitudes
             Else
                 '----------------------Ciclo para saber si hay articulos seleccionados-------------------------------
                 For i As Integer = DGRes.Rows.Count() - 1 To 0 Step -1
-                seleccionado = DGRes.Rows(i).Cells(0).Value
-                If seleccionado = True Then
+                    seleccionado = DGRes.Rows(i).Cells(0).Value
+                    If seleccionado = True Then
                         b = True
                         Exit For
                     Else
@@ -140,35 +140,36 @@ Public Class FrmAutorizarSolicitudes
                         Dim fecha As String
                         If seleccionado = True Then
                             MetodoLIMS()
-                        R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RefNo,RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, [CreatedBy],[CreatedOn]) 
+                            R = "insert into SalesOrderDetails (CustomerId, CustAccountNo, RefNo,RecDate, DataRequested, OnSite, ShipAddress1, ShipAddress2, ShipAddress3, [CreatedBy],[CreatedOn]) 
                             values(" & Val(DGRes.Rows(i).Cells(12).Value) & ",'" & DGRes.Rows(i).Cells(13).Value & "','" & DGRes.Rows(i).Cells(1).Value & "','" & dtp.Value.ToShortDateString & "', '" & True & "','" &
                             False & "','" & DGRes.Rows(i).Cells(5).Value & "','-','-','USR00000008', '" &
                         dtp.Value.ToShortDateString & "')"
+                            cotizacion = Val(DGRes.Rows(i).Cells(1).Value)
 
-                        Dim comando As New SqlCommand
+                            Dim comando As New SqlCommand
                             comando = conexionLIMS.CreateCommand
                             comando.CommandText = R
                             comando.ExecuteNonQuery()
-                            cu = Val(DGRes.Rows(i).Cells(12).Value)
+                            cu = Val(DGRes.Rows(i).Cells(2).Value)
                             ca = DGRes.Rows(i).Cells(13).Value
                             cusAcount.Text = ca
                             fecha = dtp.Value.ToShortDateString
                             conexionLIMS.Close()
                             MetodoLIMS()
-                        R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
+                            R = "SELECT top 1 [SOId], [CustomerId],[CustAccountNo],[RecDate]
                             FROM SalesOrderDetails where RefNo= " & Val(DGRes.Rows(i).Cells(1).Value) & " ORDER BY [SOId] DESC"
 
-                        Dim comando2 As New SqlCommand(R, conexionLIMS)
+                            Dim comando2 As New SqlCommand(R, conexionLIMS)
                             Dim lector As SqlDataReader
                             lector = comando2.ExecuteReader
                             lector.Read()
                             Dim numOV As Integer = lector(0)
                             conexionLIMS.Close()
                             MetodoMetasCotizador()
-                        R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(1).Value) & ""
+                            R = "update Cotizaciones set Creado= '" & numOV & "' where NumCot=" & Val(DGRes.Rows(i).Cells(1).Value) & ""
 
 
-                        Dim coma As New SqlCommand(R, conexionMetasCotizador)
+                            Dim coma As New SqlCommand(R, conexionMetasCotizador)
                             OV.Text = numOV
                             coma.ExecuteNonQuery()
                             conexionMetasCotizador.Close()
@@ -179,6 +180,7 @@ Public Class FrmAutorizarSolicitudes
                     bancorreo = 2
                     FrmCompletarOV.var.Text = Me.cusAcount.Text
                     FrmCompletarOV.NumOV.Text = Me.OV.Text
+                    FrmCompletarOV.txtRefCot.Text = Me.cotizacion.ToString
                     FrmCompletarOV.ShowDialog()
 
                     If DGRes.Rows.Count < 2 Then
@@ -186,17 +188,17 @@ Public Class FrmAutorizarSolicitudes
                     Else
                         DGRes.Rows.Clear()
                     End If
-                consultaGeneralDeCotizaciones(DGRes)
-            Else
+                    consultaGeneralDeCotizaciones(DGRes)
+                Else
                     MsgBox("No ha seleccionado ningúna cotización", MsgBoxStyle.Critical, "Error del sistema.")
                 End If
             End If
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
-        '    cadena = Err.Description
-        '    cadena = cadena.Replace("'", "")
-        '    Bitacora("FrmAutorizarSolicitudes", "Error al guardar la OV", Err.Number, cadena)
-        'End Try
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en el Sistema")
+        cadena = Err.Description
+        cadena = cadena.Replace("'", "")
+        Bitacora("FrmAutorizarSolicitudes", "Error al guardar la OV", Err.Number, cadena)
+        End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
