@@ -224,8 +224,8 @@ Public Class frmEdicionCot2018_2019
             'Actualizar Los datos de la cotizacion
             'Consultar la ultima cotizacion y asignarla a un LABEL para poder hacer el update conforme al LABEL
 
-            Try
-                Dim ultimo As Integer
+            'Try
+            Dim ultimo As Integer
                 'consultar ultima Cotizacion-----------------------------------------------------------------------------------------------
                 MetodoMetasCotizador()
                 Dim comandoo As New SqlCommand("select MAX(Numcot) from [Cotizaciones]", conexionMetasCotizador)
@@ -238,22 +238,28 @@ Public Class frmEdicionCot2018_2019
                     ultimo = lectora(0)
                 End If
                 lectora.Close()
-                conexionMetasCotizador.Close()
+            conexionMetasCotizador.Close()
 
-
-                For i = 0 To DGCopia.Rows.Count - 2
-                    MetodoMetasCotizador()
-                    inventarioCliente = InputBox("¿Deseas agregar el número de inventario del articulo: """ & DGCopia.Item(1, i).Value.ToString & """ del cliente?", "No. de Inventario de cliente")
-                    Dim cad As String = "update DetalleCotizaciones set identificadorInventarioCliente='" & inventarioCliente & "', Observaciones='" & DGCopia.Item(6, i).Value.ToString & "'
-                    where idListaCotizacion =" & Val(DGCopia.Item(0, i).Value) & ""
-                    Dim t As New SqlCommand(cad, conexionMetasCotizador)
-                    t.ExecuteNonQuery()
-                    conexionMetasCotizador.Close()
-                Next i
-
-
-                '---------------------------------------------------------------------------------------------------------------------------
+            For i = 0 To DGCopia.Rows.Count - 2
+                observacion = DGCopia.Item(6, i).Value
+                If observacion = "" Then
+                    observacion = " "
+                Else
+                    observacion = DGCopia.Item(6, i).Value
+                End If
                 MetodoMetasCotizador()
+                MsgBox(observacion)
+                inventarioCliente = InputBox("¿Deseas agregar el número de inventario del articulo: """ & DGCopia.Item(1, i).Value.ToString & """ del cliente?", "No. de Inventario de cliente")
+                Dim cad As String = "update DetalleCotizaciones set identificadorInventarioCliente='" & inventarioCliente & "', Observaciones='" & observacion & "'
+                    where idListaCotizacion =" & Val(DGCopia.Item(0, i).Value) & ""
+                Dim t As New SqlCommand(cad, conexionMetasCotizador)
+                t.ExecuteNonQuery()
+                conexionMetasCotizador.Close()
+            Next i
+
+
+            '---------------------------------------------------------------------------------------------------------------------------
+            MetodoMetasCotizador()
                 Dim R As String
                 R = "update Cotizaciones set idContacto=" & txtCveContacto.Text & ", Origen = 'LIMS', idLugarCondicion=" & Val(cboServicio.Tag) & ", idCuandoCondicion=" & Val(Cbcuando.Tag) & ", idModalidadCondicion=" & Val(CbModalidad.Tag) & ", idTiempoEntregaCondicion=
                     " & Val(CboTiempo.Tag) & ", idPagoCondicion=" & Val(CCondPago.Tag) & ", idLeyendaCondicion=" & Val(CboLeyenda.Tag) & ", idValidezCondicion=" & Val(CboValidez.Tag) & ", idMonedaCondicion=" & Val(CboMoneda.Tag) & ", idDocumentoCondicion=
@@ -281,9 +287,9 @@ Public Class frmEdicionCot2018_2019
                 Me.Dispose()
 
 
-            Catch ex As Exception
-                MsgBox("Error de lectura de datos de ultima COT", MsgBoxStyle.Critical)
-            End Try
+            'Catch ex As Exception
+            '    MsgBox("Error de lectura de datos de ultima COT", MsgBoxStyle.Critical)
+            'End Try
         End If
 
 
